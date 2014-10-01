@@ -1,0 +1,13 @@
+{
+    "type": "pie",
+    "dataProvider": [
+    {
+        "drink": "Beer",
+        "litres": 201.1
+    }, {
+        "drink": "Whiskey",
+        "litres": 165.8
+    }],
+    "valueField": "litres",
+    "titleField": "drink"
+}
