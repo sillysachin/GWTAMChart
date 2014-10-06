@@ -10,7 +10,6 @@ import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -52,7 +51,8 @@ public class GWTAMChart implements EntryPoint
 						AmChartJso amchartjso = JsonUtils.<AmChartJso> safeEval( text );
 						GWT.log( amchartjso.toString() + " - " + amchartjso.getType() );
 						String chart = amchartjso.toString();
-						//GWTAMChartPanel chartPanel = new GWTAMChartPanel( "chart-dashboard", amchartjso.toSource() );
+						String source = amchartjso.toSource();
+						GWTAMChartPanel chartPanel = new GWTAMChartPanel( "chart-dashboard", source );
 						//RootLayoutPanel.get().add(  chartPanel );
 					}
 					else

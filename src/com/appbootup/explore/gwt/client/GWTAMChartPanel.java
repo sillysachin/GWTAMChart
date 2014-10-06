@@ -19,30 +19,24 @@ public class GWTAMChartPanel extends ResizeComposite
 {
 	LayoutPanel divWrapper = new LayoutPanel();
 
-	JSONObject chartJSONObjectWrapper = null;
-
-	JavaScriptObject chart;
+	JSONObject chartJSONObject = null;
 
 	String chartJSONString = "";
 
-	public GWTAMChartPanel( String id, JSONValue jsonValue )
+	JavaScriptObject chartJSO = null;
+
+	public GWTAMChartPanel( String id, JSONValue chartJSONObject )
 	{
 		setId( id );
-
-		if ( jsonValue != null )
+		if ( chartJSONObject != null )
 		{
-			setChartJSONObect( ( JSONObject ) ( jsonValue ) );
+			setChartJSONObect( ( JSONObject ) ( chartJSONObject ) );
 		}
 		initWidget( divWrapper );
 		addStyleName( "roc-chart" );
 	}
 
 	public GWTAMChartPanel( String id, String chartJSONString )
-	{
-		this( id, chartJSONString, null, null, null, null, null, null );
-	}
-
-	public GWTAMChartPanel( String id, String chartJSONString, String drilldownName, String drilldownCategories, String drilldownJson, String drilldownSeriesTypes, String chartDrilldownSmcdXTitle, String chartDrilldownSmcdYTitle )
 	{
 		setId( id );
 		if ( "NoData".equals( chartJSONString ) )
@@ -62,6 +56,7 @@ public class GWTAMChartPanel extends ResizeComposite
 			setChartJSONObect( ( JSONObject ) ( JSONParser.parseLenient( chartJSONString ) ) );
 		}
 		initWidget( divWrapper );
+		addStyleName( "roc-chart" );
 	}
 
 	public String getId()
@@ -75,14 +70,14 @@ public class GWTAMChartPanel extends ResizeComposite
 		divWrapper.getElement().setId( id );
 	}
 
-	private void setChartJSONObect( JSONValue chartJSONValueWrapper )
+	private void setChartJSONObect( JSONValue chartJSONObject )
 	{
-		chartJSONObjectWrapper = ( JSONObject ) ( chartJSONValueWrapper );
+		this.chartJSONObject = ( JSONObject ) ( chartJSONObject );
 	}
 
 	protected static native JavaScriptObject getJsonObject( String jsonString )
 	/*-{
-		return JSON.parse(jsonString);
+		return JSON.parseLenient(jsonString);
 	}-*/;
 
 	protected static native JavaScriptObject drawChart( String id, JavaScriptObject jso )
@@ -100,8 +95,7 @@ public class GWTAMChartPanel extends ResizeComposite
 			{
 				public void execute()
 				{
-					String jsonString = chartJSONString;
-					chart = drawChart( getId(), JsonUtils.unsafeEval( jsonString ) );
+					chartJSO = drawChart( getId(), chartJSO);
 				}
 			} );
 		}
