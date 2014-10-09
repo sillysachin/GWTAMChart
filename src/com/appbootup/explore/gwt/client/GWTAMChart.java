@@ -49,9 +49,10 @@ public class GWTAMChart implements EntryPoint
 					if ( 200 == response.getStatusCode() )
 					{
 						String text = response.getText();
-						AmChartJso amchartjso = JsonUtils.<AmChartJso> safeEval( text );
-						GWTAMChartPanel chartPanel = new GWTAMChartPanel( "chart-dashboard", text );
-						RootLayoutPanel.get().add( chartPanel );
+						AmChartJso amChartJSO = JsonUtils.<AmChartJso> safeEval( text );
+						GWT.log( "amChartJSO -> " + amChartJSO.getType() );
+						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text );
+						RootLayoutPanel.get().add( amChartPanel );
 					}
 					else
 					{

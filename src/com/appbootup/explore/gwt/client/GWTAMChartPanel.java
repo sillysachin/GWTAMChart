@@ -1,9 +1,9 @@
 package com.appbootup.explore.gwt.client;
 
+import com.amcharts.jso.AmChartJso;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptException;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.dom.client.Style.Unit;
@@ -23,7 +23,7 @@ public class GWTAMChartPanel extends ResizeComposite
 
 	String chartJSONString = "";
 
-	JavaScriptObject chartJSO = null;
+	AmChartJso chartJSO = null;
 
 	public GWTAMChartPanel( String id, JSONValue chartJSONObject )
 	{
@@ -80,7 +80,7 @@ public class GWTAMChartPanel extends ResizeComposite
 		return JSON.parseLenient(jsonString);
 	}-*/;
 
-	protected static native JavaScriptObject drawChart( String id, JavaScriptObject jso )
+	protected static native AmChartJso drawChart( String id, JavaScriptObject jso )
 	/*-{
 		var chart = $wnd.AmCharts.makeChart(id, jso);
 		return chart;
@@ -96,6 +96,7 @@ public class GWTAMChartPanel extends ResizeComposite
 				public void execute()
 				{
 					chartJSO = drawChart( getId(), chartJSONObject.isObject().getJavaScriptObject());
+					GWT.log( "amChartJSO -> " + chartJSO.getType() );
 				}
 			} );
 		}
