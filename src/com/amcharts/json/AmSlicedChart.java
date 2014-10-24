@@ -2,7 +2,7 @@ package com.amcharts.json;
 
 import java.util.List;
 
-import com.amcharts.model.IsAmSlicedChart;
+import com.amcharts.api.IsAmSlicedChart;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {

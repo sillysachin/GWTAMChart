@@ -1,7 +1,7 @@
-package com.amcharts.model;
+package com.amcharts.api;
 
 
-public interface IsCategoryAxis
+public interface IsValueAxis
 {
 
 	public abstract IsTitle getTitle();

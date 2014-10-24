@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-import com.amcharts.model.IsTitle;
+import com.amcharts.api.IsTitle;
 
 public class Title implements IsTitle
 {

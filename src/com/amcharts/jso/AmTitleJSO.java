@@ -1,11 +1,11 @@
 package com.amcharts.jso;
 
-import com.amcharts.model.IsTitle;
+import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmTitleJso extends JavaScriptObject implements IsTitle
+public class AmTitleJSO extends JavaScriptObject implements IsTitle
 {
-	protected AmTitleJso()
+	protected AmTitleJSO()
 	{
 	}
 
@@ -21,7 +21,7 @@ public class AmTitleJso extends JavaScriptObject implements IsTitle
 		this.text = text;
 	}-*/;
 
-	public static native AmTitleJso create( String text )
+	public static native AmTitleJSO create( String text )
 	/*-{
 		return {text: text};
 	}-*/;

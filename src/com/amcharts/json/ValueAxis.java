@@ -1,8 +1,8 @@
 package com.amcharts.json;
 
-import com.amcharts.model.AxisPosition;
-import com.amcharts.model.IsTitle;
-import com.amcharts.model.IsValueAxis;
+import com.amcharts.api.AxisPosition;
+import com.amcharts.api.IsTitle;
+import com.amcharts.api.IsValueAxis;
 
 public class ValueAxis implements IsValueAxis
 {

@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-import com.amcharts.model.IsAmPieChart;
+import com.amcharts.api.IsAmPieChart;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {

@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-import com.amcharts.model.IsAmLegend;
+import com.amcharts.api.IsAmLegend;
 
 public class AmLegend implements IsAmLegend
 {

@@ -1,10 +1,10 @@
 package com.amcharts.jso;
 
-import com.amcharts.model.IsAmPieChart;
+import com.amcharts.api.IsAmPieChart;
 
-public class AmPieChartJso extends AmSlicedChartJso implements IsAmPieChart
+public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 {
-	protected AmPieChartJso()
+	protected AmPieChartJSO()
 	{
 	}
 

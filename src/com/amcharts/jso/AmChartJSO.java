@@ -2,19 +2,19 @@ package com.amcharts.jso;
 
 import java.util.List;
 
-import com.amcharts.model.IsAmBalloon;
-import com.amcharts.model.IsAmChart;
-import com.amcharts.model.IsAmExport;
-import com.amcharts.model.IsAmLegend;
-import com.amcharts.model.IsCategoryAxis;
-import com.amcharts.model.IsLabel;
-import com.amcharts.model.IsTitle;
-import com.amcharts.model.IsValueAxis;
+import com.amcharts.api.IsAmBalloon;
+import com.amcharts.api.IsAmChart;
+import com.amcharts.api.IsAmExport;
+import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsTitle;
+import com.amcharts.api.IsValueAxis;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmChartJso extends JavaScriptObject implements IsAmChart
+public class AmChartJSO extends JavaScriptObject implements IsAmChart
 {
-	protected AmChartJso()
+	protected AmChartJSO()
 	{
 	}
 
@@ -369,9 +369,9 @@ public class AmChartJso extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native List<IsTitle> getTitles()
 	/*-{
-		if ( titles == null )
+		if ( this.titles == null )
 		{
-			//titles = new ArrayList<IsTitle>();
+			this.titles = [];
 		}
 		return this.titles;
 	}-*/;
@@ -383,10 +383,10 @@ public class AmChartJso extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native void addTitle( IsTitle title )
-	/*-{
-		   //this.@com.subex.gwt.amcharts.client.jso.AmChartJso::getTitles().add( title );
-	}-*/;
+	public final void addTitle( IsTitle title )
+	{
+		this.getTitles().add(title);
+	}
 
 	@Override
 	public final native String getType()
@@ -427,32 +427,32 @@ public class AmChartJso extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native List<IsValueAxis> getValueAxes()
 	/*-{
-		if ( valueAxes == null )
+		if (   this.valueAxes == null )
 		{
-			//valueAxes = new ArrayList<IsValueAxis>();
+			  this.valueAxes = [];
 		}
 		return this.valueAxes;
 	}-*/;
 
 	@Override
-	public final native void addValueAxe( IsValueAxis valueAxes )
-	/*-{
-		getValueAxes().add( valueAxes );
-	}-*/;
+	public final void addValueAxe( IsValueAxis valueAxes )
+	{
+		this.getValueAxes().add( valueAxes );
+	}
 
 	@Override
 	public final native List<IsCategoryAxis> getCategoryAxis()
 	/*-{
-		if ( categoryAxis == null )
+		if ( this.categoryAxis == null )
 		{
-			//categoryAxis = new ArrayList<IsCategoryAxis>();
+			this.categoryAxis = [];
 		}
 		return this.categoryAxis;
 	}-*/;
 
 	@Override
-	public final native void addCategoryAxis( IsCategoryAxis categoryAxis )
-	/*-{
-		getCategoryAxis().add( categoryAxis );
-	}-*/;
+	public final void addCategoryAxis( IsCategoryAxis categoryAxis )
+	{
+		this.getCategoryAxis().add(categoryAxis);
+	}
 }

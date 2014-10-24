@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-import com.amcharts.model.IsLabel;
+import com.amcharts.api.IsLabel;
 
 public class Label implements IsLabel
 {

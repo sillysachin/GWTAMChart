@@ -1,11 +1,11 @@
 package com.amcharts.jso;
 
-import com.amcharts.model.IsAmExport;
+import com.amcharts.api.IsAmExport;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmExportJso extends JavaScriptObject implements IsAmExport
+public class AmExportJSO extends JavaScriptObject implements IsAmExport
 {
-	protected AmExportJso()
+	protected AmExportJSO()
 	{
 	}
 

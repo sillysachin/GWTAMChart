@@ -3,14 +3,14 @@ package com.amcharts.json;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.amcharts.model.IsAmBalloon;
-import com.amcharts.model.IsAmChart;
-import com.amcharts.model.IsAmExport;
-import com.amcharts.model.IsAmLegend;
-import com.amcharts.model.IsCategoryAxis;
-import com.amcharts.model.IsLabel;
-import com.amcharts.model.IsTitle;
-import com.amcharts.model.IsValueAxis;
+import com.amcharts.api.IsAmBalloon;
+import com.amcharts.api.IsAmChart;
+import com.amcharts.api.IsAmExport;
+import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsTitle;
+import com.amcharts.api.IsValueAxis;
 
 public class AmChart implements IsAmChart
 {

@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-import com.amcharts.model.IsAmExport;
+import com.amcharts.api.IsAmExport;
 
 public class AmExport implements IsAmExport
 {

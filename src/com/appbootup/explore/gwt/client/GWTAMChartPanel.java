@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.amcharts.jso.AmChartJso;
+import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptException;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -23,7 +23,7 @@ public class GWTAMChartPanel extends ResizeComposite
 
 	String chartJSONString = "";
 
-	AmChartJso chartJSO = null;
+	AmChartJSO chartJSO = null;
 
 	public GWTAMChartPanel( String id, JSONValue chartJSONObject )
 	{
@@ -80,7 +80,7 @@ public class GWTAMChartPanel extends ResizeComposite
 		return JSON.parseLenient(jsonString);
 	}-*/;
 
-	protected static native AmChartJso drawChart( String id, JavaScriptObject jso )
+	protected static native AmChartJSO drawChart( String id, JavaScriptObject jso )
 	/*-{
 		var chart = $wnd.AmCharts.makeChart(id, jso);
 		return chart;

@@ -1,8 +1,8 @@
 package com.amcharts.json;
 
-import com.amcharts.model.AxisPosition;
-import com.amcharts.model.IsCategoryAxis;
-import com.amcharts.model.IsTitle;
+import com.amcharts.api.AxisPosition;
+import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsTitle;
 
 public class CategoryAxis implements IsCategoryAxis
 {

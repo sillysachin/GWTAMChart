@@ -2,11 +2,11 @@ package com.amcharts.jso;
 
 import java.util.List;
 
-import com.amcharts.model.IsAmSlicedChart;
+import com.amcharts.api.IsAmSlicedChart;
 
-public class AmSlicedChartJso extends AmChartJso implements IsAmSlicedChart
+public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 {
-	protected AmSlicedChartJso()
+	protected AmSlicedChartJSO()
 	{
 
 	}

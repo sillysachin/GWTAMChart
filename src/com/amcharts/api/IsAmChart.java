@@ -1,4 +1,4 @@
-package com.amcharts.model;
+package com.amcharts.api;
 
 import java.util.List;
 

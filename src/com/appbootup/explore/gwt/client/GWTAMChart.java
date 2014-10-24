@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.amcharts.jso.AmChartJso;
+import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JsonUtils;
@@ -49,7 +49,7 @@ public class GWTAMChart implements EntryPoint
 					if ( 200 == response.getStatusCode() )
 					{
 						String text = response.getText();
-						AmChartJso amChartJSO = JsonUtils.<AmChartJso> safeEval( text );
+						AmChartJSO amChartJSO = JsonUtils.<AmChartJSO> safeEval( text );
 						GWT.log( "amChartJSO -> " + amChartJSO.getType() );
 						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text );
 						RootLayoutPanel.get().add( amChartPanel );
