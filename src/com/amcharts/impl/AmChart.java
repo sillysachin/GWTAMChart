@@ -9,7 +9,7 @@ import com.google.gwt.user.client.ui.LayoutPanel;
 public class AmChart extends Composite implements IJavaScriptWrapper {
 	protected JavaScriptObject jso;
 	String id;
-	
+
 	private LayoutPanel divWrapper = new LayoutPanel();
 
 	protected AmChart() {
@@ -60,6 +60,53 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 		this.jso = jso;
 	}
 
+	public native void addGraph(AmGraph amGraph)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph)
+		chart.addGraph(graph);
+	}-*/;
+
+	public native void addValueAxis(ValueAxis valueAxis)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(valueAxis)
+		chart.addValueAxis(valueAxis);
+	}-*/;
+
+	public native void addChartCursor(ChartCursor chartCursor)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartCursor)
+		chart.addChartCursor(chartCursor);
+	}-*/;
+
+	public native void addChartScrollbar(ChartScrollbar chartScrollbar)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chartScrollbar = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartScrollbar)
+		chart.addChartScrollbar(chartScrollbar);
+	}-*/;
+
+	public native void addTrendLine(TrendLine trendLine)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
+		chart.addTrendLine(trendLine);
+	}-*/;
+
+	@Override
+	protected void onLoad() {
+		String id = getId();
+		write(id);
+	}
+
+	public native void write(String containerId)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.write(containerId);
+	}-*/;
+
 	// TODO:Need to provide a better alternative than JavaScriptObject dataProvider.
 	public native void setDataProvider(JavaScriptObject dataProvider)
 	/*-{
@@ -76,33 +123,54 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 		this.@com.amcharts.impl.AmChart::jso.type = type;
 	}-*/;
 
+	public native String getType()
+	/*-{
+		return this.@com.amcharts.impl.AmChart::jso.type;
+	}-*/;
+
 	public native void setTitleField(String titleField)
 	/*-{
 		this.@com.amcharts.impl.AmChart::jso.titleField = titleField;
 	}-*/;
-	
+
+	public native String getTitleField()
+	/*-{
+		return this.@com.amcharts.impl.AmChart::jso.titleField;
+	}-*/;
+
 	public native void setValueField(String valueField)
 	/*-{
 		this.@com.amcharts.impl.AmChart::jso.valueField = valueField;
 	}-*/;
-	
-	public native void addGraph(AmGraph amGraph)
+
+	public native String getValueField()
 	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph)
-		chart.addGraph(graph);
+		return this.@com.amcharts.impl.AmChart::jso.valueField;
 	}-*/;
 
-	@Override
-	protected void onLoad() {
-		String id = getId();
-		write(id);
-	}
-
-	public native void write(String containerId)
+	public native String getDataDateFormat()
 	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		chart.write(containerId);
+		return this.@com.amcharts.impl.AmChart::jso.dataDateFormat;
 	}-*/;
 
+	public native void setDataDateFormat(String dataDateFormat)
+	/*-{
+		this.@com.amcharts.impl.AmChart::jso.dataDateFormat = dataDateFormat;
+	}-*/;
+
+	public native String getPathToImages()
+	/*-{
+		return this.@com.amcharts.impl.AmChart::jso.pathToImages;
+	}-*/;
+
+	public native void setPathToImages(String pathToImages)
+	/*-{
+		this.@com.amcharts.impl.AmChart::jso.pathToImages = pathToImages;
+	}-*/;
+
+	public native JavaScriptObject getCategoryAxisJSO()
+	/*-{
+		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).categoryAxis;
+		return categoryAxis;
+	}-*/;
 }

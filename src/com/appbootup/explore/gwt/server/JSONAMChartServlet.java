@@ -66,7 +66,6 @@ public class JSONAMChartServlet extends HttpServlet
 			{
 				InputStreamReader isr = new InputStreamReader( ins );
 				reader = new BufferedReader( isr );
-				int n = 0;
 				String sCurrentLine = "";
 				while ( ( sCurrentLine = reader.readLine() ) != null )
 				{

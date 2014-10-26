@@ -435,24 +435,21 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final void addValueAxe( IsValueAxis valueAxes )
+	public final void addValueAxis( IsValueAxis valueAxis )
 	{
-		this.getValueAxes().add( valueAxes );
+		this.getValueAxes().add( valueAxis );
 	}
 
 	@Override
-	public final native List<IsCategoryAxis> getCategoryAxis()
+	public final native IsCategoryAxis getCategoryAxis()
 	/*-{
-		if ( this.categoryAxis == null )
-		{
-			this.categoryAxis = [];
-		}
 		return this.categoryAxis;
 	}-*/;
 
 	@Override
-	public final void addCategoryAxis( IsCategoryAxis categoryAxis )
-	{
-		this.getCategoryAxis().add(categoryAxis);
-	}
+	public final native void setCategoryAxis( IsCategoryAxis categoryAxis )
+	/*-{
+		this.categoryAxis=categoryAxis;
+	}-*/;
+
 }

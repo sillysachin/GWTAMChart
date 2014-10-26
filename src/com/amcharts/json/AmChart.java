@@ -82,7 +82,7 @@ public class AmChart implements IsAmChart
 
 	private List<IsValueAxis> valueAxes;
 
-	private List<IsCategoryAxis> categoryAxis;
+	private IsCategoryAxis categoryAxis;
 
 	@Override
 	public List<IsLabel> getAllLabels()
@@ -500,24 +500,20 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public void addValueAxe( IsValueAxis valueAxes )
+	public void addValueAxis( IsValueAxis valueAxis )
 	{
-		getValueAxes().add( valueAxes );
+		getValueAxes().add( valueAxis );
 	}
 
 	@Override
-	public List<IsCategoryAxis> getCategoryAxis()
+	public IsCategoryAxis getCategoryAxis()
 	{
-		if ( categoryAxis == null )
-		{
-			categoryAxis = new ArrayList<IsCategoryAxis>();
-		}
 		return categoryAxis;
 	}
 
 	@Override
-	public void addCategoryAxis( IsCategoryAxis categoryAxis )
+	public void setCategoryAxis( IsCategoryAxis categoryAxis )
 	{
-		getCategoryAxis().add( categoryAxis );
+		this.categoryAxis = categoryAxis ;
 	}
 }

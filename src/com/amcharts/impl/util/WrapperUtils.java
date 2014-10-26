@@ -8,6 +8,12 @@ import com.amcharts.impl.AmCoordinateChart;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmRectangularChart;
 import com.amcharts.impl.AmSerialChart;
+import com.amcharts.impl.CategoryAxis;
+import com.amcharts.impl.ChartCursor;
+import com.amcharts.impl.ChartScrollbar;
+import com.amcharts.impl.Guide;
+import com.amcharts.impl.TrendLine;
+import com.amcharts.impl.ValueAxis;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -46,7 +52,7 @@ public class WrapperUtils {
 
 	private static IJavaScriptWrapper createWrapper(String className) {
 		IJavaScriptWrapper wrapper = null;
-
+		GWT.log(className);
 		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
 		if (className.equals(getSimpleName(AmChart.class))) {
 			wrapper = GWT.create(AmChart.class);
@@ -58,6 +64,18 @@ public class WrapperUtils {
 			wrapper = GWT.create(AmRectangularChart.class);
 		} else if (className.equals(getSimpleName(AmGraph.class))) {
 			wrapper = GWT.create(AmGraph.class);
+		} else if (className.equals(getSimpleName(ValueAxis.class))) {
+			wrapper = GWT.create(ValueAxis.class);
+		} else if (className.equals(getSimpleName(CategoryAxis.class))) {
+			wrapper = GWT.create(CategoryAxis.class);
+		} else if (className.equals(getSimpleName(ChartCursor.class))) {
+			wrapper = GWT.create(ChartCursor.class);
+		} else if (className.equals(getSimpleName(ChartScrollbar.class))) {
+			wrapper = GWT.create(ChartScrollbar.class);
+		} else if (className.equals(getSimpleName(Guide.class))) {
+			wrapper = GWT.create(Guide.class);
+		} else if (className.equals(getSimpleName(TrendLine.class))) {
+			wrapper = GWT.create(TrendLine.class);
 		}
 
 		return wrapper;

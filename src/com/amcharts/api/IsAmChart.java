@@ -2,10 +2,6 @@ package com.amcharts.api;
 
 import java.util.List;
 
-import com.amcharts.json.CategoryAxis;
-import com.amcharts.json.Title;
-import com.amcharts.json.ValueAxis;
-
 public interface IsAmChart
 {
 
@@ -145,10 +141,10 @@ public interface IsAmChart
 
 	public abstract List<IsValueAxis> getValueAxes();
 
-	public abstract void addValueAxe( IsValueAxis valueAxes );
+	public abstract void addValueAxis( IsValueAxis valueAxis );
 
-	public abstract List<IsCategoryAxis> getCategoryAxis();
+	public abstract IsCategoryAxis getCategoryAxis();
 
-	public abstract void addCategoryAxis( IsCategoryAxis categoryAxis );
+	public abstract void setCategoryAxis( IsCategoryAxis categoryAxis );
 
 }
