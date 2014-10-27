@@ -84,6 +84,13 @@ public class GWTAMChart implements EntryPoint {
 		amGraph.setValueField("visits");
 		amGraph.setType("column");
 		amGraph.setFillAlphas(0.8);
+		amGraph.setBalloonText("[[category]]: <b>[[value]]</b>");
+		amGraph.setType("line");
+		amGraph.setFillAlphas(0.5);
+
+		amGraph.setFillAlphas(0); // or delete this line, as 0 is default
+		amGraph.setBullet("round");
+		amGraph.setLineColor("#8d1cc6");
 
 		amSerialChart.addGraph(amGraph);
 		GWT.log("Render to -> " + amSerialChart.getId());

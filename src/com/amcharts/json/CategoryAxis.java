@@ -1,36 +1,33 @@
 package com.amcharts.json;
 
+import java.util.Date;
+
 import com.amcharts.api.AxisPosition;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsTitle;
 
-public class CategoryAxis implements IsCategoryAxis
-{
+public class CategoryAxis implements IsCategoryAxis {
 	private IsTitle title;
 
 	private AxisPosition position = AxisPosition.bottom;
 
 	@Override
-	public IsTitle getTitle()
-	{
+	public IsTitle getTitle() {
 		return title;
 	}
 
 	@Override
-	public void setTitle( IsTitle title )
-	{
+	public void setTitle(IsTitle title) {
 		this.title = title;
 	}
 
 	@Override
-	public AxisPosition getPosition()
-	{
+	public AxisPosition getPosition() {
 		return position;
 	}
 
 	@Override
-	public void setPosition( AxisPosition position )
-	{
+	public void setPosition(AxisPosition position) {
 		this.position = position;
 	}
 }
