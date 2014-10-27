@@ -60,6 +60,18 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 		this.jso = jso;
 	}
 
+	@Override
+	protected void onLoad() {
+		String id = getId();
+		write(id);
+	}
+
+	public native void write(String containerId)
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.write(containerId);
+	}-*/;
+
 	public native void addGraph(AmGraph amGraph)
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
@@ -93,18 +105,6 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
 		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
 		chart.addTrendLine(trendLine);
-	}-*/;
-
-	@Override
-	protected void onLoad() {
-		String id = getId();
-		write(id);
-	}
-
-	public native void write(String containerId)
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		chart.write(containerId);
 	}-*/;
 
 	// TODO:Need to provide a better alternative than JavaScriptObject dataProvider.
@@ -148,6 +148,26 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmChart::jso.valueField;
 	}-*/;
 
+	public native void setAngle(double angle)
+	/*-{
+		this.@com.amcharts.impl.AmChart::jso.angle = angle;
+	}-*/;
+
+	public native double getAngle()
+	/*-{
+		return this.@com.amcharts.impl.AmChart::jso.angle;
+	}-*/;
+
+	public native void setDepth3D(double depth3D)
+	/*-{
+		this.@com.amcharts.impl.AmChart::jso.depth3D = depth3D;
+	}-*/;
+
+	public native double getDepth3D()
+	/*-{
+		return this.@com.amcharts.impl.AmChart::jso.depth3D;
+	}-*/;
+
 	public native String getDataDateFormat()
 	/*-{
 		return this.@com.amcharts.impl.AmChart::jso.dataDateFormat;
@@ -170,7 +190,8 @@ public class AmChart extends Composite implements IJavaScriptWrapper {
 
 	public native JavaScriptObject getCategoryAxisJSO()
 	/*-{
-		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).categoryAxis;
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var categoryAxis = chart.categoryAxis;
 		return categoryAxis;
 	}-*/;
 }

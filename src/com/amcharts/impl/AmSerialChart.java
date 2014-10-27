@@ -7,8 +7,9 @@ public class AmSerialChart extends AmRectangularChart {
 
 	public AmSerialChart() {
 		jso = createJso();
-		CategoryAxis categoryAxis = new CategoryAxis();
-		categoryAxis.setJso(getCategoryAxisJSO());
+		categoryAxis = new CategoryAxis();
+		JavaScriptObject categoryAxisJSO = getCategoryAxisJSO();
+		categoryAxis.setJso(categoryAxisJSO);
 	}
 
 	public native JavaScriptObject createJso()

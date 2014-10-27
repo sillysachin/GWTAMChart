@@ -82,4 +82,12 @@ public class AmGraph implements IJavaScriptWrapper {
 	public native void setBalloonText(String balloonText)/*-{
 		this.@com.amcharts.impl.AmGraph::jso.balloonText = balloonText;
 	}-*/;
+
+	public native double getFillAlphast()/*-{
+		return this.@com.amcharts.impl.AmGraph::jso.fillAlphas;
+	}-*/;
+
+	public native void setFillAlphas(double fillAlphas)/*-{
+		this.@com.amcharts.impl.AmGraph::jso.fillAlphas = fillAlphas;
+	}-*/;
 }

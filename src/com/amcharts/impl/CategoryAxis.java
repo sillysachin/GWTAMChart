@@ -8,7 +8,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		IJavaScriptWrapper {
-	JavaScriptObject jso;
+	protected JavaScriptObject jso;
 
 	public CategoryAxis() {
 	}
@@ -52,7 +52,8 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 	}-*/;
 
 	public native void setParseDates(boolean parseDates) /*-{
-		this.@com.amcharts.impl.CategoryAxis::jso.parseDates = parseDates;
+		var categoryAxis = this.@com.amcharts.impl.CategoryAxis::jso;
+		categoryAxis.parseDates = parseDates;
 	}-*/;
 
 	public native String getMinPeriod() /*-{
@@ -109,5 +110,29 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 
 	public native void setAutoGridCount(boolean autoGridCount) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.autoGridCount = autoGridCount;
+	}-*/;
+
+	public native int getGridCount() /*-{
+		return this.@com.amcharts.impl.CategoryAxis::jso.gridCount;
+	}-*/;
+
+	public native void setGridCount(int gridCount) /*-{
+		this.@com.amcharts.impl.CategoryAxis::jso.gridCount = gridCount;
+	}-*/;
+
+	public native String getGridPosition() /*-{
+		return this.@com.amcharts.impl.CategoryAxis::jso.gridPosition;
+	}-*/;
+
+	public native void setGridPosition(String gridPosition) /*-{
+		this.@com.amcharts.impl.CategoryAxis::jso.gridPosition = gridPosition;
+	}-*/;
+
+	public native float getLabelRotation() /*-{
+		return this.@com.amcharts.impl.CategoryAxis::jso.labelRotation;
+	}-*/;
+
+	public native void setLabelRotation(double labelRotation) /*-{
+		this.@com.amcharts.impl.CategoryAxis::jso.labelRotation = labelRotation;
 	}-*/;
 }

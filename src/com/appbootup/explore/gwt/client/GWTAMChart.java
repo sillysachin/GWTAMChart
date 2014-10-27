@@ -47,9 +47,9 @@ public class GWTAMChart implements EntryPoint {
 	 */
 	public void onModuleLoad() {
 		// pieChartByJSNI();
-		// serialChartByJSNI();
+		serialChartByJSNI();
 		// chartByServerJSON();
-		lineWithTrendLineChartByJSNI();
+		// lineWithTrendLineChartByJSNI();
 	}
 
 	private void pieChartByJSNI() {
@@ -71,9 +71,20 @@ public class GWTAMChart implements EntryPoint {
 				.unsafeEval("[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]");
 		amSerialChart.setDataProvider(serialDataProvider);
 		amSerialChart.setCategoryField("country");
+		amSerialChart.setAngle(30);
+		amSerialChart.setDepth3D(15);
+
+		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
+		categoryAxis.setAutoGridCount(false);
+		categoryAxis.setGridCount(3);
+		categoryAxis.setGridPosition("start");
+		categoryAxis.setLabelRotation(90);
+
 		AmGraph amGraph = AmCharts.AmGraph();
 		amGraph.setValueField("visits");
 		amGraph.setType("column");
+		amGraph.setFillAlphas(0.8);
+
 		amSerialChart.addGraph(amGraph);
 		GWT.log("Render to -> " + amSerialChart.getId());
 		RootLayoutPanel.get().add(amSerialChart);
@@ -114,8 +125,8 @@ public class GWTAMChart implements EntryPoint {
 
 	private void lineWithTrendLineChartByJSNI() {
 
-		chartService.getLineWithTrendLineChartData("/data/lineWithTrendLines.json",
-				new AsyncCallback<String>() {
+		chartService.getLineWithTrendLineChartData(
+				"/data/lineWithTrendLines.json", new AsyncCallback<String>() {
 					@Override
 					public void onSuccess(String chartData) {
 						lineWithTrendLines(chartData);
@@ -139,13 +150,13 @@ public class GWTAMChart implements EntryPoint {
 		// AXES
 		// category
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
-		categoryAxis.setParseDates(true); // as our data is date-based, we set parseDates to true
-		categoryAxis.setMinPeriod("DD"); // our data is daily, so we set minPeriod to DD
-		categoryAxis.setGridAlpha(0.1);
-		categoryAxis.setMinorGridAlpha(0.1);
-		categoryAxis.setAxisAlpha(0);
-		categoryAxis.setMinorGridEnabled(true);
-		categoryAxis.setInside(true);
+		// categoryAxis.setParseDates(true); // as our data is date-based, we set parseDates to true
+		// categoryAxis.setMinPeriod("DD"); // our data is daily, so we set minPeriod to DD
+		// categoryAxis.setGridAlpha(0.1);
+		// categoryAxis.setMinorGridAlpha(0.1);
+		// categoryAxis.setAxisAlpha(0);
+		// categoryAxis.setMinorGridEnabled(true);
+		// categoryAxis.setInside(true);
 
 		// value
 		ValueAxis valueAxis = AmCharts.ValueAxis();
@@ -202,7 +213,7 @@ public class GWTAMChart implements EntryPoint {
 		trendLine.setFinalValue(10);
 		trendLine.setLineColor("#CC0000");
 		amSerialChart.addTrendLine(trendLine);
-		
+
 		RootLayoutPanel.get().add(amSerialChart);
 	}
 }
