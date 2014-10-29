@@ -4,18 +4,22 @@ import com.amcharts.api.IsChartScrollbar;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class ChartScrollbar implements IsChartScrollbar, IJavaScriptWrapper {
+public class ChartScrollbar implements IsChartScrollbar, IJavaScriptWrapper
+{
 	JavaScriptObject jso;
 
-	public ChartScrollbar() {
+	public ChartScrollbar()
+	{
 		jso = createJso();
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 

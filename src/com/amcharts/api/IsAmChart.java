@@ -5,146 +5,135 @@ import java.util.List;
 public interface IsAmChart
 {
 
-	public abstract List<IsLabel> getAllLabels();
+	List<IsLabel> getAllLabels();
 
-	public abstract void setAllLabels( List<IsLabel> allLabels );
+	void setAllLabels( List<IsLabel> allLabels );
 
-	public abstract IsAmExport getAmExport();
+	IsAmExport getAmExport();
 
-	public abstract void setAmExport( IsAmExport amExport );
+	void setAmExport( IsAmExport amExport );
 
-	public abstract Float getBackgroundAlpha();
+	Float getBackgroundAlpha();
 
-	public abstract void setBackgroundAlpha( Float backgroundAlpha );
+	void setBackgroundAlpha( Float backgroundAlpha );
 
-	public abstract String getBackgroundColor();
+	String getBackgroundColor();
 
-	public abstract void setBackgroundColor( String backgroundColor );
+	void setBackgroundColor( String backgroundColor );
 
-	public abstract IsAmBalloon getBalloon();
+	IsAmBalloon getBalloon();
 
-	public abstract void setBalloon( IsAmBalloon balloon );
+	void setBalloon( IsAmBalloon balloon );
 
-	public abstract Float getBorderAlpha();
+	Float getBorderAlpha();
 
-	public abstract void setBorderAlpha( Float borderAlpha );
+	void setBorderAlpha( Float borderAlpha );
 
-	public abstract String getBorderColor();
+	String getBorderColor();
 
-	public abstract void setBorderColor( String borderColor );
+	void setBorderColor( String borderColor );
 
-	public abstract String getColor();
+	String getColor();
 
-	public abstract void setColor( String color );
+	void setColor( String color );
 
-	public abstract String getCreditsPosition();
+	String getCreditsPosition();
 
-	public abstract void setCreditsPosition( String creditsPosition );
+	void setCreditsPosition( String creditsPosition );
 
-	public abstract List< ? extends Object> getDataProvider();
+	List< ? extends Object> getDataProvider();
 
-	public abstract void setDataProvider( List< ? extends Object> dataProvider );
+	void setDataProvider( List< ? extends Object> dataProvider );
 
-	public abstract String getDecimalSeparator();
+	String getDecimalSeparator();
 
-	public abstract void setDecimalSeparator( String decimalSeparator );
+	void setDecimalSeparator( String decimalSeparator );
 
-	public abstract Object getExportConfig();
+	IsExportConfig getExportConfig();
 
-	public abstract void setExportConfig( Object exportConfig );
+	void setExportConfig( IsExportConfig exportConfig );
 
-	public abstract String getFontFamily();
+	String getFontFamily();
 
-	public abstract void setFontFamily( String fontFamily );
+	void setFontFamily( String fontFamily );
 
-	public abstract Float getFontSize();
+	Float getFontSize();
 
-	public abstract void setFontSize( Float fontSize );
+	void setFontSize( Float fontSize );
 
-	public abstract Boolean getHandDrawn();
+	Boolean getHandDrawn();
 
-	public abstract void setHandDrawn( Boolean handDrawn );
+	void setHandDrawn( Boolean handDrawn );
 
-	public abstract Float getHandDrawScatter();
+	Float getHandDrawScatter();
 
-	public abstract void setHandDrawScatter( Float handDrawScatter );
+	void setHandDrawScatter( Float handDrawScatter );
 
-	public abstract Float getHandDrawThickness();
+	Float getHandDrawThickness();
 
-	public abstract void setHandDrawThickness( Float handDrawThickness );
+	void setHandDrawThickness( Float handDrawThickness );
 
-	public abstract Integer getHideBalloonTime();
+	Integer getHideBalloonTime();
 
-	public abstract void setHideBalloonTime( Integer hideBalloonTime );
+	void setHideBalloonTime( Integer hideBalloonTime );
 
-	public abstract String getLanguage();
+	String getLanguage();
 
-	public abstract void setLanguage( String language );
+	void setLanguage( String language );
 
-	public abstract IsAmLegend getLegend();
+	IsAmLegend getLegend();
 
-	public abstract void setLegend( IsAmLegend legend );
+	void setLegend( IsAmLegend legend );
 
-	public abstract String getLegendDiv();
+	String getLegendDiv();
 
-	public abstract void setLegendDiv( String legendDiv );
+	void setLegendDiv( String legendDiv );
 
-	public abstract Boolean getPanEventsEnabled();
+	Boolean getPanEventsEnabled();
 
-	public abstract void setPanEventsEnabled( Boolean panEventsEnabled );
+	void setPanEventsEnabled( Boolean panEventsEnabled );
 
-	public abstract String getPathToImages();
+	String getPathToImages();
 
-	public abstract void setPathToImages( String pathToImages );
+	void setPathToImages( String pathToImages );
 
-	public abstract Float getPercentPrecision();
+	Float getPercentPrecision();
 
-	public abstract void setPercentPrecision( Float percentPrecision );
+	void setPercentPrecision( Float percentPrecision );
 
-	public abstract Float getPrecision();
+	Float getPrecision();
 
-	public abstract void setPrecision( Float precision );
+	void setPrecision( Float precision );
 
-	public abstract List<Object> getPrefixesOfBigNumbers();
+	List<Object> getPrefixesOfBigNumbers();
 
-	public abstract void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers );
+	void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers );
 
-	public abstract List<Object> getPrefixesOfSmallNumbers();
+	List<Object> getPrefixesOfSmallNumbers();
 
-	public abstract void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers );
+	void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers );
 
-	public abstract String getTheme();
+	String getTheme();
 
-	public abstract void setTheme( String theme );
+	void setTheme( String theme );
 
-	public abstract String getThousandsSeparator();
+	String getThousandsSeparator();
 
-	public abstract void setThousandsSeparator( String thousandsSeparator );
+	void setThousandsSeparator( String thousandsSeparator );
 
-	public abstract List<IsTitle> getTitles();
+	List<IsTitle> getTitles();
 
-	public abstract void setTitles( List<IsTitle> titles );
+	void setTitles( List<IsTitle> titles );
 
-	public abstract void addTitle( IsTitle title );
+	String getType();
 
-	public abstract String getType();
+	void setType( String type );
 
-	public abstract void setType( String type );
+	Boolean getUsePrefixes();
 
-	public abstract Boolean getUsePrefixes();
+	void setUsePrefixes( Boolean usePrefixes );
 
-	public abstract void setUsePrefixes( Boolean usePrefixes );
+	String getVersion();
 
-	public abstract String getVersion();
-
-	public abstract void setVersion( String version );
-
-	public abstract List<IsValueAxis> getValueAxes();
-
-	public abstract void addValueAxis( IsValueAxis valueAxis );
-
-	public abstract IsCategoryAxis getCategoryAxis();
-
-	public abstract void setCategoryAxis( IsCategoryAxis categoryAxis );
-
+	void setVersion( String version );
 }

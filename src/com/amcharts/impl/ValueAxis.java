@@ -6,18 +6,22 @@ import com.amcharts.api.IsValueAxis;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper {
+public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper
+{
 	JavaScriptObject jso;
 
-	public ValueAxis() {
+	public ValueAxis()
+	{
 		jso = createJso();
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 
@@ -33,7 +37,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 	}-*/;
 
 	@Override
-	public native void setTitle(IsTitle title) /*-{
+	public native void setTitle( IsTitle title ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.title = title;
 	}-*/;
 
@@ -43,7 +47,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 	}-*/;
 
 	@Override
-	public native void setPosition(AxisPosition position) /*-{
+	public native void setPosition( AxisPosition position ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.position = position;
 	}-*/;
 
@@ -51,7 +55,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 		return this.@com.amcharts.impl.ValueAxis::jso.tickLength;
 	}-*/;
 
-	public native void setTickLength(int tickLength) /*-{
+	public native void setTickLength( int tickLength ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.tickLength = tickLength;
 	}-*/;
 
@@ -59,7 +63,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 		return this.@com.amcharts.impl.ValueAxis::jso.axisAlpha;
 	}-*/;
 
-	public native void setAxisAlpha(double axisAlpha) /*-{
+	public native void setAxisAlpha( double axisAlpha ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.axisAlpha = axisAlpha;
 	}-*/;
 
@@ -67,7 +71,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 		return this.@com.amcharts.impl.ValueAxis::jso.showFirstLabel;
 	}-*/;
 
-	public native void setShowFirstLabel(boolean showFirstLabel) /*-{
+	public native void setShowFirstLabel( boolean showFirstLabel ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.showFirstLabel = showFirstLabel;
 	}-*/;
 
@@ -75,7 +79,7 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 		return this.@com.amcharts.impl.ValueAxis::jso.showLastLabel;
 	}-*/;
 
-	public native void setShowLastLabel(boolean showLastLabel) /*-{
+	public native void setShowLastLabel( boolean showLastLabel ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.showLastLabel = showLastLabel;
 	}-*/;
 }

@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface IsAmSlicedChart extends IsAmChart
 {
-
 	public abstract Float getAlpha();
 
 	public abstract void setAlpha( Float alpha );

@@ -13,39 +13,49 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 /**
  * The server-side implementation of the RPC service.
  */
-@SuppressWarnings("serial")
-public class ChartServiceImpl extends RemoteServiceServlet implements
-		ChartService {
+@SuppressWarnings( "serial" )
+public class ChartServiceImpl extends RemoteServiceServlet implements ChartService
+{
 
-	public String getLineWithTrendLineChartData(String fName)
-			throws IllegalArgumentException {
+	public String getLineWithTrendLineChartData( String fName ) throws IllegalArgumentException
+	{
 		ServletContext cntxt = this.getServletContext();
 		BufferedReader reader = null;
 		StringBuffer sb = new StringBuffer();
 
-		InputStream ins = cntxt.getResourceAsStream(fName);
-		try {
-			if (ins != null) {
-				InputStreamReader isr = new InputStreamReader(ins);
-				reader = new BufferedReader(isr);
+		InputStream ins = cntxt.getResourceAsStream( fName );
+		try
+		{
+			if ( ins != null )
+			{
+				InputStreamReader isr = new InputStreamReader( ins );
+				reader = new BufferedReader( isr );
 				String sCurrentLine = "";
-				while ((sCurrentLine = reader.readLine()) != null) {
-					sb.append(sCurrentLine);
+				while ( ( sCurrentLine = reader.readLine() ) != null )
+				{
+					sb.append( sCurrentLine );
 				}
 			}
-		} catch (IOException e) {
+		}
+		catch ( IOException e )
+		{
 			e.printStackTrace();
-		} finally {
-			try {
-				if (reader != null)
+		}
+		finally
+		{
+			try
+			{
+				if ( reader != null )
 					reader.close();
-			} catch (IOException ex) {
+			}
+			catch ( IOException ex )
+			{
 				ex.printStackTrace();
 			}
 		}
 
 		String filejson = sb.toString();
-		System.out.println(filejson);
+		System.out.println( filejson );
 		return filejson;
 	}
 }

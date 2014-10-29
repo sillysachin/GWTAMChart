@@ -1,5 +1,6 @@
 package com.amcharts.api;
 
-public interface IsChartScrollbar {
+public interface IsChartScrollbar
+{
 
 }

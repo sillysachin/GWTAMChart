@@ -2,7 +2,6 @@ package com.amcharts.api;
 
 public interface IsAmPieChart extends IsAmSlicedChart
 {
-
 	public abstract Float getAngle();
 
 	public abstract void setAngle( Float angle );
@@ -62,5 +61,4 @@ public interface IsAmPieChart extends IsAmSlicedChart
 	public abstract String getStartRadius();
 
 	public abstract void setStartRadius( String startRadius );
-
 }

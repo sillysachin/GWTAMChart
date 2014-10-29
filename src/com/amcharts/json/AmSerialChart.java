@@ -2,24 +2,42 @@ package com.amcharts.json;
 
 import java.util.Date;
 
-public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart {
+public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
+{
 	private CategoryAxis categoryAxis;
+
 	private String balloonDateFormat;
+
 	private String categoryField;
+
 	private Number columnSpacing;
+
 	private Number columnSpacing3D;
+
 	private Number columnWidth;
+
 	private String dataDateFormat;
+
 	private Date endDate;
+
 	private Number endIndex;
+
 	private Number maxSelectedSeries;
+
 	private Number maxSelectedTime;
+
 	private Number minSelectedTime;
+
 	private Boolean mouseWheelScrollEnabled;
+
 	private Boolean mouseWheelZoomEnabled;
+
 	private Boolean rotate;
+
 	private Date startDate;
+
 	private Number startIndex;
+
 	private Boolean zoomOutOnDataUpdate;
 
 	/*
@@ -28,7 +46,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getCategoryAxis()
 	 */
 	@Override
-	public CategoryAxis getCategoryAxis() {
+	public CategoryAxis getCategoryAxis()
+	{
 		return categoryAxis;
 	}
 
@@ -38,7 +57,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.json.CategoryAxis)
 	 */
 	@Override
-	public void setCategoryAxis(CategoryAxis categoryAxis) {
+	public void setCategoryAxis( CategoryAxis categoryAxis )
+	{
 		this.categoryAxis = categoryAxis;
 	}
 
@@ -48,7 +68,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getBalloonDateFormat()
 	 */
 	@Override
-	public String getBalloonDateFormat() {
+	public String getBalloonDateFormat()
+	{
 		return balloonDateFormat;
 	}
 
@@ -58,7 +79,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setBalloonDateFormat(java.lang.String)
 	 */
 	@Override
-	public void setBalloonDateFormat(String balloonDateFormat) {
+	public void setBalloonDateFormat( String balloonDateFormat )
+	{
 		this.balloonDateFormat = balloonDateFormat;
 	}
 
@@ -68,7 +90,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getCategoryField()
 	 */
 	@Override
-	public String getCategoryField() {
+	public String getCategoryField()
+	{
 		return categoryField;
 	}
 
@@ -78,7 +101,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setCategoryField(java.lang.String)
 	 */
 	@Override
-	public void setCategoryField(String categoryField) {
+	public void setCategoryField( String categoryField )
+	{
 		this.categoryField = categoryField;
 	}
 
@@ -88,7 +112,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing()
 	 */
 	@Override
-	public Number getColumnSpacing() {
+	public Number getColumnSpacing()
+	{
 		return columnSpacing;
 	}
 
@@ -98,7 +123,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing(java.lang.Number)
 	 */
 	@Override
-	public void setColumnSpacing(Number columnSpacing) {
+	public void setColumnSpacing( Number columnSpacing )
+	{
 		this.columnSpacing = columnSpacing;
 	}
 
@@ -108,7 +134,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing3D()
 	 */
 	@Override
-	public Number getColumnSpacing3D() {
+	public Number getColumnSpacing3D()
+	{
 		return columnSpacing3D;
 	}
 
@@ -118,7 +145,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing3D(java.lang.Number)
 	 */
 	@Override
-	public void setColumnSpacing3D(Number columnSpacing3D) {
+	public void setColumnSpacing3D( Number columnSpacing3D )
+	{
 		this.columnSpacing3D = columnSpacing3D;
 	}
 
@@ -128,7 +156,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnWidth()
 	 */
 	@Override
-	public Number getColumnWidth() {
+	public Number getColumnWidth()
+	{
 		return columnWidth;
 	}
 
@@ -138,7 +167,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnWidth(java.lang.Number)
 	 */
 	@Override
-	public void setColumnWidth(Number columnWidth) {
+	public void setColumnWidth( Number columnWidth )
+	{
 		this.columnWidth = columnWidth;
 	}
 
@@ -148,7 +178,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getDataDateFormat()
 	 */
 	@Override
-	public String getDataDateFormat() {
+	public String getDataDateFormat()
+	{
 		return dataDateFormat;
 	}
 
@@ -158,7 +189,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setDataDateFormat(java.lang.String)
 	 */
 	@Override
-	public void setDataDateFormat(String dataDateFormat) {
+	public void setDataDateFormat( String dataDateFormat )
+	{
 		this.dataDateFormat = dataDateFormat;
 	}
 
@@ -168,7 +200,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getEndDate()
 	 */
 	@Override
-	public Date getEndDate() {
+	public Date getEndDate()
+	{
 		return endDate;
 	}
 
@@ -178,7 +211,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setEndDate(java.util.Date)
 	 */
 	@Override
-	public void setEndDate(Date endDate) {
+	public void setEndDate( Date endDate )
+	{
 		this.endDate = endDate;
 	}
 
@@ -188,7 +222,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getEndIndex()
 	 */
 	@Override
-	public Number getEndIndex() {
+	public Number getEndIndex()
+	{
 		return endIndex;
 	}
 
@@ -198,7 +233,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setEndIndex(java.lang.Number)
 	 */
 	@Override
-	public void setEndIndex(Number endIndex) {
+	public void setEndIndex( Number endIndex )
+	{
 		this.endIndex = endIndex;
 	}
 
@@ -208,7 +244,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedSeries()
 	 */
 	@Override
-	public Number getMaxSelectedSeries() {
+	public Number getMaxSelectedSeries()
+	{
 		return maxSelectedSeries;
 	}
 
@@ -218,7 +255,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedSeries(java.lang.Number)
 	 */
 	@Override
-	public void setMaxSelectedSeries(Number maxSelectedSeries) {
+	public void setMaxSelectedSeries( Number maxSelectedSeries )
+	{
 		this.maxSelectedSeries = maxSelectedSeries;
 	}
 
@@ -228,7 +266,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedTime()
 	 */
 	@Override
-	public Number getMaxSelectedTime() {
+	public Number getMaxSelectedTime()
+	{
 		return maxSelectedTime;
 	}
 
@@ -238,7 +277,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedTime(java.lang.Number)
 	 */
 	@Override
-	public void setMaxSelectedTime(Number maxSelectedTime) {
+	public void setMaxSelectedTime( Number maxSelectedTime )
+	{
 		this.maxSelectedTime = maxSelectedTime;
 	}
 
@@ -248,7 +288,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getMinSelectedTime()
 	 */
 	@Override
-	public Number getMinSelectedTime() {
+	public Number getMinSelectedTime()
+	{
 		return minSelectedTime;
 	}
 
@@ -258,7 +299,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setMinSelectedTime(java.lang.Number)
 	 */
 	@Override
-	public void setMinSelectedTime(Number minSelectedTime) {
+	public void setMinSelectedTime( Number minSelectedTime )
+	{
 		this.minSelectedTime = minSelectedTime;
 	}
 
@@ -268,7 +310,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelScrollEnabled()
 	 */
 	@Override
-	public Boolean getMouseWheelScrollEnabled() {
+	public Boolean getMouseWheelScrollEnabled()
+	{
 		return mouseWheelScrollEnabled;
 	}
 
@@ -278,7 +321,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelScrollEnabled(java.lang.Boolean)
 	 */
 	@Override
-	public void setMouseWheelScrollEnabled(Boolean mouseWheelScrollEnabled) {
+	public void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
+	{
 		this.mouseWheelScrollEnabled = mouseWheelScrollEnabled;
 	}
 
@@ -288,7 +332,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelZoomEnabled()
 	 */
 	@Override
-	public Boolean getMouseWheelZoomEnabled() {
+	public Boolean getMouseWheelZoomEnabled()
+	{
 		return mouseWheelZoomEnabled;
 	}
 
@@ -298,7 +343,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelZoomEnabled(java.lang.Boolean)
 	 */
 	@Override
-	public void setMouseWheelZoomEnabled(Boolean mouseWheelZoomEnabled) {
+	public void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
+	{
 		this.mouseWheelZoomEnabled = mouseWheelZoomEnabled;
 	}
 
@@ -308,7 +354,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getRotate()
 	 */
 	@Override
-	public Boolean getRotate() {
+	public Boolean getRotate()
+	{
 		return rotate;
 	}
 
@@ -318,7 +365,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setRotate(java.lang.Boolean)
 	 */
 	@Override
-	public void setRotate(Boolean rotate) {
+	public void setRotate( Boolean rotate )
+	{
 		this.rotate = rotate;
 	}
 
@@ -328,7 +376,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getStartDate()
 	 */
 	@Override
-	public Date getStartDate() {
+	public Date getStartDate()
+	{
 		return startDate;
 	}
 
@@ -338,7 +387,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setStartDate(java.util.Date)
 	 */
 	@Override
-	public void setStartDate(Date startDate) {
+	public void setStartDate( Date startDate )
+	{
 		this.startDate = startDate;
 	}
 
@@ -348,7 +398,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getStartIndex()
 	 */
 	@Override
-	public Number getStartIndex() {
+	public Number getStartIndex()
+	{
 		return startIndex;
 	}
 
@@ -358,7 +409,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setStartIndex(java.lang.Number)
 	 */
 	@Override
-	public void setStartIndex(Number startIndex) {
+	public void setStartIndex( Number startIndex )
+	{
 		this.startIndex = startIndex;
 	}
 
@@ -368,7 +420,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#getZoomOutOnDataUpdate()
 	 */
 	@Override
-	public Boolean getZoomOutOnDataUpdate() {
+	public Boolean getZoomOutOnDataUpdate()
+	{
 		return zoomOutOnDataUpdate;
 	}
 
@@ -378,7 +431,8 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart 
 	 * @see com.amcharts.json.IsAmSerialChart#setZoomOutOnDataUpdate(java.lang.Boolean)
 	 */
 	@Override
-	public void setZoomOutOnDataUpdate(Boolean zoomOutOnDataUpdate) {
+	public void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
+	{
 		this.zoomOutOnDataUpdate = zoomOutOnDataUpdate;
 	}
 }

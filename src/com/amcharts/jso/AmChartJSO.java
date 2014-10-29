@@ -6,10 +6,9 @@ import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsAmLegend;
-import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
-import com.amcharts.api.IsValueAxis;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class AmChartJSO extends JavaScriptObject implements IsAmChart
@@ -151,13 +150,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Object getExportConfig()
+	public final native IsExportConfig getExportConfig()
 	/*-{
 		return this.exportConfig;
 	}-*/;
 
 	@Override
-	public final native void setExportConfig( Object exportConfig )
+	public final native void setExportConfig( IsExportConfig exportConfig )
 	/*-{
 		this.exportConfig = exportConfig;
 	}-*/;
@@ -369,8 +368,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native List<IsTitle> getTitles()
 	/*-{
-		if ( this.titles == null )
-		{
+		if (this.titles == null) {
 			this.titles = [];
 		}
 		return this.titles;
@@ -381,12 +379,6 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	/*-{
 		this.titles = titles;
 	}-*/;
-
-	@Override
-	public final void addTitle( IsTitle title )
-	{
-		this.getTitles().add(title);
-	}
 
 	@Override
 	public final native String getType()
@@ -423,33 +415,4 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	/*-{
 		this.version = version;
 	}-*/;
-
-	@Override
-	public final native List<IsValueAxis> getValueAxes()
-	/*-{
-		if (   this.valueAxes == null )
-		{
-			  this.valueAxes = [];
-		}
-		return this.valueAxes;
-	}-*/;
-
-	@Override
-	public final void addValueAxis( IsValueAxis valueAxis )
-	{
-		this.getValueAxes().add( valueAxis );
-	}
-
-	@Override
-	public final native IsCategoryAxis getCategoryAxis()
-	/*-{
-		return this.categoryAxis;
-	}-*/;
-
-	@Override
-	public final native void setCategoryAxis( IsCategoryAxis categoryAxis )
-	/*-{
-		this.categoryAxis=categoryAxis;
-	}-*/;
-
 }

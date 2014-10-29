@@ -10,6 +10,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	{
 
 	}
+
 	@Override
 	public final native Float getAlpha()
 	/*-{

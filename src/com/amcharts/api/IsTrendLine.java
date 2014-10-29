@@ -1,5 +1,6 @@
 package com.amcharts.api;
 
-public interface IsTrendLine {
+public interface IsTrendLine
+{
 
 }

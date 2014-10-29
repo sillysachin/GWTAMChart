@@ -1,5 +1,6 @@
 package com.amcharts.api;
 
-public interface IsGuide {
+public interface IsGuide
+{
 
 }

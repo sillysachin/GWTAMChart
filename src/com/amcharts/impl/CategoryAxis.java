@@ -6,18 +6,21 @@ import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class CategoryAxis extends AxisBase implements IsCategoryAxis,
-		IJavaScriptWrapper {
+public class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper
+{
 	protected JavaScriptObject jso;
 
-	public CategoryAxis() {
+	public CategoryAxis()
+	{
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 
@@ -33,7 +36,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 	}-*/;
 
 	@Override
-	public native void setTitle(IsTitle title) /*-{
+	public native void setTitle( IsTitle title ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.title = title;
 	}-*/;
 
@@ -43,7 +46,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 	}-*/;
 
 	@Override
-	public native void setPosition(AxisPosition position) /*-{
+	public native void setPosition( AxisPosition position ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.position = position;
 	}-*/;
 
@@ -51,7 +54,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.parseDates;
 	}-*/;
 
-	public native void setParseDates(boolean parseDates) /*-{
+	public native void setParseDates( boolean parseDates ) /*-{
 		var categoryAxis = this.@com.amcharts.impl.CategoryAxis::jso;
 		categoryAxis.parseDates = parseDates;
 	}-*/;
@@ -60,7 +63,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.minPeriod;
 	}-*/;
 
-	public native void setMinPeriod(String minPeriod) /*-{
+	public native void setMinPeriod( String minPeriod ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.minPeriod = minPeriod;
 	}-*/;
 
@@ -68,7 +71,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.gridAlpha;
 	}-*/;
 
-	public native void setGridAlpha(double gridAlpha) /*-{
+	public native void setGridAlpha( double gridAlpha ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.gridAlpha = gridAlpha;
 	}-*/;
 
@@ -76,7 +79,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.minorGridAlpha;
 	}-*/;
 
-	public native void setMinorGridAlpha(double minorGridAlpha) /*-{
+	public native void setMinorGridAlpha( double minorGridAlpha ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.minorGridAlpha = minorGridAlpha;
 	}-*/;
 
@@ -84,7 +87,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.axisAlpha;
 	}-*/;
 
-	public native void setAxisAlpha(double axisAlpha) /*-{
+	public native void setAxisAlpha( double axisAlpha ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.axisAlpha = axisAlpha;
 	}-*/;
 
@@ -92,7 +95,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.minorGridEnabled;
 	}-*/;
 
-	public native void setMinorGridEnabled(boolean minorGridEnabled) /*-{
+	public native void setMinorGridEnabled( boolean minorGridEnabled ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.minorGridEnabled = minorGridEnabled;
 	}-*/;
 
@@ -100,7 +103,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.inside;
 	}-*/;
 
-	public native void setInside(boolean inside) /*-{
+	public native void setInside( boolean inside ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.inside = inside;
 	}-*/;
 
@@ -108,7 +111,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.autoGridCount;
 	}-*/;
 
-	public native void setAutoGridCount(boolean autoGridCount) /*-{
+	public native void setAutoGridCount( boolean autoGridCount ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.autoGridCount = autoGridCount;
 	}-*/;
 
@@ -116,7 +119,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.gridCount;
 	}-*/;
 
-	public native void setGridCount(int gridCount) /*-{
+	public native void setGridCount( int gridCount ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.gridCount = gridCount;
 	}-*/;
 
@@ -124,7 +127,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.gridPosition;
 	}-*/;
 
-	public native void setGridPosition(String gridPosition) /*-{
+	public native void setGridPosition( String gridPosition ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.gridPosition = gridPosition;
 	}-*/;
 
@@ -132,7 +135,7 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis,
 		return this.@com.amcharts.impl.CategoryAxis::jso.labelRotation;
 	}-*/;
 
-	public native void setLabelRotation(double labelRotation) /*-{
+	public native void setLabelRotation( double labelRotation ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.labelRotation = labelRotation;
 	}-*/;
 }

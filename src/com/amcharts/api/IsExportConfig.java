@@ -1,6 +1,6 @@
 package com.amcharts.api;
 
-public interface IsChartCursor
+public interface IsExportConfig
 {
 
 }

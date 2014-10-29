@@ -1,6 +1,6 @@
 package com.amcharts.json;
 
-public class AmXYChart extends AmCoordinateChart 
+public class AmXYChart extends AmCoordinateChart
 {
 
 }

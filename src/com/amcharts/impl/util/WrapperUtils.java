@@ -6,6 +6,9 @@ import java.util.Map;
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCoordinateChart;
 import com.amcharts.impl.AmGraph;
+import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.AmRectangularChart;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
@@ -22,7 +25,8 @@ import com.google.gwt.core.client.JavaScriptObject;
  * Class with various methods that involve wrapping and unwrapping of JavaScript objects
  * 
  */
-public class WrapperUtils {
+public class WrapperUtils
+{
 
 	/**
 	 * Performs wrapping on given JavaScriptObject. Wrapper is chosen and instantiated based on the constructor of the passed object. For passed null returns null. For unknown objects it will raise a runtime exception.
@@ -31,57 +35,94 @@ public class WrapperUtils {
 	 *            object that will be wrapped
 	 * @return initialized wrapper
 	 */
-	public static IJavaScriptWrapper wrap(JavaScriptObject jso) {
+	public static IJavaScriptWrapper wrap( JavaScriptObject jso )
+	{
 
-		if (jso == null) {
+		if ( jso == null )
+		{
 			return null;
 		}
 
-		String className = getJavaScriptClassName(jso);
+		String className = getJavaScriptClassName( jso );
 
-		IJavaScriptWrapper wrapper = createWrapper(className);
+		IJavaScriptWrapper wrapper = createWrapper( className );
 
-		if (wrapper == null) {
-			throw new RuntimeException("Unsupported class : " + className);
+		if ( wrapper == null )
+		{
+			throw new RuntimeException( "Unsupported class : " + className );
 		}
 
-		wrapper.setJso(jso);
+		wrapper.setJso( jso );
 
 		return wrapper;
 	}
 
-	private static IJavaScriptWrapper createWrapper(String className) {
+	private static IJavaScriptWrapper createWrapper( String className )
+	{
 		IJavaScriptWrapper wrapper = null;
-		GWT.log(className);
+		GWT.log( className );
 		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
-		if (className.equals(getSimpleName(AmChart.class))) {
-			wrapper = GWT.create(AmChart.class);
-		} else if (className.equals(getSimpleName(AmSerialChart.class))) {
-			wrapper = GWT.create(AmSerialChart.class);
-		} else if (className.equals(getSimpleName(AmCoordinateChart.class))) {
-			wrapper = GWT.create(AmCoordinateChart.class);
-		} else if (className.equals(getSimpleName(AmRectangularChart.class))) {
-			wrapper = GWT.create(AmRectangularChart.class);
-		} else if (className.equals(getSimpleName(AmGraph.class))) {
-			wrapper = GWT.create(AmGraph.class);
-		} else if (className.equals(getSimpleName(ValueAxis.class))) {
-			wrapper = GWT.create(ValueAxis.class);
-		} else if (className.equals(getSimpleName(CategoryAxis.class))) {
-			wrapper = GWT.create(CategoryAxis.class);
-		} else if (className.equals(getSimpleName(ChartCursor.class))) {
-			wrapper = GWT.create(ChartCursor.class);
-		} else if (className.equals(getSimpleName(ChartScrollbar.class))) {
-			wrapper = GWT.create(ChartScrollbar.class);
-		} else if (className.equals(getSimpleName(Guide.class))) {
-			wrapper = GWT.create(Guide.class);
-		} else if (className.equals(getSimpleName(TrendLine.class))) {
-			wrapper = GWT.create(TrendLine.class);
+		if ( className.equals( getSimpleName( AmChart.class ) ) )
+		{
+			wrapper = GWT.create( AmChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmSerialChart.class ) ) )
+		{
+			wrapper = GWT.create( AmSerialChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmCoordinateChart.class ) ) )
+		{
+			wrapper = GWT.create( AmCoordinateChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmRectangularChart.class ) ) )
+		{
+			wrapper = GWT.create( AmRectangularChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmGraph.class ) ) )
+		{
+			wrapper = GWT.create( AmGraph.class );
+		}
+		else if ( className.equals( getSimpleName( ValueAxis.class ) ) )
+		{
+			wrapper = GWT.create( ValueAxis.class );
+		}
+		else if ( className.equals( getSimpleName( CategoryAxis.class ) ) )
+		{
+			wrapper = GWT.create( CategoryAxis.class );
+		}
+		else if ( className.equals( getSimpleName( ChartCursor.class ) ) )
+		{
+			wrapper = GWT.create( ChartCursor.class );
+		}
+		else if ( className.equals( getSimpleName( ChartScrollbar.class ) ) )
+		{
+			wrapper = GWT.create( ChartScrollbar.class );
+		}
+		else if ( className.equals( getSimpleName( Guide.class ) ) )
+		{
+			wrapper = GWT.create( Guide.class );
+		}
+		else if ( className.equals( getSimpleName( TrendLine.class ) ) )
+		{
+			wrapper = GWT.create( TrendLine.class );
+		}
+		else if ( className.equals( getSimpleName( ExportConfig.class ) ) )
+		{
+			wrapper = GWT.create( ExportConfig.class );
+		}
+		else if ( className.equals( getSimpleName( MenuItems.class ) ) )
+		{
+			wrapper = GWT.create( MenuItems.class );
+		}
+		else if ( className.equals( getSimpleName( MenuItem.class ) ) )
+		{
+			wrapper = GWT.create( MenuItem.class );
 		}
 
 		return wrapper;
 	}
 
-	private static native String getJavaScriptClassName(JavaScriptObject jso) /*-{
+	private static native String getJavaScriptClassName( JavaScriptObject jso ) /*-{
 		return jso.constructor.name ? jso.constructor.name : jso.constructor
 				.toString().match(/function ([a-zA-z0-9]*)/)[1];
 	}-*/;
@@ -93,11 +134,10 @@ public class WrapperUtils {
 	 *            class for which to return the name
 	 * @return name of the class stripped of it's package name
 	 */
-	public static String getSimpleName(Class<?> klass) {
-		String simpleName = klass.getName().substring(
-				klass.getName().lastIndexOf(".") + 1);
-		simpleName = simpleName.contains("$") ? simpleName.substring(simpleName
-				.lastIndexOf('$') + 1) : simpleName;
+	public static String getSimpleName( Class< ? > klass )
+	{
+		String simpleName = klass.getName().substring( klass.getName().lastIndexOf( "." ) + 1 );
+		simpleName = simpleName.contains( "$" ) ? simpleName.substring( simpleName.lastIndexOf( '$' ) + 1 ) : simpleName;
 		return simpleName;
 	}
 
@@ -108,8 +148,7 @@ public class WrapperUtils {
 	 *            JavaScript list for conversion
 	 * @return new instance of Java list
 	 */
-	public static native <C extends IJavaScriptWrapper> List<C> wrapList(
-			JavaScriptObject list) /*-{
+	public static native <C extends IJavaScriptWrapper> List<C> wrapList( JavaScriptObject list ) /*-{
 
 		var javaList = null;
 
@@ -127,6 +166,24 @@ public class WrapperUtils {
 		return javaList;
 	}-*/;
 
+	public static native <C extends JavaScriptObject> List<C> getList( JavaScriptObject list ) /*-{
+
+		var javaList = null;
+
+		if (list != null) {
+			javaList = @java.util.ArrayList::new(I)(list.length);
+
+			for (var i = 0; i < list.length; i++) {
+				//create an instance of wrapper
+				var instance = list[i];
+				//and add it to the list
+				javaList.@java.util.ArrayList::add(Ljava/lang/Object;)(instance);
+			}
+		}
+
+		return javaList;
+	}-*/;
+
 	/**
 	 * Converts Java list into JavaScript list and unwraps the objects contained in it by exposing the underlying JavaScriptObjectS.
 	 * 
@@ -134,8 +191,7 @@ public class WrapperUtils {
 	 *            list for conversion
 	 * @return JavaScript list
 	 */
-	public static native JavaScriptObject unwrapList(
-			List<? extends IJavaScriptWrapper> list) /*-{
+	public static native JavaScriptObject unwrapList( List< ? extends IJavaScriptWrapper> list ) /*-{
 		var jsList = null;
 
 		if (list != null) {
@@ -157,8 +213,7 @@ public class WrapperUtils {
 	 * @param map
 	 * @return
 	 */
-	public static native <K extends Object, V extends IJavaScriptWrapper> JavaScriptObject unwrapMap(
-			Map<K, V> map) /*-{
+	public static native <K extends Object, V extends IJavaScriptWrapper> JavaScriptObject unwrapMap( Map<K, V> map ) /*-{
 
 		if (map == null) {
 			return null;
@@ -178,10 +233,14 @@ public class WrapperUtils {
 
 	}-*/;
 
-	public static JavaScriptObject unwrap(IJavaScriptWrapper wrapper) {
-		if (wrapper == null) {
+	public static JavaScriptObject unwrap( IJavaScriptWrapper wrapper )
+	{
+		if ( wrapper == null )
+		{
 			return null;
-		} else {
+		}
+		else
+		{
 			return wrapper.getJso();
 		}
 	}
@@ -193,8 +252,7 @@ public class WrapperUtils {
 	 *            JavaScript map for conversion
 	 * @return Java map containing wrapper objects or null if passed object is not a JavaScript map
 	 */
-	public static native <K extends Object, V extends IJavaScriptWrapper> Map<K, V> wrapMap(
-			JavaScriptObject map) /*-{
+	public static native <K extends Object, V extends IJavaScriptWrapper> Map<K, V> wrapMap( JavaScriptObject map ) /*-{
 		var mapJ = @java.util.HashMap::new()();
 
 		if (typeof map != typeof {}) {

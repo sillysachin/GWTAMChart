@@ -14,8 +14,7 @@ public class JsonRenderer
 	private final ChartsJacksonModule jacksonModule;
 
 	/**
-	 * The default mapper can be used to bypass the serializers registered in
-	 * the {@link ChartsJacksonModule}.
+	 * The default mapper can be used to bypass the serializers registered in the {@link ChartsJacksonModule}.
 	 */
 	public final static ObjectMapper DEFAULT_MAPPER = createDefaultObjectMapper();
 
@@ -26,16 +25,12 @@ public class JsonRenderer
 	}
 
 	/**
-	 * This method gives the opportunity to add a custom serializer to
-	 * serializer one of the highchart option classes. It may be neccessary to
-	 * serialize certain option classes differently for different web
-	 * frameworks.
+	 * This method gives the opportunity to add a custom serializer to serializer one of the highchart option classes. It may be neccessary to serialize certain option classes differently for different web frameworks.
 	 *
 	 * @param clazz
 	 *            the option class
 	 * @param serializer
-	 *            the serializer responsible for serializing objects of the
-	 *            option class.
+	 *            the serializer responsible for serializing objects of the option class.
 	 */
 	public <T> void addSerializer( final Class<T> clazz, final JsonSerializer<T> serializer )
 	{

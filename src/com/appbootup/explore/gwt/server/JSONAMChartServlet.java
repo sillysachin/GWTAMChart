@@ -37,11 +37,11 @@ public class JSONAMChartServlet extends HttpServlet
 		BufferedReader reader = null;
 		ServletContext cntxt = this.getServletContext();
 		String fName = "/data/amchart.json";
-		//String fName = "/data/person.json";
+		// String fName = "/data/person.json";
 		AmPieChart pieChart = new AmPieChart();
 		pieChart.setType( "pie" );
-		pieChart.setValueField("value");
-		pieChart.setTitleField("key");
+		pieChart.setValueField( "value" );
+		pieChart.setTitleField( "key" );
 
 		List<PieChartSlice> dataProvider = new ArrayList<PieChartSlice>();
 		PieChartSlice slice1 = new PieChartSlice();
@@ -57,7 +57,6 @@ public class JSONAMChartServlet extends HttpServlet
 		JsonRenderer renderer = JsonBuilderFactory.getInstance().getJacksonRenderer();
 		String jsonStringJackson = renderer.toJson( pieChart );
 		System.out.println( jsonStringJackson );
-
 
 		InputStream ins = cntxt.getResourceAsStream( fName );
 		try
@@ -93,7 +92,7 @@ public class JSONAMChartServlet extends HttpServlet
 		String filejson = sb.toString();
 		System.out.println( filejson );
 
-		//return jsonStringJackson;
+		// return jsonStringJackson;
 		return filejson;
 	}
 }

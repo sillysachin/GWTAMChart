@@ -4,18 +4,22 @@ import com.amcharts.api.IsGuide;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class Guide implements IsGuide, IJavaScriptWrapper {
+public class Guide implements IsGuide, IJavaScriptWrapper
+{
 	JavaScriptObject jso;
-    
-	public Guide() {
+
+	public Guide()
+	{
 		jso = createJso();
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 
@@ -29,7 +33,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.value;
 	}-*/;
 
-	public native void setValue(int value) /*-{
+	public native void setValue( int value ) /*-{
 		this.@com.amcharts.impl.Guide::jso.value = value;
 	}-*/;
 
@@ -37,7 +41,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.toValue;
 	}-*/;
 
-	public native void setToValue(int toValue) /*-{
+	public native void setToValue( int toValue ) /*-{
 		this.@com.amcharts.impl.Guide::jso.toValue = toValue;
 	}-*/;
 
@@ -45,7 +49,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.fillColor;
 	}-*/;
 
-	public native void setFillColor(String fillColor) /*-{
+	public native void setFillColor( String fillColor ) /*-{
 		this.@com.amcharts.impl.Guide::jso.fillColor = fillColor;
 	}-*/;
 
@@ -53,7 +57,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.inside;
 	}-*/;
 
-	public native void setInside(boolean inside) /*-{
+	public native void setInside( boolean inside ) /*-{
 		this.@com.amcharts.impl.Guide::jso.inside = inside;
 	}-*/;
 
@@ -61,7 +65,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.fillAlpha;
 	}-*/;
 
-	public native void setFillAlpha(double fillAlpha) /*-{
+	public native void setFillAlpha( double fillAlpha ) /*-{
 		this.@com.amcharts.impl.Guide::jso.fillAlpha = fillAlpha;
 	}-*/;
 
@@ -69,7 +73,7 @@ public class Guide implements IsGuide, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.Guide::jso.lineAlpha;
 	}-*/;
 
-	public native void setLineAlpha(double lineAlpha) /*-{
+	public native void setLineAlpha( double lineAlpha ) /*-{
 		this.@com.amcharts.impl.Guide::jso.lineAlpha = lineAlpha;
 	}-*/;
 }

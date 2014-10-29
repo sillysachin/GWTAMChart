@@ -8,6 +8,7 @@ import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
@@ -36,7 +37,7 @@ public class AmChart implements IsAmChart
 
 	private String decimalSeparator;
 
-	private Object exportConfig;
+	private IsExportConfig exportConfig;
 
 	private String fontFamily;
 
@@ -216,13 +217,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Object getExportConfig()
+	public IsExportConfig getExportConfig()
 	{
 		return exportConfig;
 	}
 
 	@Override
-	public void setExportConfig( Object exportConfig )
+	public void setExportConfig( IsExportConfig exportConfig )
 	{
 		this.exportConfig = exportConfig;
 	}
@@ -448,12 +449,6 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public void addTitle( IsTitle title )
-	{
-		getTitles().add( title );
-	}
-
-	@Override
 	public String getType()
 	{
 		return type;
@@ -487,33 +482,5 @@ public class AmChart implements IsAmChart
 	public void setVersion( String version )
 	{
 		this.version = version;
-	}
-
-	@Override
-	public List<IsValueAxis> getValueAxes()
-	{
-		if ( valueAxes == null )
-		{
-			valueAxes = new ArrayList<IsValueAxis>();
-		}
-		return valueAxes;
-	}
-
-	@Override
-	public void addValueAxis( IsValueAxis valueAxis )
-	{
-		getValueAxes().add( valueAxis );
-	}
-
-	@Override
-	public IsCategoryAxis getCategoryAxis()
-	{
-		return categoryAxis;
-	}
-
-	@Override
-	public void setCategoryAxis( IsCategoryAxis categoryAxis )
-	{
-		this.categoryAxis = categoryAxis ;
 	}
 }

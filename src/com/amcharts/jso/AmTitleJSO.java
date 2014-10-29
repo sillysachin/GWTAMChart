@@ -23,6 +23,8 @@ public class AmTitleJSO extends JavaScriptObject implements IsTitle
 
 	public static native AmTitleJSO create( String text )
 	/*-{
-		return {text: text};
+		return {
+			text : text
+		};
 	}-*/;
 }

@@ -3,19 +3,23 @@ package com.amcharts.impl;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmGraph implements IJavaScriptWrapper {
+public class AmGraph implements IJavaScriptWrapper
+{
 
 	JavaScriptObject jso;
 
-	public AmGraph() {
+	public AmGraph()
+	{
 		jso = createJso();
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 
@@ -25,7 +29,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return graph;
 	}-*/;
 
-	public native void setValueField(String valueField)
+	public native void setValueField( String valueField )
 	/*-{
 		this.@com.amcharts.impl.AmGraph::jso.valueField = valueField;
 	}-*/;
@@ -35,7 +39,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.valueField;
 	}-*/;
 
-	public native void setType(String type)
+	public native void setType( String type )
 	/*-{
 		this.@com.amcharts.impl.AmGraph::jso.type = type;
 	}-*/;
@@ -50,7 +54,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.dashLength;
 	}-*/;
 
-	public native void setDashLength(int dashLength)
+	public native void setDashLength( int dashLength )
 	/*-{
 		this.@com.amcharts.impl.AmGraph::jso.dashLength = dashLength;
 	}-*/;
@@ -60,7 +64,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.lineColor;
 	}-*/;
 
-	public native void setLineColor(String lineColor)
+	public native void setLineColor( String lineColor )
 	/*-{
 		this.@com.amcharts.impl.AmGraph::jso.lineColor = lineColor;
 	}-*/;
@@ -70,7 +74,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.bullet;
 	}-*/;
 
-	public native void setBullet(String bullet)
+	public native void setBullet( String bullet )
 	/*-{
 		this.@com.amcharts.impl.AmGraph::jso.bullet = bullet;
 	}-*/;
@@ -79,7 +83,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.balloonText;
 	}-*/;
 
-	public native void setBalloonText(String balloonText)/*-{
+	public native void setBalloonText( String balloonText )/*-{
 		this.@com.amcharts.impl.AmGraph::jso.balloonText = balloonText;
 	}-*/;
 
@@ -87,7 +91,7 @@ public class AmGraph implements IJavaScriptWrapper {
 		return this.@com.amcharts.impl.AmGraph::jso.fillAlphas;
 	}-*/;
 
-	public native void setFillAlphas(double fillAlphas)/*-{
+	public native void setFillAlphas( double fillAlphas )/*-{
 		this.@com.amcharts.impl.AmGraph::jso.fillAlphas = fillAlphas;
 	}-*/;
 }

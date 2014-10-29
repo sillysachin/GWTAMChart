@@ -6,18 +6,22 @@ import com.amcharts.api.IsTrendLine;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
+public class TrendLine implements IsTrendLine, IJavaScriptWrapper
+{
 	JavaScriptObject jso;
 
-	public TrendLine() {
+	public TrendLine()
+	{
 		jso = createJso();
 	}
 
-	public JavaScriptObject getJso() {
+	public JavaScriptObject getJso()
+	{
 		return jso;
 	}
 
-	public void setJso(JavaScriptObject jso) {
+	public void setJso( JavaScriptObject jso )
+	{
 		this.jso = jso;
 	}
 
@@ -31,7 +35,7 @@ public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.TrendLine::jso.initialDate;
 	}-*/;
 
-	public native void setInitialDate(Date initialDate) /*-{
+	public native void setInitialDate( Date initialDate ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.initialDate = initialDate;
 	}-*/;
 
@@ -39,7 +43,7 @@ public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.TrendLine::jso.finalDate;
 	}-*/;
 
-	public native void setFinalDate(Date finalDate) /*-{
+	public native void setFinalDate( Date finalDate ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.finalDate = finalDate;
 	}-*/;
 
@@ -47,7 +51,7 @@ public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.TrendLine::jso.initialValue;
 	}-*/;
 
-	public native void setInitialValue(int initialValue) /*-{
+	public native void setInitialValue( int initialValue ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.initialValue = initialValue;
 	}-*/;
 
@@ -55,7 +59,7 @@ public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.TrendLine::jso.finalValue;
 	}-*/;
 
-	public native void setFinalValue(int finalValue) /*-{
+	public native void setFinalValue( int finalValue ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.finalValue = finalValue;
 	}-*/;
 
@@ -63,7 +67,7 @@ public class TrendLine implements IsTrendLine, IJavaScriptWrapper {
 		return this.@com.amcharts.impl.TrendLine::jso.lineColor;
 	}-*/;
 
-	public native void setLineColor(String lineColor) /*-{
+	public native void setLineColor( String lineColor ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.lineColor = lineColor;
 	}-*/;
 }
