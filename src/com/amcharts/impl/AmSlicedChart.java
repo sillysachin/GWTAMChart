@@ -329,13 +329,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getOutlineAlpha()
+	public Double getOutlineAlpha()
 	{
 		return getJso().getOutlineAlpha();
 	}
 
 	@Override
-	public void setOutlineAlpha( Float outlineAlpha )
+	public void setOutlineAlpha( Double outlineAlpha )
 	{
 		getJso().setOutlineAlpha( outlineAlpha );
 	}

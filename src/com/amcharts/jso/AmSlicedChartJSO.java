@@ -324,15 +324,15 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native Float getOutlineAlpha()
+	public final native Double getOutlineAlpha()
 	/*-{
 		return this.outlineAlpha;
 	}-*/;
 
 	@Override
-	public final native void setOutlineAlpha( Float outlineAlpha )
+	public final native void setOutlineAlpha( Double outlineAlpha )
 	/*-{
-		this.outlineAlpha = outlineAlpha;
+		this.outlineAlpha = 0.4;
 	}-*/;
 
 	@Override

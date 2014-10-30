@@ -6,77 +6,79 @@ import com.amcharts.json.CategoryAxis;
 
 public interface IsAmSerialChart
 {
+	Double getAngle();
 
-	public abstract CategoryAxis getCategoryAxis();
+	void setAngle( Double angle );
 
-	public abstract void setCategoryAxis( CategoryAxis categoryAxis );
+	CategoryAxis getCategoryAxis();
 
-	public abstract String getBalloonDateFormat();
+	void setCategoryAxis( CategoryAxis categoryAxis );
 
-	public abstract void setBalloonDateFormat( String balloonDateFormat );
+	String getBalloonDateFormat();
 
-	public abstract String getCategoryField();
+	void setBalloonDateFormat( String balloonDateFormat );
 
-	public abstract void setCategoryField( String categoryField );
+	String getCategoryField();
 
-	public abstract Number getColumnSpacing();
+	void setCategoryField( String categoryField );
 
-	public abstract void setColumnSpacing( Number columnSpacing );
+	Number getColumnSpacing();
 
-	public abstract Number getColumnSpacing3D();
+	void setColumnSpacing( Number columnSpacing );
 
-	public abstract void setColumnSpacing3D( Number columnSpacing3D );
+	Number getColumnSpacing3D();
 
-	public abstract Number getColumnWidth();
+	void setColumnSpacing3D( Number columnSpacing3D );
 
-	public abstract void setColumnWidth( Number columnWidth );
+	Number getColumnWidth();
 
-	public abstract String getDataDateFormat();
+	void setColumnWidth( Number columnWidth );
 
-	public abstract void setDataDateFormat( String dataDateFormat );
+	String getDataDateFormat();
 
-	public abstract Date getEndDate();
+	void setDataDateFormat( String dataDateFormat );
 
-	public abstract void setEndDate( Date endDate );
+	Date getEndDate();
 
-	public abstract Number getEndIndex();
+	void setEndDate( Date endDate );
 
-	public abstract void setEndIndex( Number endIndex );
+	Number getEndIndex();
 
-	public abstract Number getMaxSelectedSeries();
+	void setEndIndex( Number endIndex );
 
-	public abstract void setMaxSelectedSeries( Number maxSelectedSeries );
+	Number getMaxSelectedSeries();
 
-	public abstract Number getMaxSelectedTime();
+	void setMaxSelectedSeries( Number maxSelectedSeries );
 
-	public abstract void setMaxSelectedTime( Number maxSelectedTime );
+	Number getMaxSelectedTime();
 
-	public abstract Number getMinSelectedTime();
+	void setMaxSelectedTime( Number maxSelectedTime );
 
-	public abstract void setMinSelectedTime( Number minSelectedTime );
+	Number getMinSelectedTime();
 
-	public abstract Boolean getMouseWheelScrollEnabled();
+	void setMinSelectedTime( Number minSelectedTime );
 
-	public abstract void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled );
+	Boolean getMouseWheelScrollEnabled();
 
-	public abstract Boolean getMouseWheelZoomEnabled();
+	void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled );
 
-	public abstract void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled );
+	Boolean getMouseWheelZoomEnabled();
 
-	public abstract Boolean getRotate();
+	void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled );
 
-	public abstract void setRotate( Boolean rotate );
+	Boolean getRotate();
 
-	public abstract Date getStartDate();
+	void setRotate( Boolean rotate );
 
-	public abstract void setStartDate( Date startDate );
+	Date getStartDate();
 
-	public abstract Number getStartIndex();
+	void setStartDate( Date startDate );
 
-	public abstract void setStartIndex( Number startIndex );
+	Number getStartIndex();
 
-	public abstract Boolean getZoomOutOnDataUpdate();
+	void setStartIndex( Number startIndex );
 
-	public abstract void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate );
+	Boolean getZoomOutOnDataUpdate();
 
+	void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate );
 }

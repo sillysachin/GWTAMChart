@@ -22,6 +22,16 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		return ( AmPieChartJSO ) super.getJso();
 	}
 
+	public void setAngle( Double angle )
+	{
+		getJso().setAngle( angle );
+	}
+
+	public Double getAngle()
+	{
+		return getJso().getAngle();
+	}
+
 	@Override
 	public String getBalloonText()
 	{
@@ -34,12 +44,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		getJso().setBalloonText( balloonText );
 	}
 
-	public void setDepth3D( Float depth3D )
+	public void setDepth3D( Double depth3D )
 	{
+		//TODO: The pie chart is not rendered clearly. casting is causing a bug.
 		getJso().setDepth3D( depth3D );
 	}
 
-	public Float getDepth3D()
+	public Double getDepth3D()
 	{
 		return getJso().getDepth3D();
 	}

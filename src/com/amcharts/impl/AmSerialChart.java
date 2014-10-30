@@ -17,6 +17,12 @@ public class AmSerialChart extends AmRectangularChart
 		categoryAxis.setJso( categoryAxisJSO );
 	}
 
+	@Override
+	public AmSerialChartJSO getJso()
+	{
+		return ( AmSerialChartJSO ) super.getJso();
+	}
+
 	public native AmSerialChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmSerialChart();
@@ -26,6 +32,16 @@ public class AmSerialChart extends AmRectangularChart
 	public CategoryAxis getCategoryAxis()
 	{
 		return categoryAxis;
+	}
+
+	public void setAngle( Double angle )
+	{
+		getJso().setAngle( angle );
+	}
+
+	public Double getAngle()
+	{
+		return getJso().getAngle();
 	}
 
 	public native String getBalloonDateFormat() /*-{
@@ -76,12 +92,12 @@ public class AmSerialChart extends AmRectangularChart
 		this.@com.amcharts.impl.CategoryAxis::getJso().dataDateFormat = dataDateFormat;
 	}-*/;
 
-	public native void setDepth3D( Float depth3D )
+	public native void setDepth3D( Double depth3D )
 	/*-{
 		this.@com.amcharts.impl.AmSerialChart::getJso().depth3D = depth3D;
 	}-*/;
 
-	public native Float getDepth3D()
+	public native Double getDepth3D()
 	/*-{
 		return this.@com.amcharts.impl.AmSerialChart::getJso().depth3D;
 	}-*/;

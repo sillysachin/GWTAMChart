@@ -7,6 +7,19 @@ import com.amcharts.json.CategoryAxis;
 
 public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 {
+	
+	@Override
+	public final native Double getAngle()
+	/*-{
+		return this.angle;
+	}-*/;
+
+	@Override
+	public final native void setAngle( Double angle )
+	/*-{
+		this.angle = angle;
+	}-*/;
+	
 	/*
 	 * (non-Javadoc)
 	 * 

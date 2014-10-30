@@ -25,58 +25,68 @@
 <script type="text/javascript" src="js/amcharts/serial.js"></script>
 <script type="text/javascript" src="js/amcharts/xy.js"></script>
 <script type="text/javascript" src="js/amcharts/themes/light.js"></script>
-<script type="text/javascript" src="js/amcharts/exporting/amexport.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/canvg.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/filesaver.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.plugin.addimage.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
 <!--                                           -->
 <!-- This script loads your compiled module.   -->
 <!-- If you add any GWT meta tags, they must   -->
 <!-- be added before this line.                -->
 <!--                                           -->
 <script type="text/javascript">
-	var chart = AmCharts.makeChart("chartdiv", {
+	var chart = AmCharts
+			.makeChart("chartdiv",
+	{
 		"type" : "pie",
 		"theme" : "none",
 		"dataProvider" : [ {
 			"country" : "Lithuania",
-			"litres" : 501.9
-		}, {
-			"country" : "Czech Republic",
-			"litres" : 301.9
+			"value" : 260
 		}, {
 			"country" : "Ireland",
-			"litres" : 201.1
+			"value" : 201
 		}, {
 			"country" : "Germany",
-			"litres" : 165.8
+			"value" : 65
 		}, {
 			"country" : "Australia",
-			"litres" : 139.9
-		}, {
-			"country" : "Austria",
-			"litres" : 128.3
+			"value" : 39
 		}, {
 			"country" : "UK",
-			"litres" : 99
+			"value" : 19
 		}, {
-			"country" : "Belgium",
-			"litres" : 60
-		}, {
-			"country" : "The Netherlands",
-			"litres" : 50
+			"country" : "Latvia",
+			"value" : 10
 		} ],
-		"valueField" : "litres",
+		"valueField" : "value",
 		"titleField" : "country",
+		//"outlineAlpha" : 0.4,
+		"depth3D" : 15.1,
+		"balloonText" : "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+		"angle" : 30.1,
 		"exportConfig" : {
 			menuItems : [ {
 				icon : '/js/amcharts/images/export.png',
 				format : 'png'
 			} ]
-		},
-		"groupPercent":5
+		}
+	});
+	jQuery('.chart-input').off().on('input change', function() {
+		var property = jQuery(this).data('property');
+		var target = chart;
+		var value = Number(this.value);
+		chart.startDuration = 0;
+
+		if (property == 'innerRadius') {
+			value += "%";
+		}
+
+		target[property] = value;
+		chart.validateNow();
 	});
 </script>
 
@@ -98,6 +108,29 @@
 			Your web browser must have JavaScript enabled in order for this
 			application to display correctly.</div>
 	</noscript>
-	<div id="chartdiv" style="width:100%;height:500px"></div>
+	<div id="chartdiv" style="width: 100%; height: 500px"></div>
+	<div class="container-fluid">
+		<div class="row text-center" style="overflow: hidden;">
+			<div class="col-sm-3"
+				style="float: none !important; display: inline-block;">
+				<label class="text-left">Angle:</label> <input class="chart-input"
+					data-property="angle" type="range" min="0" max="60" value="30"
+					step="1" />
+			</div>
+
+			<div class="col-sm-3"
+				style="float: none !important; display: inline-block;">
+				<label class="text-left">Depth:</label> <input class="chart-input"
+					data-property="depth3D" type="range" min="1" max="25" value="10"
+					step="1" />
+			</div>
+			<div class="col-sm-3"
+				style="float: none !important; display: inline-block;">
+				<label class="text-left">Inner-Radius:</label> <input
+					class="chart-input" data-property="innerRadius" type="range"
+					min="0" max="80" value="0" step="1" />
+			</div>
+		</div>
+	</div>
 </body>
 </html>

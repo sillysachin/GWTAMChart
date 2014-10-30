@@ -9,13 +9,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}
 
 	@Override
-	public final native Float getAngle()
+	public final native Double getAngle()
 	/*-{
 		return this.angle;
 	}-*/;
 
 	@Override
-	public final native void setAngle( Float angle )
+	public final native void setAngle( Double angle )
 	/*-{
 		this.angle = angle;
 	}-*/;
@@ -33,15 +33,15 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native Float getDepth3D()
+	public final native Double getDepth3D()
 	/*-{
 		return this.depth3D;
 	}-*/;
 
 	@Override
-	public final native void setDepth3D( Float depth3d )
+	public final native void setDepth3D( Double depth3D )
 	/*-{
-		depth3D = depth3d;
+		this.depth3D = depth3D;
 	}-*/;
 
 	@Override

@@ -49,7 +49,8 @@ public class GWTAMChart implements EntryPoint
 		// serialChartByJSNI();
 		// chartByServerJSON();
 		// lineWithTrendLineChartByJSNI();
-		SimplePieChart simplePieChart = new SimplePieChart();
+		// SimplePieChart simplePieChart = new SimplePieChart();
+		ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 	}
 
 	private void pieChartByJSNI()
@@ -72,8 +73,8 @@ public class GWTAMChart implements EntryPoint
 		JavaScriptObject serialDataProvider = JsonUtils.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );
 		amSerialChart.setCategoryField( "country" );
-		amSerialChart.setAngle( 30.0F );
-		amSerialChart.setDepth3D( 15.0F );
+		amSerialChart.setAngle( 30.0 );
+		amSerialChart.setDepth3D( 15.0 );
 
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setAutoGridCount( false );

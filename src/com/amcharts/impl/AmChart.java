@@ -167,16 +167,6 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		return this.@com.amcharts.impl.AmChart::jso.valueField;
 	}-*/;
 
-	public native void setAngle( Float angle )
-	/*-{
-		this.@com.amcharts.impl.AmChart::jso.angle = angle;
-	}-*/;
-
-	public native Float getAngle()
-	/*-{
-		return this.@com.amcharts.impl.AmChart::jso.angle;
-	}-*/;
-
 	public native String getDataDateFormat()
 	/*-{
 		return this.@com.amcharts.impl.AmChart::jso.dataDateFormat;

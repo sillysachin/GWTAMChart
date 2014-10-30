@@ -4,11 +4,11 @@ import com.amcharts.api.IsAmPieChart;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
-	private Float angle;
+	private Double angle;
 
 	private String balloonText;
 
-	private Float depth3D;
+	private Double depth3D;
 
 	private String innerRadius;
 
@@ -35,13 +35,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	private String startRadius;
 
 	@Override
-	public Float getAngle()
+	public Double getAngle()
 	{
 		return angle;
 	}
 
 	@Override
-	public void setAngle( Float angle )
+	public void setAngle( Double angle )
 	{
 		this.angle = angle;
 	}
@@ -59,15 +59,15 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getDepth3D()
+	public Double getDepth3D()
 	{
 		return depth3D;
 	}
 
 	@Override
-	public void setDepth3D( Float depth3d )
+	public void setDepth3D( Double depth3D )
 	{
-		depth3D = depth3d;
+		this.depth3D = depth3D;
 	}
 
 	@Override

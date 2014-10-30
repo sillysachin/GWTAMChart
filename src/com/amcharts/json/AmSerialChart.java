@@ -6,6 +6,8 @@ import com.amcharts.api.IsAmSerialChart;
 
 public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 {
+	private Double angle;
+
 	private CategoryAxis categoryAxis;
 
 	private String balloonDateFormat;
@@ -41,6 +43,18 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 	private Number startIndex;
 
 	private Boolean zoomOutOnDataUpdate;
+
+	@Override
+	public Double getAngle()
+	{
+		return angle;
+	}
+
+	@Override
+	public void setAngle( Double angle )
+	{
+		this.angle = angle;
+	}
 
 	/*
 	 * (non-Javadoc)

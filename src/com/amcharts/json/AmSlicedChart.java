@@ -58,7 +58,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Float maxLabelWidth;
 
-	private Float outlineAlpha;
+	private Double outlineAlpha;
 
 	private String outlineColor;
 
@@ -405,13 +405,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getOutlineAlpha()
+	public Double getOutlineAlpha()
 	{
 		return outlineAlpha;
 	}
 
 	@Override
-	public void setOutlineAlpha( Float outlineAlpha )
+	public void setOutlineAlpha( Double outlineAlpha )
 	{
 		this.outlineAlpha = outlineAlpha;
 	}

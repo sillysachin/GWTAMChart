@@ -108,9 +108,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setMaxLabelWidth( Float maxLabelWidth );
 
-	public abstract Float getOutlineAlpha();
+	public abstract Double getOutlineAlpha();
 
-	public abstract void setOutlineAlpha( Float outlineAlpha );
+	public abstract void setOutlineAlpha( Double outlineAlpha );
 
 	public abstract String getOutlineColor();
 
