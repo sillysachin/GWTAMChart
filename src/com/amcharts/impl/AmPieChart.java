@@ -34,136 +34,157 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		getJso().setBalloonText( balloonText );
 	}
 
-	public native void setDepth3D( Float depth3D )
-	/*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().depth3D = depth3D;
-	}-*/;
+	public void setDepth3D( Float depth3D )
+	{
+		getJso().setDepth3D( depth3D );
+	}
 
-	public native Float getDepth3D()
-	/*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().depth3D;
-	}-*/;
-
-	@Override
-	public native String getInnerRadius() /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().innerRadius;
-	}-*/;
+	public Float getDepth3D()
+	{
+		return getJso().getDepth3D();
+	}
 
 	@Override
-	public native void setInnerRadius( String innerRadius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().innerRadius = innerRadius;
-	}-*/;
+	public String getInnerRadius()
+	{
+		return getJso().getInnerRadius();
+	}
 
 	@Override
-	public native Float getLabelRadius() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().depth3D;
-	}-*/;
+	public void setInnerRadius( String innerRadius )
+	{
+		getJso().setInnerRadius( innerRadius );
+	}
 
 	@Override
-	public native void setLabelRadius( Float labelRadius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().depth3D = depth3D;
-	}-*/;
+	public Float getLabelRadius()
+	{
+		return getJso().getLabelRadius();
+	}
 
 	@Override
-	public native String getLabelRadiusField() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().labelRadiusField;
-	}-*/;
+	public void setLabelRadius( Float labelRadius )
+	{
+		getJso().setLabelRadius( labelRadius );
+	}
 
 	@Override
-	public native void setLabelRadiusField( String labelRadiusField ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().labelRadiusField = labelRadiusField;
-	}-*/;
+	public String getLabelRadiusField()
+	{
+		return getJso().getLabelRadiusField();
+	}
 
 	@Override
-	public native String getLabelText() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().labelText;
-	}-*/;
+	public void setLabelRadiusField( String labelRadiusField )
+	{
+		getJso().setLabelRadiusField( labelRadiusField );
+	}
 
 	@Override
-	public native void setLabelText( String labelText ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().labelText = labelText;
-	}-*/;
+	public String getLabelText()
+	{
+		return getJso().getLabelText();
+	}
 
 	@Override
-	public native Float getMinRadius() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().minRadius;
-	}-*/;
+	public void setLabelText( String labelText )
+	{
+		getJso().setLabelText( labelText );
+	}
 
 	@Override
-	public native void setMinRadius( Float minRadius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().minRadius = minRadius;
-	}-*/;
+	public Float getMinRadius()
+	{
+		return getJso().getMinRadius();
+	}
 
 	@Override
-	public native Float getPieAlpha() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().pieAlpha;
-	}-*/;
+	public void setMinRadius( Float minRadius )
+	{
+		getJso().setMinRadius( minRadius );
+	}
 
 	@Override
-	public native void setPieAlpha( Float pieAlpha ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().pieAlpha = pieAlpha;
-	}-*/;
+	public Float getPieAlpha()
+	{
+		return getJso().getPieAlpha();
+	}
 
 	@Override
-	public native String getPieX() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().pieX
-
-	}-*/;
-
-	@Override
-	public native void setPieX( String pieX ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().pieX = pieX;
-	}-*/;
+	public void setPieAlpha( Float pieAlpha )
+	{
+		getJso().setPieAlpha( pieAlpha );
+	}
 
 	@Override
-	public native String getPieY() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().pieY;
-
-	}-*/;
-
-	@Override
-	public native void setPieY( String pieY ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().pieY = pieY;
-	}-*/;
+	public String getPieX()
+	{
+		return getJso().getPieX();
+	}
 
 	@Override
-	public native String getPullOutRadius() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().pullOutRadius;
-	}-*/;
+	public void setPieX( String pieX )
+	{
+		getJso().setPieX( pieX );
+	}
 
 	@Override
-	public native void setPullOutRadius( String pullOutRadius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().pullOutRadius = pullOutRadius;
-	}-*/;
+	public String getPieY()
+	{
+		return getJso().getPieY();
+	}
 
 	@Override
-	public native String getRadius() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().radius;
-	}-*/;
+	public void setPieY( String pieY )
+	{
+		getJso().setPieY( pieY );
+	}
 
 	@Override
-	public native void setRadius( String radius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().radius = radius;
-	}-*/;
+	public String getPullOutRadius()
+	{
+		return getJso().getPullOutRadius();
+	}
 
 	@Override
-	public native Float getStartAngle() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().startAngle;
-	}-*/;
+	public void setPullOutRadius( String pullOutRadius )
+	{
+		getJso().setPullOutRadius( pullOutRadius );
+	}
 
 	@Override
-	public native void setStartAngle( Float startAngle )
-	/*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().startAngle = startAngle;
-	}-*/;
+	public String getRadius()
+	{
+		return getJso().getRadius();
+	}
 
 	@Override
-	public native String getStartRadius() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().startRadius;
-	}-*/;
+	public void setRadius( String radius )
+	{
+		getJso().setRadius( radius );
+	}
 
 	@Override
-	public native void setStartRadius( String startRadius ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().startRadius = startRadius;
-	}-*/;
+	public Float getStartAngle()
+	{
+		return getJso().getStartAngle();
+	}
+
+	@Override
+	public void setStartAngle( Float startAngle )
+	{
+		getJso().setStartAngle( startAngle );
+	}
+
+	@Override
+	public String getStartRadius()
+	{
+		return getJso().getStartRadius();
+	}
+
+	@Override
+	public void setStartRadius( String startRadius )
+	{
+		getJso().setStartRadius( startRadius );
+	}
 }

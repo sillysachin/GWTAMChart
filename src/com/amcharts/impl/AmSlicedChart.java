@@ -10,128 +10,155 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	@Override
 	public AmSlicedChartJSO getJso()
 	{
-		return ( AmSlicedChartJSO ) super.getJso();
+		AmSlicedChartJSO jso = ( AmSlicedChartJSO ) super.getJso();
+		return jso;
 	}
 
 	@Override
-	public native Float getAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().alpha;
-	}-*/;
+	public Float getAlpha()
+	{
+		return getJso().getAlpha();
+	}
 
 	@Override
-	public native void setAlpha( Float alpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().alpha = alpha;
-	}-*/;
+	public void setAlpha( Float alpha )
+	{
+		getJso().setAlpha( alpha );
+	}
 
 	@Override
-	public native String getAlphaField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().alphaField;
-	}-*/;
+	public String getAlphaField()
+	{
+		return getJso().getAlphaField();
+	}
 
 	@Override
-	public native void setAlphaField( String alphaField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().alphaField = alphaField;
-	}-*/;
+	public void setAlphaField( String alphaField )
+	{
+		getJso().setAlphaField( alphaField );
+	}
 
 	@Override
-	public native String getBaseColor() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().baseColor;
-	}-*/;
+	public String getBaseColor()
+	{
+		return getJso().getBaseColor();
+	}
 
 	@Override
-	public native void setBaseColor( String baseColor ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().baseColor = baseColor;
-	}-*/;
+	public void setBaseColor( String baseColor )
+	{
+		getJso().setBaseColor( baseColor );
+	}
 
 	@Override
-	public native Float getBrightnessStep() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().brightnessStep;
-	}-*/;
+	public Float getBrightnessStep()
+	{
+		return getJso().getBrightnessStep();
+	}
 
 	@Override
-	public native void setBrightnessStep( Float brightnessStep ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().brightnessStep = brightnessStep;
-	}-*/;
+	public void setBrightnessStep( Float brightnessStep )
+	{
+		getJso().setBrightnessStep( brightnessStep );
+	}
 
 	@Override
-	public native List<Object> getChartData() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().chartData;
-	}-*/;
+	public List<Object> getChartData()
+	{
+		return getJso().getChartData();
+	}
 
 	@Override
-	public native void setChartData( List<Object> chartData ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().chartData = chartData;
-	}-*/;
+	public void setChartData( List<Object> chartData )
+	{
+		getJso().setChartData( chartData );
+	}
 
 	@Override
-	public native String getColorField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().colorField;
-	}-*/;
+	public String getColorField()
+	{
+		return getJso().getColorField();
+	}
 
 	@Override
-	public native void setColorField( String colorField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().colorField = colorField;
-	}-*/;
+	public void setColorField( String colorField )
+	{
+		getJso().setColorField( colorField );
+	}
 
 	@Override
-	public native List<String> getColors() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().colors;
-	}-*/;
+	public List<String> getColors()
+	{
+		return getJso().getColors();
+	}
 
 	@Override
-	public native void setColors( List<String> colors ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().colors = colors;
-	}-*/;
+	public void setColors( List<String> colors )
+	{
+		getJso().setColors( colors );
+	}
 
 	@Override
-	public native String getDescriptionField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().descriptionField;
-	}-*/;
+	public String getDescriptionField()
+	{
+		return getJso().getDescriptionField();
+	}
 
 	@Override
-	public native void setDescriptionField( String descriptionField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().descriptionField = descriptionField;
-	}-*/;
+	public void setDescriptionField( String descriptionField )
+	{
+		getJso().setDescriptionField( descriptionField );
+
+	}
 
 	@Override
-	public native List<Float> getGradientRatio() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().gradientRatio;
-	}-*/;
+	public List<Float> getGradientRatio()
+	{
+		return getJso().getGradientRatio();
+	}
 
 	@Override
-	public native void setGradientRatio( List<Float> gradientRatio ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().gradientRatio = gradientRatio;
-	}-*/;
+	public void setGradientRatio( List<Float> gradientRatio )
+	{
+		getJso().setGradientRatio( gradientRatio );
+
+	}
 
 	@Override
-	public native Float getGroupedAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupedAlpha;
-	}-*/;
+	public Float getGroupedAlpha()
+	{
+		return getJso().getGroupedAlpha();
+	}
 
 	@Override
-	public native void setGroupedAlpha( Float groupedAlpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupedAlpha = groupedAlpha;
-	}-*/;
+	public void setGroupedAlpha( Float groupedAlpha )
+	{
+		getJso().setGroupedAlpha( groupedAlpha );
+	}
 
 	@Override
-	public native String getGroupedColor() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupedColor;
-	}-*/;
+	public String getGroupedColor()
+	{
+		return getJso().getGroupedColor();
+	}
 
 	@Override
-	public native void setGroupedColor( String groupedColor ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupedColor = groupedColor;
-	}-*/;
+	public void setGroupedColor( String groupedColor )
+	{
+		getJso().setGroupedColor( groupedColor );
+	}
 
 	@Override
-	public native String getGroupedDescription() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupedDescription;
-	}-*/;
+	public String getGroupedDescription()
+	{
+		return getJso().getGroupedDescription();
+	}
 
 	@Override
-	public native void setGroupedDescription( String groupedDescription ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupedDescription = groupedDescription;
-	}-*/;
+	public void setGroupedDescription( String groupedDescription )
+	{
+		getJso().setGroupedDescription( groupedDescription );
+	}
 
 	@Override
 	public Boolean getGroupedPulled()
@@ -146,288 +173,340 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public native String getGroupedTitle() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupedTitle;
-	}-*/;
+	public String getGroupedTitle()
+	{
+		return getJso().getGroupedTitle();
+	}
 
 	@Override
-	public native void setGroupedTitle( String groupedTitle ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupedTitle = groupedTitle;
-	}-*/;
+	public void setGroupedTitle( String groupedTitle )
+	{
+		getJso().setGroupedTitle( groupedTitle );
+	}
 
 	@Override
-	public native Double getGroupPercent() /*-{
-		var jso = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		//var jso = this.@com.amcharts.impl.AmSlicedChart::getJso();
-		return jso.groupPercent;
-	}-*/;
+	public Double getGroupPercent()
+	{
+		return getJso().getGroupPercent();
+	}
 
 	@Override
-	public native void setGroupPercent( Double groupPercent ) /*-{
-		var jso = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		//var jso = this.@com.amcharts.impl.AmSlicedChart::getJso();
-		jso.groupPercent = groupPercent;
-	}-*/;
+	public void setGroupPercent( Double groupPercent )
+	{
+		getJso().setGroupPercent( groupPercent );
+	}
 
 	@Override
-	public native Float getHideLabelsPercent() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().hideLabelsPercent;
-	}-*/;
+	public Float getHideLabelsPercent()
+	{
+		return getJso().getHideLabelsPercent();
+	}
 
 	@Override
-	public native void setHideLabelsPercent( Float hideLabelsPercent ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().hideLabelsPercent = hideLabelsPercent;
-	}-*/;
+	public void setHideLabelsPercent( Float hideLabelsPercent )
+	{
+		getJso().setHideLabelsPercent( hideLabelsPercent );
+	}
 
 	@Override
-	public native Float getHoverAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().hoverAlpha;
-	}-*/;
+	public Float getHoverAlpha()
+	{
+		return getJso().getHoverAlpha();
+	}
 
 	@Override
-	public native void setHoverAlpha( Float hoverAlpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().hoverAlpha = hoverAlpha;
-	}-*/;
+	public void setHoverAlpha( Float hoverAlpha )
+	{
+		getJso().setHoverAlpha( hoverAlpha );
+	}
 
 	@Override
-	public native Object getLabelFunction() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().labelFunction;
-	}-*/;
+	public Object getLabelFunction()
+	{
+		return getJso().getLabelFunction();
+	}
 
 	@Override
-	public native void setLabelFunction( Object labelFunction ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().labelFunction = labelFunction;
-	}-*/;
+	public void setLabelFunction( Object labelFunction )
+	{
+		getJso().setLabelFunction( labelFunction );
+	}
 
 	@Override
-	public native Boolean getLabelsEnabled() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().labelsEnabled;
-	}-*/;
+	public Boolean getLabelsEnabled()
+	{
+		return getJso().getLabelsEnabled();
+	}
 
 	@Override
-	public native void setLabelsEnabled( Boolean labelsEnabled ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().labelsEnabled = labelsEnabled;
-	}-*/;
+	public void setLabelsEnabled( Boolean labelsEnabled )
+	{
+		getJso().setLabelsEnabled( labelsEnabled );
+	}
 
 	@Override
-	public native Float getLabelTickAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().labelTickAlpha;
-	}-*/;
+	public Float getLabelTickAlpha()
+	{
+		return getJso().getLabelTickAlpha();
+	}
 
 	@Override
-	public native void setLabelTickAlpha( Float labelTickAlpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().labelTickAlpha = labelTickAlpha;
-	}-*/;
+	public void setLabelTickAlpha( Float labelTickAlpha )
+	{
+		getJso().setLabelTickAlpha( labelTickAlpha );
+	}
 
 	@Override
-	public native String getLabelTickColor() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().labelTickColor;
-	}-*/;
+	public String getLabelTickColor()
+	{
+		return getJso().getLabelTickColor();
+	}
 
 	@Override
-	public native void setLabelTickColor( String labelTickColor ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().labelTickColor = labelTickColor;
-	}-*/;
+	public void setLabelTickColor( String labelTickColor )
+	{
+		getJso().setLabelTickColor( labelTickColor );
+	}
 
 	@Override
-	public native Float getMarginBottom() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().marginBottom;
-	}-*/;
+	public Float getMarginBottom()
+	{
+		return getJso().getMarginBottom();
+	}
 
 	@Override
-	public native void setMarginBottom( Float marginBottom ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().marginBottom = marginBottom;
-	}-*/;
+	public void setMarginBottom( Float marginBottom )
+	{
+		getJso().setMarginBottom( marginBottom );
+	}
 
 	@Override
-	public native Float getMarginLeft() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().marginLeft;
-	}-*/;
+	public Float getMarginLeft()
+	{
+		return getJso().getMarginLeft();
+	}
 
 	@Override
-	public native void setMarginLeft( Float marginLeft ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().marginLeft = marginLeft;
-	}-*/;
+	public void setMarginLeft( Float marginLeft )
+	{
+		getJso().setMarginLeft( marginLeft );
+	}
 
 	@Override
-	public native Float getMarginRight() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().marginRight;
-	}-*/;
+	public Float getMarginRight()
+	{
+		return getJso().getMarginRight();
+	}
 
 	@Override
-	public native void setMarginRight( Float marginRight ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().marginRight = marginRight;
-	}-*/;
+	public void setMarginRight( Float marginRight )
+	{
+		getJso().setMarginRight( marginRight );
+	}
 
 	@Override
-	public native Float getMarginTop() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().marginTop;
-	}-*/;
+	public Float getMarginTop()
+	{
+		return getJso().getMarginTop();
+	}
 
 	@Override
-	public native void setMarginTop( Float marginTop ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().marginTop = marginTop;
-	}-*/;
+	public void setMarginTop( Float marginTop )
+	{
+		getJso().setMarginTop( marginTop );
+	}
 
 	@Override
-	public native Float getMaxLabelWidth() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().maxLabelWidth;
-	}-*/;
+	public Float getMaxLabelWidth()
+	{
+		return getJso().getMaxLabelWidth();
+	}
 
 	@Override
-	public native void setMaxLabelWidth( Float maxLabelWidth ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().maxLabelWidth = maxLabelWidth;
-	}-*/;
+	public void setMaxLabelWidth( Float maxLabelWidth )
+	{
+		getJso().setMaxLabelWidth( maxLabelWidth );
+	}
 
 	@Override
-	public native Float getOutlineAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().outlineAlpha;
-	}-*/;
+	public Float getOutlineAlpha()
+	{
+		return getJso().getOutlineAlpha();
+	}
 
 	@Override
-	public native void setOutlineAlpha( Float outlineAlpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().outlineAlpha = outlineAlpha;
-	}-*/;
+	public void setOutlineAlpha( Float outlineAlpha )
+	{
+		getJso().setOutlineAlpha( outlineAlpha );
+	}
 
 	@Override
-	public native String getOutlineColor() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().outlineColor;
-	}-*/;
+	public String getOutlineColor()
+	{
+		return getJso().getOutlineColor();
+	}
 
 	@Override
-	public native void setOutlineColor( String outlineColor ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().outlineColor = outlineColor;
-	}-*/;
+	public void setOutlineColor( String outlineColor )
+	{
+		getJso().setOutlineColor( outlineColor );
+	}
 
 	@Override
-	public native Float getOutlineThickness() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().outlineThickness;
-	}-*/;
+	public Float getOutlineThickness()
+	{
+		return getJso().getOutlineThickness();
+	}
 
 	@Override
-	public native void setOutlineThickness( Float outlineThickness ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().outlineThickness = outlineThickness;
-	}-*/;
+	public void setOutlineThickness( Float outlineThickness )
+	{
+		getJso().setOutlineThickness( outlineThickness );
+	}
 
 	@Override
-	public native String getPatternField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().patternField;
-	}-*/;
+	public String getPatternField()
+	{
+		return getJso().getPatternField();
+	}
 
 	@Override
-	public native void setPatternField( String patternField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().patternField = patternField;
-	}-*/;
+	public void setPatternField( String patternField )
+	{
+		getJso().setPatternField( patternField );
+	}
 
 	@Override
-	public native String getPulledField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().pulledField;
-	}-*/;
+	public String getPulledField()
+	{
+		return getJso().getPulledField();
+	}
 
 	@Override
-	public native void setPulledField( String pulledField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().pulledField = pulledField;
-	}-*/;
+	public void setPulledField( String pulledField )
+	{
+		getJso().setPulledField( pulledField );
+	}
 
 	@Override
-	public native Integer getPullOutDuration() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutDuration;
-	}-*/;
+	public Integer getPullOutDuration()
+	{
+		return getJso().getPullOutDuration();
+	}
 
 	@Override
-	public native void setPullOutDuration( Integer pullOutDuration ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutDuration = pullOutDuration;
-	}-*/;
+	public void setPullOutDuration( Integer pullOutDuration )
+	{
+		getJso().setPullOutDuration( pullOutDuration );
+	}
 
 	@Override
-	public native String getPullOutEffect() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutEffect;
-	}-*/;
+	public String getPullOutEffect()
+	{
+		return getJso().getPullOutEffect();
+	}
 
 	@Override
-	public native void setPullOutEffect( String pullOutEffect ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutEffect = pullOutEffect;
-	}-*/;
+	public void setPullOutEffect( String pullOutEffect )
+	{
+		getJso().setPullOutEffect( pullOutEffect );
+	}
 
 	@Override
-	public native Boolean getPullOutOnlyOne() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutOnlyOne;
-	}-*/;
+	public Boolean getPullOutOnlyOne()
+	{
+		return getJso().getPullOutOnlyOne();
+	}
 
 	@Override
-	public native void setPullOutOnlyOne( Boolean pullOutOnlyOne ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().pullOutOnlyOne = pullOutOnlyOne;
-	}-*/;
+	public void setPullOutOnlyOne( Boolean pullOutOnlyOne )
+	{
+		getJso().setPullOutOnlyOne( pullOutOnlyOne );
+	}
 
 	@Override
-	public native Boolean getSequencedAnimation() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().sequencedAnimation;
+	public Boolean getSequencedAnimation()
+	{
+		return getJso().getSequencedAnimation();
 
-	}-*/;
-
-	@Override
-	public native void setSequencedAnimation( Boolean sequencedAnimation ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().sequencedAnimation = sequencedAnimation;
-	}-*/;
+	}
 
 	@Override
-	public native Float getStartAlpha() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().startAlpha;
-	}-*/;
+	public void setSequencedAnimation( Boolean sequencedAnimation )
+	{
+		getJso().setSequencedAnimation( sequencedAnimation );
+	}
 
 	@Override
-	public native void setStartAlpha( Float startAlpha ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().startAlpha = startAlpha;
-	}-*/;
+	public Float getStartAlpha()
+	{
+		return getJso().getStartAlpha();
+	}
 
 	@Override
-	public native Integer getStartDuration() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().startDuration;
-	}-*/;
+	public void setStartAlpha( Float startAlpha )
+	{
+		getJso().setStartAlpha( startAlpha );
+	}
 
 	@Override
-	public native void setStartDuration( Integer startDuration ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().startDuration = startDuration;
-	}-*/;
+	public Integer getStartDuration()
+	{
+		return getJso().getStartDuration();
+	}
 
 	@Override
-	public native String getStartEffect() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().startEffect;
-	}-*/;
+	public void setStartDuration( Integer startDuration )
+	{
+		getJso().setStartDuration( startDuration );
+	}
 
 	@Override
-	public native void setStartEffect( String startEffect ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().startEffect = startEffect;
-	}-*/;
+	public String getStartEffect()
+	{
+		return getJso().getStartEffect();
+	}
 
 	@Override
-	public native String getUrlField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().urlField;
-	}-*/;
+	public void setStartEffect( String startEffect )
+	{
+		getJso().setStartEffect( startEffect );
+	}
 
 	@Override
-	public native void setUrlField( String urlField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().urlField = urlField;
-	}-*/;
+	public String getUrlField()
+	{
+		return getJso().getUrlField();
+	}
 
 	@Override
-	public native String getUrlTarget() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().urlTarget;
-	}-*/;
+	public void setUrlField( String urlField )
+	{
+		getJso().setUrlField( urlField );
+	}
 
 	@Override
-	public native void setUrlTarget( String urlTarget ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().urlTarget = urlTarget;
-
-	}-*/;
-
-	@Override
-	public native String getVisibleInLegendField() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().visibleInLegendField;
-	}-*/;
+	public String getUrlTarget()
+	{
+		return getJso().getUrlTarget();
+	}
 
 	@Override
-	public native void setVisibleInLegendField( String visibleInLegendField ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().visibleInLegendField = visibleInLegendField;
-	}-*/;
+	public void setUrlTarget( String urlTarget )
+	{
+		getJso().setUrlTarget( urlTarget );
+
+	}
+
+	@Override
+	public String getVisibleInLegendField()
+	{
+		return getJso().getVisibleInLegendField();
+	}
+
+	@Override
+	public void setVisibleInLegendField( String visibleInLegendField )
+	{
+		getJso().setVisibleInLegendField( visibleInLegendField );
+	}
 }
