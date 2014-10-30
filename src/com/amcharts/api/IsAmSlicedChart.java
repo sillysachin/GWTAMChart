@@ -60,9 +60,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setGroupedTitle( String groupedTitle );
 
-	public abstract Float getGroupPercent();
+	public abstract Double getGroupPercent();
 
-	public abstract void setGroupPercent( Float groupPercent );
+	public abstract void setGroupPercent( Double groupPercent );
 
 	public abstract Float getHideLabelsPercent();
 

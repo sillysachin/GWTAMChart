@@ -180,13 +180,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native Float getGroupPercent()
+	public final native Double getGroupPercent()
 	/*-{
 		return this.groupPercent;
 	}-*/;
 
 	@Override
-	public final native void setGroupPercent( Float groupPercent )
+	public final native void setGroupPercent( Double groupPercent )
 	/*-{
 		this.groupPercent = groupPercent;
 	}-*/;

@@ -3,9 +3,15 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.jso.AmSlicedChartJSO;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
+	@Override
+	public AmSlicedChartJSO getJso()
+	{
+		return ( AmSlicedChartJSO ) super.getJso();
+	}
 
 	@Override
 	public native Float getAlpha() /*-{
@@ -85,7 +91,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	@Override
 	public native void setDescriptionField( String descriptionField ) /*-{
 		this.@com.amcharts.impl.AmSlicedChart::getJso().descriptionField = descriptionField;
-
 	}-*/;
 
 	@Override
@@ -96,7 +101,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	@Override
 	public native void setGradientRatio( List<Float> gradientRatio ) /*-{
 		this.@com.amcharts.impl.AmSlicedChart::getJso().gradientRatio = gradientRatio;
-
 	}-*/;
 
 	@Override
@@ -130,14 +134,16 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public native Boolean getGroupedPulled() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupedPulled;
-	}-*/;
+	public Boolean getGroupedPulled()
+	{
+		return getJso().getGroupedPulled();
+	}
 
 	@Override
-	public native void setGroupedPulled( Boolean groupedPulled ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupedPulled = groupedPulled;
-	}-*/;
+	public void setGroupedPulled( Boolean groupedPulled )
+	{
+		getJso().setGroupedPulled( groupedPulled );
+	}
 
 	@Override
 	public native String getGroupedTitle() /*-{
@@ -150,13 +156,17 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public native Float getGroupPercent() /*-{
-		return this.@com.amcharts.impl.AmSlicedChart::getJso().groupPercent;
+	public native Double getGroupPercent() /*-{
+		var jso = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		//var jso = this.@com.amcharts.impl.AmSlicedChart::getJso();
+		return jso.groupPercent;
 	}-*/;
 
 	@Override
-	public native void setGroupPercent( Float groupPercent ) /*-{
-		this.@com.amcharts.impl.AmSlicedChart::getJso().groupPercent = groupPercent;
+	public native void setGroupPercent( Double groupPercent ) /*-{
+		var jso = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		//var jso = this.@com.amcharts.impl.AmSlicedChart::getJso();
+		jso.groupPercent = groupPercent;
 	}-*/;
 
 	@Override

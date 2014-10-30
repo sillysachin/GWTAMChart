@@ -1,6 +1,8 @@
-package com.amcharts.json;
+package com.amcharts.api;
 
 import java.util.Date;
+
+import com.amcharts.json.CategoryAxis;
 
 public interface IsAmSerialChart
 {

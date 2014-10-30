@@ -6,6 +6,8 @@ import java.util.Map;
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCoordinateChart;
 import com.amcharts.impl.AmGraph;
+import com.amcharts.impl.AmPieChart;
+import com.amcharts.impl.AmSlicedChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItems;
@@ -105,6 +107,14 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( TrendLine.class ) ) )
 		{
 			wrapper = GWT.create( TrendLine.class );
+		}
+		else if ( className.equals( getSimpleName( AmPieChart.class ) ) )
+		{
+			wrapper = GWT.create( AmPieChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmSlicedChart.class ) ) )
+		{
+			wrapper = GWT.create( AmSlicedChart.class );
 		}
 		else if ( className.equals( getSimpleName( ExportConfig.class ) ) )
 		{

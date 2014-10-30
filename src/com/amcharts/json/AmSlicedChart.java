@@ -34,7 +34,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private String groupedTitle;
 
-	private Float groupPercent;
+	private Double groupPercent;
 
 	private Float hideLabelsPercent;
 
@@ -261,13 +261,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getGroupPercent()
+	public Double getGroupPercent()
 	{
 		return groupPercent;
 	}
 
 	@Override
-	public void setGroupPercent( Float groupPercent )
+	public void setGroupPercent( Double groupPercent )
 	{
 		this.groupPercent = groupPercent;
 	}

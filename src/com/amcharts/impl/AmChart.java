@@ -9,15 +9,16 @@ import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
+import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
 
-public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper
+public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 {
-	protected JavaScriptObject jso;
+	protected AmChartJSO jso;
 
 	String id;
 
@@ -53,7 +54,7 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper
 		return id;
 	}
 
-	public native JavaScriptObject makeChart( String containerId, JavaScriptObject configJSO )
+	public native AmChartJSO makeChart( String containerId, JavaScriptObject configJSO )
 	/*-{
 		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(containerId);
 		return $wnd.AmCharts.makeChart(containerId, configJSO);
@@ -66,13 +67,13 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper
 	}-*/;
 
 	@Override
-	public JavaScriptObject getJso()
+	public AmChartJSO getJso()
 	{
 		return jso;
 	}
 
 	@Override
-	public void setJso( JavaScriptObject jso )
+	public void setJso( AmChartJSO jso )
 	{
 		this.jso = jso;
 	}

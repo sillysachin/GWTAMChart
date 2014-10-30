@@ -2,6 +2,7 @@ package com.amcharts.impl;
 
 import java.util.Date;
 
+import com.amcharts.jso.AmSerialChartJSO;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class AmSerialChart extends AmRectangularChart
@@ -16,7 +17,7 @@ public class AmSerialChart extends AmRectangularChart
 		categoryAxis.setJso( categoryAxisJSO );
 	}
 
-	public native JavaScriptObject createJso()
+	public native AmSerialChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmSerialChart();
 		return chart;

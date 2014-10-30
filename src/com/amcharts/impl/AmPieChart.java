@@ -1,32 +1,38 @@
 package com.amcharts.impl;
 
 import com.amcharts.api.IsAmPieChart;
-import com.google.gwt.core.client.JavaScriptObject;
+import com.amcharts.jso.AmPieChartJSO;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
-
 	public AmPieChart()
 	{
 		jso = createJso();
 		setType( "pie" );
 	}
 
-	public native JavaScriptObject createJso()
+	public native AmPieChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmPieChart();
 		return chart;
 	}-*/;
 
-	@Override
-	public native String getBalloonText() /*-{
-		return this.@com.amcharts.impl.AmPieChart::getJso().balloonText;
-	}-*/;
+	public AmPieChartJSO getJso()
+	{
+		return ( AmPieChartJSO ) super.getJso();
+	}
 
 	@Override
-	public native void setBalloonText( String balloonText ) /*-{
-		this.@com.amcharts.impl.AmPieChart::getJso().balloonText = balloonText;
-	}-*/;
+	public String getBalloonText()
+	{
+		return getJso().getBalloonText();
+	}
+
+	@Override
+	public void setBalloonText( String balloonText )
+	{
+		getJso().setBalloonText( balloonText );
+	}
 
 	public native void setDepth3D( Float depth3D )
 	/*-{
@@ -71,7 +77,6 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	@Override
 	public native String getLabelText() /*-{
 		return this.@com.amcharts.impl.AmPieChart::getJso().labelText;
-
 	}-*/;
 
 	@Override

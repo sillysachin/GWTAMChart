@@ -6,9 +6,10 @@ import com.google.gwt.core.client.JavaScriptObject;
  * All classes that intend to expose the JavaScriptObject via wrapping should implement this interface.
  * 
  * @author JGraph
+ * @param <J>
  *
  */
-public interface IJavaScriptWrapper
+public interface IJavaScriptWrapper<J extends JavaScriptObject>
 {
 
 	/**
@@ -16,7 +17,7 @@ public interface IJavaScriptWrapper
 	 * 
 	 * @return wrapped JavaScriptObject
 	 */
-	JavaScriptObject getJso();
+	J getJso();
 
 	/**
 	 * Sets the wrapped object to this wrapper.
@@ -24,5 +25,5 @@ public interface IJavaScriptWrapper
 	 * @param jso
 	 *            JavaScriptObject that will get wrapped.
 	 */
-	void setJso( JavaScriptObject jso );
+	void setJso( J jso );
 }
