@@ -1,0 +1,141 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.plugin.addimage.js" ></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+var chart;
+var legend;
+var selected;
+
+var types = [{
+    type: "Fossil Energy",
+    percent: 70, 
+    color: "#ff9e01",
+    subs: [
+        { type: "Oil", percent: 15 },
+        { type: "Coal", percent: 35 },
+        { type: "Nuclear", percent: 20 }
+    ]},
+{
+    type: "Green Energy",
+    percent: 30,
+    color: "#b0de09",
+    subs: [
+        { type: "Hydro", percent: 15 },
+        { type: "Wind", percent: 10 },
+        { type: "Other", percent: 5 }
+    ]}
+];
+
+function generateChartData () {
+    var chartData = [];
+    for (var i = 0; i < types.length; i++) {
+        if (i == selected) {
+            for (var x = 0; x < types[i].subs.length; x++) {
+                chartData.push({
+                    type: types[i].subs[x].type,
+                    percent: types[i].subs[x].percent,
+                    color: types[i].color,
+                    pulled: true
+                });
+            }
+        }
+        else {
+            chartData.push({
+                type: types[i].type,
+                percent: types[i].percent,
+                color: types[i].color,
+                id: i
+            });
+        }
+    }
+    return chartData;
+}
+
+AmCharts.ready(function() {
+    // PIE CHART
+    chart = new AmCharts.AmPieChart();
+    chart.dataProvider = generateChartData();
+    chart.titleField = "type";
+    chart.valueField = "percent";
+    chart.outlineColor = "#FFFFFF";
+    chart.outlineAlpha = 0.8;
+    chart.outlineThickness = 2;
+    chart.colorField = "color";
+    chart.pulledField = "pulled";
+    
+    // ADD TITLE
+    chart.addTitle("Click a slice to see the details");
+    
+    // AN EVENT TO HANDLE SLICE CLICKS
+    chart.addListener("clickSlice", function (event) {
+        if (event.dataItem.dataContext.id != undefined) {
+            selected = event.dataItem.dataContext.id;
+        }
+        else {
+            selected = undefined;
+        }
+        chart.dataProvider = generateChartData();
+        chart.validateData();
+    });
+
+    // WRITE
+    chart.write("chartdiv");
+});
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width:100%;height:500px"></div>
+</body>
+</html>
