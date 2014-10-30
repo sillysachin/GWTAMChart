@@ -47,17 +47,17 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 	}
 
 	private native JavaScriptObject getMenuItemsJSO() /*-{
-		return @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).menuitems;
+		return @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).menuItems;
 	}-*/;
 
-	public native void setMenuItems( List<MenuItem> menuitems ) /*-{
-		var jsList = @com.amcharts.impl.util.WrapperUtils::unwrapList(Ljava/util/List;)(menuitems);
-		@com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).menuitems = jsList;
+	public native void setMenuItems( List<MenuItem> menuItems ) /*-{
+		var jsList = @com.amcharts.impl.util.WrapperUtils::unwrapList(Ljava/util/List;)(menuItems);
+		@com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).menuItems = jsList;
 	}-*/;
 
 	public native void addMenuItem( IsMenuItem menuItem )
 	/*-{
 		var varMenuItem = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(menuItem)
-		this.@com.amcharts.impl.ExportConfig::jso.menuitems.push(varMenuItem)
+		this.@com.amcharts.impl.ExportConfig::jso.menuItems.push(varMenuItem)
 	}-*/;
 }
