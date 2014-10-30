@@ -1,6 +1,7 @@
 package com.amcharts.impl;
 
 import com.amcharts.api.IsAmPieChart;
+import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.AmPieChartJSO;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
@@ -197,4 +198,26 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	{
 		getJso().setStartRadius( startRadius );
 	}
+
+	public native void addTitle( String title )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.addTitle(title);
+	}-*/;
+
+	public native void addListener( String eventName, AmChartListener amChartListener )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.addListener(eventName,
+			function(event) {
+				console.log(event);
+				amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/mouse/AmPieChartClickSliceEvent;)(event);
+			});
+	}-*/;
+
+	public native void validateData()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.validateData();
+	}-*/;
 }

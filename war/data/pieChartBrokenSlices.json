@@ -1,0 +1,29 @@
+[ {
+	type : "Fossil Energy",
+	percent : 70,
+	color : "#ff9e01",
+	subs : [ {
+		type : "Oil",
+		percent : 15
+	}, {
+		type : "Coal",
+		percent : 35
+	}, {
+		type : "Nuclear",
+		percent : 20
+	} ]
+}, {
+	type : "Green Energy",
+	percent : 30,
+	color : "#b0de09",
+	subs : [ {
+		type : "Hydro",
+		percent : 15
+	}, {
+		type : "Wind",
+		percent : 10
+	}, {
+		type : "Other",
+		percent : 5
+	} ]
+} ]

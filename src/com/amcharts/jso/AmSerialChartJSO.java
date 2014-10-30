@@ -3,11 +3,14 @@ package com.amcharts.jso;
 import java.util.Date;
 
 import com.amcharts.api.IsAmSerialChart;
-import com.amcharts.json.CategoryAxis;
+import com.amcharts.api.IsCategoryAxis;
 
 public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 {
-	
+	protected AmSerialChartJSO()
+	{
+	}
+
 	@Override
 	public final native double getAngle()
 	/*-{
@@ -19,14 +22,14 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	/*-{
 		this.angle = angle;
 	}-*/;
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see com.amcharts.json.IsAmSerialChart#getCategoryAxis()
 	 */
 	@Override
-	public native CategoryAxis getCategoryAxis()
+	public final native IsCategoryAxis getCategoryAxis()
 	/*-{
 		return this.categoryAxis;
 	}-*/;
@@ -34,10 +37,10 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.json.CategoryAxis)
+	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.api.IsCategoryAxis)
 	 */
 	@Override
-	public native void setCategoryAxis( CategoryAxis categoryAxis )
+	public final native void setCategoryAxis( IsCategoryAxis categoryAxis )
 	/*-{
 		this.categoryAxis = categoryAxis;
 	}-*/;
@@ -48,7 +51,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getBalloonDateFormat()
 	 */
 	@Override
-	public native String getBalloonDateFormat()
+	public final native String getBalloonDateFormat()
 	/*-{
 		return this.balloonDateFormat;
 	}-*/;
@@ -59,7 +62,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setBalloonDateFormat(java.lang.String)
 	 */
 	@Override
-	public native void setBalloonDateFormat( String balloonDateFormat )
+	public final native void setBalloonDateFormat( String balloonDateFormat )
 	/*-{
 		this.balloonDateFormat = balloonDateFormat;
 	}-*/;
@@ -70,7 +73,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getCategoryField()
 	 */
 	@Override
-	public native String getCategoryField()
+	public final native String getCategoryField()
 	/*-{
 		return this.categoryField;
 	}-*/;
@@ -81,7 +84,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setCategoryField(java.lang.String)
 	 */
 	@Override
-	public native void setCategoryField( String categoryField )
+	public final native void setCategoryField( String categoryField )
 	/*-{
 		this.categoryField = categoryField;
 	}-*/;
@@ -92,7 +95,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing()
 	 */
 	@Override
-	public native Number getColumnSpacing()
+	public final native Number getColumnSpacing()
 	/*-{
 		return this.columnSpacing;
 	}-*/;
@@ -103,7 +106,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing(java.lang.Number)
 	 */
 	@Override
-	public native void setColumnSpacing( Number columnSpacing )
+	public final native void setColumnSpacing( Number columnSpacing )
 	/*-{
 		this.columnSpacing = columnSpacing;
 	}-*/;
@@ -114,7 +117,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing3D()
 	 */
 	@Override
-	public native Number getColumnSpacing3D()
+	public final native Number getColumnSpacing3D()
 	/*-{
 		return this.columnSpacing3D;
 	}-*/;
@@ -125,7 +128,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing3D(java.lang.Number)
 	 */
 	@Override
-	public native void setColumnSpacing3D( Number columnSpacing3D )
+	public final native void setColumnSpacing3D( Number columnSpacing3D )
 	/*-{
 		this.columnSpacing3D = columnSpacing3D;
 	}-*/;
@@ -136,7 +139,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getColumnWidth()
 	 */
 	@Override
-	public native Number getColumnWidth()
+	public final native Number getColumnWidth()
 	/*-{
 		return this.columnWidth;
 	}-*/;
@@ -147,7 +150,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setColumnWidth(java.lang.Number)
 	 */
 	@Override
-	public native void setColumnWidth( Number columnWidth )
+	public final native void setColumnWidth( Number columnWidth )
 	/*-{
 		this.columnWidth = columnWidth;
 	}-*/;
@@ -158,7 +161,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getDataDateFormat()
 	 */
 	@Override
-	public native String getDataDateFormat()
+	public final native String getDataDateFormat()
 	/*-{
 		return this.dataDateFormat;
 	}-*/;
@@ -169,7 +172,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setDataDateFormat(java.lang.String)
 	 */
 	@Override
-	public native void setDataDateFormat( String dataDateFormat )
+	public final native void setDataDateFormat( String dataDateFormat )
 	/*-{
 		this.dataDateFormat = dataDateFormat;
 	}-*/;
@@ -180,7 +183,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getEndDate()
 	 */
 	@Override
-	public native Date getEndDate()
+	public final native Date getEndDate()
 	/*-{
 		return this.endDate;
 	}-*/;
@@ -191,7 +194,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setEndDate(java.util.Date)
 	 */
 	@Override
-	public native void setEndDate( Date endDate )
+	public final native void setEndDate( Date endDate )
 	/*-{
 		this.endDate = endDate;
 	}-*/;
@@ -202,7 +205,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getEndIndex()
 	 */
 	@Override
-	public native Number getEndIndex()
+	public final native Number getEndIndex()
 	/*-{
 		return this.endIndex;
 	}-*/;
@@ -213,7 +216,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setEndIndex(java.lang.Number)
 	 */
 	@Override
-	public native void setEndIndex( Number endIndex )
+	public final native void setEndIndex( Number endIndex )
 	/*-{
 		this.endIndex = endIndex;
 	}-*/;
@@ -224,7 +227,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedSeries()
 	 */
 	@Override
-	public native Number getMaxSelectedSeries()
+	public final native Number getMaxSelectedSeries()
 	/*-{
 		return this.maxSelectedSeries;
 	}-*/;
@@ -235,7 +238,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedSeries(java.lang.Number)
 	 */
 	@Override
-	public native void setMaxSelectedSeries( Number maxSelectedSeries )
+	public final native void setMaxSelectedSeries( Number maxSelectedSeries )
 	/*-{
 		this.maxSelectedSeries = maxSelectedSeries;
 	}-*/;
@@ -246,7 +249,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedTime()
 	 */
 	@Override
-	public native Number getMaxSelectedTime()
+	public final native Number getMaxSelectedTime()
 	/*-{
 		return this.maxSelectedTime;
 	}-*/;
@@ -257,7 +260,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedTime(java.lang.Number)
 	 */
 	@Override
-	public native void setMaxSelectedTime( Number maxSelectedTime )
+	public final native void setMaxSelectedTime( Number maxSelectedTime )
 	/*-{
 		this.maxSelectedTime = maxSelectedTime;
 	}-*/;
@@ -268,7 +271,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getMinSelectedTime()
 	 */
 	@Override
-	public native Number getMinSelectedTime()
+	public final native Number getMinSelectedTime()
 	/*-{
 		return this.minSelectedTime;
 	}-*/;
@@ -279,7 +282,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setMinSelectedTime(java.lang.Number)
 	 */
 	@Override
-	public native void setMinSelectedTime( Number minSelectedTime )
+	public final native void setMinSelectedTime( Number minSelectedTime )
 	/*-{
 		this.minSelectedTime = minSelectedTime;
 	}-*/;
@@ -290,7 +293,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelScrollEnabled()
 	 */
 	@Override
-	public native Boolean getMouseWheelScrollEnabled()
+	public final native Boolean getMouseWheelScrollEnabled()
 	/*-{
 		return this.mouseWheelScrollEnabled;
 	}-*/;
@@ -301,7 +304,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelScrollEnabled(java.lang.Boolean)
 	 */
 	@Override
-	public native void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
+	public final native void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
 	/*-{
 		this.mouseWheelScrollEnabled = mouseWheelScrollEnabled;
 	}-*/;
@@ -312,7 +315,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelZoomEnabled()
 	 */
 	@Override
-	public native Boolean getMouseWheelZoomEnabled()
+	public final native Boolean getMouseWheelZoomEnabled()
 	/*-{
 		return this.mouseWheelZoomEnabled;
 	}-*/;
@@ -323,7 +326,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelZoomEnabled(java.lang.Boolean)
 	 */
 	@Override
-	public native void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
+	public final native void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
 	/*-{
 		this.mouseWheelZoomEnabled = mouseWheelZoomEnabled;
 	}-*/;
@@ -334,7 +337,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getRotate()
 	 */
 	@Override
-	public native Boolean getRotate()
+	public final native Boolean getRotate()
 	/*-{
 		return this.rotate;
 	}-*/;
@@ -345,7 +348,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setRotate(java.lang.Boolean)
 	 */
 	@Override
-	public native void setRotate( Boolean rotate )
+	public final native void setRotate( Boolean rotate )
 	/*-{
 		this.rotate = rotate;
 	}-*/;
@@ -356,7 +359,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getStartDate()
 	 */
 	@Override
-	public native Date getStartDate()
+	public final native Date getStartDate()
 	/*-{
 		return this.startDate;
 	}-*/;
@@ -367,7 +370,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setStartDate(java.util.Date)
 	 */
 	@Override
-	public native void setStartDate( Date startDate )
+	public final native void setStartDate( Date startDate )
 	/*-{
 		this.startDate = startDate;
 	}-*/;
@@ -378,7 +381,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getStartIndex()
 	 */
 	@Override
-	public native Number getStartIndex()
+	public final native Number getStartIndex()
 	/*-{
 		return this.startIndex;
 	}-*/;
@@ -389,7 +392,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setStartIndex(java.lang.Number)
 	 */
 	@Override
-	public native void setStartIndex( Number startIndex )
+	public final native void setStartIndex( Number startIndex )
 	/*-{
 		this.startIndex = startIndex;
 	}-*/;
@@ -400,7 +403,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getZoomOutOnDataUpdate()
 	 */
 	@Override
-	public native Boolean getZoomOutOnDataUpdate()
+	public final native Boolean getZoomOutOnDataUpdate()
 	/*-{
 		return this.zoomOutOnDataUpdate;
 	}-*/;
@@ -411,7 +414,7 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#setZoomOutOnDataUpdate(java.lang.Boolean)
 	 */
 	@Override
-	public native void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
+	public final native void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
 	/*-{
 		this.zoomOutOnDataUpdate = zoomOutOnDataUpdate;
 	}-*/;

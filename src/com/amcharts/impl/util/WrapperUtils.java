@@ -7,19 +7,21 @@ import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCoordinateChart;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
-import com.amcharts.impl.AmSlicedChart;
-import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.Legend;
-import com.amcharts.impl.MenuItem;
-import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.AmRectangularChart;
 import com.amcharts.impl.AmSerialChart;
+import com.amcharts.impl.AmSlicedChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
+import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Guide;
+import com.amcharts.impl.Legend;
+import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.event.DataContext;
+import com.amcharts.impl.event.DataItem;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -47,8 +49,16 @@ public class WrapperUtils
 		}
 
 		String className = getJavaScriptClassName( jso );
-
-		IJavaScriptWrapper wrapper = createWrapper( className );
+		String jsoClassName = getJSOClassName( jso );
+		IJavaScriptWrapper wrapper = null;
+		if ( "Object".equals( className ) )
+		{
+			wrapper = createWrapperByJSOClassName( jsoClassName );
+		}
+		else
+		{
+			wrapper = createWrapper( className );
+		}
 
 		if ( wrapper == null )
 		{
@@ -56,6 +66,23 @@ public class WrapperUtils
 		}
 
 		wrapper.setJso( jso );
+
+		return wrapper;
+	}
+
+	private static IJavaScriptWrapper createWrapperByJSOClassName( String className )
+	{
+		IJavaScriptWrapper wrapper = null;
+		GWT.log( className );
+		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
+		if ( className.equals( getSimpleName( DataItem.class ) ) )
+		{
+			wrapper = GWT.create( DataItem.class );
+		}
+		else if ( className.equals( getSimpleName( DataContext.class ) ) )
+		{
+			wrapper = GWT.create( DataContext.class );
+		}
 
 		return wrapper;
 	}
@@ -133,9 +160,21 @@ public class WrapperUtils
 		{
 			wrapper = GWT.create( Legend.class );
 		}
+		else if ( className.equals( getSimpleName( DataItem.class ) ) )
+		{
+			wrapper = GWT.create( DataItem.class );
+		}
+		else if ( className.equals( getSimpleName( DataContext.class ) ) )
+		{
+			wrapper = GWT.create( DataContext.class );
+		}
 
 		return wrapper;
 	}
+
+	private static native String getJSOClassName( JavaScriptObject jso ) /*-{
+		return jso.className;
+	}-*/;
 
 	private static native String getJavaScriptClassName( JavaScriptObject jso ) /*-{
 		return jso.constructor.name ? jso.constructor.name : jso.constructor

@@ -3,12 +3,13 @@ package com.amcharts.json;
 import java.util.Date;
 
 import com.amcharts.api.IsAmSerialChart;
+import com.amcharts.api.IsCategoryAxis;
 
 public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 {
 	private double angle;
 
-	private CategoryAxis categoryAxis;
+	private IsCategoryAxis categoryAxis;
 
 	private String balloonDateFormat;
 
@@ -62,7 +63,7 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 	 * @see com.amcharts.json.IsAmSerialChart#getCategoryAxis()
 	 */
 	@Override
-	public CategoryAxis getCategoryAxis()
+	public IsCategoryAxis getCategoryAxis()
 	{
 		return categoryAxis;
 	}
@@ -70,10 +71,10 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.json.CategoryAxis)
+	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.api.IsCategoryAxis)
 	 */
 	@Override
-	public void setCategoryAxis( CategoryAxis categoryAxis )
+	public void setCategoryAxis( IsCategoryAxis categoryAxis )
 	{
 		this.categoryAxis = categoryAxis;
 	}

@@ -2,17 +2,15 @@ package com.amcharts.api;
 
 import java.util.Date;
 
-import com.amcharts.json.CategoryAxis;
-
 public interface IsAmSerialChart
 {
 	double getAngle();
 
 	void setAngle( double angle );
 
-	CategoryAxis getCategoryAxis();
+	IsCategoryAxis getCategoryAxis();
 
-	void setCategoryAxis( CategoryAxis categoryAxis );
+	void setCategoryAxis( IsCategoryAxis categoryAxis );
 
 	String getBalloonDateFormat();
 
