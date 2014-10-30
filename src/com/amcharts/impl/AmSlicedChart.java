@@ -15,13 +15,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getAlpha()
+	public double getAlpha()
 	{
 		return getJso().getAlpha();
 	}
 
 	@Override
-	public void setAlpha( Float alpha )
+	public void setAlpha( double alpha )
 	{
 		getJso().setAlpha( alpha );
 	}
@@ -51,13 +51,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getBrightnessStep()
+	public double getBrightnessStep()
 	{
 		return getJso().getBrightnessStep();
 	}
 
 	@Override
-	public void setBrightnessStep( Float brightnessStep )
+	public void setBrightnessStep( double brightnessStep )
 	{
 		getJso().setBrightnessStep( brightnessStep );
 	}
@@ -125,13 +125,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getGroupedAlpha()
+	public double getGroupedAlpha()
 	{
 		return getJso().getGroupedAlpha();
 	}
 
 	@Override
-	public void setGroupedAlpha( Float groupedAlpha )
+	public void setGroupedAlpha( double groupedAlpha )
 	{
 		getJso().setGroupedAlpha( groupedAlpha );
 	}
@@ -185,37 +185,37 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Double getGroupPercent()
+	public double getGroupPercent()
 	{
 		return getJso().getGroupPercent();
 	}
 
 	@Override
-	public void setGroupPercent( Double groupPercent )
+	public void setGroupPercent( double groupPercent )
 	{
 		getJso().setGroupPercent( groupPercent );
 	}
 
 	@Override
-	public Float getHideLabelsPercent()
+	public double getHideLabelsPercent()
 	{
 		return getJso().getHideLabelsPercent();
 	}
 
 	@Override
-	public void setHideLabelsPercent( Float hideLabelsPercent )
+	public void setHideLabelsPercent( double hideLabelsPercent )
 	{
 		getJso().setHideLabelsPercent( hideLabelsPercent );
 	}
 
 	@Override
-	public Float getHoverAlpha()
+	public double getHoverAlpha()
 	{
 		return getJso().getHoverAlpha();
 	}
 
 	@Override
-	public void setHoverAlpha( Float hoverAlpha )
+	public void setHoverAlpha( double hoverAlpha )
 	{
 		getJso().setHoverAlpha( hoverAlpha );
 	}
@@ -245,13 +245,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getLabelTickAlpha()
+	public double getLabelTickAlpha()
 	{
 		return getJso().getLabelTickAlpha();
 	}
 
 	@Override
-	public void setLabelTickAlpha( Float labelTickAlpha )
+	public void setLabelTickAlpha( double labelTickAlpha )
 	{
 		getJso().setLabelTickAlpha( labelTickAlpha );
 	}
@@ -269,73 +269,73 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getMarginBottom()
+	public double getMarginBottom()
 	{
 		return getJso().getMarginBottom();
 	}
 
 	@Override
-	public void setMarginBottom( Float marginBottom )
+	public void setMarginBottom( double marginBottom )
 	{
 		getJso().setMarginBottom( marginBottom );
 	}
 
 	@Override
-	public Float getMarginLeft()
+	public double getMarginLeft()
 	{
 		return getJso().getMarginLeft();
 	}
 
 	@Override
-	public void setMarginLeft( Float marginLeft )
+	public void setMarginLeft( double marginLeft )
 	{
 		getJso().setMarginLeft( marginLeft );
 	}
 
 	@Override
-	public Float getMarginRight()
+	public double getMarginRight()
 	{
 		return getJso().getMarginRight();
 	}
 
 	@Override
-	public void setMarginRight( Float marginRight )
+	public void setMarginRight( double marginRight )
 	{
 		getJso().setMarginRight( marginRight );
 	}
 
 	@Override
-	public Float getMarginTop()
+	public double getMarginTop()
 	{
 		return getJso().getMarginTop();
 	}
 
 	@Override
-	public void setMarginTop( Float marginTop )
+	public void setMarginTop( double marginTop )
 	{
 		getJso().setMarginTop( marginTop );
 	}
 
 	@Override
-	public Float getMaxLabelWidth()
+	public double getMaxLabelWidth()
 	{
 		return getJso().getMaxLabelWidth();
 	}
 
 	@Override
-	public void setMaxLabelWidth( Float maxLabelWidth )
+	public void setMaxLabelWidth( double maxLabelWidth )
 	{
 		getJso().setMaxLabelWidth( maxLabelWidth );
 	}
 
 	@Override
-	public Double getOutlineAlpha()
+	public double getOutlineAlpha()
 	{
 		return getJso().getOutlineAlpha();
 	}
 
 	@Override
-	public void setOutlineAlpha( Double outlineAlpha )
+	public void setOutlineAlpha( double outlineAlpha )
 	{
 		getJso().setOutlineAlpha( outlineAlpha );
 	}
@@ -353,13 +353,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getOutlineThickness()
+	public double getOutlineThickness()
 	{
 		return getJso().getOutlineThickness();
 	}
 
 	@Override
-	public void setOutlineThickness( Float outlineThickness )
+	public void setOutlineThickness( double outlineThickness )
 	{
 		getJso().setOutlineThickness( outlineThickness );
 	}
@@ -438,13 +438,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getStartAlpha()
+	public double getStartAlpha()
 	{
 		return getJso().getStartAlpha();
 	}
 
 	@Override
-	public void setStartAlpha( Float startAlpha )
+	public void setStartAlpha( double startAlpha )
 	{
 		getJso().setStartAlpha( startAlpha );
 	}

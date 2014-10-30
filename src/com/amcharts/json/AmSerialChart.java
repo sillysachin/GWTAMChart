@@ -6,7 +6,7 @@ import com.amcharts.api.IsAmSerialChart;
 
 public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 {
-	private Double angle;
+	private double angle;
 
 	private CategoryAxis categoryAxis;
 
@@ -45,13 +45,13 @@ public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
 	private Boolean zoomOutOnDataUpdate;
 
 	@Override
-	public Double getAngle()
+	public double getAngle()
 	{
 		return angle;
 	}
 
 	@Override
-	public void setAngle( Double angle )
+	public void setAngle( double angle )
 	{
 		this.angle = angle;
 	}

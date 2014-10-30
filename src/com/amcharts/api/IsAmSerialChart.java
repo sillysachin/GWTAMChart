@@ -6,9 +6,9 @@ import com.amcharts.json.CategoryAxis;
 
 public interface IsAmSerialChart
 {
-	Double getAngle();
+	double getAngle();
 
-	void setAngle( Double angle );
+	void setAngle( double angle );
 
 	CategoryAxis getCategoryAxis();
 

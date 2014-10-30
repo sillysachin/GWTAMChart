@@ -4,23 +4,23 @@ import com.amcharts.api.IsAmPieChart;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
-	private Double angle;
+	private double angle;
 
 	private String balloonText;
 
-	private Double depth3D;
+	private double depth3D;
 
 	private String innerRadius;
 
-	private Float labelRadius;
+	private double labelRadius;
 
 	private String labelRadiusField;
 
 	private String labelText;
 
-	private Float minRadius;
+	private double minRadius;
 
-	private Float pieAlpha;
+	private double pieAlpha;
 
 	private String pieX;
 
@@ -30,18 +30,18 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 
 	private String radius;
 
-	private Float startAngle;
+	private double startAngle;
 
 	private String startRadius;
 
 	@Override
-	public Double getAngle()
+	public double getAngle()
 	{
 		return angle;
 	}
 
 	@Override
-	public void setAngle( Double angle )
+	public void setAngle( double angle )
 	{
 		this.angle = angle;
 	}
@@ -59,13 +59,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Double getDepth3D()
+	public double getDepth3D()
 	{
 		return depth3D;
 	}
 
 	@Override
-	public void setDepth3D( Double depth3D )
+	public void setDepth3D( double depth3D )
 	{
 		this.depth3D = depth3D;
 	}
@@ -83,13 +83,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getLabelRadius()
+	public double getLabelRadius()
 	{
 		return labelRadius;
 	}
 
 	@Override
-	public void setLabelRadius( Float labelRadius )
+	public void setLabelRadius( double labelRadius )
 	{
 		this.labelRadius = labelRadius;
 	}
@@ -119,25 +119,25 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getMinRadius()
+	public double getMinRadius()
 	{
 		return minRadius;
 	}
 
 	@Override
-	public void setMinRadius( Float minRadius )
+	public void setMinRadius( double minRadius )
 	{
 		this.minRadius = minRadius;
 	}
 
 	@Override
-	public Float getPieAlpha()
+	public double getPieAlpha()
 	{
 		return pieAlpha;
 	}
 
 	@Override
-	public void setPieAlpha( Float pieAlpha )
+	public void setPieAlpha( double pieAlpha )
 	{
 		this.pieAlpha = pieAlpha;
 	}
@@ -191,13 +191,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getStartAngle()
+	public double getStartAngle()
 	{
 		return startAngle;
 	}
 
 	@Override
-	public void setStartAngle( Float startAngle )
+	public void setStartAngle( double startAngle )
 	{
 		this.startAngle = startAngle;
 	}

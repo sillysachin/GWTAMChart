@@ -9,13 +9,13 @@ public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
 {
 	
 	@Override
-	public final native Double getAngle()
+	public final native double getAngle()
 	/*-{
 		return this.angle;
 	}-*/;
 
 	@Override
-	public final native void setAngle( Double angle )
+	public final native void setAngle( double angle )
 	/*-{
 		this.angle = angle;
 	}-*/;

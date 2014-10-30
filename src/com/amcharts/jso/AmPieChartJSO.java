@@ -9,13 +9,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}
 
 	@Override
-	public final native Double getAngle()
+	public final native double getAngle()
 	/*-{
 		return this.angle;
 	}-*/;
 
 	@Override
-	public final native void setAngle( Double angle )
+	public final native void setAngle( double angle )
 	/*-{
 		this.angle = angle;
 	}-*/;
@@ -33,13 +33,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native Double getDepth3D()
+	public final native double getDepth3D()
 	/*-{
 		return this.depth3D;
 	}-*/;
 
 	@Override
-	public final native void setDepth3D( Double depth3D )
+	public final native void setDepth3D( double depth3D )
 	/*-{
 		this.depth3D = depth3D;
 	}-*/;
@@ -57,13 +57,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native Float getLabelRadius()
+	public final native double getLabelRadius()
 	/*-{
 		return this.labelRadius;
 	}-*/;
 
 	@Override
-	public final native void setLabelRadius( Float labelRadius )
+	public final native void setLabelRadius( double labelRadius )
 	/*-{
 		this.labelRadius = labelRadius;
 	}-*/;
@@ -93,25 +93,25 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native Float getMinRadius()
+	public final native double getMinRadius()
 	/*-{
 		return this.minRadius;
 	}-*/;
 
 	@Override
-	public final native void setMinRadius( Float minRadius )
+	public final native void setMinRadius( double minRadius )
 	/*-{
 		this.minRadius = minRadius;
 	}-*/;
 
 	@Override
-	public final native Float getPieAlpha()
+	public final native double getPieAlpha()
 	/*-{
 		return this.pieAlpha;
 	}-*/;
 
 	@Override
-	public final native void setPieAlpha( Float pieAlpha )
+	public final native void setPieAlpha( double pieAlpha )
 	/*-{
 		this.pieAlpha = pieAlpha;
 	}-*/;
@@ -165,13 +165,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native Float getStartAngle()
+	public final native double getStartAngle()
 	/*-{
 		return this.startAngle;
 	}-*/;
 
 	@Override
-	public final native void setStartAngle( Float startAngle )
+	public final native void setStartAngle( double startAngle )
 	/*-{
 		this.startAngle = startAngle;
 	}-*/;

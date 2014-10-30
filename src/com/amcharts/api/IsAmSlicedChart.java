@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface IsAmSlicedChart extends IsAmChart
 {
-	public abstract Float getAlpha();
+	public abstract double getAlpha();
 
-	public abstract void setAlpha( Float alpha );
+	public abstract void setAlpha( double alpha );
 
 	public abstract String getAlphaField();
 
@@ -16,9 +16,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setBaseColor( String baseColor );
 
-	public abstract Float getBrightnessStep();
+	public abstract double getBrightnessStep();
 
-	public abstract void setBrightnessStep( Float brightnessStep );
+	public abstract void setBrightnessStep( double brightnessStep );
 
 	public abstract List<Object> getChartData();
 
@@ -40,9 +40,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setGradientRatio( List<Float> gradientRatio );
 
-	public abstract Float getGroupedAlpha();
+	public abstract double getGroupedAlpha();
 
-	public abstract void setGroupedAlpha( Float groupedAlpha );
+	public abstract void setGroupedAlpha( double groupedAlpha );
 
 	public abstract String getGroupedColor();
 
@@ -60,17 +60,17 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setGroupedTitle( String groupedTitle );
 
-	public abstract Double getGroupPercent();
+	public abstract double getGroupPercent();
 
-	public abstract void setGroupPercent( Double groupPercent );
+	public abstract void setGroupPercent( double groupPercent );
 
-	public abstract Float getHideLabelsPercent();
+	public abstract double getHideLabelsPercent();
 
-	public abstract void setHideLabelsPercent( Float hideLabelsPercent );
+	public abstract void setHideLabelsPercent( double hideLabelsPercent );
 
-	public abstract Float getHoverAlpha();
+	public abstract double getHoverAlpha();
 
-	public abstract void setHoverAlpha( Float hoverAlpha );
+	public abstract void setHoverAlpha( double hoverAlpha );
 
 	public abstract Object getLabelFunction();
 
@@ -80,45 +80,45 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setLabelsEnabled( Boolean labelsEnabled );
 
-	public abstract Float getLabelTickAlpha();
+	public abstract double getLabelTickAlpha();
 
-	public abstract void setLabelTickAlpha( Float labelTickAlpha );
+	public abstract void setLabelTickAlpha( double labelTickAlpha );
 
 	public abstract String getLabelTickColor();
 
 	public abstract void setLabelTickColor( String labelTickColor );
 
-	public abstract Float getMarginBottom();
+	public abstract double getMarginBottom();
 
-	public abstract void setMarginBottom( Float marginBottom );
+	public abstract void setMarginBottom( double marginBottom );
 
-	public abstract Float getMarginLeft();
+	public abstract double getMarginLeft();
 
-	public abstract void setMarginLeft( Float marginLeft );
+	public abstract void setMarginLeft( double marginLeft );
 
-	public abstract Float getMarginRight();
+	public abstract double getMarginRight();
 
-	public abstract void setMarginRight( Float marginRight );
+	public abstract void setMarginRight( double marginRight );
 
-	public abstract Float getMarginTop();
+	public abstract double getMarginTop();
 
-	public abstract void setMarginTop( Float marginTop );
+	public abstract void setMarginTop( double marginTop );
 
-	public abstract Float getMaxLabelWidth();
+	public abstract double getMaxLabelWidth();
 
-	public abstract void setMaxLabelWidth( Float maxLabelWidth );
+	public abstract void setMaxLabelWidth( double maxLabelWidth );
 
-	public abstract Double getOutlineAlpha();
+	public abstract double getOutlineAlpha();
 
-	public abstract void setOutlineAlpha( Double outlineAlpha );
+	public abstract void setOutlineAlpha( double outlineAlpha );
 
 	public abstract String getOutlineColor();
 
 	public abstract void setOutlineColor( String outlineColor );
 
-	public abstract Float getOutlineThickness();
+	public abstract double getOutlineThickness();
 
-	public abstract void setOutlineThickness( Float outlineThickness );
+	public abstract void setOutlineThickness( double outlineThickness );
 
 	public abstract String getPatternField();
 
@@ -144,9 +144,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	public abstract void setSequencedAnimation( Boolean sequencedAnimation );
 
-	public abstract Float getStartAlpha();
+	public abstract double getStartAlpha();
 
-	public abstract void setStartAlpha( Float startAlpha );
+	public abstract void setStartAlpha( double startAlpha );
 
 	public abstract Integer getStartDuration();
 

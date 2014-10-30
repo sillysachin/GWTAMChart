@@ -19,13 +19,13 @@ public class AmChart implements IsAmChart
 
 	private IsAmExport amExport;
 
-	private Float backgroundAlpha;
+	private double backgroundAlpha;
 
 	private String backgroundColor;
 
 	private IsAmBalloon balloon;
 
-	private Float borderAlpha;
+	private double borderAlpha;
 
 	private String borderColor;
 
@@ -41,13 +41,13 @@ public class AmChart implements IsAmChart
 
 	private String fontFamily;
 
-	private Float fontSize;
+	private double fontSize;
 
 	private Boolean handDrawn;
 
-	private Float handDrawScatter;
+	private double handDrawScatter;
 
-	private Float handDrawThickness;
+	private double handDrawThickness;
 
 	private Integer hideBalloonTime;
 
@@ -61,9 +61,9 @@ public class AmChart implements IsAmChart
 
 	private String pathToImages;
 
-	private Float percentPrecision;
+	private double percentPrecision;
 
-	private Float precision;
+	private double precision;
 
 	private List<Object> prefixesOfBigNumbers;
 
@@ -109,13 +109,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Float getBackgroundAlpha()
+	public double getBackgroundAlpha()
 	{
 		return backgroundAlpha;
 	}
 
 	@Override
-	public void setBackgroundAlpha( Float backgroundAlpha )
+	public void setBackgroundAlpha( double backgroundAlpha )
 	{
 		this.backgroundAlpha = backgroundAlpha;
 	}
@@ -145,13 +145,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Float getBorderAlpha()
+	public double getBorderAlpha()
 	{
 		return borderAlpha;
 	}
 
 	@Override
-	public void setBorderAlpha( Float borderAlpha )
+	public void setBorderAlpha( double borderAlpha )
 	{
 		this.borderAlpha = borderAlpha;
 	}
@@ -241,13 +241,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Float getFontSize()
+	public double getFontSize()
 	{
 		return fontSize;
 	}
 
 	@Override
-	public void setFontSize( Float fontSize )
+	public void setFontSize( double fontSize )
 	{
 		this.fontSize = fontSize;
 	}
@@ -265,25 +265,25 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Float getHandDrawScatter()
+	public double getHandDrawScatter()
 	{
 		return handDrawScatter;
 	}
 
 	@Override
-	public void setHandDrawScatter( Float handDrawScatter )
+	public void setHandDrawScatter( double handDrawScatter )
 	{
 		this.handDrawScatter = handDrawScatter;
 	}
 
 	@Override
-	public Float getHandDrawThickness()
+	public double getHandDrawThickness()
 	{
 		return handDrawThickness;
 	}
 
 	@Override
-	public void setHandDrawThickness( Float handDrawThickness )
+	public void setHandDrawThickness( double handDrawThickness )
 	{
 		this.handDrawThickness = handDrawThickness;
 	}
@@ -361,25 +361,25 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Float getPercentPrecision()
+	public double getPercentPrecision()
 	{
 		return percentPrecision;
 	}
 
 	@Override
-	public void setPercentPrecision( Float percentPrecision )
+	public void setPercentPrecision( double percentPrecision )
 	{
 		this.percentPrecision = percentPrecision;
 	}
 
 	@Override
-	public Float getPrecision()
+	public double getPrecision()
 	{
 		return precision;
 	}
 
 	@Override
-	public void setPrecision( Float precision )
+	public void setPrecision( double precision )
 	{
 		this.precision = precision;
 	}

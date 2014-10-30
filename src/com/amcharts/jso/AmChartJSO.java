@@ -42,13 +42,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Float getBackgroundAlpha()
+	public final native double getBackgroundAlpha()
 	/*-{
 		return this.backgroundAlpha;
 	}-*/;
 
 	@Override
-	public final native void setBackgroundAlpha( Float backgroundAlpha )
+	public final native void setBackgroundAlpha( double backgroundAlpha )
 	/*-{
 		this.backgroundAlpha = backgroundAlpha;
 	}-*/;
@@ -78,13 +78,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Float getBorderAlpha()
+	public final native double getBorderAlpha()
 	/*-{
 		return this.borderAlpha;
 	}-*/;
 
 	@Override
-	public final native void setBorderAlpha( Float borderAlpha )
+	public final native void setBorderAlpha( double borderAlpha )
 	/*-{
 		this.borderAlpha = borderAlpha;
 	}-*/;
@@ -174,13 +174,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Float getFontSize()
+	public final native double getFontSize()
 	/*-{
 		return this.fontSize;
 	}-*/;
 
 	@Override
-	public final native void setFontSize( Float fontSize )
+	public final native void setFontSize( double fontSize )
 	/*-{
 		this.fontSize = fontSize;
 	}-*/;
@@ -198,25 +198,25 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Float getHandDrawScatter()
+	public final native double getHandDrawScatter()
 	/*-{
 		return this.handDrawScatter;
 	}-*/;
 
 	@Override
-	public final native void setHandDrawScatter( Float handDrawScatter )
+	public final native void setHandDrawScatter( double handDrawScatter )
 	/*-{
 		this.handDrawScatter = handDrawScatter;
 	}-*/;
 
 	@Override
-	public final native Float getHandDrawThickness()
+	public final native double getHandDrawThickness()
 	/*-{
 		return this.handDrawThickness;
 	}-*/;
 
 	@Override
-	public final native void setHandDrawThickness( Float handDrawThickness )
+	public final native void setHandDrawThickness( double handDrawThickness )
 	/*-{
 		this.handDrawThickness = handDrawThickness;
 	}-*/;
@@ -294,25 +294,25 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Float getPercentPrecision()
+	public final native double getPercentPrecision()
 	/*-{
 		return this.percentPrecision;
 	}-*/;
 
 	@Override
-	public final native void setPercentPrecision( Float percentPrecision )
+	public final native void setPercentPrecision( double percentPrecision )
 	/*-{
 		this.percentPrecision = percentPrecision;
 	}-*/;
 
 	@Override
-	public final native Float getPrecision()
+	public final native double getPrecision()
 	/*-{
 		return this.precision;
 	}-*/;
 
 	@Override
-	public final native void setPrecision( Float precision )
+	public final native void setPrecision( double precision )
 	/*-{
 		this.precision = precision;
 	}-*/;

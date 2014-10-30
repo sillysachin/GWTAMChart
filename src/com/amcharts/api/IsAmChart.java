@@ -13,9 +13,9 @@ public interface IsAmChart
 
 	void setAmExport( IsAmExport amExport );
 
-	Float getBackgroundAlpha();
+	double getBackgroundAlpha();
 
-	void setBackgroundAlpha( Float backgroundAlpha );
+	void setBackgroundAlpha( double backgroundAlpha );
 
 	String getBackgroundColor();
 
@@ -25,9 +25,9 @@ public interface IsAmChart
 
 	void setBalloon( IsAmBalloon balloon );
 
-	Float getBorderAlpha();
+	double getBorderAlpha();
 
-	void setBorderAlpha( Float borderAlpha );
+	void setBorderAlpha( double borderAlpha );
 
 	String getBorderColor();
 
@@ -57,21 +57,21 @@ public interface IsAmChart
 
 	void setFontFamily( String fontFamily );
 
-	Float getFontSize();
+	double getFontSize();
 
-	void setFontSize( Float fontSize );
+	void setFontSize( double fontSize );
 
 	Boolean getHandDrawn();
 
 	void setHandDrawn( Boolean handDrawn );
 
-	Float getHandDrawScatter();
+	double getHandDrawScatter();
 
-	void setHandDrawScatter( Float handDrawScatter );
+	void setHandDrawScatter( double handDrawScatter );
 
-	Float getHandDrawThickness();
+	double getHandDrawThickness();
 
-	void setHandDrawThickness( Float handDrawThickness );
+	void setHandDrawThickness( double handDrawThickness );
 
 	Integer getHideBalloonTime();
 
@@ -97,13 +97,13 @@ public interface IsAmChart
 
 	void setPathToImages( String pathToImages );
 
-	Float getPercentPrecision();
+	double getPercentPrecision();
 
-	void setPercentPrecision( Float percentPrecision );
+	void setPercentPrecision( double percentPrecision );
 
-	Float getPrecision();
+	double getPrecision();
 
-	void setPrecision( Float precision );
+	void setPrecision( double precision );
 
 	List<Object> getPrefixesOfBigNumbers();
 

@@ -34,12 +34,12 @@ public class AmSerialChart extends AmRectangularChart
 		return categoryAxis;
 	}
 
-	public void setAngle( Double angle )
+	public void setAngle( double angle )
 	{
 		getJso().setAngle( angle );
 	}
 
-	public Double getAngle()
+	public double getAngle()
 	{
 		return getJso().getAngle();
 	}
@@ -92,12 +92,12 @@ public class AmSerialChart extends AmRectangularChart
 		this.@com.amcharts.impl.CategoryAxis::getJso().dataDateFormat = dataDateFormat;
 	}-*/;
 
-	public native void setDepth3D( Double depth3D )
+	public native void setDepth3D( double depth3D )
 	/*-{
 		this.@com.amcharts.impl.AmSerialChart::getJso().depth3D = depth3D;
 	}-*/;
 
-	public native Double getDepth3D()
+	public native double getDepth3D()
 	/*-{
 		return this.@com.amcharts.impl.AmSerialChart::getJso().depth3D;
 	}-*/;

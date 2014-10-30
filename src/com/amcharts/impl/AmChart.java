@@ -215,12 +215,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Float getBackgroundAlpha() /*-{
+	public native double getBackgroundAlpha() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.backgroundAlpha;
 	}-*/;
 
 	@Override
-	public native void setBackgroundAlpha( Float backgroundAlpha ) /*-{
+	public native void setBackgroundAlpha( double backgroundAlpha ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.backgroundAlpha = backgroundAlpha;
 	}-*/;
 
@@ -245,12 +245,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Float getBorderAlpha() /*-{
+	public native double getBorderAlpha() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.borderAlpha;
 	}-*/;
 
 	@Override
-	public native void setBorderAlpha( Float borderAlpha ) /*-{
+	public native void setBorderAlpha( double borderAlpha ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.borderAlpha = borderAlpha;
 	}-*/;
 
@@ -327,12 +327,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Float getFontSize() /*-{
+	public native double getFontSize() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.fontSize;
 	}-*/;
 
 	@Override
-	public native void setFontSize( Float fontSize ) /*-{
+	public native void setFontSize( double fontSize ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.fontSize = fontSize;
 	}-*/;
 
@@ -347,22 +347,22 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Float getHandDrawScatter() /*-{
+	public native double getHandDrawScatter() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.handDrawScatter;
 	}-*/;
 
 	@Override
-	public native void setHandDrawScatter( Float handDrawScatter ) /*-{
+	public native void setHandDrawScatter( double handDrawScatter ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.handDrawScatter = handDrawScatter;
 	}-*/;
 
 	@Override
-	public native Float getHandDrawThickness() /*-{
+	public native double getHandDrawThickness() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.handDrawThickness;
 	}-*/;
 
 	@Override
-	public native void setHandDrawThickness( Float handDrawThickness ) /*-{
+	public native void setHandDrawThickness( double handDrawThickness ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.handDrawThickness = handDrawThickness;
 	}-*/;
 
@@ -417,22 +417,22 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Float getPercentPrecision() /*-{
+	public native double getPercentPrecision() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.percentPrecision;
 	}-*/;
 
 	@Override
-	public native void setPercentPrecision( Float percentPrecision ) /*-{
+	public native void setPercentPrecision( double percentPrecision ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.percentPrecision = percentPrecision;
 	}-*/;
 
 	@Override
-	public native Float getPrecision() /*-{
+	public native double getPrecision() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.precision;
 	}-*/;
 
 	@Override
-	public native void setPrecision( Float precision ) /*-{
+	public native void setPrecision( double precision ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.precision = precision;
 	}-*/;
 

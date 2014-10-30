@@ -2,63 +2,63 @@ package com.amcharts.api;
 
 public interface IsAmPieChart extends IsAmSlicedChart
 {
-	public abstract Double getAngle();
+	double getAngle();
 
-	public abstract void setAngle( Double angle );
+	void setAngle( double angle );
 
-	public abstract String getBalloonText();
+	String getBalloonText();
 
-	public abstract void setBalloonText( String balloonText );
+	void setBalloonText( String balloonText );
 
-	public abstract Double getDepth3D();
+	double getDepth3D();
 
-	public abstract void setDepth3D( Double depth3d );
+	void setDepth3D( double depth3d );
 
-	public abstract String getInnerRadius();
+	String getInnerRadius();
 
-	public abstract void setInnerRadius( String innerRadius );
+	void setInnerRadius( String innerRadius );
 
-	public abstract Float getLabelRadius();
+	double getLabelRadius();
 
-	public abstract void setLabelRadius( Float labelRadius );
+	void setLabelRadius( double labelRadius );
 
-	public abstract String getLabelRadiusField();
+	String getLabelRadiusField();
 
-	public abstract void setLabelRadiusField( String labelRadiusField );
+	void setLabelRadiusField( String labelRadiusField );
 
-	public abstract String getLabelText();
+	String getLabelText();
 
-	public abstract void setLabelText( String labelText );
+	void setLabelText( String labelText );
 
-	public abstract Float getMinRadius();
+	double getMinRadius();
 
-	public abstract void setMinRadius( Float minRadius );
+	void setMinRadius( double minRadius );
 
-	public abstract Float getPieAlpha();
+	double getPieAlpha();
 
-	public abstract void setPieAlpha( Float pieAlpha );
+	void setPieAlpha( double pieAlpha );
 
-	public abstract String getPieX();
+	String getPieX();
 
-	public abstract void setPieX( String pieX );
+	void setPieX( String pieX );
 
-	public abstract String getPieY();
+	String getPieY();
 
-	public abstract void setPieY( String pieY );
+	void setPieY( String pieY );
 
-	public abstract String getPullOutRadius();
+	String getPullOutRadius();
 
-	public abstract void setPullOutRadius( String pullOutRadius );
+	void setPullOutRadius( String pullOutRadius );
 
-	public abstract String getRadius();
+	String getRadius();
 
-	public abstract void setRadius( String radius );
+	void setRadius( String radius );
 
-	public abstract Float getStartAngle();
+	double getStartAngle();
 
-	public abstract void setStartAngle( Float startAngle );
+	void setStartAngle( double startAngle );
 
-	public abstract String getStartRadius();
+	String getStartRadius();
 
-	public abstract void setStartRadius( String startRadius );
+	void setStartRadius( String startRadius );
 }

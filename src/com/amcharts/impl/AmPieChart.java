@@ -22,12 +22,12 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		return ( AmPieChartJSO ) super.getJso();
 	}
 
-	public void setAngle( Double angle )
+	public void setAngle( double angle )
 	{
 		getJso().setAngle( angle );
 	}
 
-	public Double getAngle()
+	public double getAngle()
 	{
 		return getJso().getAngle();
 	}
@@ -44,13 +44,12 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		getJso().setBalloonText( balloonText );
 	}
 
-	public void setDepth3D( Double depth3D )
+	public void setDepth3D( double depth3D )
 	{
-		//TODO: The pie chart is not rendered clearly. casting is causing a bug.
 		getJso().setDepth3D( depth3D );
 	}
 
-	public Double getDepth3D()
+	public double getDepth3D()
 	{
 		return getJso().getDepth3D();
 	}
@@ -68,13 +67,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getLabelRadius()
+	public double getLabelRadius()
 	{
 		return getJso().getLabelRadius();
 	}
 
 	@Override
-	public void setLabelRadius( Float labelRadius )
+	public void setLabelRadius( double labelRadius )
 	{
 		getJso().setLabelRadius( labelRadius );
 	}
@@ -104,25 +103,25 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getMinRadius()
+	public double getMinRadius()
 	{
 		return getJso().getMinRadius();
 	}
 
 	@Override
-	public void setMinRadius( Float minRadius )
+	public void setMinRadius( double minRadius )
 	{
 		getJso().setMinRadius( minRadius );
 	}
 
 	@Override
-	public Float getPieAlpha()
+	public double getPieAlpha()
 	{
 		return getJso().getPieAlpha();
 	}
 
 	@Override
-	public void setPieAlpha( Float pieAlpha )
+	public void setPieAlpha( double pieAlpha )
 	{
 		getJso().setPieAlpha( pieAlpha );
 	}
@@ -176,13 +175,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public Float getStartAngle()
+	public double getStartAngle()
 	{
 		return getJso().getStartAngle();
 	}
 
 	@Override
-	public void setStartAngle( Float startAngle )
+	public void setStartAngle( double startAngle )
 	{
 		getJso().setStartAngle( startAngle );
 	}

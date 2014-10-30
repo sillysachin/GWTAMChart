@@ -6,13 +6,13 @@ import com.amcharts.api.IsAmSlicedChart;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
-	private Float alpha;
+	private double alpha;
 
 	private String alphaField;
 
 	private String baseColor;
 
-	private Float brightnessStep;
+	private double brightnessStep;
 
 	private List<Object> chartData;
 
@@ -24,7 +24,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private List<Float> gradientRatio;
 
-	private Float groupedAlpha;
+	private double groupedAlpha;
 
 	private String groupedColor;
 
@@ -34,35 +34,35 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private String groupedTitle;
 
-	private Double groupPercent;
+	private double groupPercent;
 
-	private Float hideLabelsPercent;
+	private double hideLabelsPercent;
 
-	private Float hoverAlpha;
+	private double hoverAlpha;
 
 	private Object labelFunction;
 
 	private Boolean labelsEnabled;
 
-	private Float labelTickAlpha;
+	private double labelTickAlpha;
 
 	private String labelTickColor;
 
-	private Float marginBottom;
+	private double marginBottom;
 
-	private Float marginLeft;
+	private double marginLeft;
 
-	private Float marginRight;
+	private double marginRight;
 
-	private Float marginTop;
+	private double marginTop;
 
-	private Float maxLabelWidth;
+	private double maxLabelWidth;
 
-	private Double outlineAlpha;
+	private double outlineAlpha;
 
 	private String outlineColor;
 
-	private Float outlineThickness;
+	private double outlineThickness;
 
 	private String patternField;
 
@@ -76,7 +76,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Boolean sequencedAnimation;
 
-	private Float startAlpha;
+	private double startAlpha;
 
 	private Integer startDuration;
 
@@ -93,13 +93,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	private String visibleInLegendField;
 
 	@Override
-	public Float getAlpha()
+	public double getAlpha()
 	{
 		return alpha;
 	}
 
 	@Override
-	public void setAlpha( Float alpha )
+	public void setAlpha( double alpha )
 	{
 		this.alpha = alpha;
 	}
@@ -129,13 +129,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getBrightnessStep()
+	public double getBrightnessStep()
 	{
 		return brightnessStep;
 	}
 
 	@Override
-	public void setBrightnessStep( Float brightnessStep )
+	public void setBrightnessStep( double brightnessStep )
 	{
 		this.brightnessStep = brightnessStep;
 	}
@@ -201,13 +201,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getGroupedAlpha()
+	public double getGroupedAlpha()
 	{
 		return groupedAlpha;
 	}
 
 	@Override
-	public void setGroupedAlpha( Float groupedAlpha )
+	public void setGroupedAlpha( double groupedAlpha )
 	{
 		this.groupedAlpha = groupedAlpha;
 	}
@@ -261,37 +261,37 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Double getGroupPercent()
+	public double getGroupPercent()
 	{
 		return groupPercent;
 	}
 
 	@Override
-	public void setGroupPercent( Double groupPercent )
+	public void setGroupPercent( double groupPercent )
 	{
 		this.groupPercent = groupPercent;
 	}
 
 	@Override
-	public Float getHideLabelsPercent()
+	public double getHideLabelsPercent()
 	{
 		return hideLabelsPercent;
 	}
 
 	@Override
-	public void setHideLabelsPercent( Float hideLabelsPercent )
+	public void setHideLabelsPercent( double hideLabelsPercent )
 	{
 		this.hideLabelsPercent = hideLabelsPercent;
 	}
 
 	@Override
-	public Float getHoverAlpha()
+	public double getHoverAlpha()
 	{
 		return hoverAlpha;
 	}
 
 	@Override
-	public void setHoverAlpha( Float hoverAlpha )
+	public void setHoverAlpha( double hoverAlpha )
 	{
 		this.hoverAlpha = hoverAlpha;
 	}
@@ -321,13 +321,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getLabelTickAlpha()
+	public double getLabelTickAlpha()
 	{
 		return labelTickAlpha;
 	}
 
 	@Override
-	public void setLabelTickAlpha( Float labelTickAlpha )
+	public void setLabelTickAlpha( double labelTickAlpha )
 	{
 		this.labelTickAlpha = labelTickAlpha;
 	}
@@ -345,73 +345,73 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getMarginBottom()
+	public double getMarginBottom()
 	{
 		return marginBottom;
 	}
 
 	@Override
-	public void setMarginBottom( Float marginBottom )
+	public void setMarginBottom( double marginBottom )
 	{
 		this.marginBottom = marginBottom;
 	}
 
 	@Override
-	public Float getMarginLeft()
+	public double getMarginLeft()
 	{
 		return marginLeft;
 	}
 
 	@Override
-	public void setMarginLeft( Float marginLeft )
+	public void setMarginLeft( double marginLeft )
 	{
 		this.marginLeft = marginLeft;
 	}
 
 	@Override
-	public Float getMarginRight()
+	public double getMarginRight()
 	{
 		return marginRight;
 	}
 
 	@Override
-	public void setMarginRight( Float marginRight )
+	public void setMarginRight( double marginRight )
 	{
 		this.marginRight = marginRight;
 	}
 
 	@Override
-	public Float getMarginTop()
+	public double getMarginTop()
 	{
 		return marginTop;
 	}
 
 	@Override
-	public void setMarginTop( Float marginTop )
+	public void setMarginTop( double marginTop )
 	{
 		this.marginTop = marginTop;
 	}
 
 	@Override
-	public Float getMaxLabelWidth()
+	public double getMaxLabelWidth()
 	{
 		return maxLabelWidth;
 	}
 
 	@Override
-	public void setMaxLabelWidth( Float maxLabelWidth )
+	public void setMaxLabelWidth( double maxLabelWidth )
 	{
 		this.maxLabelWidth = maxLabelWidth;
 	}
 
 	@Override
-	public Double getOutlineAlpha()
+	public double getOutlineAlpha()
 	{
 		return outlineAlpha;
 	}
 
 	@Override
-	public void setOutlineAlpha( Double outlineAlpha )
+	public void setOutlineAlpha( double outlineAlpha )
 	{
 		this.outlineAlpha = outlineAlpha;
 	}
@@ -429,13 +429,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getOutlineThickness()
+	public double getOutlineThickness()
 	{
 		return outlineThickness;
 	}
 
 	@Override
-	public void setOutlineThickness( Float outlineThickness )
+	public void setOutlineThickness( double outlineThickness )
 	{
 		this.outlineThickness = outlineThickness;
 	}
@@ -513,13 +513,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Float getStartAlpha()
+	public double getStartAlpha()
 	{
 		return startAlpha;
 	}
 
 	@Override
-	public void setStartAlpha( Float startAlpha )
+	public void setStartAlpha( double startAlpha )
 	{
 		this.startAlpha = startAlpha;
 	}
