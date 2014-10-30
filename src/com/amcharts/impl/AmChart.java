@@ -5,7 +5,7 @@ import java.util.List;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
-import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
@@ -387,13 +387,15 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native IsAmLegend getLegend() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.legend;
+	public native IsLegend getLegend() /*-{
+		var legend = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmChart::jso.legend)
+		return legend;
 	}-*/;
 
 	@Override
-	public native void setLegend( IsAmLegend legend ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.legend = legend;
+	public native void setLegend( IsLegend legend ) /*-{
+		var varLegend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(legend)
+		this.@com.amcharts.impl.AmChart::jso.legend = varLegend;
 	}-*/;
 
 	@Override

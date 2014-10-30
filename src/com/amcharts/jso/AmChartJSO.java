@@ -5,7 +5,7 @@ import java.util.List;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
-import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
@@ -246,13 +246,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native IsAmLegend getLegend()
+	public final native IsLegend getLegend()
 	/*-{
 		return this.legend;
 	}-*/;
 
 	@Override
-	public final native void setLegend( IsAmLegend legend )
+	public final native void setLegend( IsLegend legend )
 	/*-{
 		this.legend = legend;
 	}-*/;

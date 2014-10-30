@@ -11,7 +11,6 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 {
-
 	private JavaScriptObject jso;
 
 	public ExportConfig()
@@ -59,5 +58,15 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 	/*-{
 		var varMenuItem = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(menuItem)
 		this.@com.amcharts.impl.ExportConfig::jso.menuItems.push(varMenuItem)
+	}-*/;
+
+	public native void setMenuTop( String menuTop )
+	/*-{
+		this.@com.amcharts.impl.ExportConfig::jso.menuTop = menuTop;
+	}-*/;
+
+	public native String getMenuTop()
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuTop;
 	}-*/;
 }

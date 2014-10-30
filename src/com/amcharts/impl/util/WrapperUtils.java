@@ -9,6 +9,7 @@ import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.AmSlicedChart;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.Legend;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.AmRectangularChart;
@@ -127,6 +128,10 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( MenuItem.class ) ) )
 		{
 			wrapper = GWT.create( MenuItem.class );
+		}
+		else if ( className.equals( getSimpleName( Legend.class ) ) )
+		{
+			wrapper = GWT.create( Legend.class );
 		}
 
 		return wrapper;

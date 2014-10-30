@@ -32,5 +32,4 @@ public class MenuItemJSO extends JavaScriptObject implements IsMenuItem
 	/*-{
 		this.format = format;
 	}-*/;
-
 }
