@@ -211,7 +211,11 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		chart.addListener(eventName,
 			function(event) {
 				console.log(event);
+<<<<<<< HEAD
 				amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/mouse/AmPieChartClickSliceEvent;)(event);
+=======
+				amChartListener.@com.amcharts.impl.listener.AmChartListener::function(Lcom/amcharts/impl/listener/AmChartEvent;)(event);
+>>>>>>> branch 'master' of https://github.com/sillysachin/GWTAMChart
 			});
 	}-*/;
 
