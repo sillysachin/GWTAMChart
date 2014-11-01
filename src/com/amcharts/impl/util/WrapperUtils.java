@@ -75,17 +75,6 @@ public class WrapperUtils
 		IJavaScriptWrapper wrapper = null;
 		GWT.log( className );
 		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
-		if ( className.equals( getSimpleName( DataItem.class ) ) )
-		{
-			wrapper = GWT.create( DataItem.class );
-		}
-		else if ( className.equals( getSimpleName( DataContext.class ) ) )
-		{
-			wrapper = GWT.create( DataContext.class );
-		}else if ( className.equals( getSimpleName( DataContext.class ) ) )
-		{
-			wrapper = GWT.create( DataContext.class );
-		}
 
 		return wrapper;
 	}
