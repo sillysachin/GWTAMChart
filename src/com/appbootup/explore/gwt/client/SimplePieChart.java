@@ -14,13 +14,13 @@ public class SimplePieChart
 {
 	public SimplePieChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/simplePieChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/drawChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )
 			{
 				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				simplePieChart( pieDataProvider );
+				drawChart( pieDataProvider );
 			}
 
 			@Override
@@ -31,7 +31,7 @@ public class SimplePieChart
 		} );
 	}
 
-	protected void simplePieChart( JavaScriptObject chartData )
+	protected void drawChart( JavaScriptObject chartData )
 	{
 		AmPieChart amPieChart = new AmPieChart();
 		amPieChart.setType( "pie" );

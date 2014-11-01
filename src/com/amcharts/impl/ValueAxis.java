@@ -6,7 +6,7 @@ import com.amcharts.api.IsValueAxis;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper
+public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper<JavaScriptObject>
 {
 	JavaScriptObject jso;
 

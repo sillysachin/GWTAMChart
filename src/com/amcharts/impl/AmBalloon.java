@@ -1,52 +1,30 @@
-package com.amcharts.json;
+package com.amcharts.impl;
 
 import com.amcharts.api.IsAmBalloon;
+import com.amcharts.jso.AmBalloonJSO;
+import com.google.gwt.core.client.IJavaScriptWrapper;
+import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmBalloon implements IsAmBalloon
+public class AmBalloon implements IsAmBalloon, IJavaScriptWrapper<AmBalloonJSO>
 {
-	private boolean adjustBorderColor;
+	private AmBalloonJSO jso;
 
-	private double animationDuration;
+	public AmBalloon()
+	{
+		setJso( ( AmBalloonJSO ) JavaScriptObject.createObject() );
+	}
 
-	private double borderAlpha;
+	@Override
+	public AmBalloonJSO getJso()
+	{
+		return this.jso;
+	}
 
-	private String borderColor;
-
-	private double borderThickness;
-
-	private String color;
-
-	private double cornerRadius;
-
-	private double fadeOutDuration;
-
-	private double fillAlpha;
-
-	private String fillColor;
-
-	private boolean fixedPosition;
-
-	private double fontSize;
-
-	private double horizontalPadding;
-
-	private double maxWidth;
-
-	private double offsetX;
-
-	private double offsetY;
-
-	private double pointerWidth;
-
-	private double shadowAlpha;
-
-	private double shadowColor;
-
-	private boolean showBullet;
-
-	private String textAlign;
-
-	private double verticalPadding;
+	@Override
+	public void setJso( AmBalloonJSO jso )
+	{
+		this.jso = jso;
+	}
 
 	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmBalloon#isAdjustBorderColor()
@@ -54,7 +32,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public boolean isAdjustBorderColor()
 	{
-		return adjustBorderColor;
+		return getJso().isAdjustBorderColor();
 	}
 
 	/* (non-Javadoc)
@@ -63,7 +41,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setAdjustBorderColor( boolean adjustBorderColor )
 	{
-		this.adjustBorderColor = adjustBorderColor;
+		getJso().setAdjustBorderColor( adjustBorderColor );
 	}
 
 	/* (non-Javadoc)
@@ -72,7 +50,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getAnimationDuration()
 	{
-		return animationDuration;
+		return getJso().getAnimationDuration();
 	}
 
 	/* (non-Javadoc)
@@ -81,7 +59,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setAnimationDuration( double animationDuration )
 	{
-		this.animationDuration = animationDuration;
+		getJso().setAnimationDuration( animationDuration );
 	}
 
 	/* (non-Javadoc)
@@ -90,7 +68,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getBorderAlpha()
 	{
-		return borderAlpha;
+		return getJso().getBorderAlpha();
 	}
 
 	/* (non-Javadoc)
@@ -99,7 +77,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setBorderAlpha( double borderAlpha )
 	{
-		this.borderAlpha = borderAlpha;
+		getJso().setBorderAlpha( borderAlpha );
 	}
 
 	/* (non-Javadoc)
@@ -108,7 +86,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public String getBorderColor()
 	{
-		return borderColor;
+		return getJso().getBorderColor();
 	}
 
 	/* (non-Javadoc)
@@ -117,7 +95,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setBorderColor( String borderColor )
 	{
-		this.borderColor = borderColor;
+		getJso().setBorderColor( borderColor );
 	}
 
 	/* (non-Javadoc)
@@ -126,7 +104,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getBorderThickness()
 	{
-		return borderThickness;
+		return getJso().getBorderThickness();
 	}
 
 	/* (non-Javadoc)
@@ -135,7 +113,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setBorderThickness( double borderThickness )
 	{
-		this.borderThickness = borderThickness;
+		getJso().setBorderThickness( borderThickness );
 	}
 
 	/* (non-Javadoc)
@@ -144,7 +122,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public String getColor()
 	{
-		return color;
+		return getJso().getColor();
 	}
 
 	/* (non-Javadoc)
@@ -153,7 +131,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setColor( String color )
 	{
-		this.color = color;
+		getJso().setColor( color );
 	}
 
 	/* (non-Javadoc)
@@ -162,7 +140,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getCornerRadius()
 	{
-		return cornerRadius;
+		return getJso().getCornerRadius();
 	}
 
 	/* (non-Javadoc)
@@ -171,7 +149,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setCornerRadius( double cornerRadius )
 	{
-		this.cornerRadius = cornerRadius;
+		getJso().setCornerRadius( cornerRadius );
 	}
 
 	/* (non-Javadoc)
@@ -180,7 +158,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getFadeOutDuration()
 	{
-		return fadeOutDuration;
+		return getJso().getFadeOutDuration();
 	}
 
 	/* (non-Javadoc)
@@ -189,7 +167,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setFadeOutDuration( double fadeOutDuration )
 	{
-		this.fadeOutDuration = fadeOutDuration;
+		getJso().setFadeOutDuration( fadeOutDuration );
 	}
 
 	/* (non-Javadoc)
@@ -198,7 +176,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getFillAlpha()
 	{
-		return fillAlpha;
+		return getJso().getFillAlpha();
 	}
 
 	/* (non-Javadoc)
@@ -207,7 +185,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setFillAlpha( double fillAlpha )
 	{
-		this.fillAlpha = fillAlpha;
+		getJso().setFillAlpha( fillAlpha );
 	}
 
 	/* (non-Javadoc)
@@ -216,7 +194,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public String getFillColor()
 	{
-		return fillColor;
+		return getJso().getFillColor();
 	}
 
 	/* (non-Javadoc)
@@ -225,7 +203,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setFillColor( String fillColor )
 	{
-		this.fillColor = fillColor;
+		getJso().setFillColor( fillColor );
 	}
 
 	/* (non-Javadoc)
@@ -234,7 +212,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public boolean isFixedPosition()
 	{
-		return fixedPosition;
+		return getJso().isFixedPosition();
 	}
 
 	/* (non-Javadoc)
@@ -243,7 +221,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setFixedPosition( boolean fixedPosition )
 	{
-		this.fixedPosition = fixedPosition;
+		getJso().setFixedPosition( fixedPosition );
 	}
 
 	/* (non-Javadoc)
@@ -252,7 +230,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getFontSize()
 	{
-		return fontSize;
+		return getJso().getFontSize();
 	}
 
 	/* (non-Javadoc)
@@ -261,7 +239,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setFontSize( double fontSize )
 	{
-		this.fontSize = fontSize;
+		getJso().setFontSize( fontSize );
 	}
 
 	/* (non-Javadoc)
@@ -270,7 +248,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getHorizontalPadding()
 	{
-		return horizontalPadding;
+		return getJso().getHorizontalPadding();
 	}
 
 	/* (non-Javadoc)
@@ -279,7 +257,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setHorizontalPadding( double horizontalPadding )
 	{
-		this.horizontalPadding = horizontalPadding;
+		getJso().setHorizontalPadding( horizontalPadding );
 	}
 
 	/* (non-Javadoc)
@@ -288,7 +266,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getMaxWidth()
 	{
-		return maxWidth;
+		return getJso().getMaxWidth();
 	}
 
 	/* (non-Javadoc)
@@ -297,7 +275,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setMaxWidth( double maxWidth )
 	{
-		this.maxWidth = maxWidth;
+		getJso().setMaxWidth( maxWidth );
 	}
 
 	/* (non-Javadoc)
@@ -306,7 +284,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getOffsetX()
 	{
-		return offsetX;
+		return getJso().getOffsetX();
 	}
 
 	/* (non-Javadoc)
@@ -315,7 +293,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setOffsetX( double offsetX )
 	{
-		this.offsetX = offsetX;
+		getJso().setOffsetX( offsetX );
 	}
 
 	/* (non-Javadoc)
@@ -324,7 +302,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getOffsetY()
 	{
-		return offsetY;
+		return getJso().getOffsetY();
 	}
 
 	/* (non-Javadoc)
@@ -333,7 +311,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setOffsetY( double offsetY )
 	{
-		this.offsetY = offsetY;
+		getJso().setOffsetY( offsetY );
 	}
 
 	/* (non-Javadoc)
@@ -342,7 +320,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getPointerWidth()
 	{
-		return pointerWidth;
+		return getJso().getPointerWidth();
 	}
 
 	/* (non-Javadoc)
@@ -351,7 +329,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setPointerWidth( double pointerWidth )
 	{
-		this.pointerWidth = pointerWidth;
+		getJso().setPointerWidth( pointerWidth );
 	}
 
 	/* (non-Javadoc)
@@ -360,7 +338,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getShadowAlpha()
 	{
-		return shadowAlpha;
+		return getJso().getShadowAlpha();
 	}
 
 	/* (non-Javadoc)
@@ -369,7 +347,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setShadowAlpha( double shadowAlpha )
 	{
-		this.shadowAlpha = shadowAlpha;
+		getJso().setShadowAlpha( shadowAlpha );
 	}
 
 	/* (non-Javadoc)
@@ -378,7 +356,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getShadowColor()
 	{
-		return shadowColor;
+		return getJso().getShadowColor();
 	}
 
 	/* (non-Javadoc)
@@ -387,7 +365,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setShadowColor( double shadowColor )
 	{
-		this.shadowColor = shadowColor;
+		getJso().setShadowColor( shadowColor );
 	}
 
 	/* (non-Javadoc)
@@ -396,7 +374,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public boolean isShowBullet()
 	{
-		return showBullet;
+		return getJso().isShowBullet();
 	}
 
 	/* (non-Javadoc)
@@ -405,7 +383,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setShowBullet( boolean showBullet )
 	{
-		this.showBullet = showBullet;
+		getJso().setShowBullet( showBullet );
 	}
 
 	/* (non-Javadoc)
@@ -414,7 +392,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public String getTextAlign()
 	{
-		return textAlign;
+		return getJso().getTextAlign();
 	}
 
 	/* (non-Javadoc)
@@ -423,7 +401,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setTextAlign( String textAlign )
 	{
-		this.textAlign = textAlign;
+		getJso().setTextAlign( textAlign );
 	}
 
 	/* (non-Javadoc)
@@ -432,7 +410,7 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public double getVerticalPadding()
 	{
-		return verticalPadding;
+		return getJso().getVerticalPadding();
 	}
 
 	/* (non-Javadoc)
@@ -441,6 +419,6 @@ public class AmBalloon implements IsAmBalloon
 	@Override
 	public void setVerticalPadding( double verticalPadding )
 	{
-		this.verticalPadding = verticalPadding;
+		getJso().setVerticalPadding( verticalPadding );
 	}
 }

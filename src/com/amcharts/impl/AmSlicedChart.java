@@ -3,9 +3,31 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.impl.event.mouse.slicedchart.AmSlicedChartEventUtils;
+import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.HasClickSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.HasPullInSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.HasPullOutSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.HasRightClickSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.HasRollOutSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.HasRollOverSliceHandlers;
+import com.amcharts.impl.event.mouse.slicedchart.PullInSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.PullInSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.PullOutSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.PullOutSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.RollOutSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.RollOutSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.RollOverSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.RollOverSliceHandler;
 import com.amcharts.jso.AmSlicedChartJSO;
+import com.google.gwt.event.shared.GwtEvent;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.Event;
 
-public class AmSlicedChart extends AmChart implements IsAmSlicedChart
+public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickSliceHandlers, HasRightClickSliceHandlers, HasRollOutSliceHandlers, HasRollOverSliceHandlers, HasPullInSliceHandlers, HasPullOutSliceHandlers
 {
 	@Override
 	public AmSlicedChartJSO getJso()
@@ -509,4 +531,96 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	{
 		getJso().setVisibleInLegendField( visibleInLegendField );
 	}
+
+	@Override
+	public HandlerRegistration addClickSliceHandler( ClickSliceHandler handler )
+	{
+		initListener( ClickSliceEvent.getName() );
+		return addHandler( handler, ClickSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRightClickSliceHandler( RightClickSliceHandler handler )
+	{
+		initListener( RightClickSliceEvent.getName() );
+		return addHandler( handler, RightClickSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addPullOutSliceHandler( PullOutSliceHandler handler )
+	{
+		initListener( PullOutSliceEvent.getName() );
+		return addHandler( handler, PullOutSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addPullInSliceHandler( PullInSliceHandler handler )
+	{
+		initListener( PullInSliceEvent.getName() );
+		return addHandler( handler, PullInSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRollOverSliceHandler( RollOverSliceHandler handler )
+	{
+		initListener( RollOverSliceEvent.getName() );
+		return addHandler( handler, RollOverSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRollOutSliceHandler( RollOutSliceHandler handler )
+	{
+		initListener( RollOutSliceEvent.getName() );
+		return addHandler( handler, RollOutSliceEvent.getType() );
+	}
+
+	protected void fireEvent( Event event )
+	{
+		GwtEvent< ? > createEvent = AmSlicedChartEventUtils.createEvent( event );
+		if ( createEvent == null )
+		{
+			//When the event is not in SlicedChartEventUtils list then look in AMChartEventUtils
+			super.fireEvent( event );
+		}
+		else
+		{
+			super.fireEvent( createEvent );
+		}
+	}
+
+	public native void animateAgain()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.animateAgain();
+	}-*/;
+
+	public native void clickSlice( int index )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.clickSlice(index);
+	}-*/;
+
+	public native void hideSlice( int index )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.hideSlice(index);
+	}-*/;
+
+	public native void rollOutSlice( int index )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.rollOutSlice(index);
+	}-*/;
+
+	public native void rollOverSlice( int index )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.rollOverSlice(index);
+	}-*/;
+
+	public native void showSlice( int index )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.showSlice(index);
+	}-*/;
 }

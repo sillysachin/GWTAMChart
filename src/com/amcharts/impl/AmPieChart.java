@@ -1,32 +1,9 @@
 package com.amcharts.impl;
 
 import com.amcharts.api.IsAmPieChart;
-import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.mouse.piechart.AmPieChartEventUtils;
-import com.amcharts.impl.event.mouse.piechart.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.ClickSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.HasClickSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.HasPullInSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.HasPullOutSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.HasRightClickSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.HasRollOutSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.HasRollOverSliceHandlers;
-import com.amcharts.impl.event.mouse.piechart.PullInSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.PullInSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.PullOutSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.PullOutSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.RightClickSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.RightClickSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.RollOutSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.RollOutSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.RollOverSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.RollOverSliceHandler;
 import com.amcharts.jso.AmPieChartJSO;
-import com.google.gwt.event.shared.HandlerRegistration;
-import com.google.gwt.user.client.Event;
 
-public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickSliceHandlers, HasRightClickSliceHandlers, HasRollOutSliceHandlers, HasRollOverSliceHandlers, HasPullInSliceHandlers, HasPullOutSliceHandlers
-{
+public class AmPieChart extends AmSlicedChart implements IsAmPieChart{
 	public AmPieChart()
 	{
 		jso = createJso();
@@ -218,94 +195,5 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickS
 	public void setStartRadius( String startRadius )
 	{
 		getJso().setStartRadius( startRadius );
-	}
-
-	public native void validateData()
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		chart.validateData();
-	}-*/;
-
-	public native void addTitle( String title )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		chart.addTitle(title);
-	}-*/;
-
-	public native void addListener( String eventName, AmChartListener amChartListener )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		var amPieChartThis = this;
-		chart
-				.addListener(
-						eventName,
-						function(event) {
-							amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/AmChartEvent;)(event);
-						});
-	}-*/;
-
-	private void fireEvent( Event event )
-	{
-		super.fireEvent( AmPieChartEventUtils.createEvent( event ) );
-	}
-
-	private native void initListener( String eventName )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		var amPieChartThis = this;
-		if(chart[eventName+'Fl']==undefined){
-			console.log(chart[eventName+'Fl']);
-			chart[eventName+'Fl'] = true;
-			chart
-					.addListener(
-							eventName,
-							function(event) {
-								amPieChartThis.@com.amcharts.impl.AmPieChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
-							});
-		}else{
-			console.log(chart[eventName+'Fl']);
-		}
-	}-*/;
-
-	@Override
-	public HandlerRegistration addClickSliceHandler( ClickSliceHandler handler )
-	{
-		initListener( ClickSliceEvent.getName() );
-		return addHandler( handler, ClickSliceEvent.getType() );
-	}
-
-	@Override
-	public HandlerRegistration addPullOutSliceHandler( PullOutSliceHandler handler )
-	{
-		initListener( PullOutSliceEvent.getName() );
-		return addHandler( handler, PullOutSliceEvent.getType() );
-	}
-
-	@Override
-	public HandlerRegistration addPullInSliceHandler( PullInSliceHandler handler )
-	{
-		initListener( PullInSliceEvent.getName() );
-		return addHandler( handler, PullInSliceEvent.getType() );
-	}
-
-	@Override
-	public HandlerRegistration addRollOverSliceHandler( RollOverSliceHandler handler )
-	{
-		initListener( RollOverSliceEvent.getName() );
-		return addHandler( handler, RollOverSliceEvent.getType() );
-	}
-
-	@Override
-	public HandlerRegistration addRollOutSliceHandler( RollOutSliceHandler handler )
-	{
-		initListener( RollOutSliceEvent.getName() );
-		return addHandler( handler, RollOutSliceEvent.getType() );
-	}
-
-	@Override
-	public HandlerRegistration addRightClickSliceHandler( RightClickSliceHandler handler )
-	{
-		initListener( RightClickSliceEvent.getName() );
-		return addHandler( handler, RightClickSliceEvent.getType() );
 	}
 }

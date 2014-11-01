@@ -1,4 +1,4 @@
-package com.amcharts.impl.event.mouse.piechart;
+package com.amcharts.impl.event.mouse.slicedchart;
 
 import com.amcharts.impl.Slice;
 import com.amcharts.impl.event.AmChartEvent;

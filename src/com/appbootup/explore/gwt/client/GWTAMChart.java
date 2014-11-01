@@ -49,12 +49,13 @@ public class GWTAMChart implements EntryPoint
 		// serialChartByJSNI();
 		// chartByServerJSON();
 		// lineWithTrendLineChartByJSNI();
-		// SimplePieChart simplePieChart = new SimplePieChart();
+		// SimplePieChart drawChart = new SimplePieChart();
 		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 		// DonutChart threeDPieChart = new DonutChart();
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
-		//PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
-		PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
+		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
+		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
+		PyramidChart pyramidChart = new PyramidChart();
 	}
 
 	private void pieChartByJSNI()

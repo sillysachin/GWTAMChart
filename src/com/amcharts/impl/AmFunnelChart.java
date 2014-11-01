@@ -1,28 +1,26 @@
-package com.amcharts.json;
+package com.amcharts.impl;
 
 import com.amcharts.api.IsAmFunnelChart;
+import com.amcharts.jso.AmFunnelChartJSO;
 
 public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 {
-	private String ballonText;
+	public AmFunnelChart()
+	{
+		jso = createJso();
+		setType( "funnel" );
+	}
 
-	private String baseWidth;
+	public native AmFunnelChartJSO createJso()
+	/*-{
+		var chart = new $wnd.AmCharts.AmFunnelChart();
+		return chart;
+	}-*/;
 
-	private String labelPosition;
-
-	private String neckHeight;
-
-	private String neckWidth;
-
-	private String pullDistance;
-
-	private boolean rotate;
-
-	private double startX;
-
-	private double startY;
-
-	private String valueRepresents;
+	public AmFunnelChartJSO getJso()
+	{
+		return ( AmFunnelChartJSO ) super.getJso();
+	}
 
 	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmFunnelChart#getBallonText()
@@ -30,7 +28,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getBallonText()
 	{
-		return this.ballonText;
+		return getJso().getBallonText();
 	}
 
 	/* (non-Javadoc)
@@ -39,16 +37,16 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setBallonText( String ballonText )
 	{
-		this.ballonText = ballonText;
+		this.getJso().setBallonText(ballonText);
 	}
-
+	
 	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmFunnelChart#getBaseWidth()
 	 */
 	@Override
 	public String getBaseWidth()
 	{
-		return baseWidth;
+		return getJso().getBaseWidth();
 	}
 
 	/* (non-Javadoc)
@@ -57,7 +55,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setBaseWidth( String baseWidth )
 	{
-		this.baseWidth = baseWidth;
+		this.getJso().setBaseWidth(baseWidth);
 	}
 
 	/* (non-Javadoc)
@@ -66,7 +64,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getLabelPosition()
 	{
-		return labelPosition;
+		return getJso().getLabelPosition();
 	}
 
 	/* (non-Javadoc)
@@ -75,7 +73,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setLabelPosition( String labelPosition )
 	{
-		this.labelPosition = labelPosition;
+		this.getJso().setLabelPosition(labelPosition);
 	}
 
 	/* (non-Javadoc)
@@ -84,7 +82,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getNeckHeight()
 	{
-		return neckHeight;
+		return getJso().getNeckHeight();
 	}
 
 	/* (non-Javadoc)
@@ -93,7 +91,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setNeckHeight( String neckHeight )
 	{
-		this.neckHeight = neckHeight;
+		this.getJso().setNeckHeight(neckHeight);
 	}
 
 	/* (non-Javadoc)
@@ -102,7 +100,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getNeckWidth()
 	{
-		return neckWidth;
+		return getJso().getNeckWidth();
 	}
 
 	/* (non-Javadoc)
@@ -111,7 +109,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setNeckWidth( String neckWidth )
 	{
-		this.neckWidth = neckWidth;
+		this.getJso().setNeckWidth(neckWidth);
 	}
 
 	/* (non-Javadoc)
@@ -120,7 +118,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getPullDistance()
 	{
-		return pullDistance;
+		return getJso().getPullDistance();
 	}
 
 	/* (non-Javadoc)
@@ -129,7 +127,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setPullDistance( String pullDistance )
 	{
-		this.pullDistance = pullDistance;
+		this.getJso().setPullDistance(pullDistance);
 	}
 
 	/* (non-Javadoc)
@@ -138,7 +136,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public boolean isRotate()
 	{
-		return rotate;
+		return getJso().isRotate();
 	}
 
 	/* (non-Javadoc)
@@ -147,7 +145,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setRotate( boolean rotate )
 	{
-		this.rotate = rotate;
+		this.getJso().setRotate(rotate);
 	}
 
 	/* (non-Javadoc)
@@ -156,7 +154,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public double getStartX()
 	{
-		return startX;
+		return getJso().getStartX();
 	}
 
 	/* (non-Javadoc)
@@ -165,7 +163,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setStartX( double startX )
 	{
-		this.startX = startX;
+		this.getJso().setStartX(startX);
 	}
 
 	/* (non-Javadoc)
@@ -174,7 +172,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public double getStartY()
 	{
-		return startY;
+		return getJso().getStartY();
 	}
 
 	/* (non-Javadoc)
@@ -183,7 +181,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setStartY( double startY )
 	{
-		this.startY = startY;
+		this.getJso().setStartY(startY);
 	}
 
 	/* (non-Javadoc)
@@ -192,7 +190,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public String getValueRepresents()
 	{
-		return valueRepresents;
+		return getJso().getValueRepresents();
 	}
 
 	/* (non-Javadoc)
@@ -201,6 +199,6 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setValueRepresents( String valueRepresents )
 	{
-		this.valueRepresents = valueRepresents;
+		this.getJso().setValueRepresents(valueRepresents);
 	}
 }

@@ -20,7 +20,7 @@ public class ThreeDPieChart
 			public void onSuccess( String chartData )
 			{
 				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				simplePieChart( pieDataProvider );
+				drawChart( pieDataProvider );
 			}
 
 			@Override
@@ -31,7 +31,7 @@ public class ThreeDPieChart
 		} );
 	}
 
-	protected void simplePieChart( JavaScriptObject chartData )
+	protected void drawChart( JavaScriptObject chartData )
 	{
 		AmPieChart amPieChart = new AmPieChart();
 		amPieChart.setDataProvider( chartData );

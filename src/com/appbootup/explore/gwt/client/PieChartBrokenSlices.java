@@ -6,11 +6,11 @@ import com.amcharts.impl.Slice;
 import com.amcharts.impl.event.AmChartEvent;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.mouse.piechart.AmSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.ClickSliceHandler;
-import com.amcharts.impl.event.mouse.piechart.RightClickSliceEvent;
-import com.amcharts.impl.event.mouse.piechart.RightClickSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.AmSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -27,7 +27,7 @@ public class PieChartBrokenSlices
 			public void onSuccess( String chartData )
 			{
 				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				simplePieChart( pieDataProvider );
+				drawChart( pieDataProvider );
 			}
 
 			@Override
@@ -38,7 +38,7 @@ public class PieChartBrokenSlices
 		} );
 	}
 
-	protected void simplePieChart( JavaScriptObject chartData )
+	protected void drawChart( JavaScriptObject chartData )
 	{
 		final AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setDataProvider( chartData );
