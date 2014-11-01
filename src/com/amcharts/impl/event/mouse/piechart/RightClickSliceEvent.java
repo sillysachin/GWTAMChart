@@ -1,6 +1,5 @@
 package com.amcharts.impl.event.mouse.piechart;
 
-import com.amcharts.impl.event.AmChartEvent;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -8,9 +7,9 @@ import com.google.gwt.core.client.JavaScriptObject;
  * @author sachinsr
  * Dispatched when user clicks on a slice. Event is an instance of original mouse event.
  */
-public class RightClickSliceEvent extends AmChartEvent<RightClickSliceHandler>
+public class RightClickSliceEvent extends AmSliceEvent<RightClickSliceHandler>
 {
-	public static final String NAME = "clickSlice";
+	public static final String NAME = "rightClickSlice";
 
 	private static final Type<RightClickSliceHandler> TYPE = new Type<RightClickSliceHandler>();
 

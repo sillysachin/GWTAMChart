@@ -8,26 +8,6 @@ public class DataItem extends JavaScriptObject
 	{
 	}
 
-	public final native DataContext getDataContext()
-	/*-{
-		return this.dataContext;
-	}-*/;
-
-	public final native void setDataContext( DataContext dataContext )
-	/*-{
-		return this.dataContext = dataContext;
-	}-*/;
-
-	public final native double getAlpha()
-	/*-{
-		return alpha;
-	}-*/;
-
-	public final native void setAlpha( double alpha )
-	/*-{
-		this.alpha = alpha;
-	}-*/;
-
 	public final native double getBalloonX()
 	/*-{
 		return balloonX;
@@ -56,36 +36,6 @@ public class DataItem extends JavaScriptObject
 	public final native void setClassName( String className )
 	/*-{
 		this.className = className;
-	}-*/;
-
-	public final native String getColor()
-	/*-{
-		return color;
-	}-*/;
-
-	public final native void setColor( String color )
-	/*-{
-		this.color = color;
-	}-*/;
-
-	public final native String getDescription()
-	/*-{
-		return description;
-	}-*/;
-
-	public final native void setDescription( String description )
-	/*-{
-		this.description = description;
-	}-*/;
-
-	public final native boolean isHidden()
-	/*-{
-		return hidden;
-	}-*/;
-
-	public final native void setHidden( boolean hidden )
-	/*-{
-		this.hidden = hidden;
 	}-*/;
 
 	public final native int getIndex()
@@ -158,16 +108,6 @@ public class DataItem extends JavaScriptObject
 		this.pattern = pattern;
 	}-*/;
 
-	public final native double getPercents()
-	/*-{
-		return percents;
-	}-*/;
-
-	public final native void setPercents( double percents )
-	/*-{
-		this.percents = percents;
-	}-*/;
-
 	public final native double getPullX()
 	/*-{
 		return pullX;
@@ -186,16 +126,6 @@ public class DataItem extends JavaScriptObject
 	public final native void setPullY( double pullY )
 	/*-{
 		this.pullY = pullY;
-	}-*/;
-
-	public final native boolean isPulled()
-	/*-{
-		return pulled;
-	}-*/;
-
-	public final native void setPulled( boolean pulled )
-	/*-{
-		this.pulled = pulled;
 	}-*/;
 
 	public final native double getStartAngle()
@@ -246,45 +176,5 @@ public class DataItem extends JavaScriptObject
 	public final native void setSwitchable( boolean switchable )
 	/*-{
 		this.switchable = switchable;
-	}-*/;
-
-	public final native String getTitle()
-	/*-{
-		return title;
-	}-*/;
-
-	public final native void setTitle( String title )
-	/*-{
-		this.title = title;
-	}-*/;
-
-	public final native String getUrl()
-	/*-{
-		return url;
-	}-*/;
-
-	public final native void setUrl( String url )
-	/*-{
-		this.url = url;
-	}-*/;
-
-	public final native double getValue()
-	/*-{
-		return value;
-	}-*/;
-
-	public final native void setValue( double value )
-	/*-{
-		this.value = value;
-	}-*/;
-
-	public final native boolean isVisibleInLegend()
-	/*-{
-		return visibleInLegend;
-	}-*/;
-
-	public final native void setVisibleInLegend( boolean visibleInLegend )
-	/*-{
-		this.visibleInLegend = visibleInLegend;
 	}-*/;
 }

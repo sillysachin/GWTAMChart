@@ -1,13 +1,12 @@
 package com.amcharts.impl.event.mouse.piechart;
 
-import com.amcharts.impl.event.AmChartEvent;
 import com.google.gwt.core.client.JavaScriptObject;
 /**
  * 
  * @author sachinsr
  * Dispatched when user rolls-over the slice. Event is an instance of original mouse event.
  */
-public class RollOverSliceEvent extends AmChartEvent<RollOverSliceHandler>
+public class RollOverSliceEvent extends AmSliceEvent<RollOverSliceHandler>
 {
 	public static final String NAME = "rollOverSlice";
 

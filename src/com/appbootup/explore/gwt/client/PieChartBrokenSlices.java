@@ -2,10 +2,11 @@ package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
+import com.amcharts.impl.Slice;
 import com.amcharts.impl.event.AmChartEvent;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.DataItem;
+import com.amcharts.impl.event.mouse.piechart.AmSliceEvent;
 import com.amcharts.impl.event.mouse.piechart.ClickSliceEvent;
 import com.amcharts.impl.event.mouse.piechart.ClickSliceHandler;
 import com.amcharts.impl.event.mouse.piechart.RightClickSliceEvent;
@@ -53,13 +54,13 @@ public class PieChartBrokenSlices
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
 		amPieChart.setSize( "600px", "400px" );
-		amPieChart.addListener( ClickSliceEvent.getName(), new AmChartListener()
+		amPieChart.addClickSliceHandler( new ClickSliceHandler()
 		{
 			@Override
-			public void function( AmChartEvent< ? > event )
+			public void onClickSlice( ClickSliceEvent event )
 			{
 				Integer selected = null;
-				DataItem dataItem = event.getDataItem();
+				Slice dataItem = event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
@@ -73,23 +74,16 @@ public class PieChartBrokenSlices
 			@Override
 			public void onClickSlice( ClickSliceEvent event )
 			{
-				Integer selected = null;
-				DataItem dataItem = event.getDataItem();
-				DataContext dataContext = dataItem.getDataContext();
-				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
-				log( event );
-				amPieChart.setDataProvider( generateChartData( selected ) );
-				amPieChart.validateData();
 			}
 		} );
 		amPieChart.addListener( RightClickSliceEvent.getName(), new AmChartListener()
 		{
 			@Override
-			public void function( AmChartEvent<?> event )
+			public void function( AmChartEvent< ? > event )
 			{
 				Integer selected = null;
-				DataItem dataItem = event.getDataItem();
+				Slice dataItem = ( ( AmSliceEvent< ? > ) event ).getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
@@ -104,7 +98,7 @@ public class PieChartBrokenSlices
 			public void onRightClickSlice( RightClickSliceEvent event )
 			{
 				Integer selected = null;
-				DataItem dataItem = event.getDataItem();
+				Slice dataItem = event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
