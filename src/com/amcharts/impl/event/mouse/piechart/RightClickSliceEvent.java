@@ -10,7 +10,7 @@ import com.google.gwt.core.client.JavaScriptObject;
  */
 public class RightClickSliceEvent extends AmChartEvent<RightClickSliceHandler>
 {
-	public static final String NAME = "clickSlice";
+	public static final String NAME = "rightClickSlice";
 
 	private static final Type<RightClickSliceHandler> TYPE = new Type<RightClickSliceHandler>();
 
