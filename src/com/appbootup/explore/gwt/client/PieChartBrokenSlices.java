@@ -2,11 +2,14 @@ package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
+import com.amcharts.impl.event.AmChartEvent;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.event.DataItem;
-import com.amcharts.impl.event.mouse.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.RightClickSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.RightClickSliceHandler;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -53,7 +56,7 @@ public class PieChartBrokenSlices
 		amPieChart.addListener( ClickSliceEvent.getName(), new AmChartListener()
 		{
 			@Override
-			public void function( ClickSliceEvent event )
+			public void function( AmChartEvent< ? > event )
 			{
 				Integer selected = null;
 				DataItem dataItem = event.getDataItem();
@@ -80,10 +83,40 @@ public class PieChartBrokenSlices
 				amPieChart.validateData();
 			}
 		} );
+		amPieChart.addListener( RightClickSliceEvent.getName(), new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEvent<?> event )
+			{
+				Integer selected = null;
+				DataItem dataItem = event.getDataItem();
+				DataContext dataContext = dataItem.getDataContext();
+				selected = dataContext.getId();
+				GWT.log( event.getEvent().getClientX() + "" );
+				log( event );
+				amPieChart.setDataProvider( generateChartData( selected ) );
+				amPieChart.validateData();
+			}
+		} );
+		amPieChart.addRightClickSliceHandler( new RightClickSliceHandler()
+		{
+			@Override
+			public void onRightClickSlice( RightClickSliceEvent event )
+			{
+				Integer selected = null;
+				DataItem dataItem = event.getDataItem();
+				DataContext dataContext = dataItem.getDataContext();
+				selected = dataContext.getId();
+				GWT.log( event.getEvent().getClientX() + "" );
+				log( event );
+				amPieChart.setDataProvider( generateChartData( selected ) );
+				amPieChart.validateData();
+			}
+		} );
 		RootLayoutPanel.get().add( amPieChart );
 	}
 
-	private native void log( ClickSliceEvent event )
+	private native void log( AmChartEvent< ? > event )
 	/*-{
 		console.log(event);
 		//JSON.stringify(event, null, 4)

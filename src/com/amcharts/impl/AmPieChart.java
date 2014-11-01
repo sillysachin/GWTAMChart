@@ -2,20 +2,41 @@ package com.amcharts.impl;
 
 import com.amcharts.api.IsAmPieChart;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.mouse.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.ClickSliceHandler;
-import com.amcharts.impl.event.mouse.HasClickSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.AmPieChartEventUtils;
+import com.amcharts.impl.event.mouse.piechart.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.HasClickSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.HasPullInSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.HasPullOutSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.HasRightClickSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.HasRollOutSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.HasRollOverSliceHandlers;
+import com.amcharts.impl.event.mouse.piechart.PullInSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.PullInSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.PullOutSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.PullOutSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.RightClickSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.RightClickSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.RollOutSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.RollOutSliceHandler;
+import com.amcharts.impl.event.mouse.piechart.RollOverSliceEvent;
+import com.amcharts.impl.event.mouse.piechart.RollOverSliceHandler;
 import com.amcharts.jso.AmPieChartJSO;
-import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.Event;
 
-public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickSliceHandlers
+public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickSliceHandlers, HasRightClickSliceHandlers, HasRollOutSliceHandlers, HasRollOverSliceHandlers, HasPullInSliceHandlers, HasPullOutSliceHandlers
 {
 	public AmPieChart()
 	{
 		jso = createJso();
 		setType( "pie" );
+		initListener( ClickSliceEvent.getName() );
+		initListener( RightClickSliceEvent.getName() );
+		initListener( PullInSliceEvent.getName() );
+		initListener( PullOutSliceEvent.getName() );
+		initListener( RollOutSliceEvent.getName() );
+		initListener( RollOverSliceEvent.getName() );
 	}
 
 	public native AmPieChartJSO createJso()
@@ -205,6 +226,12 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickS
 		getJso().setStartRadius( startRadius );
 	}
 
+	public native void validateData()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.validateData();
+	}-*/;
+
 	public native void addTitle( String title )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
@@ -215,20 +242,29 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickS
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var amPieChartThis = this;
-
 		chart
 				.addListener(
 						eventName,
 						function(event) {
-							amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/mouse/ClickSliceEvent;)(event);
-							amPieChartThis.@com.amcharts.impl.AmPieChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
+							amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/AmChartEvent;)(event);
 						});
 	}-*/;
 
-	public native void validateData()
+	private void fireEvent( Event event )
+	{
+		super.fireEvent( AmPieChartEventUtils.createEvent( event ) );
+	}
+
+	private native void initListener( String eventName )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		chart.validateData();
+		var amPieChartThis = this;
+		chart
+				.addListener(
+						eventName,
+						function(event) {
+							amPieChartThis.@com.amcharts.impl.AmPieChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
+						});
 	}-*/;
 
 	@Override
@@ -237,9 +273,33 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickS
 		return addHandler( handler, ClickSliceEvent.getType() );
 	}
 
-	private void fireEvent( Event event )
+	@Override
+	public HandlerRegistration addPullOutSliceHandler( PullOutSliceHandler handler )
 	{
-		ClickSliceEvent clickSliceEvent = new ClickSliceEvent( event );
-		super.fireEvent( clickSliceEvent );
+		return addHandler( handler, PullOutSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addPullInSliceHandler( PullInSliceHandler handler )
+	{
+		return addHandler( handler, PullInSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRollOverSliceHandler( RollOverSliceHandler handler )
+	{
+		return addHandler( handler, RollOverSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRollOutSliceHandler( RollOutSliceHandler handler )
+	{
+		return addHandler( handler, RollOutSliceEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addRightClickSliceHandler( RightClickSliceHandler handler )
+	{
+		return addHandler( handler, RightClickSliceEvent.getType() );
 	}
 }

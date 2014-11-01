@@ -1,4 +1,4 @@
-package com.amcharts.impl.event.mouse;
+package com.amcharts.impl.event.mouse.piechart;
 
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.event.shared.HasHandlers;

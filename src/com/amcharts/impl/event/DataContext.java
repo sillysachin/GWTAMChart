@@ -1,31 +1,60 @@
 package com.amcharts.impl.event;
 
-import com.amcharts.jso.event.DataContextJSO;
-import com.google.gwt.core.client.IJavaScriptWrapper;
+import com.google.gwt.core.client.JavaScriptObject;
 
-public class DataContext implements IJavaScriptWrapper<DataContextJSO>
+public class DataContext extends JavaScriptObject
 {
-	private DataContextJSO jso;
-
-	public native Integer getId()
-	/*-{
-		return this.@com.amcharts.impl.event.DataContext::jso.id;
-	}-*/;
-
-	public native void setId( Integer id )
-	/*-{
-		this.@com.amcharts.impl.event.DataContext::jso.id = id;
-	}-*/;
-
-	@Override
-	public DataContextJSO getJso()
+	protected DataContext()
 	{
-		return jso;
 	}
 
-	@Override
-	public void setJso( DataContextJSO jso )
-	{
-		this.jso = jso;
-	}
+	public final native Integer getId()
+	/*-{
+		return this.id;
+	}-*/;
+
+	public final native void setId( Integer id )
+	/*-{
+		this.id = id;
+	}-*/;
+
+	public final native String getClassName()
+	/*-{
+		return className;
+	}-*/;
+
+	public final native void setClassName( String className )
+	/*-{
+		this.className = className;
+	}-*/;
+
+	public final native String getColor()
+	/*-{
+		return color;
+	}-*/;
+
+	public final native void setColor( String color )
+	/*-{
+		this.color = color;
+	}-*/;
+
+	public final native String getPercent()
+	/*-{
+		return percent;
+	}-*/;
+
+	public final native void setPercent( String percent )
+	/*-{
+		this.percent = percent;
+	}-*/;
+
+	public final native String getType()
+	/*-{
+		return type;
+	}-*/;
+
+	public final native void setType( String type )
+	/*-{
+		this.type = type;
+	}-*/;
 }

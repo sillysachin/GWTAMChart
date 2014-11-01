@@ -24,16 +24,14 @@ public abstract class AmChartEvent<H extends EventHandler> extends GwtEvent<H>
 	/*-{
 		this.dataItem.className = 'DataItem';
 		this.@com.amcharts.impl.event.AmChartEvent::event = this.event;
-		var dataItem = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dataItem)
-		return dataItem;
+		return this.dataItem;
 	}-*/;
 
 	public native DataItem extractDataItem( JavaScriptObject amChartEventJSO )
 	/*-{
 		amChartEventJSO.dataItem.className = 'DataItem';
 		this.@com.amcharts.impl.event.AmChartEvent::event = amChartEventJSO.event;
-		var dataItem = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(amChartEventJSO.dataItem)
-		return dataItem;
+		return amChartEventJSO.dataItem;
 	}-*/;
 
 	public DataItem getDataItem()
