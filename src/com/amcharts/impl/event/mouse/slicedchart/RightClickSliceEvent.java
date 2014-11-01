@@ -1,4 +1,4 @@
-package com.amcharts.impl.event.mouse.piechart;
+package com.amcharts.impl.event.mouse.slicedchart;
 
 import com.google.gwt.core.client.JavaScriptObject;
 

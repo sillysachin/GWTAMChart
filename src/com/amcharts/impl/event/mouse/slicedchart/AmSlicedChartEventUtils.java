@@ -1,9 +1,9 @@
-package com.amcharts.impl.event.mouse.piechart;
+package com.amcharts.impl.event.mouse.slicedchart;
 
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Event;
 
-public class AmPieChartEventUtils
+public class AmSlicedChartEventUtils
 {
 	public static GwtEvent< ? > createEvent( Event event )
 	{

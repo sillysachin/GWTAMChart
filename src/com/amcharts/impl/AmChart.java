@@ -5,14 +5,17 @@ import java.util.List;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
-import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsTitle;
+import com.amcharts.impl.event.AmChartEventUtils;
+import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Document;
+import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
 
@@ -508,4 +511,39 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	public native void setVersion( String version ) /*-{
 		return this.@com.amcharts.impl.AmChart::jso.version;
 	}-*/;
+
+	public native void addListener( String eventName, AmChartListener amChartListener )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amChartThis = this;
+		chart
+				.addListener(
+						eventName,
+						function(event) {
+							amChartThis.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/AmChartEvent;)(event);
+						});
+	}-*/;
+
+	protected native void initListener( String eventName )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amChartThis = this;
+		if (chart[eventName + 'Fl'] == undefined) {
+			console.log(chart[eventName + 'Fl']);
+			chart[eventName + 'Fl'] = true;
+			chart
+					.addListener(
+							eventName,
+							function(event) {
+								amChartThis.@com.amcharts.impl.AmChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
+							});
+		} else {
+			console.log(chart[eventName + 'Fl']);
+		}
+	}-*/;
+
+	protected void fireEvent( Event event )
+	{
+		super.fireEvent( AmChartEventUtils.createEvent( event ) );
+	}
 }
