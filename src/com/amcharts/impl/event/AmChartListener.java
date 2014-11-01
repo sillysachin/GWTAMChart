@@ -1,8 +1,8 @@
 package com.amcharts.impl.event;
 
-import com.amcharts.impl.event.mouse.AmPieChartClickSliceEvent;
+import com.amcharts.impl.event.mouse.ClickSliceEvent;
 
 public interface AmChartListener
 {
-	public void function( AmPieChartClickSliceEvent event );
+	public void function( ClickSliceEvent event );
 }

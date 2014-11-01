@@ -5,7 +5,8 @@ import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.event.DataItem;
-import com.amcharts.impl.event.mouse.AmPieChartClickSliceEvent;
+import com.amcharts.impl.event.mouse.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.ClickSliceHandler;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -49,21 +50,44 @@ public class PieChartBrokenSlices
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
 		amPieChart.setSize( "600px", "400px" );
-		amPieChart.addListener( AmPieChartClickSliceEvent.getType().getName(), new AmChartListener()
+		amPieChart.addListener( ClickSliceEvent.getName(), new AmChartListener()
 		{
 			@Override
-			public void function( AmPieChartClickSliceEvent event )
+			public void function( ClickSliceEvent event )
 			{
-				Integer selected = 1;
+				Integer selected = null;
 				DataItem dataItem = event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
+				GWT.log( event.getEvent().getClientX() + "" );
+				log( event );
+				amPieChart.setDataProvider( generateChartData( selected ) );
+				amPieChart.validateData();
+			}
+		} );
+		amPieChart.addClickSliceHandler( new ClickSliceHandler()
+		{
+			@Override
+			public void onClickSlice( ClickSliceEvent event )
+			{
+				Integer selected = null;
+				DataItem dataItem = event.getDataItem();
+				DataContext dataContext = dataItem.getDataContext();
+				selected = dataContext.getId();
+				GWT.log( event.getEvent().getClientX() + "" );
+				log( event );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
 		} );
 		RootLayoutPanel.get().add( amPieChart );
 	}
+
+	private native void log( ClickSliceEvent event )
+	/*-{
+		console.log(event);
+		//JSON.stringify(event, null, 4)
+	}-*/;
 
 	private native JavaScriptObject generateChartData( Integer selected )
 	/*-{

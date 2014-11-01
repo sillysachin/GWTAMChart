@@ -82,6 +82,9 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( DataContext.class ) ) )
 		{
 			wrapper = GWT.create( DataContext.class );
+		}else if ( className.equals( getSimpleName( DataContext.class ) ) )
+		{
+			wrapper = GWT.create( DataContext.class );
 		}
 
 		return wrapper;

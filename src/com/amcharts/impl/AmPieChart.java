@@ -2,9 +2,15 @@ package com.amcharts.impl;
 
 import com.amcharts.api.IsAmPieChart;
 import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.event.mouse.ClickSliceEvent;
+import com.amcharts.impl.event.mouse.ClickSliceHandler;
+import com.amcharts.impl.event.mouse.HasClickSliceHandlers;
 import com.amcharts.jso.AmPieChartJSO;
+import com.google.gwt.core.shared.GWT;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.Event;
 
-public class AmPieChart extends AmSlicedChart implements IsAmPieChart
+public class AmPieChart extends AmSlicedChart implements IsAmPieChart, HasClickSliceHandlers
 {
 	public AmPieChart()
 	{
@@ -201,23 +207,39 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 
 	public native void addTitle( String title )
 	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.addTitle(title);
 	}-*/;
 
 	public native void addListener( String eventName, AmChartListener amChartListener )
 	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		chart.addListener(eventName,
-			function(event) {
-				console.log(event);
-				amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/mouse/AmPieChartClickSliceEvent;)(event);
-			});
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amPieChartThis = this;
+
+		chart
+				.addListener(
+						eventName,
+						function(event) {
+							amChartListener.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/mouse/ClickSliceEvent;)(event);
+							amPieChartThis.@com.amcharts.impl.AmPieChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
+						});
 	}-*/;
 
 	public native void validateData()
 	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.validateData();
 	}-*/;
+
+	@Override
+	public HandlerRegistration addClickSliceHandler( ClickSliceHandler handler )
+	{
+		return addHandler( handler, ClickSliceEvent.getType() );
+	}
+
+	private void fireEvent( Event event )
+	{
+		ClickSliceEvent clickSliceEvent = new ClickSliceEvent( event );
+		super.fireEvent( clickSliceEvent );
+	}
 }
