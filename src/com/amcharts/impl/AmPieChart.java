@@ -21,38 +21,6 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart{
 		return ( AmPieChartJSO ) super.getJso();
 	}
 
-	public void setAngle( double angle )
-	{
-		getJso().setAngle( angle );
-	}
-
-	public double getAngle()
-	{
-		return getJso().getAngle();
-	}
-
-	@Override
-	public String getBalloonText()
-	{
-		return getJso().getBalloonText();
-	}
-
-	@Override
-	public void setBalloonText( String balloonText )
-	{
-		getJso().setBalloonText( balloonText );
-	}
-
-	public void setDepth3D( double depth3D )
-	{
-		getJso().setDepth3D( depth3D );
-	}
-
-	public double getDepth3D()
-	{
-		return getJso().getDepth3D();
-	}
-
 	@Override
 	public String getInnerRadius()
 	{

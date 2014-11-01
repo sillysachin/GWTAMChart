@@ -23,24 +23,6 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getBallonText()
-	 */
-	@Override
-	public String getBallonText()
-	{
-		return getJso().getBallonText();
-	}
-
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setBallonText(java.lang.String)
-	 */
-	@Override
-	public void setBallonText( String ballonText )
-	{
-		this.getJso().setBallonText(ballonText);
-	}
-	
-	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmFunnelChart#getBaseWidth()
 	 */
 	@Override
@@ -55,7 +37,25 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setBaseWidth( String baseWidth )
 	{
-		this.getJso().setBaseWidth(baseWidth);
+		this.getJso().setBaseWidth( baseWidth );
+	}
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#setFunnelAlpha(java.lang.String)
+	 */
+	@Override
+	public void setFunnelAlpha( double funnelAlpha )
+	{
+		this.getJso().setFunnelAlpha( funnelAlpha );
+	}
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#getFunnelAlpha()
+	 */
+	@Override
+	public double getFunnelAlpha()
+	{
+		return getJso().getFunnelAlpha();
 	}
 
 	/* (non-Javadoc)
@@ -73,7 +73,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setLabelPosition( String labelPosition )
 	{
-		this.getJso().setLabelPosition(labelPosition);
+		this.getJso().setLabelPosition( labelPosition );
 	}
 
 	/* (non-Javadoc)
@@ -91,7 +91,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setNeckHeight( String neckHeight )
 	{
-		this.getJso().setNeckHeight(neckHeight);
+		this.getJso().setNeckHeight( neckHeight );
 	}
 
 	/* (non-Javadoc)
@@ -109,7 +109,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setNeckWidth( String neckWidth )
 	{
-		this.getJso().setNeckWidth(neckWidth);
+		this.getJso().setNeckWidth( neckWidth );
 	}
 
 	/* (non-Javadoc)
@@ -127,7 +127,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setPullDistance( String pullDistance )
 	{
-		this.getJso().setPullDistance(pullDistance);
+		this.getJso().setPullDistance( pullDistance );
 	}
 
 	/* (non-Javadoc)
@@ -145,7 +145,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setRotate( boolean rotate )
 	{
-		this.getJso().setRotate(rotate);
+		this.getJso().setRotate( rotate );
 	}
 
 	/* (non-Javadoc)
@@ -163,7 +163,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setStartX( double startX )
 	{
-		this.getJso().setStartX(startX);
+		this.getJso().setStartX( startX );
 	}
 
 	/* (non-Javadoc)
@@ -181,7 +181,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setStartY( double startY )
 	{
-		this.getJso().setStartY(startY);
+		this.getJso().setStartY( startY );
 	}
 
 	/* (non-Javadoc)
@@ -199,6 +199,31 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	@Override
 	public void setValueRepresents( String valueRepresents )
 	{
-		this.getJso().setValueRepresents(valueRepresents);
+		this.getJso().setValueRepresents( valueRepresents );
 	}
+
+	public native void hide()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.hide();
+	}-*/;
+
+	public native void setBounds( double left, double top, double right, double bottom )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.setBounds(left, top, right, bottom);
+	}-*/;
+
+	public native void setPosition( double x, double y )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.setPosition(x, y);
+	}-*/;
+
+	public native void show( String value )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.show(value);
+	}-*/;
+
 }

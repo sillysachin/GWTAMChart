@@ -11,11 +11,11 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class PyramidChart
+public class ThreeDFunnelChart
 {
-	public PyramidChart()
+	public ThreeDFunnelChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/pyramidChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/threeDFunnelChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )
@@ -43,7 +43,11 @@ public class PyramidChart
 		amFunnelChart.setMarginRight( 240 );
 		amFunnelChart.setMarginLeft( 50 );
 		amFunnelChart.setStartX( -500 );
-		amFunnelChart.setRotate( true );
+		amFunnelChart.setDepth3D( 100 );
+		amFunnelChart.setAngle( 40 );
+		amFunnelChart.setOutlineAlpha( 1 );
+		amFunnelChart.setOutlineColor( "#FFFFFF" );
+		amFunnelChart.setOutlineThickness( 2 );
 		amFunnelChart.setLabelPosition( "right" );
 		AmBalloon balloon = new AmBalloon();
 		balloon.setFixedPosition( true );

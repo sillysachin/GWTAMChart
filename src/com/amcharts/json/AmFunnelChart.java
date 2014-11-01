@@ -4,9 +4,9 @@ import com.amcharts.api.IsAmFunnelChart;
 
 public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 {
-	private String ballonText;
-
 	private String baseWidth;
+
+	private double funnelAlpha;
 
 	private String labelPosition;
 
@@ -25,24 +25,6 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	private String valueRepresents;
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getBallonText()
-	 */
-	@Override
-	public String getBallonText()
-	{
-		return this.ballonText;
-	}
-
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setBallonText(java.lang.String)
-	 */
-	@Override
-	public void setBallonText( String ballonText )
-	{
-		this.ballonText = ballonText;
-	}
-
-	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmFunnelChart#getBaseWidth()
 	 */
 	@Override
@@ -58,6 +40,24 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	public void setBaseWidth( String baseWidth )
 	{
 		this.baseWidth = baseWidth;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#setFunnelAlpha(java.lang.String)
+	 */
+	@Override
+	public void setFunnelAlpha( double funnelAlpha )
+	{
+		this.funnelAlpha = funnelAlpha;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#getFunnelAlpha()
+	 */
+	@Override
+	public double getFunnelAlpha()
+	{
+		return this.funnelAlpha;
 	}
 
 	/* (non-Javadoc)

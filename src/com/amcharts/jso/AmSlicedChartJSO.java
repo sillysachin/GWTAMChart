@@ -12,6 +12,42 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}
 
 	@Override
+	public final native double getAngle()
+	/*-{
+		return this.angle;
+	}-*/;
+
+	@Override
+	public final native void setAngle( double angle )
+	/*-{
+		this.angle = angle;
+	}-*/;
+
+	@Override
+	public final native String getBalloonText()
+	/*-{
+		return this.balloonText;
+	}-*/;
+
+	@Override
+	public final native void setBalloonText( String balloonText )
+	/*-{
+		this.balloonText = balloonText;
+	}-*/;
+
+	@Override
+	public final native double getDepth3D()
+	/*-{
+		return this.depth3D;
+	}-*/;
+
+	@Override
+	public final native void setDepth3D( double depth3D )
+	/*-{
+		this.depth3D = depth3D;
+	}-*/;
+	
+	@Override
 	public final native double getAlpha()
 	/*-{
 		return this.alpha;

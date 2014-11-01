@@ -4,175 +4,187 @@ import java.util.List;
 
 public interface IsAmSlicedChart extends IsAmChart
 {
-	public abstract double getAlpha();
+	double getAngle();
 
-	public abstract void setAlpha( double alpha );
+	void setAngle( double angle );
 
-	public abstract String getAlphaField();
+	String getBalloonText();
 
-	public abstract void setAlphaField( String alphaField );
+	void setBalloonText( String balloonText );
 
-	public abstract String getBaseColor();
+	double getDepth3D();
 
-	public abstract void setBaseColor( String baseColor );
+	void setDepth3D( double depth3d );
+	
+	double getAlpha();
 
-	public abstract double getBrightnessStep();
+	void setAlpha( double alpha );
 
-	public abstract void setBrightnessStep( double brightnessStep );
+	String getAlphaField();
 
-	public abstract List<Object> getChartData();
+	void setAlphaField( String alphaField );
 
-	public abstract void setChartData( List<Object> chartData );
+	String getBaseColor();
 
-	public abstract String getColorField();
+	void setBaseColor( String baseColor );
 
-	public abstract void setColorField( String colorField );
+	double getBrightnessStep();
 
-	public abstract List<String> getColors();
+	void setBrightnessStep( double brightnessStep );
 
-	public abstract void setColors( List<String> colors );
+	List<Object> getChartData();
 
-	public abstract String getDescriptionField();
+	void setChartData( List<Object> chartData );
 
-	public abstract void setDescriptionField( String descriptionField );
+	String getColorField();
 
-	public abstract List<Float> getGradientRatio();
+	void setColorField( String colorField );
 
-	public abstract void setGradientRatio( List<Float> gradientRatio );
+	List<String> getColors();
 
-	public abstract double getGroupedAlpha();
+	void setColors( List<String> colors );
 
-	public abstract void setGroupedAlpha( double groupedAlpha );
+	String getDescriptionField();
 
-	public abstract String getGroupedColor();
+	void setDescriptionField( String descriptionField );
 
-	public abstract void setGroupedColor( String groupedColor );
+	List<Float> getGradientRatio();
 
-	public abstract String getGroupedDescription();
+	void setGradientRatio( List<Float> gradientRatio );
 
-	public abstract void setGroupedDescription( String groupedDescription );
+	double getGroupedAlpha();
 
-	public abstract Boolean getGroupedPulled();
+	void setGroupedAlpha( double groupedAlpha );
 
-	public abstract void setGroupedPulled( Boolean groupedPulled );
+	String getGroupedColor();
 
-	public abstract String getGroupedTitle();
+	void setGroupedColor( String groupedColor );
 
-	public abstract void setGroupedTitle( String groupedTitle );
+	String getGroupedDescription();
 
-	public abstract double getGroupPercent();
+	void setGroupedDescription( String groupedDescription );
 
-	public abstract void setGroupPercent( double groupPercent );
+	Boolean getGroupedPulled();
 
-	public abstract double getHideLabelsPercent();
+	void setGroupedPulled( Boolean groupedPulled );
 
-	public abstract void setHideLabelsPercent( double hideLabelsPercent );
+	String getGroupedTitle();
 
-	public abstract double getHoverAlpha();
+	void setGroupedTitle( String groupedTitle );
 
-	public abstract void setHoverAlpha( double hoverAlpha );
+	double getGroupPercent();
 
-	public abstract Object getLabelFunction();
+	void setGroupPercent( double groupPercent );
 
-	public abstract void setLabelFunction( Object labelFunction );
+	double getHideLabelsPercent();
 
-	public abstract Boolean getLabelsEnabled();
+	void setHideLabelsPercent( double hideLabelsPercent );
 
-	public abstract void setLabelsEnabled( Boolean labelsEnabled );
+	double getHoverAlpha();
 
-	public abstract double getLabelTickAlpha();
+	void setHoverAlpha( double hoverAlpha );
 
-	public abstract void setLabelTickAlpha( double labelTickAlpha );
+	Object getLabelFunction();
 
-	public abstract String getLabelTickColor();
+	void setLabelFunction( Object labelFunction );
 
-	public abstract void setLabelTickColor( String labelTickColor );
+	Boolean getLabelsEnabled();
 
-	public abstract double getMarginBottom();
+	void setLabelsEnabled( Boolean labelsEnabled );
 
-	public abstract void setMarginBottom( double marginBottom );
+	double getLabelTickAlpha();
 
-	public abstract double getMarginLeft();
+	void setLabelTickAlpha( double labelTickAlpha );
 
-	public abstract void setMarginLeft( double marginLeft );
+	String getLabelTickColor();
 
-	public abstract double getMarginRight();
+	void setLabelTickColor( String labelTickColor );
 
-	public abstract void setMarginRight( double marginRight );
+	double getMarginBottom();
 
-	public abstract double getMarginTop();
+	void setMarginBottom( double marginBottom );
 
-	public abstract void setMarginTop( double marginTop );
+	double getMarginLeft();
 
-	public abstract double getMaxLabelWidth();
+	void setMarginLeft( double marginLeft );
 
-	public abstract void setMaxLabelWidth( double maxLabelWidth );
+	double getMarginRight();
 
-	public abstract double getOutlineAlpha();
+	void setMarginRight( double marginRight );
 
-	public abstract void setOutlineAlpha( double outlineAlpha );
+	double getMarginTop();
 
-	public abstract String getOutlineColor();
+	void setMarginTop( double marginTop );
 
-	public abstract void setOutlineColor( String outlineColor );
+	double getMaxLabelWidth();
 
-	public abstract double getOutlineThickness();
+	void setMaxLabelWidth( double maxLabelWidth );
 
-	public abstract void setOutlineThickness( double outlineThickness );
+	double getOutlineAlpha();
 
-	public abstract String getPatternField();
+	void setOutlineAlpha( double outlineAlpha );
 
-	public abstract void setPatternField( String patternField );
+	String getOutlineColor();
 
-	public abstract String getPulledField();
+	void setOutlineColor( String outlineColor );
 
-	public abstract void setPulledField( String pulledField );
+	double getOutlineThickness();
 
-	public abstract Integer getPullOutDuration();
+	void setOutlineThickness( double outlineThickness );
 
-	public abstract void setPullOutDuration( Integer pullOutDuration );
+	String getPatternField();
 
-	public abstract String getPullOutEffect();
+	void setPatternField( String patternField );
 
-	public abstract void setPullOutEffect( String pullOutEffect );
+	String getPulledField();
 
-	public abstract Boolean getPullOutOnlyOne();
+	void setPulledField( String pulledField );
 
-	public abstract void setPullOutOnlyOne( Boolean pullOutOnlyOne );
+	Integer getPullOutDuration();
 
-	public abstract Boolean getSequencedAnimation();
+	void setPullOutDuration( Integer pullOutDuration );
 
-	public abstract void setSequencedAnimation( Boolean sequencedAnimation );
+	String getPullOutEffect();
 
-	public abstract double getStartAlpha();
+	void setPullOutEffect( String pullOutEffect );
 
-	public abstract void setStartAlpha( double startAlpha );
+	Boolean getPullOutOnlyOne();
 
-	public abstract Integer getStartDuration();
+	void setPullOutOnlyOne( Boolean pullOutOnlyOne );
 
-	public abstract void setStartDuration( Integer startDuration );
+	Boolean getSequencedAnimation();
 
-	public abstract String getStartEffect();
+	void setSequencedAnimation( Boolean sequencedAnimation );
 
-	public abstract void setStartEffect( String startEffect );
+	double getStartAlpha();
 
-	public abstract String getTitleField();
+	void setStartAlpha( double startAlpha );
 
-	public abstract void setTitleField( String titleField );
+	Integer getStartDuration();
 
-	public abstract String getUrlField();
+	void setStartDuration( Integer startDuration );
 
-	public abstract void setUrlField( String urlField );
+	String getStartEffect();
 
-	public abstract String getUrlTarget();
+	void setStartEffect( String startEffect );
 
-	public abstract void setUrlTarget( String urlTarget );
+	String getTitleField();
 
-	public abstract String getValueField();
+	void setTitleField( String titleField );
 
-	public abstract void setValueField( String valueField );
+	String getUrlField();
 
-	public abstract String getVisibleInLegendField();
+	void setUrlField( String urlField );
 
-	public abstract void setVisibleInLegendField( String visibleInLegendField );
+	String getUrlTarget();
+
+	void setUrlTarget( String urlTarget );
+
+	String getValueField();
+
+	void setValueField( String valueField );
+
+	String getVisibleInLegendField();
+
+	void setVisibleInLegendField( String visibleInLegendField );
 }

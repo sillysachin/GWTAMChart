@@ -11,11 +11,11 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class PyramidChart
+public class FunnelChart
 {
-	public PyramidChart()
+	public FunnelChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/pyramidChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/funnelChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )
@@ -36,28 +36,26 @@ public class PyramidChart
 	{
 		AmFunnelChart amFunnelChart = new AmFunnelChart();
 		amFunnelChart.setDataProvider( chartData );
-		amFunnelChart.setTheme( "none" );
-		amFunnelChart.setValueField( "value" );
+		amFunnelChart.setTheme( "patterns" );
 		amFunnelChart.setTitleField( "title" );
-		amFunnelChart.setSize( "600px", "400px" );
-		amFunnelChart.setMarginRight( 240 );
-		amFunnelChart.setMarginLeft( 50 );
-		amFunnelChart.setStartX( -500 );
-		amFunnelChart.setRotate( true );
+		amFunnelChart.setMarginRight( 160 );
+		amFunnelChart.setMarginLeft( 15 );
 		amFunnelChart.setLabelPosition( "right" );
+		amFunnelChart.setFunnelAlpha(0.9);
+		amFunnelChart.setValueField( "value" );
+		amFunnelChart.setSize( "600px", "400px" );
+		amFunnelChart.setStartX( 0 );
+		amFunnelChart.setNeckWidth( "30%" );
+		amFunnelChart.setStartAlpha( 0 );
+		amFunnelChart.setOutlineThickness( 1 );
+		amFunnelChart.setNeckHeight( "40%" );
+		amFunnelChart.setValueRepresents( "area" );
 		AmBalloon balloon = new AmBalloon();
 		balloon.setFixedPosition( true );
 		balloon.setColor( "#F0F0F0" );
 		balloon.setFillColor( "#0F0F0F" );
 		amFunnelChart.setBalloon( balloon );
-		amFunnelChart.setBalloonText( "[[title]]: [[value]]n[[description]]" );
-		ExportConfig exportConfig = new ExportConfig();
-		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
-		menuItem.setFormat( "png" );
-		exportConfig.addMenuItem( menuItem );
-		amFunnelChart.setExportConfig( exportConfig );
-		amFunnelChart.setGroupPercent( 5.0 );
+		amFunnelChart.setBalloonText( "[[title]]:<b>[[value]]</b>"  );
 		AmFunnelChartJSO jso = amFunnelChart.getJso();
 		GWT.log( "valueField - >" + jso.getValueField() );
 		GWT.log( "valueField - >" + amFunnelChart.getValueField() );

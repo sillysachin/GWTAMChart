@@ -2,18 +2,6 @@ package com.amcharts.api;
 
 public interface IsAmPieChart extends IsAmSlicedChart
 {
-	double getAngle();
-
-	void setAngle( double angle );
-
-	String getBalloonText();
-
-	void setBalloonText( String balloonText );
-
-	double getDepth3D();
-
-	void setDepth3D( double depth3d );
-
 	String getInnerRadius();
 
 	void setInnerRadius( String innerRadius );

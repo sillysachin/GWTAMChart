@@ -9,24 +9,6 @@ public class AmFunnelChartJSO extends AmSlicedChartJSO implements IsAmFunnelChar
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getBallonText()
-	 */
-	@Override
-	public native final String getBallonText()
-	/*-{
-		return this.ballonText;
-	}-*/;
-
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setBallonText(java.lang.String)
-	 */
-	@Override
-	public native final void setBallonText( String ballonText )
-	/*-{
-		this.ballonText = ballonText;
-	}-*/;
-
-	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsAmFunnelChart#getBaseWidth()
 	 */
 	@Override
@@ -42,6 +24,24 @@ public class AmFunnelChartJSO extends AmSlicedChartJSO implements IsAmFunnelChar
 	public native final void setBaseWidth( String baseWidth )
 	/*-{
 		this.baseWidth = baseWidth;
+	}-*/;
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#setFunnelAlpha(java.lang.String)
+	 */
+	@Override
+	public native final void setFunnelAlpha( double funnelAlpha )
+	/*-{
+		this.funnelAlpha = funnelAlpha;
+	}-*/;
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.json.IsAmFunnelChart#getFunnelAlpha()
+	 */
+	@Override
+	public native final double getFunnelAlpha()
+	/*-{
+		return this.funnelAlpha;
 	}-*/;
 
 	/* (non-Javadoc)

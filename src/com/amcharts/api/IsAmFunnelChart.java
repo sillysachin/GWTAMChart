@@ -1,14 +1,14 @@
 package com.amcharts.api;
 
-public interface IsAmFunnelChart
+public interface IsAmFunnelChart extends IsAmSlicedChart
 {
-	String getBallonText();
-
-	void setBallonText( String ballonText );
-
 	String getBaseWidth();
 
 	void setBaseWidth( String baseWidth );
+
+	void setFunnelAlpha( double funnelAlpha );
+
+	double getFunnelAlpha();
 
 	String getLabelPosition();
 

@@ -55,7 +55,9 @@ public class GWTAMChart implements EntryPoint
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
 		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
 		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
-		PyramidChart pyramidChart = new PyramidChart();
+		// PyramidChart pyramidChart = new PyramidChart();
+		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
+		FunnelChart funnelChart = new FunnelChart();
 	}
 
 	private void pieChartByJSNI()

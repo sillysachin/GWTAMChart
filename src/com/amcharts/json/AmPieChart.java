@@ -4,12 +4,6 @@ import com.amcharts.api.IsAmPieChart;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
-	private double angle;
-
-	private String balloonText;
-
-	private double depth3D;
-
 	private String innerRadius;
 
 	private double labelRadius;
@@ -34,41 +28,6 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 
 	private String startRadius;
 
-	@Override
-	public double getAngle()
-	{
-		return angle;
-	}
-
-	@Override
-	public void setAngle( double angle )
-	{
-		this.angle = angle;
-	}
-
-	@Override
-	public String getBalloonText()
-	{
-		return balloonText;
-	}
-
-	@Override
-	public void setBalloonText( String balloonText )
-	{
-		this.balloonText = balloonText;
-	}
-
-	@Override
-	public double getDepth3D()
-	{
-		return depth3D;
-	}
-
-	@Override
-	public void setDepth3D( double depth3D )
-	{
-		this.depth3D = depth3D;
-	}
 
 	@Override
 	public String getInnerRadius()
