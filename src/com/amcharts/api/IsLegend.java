@@ -2,7 +2,6 @@ package com.amcharts.api;
 
 public interface IsLegend
 {
-
 	public abstract String getMarkerType();
 
 	public abstract void setMarkerType( String markerType );

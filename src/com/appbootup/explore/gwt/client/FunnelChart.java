@@ -2,8 +2,6 @@ package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.AmBalloon;
 import com.amcharts.impl.AmFunnelChart;
-import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmFunnelChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -20,8 +18,8 @@ public class FunnelChart
 			@Override
 			public void onSuccess( String chartData )
 			{
-				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( pieDataProvider );
+				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
+				drawChart( dataProvider );
 			}
 
 			@Override

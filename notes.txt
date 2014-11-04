@@ -1,0 +1,10 @@
+JSNI
+    JSO -> 
+			extends JavaScriptObject,
+          	no instance variables 
+          	constructor needs to be protected,
+          	nothing i.e no code inside the constructor,
+          	return should use this.
+    JSO -> Without use of WrapperUtils an inner jso gets created for each of the extended JSO objects
+
+JSNI -> troubles with Generic when invoking code from JSNI code blocks.

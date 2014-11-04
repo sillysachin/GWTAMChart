@@ -11,15 +11,28 @@ import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.event.AmChartEventUtils;
 import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.event.chart.DataUpdatedEvent;
+import com.amcharts.impl.event.chart.DataUpdatedHandler;
+import com.amcharts.impl.event.chart.DrawEvent;
+import com.amcharts.impl.event.chart.DrawHandler;
+import com.amcharts.impl.event.chart.HasDataUpdatedHandlers;
+import com.amcharts.impl.event.chart.HasDrawHandlers;
+import com.amcharts.impl.event.chart.HasInitHandlers;
+import com.amcharts.impl.event.chart.HasRenderedHandlers;
+import com.amcharts.impl.event.chart.InitEvent;
+import com.amcharts.impl.event.chart.InitHandler;
+import com.amcharts.impl.event.chart.RenderedEvent;
+import com.amcharts.impl.event.chart.RenderedHandler;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Document;
+import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
 
-public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
+public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
 {
 	protected AmChartJSO jso;
 
@@ -57,18 +70,6 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		return id;
 	}
 
-	public native AmChartJSO makeChart( String containerId, JavaScriptObject configJSO )
-	/*-{
-		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(containerId);
-		return $wnd.AmCharts.makeChart(containerId, configJSO);
-	}-*/;
-
-	public native JavaScriptObject makeChart( JavaScriptObject configJSO )
-	/*-{
-		var containerId = this.@com.amcharts.impl.AmChart::getId();
-		return $wnd.AmCharts.makeChart(containerId, configJSO);
-	}-*/;
-
 	@Override
 	public AmChartJSO getJso()
 	{
@@ -87,47 +88,6 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		String id = getId();
 		write( id );
 	}
-
-	public native void write( String containerId )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		chart.write(containerId);
-	}-*/;
-
-	public native void addGraph( AmGraph amGraph )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph)
-		chart.addGraph(graph);
-	}-*/;
-
-	public native void addValueAxis( ValueAxis valueAxis )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(valueAxis)
-		chart.addValueAxis(valueAxis);
-	}-*/;
-
-	public native void addChartCursor( ChartCursor chartCursor )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartCursor)
-		chart.addChartCursor(chartCursor);
-	}-*/;
-
-	public native void addChartScrollbar( ChartScrollbar chartScrollbar )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var chartScrollbar = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartScrollbar)
-		chart.addChartScrollbar(chartScrollbar);
-	}-*/;
-
-	public native void addTrendLine( TrendLine trendLine )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
-		chart.addTrendLine(trendLine);
-	}-*/;
 
 	// TODO:Need to provide a better alternative than JavaScriptObject dataProvider.
 	public native void setDataProvider( JavaScriptObject dataProvider )
@@ -514,16 +474,125 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		return this.@com.amcharts.impl.AmChart::jso.version;
 	}-*/;
 
-	public native void validateData()
+	public native void addLabel( String x, String y, String text, String align, double size, String color, double rotation, double alpha, boolean bold, String url )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		chart.validateData();
+		chart.addLabel(x, y, text, align, size, color, rotation, alpha, bold,
+				url);
+	}-*/;
+
+	public native void addLegend( IsLegend legend, String legendDivID )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var varAmLegend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(legend)
+		chart.addLegend(varAmLegend, legendDivID);
 	}-*/;
 
 	public native void addTitle( String title )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.addTitle(title);
+	}-*/;
+
+	public native void clear()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.clear();
+	}-*/;
+
+	public native void clearLabels()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.clearLabels();
+	}-*/;
+
+	public native void invalidateSize()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.invalidateSize();
+	}-*/;
+
+	public native void makeChart( String container, JavaScriptObject config, double delay )
+	/*-{
+		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(container);
+		return $wnd.AmCharts.makeChart(container, configJSO, delay);
+	}-*/;
+
+	public native AmChartJSO makeChart( String container, JavaScriptObject configJSO )
+	/*-{
+		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(container);
+		return $wnd.AmCharts.makeChart(container, configJSO);
+	}-*/;
+
+	public native JavaScriptObject makeChart( JavaScriptObject configJSO )
+	/*-{
+		var container = this.@com.amcharts.impl.AmChart::getId();
+		return $wnd.AmCharts.makeChart(container, configJSO);
+	}-*/;
+
+	public native void removeLegend()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.removeLegend();
+	}-*/;
+
+	public native void removeListener( JavaScriptObject chart, String type, JavaScriptObject handler )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.removeListener(chart, type, handler);
+	}-*/;
+
+	public native void validateData()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.validateData();
+	}-*/;
+
+	public native void validateNow()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.validateNow();
+	}-*/;
+
+	public native void write( String container )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.write(container);
+	}-*/;
+
+	public native void addGraph( AmGraph amGraph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph)
+		chart.addGraph(graph);
+	}-*/;
+
+	public native void addValueAxis( ValueAxis valueAxis )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(valueAxis)
+		chart.addValueAxis(valueAxis);
+	}-*/;
+
+	public native void addChartCursor( ChartCursor chartCursor )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartCursor)
+		chart.addChartCursor(chartCursor);
+	}-*/;
+
+	public native void addChartScrollbar( ChartScrollbar chartScrollbar )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var chartScrollbar = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartScrollbar)
+		chart.addChartScrollbar(chartScrollbar);
+	}-*/;
+
+	public native void addTrendLine( TrendLine trendLine )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
+		chart.addTrendLine(trendLine);
 	}-*/;
 
 	public native void addListener( String eventName, AmChartListener amChartListener )
@@ -559,5 +628,33 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	protected void fireEvent( Event event )
 	{
 		super.fireEvent( AmChartEventUtils.createEvent( event ) );
+	}
+
+	@Override
+	public HandlerRegistration addRenderedHandler( RenderedHandler handler )
+	{
+		initListener( RenderedEvent.getName() );
+		return addHandler( handler, RenderedEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addInitHandler( InitHandler handler )
+	{
+		initListener( InitEvent.getName() );
+		return addHandler( handler, InitEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addDrawHandler( DrawHandler handler )
+	{
+		initListener( DrawEvent.getName() );
+		return addHandler( handler, DrawEvent.getType() );
+	}
+
+	@Override
+	public HandlerRegistration addDataUpdatedHandler( DataUpdatedHandler handler )
+	{
+		initListener( DataUpdatedEvent.getName() );
+		return addHandler( handler, DataUpdatedEvent.getType() );
 	}
 }

@@ -65,8 +65,8 @@ public class GWTAMChart implements EntryPoint
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setSize( "600px", "400px" );
-		JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( pieData );
-		amPieChart.setDataProvider( pieDataProvider );
+		JavaScriptObject dataProvider = JsonUtils.unsafeEval( pieData );
+		amPieChart.setDataProvider( dataProvider );
 		amPieChart.setValueField( "value" );
 		amPieChart.setTitleField( "title" );
 		GWT.log( "Render to -> " + amPieChart.getId() );

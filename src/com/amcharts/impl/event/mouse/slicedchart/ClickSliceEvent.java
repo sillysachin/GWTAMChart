@@ -4,7 +4,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 /**
  * 
  * @author sachinsr
- * Dispatched when user right-clicks the slice. Event is an instance of original mouse event.
+ * Dispatched when user clicks on a slice. Event is an instance of original mouse event.
  */
 public class ClickSliceEvent extends AmSliceEvent<ClickSliceHandler>
 {

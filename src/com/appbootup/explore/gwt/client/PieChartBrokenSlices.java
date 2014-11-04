@@ -26,8 +26,8 @@ public class PieChartBrokenSlices
 			@Override
 			public void onSuccess( String chartData )
 			{
-				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( pieDataProvider );
+				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
+				drawChart( dataProvider );
 			}
 
 			@Override

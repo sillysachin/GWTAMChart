@@ -1,8 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.AmPieChart;
-import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -19,8 +17,8 @@ public class DonutChart
 			@Override
 			public void onSuccess( String chartData )
 			{
-				JavaScriptObject pieDataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( pieDataProvider );
+				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
+				drawChart( dataProvider );
 			}
 
 			@Override
