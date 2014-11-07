@@ -3,12 +3,12 @@ package com.amcharts.api;
 public interface IsValueAxis
 {
 
-	public abstract IsTitle getTitle();
+	public abstract String getTitle();
 
-	public abstract void setTitle( IsTitle title );
+	public abstract void setTitle( String title );
 
-	public abstract AxisPosition getPosition();
+	public abstract String getPosition();
 
-	public abstract void setPosition( AxisPosition position );
+	public abstract void setPosition( String position );
 
 }

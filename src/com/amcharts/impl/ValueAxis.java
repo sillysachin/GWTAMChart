@@ -1,7 +1,5 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.AxisPosition;
-import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -32,22 +30,22 @@ public class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapp
 	}-*/;
 
 	@Override
-	public native IsTitle getTitle() /*-{
+	public native String getTitle() /*-{
 		return this.@com.amcharts.impl.ValueAxis::jso.title;
 	}-*/;
 
 	@Override
-	public native void setTitle( IsTitle title ) /*-{
+	public native void setTitle( String title ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.title = title;
 	}-*/;
 
 	@Override
-	public native AxisPosition getPosition() /*-{
+	public native String getPosition() /*-{
 		return this.@com.amcharts.impl.ValueAxis::jso.position;
 	}-*/;
 
 	@Override
-	public native void setPosition( AxisPosition position ) /*-{
+	public native void setPosition( String position ) /*-{
 		this.@com.amcharts.impl.ValueAxis::jso.position = position;
 	}-*/;
 

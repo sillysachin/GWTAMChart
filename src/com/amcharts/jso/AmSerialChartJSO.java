@@ -5,7 +5,7 @@ import java.util.Date;
 import com.amcharts.api.IsAmSerialChart;
 import com.amcharts.api.IsCategoryAxis;
 
-public class AmSerialChartJSO extends AmChartJSO implements IsAmSerialChart
+public class AmSerialChartJSO extends AmRectangularChartJSO implements IsAmSerialChart
 {
 	protected AmSerialChartJSO()
 	{

@@ -1,52 +1,50 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.AxisPosition;
 import com.amcharts.api.IsCategoryAxis;
-import com.amcharts.api.IsTitle;
+import com.amcharts.jso.CategoryAxisJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
-import com.google.gwt.core.client.JavaScriptObject;
 
-public class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper
+public class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper<CategoryAxisJSO>
 {
-	protected JavaScriptObject jso;
+	protected CategoryAxisJSO jso;
 
 	public CategoryAxis()
 	{
 	}
 
-	public JavaScriptObject getJso()
+	public CategoryAxisJSO getJso()
 	{
 		return jso;
 	}
 
-	public void setJso( JavaScriptObject jso )
+	public void setJso( CategoryAxisJSO jso )
 	{
 		this.jso = jso;
 	}
 
-	public native JavaScriptObject createJso()
+	public native CategoryAxisJSO createJso()
 	/*-{
 		var categoryAxis = new $wnd.AmCharts.CategoryAxis();
 		return categoryAxis;
 	}-*/;
 
 	@Override
-	public native IsTitle getTitle() /*-{
+	public native String getTitle() /*-{
 		return this.@com.amcharts.impl.CategoryAxis::jso.title;
 	}-*/;
 
 	@Override
-	public native void setTitle( IsTitle title ) /*-{
+	public native void setTitle( String title ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.title = title;
 	}-*/;
 
 	@Override
-	public native AxisPosition getPosition() /*-{
+	public native String getPosition() /*-{
 		return this.@com.amcharts.impl.CategoryAxis::jso.position;
 	}-*/;
 
 	@Override
-	public native void setPosition( AxisPosition position ) /*-{
+	public native void setPosition( String position ) /*-{
 		this.@com.amcharts.impl.CategoryAxis::jso.position = position;
 	}-*/;
 
@@ -123,13 +121,15 @@ public class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScrip
 		this.@com.amcharts.impl.CategoryAxis::jso.gridCount = gridCount;
 	}-*/;
 
-	public native String getGridPosition() /*-{
-		return this.@com.amcharts.impl.CategoryAxis::jso.gridPosition;
-	}-*/;
+	public String getGridPosition()
+	{
+		return getJso().getGridPosition();
+	}
 
-	public native void setGridPosition( String gridPosition ) /*-{
-		this.@com.amcharts.impl.CategoryAxis::jso.gridPosition = gridPosition;
-	}-*/;
+	public void setGridPosition( String gridPosition )
+	{
+		getJso().setGridPosition( gridPosition );
+	};
 
 	public native float getLabelRotation() /*-{
 		return this.@com.amcharts.impl.CategoryAxis::jso.labelRotation;

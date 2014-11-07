@@ -94,4 +94,12 @@ public class AmGraph implements IJavaScriptWrapper
 	public native void setFillAlphas( double fillAlphas )/*-{
 		this.@com.amcharts.impl.AmGraph::jso.fillAlphas = fillAlphas;
 	}-*/;
+
+	public native void setColorField( String colorField )/*-{
+		this.@com.amcharts.impl.AmGraph::jso.colorField = colorField;
+	}-*/;
+
+	public native void setLineAlpha( double lineAlpha )/*-{
+		this.@com.amcharts.impl.AmGraph::jso.lineAlpha = lineAlpha;
+	}-*/;
 }

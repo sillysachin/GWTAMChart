@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCoordinateChart;
+import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.AmRectangularChart;
@@ -139,6 +140,10 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( ExportConfig.class ) ) )
 		{
 			wrapper = GWT.create( ExportConfig.class );
+		}
+		else if ( className.equals( getSimpleName( AmExport.class ) ) )
+		{
+			wrapper = GWT.create( AmExport.class );
 		}
 		else if ( className.equals( getSimpleName( MenuItems.class ) ) )
 		{

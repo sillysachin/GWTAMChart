@@ -2,11 +2,15 @@ package com.amcharts.api;
 
 public interface IsCategoryAxis
 {
-	public abstract IsTitle getTitle();
+	String getTitle();
 
-	public abstract void setTitle( IsTitle title );
+	void setTitle( String title );
 
-	public abstract AxisPosition getPosition();
+	String getPosition();
 
-	public abstract void setPosition( AxisPosition position );
+	void setPosition( String position );
+
+	String getGridPosition();
+
+	void setGridPosition( String gridPosition );
 }

@@ -1,35 +1,34 @@
 package com.amcharts.json;
 
 import com.amcharts.api.AxisPosition;
-import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
 
 public class ValueAxis implements IsValueAxis
 {
-	private IsTitle title;
+	private String title;
 
-	private AxisPosition position = AxisPosition.left;
+	private String position = AxisPosition.LEFT.toString().toLowerCase();
 
 	@Override
-	public IsTitle getTitle()
+	public String getTitle()
 	{
 		return title;
 	}
 
 	@Override
-	public void setTitle( IsTitle title )
+	public void setTitle( String title )
 	{
 		this.title = title;
 	}
 
 	@Override
-	public AxisPosition getPosition()
+	public String getPosition()
 	{
 		return position;
 	}
 
 	@Override
-	public void setPosition( AxisPosition position )
+	public void setPosition( String position )
 	{
 		this.position = position;
 	}

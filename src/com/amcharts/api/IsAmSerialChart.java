@@ -2,7 +2,7 @@ package com.amcharts.api;
 
 import java.util.Date;
 
-public interface IsAmSerialChart
+public interface IsAmSerialChart extends IsAmCoordinateChart
 {
 	double getAngle();
 
