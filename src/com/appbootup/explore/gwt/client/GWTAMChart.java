@@ -38,7 +38,8 @@ public class GWTAMChart implements EntryPoint
 
 	private static final String JSON_URL = GWT.getModuleBaseURL() + "json/amchart?q=";
 
-	final static ChartServiceAsync chartService = GWT.create( ChartService.class );
+	final static ChartServiceAsync chartService = GWT
+			.create( ChartService.class );
 
 	/**
 	 * This is the entry point method.
@@ -57,7 +58,8 @@ public class GWTAMChart implements EntryPoint
 		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
 		// PyramidChart pyramidChart = new PyramidChart();
 		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
-		FunnelChart funnelChart = new FunnelChart();
+		// FunnelChart funnelChart = new FunnelChart();
+		ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
 	}
 
 	private void pieChartByJSNI()
@@ -77,7 +79,8 @@ public class GWTAMChart implements EntryPoint
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setSize( "600px", "400px" );
-		JavaScriptObject serialDataProvider = JsonUtils.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
+		JavaScriptObject serialDataProvider = JsonUtils
+				.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );
 		amSerialChart.setCategoryField( "country" );
 		amSerialChart.setAngle( 30.0 );
@@ -127,14 +130,16 @@ public class GWTAMChart implements EntryPoint
 					if ( 200 == response.getStatusCode() )
 					{
 						String text = response.getText();
-						AmChartJSO amChartJSO = JsonUtils.<AmChartJSO> safeEval( text );
+						AmChartJSO amChartJSO = JsonUtils
+								.<AmChartJSO> safeEval( text );
 						GWT.log( "amChartJSO -> " + amChartJSO.getType() );
 						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text );
 						RootLayoutPanel.get().add( amChartPanel );
 					}
 					else
 					{
-						GWT.log( "Couldn't retrieve JSON (" + response.getStatusText() + ")" );
+						GWT.log( "Couldn't retrieve JSON (" + response
+								.getStatusText() + ")" );
 					}
 				}
 			} );
@@ -148,20 +153,21 @@ public class GWTAMChart implements EntryPoint
 	private void lineWithTrendLineChartByJSNI()
 	{
 
-		chartService.getLineWithTrendLineChartData( "/data/lineWithTrendLines.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				lineWithTrendLines( chartData );
-			}
+		chartService
+				.getLineWithTrendLineChartData( "/data/lineWithTrendLines.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						lineWithTrendLines( chartData );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	private void lineWithTrendLines( String chartData )

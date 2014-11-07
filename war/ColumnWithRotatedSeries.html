@@ -1,0 +1,142 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.plugin.addimage.js" ></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "none",
+     "pathToImages":"http://www.amcharts.com/lib/3/images/",
+    "dataProvider": [{
+        "country": "USA",
+        "visits": 3025,
+        "color": "#FF0F00"
+    }, {
+        "country": "China",
+        "visits": 1882,
+        "color": "#FF6600"
+    }, {
+        "country": "Japan",
+        "visits": 1809,
+        "color": "#FF9E01"
+    }, {
+        "country": "Germany",
+        "visits": 1322,
+        "color": "#FCD202"
+    }, {
+        "country": "UK",
+        "visits": 1122,
+        "color": "#F8FF01"
+    }, {
+        "country": "France",
+        "visits": 1114,
+        "color": "#B0DE09"
+    }, {
+        "country": "India",
+        "visits": 984,
+        "color": "#04D215"
+    }, {
+        "country": "Spain",
+        "visits": 711,
+        "color": "#0D8ECF"
+    }, {
+        "country": "Netherlands",
+        "visits": 665,
+        "color": "#0D52D1"
+    }, {
+        "country": "Russia",
+        "visits": 580,
+        "color": "#2A0CD0"
+    }, {
+        "country": "South Korea",
+        "visits": 443,
+        "color": "#8A0CCF"
+    }, {
+        "country": "Canada",
+        "visits": 441,
+        "color": "#CD0D74"
+    }],
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "position": "left",
+        "title": "Visitors from country"
+    }],
+    "startDuration": 1,
+    "graphs": [{
+        "balloonText": "<b>[[category]]: [[value]]</b>",
+        "colorField": "color",
+        "fillAlphas": 0.9,
+        "lineAlpha": 0.2,
+        "type": "column",
+        "valueField": "visits"
+    }],
+    "chartCursor": {
+        "categoryBalloonEnabled": false,
+        "cursorAlpha": 0,
+        "zoomable": false
+    },
+    "categoryField": "country",
+    "categoryAxis": {
+        "gridPosition": "start",
+        "labelRotation": 45
+    },
+    "amExport":{}
+     
+});
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width:100%;height:500px"></div>
+</body>
+</html>
