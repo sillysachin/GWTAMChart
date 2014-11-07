@@ -1,7 +1,8 @@
 package com.amcharts.api.gen;
 
 import static javax.lang.model.element.Modifier.FINAL;
-import static javax.lang.model.element.Modifier.PRIVATE;
+import static javax.lang.model.element.Modifier.NATIVE;
+import static javax.lang.model.element.Modifier.PROTECTED;
 import static javax.lang.model.element.Modifier.PUBLIC;
 
 import java.io.File;
@@ -13,9 +14,9 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.squareup.javawriter.JavaWriter;
+import com.squareup.javawriter.GWTJSNIJavaWriter;
 
-public class JSONWriter
+public class JSOWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
 	{ "ChartCursor" } );
@@ -31,20 +32,19 @@ public class JSONWriter
 	private static void jsonWriter( String input ) throws IOException
 	{
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
-		FileWriter fileWriter = new FileWriter( new File( input + "JSON" + ".java" ) );
-		JavaWriter jsoWriter = null;
+		FileWriter fileWriter = new FileWriter( new File( input + "JSO" + ".java" ) );
+		GWTJSNIJavaWriter jsoWriter = null;
 		try
 		{
-			jsoWriter = new JavaWriter( fileWriter );
+			jsoWriter = new GWTJSNIJavaWriter( fileWriter );
+			jsoWriter.setCompressingTypes( true );
 			jsoWriter
-					.emitPackage( "com.amcharts.json" )
-					.beginType( input + "JSON", "class", EnumSet.of( PUBLIC, FINAL ) );
-			for ( JavaClassAttribute jca : jcaItems )
-			{
-				jsoWriter
-						.emitField( jca.getJavaType(), jca.getFieldName(), EnumSet
-								.of( PRIVATE ) );
-			}
+					.emitPackage( "com.amcharts.impl" )
+					.emitImports( "com.amcharts.api.*" )
+					.emitImports( "com.google.gwt.core.client" )
+					.beginType( input + "JSO", "class", EnumSet.of( PUBLIC, FINAL ), "JavaScriptObject" )
+					.beginConstructor( EnumSet.of( PROTECTED ) )
+					.endConstructor();
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
@@ -52,27 +52,27 @@ public class JSONWriter
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC ) )
+							.beginJSNIMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
 							.emitStatement( "return " + jca.getFieldName() )
-							.endMethod();
+							.endJSNIMethod();
 				}
 				else
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC ) )
+							.beginJSNIMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
 							.emitStatement( "return " + jca.getFieldName() )
-							.endMethod();
+							.endJSNIMethod();
 				}
 				jsoWriter
 						.emitJavadoc( jca.getJavadocComment() )
-						.beginMethod( "void", "set" + StringUtils.capitalize( jca
-								.getFieldName() ), EnumSet.of( PUBLIC ), jca.getJavaType(), jca
-								.getFieldName() )
+						.beginJSNIMethod( "void", "set" + StringUtils.capitalize( jca
+								.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ), jca
+								.getJavaType(), jca.getFieldName() )
 						.emitStatement( "this." + jca.getFieldName() + "=" + jca.getFieldName() )
-						.endMethod();
+						.endJSNIMethod();
 			}
 			jsoWriter.endType();
 		}
