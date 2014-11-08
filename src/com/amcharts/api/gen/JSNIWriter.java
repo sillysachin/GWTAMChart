@@ -20,7 +20,7 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 public class JSNIWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph" } );
+	{ "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -35,7 +35,7 @@ public class JSNIWriter
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
 		FileWriter fileWriter = new FileWriter( new File( input + ".java" ) );
 		GWTJSNIJavaWriter jsoWriter = null;
-		int counter = 0;
+		String fieldName = null;
 
 		try
 		{
@@ -62,14 +62,14 @@ public class JSNIWriter
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
-				counter++;
+				fieldName = jca.getFieldName();
 				if ( jca.getJavaType().equals( "boolean" ) )
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
 							.beginJSNIMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
 									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
-							.emitStatement( "return this.@com.amcharts.impl.AmChart::jso." + jca.getFieldName() )
+							.emitStatement( "return this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() )
 							.endJSNIMethod();
 				}
 				else
@@ -78,7 +78,7 @@ public class JSNIWriter
 							.emitJavadoc( jca.getJavadocComment() )
 							.beginJSNIMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
 									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
-							.emitStatement( "return this.@com.amcharts.impl.AmChart::jso." + jca.getFieldName() )
+							.emitStatement( "return this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() )
 							.endJSNIMethod();
 				}
 				jsoWriter
@@ -86,14 +86,14 @@ public class JSNIWriter
 						.beginJSNIMethod( "void", "set" + StringUtils.capitalize( jca
 								.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ), jca
 								.getJavaType(), jca.getFieldName() )
-						.emitStatement( "this.@com.amcharts.impl.AmChart::jso." + jca.getFieldName() + "=" + jca.getFieldName() )
+						.emitStatement( "this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() + "=" + jca.getFieldName() )
 						.endJSNIMethod();
 			}
 			jsoWriter.endType();
 		}
 		catch ( Exception exception )
 		{
-			System.out.println( "Failed at " + counter );
+			System.out.println( "Failed at " + fieldName + " for " + input );
 		}
 		finally
 		{

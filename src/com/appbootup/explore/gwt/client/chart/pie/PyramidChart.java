@@ -1,10 +1,11 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmBalloon;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmFunnelChartJSO;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -15,7 +16,7 @@ public class PyramidChart
 {
 	public PyramidChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/pyramidChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getData( "/data/pyramidChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )
@@ -39,7 +40,7 @@ public class PyramidChart
 		amFunnelChart.setTheme( "none" );
 		amFunnelChart.setValueField( "value" );
 		amFunnelChart.setTitleField( "title" );
-		amFunnelChart.setSize( "600px", "400px" );
+		amFunnelChart.setSize( "1240px", "500px" );
 		amFunnelChart.setMarginRight( 240 );
 		amFunnelChart.setMarginLeft( 50 );
 		amFunnelChart.setStartX( -500 );

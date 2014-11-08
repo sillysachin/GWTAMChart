@@ -28,16 +28,6 @@ public class AmSerialChart extends AmRectangularChart
 		return chart;
 	}-*/;
 
-	public void setAngle( double angle )
-	{
-		getJso().setAngle( angle );
-	}
-
-	public double getAngle()
-	{
-		return getJso().getAngle();
-	}
-
 	public native String getBalloonDateFormat() /*-{
 		return this.@com.amcharts.impl.AmSerialChart::getJso()
 				.getBalloonDateFormat();
@@ -48,21 +38,12 @@ public class AmSerialChart extends AmRectangularChart
 				balloonDateFormat);
 	}-*/;
 
-	public native void setDepth3D( double depth3D )
-	/*-{
-		this.@com.amcharts.impl.AmSerialChart::getJso().setDepth3D(depth3D);
-	}-*/;
-
-	public native double getDepth3D()
-	/*-{
-		return this.@com.amcharts.impl.AmSerialChart::getJso().getDepth3D();
-	}-*/;
-
 	public CategoryAxis getCategoryAxis()
 	{
 		return categoryAxis;
 	};
 
+	// TODO: deviating from usual approach of nested entities.
 	//	public native CategoryAxis getCategoryAxis()
 	//	/*-{
 	//		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.categoryAxis)

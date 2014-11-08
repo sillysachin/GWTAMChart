@@ -140,9 +140,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setPulledField( String pulledField );
 
-	Integer getPullOutDuration();
+	double getPullOutDuration();
 
-	void setPullOutDuration( Integer pullOutDuration );
+	void setPullOutDuration( double pullOutDuration );
 
 	String getPullOutEffect();
 
@@ -160,9 +160,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setStartAlpha( double startAlpha );
 
-	Integer getStartDuration();
+	double getStartDuration();
 
-	void setStartDuration( Integer startDuration );
+	void setStartDuration( double startDuration );
 
 	String getStartEffect();
 

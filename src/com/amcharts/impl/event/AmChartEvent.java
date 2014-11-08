@@ -1,46 +1,56 @@
 package com.amcharts.impl.event;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.event.shared.EventHandler;
-import com.google.gwt.event.shared.GwtEvent;
-import com.google.gwt.user.client.Event;
+import com.amcharts.impl.AmChart;
+import com.google.web.bindery.event.shared.Event;
 
-public abstract class AmChartEvent<H extends EventHandler> extends GwtEvent<H>
+public abstract class AmChartEvent<H extends AmChartHandler> extends Event<H>
 {
-	private Event event;
+	private AmChart chart;
+
+	private AmChartEventJSO jso;
 
 	public AmChartEvent()
 	{
 	}
 
-	public AmChartEvent( JavaScriptObject amChartEventJSO )
+	public AmChartEvent( AmChartEventJSO amChartEventJSO )
 	{
-		this.setEvent( extractEvent( amChartEventJSO ) );
+		this.setChart( extractChart( amChartEventJSO ) );
 	}
 
-	public Event getEvent()
+	public AmChart getChart()
 	{
-		if ( event == null )
+		if ( chart == null )
 		{
-			event = extractEvent();
+			chart = extractChart();
 		}
-		return event;
+		return chart;
 	}
 
-	public void setEvent( Event event )
+	public void setChart( AmChart chart )
 	{
-		this.event = event;
+		this.chart = chart;
 	}
 
-	public native Event extractEvent()
+	public native AmChart extractChart()
 	/*-{
-		this.@com.amcharts.impl.event.AmChartEvent::event = this.event;
-		return this.event;
+		this.@com.amcharts.impl.event.AmChartEvent::chart = this.chart;
+		return this.chart;
 	}-*/;
 
-	public native Event extractEvent( JavaScriptObject amChartEventJSO )
+	public native AmChart extractChart( AmChartEventJSO amChartEventJSO )
 	/*-{
-		this.@com.amcharts.impl.event.AmChartEvent::event = amChartEventJSO.event;
-		return amChartEventJSO.event;
+		this.@com.amcharts.impl.event.AmChartEvent::chart = amChartEventJSO.chart;
+		return amChartEventJSO.chart;
 	}-*/;
+
+	public String getEventType()
+	{
+		return getJso().getType();
+	}
+
+	private AmChartEventJSO getJso()
+	{
+		return jso;
+	}
 }

@@ -1,7 +1,7 @@
 package com.amcharts.impl.event.chart;
 
-import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.event.shared.HasHandlers;
+import com.google.web.bindery.event.shared.HandlerRegistration;
 
 /**
  * A widget that implements this interface provides registration for

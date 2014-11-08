@@ -9,5 +9,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath( "chart" )
 public interface ChartService extends RemoteService
 {
-	String getLineWithTrendLineChartData( String name ) throws IllegalArgumentException;
+	String getData( String name ) throws IllegalArgumentException;
 }

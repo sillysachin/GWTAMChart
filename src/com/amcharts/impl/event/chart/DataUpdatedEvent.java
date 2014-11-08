@@ -1,7 +1,9 @@
 package com.amcharts.impl.event.chart;
 
 import com.amcharts.impl.event.AmChartEvent;
-import com.google.gwt.core.client.JavaScriptObject;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.google.web.bindery.event.shared.EventBus;
+import com.google.web.bindery.event.shared.HandlerRegistration;
 
 /**
  * 
@@ -23,7 +25,7 @@ public class DataUpdatedEvent extends AmChartEvent<DataUpdatedHandler>
 	{
 	}
 
-	public DataUpdatedEvent( JavaScriptObject amChartEventJSO )
+	public DataUpdatedEvent( AmChartEventJSO amChartEventJSO )
 	{
 		super( amChartEventJSO );
 	}
@@ -43,5 +45,10 @@ public class DataUpdatedEvent extends AmChartEvent<DataUpdatedHandler>
 	public static String getName()
 	{
 		return NAME;
+	}
+
+	public static HandlerRegistration addHandler( EventBus eventBus, DataUpdatedHandler handler )
+	{
+		return eventBus.addHandler( TYPE, handler );
 	}
 }

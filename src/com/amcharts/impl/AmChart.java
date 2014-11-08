@@ -10,6 +10,7 @@ import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsTitle;
+import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartEventUtils;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.chart.DataUpdatedEvent;
@@ -28,10 +29,9 @@ import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Document;
-import com.google.gwt.event.shared.HandlerRegistration;
-import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.web.bindery.event.shared.HandlerRegistration;
 
 public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
 {
@@ -335,12 +335,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Integer getHideBalloonTime() /*-{
+	public native double getHideBalloonTime() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public native void setHideBalloonTime( Integer hideBalloonTime ) /*-{
+	public native void setHideBalloonTime( double hideBalloonTime ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.hideBalloonTime = hideBalloonTime;
 	}-*/;
 
@@ -599,58 +599,69 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 				.addListener(
 						eventName,
 						function(event) {
-							amChartThis.@com.amcharts.impl.event.AmChartListener::function(Lcom/amcharts/impl/event/AmChartEvent;)(event);
+							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
+							amChartThis.@com.amcharts.impl.AmChart::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
+							if (event.event != undefined) {
+								console.log('Non Dom Event - > ' + event.type);
+							}
 						});
 	}-*/;
+
+	public void handleListener( AmChartListener amChartListener, AmChartEventJSO event )
+	{
+		amChartListener.function( event );
+	}
 
 	protected native void initListener( String eventName )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var amChartThis = this;
 		if (chart[eventName + 'Fl'] == undefined) {
-			console.log(chart[eventName + 'Fl']);
 			chart[eventName + 'Fl'] = true;
 			chart
 					.addListener(
 							eventName,
 							function(event) {
-								amChartThis.@com.amcharts.impl.AmChart::fireEvent(Lcom/google/gwt/user/client/Event;)(event);
+								amChartThis.@com.amcharts.impl.AmChart::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
 							});
+			console.log('initialized -> ' + eventName + ' : '
+					+ chart[eventName + 'Fl']);
 		} else {
-			console.log(chart[eventName + 'Fl']);
+			console.log('skip initialized -> ' + eventName + ' : '
+					+ chart[eventName + 'Fl']);
 		}
 	}-*/;
 
-	protected void fireEvent( Event event )
+	protected void fireEvent( AmChartEventJSO event )
 	{
-		super.fireEvent( AmChartEventUtils.createEvent( event ) );
+		AmCharts.EVENT_BUS.fireEvent( AmChartEventUtils.createEvent( event ) );
 	}
 
 	@Override
 	public HandlerRegistration addRenderedHandler( RenderedHandler handler )
 	{
 		initListener( RenderedEvent.getName() );
-		return addHandler( handler, RenderedEvent.getType() );
+		return RenderedEvent.addHandler( AmCharts.EVENT_BUS, handler );
 	}
 
 	@Override
 	public HandlerRegistration addInitHandler( InitHandler handler )
 	{
 		initListener( InitEvent.getName() );
-		return addHandler( handler, InitEvent.getType() );
+		return InitEvent.addHandler( AmCharts.EVENT_BUS, handler );
 	}
 
 	@Override
 	public HandlerRegistration addDrawHandler( DrawHandler handler )
 	{
 		initListener( DrawEvent.getName() );
-		return addHandler( handler, DrawEvent.getType() );
+		return DrawEvent.addHandler( AmCharts.EVENT_BUS, handler );
 	}
 
 	@Override
 	public HandlerRegistration addDataUpdatedHandler( DataUpdatedHandler handler )
 	{
 		initListener( DataUpdatedEvent.getName() );
-		return addHandler( handler, DataUpdatedEvent.getType() );
+		return DataUpdatedEvent.addHandler( AmCharts.EVENT_BUS, handler );
 	}
 }

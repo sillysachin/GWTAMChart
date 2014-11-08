@@ -73,9 +73,9 @@ public interface IsAmChart
 
 	void setHandDrawThickness( double handDrawThickness );
 
-	Integer getHideBalloonTime();
+	double getHideBalloonTime();
 
-	void setHideBalloonTime( Integer hideBalloonTime );
+	void setHideBalloonTime( double hideBalloonTime );
 
 	String getLanguage();
 

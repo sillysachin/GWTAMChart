@@ -1,11 +1,11 @@
 package com.amcharts.impl.event.mouse.slicedchart;
 
 import com.amcharts.impl.Slice;
-import com.amcharts.impl.event.AmChartEvent;
+import com.amcharts.impl.event.AmChartDomEvent;
+import com.amcharts.impl.event.AmChartHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.event.shared.EventHandler;
 
-public abstract class AmSliceEvent<H extends EventHandler> extends AmChartEvent<H>
+public abstract class AmSliceEvent<H extends AmChartHandler> extends AmChartDomEvent<H>
 {
 	private Slice dataItem;
 
@@ -15,7 +15,7 @@ public abstract class AmSliceEvent<H extends EventHandler> extends AmChartEvent<
 
 	public AmSliceEvent( JavaScriptObject amChartEventJSO )
 	{
-		super(amChartEventJSO);
+		super( amChartEventJSO );
 		this.setDataItem( extractDataItem( amChartEventJSO ) );
 	}
 

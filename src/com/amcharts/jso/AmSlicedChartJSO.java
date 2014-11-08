@@ -420,13 +420,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native Integer getPullOutDuration()
+	public final native double getPullOutDuration()
 	/*-{
 		return this.pullOutDuration;
 	}-*/;
 
 	@Override
-	public final native void setPullOutDuration( Integer pullOutDuration )
+	public final native void setPullOutDuration( double pullOutDuration )
 	/*-{
 		this.pullOutDuration = pullOutDuration;
 	}-*/;
@@ -480,13 +480,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native Integer getStartDuration()
+	public final native double getStartDuration()
 	/*-{
 		return this.startDuration;
 	}-*/;
 
 	@Override
-	public final native void setStartDuration( Integer startDuration )
+	public final native void setStartDuration( double startDuration )
 	/*-{
 		this.startDuration = startDuration;
 	}-*/;

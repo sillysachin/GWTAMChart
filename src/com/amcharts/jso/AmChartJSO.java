@@ -5,9 +5,9 @@ import java.util.List;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
-import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -222,13 +222,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Integer getHideBalloonTime()
+	public final native double getHideBalloonTime()
 	/*-{
 		return this.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public final native void setHideBalloonTime( Integer hideBalloonTime )
+	public final native void setHideBalloonTime( double hideBalloonTime )
 	/*-{
 		this.hideBalloonTime = hideBalloonTime;
 	}-*/;

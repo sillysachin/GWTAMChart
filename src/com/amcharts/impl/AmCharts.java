@@ -1,7 +1,10 @@
 package com.amcharts.impl;
 
+import com.google.web.bindery.event.shared.SimpleEventBus;
+
 public class AmCharts
 {
+	static final SimpleEventBus EVENT_BUS = new SimpleEventBus();
 
 	public AmCharts()
 	{

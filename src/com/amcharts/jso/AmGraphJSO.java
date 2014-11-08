@@ -1410,4 +1410,9 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	public final native void setYField( String yField ) /*-{
 		this.yField = yField;
 	}-*/;
+
+	public final native void setUseLineColorForBulletBorder( boolean useLineColorForBulletBorder )
+	/*-{
+		this.useLineColorForBulletBorder = useLineColorForBulletBorder;
+	}-*/;
 }

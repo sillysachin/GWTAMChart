@@ -1,5 +1,6 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.column;
 
+import com.amcharts.api.IsChartCursor;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmGraph;
@@ -7,6 +8,7 @@ import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ValueAxis;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -18,7 +20,7 @@ public class ColumnWithRotatedSeries
 	public ColumnWithRotatedSeries()
 	{
 		GWTAMChart.chartService
-				.getLineWithTrendLineChartData( "/data/columnWithRotatedSeries.json", new AsyncCallback<String>()
+				.getData( "/data/columnWithRotatedSeries.json", new AsyncCallback<String>()
 				{
 					@Override
 					public void onSuccess( String chartData )
@@ -60,7 +62,7 @@ public class ColumnWithRotatedSeries
 		amGraph.setValueField( "visits" );
 		amSerialChart.addGraph( amGraph );
 
-		ChartCursor chartCursor = new ChartCursor();
+		IsChartCursor chartCursor = new ChartCursor();
 		chartCursor.setCategoryBalloonEnabled( false );
 		chartCursor.setCursorAlpha( 0 );
 		chartCursor.setZoomable( false );
@@ -74,7 +76,7 @@ public class ColumnWithRotatedSeries
 		categoryAxis.setLabelRotation( 45 );
 
 		amSerialChart.setAmExport( new AmExport() );
-		amSerialChart.setSize( "600px", "400px" );
+		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );
 	}
 }

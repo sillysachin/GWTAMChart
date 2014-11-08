@@ -2,7 +2,7 @@ package com.amcharts.api;
 
 public interface IsAmCoordinateChart extends IsAmChart
 {
-	public Integer getStartDuration();
+	public double getStartDuration();
 
-	public void setStartDuration( Integer startDuration );
+	public void setStartDuration( double startDuration );
 }

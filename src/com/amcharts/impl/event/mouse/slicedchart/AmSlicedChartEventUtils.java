@@ -1,11 +1,11 @@
 package com.amcharts.impl.event.mouse.slicedchart;
 
+import com.amcharts.impl.event.AmChartEventJSO;
 import com.google.gwt.event.shared.GwtEvent;
-import com.google.gwt.user.client.Event;
 
 public class AmSlicedChartEventUtils
 {
-	public static GwtEvent< ? > createEvent( Event event )
+	public static GwtEvent< ? > createEvent( AmChartEventJSO event )
 	{
 		GwtEvent< ? > sliceEvent = null;
 		String type = event.getType();

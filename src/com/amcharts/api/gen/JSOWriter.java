@@ -18,8 +18,9 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 
 public class JSOWriter
 {
-	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph" } );
+	static List<String> inputs = Arrays
+			.asList( new String[]
+			{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -34,6 +35,7 @@ public class JSOWriter
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
 		FileWriter fileWriter = new FileWriter( new File( input + "JSO" + ".java" ) );
 		GWTJSNIJavaWriter jsoWriter = null;
+		String fieldName = null;
 		try
 		{
 			jsoWriter = new GWTJSNIJavaWriter( fileWriter );
@@ -48,6 +50,7 @@ public class JSOWriter
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
+				fieldName = jca.getFieldName();
 				if ( jca.getJavaType().equals( "boolean" ) )
 				{
 					jsoWriter
@@ -75,6 +78,10 @@ public class JSOWriter
 						.endJSNIMethod();
 			}
 			jsoWriter.endType();
+		}
+		catch ( Exception exception )
+		{
+			System.out.println( "Failed at " + fieldName + " for " + input );
 		}
 		finally
 		{

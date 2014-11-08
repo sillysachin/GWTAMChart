@@ -1,0 +1,139 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+	var chart = AmCharts.makeChart("chartdiv", {
+		"type" : "serial",
+		"theme" : "none",
+		"dataProvider" : [ {
+			"country" : "USA",
+			"visits" : 2025
+		}, {
+			"country" : "China",
+			"visits" : 1882
+		}, {
+			"country" : "Japan",
+			"visits" : 1809
+		}, {
+			"country" : "Germany",
+			"visits" : 1322
+		}, {
+			"country" : "UK",
+			"visits" : 1122
+		}, {
+			"country" : "France",
+			"visits" : 1114
+		}, {
+			"country" : "India",
+			"visits" : 984
+		}, {
+			"country" : "Spain",
+			"visits" : 711
+		}, {
+			"country" : "Netherlands",
+			"visits" : 665
+		}, {
+			"country" : "Russia",
+			"visits" : 580
+		}, {
+			"country" : "South Korea",
+			"visits" : 443
+		}, {
+			"country" : "Canada",
+			"visits" : 441
+		}, {
+			"country" : "Brazil",
+			"visits" : 395
+		} ],
+		"valueAxes" : [ {
+			"gridColor" : "#FFFFFF",
+			"gridAlpha" : 0.2,
+			"dashLength" : 0
+		} ],
+		"startDuration" : 1,
+		"graphs" : [ {
+			"balloonText" : "[[category]]: <b>[[value]]</b>",
+			"fillAlphas" : 0.8,
+			"lineAlpha" : 0.2,
+			"type" : "column",
+			"valueField" : "visits"
+		} ],
+		"chartCursor" : {
+			"categoryBalloonEnabled" : false,
+			"cursorAlpha" : 0,
+			"zoomable" : false
+		},
+		"categoryField" : "country",
+		"categoryAxis" : {
+			"gridPosition" : "start",
+			"gridAlpha" : 0,
+			"tickPosition" : "start",
+			"tickLength" : 20
+		},
+		"exportConfig" : {
+			"menuTop" : 0,
+			"menuItems" : [ {
+				"icon" : '/js/amcharts/images/export.png',
+				"format" : 'png'
+			} ]
+		}
+	});
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 1240px; height: 500px"></div>
+</body>
+</html>

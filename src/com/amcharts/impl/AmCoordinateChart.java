@@ -12,14 +12,19 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	}
 
 	@Override
-	public Integer getStartDuration()
+	public double getStartDuration()
 	{
 		return getJso().getStartDuration();
 	}
 
 	@Override
-	public void setStartDuration( Integer startDuration )
+	public void setStartDuration( double startDuration )
 	{
 		getJso().setStartDuration( startDuration );
+	}
+	
+	public void setGridAboveGraphs( boolean gridAboveGraphs )
+	{
+		getJso().setGridAboveGraphs( gridAboveGraphs );
 	}
 }

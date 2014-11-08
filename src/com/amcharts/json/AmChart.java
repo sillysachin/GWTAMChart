@@ -6,10 +6,10 @@ import java.util.List;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
-import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
 
@@ -49,7 +49,7 @@ public class AmChart implements IsAmChart
 
 	private double handDrawThickness;
 
-	private Integer hideBalloonTime;
+	private double hideBalloonTime;
 
 	private String language;
 
@@ -289,13 +289,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Integer getHideBalloonTime()
+	public double getHideBalloonTime()
 	{
 		return hideBalloonTime;
 	}
 
 	@Override
-	public void setHideBalloonTime( Integer hideBalloonTime )
+	public void setHideBalloonTime( double hideBalloonTime )
 	{
 		this.hideBalloonTime = hideBalloonTime;
 	}

@@ -11,18 +11,6 @@ public class AmSerialChartJSO extends AmRectangularChartJSO implements IsAmSeria
 	{
 	}
 
-	@Override
-	public final native double getAngle()
-	/*-{
-		return this.angle;
-	}-*/;
-
-	@Override
-	public final native void setAngle( double angle )
-	/*-{
-		this.angle = angle;
-	}-*/;
-
 	/*
 	 * (non-Javadoc)
 	 * 

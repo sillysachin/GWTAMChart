@@ -3,6 +3,7 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.mouse.slicedchart.AmSlicedChartEventUtils;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
@@ -25,7 +26,6 @@ import com.amcharts.impl.event.mouse.slicedchart.RollOverSliceHandler;
 import com.amcharts.jso.AmSlicedChartJSO;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
-import com.google.gwt.user.client.Event;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickSliceHandlers, HasRightClickSliceHandlers, HasRollOutSliceHandlers, HasRollOverSliceHandlers, HasPullInSliceHandlers, HasPullOutSliceHandlers
 {
@@ -443,13 +443,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public Integer getPullOutDuration()
+	public double getPullOutDuration()
 	{
 		return getJso().getPullOutDuration();
 	}
 
 	@Override
-	public void setPullOutDuration( Integer pullOutDuration )
+	public void setPullOutDuration( double pullOutDuration )
 	{
 		getJso().setPullOutDuration( pullOutDuration );
 	}
@@ -504,13 +504,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public Integer getStartDuration()
+	public double getStartDuration()
 	{
 		return getJso().getStartDuration();
 	}
 
 	@Override
-	public void setStartDuration( Integer startDuration )
+	public void setStartDuration( double startDuration )
 	{
 		getJso().setStartDuration( startDuration );
 	}
@@ -605,8 +605,9 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 		initListener( RollOutSliceEvent.getName() );
 		return addHandler( handler, RollOutSliceEvent.getType() );
 	}
-
-	protected void fireEvent( Event event )
+	
+	@Override
+	protected void fireEvent( AmChartEventJSO event )
 	{
 		GwtEvent< ? > createEvent = AmSlicedChartEventUtils.createEvent( event );
 		if ( createEvent == null )

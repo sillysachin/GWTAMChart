@@ -1,6 +1,5 @@
 package com.google.gwt.core.client;
 
-import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * All classes that intend to expose the JavaScriptObject via wrapping should implement this interface.

@@ -4,16 +4,16 @@ import com.amcharts.api.IsAmCoordinateChart;
 
 public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 {
-	int startDuration;
+	double startDuration;
 
 	@Override
-	public Integer getStartDuration()
+	public double getStartDuration()
 	{
 		return startDuration;
 	}
 
 	@Override
-	public void setStartDuration( Integer startDuration )
+	public void setStartDuration( double startDuration )
 	{
 		this.startDuration = startDuration;
 	}

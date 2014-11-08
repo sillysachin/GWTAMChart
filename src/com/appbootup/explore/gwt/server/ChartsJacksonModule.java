@@ -1,7 +1,7 @@
 package com.appbootup.explore.gwt.server;
 
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.core.Version;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 public class ChartsJacksonModule extends SimpleModule
 {

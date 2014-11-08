@@ -1,16 +1,17 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.Slice;
-import com.amcharts.impl.event.AmChartEvent;
+import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.mouse.slicedchart.AmSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
 import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
+import com.amcharts.impl.util.LogUtils;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -21,21 +22,23 @@ public class PieChartBrokenSlices
 {
 	public PieChartBrokenSlices()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/pieChartBrokenSlices.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( dataProvider );
-			}
+		GWTAMChart.chartService
+				.getData( "/data/pieChartBrokenSlices.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						JavaScriptObject dataProvider = JsonUtils
+								.unsafeEval( chartData );
+						drawChart( dataProvider );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	protected void drawChart( JavaScriptObject chartData )
@@ -53,7 +56,7 @@ public class PieChartBrokenSlices
 
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
-		amPieChart.setSize( "600px", "400px" );
+		amPieChart.setSize( "1240px", "500px" );
 		amPieChart.addClickSliceHandler( new ClickSliceHandler()
 		{
 			@Override
@@ -63,8 +66,9 @@ public class PieChartBrokenSlices
 				Slice dataItem = event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
-				GWT.log( event.getEvent().getClientX() + "" );
-				log( event );
+				GWT.log( "first ClickSliceHandler - > " + event.getEvent()
+						.getClientX() + "" );
+				LogUtils.log( event );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
@@ -74,24 +78,27 @@ public class PieChartBrokenSlices
 			@Override
 			public void onClickSlice( ClickSliceEvent event )
 			{
-				GWT.log( event.getEvent().getClientX() + "" );
+				GWT.log( "second ClickSliceHandler - > " + event.getEvent()
+						.getClientX() + "" );
 			}
 		} );
-		amPieChart.addListener( RightClickSliceEvent.getName(), new AmChartListener()
-		{
-			@Override
-			public void function( AmChartEvent< ? > event )
-			{
-				Integer selected = null;
-				Slice dataItem = ( ( AmSliceEvent< ? > ) event ).getDataItem();
-				DataContext dataContext = dataItem.getDataContext();
-				selected = dataContext.getId();
-				GWT.log( event.getEvent().getClientX() + "" );
-				log( event );
-				amPieChart.setDataProvider( generateChartData( selected ) );
-				amPieChart.validateData();
-			}
-		} );
+		amPieChart
+				.addListener( RightClickSliceEvent.getName(), new AmChartListener()
+				{
+					@Override
+					public void function( AmChartEventJSO event )
+					{
+						Integer selected = null;
+						Slice dataItem = ( Slice ) event.getDataItem();
+						DataContext dataContext = dataItem.getDataContext();
+						selected = dataContext.getId();
+						GWT.log( event.getEvent().getClientX() + "" );
+						LogUtils.log( event );
+						amPieChart
+								.setDataProvider( generateChartData( selected ) );
+						amPieChart.validateData();
+					}
+				} );
 		amPieChart.addRightClickSliceHandler( new RightClickSliceHandler()
 		{
 			@Override
@@ -102,19 +109,13 @@ public class PieChartBrokenSlices
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
-				log( event );
+				LogUtils.log( event );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
 		} );
 		RootLayoutPanel.get().add( amPieChart );
 	}
-
-	private native void log( AmChartEvent< ? > event )
-	/*-{
-		console.log(event);
-		//JSON.stringify(event, null, 4)
-	}-*/;
 
 	private native JavaScriptObject generateChartData( Integer selected )
 	/*-{

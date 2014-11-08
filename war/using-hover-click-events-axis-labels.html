@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+	var chart = AmCharts
+			.makeChart(
+					"chartdiv",
+					{
+						"type" : "serial",
+						"theme" : "none",
+					    "pathToImages":"/js/amcharts/images/",
+						"autoMargins" : false,
+						"marginLeft" : 30,
+						"marginRight" : 8,
+						"marginTop" : 10,
+						"marginBottom" : 26,
+
+						"dataProvider" : [ {
+							"year" : 2009,
+							"income" : 23.5,
+							"expenses" : 18.1
+						}, {
+							"year" : 2010,
+							"income" : 26.2,
+							"expenses" : 22.8
+						}, {
+							"year" : 2011,
+							"income" : 30.1,
+							"expenses" : 23.9
+						}, {
+							"year" : 2012,
+							"income" : 29.5,
+							"expenses" : 25.1
+						}, {
+							"year" : 2013,
+							"income" : 30.6,
+							"expenses" : 27.2,
+							"dashLengthLine" : 5
+						}, {
+							"year" : 2014,
+							"income" : 34.1,
+							"expenses" : 29.9,
+							"dashLengthColumn" : 5,
+							"alpha" : 0.2,
+							"additional" : "(projection)"
+						} ],
+						"valueAxes" : [ {
+							"axisAlpha" : 0,
+							"position" : "left"
+						} ],
+						"startDuration" : 1,
+						"graphs" : [
+								{
+									"alphaField" : "alpha",
+									"balloonText" : "<span style='font-size:13px;'>[[title]] in [[category]]:<b>[[value]]</b> [[additional]]</span>",
+									"dashLengthField" : "dashLengthColumn",
+									"fillAlphas" : 1,
+									"title" : "Income",
+									"type" : "column",
+									"valueField" : "income"
+								},
+								{
+									"balloonText" : "<span style='font-size:13px;'>[[title]] in [[category]]:<b>[[value]]</b> [[additional]]</span>",
+									"bullet" : "round",
+									"dashLengthField" : "dashLengthLine",
+									"lineThickness" : 3,
+									"bulletSize" : 7,
+									"bulletBorderAlpha" : 1,
+									"bulletColor" : "#FFFFFF",
+									"useLineColorForBulletBorder" : true,
+									"bulletBorderThickness" : 3,
+									"fillAlphas" : 0,
+									"lineAlpha" : 1,
+									"title" : "Expenses",
+									"valueField" : "expenses"
+								} ],
+						"categoryField" : "year",
+						"categoryAxis" : {
+							"gridPosition" : "start",
+							"axisAlpha" : 0,
+							"tickLength" : 0
+						}
+					});
+	chart.addListener("rendered", addListeners);
+
+	function addListeners() {
+		var categoryAxis = chart.categoryAxis;
+		categoryAxis.addListener("clickItem", handleClick);
+		categoryAxis.addListener("rollOverItem", handleOver);
+		categoryAxis.addListener("rollOutItem", handleOut);
+	}
+
+	function handleClick(event) {
+		console.log("click");
+		console.log(event);
+	}
+
+	function handleOut(event) {
+		event.target.setAttr("cursor", "default");
+		event.target.setAttr("fill", "#000000");
+		console.log("out");
+		console.log(event);
+	}
+
+	function handleOver(event) {
+		event.target.setAttr("cursor", "pointer");
+		event.target.setAttr("fill", "#CC0000");
+		console.log("over");
+		console.log(event);
+	}
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 1240px; height: 500px"></div>
+</body>
+</html>
