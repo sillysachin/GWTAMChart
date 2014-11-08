@@ -19,7 +19,7 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 public class JSOWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor" } );
+	{ "ChartCursor", "AmGraph" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -39,7 +39,7 @@ public class JSOWriter
 			jsoWriter = new GWTJSNIJavaWriter( fileWriter );
 			jsoWriter.setCompressingTypes( true );
 			jsoWriter
-					.emitPackage( "com.amcharts.impl" )
+					.emitPackage( "com.amcharts.jso" )
 					.emitImports( "com.amcharts.api.*" )
 					.emitImports( "com.google.gwt.core.client" )
 					.beginType( input + "JSO", "class", EnumSet.of( PUBLIC, FINAL ), "JavaScriptObject" )

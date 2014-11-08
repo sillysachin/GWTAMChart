@@ -12,7 +12,7 @@ public class AttributeReader
 {
 	public static List<JavaClassAttribute> run( String input )
 	{
-		String csvFile = input + ".txt";
+		String inputFile = input + ".txt";
 		BufferedReader reader = null;
 		String line = "";
 		String cvsSplitBy = "	";
@@ -21,7 +21,7 @@ public class AttributeReader
 		try
 		{
 			InputStream inputStream = AttributeReader.class.getClassLoader()
-					.getResourceAsStream( csvFile );
+					.getResourceAsStream( inputFile );
 			reader = new BufferedReader( new InputStreamReader( inputStream ) );
 			String header = reader.readLine();
 			System.out.println( "header -> " + header );

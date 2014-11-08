@@ -18,7 +18,7 @@ import com.squareup.javawriter.JavaWriter;
 public class JSONWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor" } );
+	{ "ChartCursor", "AmGraph" } );
 
 	public static void main( String args[] ) throws IOException
 	{

@@ -20,7 +20,7 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 public class JSNIWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor" } );
+	{ "ChartCursor", "AmGraph" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -35,6 +35,8 @@ public class JSNIWriter
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
 		FileWriter fileWriter = new FileWriter( new File( input + ".java" ) );
 		GWTJSNIJavaWriter jsoWriter = null;
+		int counter = 0;
+
 		try
 		{
 			jsoWriter = new GWTJSNIJavaWriter( fileWriter );
@@ -60,6 +62,7 @@ public class JSNIWriter
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
+				counter++;
 				if ( jca.getJavaType().equals( "boolean" ) )
 				{
 					jsoWriter
@@ -87,6 +90,10 @@ public class JSNIWriter
 						.endJSNIMethod();
 			}
 			jsoWriter.endType();
+		}
+		catch ( Exception exception )
+		{
+			System.out.println( "Failed at " + counter );
 		}
 		finally
 		{
