@@ -25,98 +25,95 @@
 <script type="text/javascript" src="js/amcharts/serial.js"></script>
 <script type="text/javascript" src="js/amcharts/xy.js"></script>
 <script type="text/javascript" src="js/amcharts/themes/light.js"></script>
-<script type="text/javascript" src="js/amcharts/exporting/amexport.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/canvg.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/filesaver.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.plugin.addimage.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
 <!--                                           -->
 <!-- This script loads your compiled module.   -->
 <!-- If you add any GWT meta tags, they must   -->
 <!-- be added before this line.                -->
 <!--                                           -->
 <script type="text/javascript">
-var chart = AmCharts.makeChart("chartdiv", {
-    "type": "serial",
-    "theme": "none",
-    "pathToImages":"/js/amcharts/images/",
-    "dataProvider": [{
-        "country": "USA",
-        "visits": 3025,
-        "color": "#FF0F00"
-    }, {
-        "country": "China",
-        "visits": 1882,
-        "color": "#FF6600"
-    }, {
-        "country": "Japan",
-        "visits": 1809,
-        "color": "#FF9E01"
-    }, {
-        "country": "Germany",
-        "visits": 1322,
-        "color": "#FCD202"
-    }, {
-        "country": "UK",
-        "visits": 1122,
-        "color": "#F8FF01"
-    }, {
-        "country": "France",
-        "visits": 1114,
-        "color": "#B0DE09"
-    }, {
-        "country": "India",
-        "visits": 984,
-        "color": "#04D215"
-    }, {
-        "country": "Spain",
-        "visits": 711,
-        "color": "#0D8ECF"
-    }, {
-        "country": "Netherlands",
-        "visits": 665,
-        "color": "#0D52D1"
-    }, {
-        "country": "Russia",
-        "visits": 580,
-        "color": "#2A0CD0"
-    }, {
-        "country": "South Korea",
-        "visits": 443,
-        "color": "#8A0CCF"
-    }, {
-        "country": "Canada",
-        "visits": 441,
-        "color": "#CD0D74"
-    }],
-    "valueAxes": [{
-        "axisAlpha": 0,
-        "position": "left",
-        "title": "Visitors from country"
-    }],
-    "startDuration": 1,
-    "graphs": [{
-        "balloonText": "<b>[[category]]: [[value]]</b>",
-        "colorField": "color",
-        "fillAlphas": 0.9,
-        "lineAlpha": 0.2,
-        "type": "column",
-        "valueField": "visits"
-    }],
-    "chartCursor": {
-        "categoryBalloonEnabled": false,
-        "cursorAlpha": 0,
-        "zoomable": false
-    },
-    "categoryField": "country",
-    "categoryAxis": {
-        "gridPosition": "start",
-        "labelRotation": 45
-    },
-    "amExport":{}
-     
-});
+	var chart = AmCharts.makeChart("chartdiv", {
+		"type" : "serial",
+		"theme" : "none",
+		"dataProvider" : [ {
+			"country" : "USA",
+			"visits" : 2025
+		}, {
+			"country" : "China",
+			"visits" : 1882
+		}, {
+			"country" : "Japan",
+			"visits" : 1809
+		}, {
+			"country" : "Germany",
+			"visits" : 1322
+		}, {
+			"country" : "UK",
+			"visits" : 1122
+		}, {
+			"country" : "France",
+			"visits" : 1114
+		}, {
+			"country" : "India",
+			"visits" : 984
+		}, {
+			"country" : "Spain",
+			"visits" : 711
+		}, {
+			"country" : "Netherlands",
+			"visits" : 665
+		}, {
+			"country" : "Russia",
+			"visits" : 580
+		}, {
+			"country" : "South Korea",
+			"visits" : 443
+		}, {
+			"country" : "Canada",
+			"visits" : 441
+		}, {
+			"country" : "Brazil",
+			"visits" : 395
+		} ],
+		"valueAxes" : [ {
+			"gridColor" : "#FFFFFF",
+			"gridAlpha" : 0.2,
+			"dashLength" : 0
+		} ],
+		"startDuration" : 1,
+		"graphs" : [ {
+			"balloonText" : "[[category]]: <b>[[value]]</b>",
+			"fillAlphas" : 0.8,
+			"lineAlpha" : 0.2,
+			"type" : "column",
+			"valueField" : "visits"
+		} ],
+		"chartCursor" : {
+			"categoryBalloonEnabled" : false,
+			"cursorAlpha" : 0,
+			"zoomable" : false
+		},
+		"categoryField" : "country",
+		"categoryAxis" : {
+			"gridPosition" : "start",
+			"gridAlpha" : 0,
+			"tickPosition" : "start",
+			"tickLength" : 20
+		},
+		"exportConfig" : {
+			"menuTop" : 0,
+			"menuItems" : [ {
+				"icon" : '/js/amcharts/images/export.png',
+				"format" : 'png'
+			} ]
+		}
+	});
 </script>
 
 <!--                                           -->
@@ -137,6 +134,6 @@ var chart = AmCharts.makeChart("chartdiv", {
 			Your web browser must have JavaScript enabled in order for this
 			application to display correctly.</div>
 	</noscript>
-	<div id="chartdiv" style="width:100%;height:500px"></div>
+	<div id="chartdiv" style="width: 1240px; height: 500px"></div>
 </body>
 </html>

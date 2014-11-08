@@ -1,657 +1,366 @@
-package com.amcharts.json;
+package com.amcharts.api;
 
 import java.util.List;
 
-import com.amcharts.api.IsAxisBase;
-import com.amcharts.api.IsGuide;
-
-public class AxisBase implements IsAxisBase
+public interface IsAxisBase
 {
-	private boolean autoGridCount;
-
-	private double axisAlpha;
-
-	private String axisColor;
-
-	private double axisThickness;
-
-	private double axisX;
-
-	private double axisY;
-
-	private boolean boldLabels;
-
-	private String color;
-
-	private double dashLength;
-
-	private double fillAlpha;
-
-	private String fillColor;
-
-	private double fontSize;
-
-	private double gridAlpha;
-
-	private String gridColor;
-
-	private double gridCount;
-
-	private double gridThickness;
-
-	private List<IsGuide> guides;
-
-	private boolean ignoreAxisWidth;
-
-	private boolean inside;
-
-	private double labelFrequency;
-
-	private double labelOffset;
-
-	private double labelRotation;
-
-	private boolean labelsEnabled;
-
-	private double minHorizontalGap;
-
-	private double minorGridAlpha;
-
-	private boolean minorGridEnabled;
-
-	private double minVerticalGap;
-
-	private double offset;
-
-	private String position;
-
-	private boolean showFirstLabel;
-
-	private boolean showLastLabel;
-
-	private double tickLength;
-
-	private String title;
-
-	private boolean titleBold;
-
-	private String titleColor;
-
-	private double titleFontSize;
+	/**
+	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
+	 */
+	public boolean isAutoGridCount();
 
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public boolean isAutoGridCount()
-	{
-		return autoGridCount;
-	}
-
-	/**
-	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
-	 */
-	public void setAutoGridCount( boolean autoGridCount )
-	{
-		this.autoGridCount = autoGridCount;
-	}
+	public void setAutoGridCount( boolean autoGridCount );
 
 	/**
 	 * Axis opacity. Value range is 0 - 1.
 	 */
-	public double getAxisAlpha()
-	{
-		return axisAlpha;
-	}
+	public double getAxisAlpha();
 
 	/**
 	 * Axis opacity. Value range is 0 - 1.
 	 */
-	public void setAxisAlpha( double axisAlpha )
-	{
-		this.axisAlpha = axisAlpha;
-	}
+	public void setAxisAlpha( double axisAlpha );
 
 	/**
 	 * Axis color.
 	 */
-	public String getAxisColor()
-	{
-		return axisColor;
-	}
+	public String getAxisColor();
 
 	/**
 	 * Axis color.
 	 */
-	public void setAxisColor( String axisColor )
-	{
-		this.axisColor = axisColor;
-	}
+	public void setAxisColor( String axisColor );
 
 	/**
 	 * Thickness of the axis.
 	 */
-	public double getAxisThickness()
-	{
-		return axisThickness;
-	}
+	public double getAxisThickness();
 
 	/**
 	 * Thickness of the axis.
 	 */
-	public void setAxisThickness( double axisThickness )
-	{
-		this.axisThickness = axisThickness;
-	}
+	public void setAxisThickness( double axisThickness );
 
 	/**
 	 * Read-only. Returns x coordinate of the axis.
 	 */
-	public double getAxisX()
-	{
-		return axisX;
-	}
+	public double getAxisX();
 
 	/**
 	 * Read-only. Returns x coordinate of the axis.
 	 */
-	public void setAxisX( double axisX )
-	{
-		this.axisX = axisX;
-	}
+	public void setAxisX( double axisX );
 
 	/**
 	 * Read-only. Returns y coordinate of the axis.
 	 */
-	public double getAxisY()
-	{
-		return axisY;
-	}
+	public double getAxisY();
 
 	/**
 	 * Read-only. Returns y coordinate of the axis.
 	 */
-	public void setAxisY( double axisY )
-	{
-		this.axisY = axisY;
-	}
+	public void setAxisY( double axisY );
 
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public boolean isBoldLabels()
-	{
-		return boldLabels;
-	}
+	public boolean isBoldLabels();
 
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public void setBoldLabels( boolean boldLabels )
-	{
-		this.boldLabels = boldLabels;
-	}
+	public void setBoldLabels( boolean boldLabels );
 
 	/**
 	 * Color of axis value labels. Will use chart's color if not set.
 	 */
-	public String getColor()
-	{
-		return color;
-	}
+	public String getColor();
 
 	/**
 	 * Color of axis value labels. Will use chart's color if not set.
 	 */
-	public void setColor( String color )
-	{
-		this.color = color;
-	}
+	public void setColor( String color );
 
 	/**
 	 * Length of a dash. 0 means line is not dashed.
 	 */
-	public double getDashLength()
-	{
-		return dashLength;
-	}
+	public double getDashLength();
 
 	/**
 	 * Length of a dash. 0 means line is not dashed.
 	 */
-	public void setDashLength( double dashLength )
-	{
-		this.dashLength = dashLength;
-	}
+	public void setDashLength( double dashLength );
 
 	/**
 	 * Fill opacity. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
-	public double getFillAlpha()
-	{
-		return fillAlpha;
-	}
+	public double getFillAlpha();
 
 	/**
 	 * Fill opacity. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
-	public void setFillAlpha( double fillAlpha )
-	{
-		this.fillAlpha = fillAlpha;
-	}
+	public void setFillAlpha( double fillAlpha );
 
 	/**
 	 * Fill color. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
-	public String getFillColor()
-	{
-		return fillColor;
-	}
+	public String getFillColor();
 
 	/**
 	 * Fill color. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
-	public void setFillColor( String fillColor )
-	{
-		this.fillColor = fillColor;
-	}
+	public void setFillColor( String fillColor );
 
 	/**
 	 * Size of value labels text. Will use chart's fontSize if not set.
 	 */
-	public double getFontSize()
-	{
-		return fontSize;
-	}
+	public double getFontSize();
 
 	/**
 	 * Size of value labels text. Will use chart's fontSize if not set.
 	 */
-	public void setFontSize( double fontSize )
-	{
-		this.fontSize = fontSize;
-	}
+	public void setFontSize( double fontSize );
 
 	/**
 	 * Opacity of grid lines.
 	 */
-	public double getGridAlpha()
-	{
-		return gridAlpha;
-	}
+	public double getGridAlpha();
 
 	/**
 	 * Opacity of grid lines.
 	 */
-	public void setGridAlpha( double gridAlpha )
-	{
-		this.gridAlpha = gridAlpha;
-	}
+	public void setGridAlpha( double gridAlpha );
 
 	/**
 	 * Color of grid lines.
 	 */
-	public String getGridColor()
-	{
-		return gridColor;
-	}
+	public String getGridColor();
 
 	/**
 	 * Color of grid lines.
 	 */
-	public void setGridColor( String gridColor )
-	{
-		this.gridColor = gridColor;
-	}
+	public void setGridColor( String gridColor );
 
 	/**
 	 * 'Number of grid lines. In case this is value axis, or your categoryAxis parses dates, the number is approximate. The default value is 5. If you set autoGridCount to true, this property is ignored.'
 	 */
-	public double getGridCount()
-	{
-		return gridCount;
-	}
+	public double getGridCount();
 
 	/**
 	 * 'Number of grid lines. In case this is value axis, or your categoryAxis parses dates, the number is approximate. The default value is 5. If you set autoGridCount to true, this property is ignored.'
 	 */
-	public void setGridCount( double gridCount )
-	{
-		this.gridCount = gridCount;
-	}
+	public void setGridCount( double gridCount );
 
 	/**
 	 * Thickness of grid lines.
 	 */
-	public double getGridThickness()
-	{
-		return gridThickness;
-	}
+	public double getGridThickness();
 
 	/**
 	 * Thickness of grid lines.
 	 */
-	public void setGridThickness( double gridThickness )
-	{
-		this.gridThickness = gridThickness;
-	}
+	public void setGridThickness( double gridThickness );
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public List<IsGuide> getGuides()
-	{
-		return guides;
-	}
+	public List<IsGuide> getGuides();
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public void setGuides( List<IsGuide> guides )
-	{
-		this.guides = guides;
-	}
+	public void setGuides( List<IsGuide> guides );
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public boolean isIgnoreAxisWidth()
-	{
-		return ignoreAxisWidth;
-	}
+	public boolean isIgnoreAxisWidth();
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public void setIgnoreAxisWidth( boolean ignoreAxisWidth )
-	{
-		this.ignoreAxisWidth = ignoreAxisWidth;
-	}
+	public void setIgnoreAxisWidth( boolean ignoreAxisWidth );
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public boolean isInside()
-	{
-		return inside;
-	}
+	public boolean isInside();
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public void setInside( boolean inside )
-	{
-		this.inside = inside;
-	}
+	public void setInside( boolean inside );
 
 	/**
 	 * Frequency at which labels should be placed. Doesn't work for CategoryAxis if parseDates is set to true.
 	 */
-	public double getLabelFrequency()
-	{
-		return labelFrequency;
-	}
+	public double getLabelFrequency();
 
 	/**
 	 * Frequency at which labels should be placed. Doesn't work for CategoryAxis if parseDates is set to true.
 	 */
-	public void setLabelFrequency( double labelFrequency )
-	{
-		this.labelFrequency = labelFrequency;
-	}
+	public void setLabelFrequency( double labelFrequency );
 
 	/**
 	 * You can use it to adjust position of axes labels. Works both with CategoryAxis and ValueAxis.
 	 */
-	public double getLabelOffset()
-	{
-		return labelOffset;
-	}
+	public double getLabelOffset();
 
 	/**
 	 * You can use it to adjust position of axes labels. Works both with CategoryAxis and ValueAxis.
 	 */
-	public void setLabelOffset( double labelOffset )
-	{
-		this.labelOffset = labelOffset;
-	}
+	public void setLabelOffset( double labelOffset );
 
 	/**
 	 * 'Rotation angle of a label. Only horizontal axis' values can be rotated. If you set this for vertical axis, the setting will be ignored. Possible values from -90 to 90.'
 	 */
-	public double getLabelRotation()
-	{
-		return labelRotation;
-	}
+	public double getLabelRotation();
 
 	/**
 	 * 'Rotation angle of a label. Only horizontal axis' values can be rotated. If you set this for vertical axis, the setting will be ignored. Possible values from -90 to 90.'
 	 */
-	public void setLabelRotation( double labelRotation )
-	{
-		this.labelRotation = labelRotation;
-	}
+	public void setLabelRotation( double labelRotation );
 
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public boolean isLabelsEnabled()
-	{
-		return labelsEnabled;
-	}
+	public boolean isLabelsEnabled();
 
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public void setLabelsEnabled( boolean labelsEnabled )
-	{
-		this.labelsEnabled = labelsEnabled;
-	}
+	public void setLabelsEnabled( boolean labelsEnabled );
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell width required for one span between grid lines.
 	 */
-	public double getMinHorizontalGap()
-	{
-		return minHorizontalGap;
-	}
+	public double getMinHorizontalGap();
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell width required for one span between grid lines.
 	 */
-	public void setMinHorizontalGap( double minHorizontalGap )
-	{
-		this.minHorizontalGap = minHorizontalGap;
-	}
+	public void setMinHorizontalGap( double minHorizontalGap );
 
 	/**
 	 * 'Opacity of minor grid. In order minor to be visible, you should set minorGridEnabled to true.'
 	 */
-	public double getMinorGridAlpha()
-	{
-		return minorGridAlpha;
-	}
+	public double getMinorGridAlpha();
 
 	/**
 	 * 'Opacity of minor grid. In order minor to be visible, you should set minorGridEnabled to true.'
 	 */
-	public void setMinorGridAlpha( double minorGridAlpha )
-	{
-		this.minorGridAlpha = minorGridAlpha;
-	}
+	public void setMinorGridAlpha( double minorGridAlpha );
 
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public boolean isMinorGridEnabled()
-	{
-		return minorGridEnabled;
-	}
+	public boolean isMinorGridEnabled();
 
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public void setMinorGridEnabled( boolean minorGridEnabled )
-	{
-		this.minorGridEnabled = minorGridEnabled;
-	}
+	public void setMinorGridEnabled( boolean minorGridEnabled );
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell height required for one span between grid lines.
 	 */
-	public double getMinVerticalGap()
-	{
-		return minVerticalGap;
-	}
+	public double getMinVerticalGap();
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell height required for one span between grid lines.
 	 */
-	public void setMinVerticalGap( double minVerticalGap )
-	{
-		this.minVerticalGap = minVerticalGap;
-	}
+	public void setMinVerticalGap( double minVerticalGap );
 
 	/**
 	 * 'The distance of the axis to the plot area, in pixels. Negative values can also be used.'
 	 */
-	public double getOffset()
-	{
-		return offset;
-	}
+	public double getOffset();
 
 	/**
 	 * 'The distance of the axis to the plot area, in pixels. Negative values can also be used.'
 	 */
-	public void setOffset( double offset )
-	{
-		this.offset = offset;
-	}
+	public void setOffset( double offset );
 
 	/**
 	 * 'Possible values are: ''top'', ''bottom'', ''left'', ''right''. If axis is vertical, default position is ''left''. If axis is horizontal, default position is ''bottom''.'
 	 */
-	public String getPosition()
-	{
-		return position;
-	}
+	public String getPosition();
 
 	/**
 	 * 'Possible values are: ''top'', ''bottom'', ''left'', ''right''. If axis is vertical, default position is ''left''. If axis is horizontal, default position is ''bottom''.'
 	 */
-	public void setPosition( String position )
-	{
-		this.position = position;
-	}
+	public void setPosition( String position );
 
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public boolean isShowFirstLabel()
-	{
-		return showFirstLabel;
-	}
+	public boolean isShowFirstLabel();
 
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel )
-	{
-		this.showFirstLabel = showFirstLabel;
-	}
+	public void setShowFirstLabel( boolean showFirstLabel );
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public boolean isShowLastLabel()
-	{
-		return showLastLabel;
-	}
+	public boolean isShowLastLabel();
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public void setShowLastLabel( boolean showLastLabel )
-	{
-		this.showLastLabel = showLastLabel;
-	}
+	public void setShowLastLabel( boolean showLastLabel );
 
 	/**
 	 * Length of the tick marks.
 	 */
-	public double getTickLength()
-	{
-		return tickLength;
-	}
+	public double getTickLength();
 
 	/**
 	 * Length of the tick marks.
 	 */
-	public void setTickLength( double tickLength )
-	{
-		this.tickLength = tickLength;
-	}
+	public void setTickLength( double tickLength );
 
 	/**
 	 * Title of the axis.
 	 */
-	public String getTitle()
-	{
-		return title;
-	}
+	public String getTitle();
 
 	/**
 	 * Title of the axis.
 	 */
-	public void setTitle( String title )
-	{
-		this.title = title;
-	}
+	public void setTitle( String title );
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public boolean isTitleBold()
-	{
-		return titleBold;
-	}
+	public boolean isTitleBold();
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public void setTitleBold( boolean titleBold )
-	{
-		this.titleBold = titleBold;
-	}
+	public void setTitleBold( boolean titleBold );
 
 	/**
 	 * Color of axis title. Will use text color of chart if not set any.
 	 */
-	public String getTitleColor()
-	{
-		return titleColor;
-	}
+	public String getTitleColor();
 
 	/**
 	 * Color of axis title. Will use text color of chart if not set any.
 	 */
-	public void setTitleColor( String titleColor )
-	{
-		this.titleColor = titleColor;
-	}
+	public void setTitleColor( String titleColor );
 
 	/**
 	 * Font size of axis title. Will use font size of chart plus two pixels if not set any.
 	 */
-	public double getTitleFontSize()
-	{
-		return titleFontSize;
-	}
+	public double getTitleFontSize();
 
 	/**
 	 * Font size of axis title. Will use font size of chart plus two pixels if not set any.
 	 */
-	public void setTitleFontSize( double titleFontSize )
-	{
-		this.titleFontSize = titleFontSize;
-	}
+	public void setTitleFontSize( double titleFontSize );
 }

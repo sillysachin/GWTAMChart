@@ -74,7 +74,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private String pulledField;
 
-	private Integer pullOutDuration;
+	private double pullOutDuration;
 
 	private String pullOutEffect;
 
@@ -84,7 +84,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private double startAlpha;
 
-	private Integer startDuration;
+	private double startDuration;
 
 	private String startEffect;
 
@@ -507,13 +507,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Integer getPullOutDuration()
+	public double getPullOutDuration()
 	{
 		return pullOutDuration;
 	}
 
 	@Override
-	public void setPullOutDuration( Integer pullOutDuration )
+	public void setPullOutDuration( double pullOutDuration )
 	{
 		this.pullOutDuration = pullOutDuration;
 	}
@@ -567,13 +567,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Integer getStartDuration()
+	public double getStartDuration()
 	{
 		return startDuration;
 	}
 
 	@Override
-	public void setStartDuration( Integer startDuration )
+	public void setStartDuration( double startDuration )
 	{
 		this.startDuration = startDuration;
 	}

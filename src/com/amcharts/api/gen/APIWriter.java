@@ -16,7 +16,7 @@ import com.squareup.javawriter.JavaWriter;
 public class APIWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph" } );
+	{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -31,7 +31,6 @@ public class APIWriter
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
 		FileWriter fileWriter = new FileWriter( new File( "Is" + input + ".java" ) );
 		JavaWriter apiWriter = null;
-		int counter = 0;
 		String fieldName = null;
 		try
 		{
@@ -42,7 +41,6 @@ public class APIWriter
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
-				counter++;
 				fieldName = jca.getFieldName();
 				if ( jca.getJavaType().equals( "boolean" ) )
 				{
@@ -70,7 +68,7 @@ public class APIWriter
 		}
 		catch ( Exception exception )
 		{
-			System.out.println( "Failed at " + fieldName );
+			System.out.println( "Failed at " + fieldName + " for " + input );
 		}
 		finally
 		{

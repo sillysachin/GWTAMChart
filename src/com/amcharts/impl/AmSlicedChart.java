@@ -443,13 +443,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public Integer getPullOutDuration()
+	public double getPullOutDuration()
 	{
 		return getJso().getPullOutDuration();
 	}
 
 	@Override
-	public void setPullOutDuration( Integer pullOutDuration )
+	public void setPullOutDuration( double pullOutDuration )
 	{
 		getJso().setPullOutDuration( pullOutDuration );
 	}
@@ -504,13 +504,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public Integer getStartDuration()
+	public double getStartDuration()
 	{
 		return getJso().getStartDuration();
 	}
 
 	@Override
-	public void setStartDuration( Integer startDuration )
+	public void setStartDuration( double startDuration )
 	{
 		getJso().setStartDuration( startDuration );
 	}

@@ -335,12 +335,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native Integer getHideBalloonTime() /*-{
+	public native double getHideBalloonTime() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public native void setHideBalloonTime( Integer hideBalloonTime ) /*-{
+	public native void setHideBalloonTime( double hideBalloonTime ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.hideBalloonTime = hideBalloonTime;
 	}-*/;
 

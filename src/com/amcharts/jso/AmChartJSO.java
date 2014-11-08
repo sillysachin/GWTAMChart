@@ -222,13 +222,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native Integer getHideBalloonTime()
+	public final native double getHideBalloonTime()
 	/*-{
 		return this.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public final native void setHideBalloonTime( Integer hideBalloonTime )
+	public final native void setHideBalloonTime( double hideBalloonTime )
 	/*-{
 		this.hideBalloonTime = hideBalloonTime;
 	}-*/;

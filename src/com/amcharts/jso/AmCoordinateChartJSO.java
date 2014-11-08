@@ -9,14 +9,19 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	}
 
 	@Override
-	public final native Integer getStartDuration()
+	public final native double getStartDuration()
 	/*-{
 		return this.startDuration;
 	}-*/;
 
 	@Override
-	public final native void setStartDuration( Integer startDuration )
+	public final native void setStartDuration( double startDuration )
 	/*-{
 		this.startDuration = startDuration;
+	}-*/;
+
+	public final native void setGridAboveGraphs( boolean gridAboveGraphs )
+	/*-{
+		this.gridAboveGraphs = gridAboveGraphs;
 	}-*/;
 }

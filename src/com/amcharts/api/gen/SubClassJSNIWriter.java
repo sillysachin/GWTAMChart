@@ -2,6 +2,7 @@ package com.amcharts.api.gen;
 
 import static javax.lang.model.element.Modifier.FINAL;
 import static javax.lang.model.element.Modifier.NATIVE;
+import static javax.lang.model.element.Modifier.PRIVATE;
 import static javax.lang.model.element.Modifier.PROTECTED;
 import static javax.lang.model.element.Modifier.PUBLIC;
 
@@ -16,10 +17,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.squareup.javawriter.GWTJSNIJavaWriter;
 
-public class JSOWriter
+public class SubClassJSNIWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis" } );
+	{ "ValueAxis", "CategoryAxis" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -32,20 +33,32 @@ public class JSOWriter
 	private static void jsonWriter( String input ) throws IOException
 	{
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
-		FileWriter fileWriter = new FileWriter( new File( input + "JSO" + ".java" ) );
+		FileWriter fileWriter = new FileWriter( new File( input + ".java" ) );
 		GWTJSNIJavaWriter jsoWriter = null;
 		String fieldName = null;
+
 		try
 		{
 			jsoWriter = new GWTJSNIJavaWriter( fileWriter );
 			jsoWriter.setCompressingTypes( true );
 			jsoWriter
-					.emitPackage( "com.amcharts.jso" )
+					.emitPackage( "com.amcharts.impl" )
 					.emitImports( "com.amcharts.api.*" )
+					.emitImports( "com.amcharts.jso.*" )
 					.emitImports( "com.google.gwt.core.client" )
-					.beginType( input + "JSO", "class", EnumSet.of( PUBLIC, FINAL ), "JavaScriptObject" )
+					.beginType( input, "class", EnumSet.of( PUBLIC, FINAL ), null, "IJavaScriptWrapper<" + input + "JSO" + ">" )
+					.emitField( input + "JSO", "jso", EnumSet.of( PRIVATE ) )
 					.beginConstructor( EnumSet.of( PROTECTED ) )
-					.endConstructor();
+					.emitStatement( "jso=createJso()" ).endConstructor();
+			jsoWriter
+					.beginMethod( input + "JSO", "getJso", EnumSet.of( PUBLIC ) )
+					.emitStatement( "return this.jso" ).endMethod();
+			jsoWriter
+					.beginMethod( "void", "setJso", EnumSet.of( PUBLIC ), input + "JSO", "jso" )
+					.emitStatement( "this.jso=jso" ).endMethod();
+			jsoWriter
+					.beginJSNIMethod( input + "JSO", "createJso", EnumSet.of( PUBLIC, NATIVE ) )
+					.emitStatement( "return this.jso" ).endJSNIMethod();
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
@@ -54,27 +67,28 @@ public class JSOWriter
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginJSNIMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
-							.emitStatement( "return " + jca.getFieldName() )
-							.endJSNIMethod();
+							.beginMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL ) )
+							.emitStatement( "return getJso()." + "is" + StringUtils.capitalize( jca
+									.getFieldName() ) + "()" ).endMethod();
 				}
 				else
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginJSNIMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
-							.emitStatement( "return " + jca.getFieldName() )
-							.endJSNIMethod();
+							.beginMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL ) )
+							.emitStatement( "return getJso()." + "get" + StringUtils.capitalize( jca
+									.getFieldName() ) + "()" ).endMethod();
 				}
 				jsoWriter
 						.emitJavadoc( jca.getJavadocComment() )
-						.beginJSNIMethod( "void", "set" + StringUtils.capitalize( jca
-								.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ), jca
+						.beginMethod( "void", "set" + StringUtils.capitalize( jca
+								.getFieldName() ), EnumSet.of( PUBLIC, FINAL ), jca
 								.getJavaType(), jca.getFieldName() )
-						.emitStatement( "this." + jca.getFieldName() + "=" + jca.getFieldName() )
-						.endJSNIMethod();
+						.emitStatement( "getJso()." + "set" + StringUtils.capitalize( jca
+								.getFieldName() ) + "(" + jca.getFieldName() + ")" )
+						.endMethod();
 			}
 			jsoWriter.endType();
 		}

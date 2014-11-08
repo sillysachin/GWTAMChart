@@ -1,8 +1,6 @@
 package com.amcharts.api.gen;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -42,16 +40,12 @@ public class AttributeReader
 					jca.setJavadocComment( variableTokens[4] );
 				}
 				javaClassAttributes.add( jca );
-
 			}
 
 		}
-		catch ( FileNotFoundException e )
+		catch ( Exception e )
 		{
-			e.printStackTrace();
-		}
-		catch ( IOException e )
-		{
+			System.out.println( "Failed for " + input );
 			e.printStackTrace();
 		}
 		finally
@@ -62,8 +56,9 @@ public class AttributeReader
 				{
 					reader.close();
 				}
-				catch ( IOException e )
+				catch ( Exception e )
 				{
+					System.out.println( "Failed for " + input );
 					e.printStackTrace();
 				}
 			}

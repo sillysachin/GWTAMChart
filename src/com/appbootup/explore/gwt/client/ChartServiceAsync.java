@@ -7,5 +7,5 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  */
 public interface ChartServiceAsync
 {
-	void getLineWithTrendLineChartData( String input, AsyncCallback<String> callback ) throws IllegalArgumentException;
+	void getData( String input, AsyncCallback<String> callback ) throws IllegalArgumentException;
 }

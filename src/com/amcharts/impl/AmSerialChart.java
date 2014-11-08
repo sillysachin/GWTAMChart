@@ -63,6 +63,7 @@ public class AmSerialChart extends AmRectangularChart
 		return categoryAxis;
 	};
 
+	// TODO: deviating from usual approach of nested entities.
 	//	public native CategoryAxis getCategoryAxis()
 	//	/*-{
 	//		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.categoryAxis)

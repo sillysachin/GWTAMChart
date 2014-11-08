@@ -13,6 +13,7 @@ import com.amcharts.impl.Guide;
 import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.jso.AmChartJSO;
+import com.appbootup.explore.gwt.client.chart.column.SimpleColumnChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -38,7 +39,7 @@ public class GWTAMChart implements EntryPoint
 
 	private static final String JSON_URL = GWT.getModuleBaseURL() + "json/amchart?q=";
 
-	final static ChartServiceAsync chartService = GWT
+	public final static ChartServiceAsync chartService = GWT
 			.create( ChartService.class );
 
 	/**
@@ -59,14 +60,15 @@ public class GWTAMChart implements EntryPoint
 		// PyramidChart pyramidChart = new PyramidChart();
 		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
 		// FunnelChart funnelChart = new FunnelChart();
-		ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
+		// ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
+		SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
 	}
 
 	private void pieChartByJSNI()
 	{
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
-		amPieChart.setSize( "600px", "400px" );
+		amPieChart.setSize( "1020px", "500px" );
 		JavaScriptObject dataProvider = JsonUtils.unsafeEval( pieData );
 		amPieChart.setDataProvider( dataProvider );
 		amPieChart.setValueField( "value" );
@@ -78,7 +80,7 @@ public class GWTAMChart implements EntryPoint
 	private void serialChartByJSNI()
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
-		amSerialChart.setSize( "600px", "400px" );
+		amSerialChart.setSize( "1240px", "500px" );
 		JavaScriptObject serialDataProvider = JsonUtils
 				.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );
@@ -154,7 +156,7 @@ public class GWTAMChart implements EntryPoint
 	{
 
 		chartService
-				.getLineWithTrendLineChartData( "/data/lineWithTrendLines.json", new AsyncCallback<String>()
+				.getData( "/data/lineWithTrendLines.json", new AsyncCallback<String>()
 				{
 					@Override
 					public void onSuccess( String chartData )

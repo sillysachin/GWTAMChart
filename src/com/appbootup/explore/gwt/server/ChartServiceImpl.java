@@ -17,7 +17,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class ChartServiceImpl extends RemoteServiceServlet implements ChartService
 {
 
-	public String getLineWithTrendLineChartData( String fName ) throws IllegalArgumentException
+	public String getData( String fName ) throws IllegalArgumentException
 	{
 		ServletContext cntxt = this.getServletContext();
 		BufferedReader reader = null;

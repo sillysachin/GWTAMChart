@@ -1,7 +1,8 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.jso.AmPieChartJSO;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -12,7 +13,7 @@ public class DonutChart
 {
 	public DonutChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/donutChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getData( "/data/donutChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )

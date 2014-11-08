@@ -49,7 +49,7 @@ public class AmChart implements IsAmChart
 
 	private double handDrawThickness;
 
-	private Integer hideBalloonTime;
+	private double hideBalloonTime;
 
 	private String language;
 
@@ -289,13 +289,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public Integer getHideBalloonTime()
+	public double getHideBalloonTime()
 	{
 		return hideBalloonTime;
 	}
 
 	@Override
-	public void setHideBalloonTime( Integer hideBalloonTime )
+	public void setHideBalloonTime( double hideBalloonTime )
 	{
 		this.hideBalloonTime = hideBalloonTime;
 	}

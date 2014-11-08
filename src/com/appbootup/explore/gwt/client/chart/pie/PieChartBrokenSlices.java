@@ -1,4 +1,4 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
@@ -11,6 +11,7 @@ import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
 import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
 import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -21,7 +22,7 @@ public class PieChartBrokenSlices
 {
 	public PieChartBrokenSlices()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/pieChartBrokenSlices.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getData( "/data/pieChartBrokenSlices.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )
@@ -53,7 +54,7 @@ public class PieChartBrokenSlices
 
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
-		amPieChart.setSize( "600px", "400px" );
+		amPieChart.setSize( "1240px", "500px" );
 		amPieChart.addClickSliceHandler( new ClickSliceHandler()
 		{
 			@Override

@@ -1,9 +1,10 @@
-package com.appbootup.explore.gwt.client;
+package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmPieChartJSO;
+import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
@@ -14,7 +15,7 @@ public class ThreeDDonutChart
 {
 	public ThreeDDonutChart()
 	{
-		GWTAMChart.chartService.getLineWithTrendLineChartData( "/data/threeDDonutChart.json", new AsyncCallback<String>()
+		GWTAMChart.chartService.getData( "/data/threeDDonutChart.json", new AsyncCallback<String>()
 		{
 			@Override
 			public void onSuccess( String chartData )

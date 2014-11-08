@@ -18,7 +18,7 @@ import com.squareup.javawriter.JavaWriter;
 public class JSONWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph" } );
+	{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -33,6 +33,7 @@ public class JSONWriter
 		List<JavaClassAttribute> jcaItems = AttributeReader.run( input );
 		FileWriter fileWriter = new FileWriter( new File( input + "JSON" + ".java" ) );
 		JavaWriter jsoWriter = null;
+		String fieldName = null;
 		try
 		{
 			jsoWriter = new JavaWriter( fileWriter );
@@ -48,6 +49,7 @@ public class JSONWriter
 
 			for ( JavaClassAttribute jca : jcaItems )
 			{
+				fieldName = jca.getFieldName();
 				if ( jca.getJavaType().equals( "boolean" ) )
 				{
 					jsoWriter
@@ -75,6 +77,10 @@ public class JSONWriter
 						.endMethod();
 			}
 			jsoWriter.endType();
+		}
+		catch ( Exception exception )
+		{
+			System.out.println( "Failed at " + fieldName + " for " + input );
 		}
 		finally
 		{
