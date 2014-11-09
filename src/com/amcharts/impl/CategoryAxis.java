@@ -372,7 +372,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		return categoryAxis.xToIndex();
 	}-*/;
-	
+
 	/**
 	 * Adds event listener to the object.
 	 * type - string like 'axisChanged' (should be listed in 'events' section of this class or classes which extend this class). 
@@ -387,7 +387,8 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 				.addListener(
 						eventName,
 						function(event) {
-							console.log('event function processed - > ' + eventName);
+							console.log('event function processed - > '
+									+ eventName);
 							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
 							categoryAxisThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
 							if (event.event == undefined) {

@@ -16,7 +16,6 @@ import com.amcharts.impl.event.mouse.columnchart.RollOutItemEvent;
 import com.amcharts.impl.event.mouse.columnchart.RollOutItemHandler;
 import com.amcharts.impl.event.mouse.columnchart.RollOverItemEvent;
 import com.amcharts.impl.event.mouse.columnchart.RollOverItemHandler;
-import com.amcharts.impl.event.mouse.slicedchart.AmSlicedChartEventUtils;
 import com.amcharts.jso.AxisBaseJSO;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.shared.EventHandler;
