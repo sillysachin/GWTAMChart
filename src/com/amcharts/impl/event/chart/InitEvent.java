@@ -14,12 +14,7 @@ public class InitEvent extends AmChartEvent<InitHandler>
 {
 	public static final String NAME = "init";
 
-	private static final Type<InitHandler> TYPE = new Type<InitHandler>();
-
-	public static Type<InitHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<InitHandler> TYPE = new Type<InitHandler>();
 
 	public InitEvent()
 	{

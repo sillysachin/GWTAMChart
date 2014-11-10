@@ -1,6 +1,6 @@
 package com.amcharts.impl.event.mouse.slicedchart;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import com.amcharts.impl.event.AmChartEventJSO;
 /**
  * 
  * @author sachinsr
@@ -10,18 +10,13 @@ public class RollOverSliceEvent extends AmSliceEvent<RollOverSliceHandler>
 {
 	public static final String NAME = "rollOverSlice";
 
-	private static final Type<RollOverSliceHandler> TYPE = new Type<RollOverSliceHandler>();
-
-	public static Type<RollOverSliceHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<RollOverSliceHandler> TYPE = new Type<RollOverSliceHandler>();
 
 	public RollOverSliceEvent()
 	{
 	}
 
-	public RollOverSliceEvent( JavaScriptObject amChartEventJSO )
+	public RollOverSliceEvent( AmChartEventJSO amChartEventJSO )
 	{
 		super( amChartEventJSO );
 	}

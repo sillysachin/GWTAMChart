@@ -9,6 +9,7 @@ import com.google.gwt.user.client.Event;
 
 public class AmChartEventJSO extends JavaScriptObject
 {
+
 	protected AmChartEventJSO()
 	{
 	}
@@ -38,13 +39,16 @@ public class AmChartEventJSO extends JavaScriptObject
 		return this.event;
 	}-*/;
 
-	public final native void getEvent( Event event )
+	public final native void setEvent( Event event )
 	/*-{
 		this.event = event;
 	}-*/;
 
 	public final native DataItem getDataItem()
 	/*-{
+		if (this.dataItem != null) {
+			this.dataItem.className = 'DataItem';
+		}
 		return this.dataItem;
 	}-*/;
 
@@ -53,12 +57,15 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.dataItem = dataItem;
 	}-*/;
 
-	public final native SerialDataItem setSerialDataItem()
+	public final native SerialDataItem getSerialDataItem()
 	/*-{
+		if (this.serialDataItem != null) {
+			this.serialDataItem.className = 'SerialDataItem';
+		}
 		return this.serialDataItem;
 	}-*/;
 
-	public final native void getSerialDataItem( SerialDataItem serialDataItem )
+	public final native void setSerialDataItem( SerialDataItem serialDataItem )
 	/*-{
 		this.serialDataItem = serialDataItem;
 	}-*/;
@@ -70,6 +77,9 @@ public class AmChartEventJSO extends JavaScriptObject
 
 	public final native void setTarget( Target target )
 	/*-{
+		if (this.target != null) {
+			this.target.className = 'Target';
+		}
 		this.target = target;
 	}-*/;
 
@@ -90,6 +100,35 @@ public class AmChartEventJSO extends JavaScriptObject
 
 	public final native void setValue( Object value )
 	/*-{
+		if (this.value != null) {
+			this.value.className = 'Value';
+		}
 		this.value = value;
+	}-*/;
+
+	public final native Object getStartValue()
+	/*-{
+		return this.startValue;
+	}-*/;
+
+	public final native void setStartValue( Object startValue )
+	/*-{
+		if (this.startValue != null) {
+			this.startValue.className = 'StartValue';
+		}
+		this.startValue = startValue;
+	}-*/;
+
+	public final native Object getEndValue()
+	/*-{
+		return endValue;
+	}-*/;
+
+	public final native void setEndValue( Object endValue )
+	/*-{
+		if (this.endValue != null) {
+			this.endValue.className = 'EndValue';
+		}
+		this.endValue = endValue;
 	}-*/;
 }

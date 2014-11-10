@@ -25,15 +25,15 @@ public class AmChartEventUtils
 	{
 		com.google.web.bindery.event.shared.Event< ? > amChartEvent = null;
 		Type< ? > type = event.getAssociatedType();
-		if ( AxisChangedEvent.getType().equals( type ) )
+		if ( AxisChangedEvent.TYPE.equals( type ) )
 		{
 			amChartEvent = new AxisChangedEvent();
 		}
-		else if ( AxisZoomedEvent.getName().equals( type ) )
+		else if ( AxisZoomedEvent.TYPE.equals( type ) )
 		{
 			amChartEvent = new AxisZoomedEvent();
 		}
-		else if ( LogarithmicAxisFailedEvent.getName().equals( type ) )
+		else if ( LogarithmicAxisFailedEvent.TYPE.equals( type ) )
 		{
 			amChartEvent = new LogarithmicAxisFailedEvent();
 		}

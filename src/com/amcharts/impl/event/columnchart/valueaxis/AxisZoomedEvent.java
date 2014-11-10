@@ -1,7 +1,6 @@
 package com.amcharts.impl.event.columnchart.valueaxis;
 
 import com.amcharts.impl.event.AmChartEvent;
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 
@@ -14,16 +13,7 @@ public class AxisZoomedEvent extends AmChartEvent<AxisZoomedHandler>
 {
 	public static final String NAME = "axisZoomed";
 
-	Object startValue;
-
-	Object endValue;
-
-	private static final Type<AxisZoomedHandler> TYPE = new Type<AxisZoomedHandler>();
-
-	public static Type<AxisZoomedHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<AxisZoomedHandler> TYPE = new Type<AxisZoomedHandler>();
 
 	public AxisZoomedEvent()
 	{
@@ -60,53 +50,21 @@ public class AxisZoomedEvent extends AmChartEvent<AxisZoomedHandler>
 
 	public Object getStartValue()
 	{
-		if ( startValue == null )
-		{
-			startValue = extractStartValue();
-		}
-		return startValue;
+		return getJso().getStartValue();
 	}
 
 	public void setStartValue( Object startValue )
 	{
-		this.startValue = startValue;
+		this.getJso().setStartValue( startValue );
 	}
-
-	public native Object extractStartValue()
-	/*-{
-		this.startValue.className = 'StartValue';
-		return this.startValue;
-	}-*/;
-
-	public native Object extractStartValue( JavaScriptObject amChartEventJSO )
-	/*-{
-		amChartEventJSO.startValue.className = 'StartValue';
-		return amChartEventJSO.startValue;
-	}-*/;
 
 	public Object getEndValue()
 	{
-		if ( endValue == null )
-		{
-			endValue = extractEndValue();
-		}
-		return endValue;
+		return getJso().getEndValue();
 	}
 
 	public void setEndValue( Object endValue )
 	{
-		this.endValue = endValue;
+		this.getJso().setEndValue( endValue );
 	}
-
-	public native Object extractEndValue()
-	/*-{
-		this.endValue.className = 'EndValue';
-		return this.endValue;
-	}-*/;
-
-	public native Object extractEndValue( JavaScriptObject amChartEventJSO )
-	/*-{
-		amChartEventJSO.endValue.className = 'EndValue';
-		return amChartEventJSO.endValue;
-	}-*/;
 }

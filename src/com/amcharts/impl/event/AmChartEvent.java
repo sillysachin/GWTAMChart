@@ -15,6 +15,7 @@ public abstract class AmChartEvent<H extends AmChartHandler> extends Event<H>
 
 	public AmChartEvent( AmChartEventJSO amChartEventJSO )
 	{
+		this.jso = amChartEventJSO;
 		this.setChart( extractChart( amChartEventJSO ) );
 	}
 
@@ -44,13 +45,18 @@ public abstract class AmChartEvent<H extends AmChartHandler> extends Event<H>
 		return amChartEventJSO.chart;
 	}-*/;
 
-	public String getEventType()
+	public String getType()
 	{
 		return getJso().getType();
 	}
 
-	private AmChartEventJSO getJso()
+	protected AmChartEventJSO getJso()
 	{
 		return jso;
+	}
+
+	public void setType( String type )
+	{
+		getJso().setType( type );
 	}
 }

@@ -14,12 +14,7 @@ public class RenderedEvent extends AmChartEvent<RenderedHandler>
 {
 	public static final String NAME = "rendered";
 
-	private static final Type<RenderedHandler> TYPE = new Type<RenderedHandler>();
-
-	public static Type<RenderedHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<RenderedHandler> TYPE = new Type<RenderedHandler>();
 
 	public RenderedEvent()
 	{

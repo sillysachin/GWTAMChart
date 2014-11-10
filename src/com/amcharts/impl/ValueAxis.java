@@ -567,10 +567,11 @@ public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<Valu
 				.addListener(
 						eventName,
 						function(event) {
-							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
 							valueAxisThis.@com.amcharts.impl.AmChart::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
-							if (event.event != undefined) {
+							if (event.event == undefined) {
 								console.log('Non Dom Event - > ' + event.type);
+							} else {
+								console.log('Dom Event - > ' + event.type);
 							}
 						});
 	}-*/;

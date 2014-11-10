@@ -10,12 +10,7 @@ public class ClickItemEvent extends AmItemEvent<ClickItemHandler>
 {
 	public static final String NAME = "clickItem";
 
-	private static final Type<ClickItemHandler> TYPE = new Type<ClickItemHandler>();
-
-	public static Type<ClickItemHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<ClickItemHandler> TYPE = new Type<ClickItemHandler>();
 
 	public ClickItemEvent()
 	{

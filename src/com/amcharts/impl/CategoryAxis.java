@@ -387,9 +387,6 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 				.addListener(
 						eventName,
 						function(event) {
-							console.log('event function processed - > '
-									+ eventName);
-							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
 							categoryAxisThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
 							if (event.event == undefined) {
 								console.log('Non Dom Event - > ' + event.type);

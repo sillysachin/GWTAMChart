@@ -13,12 +13,7 @@ public class AxisChangedEvent extends AmChartEvent<AxisChangedHandler>
 {
 	public static final String NAME = "axisChanged";
 
-	private static final Type<AxisChangedHandler> TYPE = new Type<AxisChangedHandler>();
-
-	public static Type<AxisChangedHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<AxisChangedHandler> TYPE = new Type<AxisChangedHandler>();
 
 	public AxisChangedEvent()
 	{

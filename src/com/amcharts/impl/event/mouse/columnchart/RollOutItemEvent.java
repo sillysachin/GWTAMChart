@@ -10,12 +10,7 @@ public class RollOutItemEvent extends AmItemEvent<RollOutItemHandler>
 {
 	public static final String NAME = "rollOutItem";
 
-	private static final Type<RollOutItemHandler> TYPE = new Type<RollOutItemHandler>();
-
-	public static Type<RollOutItemHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<RollOutItemHandler> TYPE = new Type<RollOutItemHandler>();
 
 	public RollOutItemEvent()
 	{

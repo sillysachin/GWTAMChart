@@ -1,6 +1,6 @@
 package com.amcharts.impl.event.mouse.slicedchart;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import com.amcharts.impl.event.AmChartEventJSO;
 /**
  * 
  * @author sachinsr
@@ -10,18 +10,13 @@ public class ClickSliceEvent extends AmSliceEvent<ClickSliceHandler>
 {
 	public static final String NAME = "clickSlice";
 
-	private static final Type<ClickSliceHandler> TYPE = new Type<ClickSliceHandler>();
-
-	public static Type<ClickSliceHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<ClickSliceHandler> TYPE = new Type<ClickSliceHandler>();
 
 	public ClickSliceEvent()
 	{
 	}
 
-	public ClickSliceEvent( JavaScriptObject amChartEventJSO )
+	public ClickSliceEvent( AmChartEventJSO amChartEventJSO )
 	{
 		super( amChartEventJSO );
 	}

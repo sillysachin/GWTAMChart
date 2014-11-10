@@ -568,42 +568,42 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	public HandlerRegistration addClickSliceHandler( ClickSliceHandler handler )
 	{
 		initListener( ClickSliceEvent.getName() );
-		return addHandler( handler, ClickSliceEvent.getType() );
+		return addHandler( handler, ClickSliceEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addRightClickSliceHandler( RightClickSliceHandler handler )
 	{
 		initListener( RightClickSliceEvent.getName() );
-		return addHandler( handler, RightClickSliceEvent.getType() );
+		return addHandler( handler, RightClickSliceEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addPullOutSliceHandler( PullOutSliceHandler handler )
 	{
 		initListener( PullOutSliceEvent.getName() );
-		return addHandler( handler, PullOutSliceEvent.getType() );
+		return addHandler( handler, PullOutSliceEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addPullInSliceHandler( PullInSliceHandler handler )
 	{
 		initListener( PullInSliceEvent.getName() );
-		return addHandler( handler, PullInSliceEvent.getType() );
+		return addHandler( handler, PullInSliceEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addRollOverSliceHandler( RollOverSliceHandler handler )
 	{
 		initListener( RollOverSliceEvent.getName() );
-		return addHandler( handler, RollOverSliceEvent.getType() );
+		return addHandler( handler, RollOverSliceEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addRollOutSliceHandler( RollOutSliceHandler handler )
 	{
 		initListener( RollOutSliceEvent.getName() );
-		return addHandler( handler, RollOutSliceEvent.getType() );
+		return addHandler( handler, RollOutSliceEvent.TYPE );
 	}
 	
 	@Override

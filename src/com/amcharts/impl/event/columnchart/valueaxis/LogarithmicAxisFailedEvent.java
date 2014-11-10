@@ -13,12 +13,7 @@ public class LogarithmicAxisFailedEvent extends AmChartEvent<LogarithmicAxisFail
 {
 	public static final String NAME = "rollOverItem";
 
-	private static final Type<LogarithmicAxisFailedHandler> TYPE = new Type<LogarithmicAxisFailedHandler>();
-
-	public static Type<LogarithmicAxisFailedHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<LogarithmicAxisFailedHandler> TYPE = new Type<LogarithmicAxisFailedHandler>();
 
 	public LogarithmicAxisFailedEvent()
 	{

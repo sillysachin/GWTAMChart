@@ -14,12 +14,7 @@ public class DataUpdatedEvent extends AmChartEvent<DataUpdatedHandler>
 {
 	public static final String NAME = "dataUpdated";
 
-	private static final Type<DataUpdatedHandler> TYPE = new Type<DataUpdatedHandler>();
-
-	public static Type<DataUpdatedHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<DataUpdatedHandler> TYPE = new Type<DataUpdatedHandler>();
 
 	public DataUpdatedEvent()
 	{

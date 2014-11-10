@@ -599,10 +599,11 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 				.addListener(
 						eventName,
 						function(event) {
-							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
 							amChartThis.@com.amcharts.impl.AmChart::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
-							if (event.event != undefined) {
+							if (event.event == undefined) {
 								console.log('Non Dom Event - > ' + event.type);
+							} else {
+								console.log('Dom Event - > ' + event.type);
 							}
 						});
 	}-*/;

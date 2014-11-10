@@ -14,7 +14,6 @@ import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.jso.AmChartJSO;
 import com.appbootup.explore.gwt.client.chart.column.ColumnChartWithEvents;
-import com.appbootup.explore.gwt.client.chart.column.SimpleColumnChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

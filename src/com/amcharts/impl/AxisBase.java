@@ -559,9 +559,6 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 				.addListener(
 						eventName,
 						function(event) {
-							console.log('event function processed - > '
-									+ eventName);
-							@com.amcharts.impl.util.LogUtils::log(Ljava/lang/Object;)(event);
 							axisBaseThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
 							if (event.event == undefined) {
 								console.log('Non Dom Event - > ' + event.type);
@@ -586,8 +583,8 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 					.addListener(
 							eventName,
 							function(event) {
-								console.log('AxisBaseEvents fireEvent-> '
-										+ event)
+								console.log('AxisBaseEvents fireEvent -> ');
+								console.log(event);
 								amChartThis.@com.amcharts.impl.AxisBase::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
 							});
 			console.log('initialized -> ' + eventName + ' : '
@@ -615,18 +612,19 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 
 	protected void fireEvent( AmChartEventJSO event )
 	{
-		GwtEvent< ? > createEvent = AxisBaseChartEventUtils.createEvent( event );
+		GwtEvent< ? > createEvent = AxisBaseChartEventUtils
+				.createEvent( event );
 		if ( createEvent == null )
 		{
-			//TODO:When the event is not in AmSlicedChartEventUtils list then look in AMChartEventUtils
-			GWT.log( "AxisBase cannot process -> " + event.getEvent().getType() );
+			//TODO:When the event is not in AxisBaseChartEventUtils list then look where?
+			GWT.log( "AxisBase cannot process -> " + event.getEvent()
+					.getType() );
 		}
 		else
 		{
 			if ( handlerManager != null )
 			{
-				handlerManager.fireEvent( AxisBaseChartEventUtils
-						.createEvent( event ) );
+				handlerManager.fireEvent( createEvent );
 			}
 		}
 	}
@@ -644,20 +642,20 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 	public HandlerRegistration addRollOverItemHandler( RollOverItemHandler handler )
 	{
 		initListener( RollOverItemEvent.getName() );
-		return addHandler( handler, RollOverItemEvent.getType() );
+		return addHandler( handler, RollOverItemEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addRollOutItemHandler( RollOutItemHandler handler )
 	{
 		initListener( RollOutItemEvent.getName() );
-		return addHandler( handler, RollOutItemEvent.getType() );
+		return addHandler( handler, RollOutItemEvent.TYPE );
 	}
 
 	@Override
 	public HandlerRegistration addClickItemHandler( ClickItemHandler handler )
 	{
 		initListener( ClickItemEvent.getName() );
-		return addHandler( handler, ClickItemEvent.getType() );
+		return addHandler( handler, ClickItemEvent.TYPE );
 	}
 }

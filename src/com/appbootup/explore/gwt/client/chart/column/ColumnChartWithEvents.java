@@ -17,6 +17,7 @@ import com.amcharts.impl.event.mouse.columnchart.RollOutItemEvent;
 import com.amcharts.impl.event.mouse.columnchart.RollOutItemHandler;
 import com.amcharts.impl.event.mouse.columnchart.RollOverItemEvent;
 import com.amcharts.impl.event.mouse.columnchart.RollOverItemHandler;
+import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -87,7 +88,7 @@ public class ColumnChartWithEvents
 		amGraph2.setBulletColor( "#FFFFFF" );
 		amGraph2.setBulletBorderThickness( 3 );
 		//TODO: cannot see setUseLineColorForBulletBorder api in AMChart documentation.
-		amGraph2.setUseLineColorForBulletBorder(true);
+		amGraph2.setUseLineColorForBulletBorder( true );
 		amGraph2.setFillAlphas( 0 );
 		amGraph2.setLineAlpha( 1 );
 		amGraph2.setType( "column" );
@@ -112,48 +113,48 @@ public class ColumnChartWithEvents
 		amSerialChart.setExportConfig( exportConfig );
 		amSerialChart.setSize( "1240px", "500px" );
 
-//		final AmChartListener handleClick = new AmChartListener()
-//		{
-//			@Override
-//			public void function( AmChartEventJSO event )
-//			{
-//				GWT.log( "handleClick - > " + event.getValue() );
-//			}
-//		};
-//		final AmChartListener handleOver = new AmChartListener()
-//		{
-//			@Override
-//			public void function( AmChartEventJSO event )
-//			{
-//				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
-//				//event.getTarget().setAttr( "cursor", "default" );
-//				//event.getTarget().setAttr( "fill", "#000000" );
-//				GWT.log( "handleOver - > " + event.getValue() );
-//			}
-//		};
-//		final AmChartListener handleOut = new AmChartListener()
-//		{
-//			@Override
-//			public void function( AmChartEventJSO event )
-//			{
-//				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
-//				//event.getTarget().setAttr( "cursor", "pointer" );
-//				//event.getTarget().setAttr( "fill", "#CC0000" );
-//				GWT.log( "handleOut - > " );
-//			}
-//		};
-//
-//		amSerialChart.addListener( "rendered", new AmChartListener()
-//		{
-//			public void function( AmChartEventJSO event )
-//			{
-//				GWT.log( "rendered" );
-//				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
-//				categoryAxis.addListener( "clickItem", handleClick );
-//				categoryAxis.addListener( "rollOverItem", handleOver );
-//				categoryAxis.addListener( "rollOutItem", handleOut );
-//			}
-//		} );
+		final AmChartListener handleClick = new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEventJSO event )
+			{
+				GWT.log( "handleClick - > " + event.getValue() );
+			}
+		};
+		final AmChartListener handleOver = new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEventJSO event )
+			{
+				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
+				//event.getTarget().setAttr( "cursor", "default" );
+				//event.getTarget().setAttr( "fill", "#000000" );
+				GWT.log( "handleOver - > " + event.getValue() );
+			}
+		};
+		final AmChartListener handleOut = new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEventJSO event )
+			{
+				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
+				//event.getTarget().setAttr( "cursor", "pointer" );
+				//event.getTarget().setAttr( "fill", "#CC0000" );
+				GWT.log( "handleOut - > " );
+			}
+		};
+
+		amSerialChart.addListener( "rendered", new AmChartListener()
+		{
+			public void function( AmChartEventJSO event )
+			{
+				GWT.log( "rendered" );
+				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
+				categoryAxis.addListener( "clickItem", handleClick );
+				categoryAxis.addListener( "rollOverItem", handleOver );
+				categoryAxis.addListener( "rollOutItem", handleOut );
+			}
+		} );
 
 		final ClickItemHandler clickItemHandler = new ClickItemHandler()
 		{
@@ -161,6 +162,7 @@ public class ColumnChartWithEvents
 			public void onClickItem( ClickItemEvent event )
 			{
 				GWT.log( "clickItemHandler - > " + event.getValue() );
+				LogUtils.log( event );
 			}
 		};
 
@@ -170,6 +172,7 @@ public class ColumnChartWithEvents
 			public void onRollOutItem( RollOutItemEvent event )
 			{
 				GWT.log( "rollOutItemHandler - > " + event.getValue() );
+				LogUtils.log( event );
 			}
 		};
 		final RollOverItemHandler rollOverItemHandler = new RollOverItemHandler()
@@ -178,6 +181,12 @@ public class ColumnChartWithEvents
 			public void onRollOverItem( RollOverItemEvent event )
 			{
 				GWT.log( "rollOverItemHandler - > " + event.getValue() );
+				GWT.log( "rollOverItemHandler - > " + event.getTarget() );
+				GWT.log( "rollOverItemHandler - > " + event.getSerialDataItem() );
+				GWT.log( "rollOverItemHandler - > " + event.getEvent() );
+				GWT.log( "rollOverItemHandler - > " + event.getAxis() );
+				GWT.log( "rollOverItemHandler - > " + event.getType() );
+				LogUtils.log( event );
 			}
 		};
 		amSerialChart.addRenderedHandler( new RenderedHandler()
@@ -185,7 +194,8 @@ public class ColumnChartWithEvents
 			@Override
 			public void onRendered( RenderedEvent event )
 			{
-				GWT.log( "onRendered" );
+				GWT.log( "renderedHandler -> " + event.getType() );
+				LogUtils.log( event );
 				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 				categoryAxis.addClickItemHandler( clickItemHandler );
 				categoryAxis.addRollOutItemHandler( rollOutItemHandler );

@@ -14,12 +14,7 @@ public class DrawEvent extends AmChartEvent<DrawHandler>
 {
 	public static final String NAME = "draw";
 
-	private static final Type<DrawHandler> TYPE = new Type<DrawHandler>();
-
-	public static Type<DrawHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<DrawHandler> TYPE = new Type<DrawHandler>();
 
 	public DrawEvent()
 	{

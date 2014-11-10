@@ -11,12 +11,7 @@ public class RollOverItemEvent extends AmItemEvent<RollOverItemHandler>
 {
 	public static final String NAME = "rollOverItem";
 
-	private static final Type<RollOverItemHandler> TYPE = new Type<RollOverItemHandler>();
-
-	public static Type<RollOverItemHandler> getType()
-	{
-		return TYPE;
-	}
+	public static final Type<RollOverItemHandler> TYPE = new Type<RollOverItemHandler>();
 
 	public RollOverItemEvent()
 	{
