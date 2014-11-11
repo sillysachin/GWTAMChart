@@ -16,7 +16,7 @@ import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Guide;
-import com.amcharts.impl.Legend;
+import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.TrendLine;
@@ -153,9 +153,9 @@ public class WrapperUtils
 		{
 			wrapper = GWT.create( MenuItem.class );
 		}
-		else if ( className.equals( getSimpleName( Legend.class ) ) )
+		else if ( className.equals( getSimpleName( AmLegend.class ) ) )
 		{
-			wrapper = GWT.create( Legend.class );
+			wrapper = GWT.create( AmLegend.class );
 		}
 		else if ( className.equals( getSimpleName( DataItem.class ) ) )
 		{

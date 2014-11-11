@@ -20,7 +20,7 @@ public class JSOWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart" } );
+			{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart","AmLegend"  } );
 
 	public static void main( String args[] ) throws IOException
 	{

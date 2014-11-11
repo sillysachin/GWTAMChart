@@ -81,9 +81,9 @@ public interface IsAmChart
 
 	void setLanguage( String language );
 
-	IsLegend getLegend();
+	IsAmLegend getLegend();
 
-	void setLegend( IsLegend legend );
+	void setLegend( IsAmLegend legend );
 
 	String getLegendDiv();
 

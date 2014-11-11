@@ -7,7 +7,7 @@ import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsLegend;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -246,13 +246,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native IsLegend getLegend()
+	public final native IsAmLegend getLegend()
 	/*-{
 		return this.legend;
 	}-*/;
 
 	@Override
-	public final native void setLegend( IsLegend legend )
+	public final native void setLegend( IsAmLegend legend )
 	/*-{
 		this.legend = legend;
 	}-*/;

@@ -378,7 +378,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	 * type - string like 'axisChanged' (should be listed in 'events' section of this class or classes which extend this class). 
 	 * handler - function which is called when event happens.
 	 */
-	public native double addListener( String eventName, AmChartListener amChartListener )
+	public native void addListener( String eventName, AmChartListener amChartListener )
 	/*-{
 		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var categoryAxisThis = this;

@@ -559,7 +559,7 @@ public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<Valu
 	 * type - string like 'axisChanged' (should be listed in 'events' section of this class or classes which extend this class). 
 	 * handler - function which is called when event happens.
 	 */
-	public native double addListener( String type, AmChartListener handler )
+	public native void addListener( String type, AmChartListener handler )
 	/*-{
 		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var valueAxisThis = this;

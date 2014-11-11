@@ -8,3 +8,9 @@ JSNI
     JSO -> Without use of WrapperUtils an inner jso gets created for each of the extended JSO objects
 
 JSNI -> troubles with Generic when invoking code from JSNI code blocks.
+
+TODO:
+Generalize DataProvider - PieChartBrokenSlices
+Generalize or eliminate wrap and unwrap step
+Color - currently set as string
+Confirm using of int/double/boolean instead of Integer/Double/Boolean. 

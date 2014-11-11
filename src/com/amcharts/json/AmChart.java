@@ -9,7 +9,7 @@ import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsLegend;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
 
@@ -53,7 +53,7 @@ public class AmChart implements IsAmChart
 
 	private String language;
 
-	private IsLegend legend;
+	private IsAmLegend legend;
 
 	private String legendDiv;
 
@@ -313,13 +313,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public IsLegend getLegend()
+	public IsAmLegend getLegend()
 	{
 		return legend;
 	}
 
 	@Override
-	public void setLegend( IsLegend legend )
+	public void setLegend( IsAmLegend legend )
 	{
 		this.legend = legend;
 	}

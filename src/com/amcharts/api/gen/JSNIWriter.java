@@ -20,7 +20,7 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 public class JSNIWriter
 {
 	static List<String> inputs = Arrays.asList( new String[]
-	{ "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart" } );
+	{ "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart","AmLegend" } );
 
 	public static void main( String args[] ) throws IOException
 	{

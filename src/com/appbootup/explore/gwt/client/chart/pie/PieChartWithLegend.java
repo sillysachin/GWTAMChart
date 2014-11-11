@@ -1,9 +1,10 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
-import com.amcharts.api.IsLegend;
+import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.Legend;
+import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
@@ -39,12 +40,12 @@ public class PieChartWithLegend
 		AmPieChart amPieChart = new AmPieChart();
 		amPieChart.setDataProvider( chartData );
 		amPieChart.setTheme( "none" );
-		Legend legend = new Legend();
+		AmLegend legend = new AmLegend();
 		legend.setMarkerType( "circle" );
 		legend.setPosition( "right" );
 		legend.setMarginRight( 80 );
 		legend.setAutoMargins( false );
-		amPieChart.setLegend( ( IsLegend ) legend );
+		amPieChart.setLegend( legend );
 		amPieChart.setValueField( "litres" );
 		amPieChart.setTitleField( "country" );
 		amPieChart.setSize( "1024px", "500px" );

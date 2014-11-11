@@ -16,6 +16,7 @@ public class AttributeReader
 		String cvsSplitBy = "	";
 		List<JavaClassAttribute> javaClassAttributes = new ArrayList<JavaClassAttribute>();
 		String fieldName = null;
+		int counter = 0;
 		try
 		{
 			InputStream inputStream = AttributeReader.class.getClassLoader()
@@ -25,6 +26,7 @@ public class AttributeReader
 			System.out.println( "header -> " + header );
 			while ( ( line = reader.readLine() ) != null )
 			{
+				counter++;
 				String[] variableTokens = line.split( cvsSplitBy );
 				JavaClassAttribute jca = new JavaClassAttribute();
 				for ( int i = 0; i < variableTokens.length; i++ )
@@ -45,7 +47,8 @@ public class AttributeReader
 		}
 		catch ( Exception e )
 		{
-			System.out.println( "Failed reading " + fieldName + " in " + input );
+			System.out
+					.println( "Failed reading line " + counter + "with" + fieldName + " in " + input );
 			e.printStackTrace();
 		}
 		finally

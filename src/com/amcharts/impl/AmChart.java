@@ -8,7 +8,7 @@ import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsLegend;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartEventUtils;
@@ -355,13 +355,13 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native IsLegend getLegend() /*-{
+	public native IsAmLegend getLegend() /*-{
 		var legend = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmChart::jso.legend)
 		return legend;
 	}-*/;
 
 	@Override
-	public native void setLegend( IsLegend legend ) /*-{
+	public native void setLegend( IsAmLegend legend ) /*-{
 		var varLegend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(legend)
 		this.@com.amcharts.impl.AmChart::jso.legend = varLegend;
 	}-*/;
@@ -484,7 +484,7 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 				url);
 	}-*/;
 
-	public native void addLegend( IsLegend legend, String legendDivID )
+	public native void addLegend( IsAmLegend legend, String legendDivID )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var varAmLegend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(legend)
