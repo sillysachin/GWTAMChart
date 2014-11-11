@@ -141,7 +141,7 @@ public class GWTAMChartSample
 	{
 		//TODO:Revisit this and fix later.
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
-		amSerialChart.setPathToImages( "../js/amcharts/images/" );
+		amSerialChart.setPathToImages( "/js/amcharts/images/" );
 		JavaScriptObject serialDataProvider = JsonUtils.unsafeEval( chartData );
 		amSerialChart.setDataProvider( serialDataProvider );
 		amSerialChart.setDataDateFormat( "YYYY-MM-DD" );

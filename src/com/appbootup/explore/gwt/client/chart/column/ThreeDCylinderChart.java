@@ -15,12 +15,12 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class SimpleColumnChart
+public class ThreeDCylinderChart
 {
-	public SimpleColumnChart()
+	public ThreeDCylinderChart()
 	{
 		GWTAMChart.chartService
-				.getData( "/data/simpleColumnChart.json", new AsyncCallback<String>()
+				.getData( "/data/threeDCylinderChart.json", new AsyncCallback<String>()
 				{
 					@Override
 					public void onSuccess( String chartData )
@@ -42,25 +42,28 @@ public class SimpleColumnChart
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
 		amSerialChart.setDataProvider( chartData );
+		amSerialChart.setStartDuration( 2 );
 
 		ValueAxis valueAxis = AmCharts.ValueAxis();
-		valueAxis.setGridColor( "FFFFFF" );
-		valueAxis.setDashLength( 0 );
-		valueAxis.setGridAlpha( 0.2 );
+		//TODO: Provide a enum for position values.
+		valueAxis.setPosition( "left" );
+		valueAxis.setAxisAlpha( 0 );
+		valueAxis.setGridAlpha( 0 );
 		amSerialChart.addValueAxis( valueAxis );
 
-		amSerialChart.setGridAboveGraphs( true );
-		amSerialChart.setStartDuration( 1 );
+		AmGraph amGraph1 = AmCharts.AmGraph();
+		amGraph1.setBalloonText( "[[category]]: <b>[[value]]</b>" );
+		amGraph1.setColorField( "color" );
+		amGraph1.setFillAlphas( 0.85 );
+		amGraph1.setLineAlpha( 0.1 );
+		amGraph1.setType( "column" );
+		amGraph1.setTopRadius( 1 );
+		amGraph1.setValueField( "visits" );
+		amSerialChart.addGraph( amGraph1 );
 
-		AmGraph amGraph = AmCharts.AmGraph();
-		amGraph.setBalloonText( "<b>[[category]]: [[value]]</b>" );
-		amGraph.setLineAlpha( 0.2 );
-		amGraph.setFillAlphas( 0.9 );
-		amGraph.setType( "column" );
-		amGraph.setValueField( "visits" );
-		amSerialChart.addGraph( amGraph );
+		amSerialChart.setDepth3D( 40 );
+		amSerialChart.setAngle( 30 );
 
 		ChartCursor chartCursor = new ChartCursor();
 		chartCursor.setCategoryBalloonEnabled( false );
@@ -72,17 +75,20 @@ public class SimpleColumnChart
 
 		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
+		//TODO: Provide a enum for gridPosition values.
 		categoryAxis.setGridPosition( "start" );
-		categoryAxis.setGridAlpha( 45 );
-		categoryAxis.setTickPosition( "start" );
-		categoryAxis.setTickLength( 20 );
+		categoryAxis.setGridAlpha( 0 );
+		categoryAxis.setAxisAlpha( 0 );
+		//TODO: Provide a enum for position values.
+		categoryAxis.setPosition( "left" );
 
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
 		menuItem.setIcon( "/js/amcharts/images/export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
-		exportConfig.setMenuTop( 0 );
+		exportConfig.setMenuTop( 20 );
+		exportConfig.setMenuRight( 20 );
 		amSerialChart.setExportConfig( exportConfig );
 		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );

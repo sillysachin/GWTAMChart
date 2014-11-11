@@ -52,7 +52,7 @@ public class ColumnChartWithEvents
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "../js/amcharts/images/" );
+		amSerialChart.setPathToImages( "/js/amcharts/images/" );
 		amSerialChart.setDataProvider( chartData );
 
 		amSerialChart.setAutoMargins( false );
