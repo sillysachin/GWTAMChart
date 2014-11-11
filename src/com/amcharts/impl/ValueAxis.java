@@ -602,7 +602,7 @@ public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<Valu
 	/**
 	 * Removes event listener from the object
 	 */
-	public native void removeListener( Object obj, String type, AmChartListener handler )
+	public native void removeListener( JavaScriptObject obj, String type, JavaScriptObject handler )
 	/*-{
 		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		return valueAxis.removeListener(obj, type, handler);

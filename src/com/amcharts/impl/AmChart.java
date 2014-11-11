@@ -539,10 +539,11 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		chart.removeLegend();
 	}-*/;
 
-	public native void removeListener( JavaScriptObject chart, String type, JavaScriptObject handler )
+	//TODO: Need to provide better api than this.
+	public native void removeListener( JavaScriptObject chartJSO, String type, JavaScriptObject handler )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		chart.removeListener(chart, type, handler);
+		chart.removeListener(chartJSO, type, handler);
 	}-*/;
 
 	public native void validateData()

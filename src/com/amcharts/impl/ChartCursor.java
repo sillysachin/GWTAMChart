@@ -3,8 +3,11 @@ package com.amcharts.impl;
 import com.amcharts.api.IsChartCursor;
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsValueAxis;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.ChartCursorJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
+import com.google.gwt.core.client.JavaScriptObject;
 
 public final class ChartCursor implements IJavaScriptWrapper<ChartCursorJSO>, IsChartCursor
 {
@@ -448,5 +451,43 @@ public final class ChartCursor implements IJavaScriptWrapper<ChartCursorJSO>, Is
 	 */
 	public final native void setZooming( boolean zooming ) /*-{
 		this.@com.amcharts.impl.ChartCursor::jso.zooming = zooming;
+	}-*/;
+	
+	/**
+	 * Adds event listener to the object.
+	 * type - string like 'clickLabel' (should be listed in 'events' section of this class or classes which extend this class). 
+	 * handler - function which is called when event happens.
+	 */
+	public native void addListener( String eventName, AmChartListener handler )
+	/*-{
+		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var chartCursorThis = this;
+		console.log('addListener - > ' + eventName);
+		chartCursor
+				.addListener(
+						eventName,
+						function(event) {
+							chartCursorThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(handler,event);
+							if (event.event == undefined) {
+								console.log('Non Dom Event - > ' + event.type);
+							} else {
+								console.log('Dom Event - > ' + event.type);
+							}
+						});
+	}-*/;
+
+	public void handleListener( AmChartListener handler, AmChartEventJSO event )
+	{
+		handler.function( event );
+	}
+
+	/**
+	 * Removes event listener from the chartCursor object.
+	 */
+	//TODO: Need to provide better api than this.
+	public native void removeListener( JavaScriptObject obj, String type, JavaScriptObject handler )
+	/*-{
+		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chartCursor.removeListener(obj, type, handler);
 	}-*/;
 }

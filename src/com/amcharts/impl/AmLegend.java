@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsFunction;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.AmLegendJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -730,5 +732,43 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	 */
 	public final native void setWidth( double width ) /*-{
 		this.@com.amcharts.impl.AmLegend::jso.width = width;
+	}-*/;
+
+	/**
+	 * Adds event listener to the object.
+	 * type - string like 'clickLabel' (should be listed in 'events' section of this class or classes which extend this class). 
+	 * handler - function which is called when event happens.
+	 */
+	public native void addListener( String eventName, AmChartListener handler )
+	/*-{
+		var legend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var legendThis = this;
+		console.log('addListener - > ' + eventName);
+		legend
+				.addListener(
+						eventName,
+						function(event) {
+							legendThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(handler,event);
+							if (event.event == undefined) {
+								console.log('Non Dom Event - > ' + event.type);
+							} else {
+								console.log('Dom Event - > ' + event.type);
+							}
+						});
+	}-*/;
+
+	public void handleListener( AmChartListener handler, AmChartEventJSO event )
+	{
+		handler.function( event );
+	}
+
+	/**
+	 * Removes event listener from the legend object.
+	 */
+	//TODO: Need to provide better api than this.
+	public native void removeListener( JavaScriptObject legendJSO, String type, JavaScriptObject handler )
+	/*-{
+		var legend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		legend.removeListener(legendJSO, type, handler);
 	}-*/;
 }
