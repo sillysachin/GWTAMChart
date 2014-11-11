@@ -408,10 +408,10 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 		getJso().setZoomOutText( zoomOutText );
 	}
 
-	public native void addChartCursor( IsChartCursor chartCursor )
+	public native void addChartCursor( IsChartCursor chartCursorObj )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartCursor)
+		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartCursorObj)
 		chart.addChartCursor(chartCursor);
 	}-*/;
 
@@ -421,10 +421,10 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 		chart.removeChartCursor();
 	}-*/;
 
-	public native void addChartScrollbar( IsChartScrollbar chartScrollbar )
+	public native void addChartScrollbar( IsChartScrollbar chartScrollbarObj )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var chartScrollbar = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartScrollbar)
+		var chartScrollbar = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(chartScrollbarObj)
 		chart.addChartScrollbar(chartScrollbar);
 	}-*/;
 
@@ -434,17 +434,17 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 		chart.removeChartScrollbar();
 	}-*/;
 
-	public native void addTrendLine( IsTrendLine trendLine )
+	public native void addTrendLine( IsTrendLine trendLineObj )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
+		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLineObj)
 		chart.addTrendLine(trendLine);
 	}-*/;
 
-	public native void removeTrendLine( IsTrendLine trendLine )
+	public native void removeTrendLine( IsTrendLine trendLineObj )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
-		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLine)
+		var trendLine = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(trendLineObj)
 		chart.removeTrendLine(trendLine);
 	}-*/;
 }
