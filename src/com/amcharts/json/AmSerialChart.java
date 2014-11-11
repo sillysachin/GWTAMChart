@@ -5,450 +5,328 @@ import java.util.Date;
 import com.amcharts.api.IsAmSerialChart;
 import com.amcharts.api.IsCategoryAxis;
 
-public class AmSerialChart extends AmCoordinateChart implements IsAmSerialChart
+public final class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 {
-	private double angle;
+	private String balloonDateFormat;
 
 	private IsCategoryAxis categoryAxis;
 
-	private String balloonDateFormat;
-
 	private String categoryField;
 
-	private Number columnSpacing;
+	private double columnSpacing;
 
-	private Number columnSpacing3D;
+	private double columnSpacing3D;
 
-	private Number columnWidth;
+	private double columnWidth;
 
 	private String dataDateFormat;
 
 	private Date endDate;
 
-	private Number endIndex;
+	private double endIndex;
 
-	private Number maxSelectedSeries;
+	private double maxSelectedSeries;
 
-	private Number maxSelectedTime;
+	private double maxSelectedTime;
 
-	private Number minSelectedTime;
+	private double minSelectedTime;
 
-	private Boolean mouseWheelScrollEnabled;
+	private boolean mouseWheelScrollEnabled;
 
-	private Boolean mouseWheelZoomEnabled;
+	private boolean mouseWheelZoomEnabled;
 
-	private Boolean rotate;
+	private boolean rotate;
 
 	private Date startDate;
 
-	private Number startIndex;
+	private double startIndex;
 
-	private Boolean zoomOutOnDataUpdate;
+	private boolean zoomOutOnDataUpdate;
 
-	@Override
-	public double getAngle()
-	{
-		return angle;
-	}
-
-	@Override
-	public void setAngle( double angle )
-	{
-		this.angle = angle;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getCategoryAxis()
+	/**
+	 * Date format of the graph balloon (if chart parses dates and you don't use chartCursor).
 	 */
-	@Override
-	public IsCategoryAxis getCategoryAxis()
-	{
-		return categoryAxis;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setCategoryAxis(com.amcharts.api.IsCategoryAxis)
-	 */
-	@Override
-	public void setCategoryAxis( IsCategoryAxis categoryAxis )
-	{
-		this.categoryAxis = categoryAxis;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getBalloonDateFormat()
-	 */
-	@Override
 	public String getBalloonDateFormat()
 	{
 		return balloonDateFormat;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setBalloonDateFormat(java.lang.String)
+	/**
+	 * Date format of the graph balloon (if chart parses dates and you don't use chartCursor).
 	 */
-	@Override
 	public void setBalloonDateFormat( String balloonDateFormat )
 	{
 		this.balloonDateFormat = balloonDateFormat;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getCategoryField()
+	/**
+	 * "Read-only. Chart creates category axis itself. If you want to change some properties, you should get this axis from the chart and set properties to this object."
 	 */
-	@Override
+	public IsCategoryAxis getCategoryAxis()
+	{
+		return categoryAxis;
+	}
+
+	/**
+	 * "Read-only. Chart creates category axis itself. If you want to change some properties, you should get this axis from the chart and set properties to this object."
+	 */
+	public void setCategoryAxis( IsCategoryAxis categoryAxis )
+	{
+		this.categoryAxis = categoryAxis;
+	}
+
+	/**
+	 * Category field name tells the chart the name of the field in your dataProvider object which will be used for category axis values.
+	 */
 	public String getCategoryField()
 	{
 		return categoryField;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setCategoryField(java.lang.String)
+	/**
+	 * Category field name tells the chart the name of the field in your dataProvider object which will be used for category axis values.
 	 */
-	@Override
 	public void setCategoryField( String categoryField )
 	{
 		this.categoryField = categoryField;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing()
+	/**
+	 * The gap in pixels between two columns of the same category.
 	 */
-	@Override
-	public Number getColumnSpacing()
+	public double getColumnSpacing()
 	{
 		return columnSpacing;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing(java.lang.Number)
+	/**
+	 * The gap in pixels between two columns of the same category.
 	 */
-	@Override
-	public void setColumnSpacing( Number columnSpacing )
+	public void setColumnSpacing( double columnSpacing )
 	{
 		this.columnSpacing = columnSpacing;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getColumnSpacing3D()
+	/**
+	 * Space between 3D stacked columns.
 	 */
-	@Override
-	public Number getColumnSpacing3D()
+	public double getColumnSpacing3D()
 	{
 		return columnSpacing3D;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setColumnSpacing3D(java.lang.Number)
+	/**
+	 * Space between 3D stacked columns.
 	 */
-	@Override
-	public void setColumnSpacing3D( Number columnSpacing3D )
+	public void setColumnSpacing3D( double columnSpacing3D )
 	{
 		this.columnSpacing3D = columnSpacing3D;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getColumnWidth()
+	/**
+	 * Relative width of columns. Value range is 0 - 1.
 	 */
-	@Override
-	public Number getColumnWidth()
+	public double getColumnWidth()
 	{
 		return columnWidth;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setColumnWidth(java.lang.Number)
+	/**
+	 * Relative width of columns. Value range is 0 - 1.
 	 */
-	@Override
-	public void setColumnWidth( Number columnWidth )
+	public void setColumnWidth( double columnWidth )
 	{
 		this.columnWidth = columnWidth;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getDataDateFormat()
+	/**
+	 * "Even if your chart parses dates, you can pass them as strings in your data � all you need to do is to set data date format and the chart will parse dates to date objects. Check this page for available formats.Please note that two-digit years (YY) is NOT supported in this setting."
 	 */
-	@Override
 	public String getDataDateFormat()
 	{
 		return dataDateFormat;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setDataDateFormat(java.lang.String)
+	/**
+	 * "Even if your chart parses dates, you can pass them as strings in your data � all you need to do is to set data date format and the chart will parse dates to date objects. Check this page for available formats.Please note that two-digit years (YY) is NOT supported in this setting."
 	 */
-	@Override
 	public void setDataDateFormat( String dataDateFormat )
 	{
 		this.dataDateFormat = dataDateFormat;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getEndDate()
+	/**
+	 * Read-only. If category axis parses dates endDate indicates date to which the chart is currently displayed.
 	 */
-	@Override
 	public Date getEndDate()
 	{
 		return endDate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setEndDate(java.util.Date)
+	/**
+	 * Read-only. If category axis parses dates endDate indicates date to which the chart is currently displayed.
 	 */
-	@Override
 	public void setEndDate( Date endDate )
 	{
 		this.endDate = endDate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getEndIndex()
+	/**
+	 * Read-only. Category index to which the chart is currently displayed.
 	 */
-	@Override
-	public Number getEndIndex()
+	public double getEndIndex()
 	{
 		return endIndex;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setEndIndex(java.lang.Number)
+	/**
+	 * Read-only. Category index to which the chart is currently displayed.
 	 */
-	@Override
-	public void setEndIndex( Number endIndex )
+	public void setEndIndex( double endIndex )
 	{
 		this.endIndex = endIndex;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedSeries()
+	/**
+	 * Maximum number of series allowed to select.
 	 */
-	@Override
-	public Number getMaxSelectedSeries()
+	public double getMaxSelectedSeries()
 	{
 		return maxSelectedSeries;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedSeries(java.lang.Number)
+	/**
+	 * Maximum number of series allowed to select.
 	 */
-	@Override
-	public void setMaxSelectedSeries( Number maxSelectedSeries )
+	public void setMaxSelectedSeries( double maxSelectedSeries )
 	{
 		this.maxSelectedSeries = maxSelectedSeries;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getMaxSelectedTime()
+	/**
+	 * "The longest time span allowed to select (in milliseconds) for example, 259200000 will limit selection to 3 days. Works if equalSpacing is set to false (default)."
 	 */
-	@Override
-	public Number getMaxSelectedTime()
+	public double getMaxSelectedTime()
 	{
 		return maxSelectedTime;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setMaxSelectedTime(java.lang.Number)
+	/**
+	 * "The longest time span allowed to select (in milliseconds) for example, 259200000 will limit selection to 3 days. Works if equalSpacing is set to false (default)."
 	 */
-	@Override
-	public void setMaxSelectedTime( Number maxSelectedTime )
+	public void setMaxSelectedTime( double maxSelectedTime )
 	{
 		this.maxSelectedTime = maxSelectedTime;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getMinSelectedTime()
+	/**
+	 * "The shortest time span allowed to select (in milliseconds) for example, 1000 will limit selection to 1 second. Works if equalSpacing is set to false (default)."
 	 */
-	@Override
-	public Number getMinSelectedTime()
+	public double getMinSelectedTime()
 	{
 		return minSelectedTime;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setMinSelectedTime(java.lang.Number)
+	/**
+	 * "The shortest time span allowed to select (in milliseconds) for example, 1000 will limit selection to 1 second. Works if equalSpacing is set to false (default)."
 	 */
-	@Override
-	public void setMinSelectedTime( Number minSelectedTime )
+	public void setMinSelectedTime( double minSelectedTime )
 	{
 		this.minSelectedTime = minSelectedTime;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelScrollEnabled()
+	/**
+	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	@Override
-	public Boolean getMouseWheelScrollEnabled()
+	public boolean isMouseWheelScrollEnabled()
 	{
 		return mouseWheelScrollEnabled;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelScrollEnabled(java.lang.Boolean)
+	/**
+	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	@Override
-	public void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
+	public void setMouseWheelScrollEnabled( boolean mouseWheelScrollEnabled )
 	{
 		this.mouseWheelScrollEnabled = mouseWheelScrollEnabled;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getMouseWheelZoomEnabled()
+	/**
+	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	@Override
-	public Boolean getMouseWheelZoomEnabled()
+	public boolean isMouseWheelZoomEnabled()
 	{
 		return mouseWheelZoomEnabled;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setMouseWheelZoomEnabled(java.lang.Boolean)
+	/**
+	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	@Override
-	public void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
+	public void setMouseWheelZoomEnabled( boolean mouseWheelZoomEnabled )
 	{
 		this.mouseWheelZoomEnabled = mouseWheelZoomEnabled;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getRotate()
+	/**
+	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	@Override
-	public Boolean getRotate()
+	public boolean isRotate()
 	{
 		return rotate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setRotate(java.lang.Boolean)
+	/**
+	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	@Override
-	public void setRotate( Boolean rotate )
+	public void setRotate( boolean rotate )
 	{
 		this.rotate = rotate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getStartDate()
+	/**
+	 * Read-only. If category axis parses dates startDate indicates date from which the chart is currently displayed.
 	 */
-	@Override
 	public Date getStartDate()
 	{
 		return startDate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setStartDate(java.util.Date)
+	/**
+	 * Read-only. If category axis parses dates startDate indicates date from which the chart is currently displayed.
 	 */
-	@Override
 	public void setStartDate( Date startDate )
 	{
 		this.startDate = startDate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getStartIndex()
+	/**
+	 * Read-only. Category index from which the chart is currently displayed.
 	 */
-	@Override
-	public Number getStartIndex()
+	public double getStartIndex()
 	{
 		return startIndex;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setStartIndex(java.lang.Number)
+	/**
+	 * Read-only. Category index from which the chart is currently displayed.
 	 */
-	@Override
-	public void setStartIndex( Number startIndex )
+	public void setStartIndex( double startIndex )
 	{
 		this.startIndex = startIndex;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#getZoomOutOnDataUpdate()
+	/**
+	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	@Override
-	public Boolean getZoomOutOnDataUpdate()
+	public boolean isZoomOutOnDataUpdate()
 	{
 		return zoomOutOnDataUpdate;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.amcharts.json.IsAmSerialChart#setZoomOutOnDataUpdate(java.lang.Boolean)
+	/**
+	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	@Override
-	public void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
+	public void setZoomOutOnDataUpdate( boolean zoomOutOnDataUpdate )
 	{
 		this.zoomOutOnDataUpdate = zoomOutOnDataUpdate;
 	}

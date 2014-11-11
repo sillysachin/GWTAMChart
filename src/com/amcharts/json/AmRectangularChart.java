@@ -7,7 +7,7 @@ import com.amcharts.api.IsChartCursor;
 import com.amcharts.api.IsChartScrollbar;
 import com.amcharts.api.IsTrendLine;
 
-public final class AmRectangularChart extends AmCoordinateChart implements IsAmRectangularChart
+public class AmRectangularChart extends AmCoordinateChart implements IsAmRectangularChart
 {
 	private double angle;
 
