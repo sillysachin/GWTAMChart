@@ -322,4 +322,54 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	{
 		getJso().setZoomOutOnDataUpdate( zoomOutOnDataUpdate );
 	}
+
+	/**
+	 * 
+	 * @param value - series (category value) which index you want to find.
+	 * @return Returns index of the specified category value.
+	 */
+	public native double getCategoryIndexByValue( String value )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		return chart.getCategoryIndexByValue(value);
+	}-*/;
+
+	/**
+	 * Zooms out, charts shows all available data.
+	 */
+	public native void zoomOut()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.zoomOut();
+	}-*/;
+
+	/**
+	 * Zooms the chart by the value of the category axis.
+	 * @param start - category value, String \\ end - category value, String.	
+	 */
+	public native double zoomToCategoryValues( String start, String end )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.zoomToCategoryValues(start, end);
+	}-*/;
+
+	/**
+	 * Zooms the chart from one date to another.
+	 * @param start date, Date object \\ end - end date, Date object.	
+	 */
+	public native double zoomToDates( Date start, Date end )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.zoomToDates(start, end);
+	}-*/;
+
+	/**
+	 * Zooms the chart by the index of the category.
+	 * @param start index, Number \\ end - end index, Number	
+	 */
+	public native double zoomToIndexes( double start, double end )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this)
+		chart.zoomToIndexes(start, end);
+	}-*/;
 }
