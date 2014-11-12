@@ -1,15 +1,18 @@
-package com.amcharts.impl;
+package com.amcharts.jso;
 
 import com.amcharts.api.IsSerialDataItem;
-import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.DataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class SerialDataItem extends DataItem implements IsSerialDataItem
+public final class SerialDataItemJSO extends JavaScriptObject implements IsSerialDataItem
 {
+	protected SerialDataItemJSO()
+	{
+	}
+
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
+	//TODO: Object needs to be provided with correct structure to allow for graphDataItem = serialDataItem.axes[axisId].graphs[graphId]
 	public final native JavaScriptObject getAxes()
 	/*-{
 		return this.axes;
@@ -38,7 +41,7 @@ public final class SerialDataItem extends DataItem implements IsSerialDataItem
 		this.category = category;
 	}-*/;
 
-	public final native DataContext getDataContext()
+	public final native JavaScriptObject getDataContext()
 	/*-{
 		return this.dataContext;
 	}-*/;

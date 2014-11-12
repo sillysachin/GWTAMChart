@@ -8,7 +8,7 @@ public final class Label implements IJavaScriptWrapper<LabelJSO>, IsLabel
 {
 	private LabelJSO jso;
 
-	protected Label()
+	public Label()
 	{
 		jso = createJso();
 	}

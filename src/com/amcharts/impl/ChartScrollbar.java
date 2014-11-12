@@ -10,7 +10,7 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 {
 	private ChartScrollbarJSO jso;
 
-	protected ChartScrollbar()
+	public ChartScrollbar()
 	{
 		jso = createJso();
 	}
@@ -25,7 +25,7 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 		this.jso = jso;
 	}
 
-	public native ChartScrollbarJSO createJso() 
+	public native ChartScrollbarJSO createJso()
 	/*-{
 		var chartScrollbar = new $wnd.AmCharts.ChartScrollbar();
 		return chartScrollbar;

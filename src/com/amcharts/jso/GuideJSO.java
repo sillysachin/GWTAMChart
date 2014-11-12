@@ -1,425 +1,406 @@
-package com.amcharts.impl;
+package com.amcharts.jso;
 
 import java.util.Date;
 
 import com.amcharts.api.IsGuide;
 import com.amcharts.api.IsValueAxis;
-import com.amcharts.jso.GuideJSO;
-import com.google.gwt.core.client.IJavaScriptWrapper;
+import com.google.gwt.core.client.JavaScriptObject;
 
-public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
+public final class GuideJSO extends JavaScriptObject implements IsGuide
 {
-	private GuideJSO jso;
-
-	public Guide()
+	protected GuideJSO()
 	{
-		jso = createJso();
 	}
-
-	public GuideJSO getJso()
-	{
-		return this.jso;
-	}
-
-	public void setJso( GuideJSO jso )
-	{
-		this.jso = jso;
-	}
-
-	public native GuideJSO createJso() /*-{
-		var guide = new $wnd.AmCharts.Guide();
-		return guide;
-	}-*/;
 
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
 	public final native boolean isAbove() /*-{
-		return this.@com.amcharts.impl.Guide::jso.above;
+		return above;
 	}-*/;
 
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
 	public final native void setAbove( boolean above ) /*-{
-		this.@com.amcharts.impl.Guide::jso.above = above;
+		this.above = above;
 	}-*/;
 
 	/**
 	 * "Radar chart only. Specifies angle at which guide should start. Affects only fills, not lines."
 	 */
 	public final native double getAngle() /*-{
-		return this.@com.amcharts.impl.Guide::jso.angle;
+		return angle;
 	}-*/;
 
 	/**
 	 * "Radar chart only. Specifies angle at which guide should start. Affects only fills, not lines."
 	 */
 	public final native void setAngle( double angle ) /*-{
-		this.@com.amcharts.impl.Guide::jso.angle = angle;
+		this.angle = angle;
 	}-*/;
 
 	/**
 	 * Baloon fill color.
 	 */
 	public final native String getBalloonColor() /*-{
-		return this.@com.amcharts.impl.Guide::jso.balloonColor;
+		return balloonColor;
 	}-*/;
 
 	/**
 	 * Baloon fill color.
 	 */
 	public final native void setBalloonColor( String balloonColor ) /*-{
-		this.@com.amcharts.impl.Guide::jso.balloonColor = balloonColor;
+		this.balloonColor = balloonColor;
 	}-*/;
 
 	/**
 	 * The text which will be displayed if the user rolls-over the guide.
 	 */
 	public final native String getBalloonText() /*-{
-		return this.@com.amcharts.impl.Guide::jso.balloonText;
+		return balloonText;
 	}-*/;
 
 	/**
 	 * The text which will be displayed if the user rolls-over the guide.
 	 */
 	public final native void setBalloonText( String balloonText ) /*-{
-		this.@com.amcharts.impl.Guide::jso.balloonText = balloonText;
+		this.balloonText = balloonText;
 	}-*/;
 
 	/**
 	 * Specifies if label should be bold or not.
 	 */
 	public final native boolean isBoldLabel() /*-{
-		return this.@com.amcharts.impl.Guide::jso.boldLabel;
+		return boldLabel;
 	}-*/;
 
 	/**
 	 * Specifies if label should be bold or not.
 	 */
 	public final native void setBoldLabel( boolean boldLabel ) /*-{
-		this.@com.amcharts.impl.Guide::jso.boldLabel = boldLabel;
+		this.boldLabel = boldLabel;
 	}-*/;
 
 	/**
 	 * Category of the guide (in case the guide is for category axis).
 	 */
 	public final native String getCategory() /*-{
-		return this.@com.amcharts.impl.Guide::jso.category;
+		return category;
 	}-*/;
 
 	/**
 	 * Category of the guide (in case the guide is for category axis).
 	 */
 	public final native void setCategory( String category ) /*-{
-		this.@com.amcharts.impl.Guide::jso.category = category;
+		this.category = category;
 	}-*/;
 
 	/**
 	 * Color of a guide label.
 	 */
 	public final native String getColor() /*-{
-		return this.@com.amcharts.impl.Guide::jso.color;
+		return color;
 	}-*/;
 
 	/**
 	 * Color of a guide label.
 	 */
 	public final native void setColor( String color ) /*-{
-		this.@com.amcharts.impl.Guide::jso.color = color;
+		this.color = color;
 	}-*/;
 
 	/**
 	 * Dash length.
 	 */
 	public final native double getDashLength() /*-{
-		return this.@com.amcharts.impl.Guide::jso.dashLength;
+		return dashLength;
 	}-*/;
 
 	/**
 	 * Dash length.
 	 */
 	public final native void setDashLength( double dashLength ) /*-{
-		this.@com.amcharts.impl.Guide::jso.dashLength = dashLength;
+		this.dashLength = dashLength;
 	}-*/;
 
 	/**
 	 * Date of the guide (in case the guide is for category axis and parseDates is set to true).
 	 */
 	public final native Date getDate() /*-{
-		return this.@com.amcharts.impl.Guide::jso.date;
+		return date;
 	}-*/;
 
 	/**
 	 * Date of the guide (in case the guide is for category axis and parseDates is set to true).
 	 */
 	public final native void setDate( Date date ) /*-{
-		this.@com.amcharts.impl.Guide::jso.date = date;
+		this.date = date;
 	}-*/;
 
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
 	public final native boolean isExpand() /*-{
-		return this.@com.amcharts.impl.Guide::jso.expand;
+		return expand;
 	}-*/;
 
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
 	public final native void setExpand( boolean expand ) /*-{
-		this.@com.amcharts.impl.Guide::jso.expand = expand;
+		this.expand = expand;
 	}-*/;
 
 	/**
 	 * Fill opacity. Value range is 0 - 1.
 	 */
 	public final native double getFillAlpha() /*-{
-		return this.@com.amcharts.impl.Guide::jso.fillAlpha;
+		return fillAlpha;
 	}-*/;
 
 	/**
 	 * Fill opacity. Value range is 0 - 1.
 	 */
 	public final native void setFillAlpha( double fillAlpha ) /*-{
-		this.@com.amcharts.impl.Guide::jso.fillAlpha = fillAlpha;
+		this.fillAlpha = fillAlpha;
 	}-*/;
 
 	/**
 	 * Fill color.
 	 */
 	public final native String getFillColor() /*-{
-		return this.@com.amcharts.impl.Guide::jso.fillColor;
+		return fillColor;
 	}-*/;
 
 	/**
 	 * Fill color.
 	 */
 	public final native void setFillColor( String fillColor ) /*-{
-		this.@com.amcharts.impl.Guide::jso.fillColor = fillColor;
+		this.fillColor = fillColor;
 	}-*/;
 
 	/**
 	 * Font size of guide label.
 	 */
 	public final native double getFontSize() /*-{
-		return this.@com.amcharts.impl.Guide::jso.fontSize;
+		return fontSize;
 	}-*/;
 
 	/**
 	 * Font size of guide label.
 	 */
 	public final native void setFontSize( double fontSize ) /*-{
-		this.@com.amcharts.impl.Guide::jso.fontSize = fontSize;
+		this.fontSize = fontSize;
 	}-*/;
 
 	/**
 	 * "Unique id of a Guide. You don't need to set it, unless you want to."
 	 */
 	public final native String getId() /*-{
-		return this.@com.amcharts.impl.Guide::jso.id;
+		return id;
 	}-*/;
 
 	/**
 	 * "Unique id of a Guide. You don't need to set it, unless you want to."
 	 */
 	public final native void setId( String id ) /*-{
-		this.@com.amcharts.impl.Guide::jso.id = id;
+		this.id = id;
 	}-*/;
 
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
 	public final native boolean isInside() /*-{
-		return this.@com.amcharts.impl.Guide::jso.inside;
+		return inside;
 	}-*/;
 
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
 	public final native void setInside( boolean inside ) /*-{
-		this.@com.amcharts.impl.Guide::jso.inside = inside;
+		this.inside = inside;
 	}-*/;
 
 	/**
 	 * The label which will be displayed near the guide.
 	 */
 	public final native String getLabel() /*-{
-		return this.@com.amcharts.impl.Guide::jso.label;
+		return label;
 	}-*/;
 
 	/**
 	 * The label which will be displayed near the guide.
 	 */
 	public final native void setLabel( String label ) /*-{
-		this.@com.amcharts.impl.Guide::jso.label = label;
+		this.label = label;
 	}-*/;
 
 	/**
 	 * Rotation angle of a guide label.
 	 */
 	public final native double getLabelRotation() /*-{
-		return this.@com.amcharts.impl.Guide::jso.labelRotation;
+		return labelRotation;
 	}-*/;
 
 	/**
 	 * Rotation angle of a guide label.
 	 */
 	public final native void setLabelRotation( double labelRotation ) /*-{
-		this.@com.amcharts.impl.Guide::jso.labelRotation = labelRotation;
+		this.labelRotation = labelRotation;
 	}-*/;
 
 	/**
 	 * Line opacity.
 	 */
 	public final native double getLineAlpha() /*-{
-		return this.@com.amcharts.impl.Guide::jso.lineAlpha;
+		return lineAlpha;
 	}-*/;
 
 	/**
 	 * Line opacity.
 	 */
 	public final native void setLineAlpha( double lineAlpha ) /*-{
-		this.@com.amcharts.impl.Guide::jso.lineAlpha = lineAlpha;
+		this.lineAlpha = lineAlpha;
 	}-*/;
 
 	/**
 	 * Line color.
 	 */
 	public final native String getLineColor() /*-{
-		return this.@com.amcharts.impl.Guide::jso.lineColor;
+		return lineColor;
 	}-*/;
 
 	/**
 	 * Line color.
 	 */
 	public final native void setLineColor( String lineColor ) /*-{
-		this.@com.amcharts.impl.Guide::jso.lineColor = lineColor;
+		this.lineColor = lineColor;
 	}-*/;
 
 	/**
 	 * Line thickness.
 	 */
 	public final native double getLineThickness() /*-{
-		return this.@com.amcharts.impl.Guide::jso.lineThickness;
+		return lineThickness;
 	}-*/;
 
 	/**
 	 * Line thickness.
 	 */
 	public final native void setLineThickness( double lineThickness ) /*-{
-		this.@com.amcharts.impl.Guide::jso.lineThickness = lineThickness;
+		this.lineThickness = lineThickness;
 	}-*/;
 
 	/**
 	 * Position of guide label. Possible values are 'left' or 'right' for horizontal axis and 'top' or 'bottom' for vertical axis.
 	 */
 	public final native String getPosition() /*-{
-		return this.@com.amcharts.impl.Guide::jso.position;
+		return position;
 	}-*/;
 
 	/**
 	 * Position of guide label. Possible values are 'left' or 'right' for horizontal axis and 'top' or 'bottom' for vertical axis.
 	 */
 	public final native void setPosition( String position ) /*-{
-		this.@com.amcharts.impl.Guide::jso.position = position;
+		this.position = position;
 	}-*/;
 
 	/**
 	 * Tick length.
 	 */
 	public final native double getTickLength() /*-{
-		return this.@com.amcharts.impl.Guide::jso.tickLength;
+		return tickLength;
 	}-*/;
 
 	/**
 	 * Tick length.
 	 */
 	public final native void setTickLength( double tickLength ) /*-{
-		this.@com.amcharts.impl.Guide::jso.tickLength = tickLength;
+		this.tickLength = tickLength;
 	}-*/;
 
 	/**
 	 * "Radar chart only. Specifies angle at which guide should end. Affects only fills, not lines."
 	 */
 	public final native double getToAngle() /*-{
-		return this.@com.amcharts.impl.Guide::jso.toAngle;
+		return toAngle;
 	}-*/;
 
 	/**
 	 * "Radar chart only. Specifies angle at which guide should end. Affects only fills, not lines."
 	 */
 	public final native void setToAngle( double toAngle ) /*-{
-		this.@com.amcharts.impl.Guide::jso.toAngle = toAngle;
+		this.toAngle = toAngle;
 	}-*/;
 
 	/**
 	 * To' category of the guide (in case the guide is for category axis).
 	 */
 	public final native String getToCategory() /*-{
-		return this.@com.amcharts.impl.Guide::jso.toCategory;
+		return toCategory;
 	}-*/;
 
 	/**
 	 * To' category of the guide (in case the guide is for category axis).
 	 */
 	public final native void setToCategory( String toCategory ) /*-{
-		this.@com.amcharts.impl.Guide::jso.toCategory = toCategory;
+		this.toCategory = toCategory;
 	}-*/;
 
 	/**
 	 * "To' date of the guide (in case the guide is for category axis and parseDates is set to true) If you have both date and toDate, the space between these two dates can be filled with color."
 	 */
 	public final native Date getToDate() /*-{
-		return this.@com.amcharts.impl.Guide::jso.toDate;
+		return toDate;
 	}-*/;
 
 	/**
 	 * "To' date of the guide (in case the guide is for category axis and parseDates is set to true) If you have both date and toDate, the space between these two dates can be filled with color."
 	 */
 	public final native void setToDate( Date toDate ) /*-{
-		this.@com.amcharts.impl.Guide::jso.toDate = toDate;
+		this.toDate = toDate;
 	}-*/;
 
 	/**
 	 * To' value of the guide (in case the guide is for value axis).
 	 */
 	public final native double getToValue() /*-{
-		return this.@com.amcharts.impl.Guide::jso.toValue;
+		return toValue;
 	}-*/;
 
 	/**
 	 * To' value of the guide (in case the guide is for value axis).
 	 */
 	public final native void setToValue( double toValue ) /*-{
-		this.@com.amcharts.impl.Guide::jso.toValue = toValue;
+		this.toValue = toValue;
 	}-*/;
 
 	/**
 	 * Value of the guide (in case the guide is for value axis).
 	 */
 	public final native double getValue() /*-{
-		return this.@com.amcharts.impl.Guide::jso.value;
+		return value;
 	}-*/;
 
 	/**
 	 * Value of the guide (in case the guide is for value axis).
 	 */
 	public final native void setValue( double value ) /*-{
-		this.@com.amcharts.impl.Guide::jso.value = value;
+		this.value = value;
 	}-*/;
 
 	/**
 	 * "Value axis of a guide. As you can add guides directly to the chart, you might need to specify which which value axis should be used."
 	 */
 	public final native IsValueAxis getValueAxis() /*-{
-		return this.@com.amcharts.impl.Guide::jso.valueAxis;
+		return valueAxis;
 	}-*/;
 
 	/**
 	 * "Value axis of a guide. As you can add guides directly to the chart, you might need to specify which which value axis should be used."
 	 */
 	public final native void setValueAxis( IsValueAxis valueAxis ) /*-{
-		this.@com.amcharts.impl.Guide::jso.valueAxis = valueAxis;
+		this.valueAxis = valueAxis;
 	}-*/;
 }

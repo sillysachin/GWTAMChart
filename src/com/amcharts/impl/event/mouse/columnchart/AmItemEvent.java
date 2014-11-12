@@ -1,6 +1,6 @@
 package com.amcharts.impl.event.mouse.columnchart;
 
-import com.amcharts.impl.SerialDataItem;
+import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.Target;
 import com.amcharts.impl.event.AmChartDomEvent;
 import com.amcharts.impl.event.AmChartEventJSO;
@@ -18,12 +18,12 @@ public abstract class AmItemEvent<H extends AmChartHandler> extends AmChartDomEv
 		super( amChartEventJSO );
 	}
 
-	public SerialDataItem getSerialDataItem()
+	public IsSerialDataItem getSerialDataItem()
 	{
 		return getJso().getSerialDataItem();
 	}
 
-	public void setSerialDataItem( SerialDataItem serialDataItem )
+	public void setSerialDataItem( IsSerialDataItem serialDataItem )
 	{
 		getJso().setSerialDataItem( serialDataItem );
 	}

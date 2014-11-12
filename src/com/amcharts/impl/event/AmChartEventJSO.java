@@ -1,6 +1,6 @@
 package com.amcharts.impl.event;
 
-import com.amcharts.impl.SerialDataItem;
+import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.Target;
 import com.amcharts.jso.AmChartJSO;
 import com.amcharts.jso.AxisBaseJSO;
@@ -57,7 +57,7 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.dataItem = dataItem;
 	}-*/;
 
-	public final native SerialDataItem getSerialDataItem()
+	public final native IsSerialDataItem getSerialDataItem()
 	/*-{
 		if (this.serialDataItem != null) {
 			this.serialDataItem.className = 'SerialDataItem';
@@ -65,7 +65,7 @@ public class AmChartEventJSO extends JavaScriptObject
 		return this.serialDataItem;
 	}-*/;
 
-	public final native void setSerialDataItem( SerialDataItem serialDataItem )
+	public final native void setSerialDataItem( IsSerialDataItem serialDataItem )
 	/*-{
 		this.serialDataItem = serialDataItem;
 	}-*/;

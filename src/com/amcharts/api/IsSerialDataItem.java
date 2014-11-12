@@ -1,97 +1,56 @@
-package com.amcharts.json;
+package com.amcharts.api;
 
-import com.amcharts.api.IsSerialDataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class SerialDataItem implements IsSerialDataItem
+public interface IsSerialDataItem
 {
-	private JavaScriptObject axes;
-
-	private String category;
-
-	private JavaScriptObject dataContext;
-
-	private double time;
-
-	private double x;
+	/**
+	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
+	 */
+	public JavaScriptObject getAxes();
 
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
-	public JavaScriptObject getAxes()
-	{
-		return axes;
-	}
-
-	/**
-	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
-	 */
-	public void setAxes( JavaScriptObject axes )
-	{
-		this.axes = axes;
-	}
+	public void setAxes( JavaScriptObject axes );
 
 	/**
 	 * "category value. String if parseDates is false, Date if true."
 	 */
-	public String getCategory()
-	{
-		return category;
-	}
+	public String getCategory();
 
 	/**
 	 * "category value. String if parseDates is false, Date if true."
 	 */
-	public void setCategory( String category )
-	{
-		this.category = category;
-	}
+	public void setCategory( String category );
 
 	/**
 	 * "Reference to original data object, from dataProvider."
 	 */
-	public JavaScriptObject getDataContext()
-	{
-		return dataContext;
-	}
+	public JavaScriptObject getDataContext();
 
 	/**
 	 * "Reference to original data object, from dataProvider."
 	 */
-	public void setDataContext( JavaScriptObject dataContext )
-	{
-		this.dataContext = dataContext;
-	}
+	public void setDataContext( JavaScriptObject dataContext );
 
 	/**
 	 * Time stamp of a series date. Avalable only if parseDates property of CategoryAxis is set to true.
 	 */
-	public double getTime()
-	{
-		return time;
-	}
+	public double getTime();
 
 	/**
 	 * Time stamp of a series date. Avalable only if parseDates property of CategoryAxis is set to true.
 	 */
-	public void setTime( double time )
-	{
-		this.time = time;
-	}
+	public void setTime( double time );
 
 	/**
 	 * "Coordinate (horizontal or vertical, depends on chart's rotate property) of the series."
 	 */
-	public double getX()
-	{
-		return x;
-	}
+	public double getX();
 
 	/**
 	 * "Coordinate (horizontal or vertical, depends on chart's rotate property) of the series."
 	 */
-	public void setX( double x )
-	{
-		this.x = x;
-	}
+	public void setX( double x );
 }

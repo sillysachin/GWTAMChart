@@ -1,0 +1,1 @@
+Field Name	JS Datatype	Default	Java Datatype	Descriptionalpha	Number	1	double	Opacity of a title.bold	Boolean	FALSE	boolean	Specifies if title should be bold or not.color	Color		String	Text color of a title.id	String		String	"Unique id of a Title. You don't need to set it, unless you want to."size	Number		double	Text size of a title.text	String		String	Text of a title.

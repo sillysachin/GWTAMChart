@@ -1,279 +1,224 @@
-package com.amcharts.json;
+package com.amcharts.jso;
 
 import java.util.List;
 
 import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.api.IsSerialDataItem;
+import com.google.gwt.core.client.JavaScriptObject;
 
-public final class GraphDataItem implements IsGraphDataItem
+public final class GraphDataItemJSO extends JavaScriptObject implements IsGraphDataItem
 {
-	private double alpha;
-
-	private String bullet;
-
-	private double bulletSize;
-
-	private String category;
-
-	private String color;
-
-	private String customBullet;
-
-	private Object dataContext;
-
-	private String description;
-
-	private List<String> fillColors;
-
-	private Object percents;
-
-	private IsSerialDataItem serialDataItem;
-
-	private String url;
-
-	private Object values;
-
-	private double x;
-
-	private double y;
+	protected GraphDataItemJSO()
+	{
+	}
 
 	/**
 	 * Opacity of the data item.
 	 */
-	public double getAlpha()
-	{
+	public final native double getAlpha() /*-{
 		return alpha;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of the data item.
 	 */
-	public void setAlpha( double alpha )
-	{
+	public final native void setAlpha( double alpha ) /*-{
 		this.alpha = alpha;
-	}
+	}-*/;
 
 	/**
 	 * Bullet type.
 	 */
-	public String getBullet()
-	{
+	public final native String getBullet() /*-{
 		return bullet;
-	}
+	}-*/;
 
 	/**
 	 * Bullet type.
 	 */
-	public void setBullet( String bullet )
-	{
+	public final native void setBullet( String bullet ) /*-{
 		this.bullet = bullet;
-	}
+	}-*/;
 
 	/**
 	 * Bullet size.
 	 */
-	public double getBulletSize()
-	{
+	public final native double getBulletSize() /*-{
 		return bulletSize;
-	}
+	}-*/;
 
 	/**
 	 * Bullet size.
 	 */
-	public void setBulletSize( double bulletSize )
-	{
+	public final native void setBulletSize( double bulletSize ) /*-{
 		this.bulletSize = bulletSize;
-	}
+	}-*/;
 
 	/**
 	 * Category value.
 	 */
-	public String getCategory()
-	{
+	public final native String getCategory() /*-{
 		return category;
-	}
+	}-*/;
 
 	/**
 	 * Category value.
 	 */
-	public void setCategory( String category )
-	{
+	public final native void setCategory( String category ) /*-{
 		this.category = category;
-	}
+	}-*/;
 
 	/**
 	 * Color of the data item.
 	 */
-	public String getColor()
-	{
+	public final native String getColor() /*-{
 		return color;
-	}
+	}-*/;
 
 	/**
 	 * Color of the data item.
 	 */
-	public void setColor( String color )
-	{
+	public final native void setColor( String color ) /*-{
 		this.color = color;
-	}
+	}-*/;
 
 	/**
 	 * Custom bullet (path to file name).
 	 */
-	public String getCustomBullet()
-	{
+	public final native String getCustomBullet() /*-{
 		return customBullet;
-	}
+	}-*/;
 
 	/**
 	 * Custom bullet (path to file name).
 	 */
-	public void setCustomBullet( String customBullet )
-	{
+	public final native void setCustomBullet( String customBullet ) /*-{
 		this.customBullet = customBullet;
-	}
+	}-*/;
 
 	/**
 	 * Original object from data provider.
 	 */
-	public Object getDataContext()
-	{
+	public final native Object getDataContext() /*-{
 		return dataContext;
-	}
+	}-*/;
 
 	/**
 	 * Original object from data provider.
 	 */
-	public void setDataContext( Object dataContext )
-	{
+	public final native void setDataContext( Object dataContext ) /*-{
 		this.dataContext = dataContext;
-	}
+	}-*/;
 
 	/**
 	 * Description.
 	 */
-	public String getDescription()
-	{
+	public final native String getDescription() /*-{
 		return description;
-	}
+	}-*/;
 
 	/**
 	 * Description.
 	 */
-	public void setDescription( String description )
-	{
+	public final native void setDescription( String description ) /*-{
 		this.description = description;
-	}
+	}-*/;
 
 	/**
 	 * "Array of colors of the data item, used by column and candlestick chart only."
 	 */
-	public List<String> getFillColors()
-	{
+	public final native List<String> getFillColors() /*-{
 		return fillColors;
-	}
+	}-*/;
 
 	/**
 	 * "Array of colors of the data item, used by column and candlestick chart only."
 	 */
-	public void setFillColors( List<String> fillColors )
-	{
+	public final native void setFillColors( List<String> fillColors ) /*-{
 		this.fillColors = fillColors;
-	}
+	}-*/;
 
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public Object getPercents()
-	{
+	public final native Object getPercents() /*-{
 		return percents;
-	}
+	}-*/;
 
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public void setPercents( Object percents )
-	{
+	public final native void setPercents( Object percents ) /*-{
 		this.percents = percents;
-	}
+	}-*/;
 
 	/**
 	 * SerialDataItem of this graphDataItem
 	 */
-	public IsSerialDataItem getSerialDataItem()
-	{
+	public final native IsSerialDataItem getSerialDataItem() /*-{
 		return serialDataItem;
-	}
+	}-*/;
 
 	/**
 	 * SerialDataItem of this graphDataItem
 	 */
-	public void setSerialDataItem( IsSerialDataItem serialDataItem )
-	{
+	public final native void setSerialDataItem( IsSerialDataItem serialDataItem ) /*-{
 		this.serialDataItem = serialDataItem;
-	}
+	}-*/;
 
 	/**
 	 * url
 	 */
-	public String getUrl()
-	{
+	public final native String getUrl() /*-{
 		return url;
-	}
+	}-*/;
 
 	/**
 	 * url
 	 */
-	public void setUrl( String url )
-	{
+	public final native void setUrl( String url ) /*-{
 		this.url = url;
-	}
+	}-*/;
 
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public Object getValues()
-	{
+	public final native Object getValues() /*-{
 		return values;
-	}
+	}-*/;
 
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public void setValues( Object values )
-	{
+	public final native void setValues( Object values ) /*-{
 		this.values = values;
-	}
+	}-*/;
 
 	/**
 	 * x coordinate of the data item.
 	 */
-	public double getX()
-	{
+	public final native double getX() /*-{
 		return x;
-	}
+	}-*/;
 
 	/**
 	 * x coordinate of the data item.
 	 */
-	public void setX( double x )
-	{
+	public final native void setX( double x ) /*-{
 		this.x = x;
-	}
+	}-*/;
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public double getY()
-	{
+	public final native double getY() /*-{
 		return y;
-	}
+	}-*/;
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public void setY( double y )
-	{
+	public final native void setY( double y ) /*-{
 		this.y = y;
-	}
+	}-*/;
 }
