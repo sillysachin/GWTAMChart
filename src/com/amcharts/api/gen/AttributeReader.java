@@ -29,17 +29,20 @@ public class AttributeReader
 				counter++;
 				String[] variableTokens = line.split( cvsSplitBy );
 				JavaClassAttribute jca = new JavaClassAttribute();
-				for ( int i = 0; i < variableTokens.length; i++ )
+				fieldName = variableTokens[0];
+				String jsType = variableTokens[1];
+				String defaultValue = variableTokens[2];
+				String javaType = variableTokens[3];
+				jca.setFieldName( fieldName );
+				jca.setJavaType( javaType );
+				jca.setJsType( jsType );
+				jca.setDefaultValue( defaultValue );
+				if ( variableTokens.length > 4 )
 				{
-					String javaType = variableTokens[3];
-					String jsType = variableTokens[1];
-					fieldName = variableTokens[0];
-					String defaultValue = variableTokens[2];
-					jca.setFieldName( fieldName );
-					jca.setJavaType( javaType );
-					jca.setJsType( jsType );
-					jca.setDefaultValue( defaultValue );
-					jca.setJavadocComment( variableTokens[4] );
+					String javadocComment = variableTokens[4];
+					jca.setJavadocComment( javadocComment );
+				}else{
+					jca.setJavadocComment( "" );
 				}
 				javaClassAttributes.add( jca );
 			}

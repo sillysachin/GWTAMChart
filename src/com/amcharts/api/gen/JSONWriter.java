@@ -19,7 +19,7 @@ public class JSONWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart" } );
+			{ "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label" } );
 
 	public static void main( String args[] ) throws IOException
 	{
