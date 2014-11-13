@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.column.ThreeDCylinderChart;
+import com.appbootup.explore.gwt.client.line.LineDifferentColorsUpsDowns;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -40,6 +40,7 @@ public class GWTAMChart implements EntryPoint
 		// SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
 		// ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
 		// StackedColumnChart stackedColumnChart = new StackedColumnChart();
-		ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
+		// ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
+		LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();
 	}
 }
