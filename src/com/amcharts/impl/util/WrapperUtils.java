@@ -157,14 +157,6 @@ public class WrapperUtils
 		{
 			wrapper = GWT.create( AmLegend.class );
 		}
-		else if ( className.equals( getSimpleName( DataItem.class ) ) )
-		{
-			wrapper = GWT.create( DataItem.class );
-		}
-		else if ( className.equals( getSimpleName( DataContext.class ) ) )
-		{
-			wrapper = GWT.create( DataContext.class );
-		}
 
 		return wrapper;
 	}
