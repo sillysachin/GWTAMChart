@@ -1,4 +1,4 @@
-package com.amcharts.json;
+package com.amcharts.jso;
 
 import java.util.List;
 
@@ -7,385 +7,275 @@ import com.amcharts.api.IsGaugeArrow;
 import com.amcharts.api.IsGaugeAxis;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class AmAngularGauge implements IsAmAngularChart
+public final class AmAngularGaugeJSO extends JavaScriptObject implements IsAmAngularChart
 {
-	private boolean adjustSize;
-
-	private List<IsGaugeArrow> arrows;
-
-	private List<IsGaugeAxis> axes;
-
-	private boolean clockWiseOnly;
-
-	private double faceAlpha;
-
-	private double faceBorderAlpha;
-
-	private String faceBorderColor;
-
-	private double faceBorderWidth;
-
-	private String faceColor;
-
-	private JavaScriptObject facePattern;
-
-	private double gaugeX;
-
-	private double gaugeY;
-
-	private double marginBottom;
-
-	private double marginLeft;
-
-	private double marginRight;
-
-	private double marginTop;
-
-	private double minRadius;
-
-	private double startDuration;
-
-	private String startEffect;
+	protected AmAngularGaugeJSO()
+	{
+	}
 
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	@Override
-	public boolean isAdjustSize()
-	{
+	public final native boolean isAdjustSize() /*-{
 		return adjustSize;
-	}
+	}-*/;
 
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	@Override
-	public void setAdjustSize( boolean adjustSize )
-	{
+	public final native void setAdjustSize( boolean adjustSize ) /*-{
 		this.adjustSize = adjustSize;
-	}
+	}-*/;
 
 	/**
 	 * Array of arrows.
 	 */
-	@Override
-	public List<IsGaugeArrow> getArrows()
-	{
+	public final native List<IsGaugeArrow> getArrows() /*-{
 		return arrows;
-	}
+	}-*/;
 
 	/**
 	 * Array of arrows.
 	 */
-	@Override
-	public void setArrows( List<IsGaugeArrow> arrows )
-	{
+	public final native void setArrows( List<IsGaugeArrow> arrows ) /*-{
 		this.arrows = arrows;
-	}
+	}-*/;
 
 	/**
 	 * Array of axes.
 	 */
-	@Override
-	public List<IsGaugeAxis> getAxes()
-	{
+	public final native List<IsGaugeAxis> getAxes() /*-{
 		return axes;
-	}
+	}-*/;
 
 	/**
 	 * Array of axes.
 	 */
-	@Override
-	public void setAxes( List<IsGaugeAxis> axes )
-	{
+	public final native void setAxes( List<IsGaugeAxis> axes ) /*-{
 		this.axes = axes;
-	}
+	}-*/;
 
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	@Override
-	public boolean isClockWiseOnly()
-	{
+	public final native boolean isClockWiseOnly() /*-{
 		return clockWiseOnly;
-	}
+	}-*/;
 
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	@Override
-	public void setClockWiseOnly( boolean clockWiseOnly )
-	{
+	public final native void setClockWiseOnly( boolean clockWiseOnly ) /*-{
 		this.clockWiseOnly = clockWiseOnly;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face opacity.
 	 */
-	@Override
-	public double getFaceAlpha()
-	{
+	public final native double getFaceAlpha() /*-{
 		return faceAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face opacity.
 	 */
-	@Override
-	public void setFaceAlpha( double faceAlpha )
-	{
+	public final native void setFaceAlpha( double faceAlpha ) /*-{
 		this.faceAlpha = faceAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border opacity.
 	 */
-	@Override
-	public double getFaceBorderAlpha()
-	{
+	public final native double getFaceBorderAlpha() /*-{
 		return faceBorderAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border opacity.
 	 */
-	@Override
-	public void setFaceBorderAlpha( double faceBorderAlpha )
-	{
+	public final native void setFaceBorderAlpha( double faceBorderAlpha ) /*-{
 		this.faceBorderAlpha = faceBorderAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border color.
 	 */
-	@Override
-	public String getFaceBorderColor()
-	{
+	public final native String getFaceBorderColor() /*-{
 		return faceBorderColor;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border color.
 	 */
-	@Override
-	public void setFaceBorderColor( String faceBorderColor )
-	{
+	public final native void setFaceBorderColor( String faceBorderColor ) /*-{
 		this.faceBorderColor = faceBorderColor;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border width.
 	 */
-	@Override
-	public double getFaceBorderWidth()
-	{
+	public final native double getFaceBorderWidth() /*-{
 		return faceBorderWidth;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face border width.
 	 */
-	@Override
-	public void setFaceBorderWidth( double faceBorderWidth )
-	{
+	public final native void setFaceBorderWidth( double faceBorderWidth ) /*-{
 		this.faceBorderWidth = faceBorderWidth;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face color, requires faceAlpha > 0
 	 */
-	@Override
-	public String getFaceColor()
-	{
+	public final native String getFaceColor() /*-{
 		return faceColor;
-	}
+	}-*/;
 
 	/**
 	 * Gauge face color, requires faceAlpha > 0
 	 */
-	@Override
-	public void setFaceColor( String faceColor )
-	{
+	public final native void setFaceColor( String faceColor ) /*-{
 		this.faceColor = faceColor;
-	}
+	}-*/;
 
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	@Override
-	public JavaScriptObject getFacePattern()
-	{
+	public final native JavaScriptObject getFacePattern() /*-{
 		return facePattern;
-	}
+	}-*/;
 
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	@Override
-	public void setFacePattern( JavaScriptObject facePattern )
-	{
+	public final native void setFacePattern( JavaScriptObject facePattern ) /*-{
 		this.facePattern = facePattern;
-	}
+	}-*/;
 
 	/**
 	 * Gauge's horizontal position in pixel, origin is the center. Centered by default.
 	 */
-	@Override
-	public double getGaugeX()
-	{
+	public final native double getGaugeX() /*-{
 		return gaugeX;
-	}
+	}-*/;
 
 	/**
 	 * Gauge's horizontal position in pixel, origin is the center. Centered by default.
 	 */
-	@Override
-	public void setGaugeX( double gaugeX )
-	{
+	public final native void setGaugeX( double gaugeX ) /*-{
 		this.gaugeX = gaugeX;
-	}
+	}-*/;
 
 	/**
 	 * Gauge's vertical position in pixel, origin is the center. Centered by default.
 	 */
-	@Override
-	public double getGaugeY()
-	{
+	public final native double getGaugeY() /*-{
 		return gaugeY;
-	}
+	}-*/;
 
 	/**
 	 * Gauge's vertical position in pixel, origin is the center. Centered by default.
 	 */
-	@Override
-	public void setGaugeY( double gaugeY )
-	{
+	public final native void setGaugeY( double gaugeY ) /*-{
 		this.gaugeY = gaugeY;
-	}
+	}-*/;
 
 	/**
 	 * Bottom spacing between chart and container.
 	 */
-	@Override
-	public double getMarginBottom()
-	{
+	public final native double getMarginBottom() /*-{
 		return marginBottom;
-	}
+	}-*/;
 
 	/**
 	 * Bottom spacing between chart and container.
 	 */
-	@Override
-	public void setMarginBottom( double marginBottom )
-	{
+	public final native void setMarginBottom( double marginBottom ) /*-{
 		this.marginBottom = marginBottom;
-	}
+	}-*/;
 
 	/**
 	 * Left-hand spacing between chart and container.
 	 */
-	@Override
-	public double getMarginLeft()
-	{
+	public final native double getMarginLeft() /*-{
 		return marginLeft;
-	}
+	}-*/;
 
 	/**
 	 * Left-hand spacing between chart and container.
 	 */
-	@Override
-	public void setMarginLeft( double marginLeft )
-	{
+	public final native void setMarginLeft( double marginLeft ) /*-{
 		this.marginLeft = marginLeft;
-	}
+	}-*/;
 
 	/**
 	 * Right-hand spacing between chart and container.
 	 */
-	@Override
-	public double getMarginRight()
-	{
+	public final native double getMarginRight() /*-{
 		return marginRight;
-	}
+	}-*/;
 
 	/**
 	 * Right-hand spacing between chart and container.
 	 */
-	@Override
-	public void setMarginRight( double marginRight )
-	{
+	public final native void setMarginRight( double marginRight ) /*-{
 		this.marginRight = marginRight;
-	}
+	}-*/;
 
 	/**
 	 * Top spacing between chart and container.
 	 */
-	@Override
-	public double getMarginTop()
-	{
+	public final native double getMarginTop() /*-{
 		return marginTop;
-	}
+	}-*/;
 
 	/**
 	 * Top spacing between chart and container.
 	 */
-	@Override
-	public void setMarginTop( double marginTop )
-	{
+	public final native void setMarginTop( double marginTop ) /*-{
 		this.marginTop = marginTop;
-	}
+	}-*/;
 
 	/**
 	 * Minimum radius of a gauge.
 	 */
-	@Override
-	public double getMinRadius()
-	{
+	public final native double getMinRadius() /*-{
 		return minRadius;
-	}
+	}-*/;
 
 	/**
 	 * Minimum radius of a gauge.
 	 */
-	@Override
-	public void setMinRadius( double minRadius )
-	{
+	public final native void setMinRadius( double minRadius ) /*-{
 		this.minRadius = minRadius;
-	}
+	}-*/;
 
 	/**
 	 * Duration of arrow animation.
 	 */
-	@Override
-	public double getStartDuration()
-	{
+	public final native double getStartDuration() /*-{
 		return startDuration;
-	}
+	}-*/;
 
 	/**
 	 * Duration of arrow animation.
 	 */
-	@Override
-	public void setStartDuration( double startDuration )
-	{
+	public final native void setStartDuration( double startDuration ) /*-{
 		this.startDuration = startDuration;
-	}
+	}-*/;
 
 	/**
 	 * Transition effect of the arrows, possible effects: easeOutSine, easeInSine, elastic, bounce.
 	 */
-	@Override
-	public String getStartEffect()
-	{
+	public final native String getStartEffect() /*-{
 		return startEffect;
-	}
+	}-*/;
 
 	/**
 	 * Transition effect of the arrows, possible effects: easeOutSine, easeInSine, elastic, bounce.
 	 */
-	@Override
-	public void setStartEffect( String startEffect )
-	{
+	public final native void setStartEffect( String startEffect ) /*-{
 		this.startEffect = startEffect;
-	}
+	}-*/;
 }
