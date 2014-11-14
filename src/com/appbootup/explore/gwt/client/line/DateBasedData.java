@@ -72,7 +72,7 @@ public class DateBasedData
 		amSerialChart.addGraph( amGraph );
 
 		IsChartScrollbar chartScrollbar = new ChartScrollbar();
-		chartScrollbar.setGraph("g1");
+		chartScrollbar.setGraph( "g1" );
 		chartScrollbar.setScrollbarHeight( 30 );
 		amSerialChart.addChartScrollbar( chartScrollbar );
 
@@ -110,8 +110,14 @@ public class DateBasedData
 			}
 		};
 		amSerialChart.addListener( "rendered", zoomChart );
-
+		zoomChart( chartData, amSerialChart );
 		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );
+	}
+
+	private void zoomChart( final JsArray<JavaScriptObject> chartData, final AmSerialChart amSerialChart )
+	{
+		amSerialChart.zoomToIndexes( chartData.length() - 40, chartData
+				.length() - 1 );
 	}
 }

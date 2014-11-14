@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+	var chartData = generateChartData();
+
+	var chart = AmCharts.makeChart("chartdiv", {
+		"type" : "serial",
+		"theme" : "none",
+		"pathToImages" : "http://www.amcharts.com/lib/3/images/",
+		"legend" : {
+			"useGraphSettings" : true
+		},
+		"dataProvider" : chartData,
+		"valueAxes" : [ {
+			"id" : "v1",
+			"axisColor" : "#FF6600",
+			"axisThickness" : 2,
+			"gridAlpha" : 0,
+			"axisAlpha" : 1,
+			"position" : "left"
+		}, {
+			"id" : "v2",
+			"axisColor" : "#FCD202",
+			"axisThickness" : 2,
+			"gridAlpha" : 0,
+			"axisAlpha" : 1,
+			"position" : "right"
+		}, {
+			"id" : "v3",
+			"axisColor" : "#B0DE09",
+			"axisThickness" : 2,
+			"gridAlpha" : 0,
+			"offset" : 50,
+			"axisAlpha" : 1,
+			"position" : "left"
+		} ],
+		"graphs" : [ {
+			"valueAxis" : "v1",
+			"lineColor" : "#FF6600",
+			"bullet" : "round",
+			"bulletBorderThickness" : 1,
+			"hideBulletsCount" : 30,
+			"title" : "red line",
+			"valueField" : "visits",
+			"fillAlphas" : 0
+		}, {
+			"valueAxis" : "v2",
+			"lineColor" : "#FCD202",
+			"bullet" : "square",
+			"bulletBorderThickness" : 1,
+			"hideBulletsCount" : 30,
+			"title" : "yellow line",
+			"valueField" : "hits",
+			"fillAlphas" : 0
+		}, {
+			"valueAxis" : "v3",
+			"lineColor" : "#B0DE09",
+			"bullet" : "triangleUp",
+			"bulletBorderThickness" : 1,
+			"hideBulletsCount" : 30,
+			"title" : "green line",
+			"valueField" : "views",
+			"fillAlphas" : 0
+		} ],
+		"chartScrollbar" : {},
+		"chartCursor" : {
+			"cursorPosition" : "mouse"
+		},
+		"categoryField" : "date",
+		"categoryAxis" : {
+			"parseDates" : true,
+			"axisColor" : "#DADADA",
+			"minorGridEnabled" : true
+		}
+	});
+
+	chart.addListener("dataUpdated", zoomChart);
+	zoomChart();
+
+	// generate some random data, quite different range
+	function generateChartData() {
+		var chartData = [];
+		var firstDate = new Date();
+		firstDate.setDate(firstDate.getDate() - 100);
+
+		for (var i = 0; i < 100; i++) {
+			// we create date objects here. In your data, you can have date strings
+			// and then set format of your dates using chart.dataDateFormat property,
+			// however when possible, use date objects, as this will speed up chart rendering.
+			var newDate = new Date(firstDate);
+			newDate.setDate(newDate.getDate() + i);
+
+			var visits = Math.round(Math.random() * 40) + 100;
+			var hits = Math.round(Math.random() * 80) + 500;
+			var views = Math.round(Math.random() * 6000);
+
+			chartData.push({
+				date : newDate,
+				visits : visits,
+				hits : hits,
+				views : views
+			});
+		}
+		return chartData;
+	}
+
+	function zoomChart() {
+		chart.zoomToIndexes(chart.dataProvider.length - 20,
+				chart.dataProvider.length - 1);
+	}
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 100%; height: 500px"></div>
+</body>
+</html>

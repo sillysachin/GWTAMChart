@@ -1453,4 +1453,9 @@ public final class AmGraph implements IsAmGraph, IJavaScriptWrapper<AmGraphJSO>
 	{
 		getJso().setUseLineColorForBulletBorder( useLineColorForBulletBorder );
 	}
+
+	public void setValueAxis( String valueAxis )
+	{
+		getJso().setValueAxis( valueAxis );
+	}
 }

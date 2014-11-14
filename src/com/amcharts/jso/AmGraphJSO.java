@@ -1415,4 +1415,9 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/*-{
 		this.useLineColorForBulletBorder = useLineColorForBulletBorder;
 	}-*/;
+
+	public final native void setValueAxis( String valueAxis )
+	/*-{
+		this.valueAxis = valueAxis;
+	}-*/;
 }
