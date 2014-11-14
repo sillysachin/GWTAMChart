@@ -14,6 +14,7 @@ import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -28,7 +29,7 @@ public class PieChartBrokenSlices
 					@Override
 					public void onSuccess( String chartData )
 					{
-						JavaScriptObject dataProvider = JsonUtils
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
 								.unsafeEval( chartData );
 						drawChart( dataProvider );
 					}
@@ -41,7 +42,7 @@ public class PieChartBrokenSlices
 				} );
 	}
 
-	protected void drawChart( JavaScriptObject chartData )
+	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
 		final AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setDataProvider( chartData );
@@ -117,7 +118,7 @@ public class PieChartBrokenSlices
 		RootLayoutPanel.get().add( amPieChart );
 	}
 
-	private native JavaScriptObject generateChartData( Integer selected )
+	private native JsArray<JavaScriptObject> generateChartData( Integer selected )
 	/*-{
 		var types = [ {
 			type : "Fossil Energy",

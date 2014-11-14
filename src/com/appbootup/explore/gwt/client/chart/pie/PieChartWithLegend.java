@@ -1,15 +1,14 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
-import com.amcharts.api.IsAmLegend;
-import com.amcharts.api.IsAmLegend;
+import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -23,7 +22,7 @@ public class PieChartWithLegend
 			@Override
 			public void onSuccess( String chartData )
 			{
-				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
+				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
 				drawChart( dataProvider );
 			}
 
@@ -35,7 +34,7 @@ public class PieChartWithLegend
 		} );
 	}
 
-	protected void drawChart( JavaScriptObject chartData )
+	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
 		AmPieChart amPieChart = new AmPieChart();
 		amPieChart.setDataProvider( chartData );

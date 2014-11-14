@@ -29,7 +29,7 @@ public class LineDifferentColorsUpsDowns
 					@Override
 					public void onSuccess( String chartData )
 					{
-						JavaScriptObject dataProvider = JsonUtils
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
 								.unsafeEval( chartData );
 						drawChart( generatechartData() );
 					}

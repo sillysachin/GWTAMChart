@@ -3,17 +3,18 @@ package com.amcharts.json;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.amcharts.api.AmChartDataObject;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.api.IsValueAxis;
 
-public class AmChart implements IsAmChart
+public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 {
 	private List<IsLabel> allLabels;
 
@@ -33,7 +34,7 @@ public class AmChart implements IsAmChart
 
 	private String creditsPosition;
 
-	private List< ? extends Object> dataProvider;
+	private List<T> dataProvider;
 
 	private String decimalSeparator;
 
@@ -193,13 +194,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public List< ? extends Object> getDataProvider()
+	public List<T> getDataProvider()
 	{
 		return dataProvider;
 	}
 
 	@Override
-	public void setDataProvider( List< ? extends Object> dataProvider )
+	public void setDataProvider( List<T> dataProvider )
 	{
 		this.dataProvider = dataProvider;
 	}

@@ -75,12 +75,12 @@ public interface IsChartScrollbar
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public IsAmGraph getGraph();
+	public String getGraph();
 
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public void setGraph( IsAmGraph graph );
+	public void setGraph( String graph );
 
 	/**
 	 * Graph fill opacity. Value range is 0 - 1.

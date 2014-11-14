@@ -2,16 +2,16 @@ package com.appbootup.explore.gwt.client.chart.column;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
+import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
-import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ExportConfig;
-import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -26,7 +26,7 @@ public class StackedColumnChart
 					@Override
 					public void onSuccess( String chartData )
 					{
-						JavaScriptObject dataProvider = JsonUtils
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
 								.unsafeEval( chartData );
 						drawChart( dataProvider );
 					}
@@ -39,7 +39,7 @@ public class StackedColumnChart
 				} );
 	}
 
-	protected void drawChart( JavaScriptObject chartData )
+	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );

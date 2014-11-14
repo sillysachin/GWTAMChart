@@ -2,16 +2,17 @@ package com.amcharts.jso;
 
 import java.util.List;
 
+import com.amcharts.api.AmChartDataObject;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmChartJSO extends JavaScriptObject implements IsAmChart
+public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject implements IsAmChart<T>
 {
 	protected AmChartJSO()
 	{
@@ -126,13 +127,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native List< ? extends Object> getDataProvider()
+	public final native List<T> getDataProvider()
 	/*-{
 		return this.dataProvider;
 	}-*/;
 
 	@Override
-	public final native void setDataProvider( List< ? extends Object> dataProvider )
+	public final native void setDataProvider( List<T> dataProvider )
 	/*-{
 		this.dataProvider = dataProvider;
 	}-*/;

@@ -1,6 +1,5 @@
 package com.amcharts.jso;
 
-import com.amcharts.api.IsAmGraph;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsChartScrollbar;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -112,14 +111,14 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public final native IsAmGraph getGraph() /*-{
+	public final native String getGraph() /*-{
 		return graph;
 	}-*/;
 
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public final native void setGraph( IsAmGraph graph ) /*-{
+	public final native void setGraph( String graph ) /*-{
 		this.graph = graph;
 	}-*/;
 

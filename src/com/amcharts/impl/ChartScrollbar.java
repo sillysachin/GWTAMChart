@@ -1,6 +1,5 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.IsAmGraph;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsChartScrollbar;
 import com.amcharts.jso.ChartScrollbarJSO;
@@ -132,14 +131,14 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public final native IsAmGraph getGraph() /*-{
+	public final native String getGraph() /*-{
 		return this.@com.amcharts.impl.ChartScrollbar::jso.graph;
 	}-*/;
 
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public final native void setGraph( IsAmGraph graph ) /*-{
+	public final native void setGraph( String graph ) /*-{
 		this.@com.amcharts.impl.ChartScrollbar::jso.graph = graph;
 	}-*/;
 

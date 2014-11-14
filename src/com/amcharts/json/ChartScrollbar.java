@@ -1,6 +1,5 @@
 package com.amcharts.json;
 
-import com.amcharts.api.IsAmGraph;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsChartScrollbar;
 
@@ -20,7 +19,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 
 	private double dragIconWidth;
 
-	private IsAmGraph graph;
+	private String graph;
 
 	private double graphFillAlpha;
 
@@ -181,7 +180,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public IsAmGraph getGraph()
+	public String getGraph()
 	{
 		return graph;
 	}
@@ -189,7 +188,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
-	public void setGraph( IsAmGraph graph )
+	public void setGraph( String graph )
 	{
 		this.graph = graph;
 	}

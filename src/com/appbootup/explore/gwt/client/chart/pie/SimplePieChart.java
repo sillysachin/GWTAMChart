@@ -7,6 +7,7 @@ import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -20,7 +21,7 @@ public class SimplePieChart
 			@Override
 			public void onSuccess( String chartData )
 			{
-				JavaScriptObject dataProvider = JsonUtils.unsafeEval( chartData );
+				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
 				drawChart( dataProvider );
 			}
 
@@ -32,7 +33,7 @@ public class SimplePieChart
 		} );
 	}
 
-	protected void drawChart( JavaScriptObject chartData )
+	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
 		AmPieChart amPieChart = new AmPieChart();
 		amPieChart.setType( "pie" );

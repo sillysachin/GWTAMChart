@@ -3,7 +3,7 @@ package com.appbootup.explore.gwt.client;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
- * The async counterpart of <code>GreetingService</code>.
+ * The async counterpart of <code>ChartService</code>.
  */
 public interface ChartServiceAsync
 {

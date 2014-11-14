@@ -15,6 +15,7 @@ import com.amcharts.impl.ValueAxis;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
@@ -34,7 +35,7 @@ public class GWTAMChartSample
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setSize( "1020px", "500px" );
-		JavaScriptObject dataProvider = JsonUtils.unsafeEval( pieData );
+		JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( pieData );
 		amPieChart.setDataProvider( dataProvider );
 		amPieChart.setValueField( "value" );
 		amPieChart.setTitleField( "title" );
@@ -46,7 +47,7 @@ public class GWTAMChartSample
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setSize( "1240px", "500px" );
-		JavaScriptObject serialDataProvider = JsonUtils
+		JsArray<JavaScriptObject> serialDataProvider = JsonUtils
 				.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );
 		amSerialChart.setCategoryField( "country" );
@@ -142,7 +143,8 @@ public class GWTAMChartSample
 		//TODO:Revisit this and fix later.
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setPathToImages( "/js/amcharts/images/" );
-		JavaScriptObject serialDataProvider = JsonUtils.unsafeEval( chartData );
+		JsArray<JavaScriptObject> serialDataProvider = JsonUtils
+				.unsafeEval( chartData );
 		amSerialChart.setDataProvider( serialDataProvider );
 		amSerialChart.setDataDateFormat( "YYYY-MM-DD" );
 		amSerialChart.setCategoryField( "date" );

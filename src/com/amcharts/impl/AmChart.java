@@ -2,13 +2,14 @@ package com.amcharts.impl;
 
 import java.util.List;
 
+import com.amcharts.api.AmChartDataObject;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
+import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
-import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartEventUtils;
@@ -28,14 +29,15 @@ import com.amcharts.impl.event.chart.RenderedHandler;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
+public class AmChart<T extends AmChartDataObject> extends Composite implements IsAmChart<T>, IJavaScriptWrapper<AmChartJSO<T>>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
 {
-	protected AmChartJSO jso;
+	protected AmChartJSO<T> jso;
 
 	String id;
 
@@ -72,13 +74,13 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}
 
 	@Override
-	public AmChartJSO getJso()
+	public AmChartJSO<T> getJso()
 	{
 		return jso;
 	}
 
 	@Override
-	public void setJso( AmChartJSO jso )
+	public void setJso( AmChartJSO<T> jso )
 	{
 		this.jso = jso;
 	}
@@ -90,8 +92,8 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		write( id );
 	}
 
-	// TODO:Need to provide a better alternative than JavaScriptObject dataProvider.
-	public native void setDataProvider( JavaScriptObject dataProvider )
+	// TODO:Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
+	public native void setDataProvider( JsArray<JavaScriptObject> dataProvider )
 	/*-{
 		this.@com.amcharts.impl.AmChart::jso.dataProvider = dataProvider;
 	}-*/;
@@ -253,12 +255,12 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 	}-*/;
 
 	@Override
-	public native List< ? extends Object> getDataProvider() /*-{
+	public native List<T> getDataProvider() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.dataProvider;
 	}-*/;
 
 	@Override
-	public native void setDataProvider( List< ? extends Object> dataProvider ) /*-{
+	public native void setDataProvider( List<T> dataProvider ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.dataProvider = dataProvider;
 	}-*/;
 
@@ -521,7 +523,7 @@ public class AmChart extends Composite implements IsAmChart, IJavaScriptWrapper<
 		return $wnd.AmCharts.makeChart(container, configJSO, delay);
 	}-*/;
 
-	public native AmChartJSO makeChart( String container, JavaScriptObject configJSO )
+	public native AmChartJSO<T> makeChart( String container, JavaScriptObject configJSO )
 	/*-{
 		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(container);
 		return $wnd.AmCharts.makeChart(container, configJSO);

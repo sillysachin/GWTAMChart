@@ -64,7 +64,7 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 	/*-{
 		this.@com.amcharts.impl.ExportConfig::jso.menuTop = menuTop;
 	}-*/;
-	
+
 	public native void setMenuTop( int menuTop )
 	/*-{
 		this.@com.amcharts.impl.ExportConfig::jso.menuTop = menuTop;
@@ -79,14 +79,29 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 	/*-{
 		return this.@com.amcharts.impl.ExportConfig::jso.menuRight;
 	}-*/;
-	
+
 	public native void setMenuRight( int menuRight )
 	/*-{
 		return this.@com.amcharts.impl.ExportConfig::jso.menuRight;
 	}-*/;
-	
+
 	public native String getMenuRight()
 	/*-{
 		return this.@com.amcharts.impl.ExportConfig::jso.menuRight;
+	}-*/;
+
+	public native void setMenuBottom( String menuBottom )
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
+	}-*/;
+
+	public native String getMenuBottom()
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
+	}-*/;
+
+	public native void setMenuBottom( int menuBottom )
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
 	}-*/;
 }
