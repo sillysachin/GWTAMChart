@@ -1,7 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.line.DateBasedData;
-import com.appbootup.explore.gwt.client.line.MultipleValueAxes;
+import com.appbootup.explore.gwt.client.xy.BubbleChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -44,6 +43,7 @@ public class GWTAMChart implements EntryPoint
 		// ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
 		// LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();
 		// DateBasedData dateBasedData = new DateBasedData();
-		MultipleValueAxes multipleValueAxes = new MultipleValueAxes();
+		// MultipleValueAxes multipleValueAxes = new MultipleValueAxes();
+		BubbleChart bubbleChart = new BubbleChart();
 	}
 }

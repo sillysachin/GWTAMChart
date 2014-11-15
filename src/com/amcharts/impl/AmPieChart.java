@@ -3,7 +3,8 @@ package com.amcharts.impl;
 import com.amcharts.api.IsAmPieChart;
 import com.amcharts.jso.AmPieChartJSO;
 
-public class AmPieChart extends AmSlicedChart implements IsAmPieChart{
+public class AmPieChart extends AmSlicedChart implements IsAmPieChart
+{
 	public AmPieChart()
 	{
 		jso = createJso();

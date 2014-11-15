@@ -20,7 +20,7 @@ public class JSOWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "GuageBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
+			{ "AmXYChart", "AmAngularGauge", "GuageBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -44,7 +44,7 @@ public class JSOWriter
 					.emitPackage( "com.amcharts.jso" )
 					.emitImports( "com.amcharts.api.*" )
 					.emitImports( "com.google.gwt.core.client" )
-					.beginType( input + "JSO", "class", EnumSet.of( PUBLIC, FINAL ), "JavaScriptObject" )
+					.beginType( input + "JSO", "class", EnumSet.of( PUBLIC, FINAL ), "JavaScriptObject", "Is" + input )
 					.beginConstructor( EnumSet.of( PROTECTED ) )
 					.endConstructor();
 

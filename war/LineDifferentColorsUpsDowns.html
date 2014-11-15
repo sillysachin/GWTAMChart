@@ -24,92 +24,91 @@
 <script type="text/javascript" src="js/amcharts/serial.js"></script>
 <script type="text/javascript" src="js/amcharts/xy.js"></script>
 <script type="text/javascript" src="js/amcharts/themes/light.js"></script>
-<script type="text/javascript" src="js/amcharts/exporting/amexport.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/canvg.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/filesaver.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.js" ></script>
-<script type="text/javascript" src="js/amcharts/exporting/jspdf.plugin.addimage.js" ></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
 <!--                                           -->
 <!-- This script loads your compiled module.   -->
 <!-- If you add any GWT meta tags, they must   -->
 <!-- be added before this line.                -->
 <!--                                           -->
 <script type="text/javascript">
-var chartData = generatechartData();
+	var chartData = generatechartData();
 
-function generatechartData() {
-    var chartData = [];
-    var firstDate = new Date();
-    firstDate.setDate(firstDate.getDate() - 150);
+	function generatechartData() {
+		var chartData = [];
+		var firstDate = new Date();
+		firstDate.setDate(firstDate.getDate() - 150);
 
-    for (var i = 0; i < 150; i++) {
-        // we create date objects here. In your data, you can have date strings
-        // and then set format of your dates using chart.dataDateFormat property,
-        // however when possible, use date objects, as this will speed up chart rendering.
-        var newDate = new Date(firstDate);
-        newDate.setDate(newDate.getDate() + i);
+		for (var i = 0; i < 150; i++) {
+			// we create date objects here. In your data, you can have date strings
+			// and then set format of your dates using chart.dataDateFormat property,
+			// however when possible, use date objects, as this will speed up chart rendering.
+			var newDate = new Date(firstDate);
+			newDate.setDate(newDate.getDate() + i);
 
-        var visits = Math.round(Math.random() * 100 - 50);
+			var visits = Math.round(Math.random() * 100 - 50);
 
-        chartData.push({
-            date: newDate,
-            visits: visits
-        });
-    }
-    return chartData;
-}
+			chartData.push({
+				date : newDate,
+				visits : visits
+			});
+		}
+		return chartData;
+	}
 
+	var chart = AmCharts.makeChart("chartdiv", {
+		"theme" : "none",
+		"type" : "serial",
+		"autoMargins" : false,
+		"marginLeft" : 8,
+		"marginRight" : 8,
+		"marginTop" : 10,
+		"marginBottom" : 26,
+		"pathToImages" : "/js/amcharts/images/",
+		"dataProvider" : chartData,
+		"valueAxes" : [ {
+			"id" : "v1",
+			"axisAlpha" : 0,
+			"inside" : true
+		} ],
+		"graphs" : [ {
+			"useNegativeColorIfDown" : true,
+			"balloonText" : "[[category]]<br><b>value: [[value]]</b>",
+			"bullet" : "round",
+			"bulletBorderAlpha" : 1,
+			"bulletBorderColor" : "#FFFFFF",
+			"hideBulletsCount" : 50,
+			"lineThickness" : 2,
+			"lineColor" : "#fdd400",
+			"negativeLineColor" : "#67b7dc",
+			"valueField" : "visits"
+		} ],
+		"chartScrollbar" : {},
+		"chartCursor" : {
+			"valueLineEnabled" : true,
+			"valueLineBalloonEnabled" : true
+		},
+		"categoryField" : "date",
+		"categoryAxis" : {
+			"parseDates" : true,
+			"axisAlpha" : 0,
+			"minHorizontalGap" : 60
+		}
+	});
 
-var chart = AmCharts.makeChart("chartdiv", {
-    "theme": "none",	
-    "type": "serial",
-		"autoMargins": false,
-		"marginLeft":8,
-		"marginRight":8,
-		"marginTop":10,
-		"marginBottom":26,
-    "pathToImages": "http://www.amcharts.com/lib/3/images/",
-    "dataProvider": chartData,
-    "valueAxes": [{
-        "id":"v1",
-        "axisAlpha": 0,
-        "inside": true
-    }],
-    "graphs": [{
-               "useNegativeColorIfDown":true,
-        "balloonText": "[[category]]<br><b>value: [[value]]</b>",
-        "bullet": "round",
-        "bulletBorderAlpha": 1,
-        "bulletBorderColor": "#FFFFFF",
-        "hideBulletsCount": 50,
-        "lineThickness": 2,
-        "lineColor": "#fdd400",
-        "negativeLineColor": "#67b7dc",
-        "valueField": "visits"
-    }],
-    "chartScrollbar": {
-    },
-    "chartCursor": {
-        "valueLineEnabled":true,
-        "valueLineBalloonEnabled":true
-    },
-    "categoryField": "date",
-    "categoryAxis": {
-        "parseDates": true,
-        "axisAlpha": 0,
-        "minHorizontalGap":60
-    }
-});
+	chart.addListener("dataUpdated", zoomChart);
+	//zoomChart();
 
-chart.addListener("dataUpdated", zoomChart);
-//zoomChart();
-
-function zoomChart(){
-  if(chart.zoomToIndexes){
-    chart.zoomToIndexes(130, chartData.length - 1);
-  }
-}
+	function zoomChart() {
+		if (chart.zoomToIndexes) {
+			chart.zoomToIndexes(130, chartData.length - 1);
+		}
+	}
 </script>
 
 <!--                                           -->
@@ -130,6 +129,6 @@ function zoomChart(){
 			Your web browser must have JavaScript enabled in order for this
 			application to display correctly.</div>
 	</noscript>
-	<div id="chartdiv" style="width:100%;height:500px"></div>
+	<div id="chartdiv" style="width: 100%; height: 500px"></div>
 </body>
 </html>

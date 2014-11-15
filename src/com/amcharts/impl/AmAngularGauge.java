@@ -9,7 +9,7 @@ import com.amcharts.jso.AmAngularGaugeJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class AmAngularGauge implements IsAmAngularChart,IJavaScriptWrapper<AmAngularGaugeJSO>
+public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrapper<AmAngularGaugeJSO>
 {
 	private AmAngularGaugeJSO jso;
 
@@ -28,8 +28,10 @@ public final class AmAngularGauge implements IsAmAngularChart,IJavaScriptWrapper
 		this.jso = jso;
 	}
 
+	//Learn: new $wnd.AmCharts.AmAngularGauge(); use of $wnd
 	public native AmAngularGaugeJSO createJso() /*-{
-		return this.jso;
+		var chart = new $wnd.AmCharts.AmAngularGauge();
+		return chart;
 	}-*/;
 
 	/**

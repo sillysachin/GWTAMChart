@@ -16,6 +16,12 @@ public class AmCharts
 		return amSerialChart;
 	}
 
+	public static AmXYChart AmXYChart()
+	{
+		AmXYChart amXYChart = new AmXYChart();
+		return amXYChart;
+	}
+
 	public static AmGraph AmGraph()
 	{
 		AmGraph amGraph = new AmGraph();

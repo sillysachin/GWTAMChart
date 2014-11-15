@@ -47,7 +47,7 @@ public class JSNIWriter
 					.emitImports( "com.amcharts.api.*" )
 					.emitImports( "com.amcharts.jso.*" )
 					.emitImports( "com.google.gwt.core.client" )
-					.beginType( input, "class", EnumSet.of( PUBLIC, FINAL ), null, "IJavaScriptWrapper<" + input + "JSO" + ">" )
+					.beginType( input, "class", EnumSet.of( PUBLIC, FINAL ), null, "IJavaScriptWrapper<" + input + "JSO" + ">", "Is" + input )
 					.emitField( input + "JSO", "jso", EnumSet.of( PRIVATE ) )
 					.beginConstructor( EnumSet.of( PROTECTED ) )
 					.emitStatement( "jso=createJso()" ).endConstructor();

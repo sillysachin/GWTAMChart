@@ -1,0 +1,1 @@
+Field Name	JS Datatype	Default	Java Datatype	DescriptionhideXScrollbar	Boolean	FALSE	boolean	Specifies if Scrollbar of X axis (horizontal) should be hidden.hideYScrollbar	Boolean	FALSE	boolean	Specifies if Scrollbar of Y axis (vertical) should be hidden.maxZoomFactor	Number	20	double	Maximum zoom factor of the chart.

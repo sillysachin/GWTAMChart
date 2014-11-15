@@ -19,8 +19,9 @@ import com.squareup.javawriter.GWTJSNIJavaWriter;
 
 public class SubClassJSNIWriter
 {
-	static List<String> inputs = Arrays.asList( new String[]
-	{ "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmSerialChart" } );
+	static List<String> inputs = Arrays
+			.asList( new String[]
+			{ "AmXYChart", "AmAngularGauge", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmSerialChart" } );
 
 	public static void main( String args[] ) throws IOException
 	{

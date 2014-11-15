@@ -19,7 +19,7 @@ public class JSONWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "GuageBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
+			{ "AmXYChart", "AmAngularGauge", "GuageBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -40,7 +40,7 @@ public class JSONWriter
 			jsoWriter = new JavaWriter( fileWriter );
 			jsoWriter
 					.emitPackage( "com.amcharts.json" )
-					.beginType( input + "JSON", "class", EnumSet.of( PUBLIC, FINAL ) );
+					.beginType( input + "JSON", "class", EnumSet.of( PUBLIC, FINAL ), "Is" + input );
 			for ( JavaClassAttribute jca : jcaItems )
 			{
 				jsoWriter
