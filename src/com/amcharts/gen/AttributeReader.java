@@ -1,4 +1,4 @@
-package com.amcharts.api.gen;
+package com.amcharts.gen;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

@@ -8,6 +8,10 @@ import com.amcharts.impl.event.DataItem;
 
 public final class GraphDataItem extends DataItem implements IsGraphDataItem
 {
+	protected GraphDataItem()
+	{
+	}
+
 	/**
 	 * Opacity of the data item.
 	 */

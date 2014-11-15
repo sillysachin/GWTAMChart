@@ -1,4 +1,4 @@
-package com.amcharts.api.gen;
+package com.amcharts.gen;
 
 import static javax.lang.model.element.Modifier.FINAL;
 import static javax.lang.model.element.Modifier.NATIVE;
@@ -17,11 +17,11 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.squareup.javawriter.GWTJSNIJavaWriter;
 
-public class SubClassJSNIWriter
+public class JSNIWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "AmRadarChart","AmXYChart", "AmAngularGauge", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmSerialChart" } );
+			{ "AmBalloon", "GaugeArrow", "GaugeAxis", "GaugeBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart", "AmLegend", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
 
 	public static void main( String args[] ) throws IOException
 	{
@@ -47,7 +47,7 @@ public class SubClassJSNIWriter
 					.emitImports( "com.amcharts.api.*" )
 					.emitImports( "com.amcharts.jso.*" )
 					.emitImports( "com.google.gwt.core.client" )
-					.beginType( input, "class", EnumSet.of( PUBLIC, FINAL ), null, "IJavaScriptWrapper<" + input + "JSO" + ">" )
+					.beginType( input, "class", EnumSet.of( PUBLIC, FINAL ), null, "IJavaScriptWrapper<" + input + "JSO" + ">", "Is" + input )
 					.emitField( input + "JSO", "jso", EnumSet.of( PRIVATE ) )
 					.beginConstructor( EnumSet.of( PROTECTED ) )
 					.emitStatement( "jso=createJso()" ).endConstructor();
@@ -68,28 +68,27 @@ public class SubClassJSNIWriter
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC, FINAL ) )
-							.emitStatement( "return getJso()." + "is" + StringUtils.capitalize( jca
-									.getFieldName() ) + "()" ).endMethod();
+							.beginJSNIMethod( jca.getJavaType(), "is" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
+							.emitStatement( "return this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() )
+							.endJSNIMethod();
 				}
 				else
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )
-							.beginMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
-									.getFieldName() ), EnumSet.of( PUBLIC, FINAL ) )
-							.emitStatement( "return getJso()." + "get" + StringUtils.capitalize( jca
-									.getFieldName() ) + "()" ).endMethod();
+							.beginJSNIMethod( jca.getJavaType(), "get" + StringUtils.capitalize( jca
+									.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ) )
+							.emitStatement( "return this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() )
+							.endJSNIMethod();
 				}
 				jsoWriter
 						.emitJavadoc( jca.getJavadocComment() )
-						.beginMethod( "void", "set" + StringUtils.capitalize( jca
-								.getFieldName() ), EnumSet.of( PUBLIC, FINAL ), jca
+						.beginJSNIMethod( "void", "set" + StringUtils.capitalize( jca
+								.getFieldName() ), EnumSet.of( PUBLIC, FINAL, NATIVE ), jca
 								.getJavaType(), jca.getFieldName() )
-						.emitStatement( "getJso()." + "set" + StringUtils.capitalize( jca
-								.getFieldName() ) + "(" + jca.getFieldName() + ")" )
-						.endMethod();
+						.emitStatement( "this.@com.amcharts.impl." + input + "::jso." + jca.getFieldName() + "=" + jca.getFieldName() )
+						.endJSNIMethod();
 			}
 			jsoWriter.endType();
 		}

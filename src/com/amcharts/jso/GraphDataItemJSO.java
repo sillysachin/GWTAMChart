@@ -6,7 +6,9 @@ import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.api.IsSerialDataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class GraphDataItemJSO extends JavaScriptObject implements IsGraphDataItem
+//TODO: implements IsSerialDataItem
+//com.google.gwt.dev.jjs.InternalCompilerException: Already seen an implementing JSO subtype (SerialDataItem) for interface (IsSerialDataItem) while examining newly-added type (SerialDataItemJSO). This is a bug in JSORestrictionsChecker.
+public final class GraphDataItemJSO extends JavaScriptObject //implements IsGraphDataItem
 {
 	protected GraphDataItemJSO()
 	{

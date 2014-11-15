@@ -1,4 +1,4 @@
-package com.amcharts.api.gen;
+package com.amcharts.gen;
 
 public class JavaClassAttribute
 {

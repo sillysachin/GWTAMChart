@@ -7,6 +7,10 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public final class SerialDataItem extends DataItem implements IsSerialDataItem
 {
+	protected SerialDataItem()
+	{
+	}
+
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */

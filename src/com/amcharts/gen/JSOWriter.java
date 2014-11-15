@@ -1,4 +1,4 @@
-package com.amcharts.api.gen;
+package com.amcharts.gen;
 
 import static javax.lang.model.element.Modifier.FINAL;
 import static javax.lang.model.element.Modifier.NATIVE;
