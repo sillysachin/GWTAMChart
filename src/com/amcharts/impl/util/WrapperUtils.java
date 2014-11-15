@@ -3,19 +3,27 @@ package com.amcharts.impl.util;
 import java.util.List;
 import java.util.Map;
 
+import com.amcharts.impl.AmAngularGauge;
+import com.amcharts.impl.AmBalloon;
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCoordinateChart;
 import com.amcharts.impl.AmExport;
+import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.AmPieChart;
+import com.amcharts.impl.AmRadarChart;
 import com.amcharts.impl.AmRectangularChart;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.AmSlicedChart;
+import com.amcharts.impl.AmXYChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.GaugeArrow;
+import com.amcharts.impl.GaugeAxis;
+import com.amcharts.impl.GaugeBand;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItems;
@@ -83,7 +91,11 @@ public class WrapperUtils
 		IJavaScriptWrapper wrapper = null;
 		GWT.log( className );
 		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
-		if ( className.equals( getSimpleName( AmChart.class ) ) )
+		if ( className.equals( getSimpleName( AmBalloon.class ) ) )
+		{
+			wrapper = GWT.create( AmBalloon.class );
+		}
+		else if ( className.equals( getSimpleName( AmChart.class ) ) )
 		{
 			wrapper = GWT.create( AmChart.class );
 		}
@@ -98,6 +110,18 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( AmRectangularChart.class ) ) )
 		{
 			wrapper = GWT.create( AmRectangularChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmFunnelChart.class ) ) )
+		{
+			wrapper = GWT.create( AmFunnelChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmRadarChart.class ) ) )
+		{
+			wrapper = GWT.create( AmRadarChart.class );
+		}
+		else if ( className.equals( getSimpleName( AmXYChart.class ) ) )
+		{
+			wrapper = GWT.create( AmXYChart.class );
 		}
 		else if ( className.equals( getSimpleName( AmGraph.class ) ) )
 		{
@@ -155,6 +179,22 @@ public class WrapperUtils
 		{
 			wrapper = GWT.create( AmLegend.class );
 		}
+		else if ( className.equals( getSimpleName( AmAngularGauge.class ) ) )
+		{
+			wrapper = GWT.create( AmAngularGauge.class );
+		}
+		else if ( className.equals( getSimpleName( GaugeArrow.class ) ) )
+		{
+			wrapper = GWT.create( GaugeArrow.class );
+		}
+		else if ( className.equals( getSimpleName( GaugeAxis.class ) ) )
+		{
+			wrapper = GWT.create( GaugeAxis.class );
+		}
+		else if ( className.equals( getSimpleName( GaugeBand.class ) ) )
+		{
+			wrapper = GWT.create( GaugeBand.class );
+		}
 
 		return wrapper;
 	}
@@ -177,8 +217,10 @@ public class WrapperUtils
 	 */
 	public static String getSimpleName( Class< ? > klass )
 	{
-		String simpleName = klass.getName().substring( klass.getName().lastIndexOf( "." ) + 1 );
-		simpleName = simpleName.contains( "$" ) ? simpleName.substring( simpleName.lastIndexOf( '$' ) + 1 ) : simpleName;
+		String simpleName = klass.getName().substring( klass.getName()
+				.lastIndexOf( "." ) + 1 );
+		simpleName = simpleName.contains( "$" ) ? simpleName
+				.substring( simpleName.lastIndexOf( '$' ) + 1 ) : simpleName;
 		return simpleName;
 	}
 

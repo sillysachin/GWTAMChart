@@ -74,4 +74,13 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	{
 		getJso().setMaxZoomFactor( maxZoomFactor );
 	}
+	
+	/**
+	 * 	Zooms out, charts shows all available data.
+	 */
+	public native void zoomOut()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.zoomOut();
+	}-*/;
 }

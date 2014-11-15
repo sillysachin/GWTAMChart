@@ -1,6 +1,7 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmBalloon;
+import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
@@ -17,21 +18,23 @@ public class ThreeDFunnelChart
 {
 	public ThreeDFunnelChart()
 	{
-		GWTAMChart.chartService.getData( "/data/threeDFunnelChart.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( dataProvider );
-			}
+		GWTAMChart.chartService
+				.getData( "/data/threeDFunnelChart.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
+								.unsafeEval( chartData );
+						drawChart( dataProvider );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
@@ -51,7 +54,7 @@ public class ThreeDFunnelChart
 		amFunnelChart.setOutlineColor( "#FFFFFF" );
 		amFunnelChart.setOutlineThickness( 2 );
 		amFunnelChart.setLabelPosition( "right" );
-		AmBalloon balloon = new AmBalloon();
+		AmBalloon balloon = AmCharts.AmBalloon();
 		balloon.setFixedPosition( true );
 		balloon.setColor( "#F0F0F0" );
 		balloon.setFillColor( "#0F0F0F" );

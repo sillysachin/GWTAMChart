@@ -21,7 +21,7 @@ public class SubClassJSNIWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "AmXYChart", "AmAngularGauge", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmSerialChart" } );
+			{ "AmRadarChart","AmXYChart", "AmAngularGauge", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmSerialChart" } );
 
 	public static void main( String args[] ) throws IOException
 	{

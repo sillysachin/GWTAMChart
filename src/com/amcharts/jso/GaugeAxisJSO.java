@@ -1,820 +1,645 @@
-package com.amcharts.json;
+package com.amcharts.jso;
 
 import java.util.List;
 
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsGaugeAxis;
 import com.amcharts.api.IsGaugeBand;
+import com.google.gwt.core.client.JavaScriptObject;
 
-public final class GaugeAxis implements IsGaugeAxis
+public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 {
-	private double axisAlpha;
-
-	private String axisColor;
-
-	private double axisThickness;
-
-	private double bandAlpha;
-
-	private double bandOutlineAlpha;
-
-	private String bandOutlineColor;
-
-	private double bandOutlineThickness;
-
-	private List<IsGaugeBand> bands;
-
-	private String bottomText;
-
-	private boolean bottomTextBold;
-
-	private String bottomTextColor;
-
-	private double bottomTextFontSize;
-
-	private double bottomTextXOffset;
-
-	private double bottomTextYOffset;
-
-	private String centerX;
-
-	private String centerY;
-
-	private double endAngle;
-
-	private double endValue;
-
-	private double gridCount;
-
-	private boolean gridInside;
-
-	private String id;
-
-	private boolean inside;
-
-	private double labelFrequency;
-
-	private IsFunction labelFunction;
-
-	private double labelOffset;
-
-	private double minorTickInterval;
-
-	private double minorTickLength;
-
-	private String radius;
-
-	private boolean showFirstLabel;
-
-	private boolean showLastLabel;
-
-	private double startAngle;
-
-	private double startValue;
-
-	private double tickAlpha;
-
-	private String tickColor;
-
-	private double tickLength;
-
-	private double tickThickness;
-
-	private String topText;
-
-	private boolean topTextBold;
-
-	private String topTextColor;
-
-	private double topTextFontSize;
-
-	private double topTextYOffset;
-
-	private String unit;
-
-	private String unitPosition;
-
-	private boolean usePrefixes;
-
-	private double valueInterval;
+	protected GaugeAxisJSO()
+	{
+	}
 
 	/**
 	 * Axis opacity.
 	 */
-	public double getAxisAlpha()
-	{
+	public final native double getAxisAlpha() /*-{
 		return axisAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Axis opacity.
 	 */
-	public void setAxisAlpha( double axisAlpha )
-	{
+	public final native void setAxisAlpha( double axisAlpha ) /*-{
 		this.axisAlpha = axisAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Axis color.
 	 */
-	public String getAxisColor()
-	{
+	public final native String getAxisColor() /*-{
 		return axisColor;
-	}
+	}-*/;
 
 	/**
 	 * Axis color.
 	 */
-	public void setAxisColor( String axisColor )
-	{
+	public final native void setAxisColor( String axisColor ) /*-{
 		this.axisColor = axisColor;
-	}
+	}-*/;
 
 	/**
 	 * Thickness of the axis outline.
 	 */
-	public double getAxisThickness()
-	{
+	public final native double getAxisThickness() /*-{
 		return axisThickness;
-	}
+	}-*/;
 
 	/**
 	 * Thickness of the axis outline.
 	 */
-	public void setAxisThickness( double axisThickness )
-	{
+	public final native void setAxisThickness( double axisThickness ) /*-{
 		this.axisThickness = axisThickness;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of band fills.
 	 */
-	public double getBandAlpha()
-	{
+	public final native double getBandAlpha() /*-{
 		return bandAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of band fills.
 	 */
-	public void setBandAlpha( double bandAlpha )
-	{
+	public final native void setBandAlpha( double bandAlpha ) /*-{
 		this.bandAlpha = bandAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of band outlines.
 	 */
-	public double getBandOutlineAlpha()
-	{
+	public final native double getBandOutlineAlpha() /*-{
 		return bandOutlineAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of band outlines.
 	 */
-	public void setBandOutlineAlpha( double bandOutlineAlpha )
-	{
+	public final native void setBandOutlineAlpha( double bandOutlineAlpha ) /*-{
 		this.bandOutlineAlpha = bandOutlineAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Color of band outlines.
 	 */
-	public String getBandOutlineColor()
-	{
+	public final native String getBandOutlineColor() /*-{
 		return bandOutlineColor;
-	}
+	}-*/;
 
 	/**
 	 * Color of band outlines.
 	 */
-	public void setBandOutlineColor( String bandOutlineColor )
-	{
+	public final native void setBandOutlineColor( String bandOutlineColor ) /*-{
 		this.bandOutlineColor = bandOutlineColor;
-	}
+	}-*/;
 
 	/**
 	 * Thickness of band outlines.
 	 */
-	public double getBandOutlineThickness()
-	{
+	public final native double getBandOutlineThickness() /*-{
 		return bandOutlineThickness;
-	}
+	}-*/;
 
 	/**
 	 * Thickness of band outlines.
 	 */
-	public void setBandOutlineThickness( double bandOutlineThickness )
-	{
+	public final native void setBandOutlineThickness( double bandOutlineThickness ) /*-{
 		this.bandOutlineThickness = bandOutlineThickness;
-	}
+	}-*/;
 
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
-	public List<IsGaugeBand> getBands()
-	{
+	public final native List<IsGaugeBand> getBands() /*-{
 		return bands;
-	}
+	}-*/;
 
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
-	public void setBands( List<IsGaugeBand> bands )
-	{
+	public final native void setBands( List<IsGaugeBand> bands ) /*-{
 		this.bands = bands;
-	}
+	}-*/;
 
 	/**
 	 * Text displayed below the axis center.
 	 */
-	public String getBottomText()
-	{
+	public final native String getBottomText() /*-{
 		return bottomText;
-	}
+	}-*/;
 
 	/**
 	 * Text displayed below the axis center.
 	 */
-	public void setBottomText( String bottomText )
-	{
+	public final native void setBottomText( String bottomText ) /*-{
 		this.bottomText = bottomText;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isBottomTextBold()
-	{
+	public final native boolean isBottomTextBold() /*-{
 		return bottomTextBold;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setBottomTextBold( boolean bottomTextBold )
-	{
+	public final native void setBottomTextBold( boolean bottomTextBold ) /*-{
 		this.bottomTextBold = bottomTextBold;
-	}
+	}-*/;
 
 	/**
 	 * Bottom text color.
 	 */
-	public String getBottomTextColor()
-	{
+	public final native String getBottomTextColor() /*-{
 		return bottomTextColor;
-	}
+	}-*/;
 
 	/**
 	 * Bottom text color.
 	 */
-	public void setBottomTextColor( String bottomTextColor )
-	{
+	public final native void setBottomTextColor( String bottomTextColor ) /*-{
 		this.bottomTextColor = bottomTextColor;
-	}
+	}-*/;
 
 	/**
 	 * Font size of bottom text.
 	 */
-	public double getBottomTextFontSize()
-	{
+	public final native double getBottomTextFontSize() /*-{
 		return bottomTextFontSize;
-	}
+	}-*/;
 
 	/**
 	 * Font size of bottom text.
 	 */
-	public void setBottomTextFontSize( double bottomTextFontSize )
-	{
+	public final native void setBottomTextFontSize( double bottomTextFontSize ) /*-{
 		this.bottomTextFontSize = bottomTextFontSize;
-	}
+	}-*/;
 
 	/**
 	 * Y offset of bottom text.
 	 */
-	public double getBottomTextYOffset()
-	{
+	public final native double getBottomTextYOffset() /*-{
 		return bottomTextYOffset;
-	}
+	}-*/;
 
 	/**
 	 * Y offset of bottom text.
 	 */
-	public void setBottomTextYOffset( double bottomTextYOffset )
-	{
-		this.bottomTextYOffset = bottomTextYOffset;
-	}
-
-	/**
-	 * X offset of bottom text.
-	 */
-	public double getBottomTextXOffset()
-	{
-		return bottomTextXOffset;
-	}
-
-	/**
-	 * X offset of bottom text.
-	 */
-	public void setBottomTextXOffset( double bottomTextXOffset )
-	{
+	public final native void setBottomTextXOffset( double bottomTextXOffset ) /*-{
 		this.bottomTextXOffset = bottomTextXOffset;
-	}
+	}-*/;
+
+	/**
+	 * Y offset of bottom text.
+	 */
+	public final native double getBottomTextXOffset() /*-{
+		return bottomTextXOffset;
+	}-*/;
+
+	/**
+	 * Y offset of bottom text.
+	 */
+	public final native void setBottomTextYOffset( double bottomTextYOffset ) /*-{
+		this.bottomTextYOffset = bottomTextYOffset;
+	}-*/;
 
 	/**
 	 * "X position of the axis, relative to the center of the gauge."
 	 */
-	public String getCenterX()
-	{
+	public final native String getCenterX() /*-{
 		return centerX;
-	}
+	}-*/;
 
 	/**
 	 * "X position of the axis, relative to the center of the gauge."
 	 */
-	public void setCenterX( String centerX )
-	{
+	public final native void setCenterX( String centerX ) /*-{
 		this.centerX = centerX;
-	}
+	}-*/;
 
 	/**
 	 * "Y position of the axis, relative to the center of the gauge."
 	 */
-	public String getCenterY()
-	{
+	public final native String getCenterY() /*-{
 		return centerY;
-	}
+	}-*/;
 
 	/**
 	 * "Y position of the axis, relative to the center of the gauge."
 	 */
-	public void setCenterY( String centerY )
-	{
+	public final native void setCenterY( String centerY ) /*-{
 		this.centerY = centerY;
-	}
+	}-*/;
 
 	/**
 	 * Axis end angle. Valid values are from - 180 to 180.
 	 */
-	public double getEndAngle()
-	{
+	public final native double getEndAngle() /*-{
 		return endAngle;
-	}
+	}-*/;
 
 	/**
 	 * Axis end angle. Valid values are from - 180 to 180.
 	 */
-	public void setEndAngle( double endAngle )
-	{
+	public final native void setEndAngle( double endAngle ) /*-{
 		this.endAngle = endAngle;
-	}
+	}-*/;
 
 	/**
 	 * Axis end (max) value
 	 */
-	public double getEndValue()
-	{
+	public final native double getEndValue() /*-{
 		return endValue;
-	}
+	}-*/;
 
 	/**
 	 * Axis end (max) value
 	 */
-	public void setEndValue( double endValue )
-	{
+	public final native void setEndValue( double endValue ) /*-{
 		this.endValue = endValue;
-	}
+	}-*/;
 
 	/**
 	 * "Number of grid lines. Note, GaugeAxis doesn't adjust gridCount, so you should check your values and choose a proper gridCount which would result grids at round numbers."
 	 */
-	public double getGridCount()
-	{
+	public final native double getGridCount() /*-{
 		return gridCount;
-	}
+	}-*/;
 
 	/**
 	 * "Number of grid lines. Note, GaugeAxis doesn't adjust gridCount, so you should check your values and choose a proper gridCount which would result grids at round numbers."
 	 */
-	public void setGridCount( double gridCount )
-	{
+	public final native void setGridCount( double gridCount ) /*-{
 		this.gridCount = gridCount;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public boolean isGridInside()
-	{
+	public final native boolean isGridInside() /*-{
 		return gridInside;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public void setGridInside( boolean gridInside )
-	{
+	public final native void setGridInside( boolean gridInside ) /*-{
 		this.gridInside = gridInside;
-	}
+	}-*/;
 
 	/**
 	 * Unique id of an axis.
 	 */
-	public String getId()
-	{
+	public final native String getId() /*-{
 		return id;
-	}
+	}-*/;
 
 	/**
 	 * Unique id of an axis.
 	 */
-	public void setId( String id )
-	{
+	public final native void setId( String id ) /*-{
 		this.id = id;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public boolean isInside()
-	{
+	public final native boolean isInside() /*-{
 		return inside;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public void setInside( boolean inside )
-	{
+	public final native void setInside( boolean inside ) /*-{
 		this.inside = inside;
-	}
+	}-*/;
 
 	/**
 	 * Frequency of labels.
 	 */
-	public double getLabelFrequency()
-	{
+	public final native double getLabelFrequency() /*-{
 		return labelFrequency;
-	}
+	}-*/;
 
 	/**
 	 * Frequency of labels.
 	 */
-	public void setLabelFrequency( double labelFrequency )
-	{
+	public final native void setLabelFrequency( double labelFrequency ) /*-{
 		this.labelFrequency = labelFrequency;
-	}
+	}-*/;
 
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
-	public IsFunction getLabelFunction()
-	{
+	public final native IsFunction getLabelFunction() /*-{
 		return labelFunction;
-	}
+	}-*/;
 
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
-	public void setLabelFunction( IsFunction labelFunction )
-	{
+	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
 		this.labelFunction = labelFunction;
-	}
+	}-*/;
 
 	/**
 	 * Distance from axis to the labels.
 	 */
-	public double getLabelOffset()
-	{
+	public final native double getLabelOffset() /*-{
 		return labelOffset;
-	}
+	}-*/;
 
 	/**
 	 * Distance from axis to the labels.
 	 */
-	public void setLabelOffset( double labelOffset )
-	{
+	public final native void setLabelOffset( double labelOffset ) /*-{
 		this.labelOffset = labelOffset;
-	}
+	}-*/;
 
 	/**
 	 * "Interval, at which minor ticks should be placed."
 	 */
-	public double getMinorTickInterval()
-	{
+	public final native double getMinorTickInterval() /*-{
 		return minorTickInterval;
-	}
+	}-*/;
 
 	/**
 	 * "Interval, at which minor ticks should be placed."
 	 */
-	public void setMinorTickInterval( double minorTickInterval )
-	{
+	public final native void setMinorTickInterval( double minorTickInterval ) /*-{
 		this.minorTickInterval = minorTickInterval;
-	}
+	}-*/;
 
 	/**
 	 * Length of a minor tick.
 	 */
-	public double getMinorTickLength()
-	{
+	public final native double getMinorTickLength() /*-{
 		return minorTickLength;
-	}
+	}-*/;
 
 	/**
 	 * Length of a minor tick.
 	 */
-	public void setMinorTickLength( double minorTickLength )
-	{
+	public final native void setMinorTickLength( double minorTickLength ) /*-{
 		this.minorTickLength = minorTickLength;
-	}
+	}-*/;
 
 	/**
 	 * Axis radius.
 	 */
-	public String getRadius()
-	{
+	public final native String getRadius() /*-{
 		return radius;
-	}
+	}-*/;
 
 	/**
 	 * Axis radius.
 	 */
-	public void setRadius( String radius )
-	{
+	public final native void setRadius( String radius ) /*-{
 		this.radius = radius;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public boolean isShowFirstLabel()
-	{
+	public final native boolean isShowFirstLabel() /*-{
 		return showFirstLabel;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel )
-	{
+	public final native void setShowFirstLabel( boolean showFirstLabel ) /*-{
 		this.showFirstLabel = showFirstLabel;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public boolean isShowLastLabel()
-	{
+	public final native boolean isShowLastLabel() /*-{
 		return showLastLabel;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public void setShowLastLabel( boolean showLastLabel )
-	{
+	public final native void setShowLastLabel( boolean showLastLabel ) /*-{
 		this.showLastLabel = showLastLabel;
-	}
+	}-*/;
 
 	/**
 	 * Axis start angle. Valid values are from - 180 to 180.
 	 */
-	public double getStartAngle()
-	{
+	public final native double getStartAngle() /*-{
 		return startAngle;
-	}
+	}-*/;
 
 	/**
 	 * Axis start angle. Valid values are from - 180 to 180.
 	 */
-	public void setStartAngle( double startAngle )
-	{
+	public final native void setStartAngle( double startAngle ) /*-{
 		this.startAngle = startAngle;
-	}
+	}-*/;
 
 	/**
 	 * Axis start (min) value.
 	 */
-	public double getStartValue()
-	{
+	public final native double getStartValue() /*-{
 		return startValue;
-	}
+	}-*/;
 
 	/**
 	 * Axis start (min) value.
 	 */
-	public void setStartValue( double startValue )
-	{
+	public final native void setStartValue( double startValue ) /*-{
 		this.startValue = startValue;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of axis ticks.
 	 */
-	public double getTickAlpha()
-	{
+	public final native double getTickAlpha() /*-{
 		return tickAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Opacity of axis ticks.
 	 */
-	public void setTickAlpha( double tickAlpha )
-	{
+	public final native void setTickAlpha( double tickAlpha ) /*-{
 		this.tickAlpha = tickAlpha;
-	}
+	}-*/;
 
 	/**
 	 * Color of axis ticks.
 	 */
-	public String getTickColor()
-	{
+	public final native String getTickColor() /*-{
 		return tickColor;
-	}
+	}-*/;
 
 	/**
 	 * Color of axis ticks.
 	 */
-	public void setTickColor( String tickColor )
-	{
+	public final native void setTickColor( String tickColor ) /*-{
 		this.tickColor = tickColor;
-	}
+	}-*/;
 
 	/**
 	 * Length of a major tick.
 	 */
-	public double getTickLength()
-	{
+	public final native double getTickLength() /*-{
 		return tickLength;
-	}
+	}-*/;
 
 	/**
 	 * Length of a major tick.
 	 */
-	public void setTickLength( double tickLength )
-	{
+	public final native void setTickLength( double tickLength ) /*-{
 		this.tickLength = tickLength;
-	}
+	}-*/;
 
 	/**
 	 * Tick thickness.
 	 */
-	public double getTickThickness()
-	{
+	public final native double getTickThickness() /*-{
 		return tickThickness;
-	}
+	}-*/;
 
 	/**
 	 * Tick thickness.
 	 */
-	public void setTickThickness( double tickThickness )
-	{
+	public final native void setTickThickness( double tickThickness ) /*-{
 		this.tickThickness = tickThickness;
-	}
+	}-*/;
 
 	/**
 	 * Text displayed above the axis center.
 	 */
-	public String getTopText()
-	{
+	public final native String getTopText() /*-{
 		return topText;
-	}
+	}-*/;
 
 	/**
 	 * Text displayed above the axis center.
 	 */
-	public void setTopText( String topText )
-	{
+	public final native void setTopText( String topText ) /*-{
 		this.topText = topText;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isTopTextBold()
-	{
+	public final native boolean isTopTextBold() /*-{
 		return topTextBold;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setTopTextBold( boolean topTextBold )
-	{
+	public final native void setTopTextBold( boolean topTextBold ) /*-{
 		this.topTextBold = topTextBold;
-	}
+	}-*/;
 
 	/**
 	 * Color of top text.
 	 */
-	public String getTopTextColor()
-	{
+	public final native String getTopTextColor() /*-{
 		return topTextColor;
-	}
+	}-*/;
 
 	/**
 	 * Color of top text.
 	 */
-	public void setTopTextColor( String topTextColor )
-	{
+	public final native void setTopTextColor( String topTextColor ) /*-{
 		this.topTextColor = topTextColor;
-	}
+	}-*/;
 
 	/**
 	 * Font size of top text.
 	 */
-	public double getTopTextFontSize()
-	{
+	public final native double getTopTextFontSize() /*-{
 		return topTextFontSize;
-	}
+	}-*/;
 
 	/**
 	 * Font size of top text.
 	 */
-	public void setTopTextFontSize( double topTextFontSize )
-	{
+	public final native void setTopTextFontSize( double topTextFontSize ) /*-{
 		this.topTextFontSize = topTextFontSize;
-	}
+	}-*/;
 
 	/**
 	 * Y offset of top text.
 	 */
-	public double getTopTextYOffset()
-	{
+	public final native double getTopTextYOffset() /*-{
 		return topTextYOffset;
-	}
+	}-*/;
 
 	/**
 	 * Y offset of top text.
 	 */
-	public void setTopTextYOffset( double topTextYOffset )
-	{
+	public final native void setTopTextYOffset( double topTextYOffset ) /*-{
 		this.topTextYOffset = topTextYOffset;
-	}
+	}-*/;
 
 	/**
 	 * A string which can be placed next to axis labels.
 	 */
-	public String getUnit()
-	{
+	public final native String getUnit() /*-{
 		return unit;
-	}
+	}-*/;
 
 	/**
 	 * A string which can be placed next to axis labels.
 	 */
-	public void setUnit( String unit )
-	{
+	public final native void setUnit( String unit ) /*-{
 		this.unit = unit;
-	}
+	}-*/;
 
 	/**
 	 * Position of the unit.
 	 */
-	public String getUnitPosition()
-	{
+	public final native String getUnitPosition() /*-{
 		return unitPosition;
-	}
+	}-*/;
 
 	/**
 	 * Position of the unit.
 	 */
-	public void setUnitPosition( String unitPosition )
-	{
+	public final native void setUnitPosition( String unitPosition ) /*-{
 		this.unitPosition = unitPosition;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public boolean isUsePrefixes()
-	{
+	public final native boolean isUsePrefixes() /*-{
 		return usePrefixes;
-	}
+	}-*/;
 
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public void setUsePrefixes( boolean usePrefixes )
-	{
+	public final native void setUsePrefixes( boolean usePrefixes ) /*-{
 		this.usePrefixes = usePrefixes;
-	}
+	}-*/;
 
 	/**
 	 * "Interval, at which ticks with values should be placed."
 	 */
-	public double getValueInterval()
-	{
+	public final native double getValueInterval() /*-{
 		return valueInterval;
-	}
+	}-*/;
 
 	/**
 	 * "Interval, at which ticks with values should be placed."
 	 */
-	public void setValueInterval( double valueInterval )
-	{
+	public final native void setValueInterval( double valueInterval ) /*-{
 		this.valueInterval = valueInterval;
-	}
+	}-*/;
 }

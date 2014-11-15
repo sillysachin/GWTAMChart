@@ -2,93 +2,223 @@ package com.amcharts.api;
 
 public interface IsAmBalloon
 {
+	/**
+	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
+	 */
+	public boolean isAdjustBorderColor();
 
-	public abstract boolean isAdjustBorderColor();
+	/**
+	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
+	 */
+	public void setAdjustBorderColor( boolean adjustBorderColor );
 
-	public abstract void setAdjustBorderColor( boolean adjustBorderColor );
+	/**
+	 * "Duration of balloon movement from previous point to current point, in seconds."
+	 */
+	public double getAnimationDuration();
 
-	public abstract double getAnimationDuration();
+	/**
+	 * "Duration of balloon movement from previous point to current point, in seconds."
+	 */
+	public void setAnimationDuration( double animationDuration );
 
-	public abstract void setAnimationDuration( double animationDuration );
+	/**
+	 * Balloon border opacity. Value range is 0 - 1.
+	 */
+	public double getBorderAlpha();
 
-	public abstract double getBorderAlpha();
+	/**
+	 * Balloon border opacity. Value range is 0 - 1.
+	 */
+	public void setBorderAlpha( double borderAlpha );
 
-	public abstract void setBorderAlpha( double borderAlpha );
+	/**
+	 * Balloon border color. Will only be used of adjustBorderColor is false.
+	 */
+	public String getBorderColor();
 
-	public abstract String getBorderColor();
+	/**
+	 * Balloon border color. Will only be used of adjustBorderColor is false.
+	 */
+	public void setBorderColor( String borderColor );
 
-	public abstract void setBorderColor( String borderColor );
+	/**
+	 * Balloon border thickness.
+	 */
+	public double getBorderThickness();
 
-	public abstract double getBorderThickness();
+	/**
+	 * Balloon border thickness.
+	 */
+	public void setBorderThickness( double borderThickness );
 
-	public abstract void setBorderThickness( double borderThickness );
+	/**
+	 * Color of text in the balloon.
+	 */
+	public String getColor();
 
-	public abstract String getColor();
+	/**
+	 * Color of text in the balloon.
+	 */
+	public void setColor( String color );
 
-	public abstract void setColor( String color );
+	/**
+	 * Balloon corner radius.
+	 */
+	public double getCornerRadius();
 
-	public abstract double getCornerRadius();
+	/**
+	 * Balloon corner radius.
+	 */
+	public void setCornerRadius( double cornerRadius );
 
-	public abstract void setCornerRadius( double cornerRadius );
+	/**
+	 * "Duration of a fade out animation, in seconds."
+	 */
+	public double getFadeOutDuration();
 
-	public abstract double getFadeOutDuration();
+	/**
+	 * "Duration of a fade out animation, in seconds."
+	 */
+	public void setFadeOutDuration( double fadeOutDuration );
 
-	public abstract void setFadeOutDuration( double fadeOutDuration );
+	/**
+	 * Balloon background opacity.
+	 */
+	public double getFillAlpha();
 
-	public abstract double getFillAlpha();
+	/**
+	 * Balloon background opacity.
+	 */
+	public void setFillAlpha( double fillAlpha );
 
-	public abstract void setFillAlpha( double fillAlpha );
+	/**
+	 * Balloon background color. Usually balloon background color is set by the chart. Only if 'adjustBorderColor' is 'true' this color will be used.
+	 */
+	public String getFillColor();
 
-	public abstract String getFillColor();
+	/**
+	 * Balloon background color. Usually balloon background color is set by the chart. Only if 'adjustBorderColor' is 'true' this color will be used.
+	 */
+	public void setFillColor( String fillColor );
 
-	public abstract void setFillColor( String fillColor );
+	/**
+	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
+	 */
+	public boolean isFixedPosition();
 
-	public abstract boolean isFixedPosition();
+	/**
+	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
+	 */
+	public void setFixedPosition( boolean fixedPosition );
 
-	public abstract void setFixedPosition( boolean fixedPosition );
+	/**
+	 * Size of text in the balloon. Chart's fontSize is used by default.
+	 */
+	public double getFontSize();
 
-	public abstract double getFontSize();
+	/**
+	 * Size of text in the balloon. Chart's fontSize is used by default.
+	 */
+	public void setFontSize( double fontSize );
 
-	public abstract void setFontSize( double fontSize );
+	/**
+	 * Horizontal padding of the balloon.
+	 */
+	public double getHorizontalPadding();
 
-	public abstract double getHorizontalPadding();
+	/**
+	 * Horizontal padding of the balloon.
+	 */
+	public void setHorizontalPadding( double horizontalPadding );
 
-	public abstract void setHorizontalPadding( double horizontalPadding );
+	/**
+	 * Maximum width of a balloon.
+	 */
+	public double getMaxWidth();
 
-	public abstract double getMaxWidth();
+	/**
+	 * Maximum width of a balloon.
+	 */
+	public void setMaxWidth( double maxWidth );
 
-	public abstract void setMaxWidth( double maxWidth );
+	/**
+	 * "Defines horizontal distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
+	 */
+	public double getOffsetX();
 
-	public abstract double getOffsetX();
+	/**
+	 * "Defines horizontal distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
+	 */
+	public void setOffsetX( double offsetX );
 
-	public abstract void setOffsetX( double offsetX );
+	/**
+	 * "Defines vertical distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
+	 */
+	public double getOffsetY();
 
-	public abstract double getOffsetY();
+	/**
+	 * "Defines vertical distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
+	 */
+	public void setOffsetY( double offsetY );
 
-	public abstract void setOffsetY( double offsetY );
+	/**
+	 * The width of the pointer (arrow) 'root'. Only used if cornerRadius is 0.
+	 */
+	public double getPointerWidth();
 
-	public abstract double getPointerWidth();
+	/**
+	 * The width of the pointer (arrow) 'root'. Only used if cornerRadius is 0.
+	 */
+	public void setPointerWidth( double pointerWidth );
 
-	public abstract void setPointerWidth( double pointerWidth );
+	/**
+	 * Opacity of a shadow.
+	 */
+	public double getShadowAlpha();
 
-	public abstract double getShadowAlpha();
+	/**
+	 * Opacity of a shadow.
+	 */
+	public void setShadowAlpha( double shadowAlpha );
 
-	public abstract void setShadowAlpha( double shadowAlpha );
+	/**
+	 * Color of a shadow.
+	 */
+	public String getShadowColor();
 
-	public abstract double getShadowColor();
+	/**
+	 * Color of a shadow.
+	 */
+	public void setShadowColor( String shadowColor );
 
-	public abstract void setShadowColor( double shadowColor );
+	/**
+	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
+	 */
+	public boolean isShowBullet();
 
-	public abstract boolean isShowBullet();
+	/**
+	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
+	 */
+	public void setShowBullet( boolean showBullet );
 
-	public abstract void setShowBullet( boolean showBullet );
+	/**
+	 * "Text alignment, possible values 'left', 'middle' and 'right'"
+	 */
+	public String getTextAlign();
 
-	public abstract String getTextAlign();
+	/**
+	 * "Text alignment, possible values 'left', 'middle' and 'right'"
+	 */
+	public void setTextAlign( String textAlign );
 
-	public abstract void setTextAlign( String textAlign );
+	/**
+	 * Vertical padding of the balloon.
+	 */
+	public double getVerticalPadding();
 
-	public abstract double getVerticalPadding();
-
-	public abstract void setVerticalPadding( double verticalPadding );
-
+	/**
+	 * Vertical padding of the balloon.
+	 */
+	public void setVerticalPadding( double verticalPadding );
 }

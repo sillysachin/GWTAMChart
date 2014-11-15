@@ -3,405 +3,317 @@ package com.amcharts.jso;
 import com.amcharts.api.IsAmBalloon;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
+public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 {
 	protected AmBalloonJSO()
 	{
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#isAdjustBorderColor()
+
+	/**
+	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	@Override
-	public final native boolean isAdjustBorderColor()
-	/*-{
-		return this.adjustBorderColor;
+	public final native boolean isAdjustBorderColor() /*-{
+		return adjustBorderColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setAdjustBorderColor(boolean)
+	/**
+	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	@Override
-	public final native void setAdjustBorderColor( boolean adjustBorderColor )
-	/*-{
+	public final native void setAdjustBorderColor( boolean adjustBorderColor ) /*-{
 		this.adjustBorderColor = adjustBorderColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getAnimationDuration()
+	/**
+	 * "Duration of balloon movement from previous point to current point, in seconds."
 	 */
-	@Override
-	public final native double getAnimationDuration()
-	/*-{
-		return this.animationDuration;
+	public final native double getAnimationDuration() /*-{
+		return animationDuration;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setAnimationDuration(double)
+	/**
+	 * "Duration of balloon movement from previous point to current point, in seconds."
 	 */
-	@Override
-	public final native void setAnimationDuration( double animationDuration )
-	/*-{
+	public final native void setAnimationDuration( double animationDuration ) /*-{
 		this.animationDuration = animationDuration;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getBorderAlpha()
+	/**
+	 * Balloon border opacity. Value range is 0 - 1.
 	 */
-	@Override
-	public final native double getBorderAlpha()
-	/*-{
-		return this.borderAlpha;
+	public final native double getBorderAlpha() /*-{
+		return borderAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setBorderAlpha(double)
+	/**
+	 * Balloon border opacity. Value range is 0 - 1.
 	 */
-	@Override
-	public final native void setBorderAlpha( double borderAlpha )
-	/*-{
+	public final native void setBorderAlpha( double borderAlpha ) /*-{
 		this.borderAlpha = borderAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getBorderColor()
+	/**
+	 * Balloon border color. Will only be used of adjustBorderColor is false.
 	 */
-	@Override
-	public final native String getBorderColor()
-	/*-{
-		return this.borderColor;
+	public final native String getBorderColor() /*-{
+		return borderColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setBorderColor(java.lang.String)
+	/**
+	 * Balloon border color. Will only be used of adjustBorderColor is false.
 	 */
-	@Override
-	public final native void setBorderColor( String borderColor )
-	/*-{
+	public final native void setBorderColor( String borderColor ) /*-{
 		this.borderColor = borderColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getBorderThickness()
+	/**
+	 * Balloon border thickness.
 	 */
-	@Override
-	public final native double getBorderThickness()
-	/*-{
-		return this.borderThickness;
+	public final native double getBorderThickness() /*-{
+		return borderThickness;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setBorderThickness(double)
+	/**
+	 * Balloon border thickness.
 	 */
-	@Override
-	public final native void setBorderThickness( double borderThickness )
-	/*-{
+	public final native void setBorderThickness( double borderThickness ) /*-{
 		this.borderThickness = borderThickness;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getColor()
+	/**
+	 * Color of text in the balloon.
 	 */
-	@Override
-	public final native String getColor()
-	/*-{
-		return this.color;
+	public final native String getColor() /*-{
+		return color;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setColor(java.lang.String)
+	/**
+	 * Color of text in the balloon.
 	 */
-	@Override
-	public final native void setColor( String color )
-	/*-{
+	public final native void setColor( String color ) /*-{
 		this.color = color;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getCornerRadius()
+	/**
+	 * Balloon corner radius.
 	 */
-	@Override
-	public final native double getCornerRadius()
-	/*-{
-		return this.cornerRadius;
+	public final native double getCornerRadius() /*-{
+		return cornerRadius;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setCornerRadius(double)
+	/**
+	 * Balloon corner radius.
 	 */
-	@Override
-	public final native void setCornerRadius( double cornerRadius )
-	/*-{
+	public final native void setCornerRadius( double cornerRadius ) /*-{
 		this.cornerRadius = cornerRadius;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getFadeOutDuration()
+	/**
+	 * "Duration of a fade out animation, in seconds."
 	 */
-	@Override
-	public final native double getFadeOutDuration()
-	/*-{
-		return this.fadeOutDuration;
+	public final native double getFadeOutDuration() /*-{
+		return fadeOutDuration;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setFadeOutDuration(double)
+	/**
+	 * "Duration of a fade out animation, in seconds."
 	 */
-	@Override
-	public final native void setFadeOutDuration( double fadeOutDuration )
-	/*-{
+	public final native void setFadeOutDuration( double fadeOutDuration ) /*-{
 		this.fadeOutDuration = fadeOutDuration;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getFillAlpha()
+	/**
+	 * Balloon background opacity.
 	 */
-	@Override
-	public final native double getFillAlpha()
-	/*-{
-		return this.fillAlpha;
+	public final native double getFillAlpha() /*-{
+		return fillAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setFillAlpha(double)
+	/**
+	 * Balloon background opacity.
 	 */
-	@Override
-	public final native void setFillAlpha( double fillAlpha )
-	/*-{
+	public final native void setFillAlpha( double fillAlpha ) /*-{
 		this.fillAlpha = fillAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getFillColor()
+	/**
+	 * Balloon background color. Usually balloon background color is set by the chart. Only if 'adjustBorderColor' is 'true' this color will be used.
 	 */
-	@Override
-	public final native String getFillColor()
-	/*-{
-		return this.fillColor;
+	public final native String getFillColor() /*-{
+		return fillColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setFillColor(java.lang.String)
+	/**
+	 * Balloon background color. Usually balloon background color is set by the chart. Only if 'adjustBorderColor' is 'true' this color will be used.
 	 */
-	@Override
-	public final native void setFillColor( String fillColor )
-	/*-{
+	public final native void setFillColor( String fillColor ) /*-{
 		this.fillColor = fillColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#isFixedPosition()
+	/**
+	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	@Override
-	public final native boolean isFixedPosition()
-	/*-{
-		return this.fixedPosition;
+	public final native boolean isFixedPosition() /*-{
+		return fixedPosition;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setFixedPosition(boolean)
+	/**
+	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	@Override
-	public final native void setFixedPosition( boolean fixedPosition )
-	/*-{
+	public final native void setFixedPosition( boolean fixedPosition ) /*-{
 		this.fixedPosition = fixedPosition;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getFontSize()
+	/**
+	 * Size of text in the balloon. Chart's fontSize is used by default.
 	 */
-	@Override
-	public final native double getFontSize()
-	/*-{
-		return this.fontSize;
+	public final native double getFontSize() /*-{
+		return fontSize;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setFontSize(double)
+	/**
+	 * Size of text in the balloon. Chart's fontSize is used by default.
 	 */
-	@Override
-	public final native void setFontSize( double fontSize )
-	/*-{
+	public final native void setFontSize( double fontSize ) /*-{
 		this.fontSize = fontSize;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getHorizontalPadding()
+	/**
+	 * Horizontal padding of the balloon.
 	 */
-	@Override
-	public final native double getHorizontalPadding()
-	/*-{
-		return this.horizontalPadding;
+	public final native double getHorizontalPadding() /*-{
+		return horizontalPadding;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setHorizontalPadding(double)
+	/**
+	 * Horizontal padding of the balloon.
 	 */
-	@Override
-	public final native void setHorizontalPadding( double horizontalPadding )
-	/*-{
+	public final native void setHorizontalPadding( double horizontalPadding ) /*-{
 		this.horizontalPadding = horizontalPadding;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getMaxWidth()
+	/**
+	 * Maximum width of a balloon.
 	 */
-	@Override
-	public final native double getMaxWidth()
-	/*-{
-		return this.maxWidth;
+	public final native double getMaxWidth() /*-{
+		return maxWidth;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setMaxWidth(double)
+	/**
+	 * Maximum width of a balloon.
 	 */
-	@Override
-	public final native void setMaxWidth( double maxWidth )
-	/*-{
+	public final native void setMaxWidth( double maxWidth ) /*-{
 		this.maxWidth = maxWidth;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getOffsetX()
+	/**
+	 * "Defines horizontal distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
-	@Override
-	public final native double getOffsetX()
-	/*-{
-		return this.offsetX;
+	public final native double getOffsetX() /*-{
+		return offsetX;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setOffsetX(double)
+	/**
+	 * "Defines horizontal distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
-	@Override
-	public final native void setOffsetX( double offsetX )
-	/*-{
+	public final native void setOffsetX( double offsetX ) /*-{
 		this.offsetX = offsetX;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getOffsetY()
+	/**
+	 * "Defines vertical distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
-	@Override
-	public final native double getOffsetY()
-	/*-{
-		return this.offsetY;
+	public final native double getOffsetY() /*-{
+		return offsetY;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setOffsetY(double)
+	/**
+	 * "Defines vertical distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
-	@Override
-	public final native void setOffsetY( double offsetY )
-	/*-{
+	public final native void setOffsetY( double offsetY ) /*-{
 		this.offsetY = offsetY;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getPointerWidth()
+	/**
+	 * The width of the pointer (arrow) 'root'. Only used if cornerRadius is 0.
 	 */
-	@Override
-	public final native double getPointerWidth()
-	/*-{
-		return this.pointerWidth;
+	public final native double getPointerWidth() /*-{
+		return pointerWidth;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setPointerWidth(double)
+	/**
+	 * The width of the pointer (arrow) 'root'. Only used if cornerRadius is 0.
 	 */
-	@Override
-	public final native void setPointerWidth( double pointerWidth )
-	/*-{
+	public final native void setPointerWidth( double pointerWidth ) /*-{
 		this.pointerWidth = pointerWidth;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getShadowAlpha()
+	/**
+	 * Opacity of a shadow.
 	 */
-	@Override
-	public final native double getShadowAlpha()
-	/*-{
-		return this.shadowAlpha;
+	public final native double getShadowAlpha() /*-{
+		return shadowAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setShadowAlpha(double)
+	/**
+	 * Opacity of a shadow.
 	 */
-	@Override
-	public final native void setShadowAlpha( double shadowAlpha )
-	/*-{
+	public final native void setShadowAlpha( double shadowAlpha ) /*-{
 		this.shadowAlpha = shadowAlpha;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getShadowColor()
+	/**
+	 * Color of a shadow.
 	 */
-	@Override
-	public final native double getShadowColor()
-	/*-{
-		return this.shadowColor;
+	public final native String getShadowColor() /*-{
+		return shadowColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setShadowColor(double)
+	/**
+	 * Color of a shadow.
 	 */
-	@Override
-	public final native void setShadowColor( double shadowColor )
-	/*-{
+	public final native void setShadowColor( String shadowColor ) /*-{
 		this.shadowColor = shadowColor;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#isShowBullet()
+	/**
+	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	@Override
-	public final native boolean isShowBullet()
-	/*-{
-		return this.showBullet;
+	public final native boolean isShowBullet() /*-{
+		return showBullet;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setShowBullet(boolean)
+	/**
+	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	@Override
-	public final native void setShowBullet( boolean showBullet )
-	/*-{
+	public final native void setShowBullet( boolean showBullet ) /*-{
 		this.showBullet = showBullet;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getTextAlign()
+	/**
+	 * "Text alignment, possible values 'left', 'middle' and 'right'"
 	 */
-	@Override
-	public final native String getTextAlign()
-	/*-{
-		return this.textAlign;
+	public final native String getTextAlign() /*-{
+		return textAlign;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setTextAlign(java.lang.String)
+	/**
+	 * "Text alignment, possible values 'left', 'middle' and 'right'"
 	 */
-	@Override
-	public final native void setTextAlign( String textAlign )
-	/*-{
+	public final native void setTextAlign( String textAlign ) /*-{
 		this.textAlign = textAlign;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#getVerticalPadding()
+	/**
+	 * Vertical padding of the balloon.
 	 */
-	@Override
-	public final native double getVerticalPadding()
-	/*-{
-		return this.verticalPadding;
+	public final native double getVerticalPadding() /*-{
+		return verticalPadding;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmBalloon#setVerticalPadding(double)
+	/**
+	 * Vertical padding of the balloon.
 	 */
-	@Override
-	public final native void setVerticalPadding( double verticalPadding )
-	/*-{
+	public final native void setVerticalPadding( double verticalPadding ) /*-{
 		this.verticalPadding = verticalPadding;
 	}-*/;
 }

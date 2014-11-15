@@ -1,6 +1,6 @@
 package com.amcharts.api;
 
-public interface IsGuageBand
+public interface IsGaugeBand
 {
 	/**
 	 * Opacity of band fill. Will use axis.bandAlpha if not set any.

@@ -1,6 +1,7 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmBalloon;
+import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
@@ -47,7 +48,7 @@ public class PyramidChart
 		amFunnelChart.setStartX( -500 );
 		amFunnelChart.setRotate( true );
 		amFunnelChart.setLabelPosition( "right" );
-		AmBalloon balloon = new AmBalloon();
+		AmBalloon balloon =  AmCharts.AmBalloon();
 		balloon.setFixedPosition( true );
 		balloon.setColor( "#F0F0F0" );
 		balloon.setFillColor( "#0F0F0F" );

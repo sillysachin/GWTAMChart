@@ -22,6 +22,24 @@ public class AmCharts
 		return amXYChart;
 	}
 
+	public static AmFunnelChart AmFunnelChart()
+	{
+		AmFunnelChart amFunnelChart = new AmFunnelChart();
+		return amFunnelChart;
+	}
+
+	public static AmAngularGauge AmAngularGauge()
+	{
+		AmAngularGauge amAngularGauge = new AmAngularGauge();
+		return amAngularGauge;
+	}
+
+	public static AmPieChart AmPieChart()
+	{
+		AmPieChart amPieChart = new AmPieChart();
+		return amPieChart;
+	}
+
 	public static AmGraph AmGraph()
 	{
 		AmGraph amGraph = new AmGraph();
@@ -34,22 +52,16 @@ public class AmCharts
 		return valueAxis;
 	}
 
+	public static CategoryAxis CategoryAxis()
+	{
+		CategoryAxis categoryAxis = new CategoryAxis();
+		return categoryAxis;
+	}
+
 	public static ChartCursor ChartCursor()
 	{
 		ChartCursor chartCursor = new ChartCursor();
 		return chartCursor;
-	}
-
-	public static AmPieChart AmPieChart()
-	{
-		AmPieChart amPieChart = new AmPieChart();
-		return amPieChart;
-	}
-
-	public static TrendLine TrendLine()
-	{
-		TrendLine trendLine = new TrendLine();
-		return trendLine;
 	}
 
 	public static ChartScrollbar ChartScrollbar()
@@ -62,5 +74,17 @@ public class AmCharts
 	{
 		Guide guide = new Guide();
 		return guide;
+	}
+
+	public static TrendLine TrendLine()
+	{
+		TrendLine trendLine = new TrendLine();
+		return trendLine;
+	}
+
+	public static AmBalloon AmBalloon()
+	{
+		AmBalloon amBalloon = new AmBalloon();
+		return amBalloon;
 	}
 }

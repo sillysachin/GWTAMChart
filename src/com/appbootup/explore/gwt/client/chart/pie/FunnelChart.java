@@ -1,6 +1,7 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmBalloon;
+import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.jso.AmFunnelChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
@@ -50,7 +51,7 @@ public class FunnelChart
 		amFunnelChart.setOutlineThickness( 1 );
 		amFunnelChart.setNeckHeight( "40%" );
 		amFunnelChart.setValueRepresents( "area" );
-		AmBalloon balloon = new AmBalloon();
+		AmBalloon balloon =  AmCharts.AmBalloon();
 		balloon.setFixedPosition( true );
 		balloon.setColor( "#F0F0F0" );
 		balloon.setFillColor( "#0F0F0F" );

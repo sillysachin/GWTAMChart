@@ -748,7 +748,7 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 				.addListener(
 						eventName,
 						function(event) {
-							legendThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(handler,event);
+							legendThis.@com.amcharts.impl.AmLegend::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(handler,event);
 							if (event.event == undefined) {
 								console.log('Non Dom Event - > ' + event.type);
 							} else {
