@@ -25,7 +25,7 @@ public final class GaugeArrow implements IJavaScriptWrapper<GaugeArrowJSO>, IsGa
 	}
 
 	public native GaugeArrowJSO createJso() /*-{
-		return this.jso;
+		return {};
 	}-*/;
 
 	/**

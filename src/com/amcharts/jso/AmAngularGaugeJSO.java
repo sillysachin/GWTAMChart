@@ -7,7 +7,7 @@ import com.amcharts.api.IsGaugeArrow;
 import com.amcharts.api.IsGaugeAxis;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class AmAngularGaugeJSO extends JavaScriptObject implements IsAmAngularChart
+public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularChart
 {
 	protected AmAngularGaugeJSO()
 	{

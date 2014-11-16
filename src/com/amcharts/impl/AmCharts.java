@@ -1,5 +1,7 @@
 package com.amcharts.impl;
 
+import com.amcharts.api.IsGaugeArrow;
+import com.amcharts.api.IsGaugeAxis;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
 public class AmCharts
@@ -86,5 +88,23 @@ public class AmCharts
 	{
 		AmBalloon amBalloon = new AmBalloon();
 		return amBalloon;
+	}
+
+	public static AmRadarChart AmRadarChart()
+	{
+		AmRadarChart amRadarChart = new AmRadarChart();
+		return amRadarChart;
+	}
+
+	public static GaugeAxis GaugeAxis()
+	{
+		GaugeAxis gaugeAxis = new GaugeAxis();
+		return gaugeAxis;
+	}
+
+	public static GaugeArrow GaugeArrow()
+	{
+		GaugeArrow gaugeArrow = new GaugeArrow();
+		return gaugeArrow;
 	}
 }

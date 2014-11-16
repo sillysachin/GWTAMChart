@@ -1,0 +1,25 @@
+[ {
+	"direction" : "N",
+	"value" : 8
+}, {
+	"direction" : "NE",
+	"value" : 9
+}, {
+	"direction" : "E",
+	"value" : 4.5
+}, {
+	"direction" : "SE",
+	"value" : 3.5
+}, {
+	"direction" : "S",
+	"value" : 9.2
+}, {
+	"direction" : "SW",
+	"value" : 8.4
+}, {
+	"direction" : "W",
+	"value" : 11.1
+}, {
+	"direction" : "NW",
+	"value" : 10
+} ]

@@ -14,7 +14,7 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 
 	protected GaugeAxis()
 	{
-		jso = createJso();
+		jso = GaugeAxisJSO.createObject().cast();
 	}
 
 	public GaugeAxisJSO getJso()
@@ -28,7 +28,7 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	}
 
 	public native GaugeAxisJSO createJso() /*-{
-		return this.jso;
+		return {};
 	}-*/;
 
 	/**
@@ -660,29 +660,29 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	public final native void setValueInterval( double valueInterval ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.valueInterval = valueInterval;
 	}-*/;
-	
+
 	/**
 	 * Sets bottom text.
 	 */
-//	public native void setBottomText(String text)
-//	/*-{
-//		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-//		gaugeAxis.setBottomText(text);
-//	}-*/;
-	
+	//	public native void setBottomText(String text)
+	//	/*-{
+	//		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+	//		gaugeAxis.setBottomText(text);
+	//	}-*/;
+
 	/**
 	 * 	Sets top text.
 	 */
-//	public native void setTopText(String text)
-//	/*-{
-//		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-//		gaugeAxis.setTopText(text);
-//	}-*/;	
-	
+	//	public native void setTopText(String text)
+	//	/*-{
+	//		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+	//		gaugeAxis.setTopText(text);
+	//	}-*/;	
+
 	/**
 	 * Returns angle of the value.
 	 */
-	public native double value2angle(double value)
+	public native double value2angle( double value )
 	/*-{
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		return gaugeAxis.value2angle(value);

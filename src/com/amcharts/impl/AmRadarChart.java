@@ -9,6 +9,7 @@ public final class AmRadarChart extends AmCoordinateChart implements IJavaScript
 	protected AmRadarChart()
 	{
 		jso = createJso();
+		setType("radar");
 	}
 
 	public AmRadarChartJSO getJso()

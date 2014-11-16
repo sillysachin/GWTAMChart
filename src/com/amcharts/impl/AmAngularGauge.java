@@ -9,18 +9,17 @@ import com.amcharts.jso.AmAngularGaugeJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrapper<AmAngularGaugeJSO>
+public final class AmAngularGauge extends AmChart implements IsAmAngularChart, IJavaScriptWrapper
 {
-	private AmAngularGaugeJSO jso;
-
 	protected AmAngularGauge()
 	{
 		jso = createJso();
+		setType( "gauge" );
 	}
 
 	public AmAngularGaugeJSO getJso()
 	{
-		return this.jso;
+		return ( AmAngularGaugeJSO ) this.jso;
 	}
 
 	public void setJso( AmAngularGaugeJSO jso )
@@ -337,11 +336,11 @@ public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrappe
 	{
 		getJso().setStartEffect( startEffect );
 	}
-	
+
 	/**
 	 * Adds arrow to the chart.
 	 */
-	public native double addArrow(IsGaugeArrow arrow)
+	public native double addArrow( IsGaugeArrow arrow )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeArrow = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(arrow);
@@ -351,7 +350,7 @@ public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrappe
 	/**
 	 * Adds axis to angular gauge.
 	 */
-	public native double addAxis(IsGaugeAxis axis)
+	public native double addAxis( IsGaugeAxis axis )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axis);
@@ -361,7 +360,7 @@ public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrappe
 	/**
 	 * Removes arrow from the chart.
 	 */
-	public native double removeArrow(IsGaugeArrow arrow)
+	public native double removeArrow( IsGaugeArrow arrow )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeArrow = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(arrow);
@@ -371,7 +370,7 @@ public final class AmAngularGauge implements IsAmAngularChart, IJavaScriptWrappe
 	/**
 	 * Removes axis from the chart.
 	 */
-	public native double removeAxis(IsGaugeAxis axis)
+	public native double removeAxis( IsGaugeAxis axis )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axis);
