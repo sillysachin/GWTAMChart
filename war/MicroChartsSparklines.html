@@ -1,0 +1,530 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+AmCharts.ready(function() {
+
+    // line chart, with a bullet at the end
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        day: 1,
+        value: 120
+    }, {
+        day: 2,
+        value: 124
+    }, {
+        day: 3,
+        value: 127
+    }, {
+        day: 4,
+        value: 122
+    }, {
+        day: 5,
+        value: 121
+    }, {
+        day: 6,
+        value: 123
+    }, {
+        day: 7,
+        value: 118
+    }, {
+        day: 8,
+        value: 113
+    }, {
+        day: 9,
+        value: 122
+    }, {
+        day: 10,
+        value: 125,
+        bullet: "round"
+    }];
+    chart.categoryField = "day";
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 5;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "value";
+    graph.bulletField = "bullet";
+    graph.showBalloon = false;
+    graph.lineColor = "#a9ec49";
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+    categoryAxis.startOnAxis = true;
+    chart.write("line1");
+
+
+    // small column chart
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        day: 1,
+        value: -5
+    }, {
+        day: 2,
+        value: 3
+    }, {
+        day: 3,
+        value: 7
+    }, {
+        day: 4,
+        value: -3
+    }, {
+        day: 5,
+        value: 3
+    }, {
+        day: 6,
+        value: 4
+    }, {
+        day: 7,
+        value: 6
+    }, {
+        day: 8,
+        value: -3
+    }, {
+        day: 9,
+        value: -2
+    }, {
+        day: 10,
+        value: 6
+    }];
+    chart.categoryField = "day";
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "value";
+    graph.type = "column";
+    graph.fillAlphas = 1;
+    graph.lineColor = "#a9ec49";
+    graph.showBalloon = false;
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+    chart.write("column1");
+
+
+    // line chart, with different line color below zero         
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        day: 1,
+        value: 120
+    }, {
+        day: 2,
+        value: 54
+    }, {
+        day: 3,
+        value: -18
+    }, {
+        day: 4,
+        value: -12
+    }, {
+        day: 5,
+        value: -51
+    }, {
+        day: 6,
+        value: 12
+    }, {
+        day: 7,
+        value: 56
+    }, {
+        day: 8,
+        value: 113
+    }, {
+        day: 9,
+        value: 142
+    }, {
+        day: 10,
+        value: 125
+    }];
+    chart.categoryField = "day";
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 5;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "value";
+    graph.showBalloon = false;
+    graph.lineColor = "#ffbf63";
+    graph.negativeLineColor = "#289eaf";
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+    categoryAxis.startOnAxis = true;
+
+    // using guide to show 0 grid
+    var guide = new AmCharts.Guide();
+    guide.value = 0;
+    guide.lineAlpha = 0.1;
+    valueAxis.addGuide(guide);
+    chart.write("line2");
+
+
+    // column chart with different negative colors
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        day: 1,
+        value: -5
+    }, {
+        day: 2,
+        value: 3
+    }, {
+        day: 3,
+        value: 7
+    }, {
+        day: 4,
+        value: -3
+    }, {
+        day: 5,
+        value: 3
+    }, {
+        day: 6,
+        value: 4
+    }, {
+        day: 7,
+        value: 6
+    }, {
+        day: 8,
+        value: -3
+    }, {
+        day: 9,
+        value: -2
+    }, {
+        day: 10,
+        value: 6
+    }];
+    chart.categoryField = "day";
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "value";
+    graph.type = "column";
+    graph.fillAlphas = 1;
+    graph.showBalloon = false;
+    graph.lineColor = "#ffbf63";
+    graph.negativeFillColors = "#289eaf";
+    graph.negativeLineColor = "#289eaf";
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+    chart.write("column2");
+
+
+    // column chart (thermometer)           
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        y: 100
+    }];
+    chart.categoryField = "x";
+    chart.rotate = true;
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "y";
+    graph.type = "column";
+    graph.fillAlphas = 1;
+    graph.fillColors = ["#49cbec", "#f73838"];
+    graph.gradientOrientation = "horizontal";
+    graph.lineColor = "#FFFFFF";
+    graph.showBalloon = false;
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    valueAxis.stackType = "100%"; // this is set to achieve that column would occupie 100% of the chart area
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+
+    // guide to show position
+    var guide = new AmCharts.Guide();
+    guide.value = 66;
+    guide.lineAlpha = 1;
+    guide.above = true;
+    valueAxis.addGuide(guide);
+    chart.write("thermometer1");
+
+    // column chart (thermometer)           
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        y: 100
+    }];
+    chart.categoryField = "x";
+    chart.rotate = true;
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "y";
+    graph.type = "column";
+    graph.fillAlphas = 1;
+    graph.fillColors = ["#49cbec", "#f73838"];
+    graph.gradientOrientation = "horizontal";
+    graph.lineColor = "#FFFFFF";
+    graph.showBalloon = false;
+    chart.addGraph(graph);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    valueAxis.stackType = "100%"; // this is set to achieve that column would occupie 100% of the chart area
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+
+    // guide to show position
+    var guide = new AmCharts.Guide();
+    guide.value = 29;
+    guide.lineAlpha = 1;
+    guide.above = true;
+    valueAxis.addGuide(guide);
+    chart.write("thermometer2");
+
+
+
+    // percent chart            
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        y1: 66,
+        y2: 34
+    }];
+    chart.categoryField = "x";
+    chart.rotate = true;
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "y1";
+    graph.type = "column";
+    graph.fillAlphas = 0.6;
+    graph.fillColors = "#000000";
+    graph.gradientOrientation = "horizontal";
+    graph.lineColor = "#FFFFFF";
+    graph.showBalloon = false;
+    chart.addGraph(graph);
+
+    var graph2 = new AmCharts.AmGraph();
+    graph2.valueField = "y2";
+    graph2.type = "column";
+    graph2.fillAlphas = 0.2;
+    graph2.fillColors = "#000000";
+    graph2.lineColor = "#FFFFFF";
+    graph2.showBalloon = false;
+    chart.addGraph(graph2);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    valueAxis.stackType = "100%"; // this is set to achieve that column would occupie 100% of the chart area
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+
+
+    chart.write("percent1");
+
+
+    // percent chart            
+    var chart = new AmCharts.AmSerialChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        y1: 29,
+        y2: 71
+    }];
+    chart.categoryField = "x";
+    chart.rotate = true;
+    chart.autoMargins = false;
+    chart.marginLeft = 0;
+    chart.marginRight = 0;
+    chart.marginTop = 0;
+    chart.marginBottom = 0;
+
+    var graph = new AmCharts.AmGraph();
+    graph.valueField = "y1";
+    graph.type = "column";
+    graph.fillAlphas = 0.6;
+    graph.fillColors = "#000000";
+    graph.gradientOrientation = "horizontal";
+    graph.lineColor = "#FFFFFF";
+    graph.showBalloon = false;
+    chart.addGraph(graph);
+
+    var graph2 = new AmCharts.AmGraph();
+    graph2.valueField = "y2";
+    graph2.type = "column";
+    graph2.fillAlphas = 0.2;
+    graph2.fillColors = "#000000";
+    graph2.lineColor = "#FFFFFF";
+    graph2.showBalloon = false;
+    chart.addGraph(graph2);
+
+    var valueAxis = new AmCharts.ValueAxis();
+    valueAxis.gridAlpha = 0;
+    valueAxis.axisAlpha = 0;
+    valueAxis.stackType = "100%"; // this is set to achieve that column would occupie 100% of the chart area
+    chart.addValueAxis(valueAxis);
+
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.axisAlpha = 0;
+    chart.write("percent2");
+
+    // small pie chart
+    var chart = new AmCharts.AmPieChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        value: 29
+    }, {
+        x: 2,
+        value: 71
+    }];
+    chart.labelField = "x";
+    chart.valueField = "value";
+    chart.labelsEnabled = false;
+    chart.balloonText = undefined;
+    chart.valueText = undefined;
+    chart.radius = 9; // half of a width of a div
+    chart.outlineThickness = 1;
+    chart.colors = ["#DADADA", "#777777"];
+    chart.startDuration = 0;
+    chart.write("pie1");
+
+    // small pie chart
+    var chart = new AmCharts.AmPieChart(AmCharts.themes.none);
+    chart.dataProvider = [{
+        x: 1,
+        value: 45
+    }, {
+        x: 2,
+        value: 55
+    }];
+    chart.labelField = "x";
+    chart.balloonText = undefined;
+    chart.valueField = "value";
+    chart.labelsEnabled = false;
+    chart.valueText = undefined;
+    chart.radius = 9;
+    chart.outlineThickness = 1;
+    chart.colors = ["#DADADA", "#777777"];
+    chart.startDuration = 0;
+    chart.write("pie2");
+
+});
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 100%; height: 500px"></div>
+</body>
+</html>

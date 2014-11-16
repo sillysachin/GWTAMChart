@@ -1,0 +1,32 @@
+[ {
+	day : 1,
+	value : 120
+}, {
+	day : 2,
+	value : 124
+}, {
+	day : 3,
+	value : 127
+}, {
+	day : 4,
+	value : 122
+}, {
+	day : 5,
+	value : 121
+}, {
+	day : 6,
+	value : 123
+}, {
+	day : 7,
+	value : 118
+}, {
+	day : 8,
+	value : 113
+}, {
+	day : 9,
+	value : 122
+}, {
+	day : 10,
+	value : 125,
+	bullet : "round"
+} ]

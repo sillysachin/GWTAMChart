@@ -1,12 +1,12 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.IsGaugeArrow;
-import com.amcharts.api.IsGaugeAxis;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
 public class AmCharts
 {
 	static final SimpleEventBus EVENT_BUS = new SimpleEventBus();
+
+	public static final AmChartTheme[] themes = AmChartTheme.values();
 
 	public AmCharts()
 	{
@@ -15,6 +15,13 @@ public class AmCharts
 	public static AmSerialChart AmSerialChart()
 	{
 		AmSerialChart amSerialChart = new AmSerialChart();
+		return amSerialChart;
+	}
+
+	public static AmSerialChart AmSerialChart( AmChartTheme theme )
+	{
+		AmSerialChart amSerialChart = AmSerialChart();
+		amSerialChart.setTheme( theme.name().toLowerCase() );
 		return amSerialChart;
 	}
 
@@ -107,4 +114,5 @@ public class AmCharts
 		GaugeArrow gaugeArrow = new GaugeArrow();
 		return gaugeArrow;
 	}
+
 }
