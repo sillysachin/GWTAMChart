@@ -677,7 +677,7 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	//	/*-{
 	//		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 	//		gaugeAxis.setTopText(text);
-	//	}-*/;	
+	//	}-*/;
 
 	/**
 	 * Returns angle of the value.

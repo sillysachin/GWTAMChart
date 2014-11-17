@@ -1,6 +1,8 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.xy.BubbleChart;
+import com.appbootup.explore.gwt.client.misc.AngularGaugeWithTwoAxes;
+import com.appbootup.explore.gwt.client.misc.MicroChartsSparklines;
+import com.appbootup.explore.gwt.client.misc.PolarChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -44,6 +46,9 @@ public class GWTAMChart implements EntryPoint
 		// LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();
 		// DateBasedData dateBasedData = new DateBasedData();
 		// MultipleValueAxes multipleValueAxes = new MultipleValueAxes();
-		BubbleChart bubbleChart = new BubbleChart();
+		// BubbleChart bubbleChart = new BubbleChart();
+		// PolarChart polarChart = new PolarChart();
+		// MicroChartsSparklines microChartsSparklines = new MicroChartsSparklines();
+		AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
 	}
 }

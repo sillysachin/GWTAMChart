@@ -45,6 +45,7 @@ public class AngularGaugeWithTwoAxes
 		gaugeAxis1.setAxisThickness( 3 );
 		gaugeAxis1.setEndValue( 240 );
 		gaugeAxis1.setGridInside( false );
+		gaugeAxis1.setInside( false );
 		gaugeAxis1.setRadius( "100%" );
 		gaugeAxis1.setValueInterval( 20 );
 		gaugeAxis1.setTickColor( "#67b7dc" );
@@ -76,6 +77,7 @@ public class AngularGaugeWithTwoAxes
 		};
 		timer.scheduleRepeating( 2000 );
 		RootLayoutPanel.get().add( amAngularGauge );
+		timer.run();
 	}
 
 	private void randomValue( final GaugeArrow gaugeArrow )
