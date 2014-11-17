@@ -612,13 +612,11 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 
 	protected void fireEvent( AmChartEventJSO event )
 	{
-		GwtEvent< ? > createEvent = AxisBaseChartEventUtils
-				.createEvent( event );
+		GwtEvent< ? > createEvent = AxisBaseChartEventUtils.createEvent( event );
 		if ( createEvent == null )
 		{
-			//TODO:When the event is not in AxisBaseChartEventUtils list then look where?
-			GWT.log( "AxisBase cannot process -> " + event.getEvent()
-					.getType() );
+			//TODO: When the event is not in AxisBaseChartEventUtils list then look where?
+			GWT.log( "AxisBase cannot process -> " + event.getEvent().getType() );
 		}
 		else
 		{

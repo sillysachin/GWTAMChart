@@ -92,7 +92,7 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 		write( id );
 	}
 
-	// TODO:Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
+	// TODO: Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
 	public native void setDataProvider( JsArray<JavaScriptObject> dataProvider )
 	/*-{
 		this.@com.amcharts.impl.AmChart::jso.dataProvider = dataProvider;
