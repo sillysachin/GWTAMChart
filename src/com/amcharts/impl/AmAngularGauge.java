@@ -340,40 +340,41 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * Adds arrow to the chart.
 	 */
-	public native double addArrow( IsGaugeArrow arrow )
+	public native void addArrow( IsGaugeArrow arrow )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeArrow = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(arrow);
-		return angularGauge.addArrow(gaugeArrow);
+		angularGauge.addArrow(gaugeArrow);
 	}-*/;
 
 	/**
 	 * Adds axis to angular gauge.
 	 */
-	public native double addAxis( IsGaugeAxis axis )
+	public native void addAxis( IsGaugeAxis axis )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axis);
-		return angularGauge.addAxis(axis);
+		angularGauge.addAxis(axis);
+		angularGauge.validateNow();
 	}-*/;
 
 	/**
 	 * Removes arrow from the chart.
 	 */
-	public native double removeArrow( IsGaugeArrow arrow )
+	public native void removeArrow( IsGaugeArrow arrow )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeArrow = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(arrow);
-		return angularGauge.removeArrow(gaugeArrow);
+		angularGauge.removeArrow(gaugeArrow);
 	}-*/;
 
 	/**
 	 * Removes axis from the chart.
 	 */
-	public native double removeAxis( IsGaugeAxis axis )
+	public native void removeAxis( IsGaugeAxis axis )
 	/*-{
 		var angularGauge = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axis);
-		return angularGauge.removeAxis(axis);
+		angularGauge.removeAxis(axis);
 	}-*/;
 }

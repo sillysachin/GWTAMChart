@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
+import com.appbootup.explore.gwt.client.misc.AngularGauge;
 import com.appbootup.explore.gwt.client.misc.AngularGaugeWithTwoAxes;
 import com.appbootup.explore.gwt.client.misc.MicroChartsSparklines;
 import com.appbootup.explore.gwt.client.misc.PolarChart;
@@ -49,6 +50,7 @@ public class GWTAMChart implements EntryPoint
 		// BubbleChart bubbleChart = new BubbleChart();
 		// PolarChart polarChart = new PolarChart();
 		// MicroChartsSparklines microChartsSparklines = new MicroChartsSparklines();
-		AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
+		// AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
+		AngularGauge anGauge = new AngularGauge();
 	}
 }

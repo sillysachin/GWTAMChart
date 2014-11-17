@@ -31,7 +31,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Array of arrows.
 	 */
 	public final native List<IsGaugeArrow> getArrows() /*-{
-		return arrows;
+		return this.arrows;
 	}-*/;
 
 	/**
@@ -45,7 +45,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Array of axes.
 	 */
 	public final native List<IsGaugeAxis> getAxes() /*-{
-		return axes;
+		return this.axes;
 	}-*/;
 
 	/**
