@@ -13,24 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/javawriter-2.5.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtjsni-javawriter-2.5.1-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Tools/gwt-2.6.0/validation-api-1.0.0.GA-sources.jar"/>
-	<classpathentry kind="lib" path="/Tools/gwt-2.6.0/validation-api-1.0.0.GA.jar" sourcepath="/Tools/gwt-2.6.0/validation-api-1.0.0.GA-sources.jar"/>
-	<classpathentry kind="lib" path="/Tools/gwt-2.7.0-beta1/gwt-user.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Tools/gwt-2.7.0-beta1/doc/javadoc/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Tools/gwt-2.7.0-beta1/gwt-codeserver.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Tools/gwt-2.7.0-beta1/doc/javadoc/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Tools/gwt-2.7.0-beta1/gwt-dev.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Tools/gwt-2.7.0-beta1/doc/javadoc/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Tools/gwt-2.7.0-beta1/validation-api-1.0.0.GA-sources.jar"/>
-	<classpathentry kind="lib" path="/Tools/gwt-2.7.0-beta1/validation-api-1.0.0.GA.jar" sourcepath="/Tools/gwt-2.7.0-beta1/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/gwt-2.7.0"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
