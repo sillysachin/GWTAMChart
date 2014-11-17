@@ -14,7 +14,7 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 
 	protected GaugeAxis()
 	{
-		jso = GaugeAxisJSO.createObject().cast();
+		jso = createJso();
 	}
 
 	public GaugeAxisJSO getJso()
@@ -26,10 +26,13 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	{
 		this.jso = jso;
 	}
-
+	
+	//Learn: Very important to invoke $wnd.AmCharts.GaugeAxis() instead of just {} or GaugeAxisJSO.createObject()
 	public native GaugeAxisJSO createJso() /*-{
-		return {};
+		var gaugeAxis = new $wnd.AmCharts.GaugeAxis();
+		return gaugeAxis;
 	}-*/;
+
 
 	/**
 	 * Axis opacity.
@@ -686,5 +689,16 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/*-{
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		return gaugeAxis.value2angle(value);
+	}-*/;
+
+	public native void addBand( GaugeBand gaugeBand )
+	/*-{
+		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		if (gaugeAxis.bands == undefined) {
+			gaugeAxis.bands = [];
+		}
+		var varGaugeBand = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(gaugeBand)
+		this.@com.amcharts.impl.GaugeAxis::jso.bands.push(varGaugeBand)
+		//gaugeAxis.bands.push(varGaugeBand)
 	}-*/;
 }

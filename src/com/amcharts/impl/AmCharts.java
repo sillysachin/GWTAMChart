@@ -115,4 +115,10 @@ public class AmCharts
 		return gaugeArrow;
 	}
 
+	public static GaugeBand GaugeBand()
+	{
+		GaugeBand gaugeBand = new GaugeBand();
+		return gaugeBand;
+	}
+
 }

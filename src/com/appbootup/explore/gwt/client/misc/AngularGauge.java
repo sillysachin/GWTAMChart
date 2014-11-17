@@ -4,7 +4,9 @@ import com.amcharts.impl.AmAngularGauge;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.GaugeArrow;
 import com.amcharts.impl.GaugeAxis;
+import com.amcharts.impl.GaugeBand;
 import com.amcharts.impl.util.LogUtils;
+import com.amcharts.impl.util.WrapperUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -46,16 +48,31 @@ public class AngularGauge
 		gaugeAxis.setAxisAlpha( 0.2 );
 		gaugeAxis.setTickAlpha( 0.2 );
 		gaugeAxis.setValueInterval( 20 );
+		GaugeBand band1 = AmCharts.GaugeBand();
+		band1.setColor( "#84b761" );
+		band1.setEndValue( 90 );
+		band1.setStartValue( 0 );
+		gaugeAxis.addBand( band1 );
+		GaugeBand band2 = AmCharts.GaugeBand();
+		band2.setColor( "#fdd400" );
+		band2.setEndValue( 130 );
+		band2.setStartValue( 90 );
+		gaugeAxis.addBand( band2 );
+		GaugeBand band3 = AmCharts.GaugeBand();
+		band3.setColor( "#cc4748" );
+		band3.setEndValue( 220 );
+		band3.setStartValue( 130 );
+		band3.setInnerRadius( "95%" );
+		gaugeAxis.addBand( band3 );
 		gaugeAxis.setBottomText( "0 km/h" );
 		gaugeAxis.setBottomTextYOffset( -20 );
 		gaugeAxis.setEndValue( 220 );
 		amAngularGauge.addAxis( gaugeAxis );
 
 		final GaugeArrow gaugeArrow = AmCharts.GaugeArrow();
+		gaugeArrow.setColor( "#67b7dc" );
 		amAngularGauge.addArrow( gaugeArrow );
 		amAngularGauge.setSize( "1240px", "500px" );
-		LogUtils.log( amAngularGauge );
-		LogUtils.log( amAngularGauge.getJso() );
 
 		Timer timer = new Timer()
 		{
@@ -66,19 +83,57 @@ public class AngularGauge
 			}
 		};
 		timer.scheduleRepeating( 2000 );
-		RootLayoutPanel.get().add( amAngularGauge );
+		//TODO: The clock swings mechanically with no animation.
 		timer.run();
+		RootLayoutPanel.get().add( amAngularGauge );
+
+		randomValue( amAngularGauge );
+		GWT.log( "----jso----" );
+		LogUtils.log( amAngularGauge.getJso() );
+		LogUtils.log( gaugeArrow.getJso() );
+		LogUtils.log( gaugeAxis.getJso() );
+		GWT.log( "----impl----" );
+		LogUtils.log( amAngularGauge );
+		LogUtils.log( gaugeArrow );
+		LogUtils.log( gaugeAxis );
+		GWT.log( "----unwrap----" );
+		LogUtils.log(WrapperUtils.unwrap( amAngularGauge ));
+		LogUtils.log(WrapperUtils.unwrap( gaugeArrow ));
+		LogUtils.log(WrapperUtils.unwrap( gaugeAxis ));
 
 		//List<IsGaugeAxis> axes = amAngularGauge.getAxes();
-		//GWT.log( "" + axes.size() );
 		//List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
-		//GWT.log( "" + arrows.size() );
 	}
 
 	private void randomValue( final GaugeArrow gaugeArrow, final GaugeAxis gaugeAxis )
 	{
-		long value = Math.round( Math.random() * 200 );
+		double value = Math.round( Math.random() * 200 );
 		gaugeArrow.setValue( value );
 		gaugeAxis.setBottomText( value + " km/h" );
 	}
+
+	private native void randomValue( final AmAngularGauge amAngularGauge )
+	/*-{
+		var gaugeChart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amAngularGauge);
+
+		// setInterval(randomValue, 2000);
+		
+		function randomValue() {
+			var value = Math.round(Math.random() * 200);
+			if (gaugeChart) {
+				if (gaugeChart.arrows) {
+					if (gaugeChart.arrows[0]) {
+						if (gaugeChart.arrows[0].setValue) {
+							console.log("-----Direct Access----");
+							console.log(gaugeChart);
+							console.log(gaugeChart.arrows[0]);
+							console.log(gaugeChart.axes[0]);
+							gaugeChart.arrows[0].setValue(value);
+							gaugeChart.axes[0].setBottomText(value + " km/h");
+						}
+					}
+				}
+			}
+		}
+	}-*/;
 }

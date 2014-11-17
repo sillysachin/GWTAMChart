@@ -1,9 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
 import com.appbootup.explore.gwt.client.misc.AngularGauge;
-import com.appbootup.explore.gwt.client.misc.AngularGaugeWithTwoAxes;
-import com.appbootup.explore.gwt.client.misc.MicroChartsSparklines;
-import com.appbootup.explore.gwt.client.misc.PolarChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -30,7 +27,7 @@ public class GWTAMChart implements EntryPoint
 		// serialChartByJSNI();
 		// chartByServerJSON();
 		// lineWithTrendLineChartByJSNI();
-		// SimplePieChart drawChart = new SimplePieChart();
+		// SimplePieChart simplePieChart = new SimplePieChart();
 		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 		// DonutChart threeDPieChart = new DonutChart();
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
@@ -51,6 +48,6 @@ public class GWTAMChart implements EntryPoint
 		// PolarChart polarChart = new PolarChart();
 		// MicroChartsSparklines microChartsSparklines = new MicroChartsSparklines();
 		// AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
-		AngularGauge anGauge = new AngularGauge();
+		 AngularGauge angularGauge = new AngularGauge();
 	}
 }

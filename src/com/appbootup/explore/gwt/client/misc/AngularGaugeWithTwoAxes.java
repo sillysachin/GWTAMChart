@@ -1,9 +1,5 @@
 package com.appbootup.explore.gwt.client.misc;
 
-import java.util.List;
-
-import com.amcharts.api.IsGaugeArrow;
-import com.amcharts.api.IsGaugeAxis;
 import com.amcharts.impl.AmAngularGauge;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.GaugeArrow;
@@ -72,9 +68,6 @@ public class AngularGaugeWithTwoAxes
 		amAngularGauge.addArrow( gaugeArrow );
 		amAngularGauge.setSize( "1240px", "500px" );
 		amAngularGauge.setFaceColor( "#000000" );
-		LogUtils.log( amAngularGauge );
-		LogUtils.log( amAngularGauge.getJso() );
-
 		Timer timer = new Timer()
 		{
 			@Override
@@ -84,13 +77,12 @@ public class AngularGaugeWithTwoAxes
 			}
 		};
 		timer.scheduleRepeating( 2000 );
-		RootLayoutPanel.get().add( amAngularGauge );
+		//TODO: The clock swings mechanically with no animation.
 		timer.run();
+		RootLayoutPanel.get().add( amAngularGauge );
 
 		//List<IsGaugeAxis> axes = amAngularGauge.getAxes();
-		//GWT.log( "" + axes.size() );
 		//List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
-		//GWT.log( "" + arrows.size() );
 	}
 
 	private void randomValue( final GaugeArrow gaugeArrow )

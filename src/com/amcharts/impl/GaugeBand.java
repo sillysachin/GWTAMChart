@@ -8,7 +8,7 @@ public final class GaugeBand implements IJavaScriptWrapper<GaugeBandJSO>, IsGaug
 {
 	private GaugeBandJSO jso;
 
-	protected GaugeBand()
+	public GaugeBand()
 	{
 		jso = createJso();
 	}
@@ -24,7 +24,7 @@ public final class GaugeBand implements IJavaScriptWrapper<GaugeBandJSO>, IsGaug
 	}
 
 	public native GaugeBandJSO createJso() /*-{
-		return this.jso;
+		return {};
 	}-*/;
 
 	/**
