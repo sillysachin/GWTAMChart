@@ -1,1 +1,20 @@
 Field Name	JS Datatype	Default	Java Datatype	Description
+adjustSize	Boolean	TRUE	boolean	Uses the whole space of the canvas to draw the gauge.
+arrows	Array[GaugeArrow]		List<IsGaugeArrow>	Array of arrows.
+axes	Array[GaugeAxis]		List<IsGaugeAxis>	Array of axes.
+clockWiseOnly	Boolean	FALSE	boolean	In case you use gauge to create a clock, set this to true.
+faceAlpha	Number	0	double	Gauge face opacity.
+faceBorderAlpha	Number	0	double	Gauge face border opacity.
+faceBorderColor	Color	#555555	String	Gauge face border color.
+faceBorderWidth	Number	1	double	Gauge face border width.
+faceColor	Color	#FAFAFA	String	Gauge face color, requires faceAlpha > 0
+facePattern	Object		JavaScriptObject	"Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
+gaugeX	Number		double	Gauge's horizontal position in pixel, origin is the center. Centered by default.
+gaugeY	Number		double	Gauge's vertical position in pixel, origin is the center. Centered by default.
+marginBottom	Number	10	double	Bottom spacing between chart and container.
+marginLeft	Number	10	double	Left-hand spacing between chart and container.
+marginRight	Number	10	double	Right-hand spacing between chart and container.
+marginTop	Number	10	double	Top spacing between chart and container.
+minRadius	Number	10	double	Minimum radius of a gauge.
+startDuration	Number	1	double	Duration of arrow animation.
+startEffect	String	easeInSine	String	Transition effect of the arrows, possible effects: easeOutSine, easeInSine, elastic, bounce.

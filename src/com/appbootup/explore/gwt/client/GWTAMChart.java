@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
+import com.appbootup.explore.gwt.client.chart.column.ColumnWithRotatedSeries;
 import com.appbootup.explore.gwt.client.misc.AngularGauge;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -36,7 +37,7 @@ public class GWTAMChart implements EntryPoint
 		// PyramidChart pyramidChart = new PyramidChart();
 		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
 		// FunnelChart funnelChart = new FunnelChart();
-		// ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
+		 ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
 		// SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
 		// ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
 		// StackedColumnChart stackedColumnChart = new StackedColumnChart();
@@ -48,6 +49,6 @@ public class GWTAMChart implements EntryPoint
 		// PolarChart polarChart = new PolarChart();
 		// MicroChartsSparklines microChartsSparklines = new MicroChartsSparklines();
 		// AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
-		 AngularGauge angularGauge = new AngularGauge();
+		// AngularGauge angularGauge = new AngularGauge();
 	}
 }

@@ -1,0 +1,17 @@
+Field Name	JS Datatype	Default	Java Datatype	Description
+bottom	Number/String		String	Bottom position of export button. You might need to set top to undefined for this to work.
+buttonAlpha	Number	0.75	double	Opacity of a button.
+buttonIcon	String	export.png	String	Name of export button image.
+buttonRollOverColor	Color	#EFEFEF	String	Roll-over color of button background.
+buttonTitle	String	"""Save chart as an image"""	String	"Text, displayed in a tool-tip."
+exportJPG	Boolean	FALSE	boolean	Specifies if export of JPG should be enabled.
+exportPDF	Boolean	FALSE	boolean	Specifies if export of PDF should be enabled.
+exportPNG	Boolean	TRUE	boolean	Specifies if export of PNG should be enabled.
+exportSVG	Boolean	FALSE	boolean	Specifies if export of SVG should be enabled.
+imageBackgroundColor	Color	#FFFFFF	String	Background color of a saved image
+imageFileName	String	amChart	String	File name of a saved image.
+left	Number/String		String	Left position of export button. You might need to set right to undefined for this to work.
+right	Number/String	0	String	Right position of export button. You might need to set left to undefined for this to work.
+textRollOverColor	Color	#CC0000	String	Text roll-over color.
+top	Number/String	0	String	Top position of export button. You might need to set bottom to undefined for this to work.
+userCFG	Object	exportConfig	IsExportConfig	advanced configration object AmChart.exportConfig

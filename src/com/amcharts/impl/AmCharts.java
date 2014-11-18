@@ -121,4 +121,9 @@ public class AmCharts
 		return gaugeBand;
 	}
 
+	public static AmExport AmExport()
+	{
+		AmExport amExport = new AmExport();
+		return amExport;
+	}
 }
