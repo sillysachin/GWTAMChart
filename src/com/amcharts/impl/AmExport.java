@@ -242,14 +242,16 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	 * advanced configration object AmChart.exportConfig
 	 */
 	public final native IsExportConfig getUserCFG() /*-{
-		return this.@com.amcharts.impl.AmExport::jso.userCFG;
+		var userConfig = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmExport::jso.userCFG)
+		return userConfig;
 	}-*/;
 
 	/**
 	 * advanced configration object AmChart.exportConfig
 	 */
 	public final native void setUserCFG( IsExportConfig userCFG ) /*-{
-		this.@com.amcharts.impl.AmExport::jso.userCFG = userCFG;
+		var varExportConfig = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(userCFG)
+		this.@com.amcharts.impl.AmExport::jso.userCFG = varExportConfig;
 	}-*/;
 
 	/**

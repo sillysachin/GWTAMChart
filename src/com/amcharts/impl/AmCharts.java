@@ -1,6 +1,5 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.IsExportConfig;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
 public class AmCharts
@@ -132,5 +131,17 @@ public class AmCharts
 	{
 		ExportConfig exportConfig = new ExportConfig();
 		return exportConfig;
+	}
+
+	public static MenuItemStyle MenuItemStyle()
+	{
+		MenuItemStyle menuItemStyle = new MenuItemStyle();
+		return menuItemStyle;
+	}
+
+	public static MenuItemOutput MenuItemOutput()
+	{
+		MenuItemOutput menuItemOutput = MenuItemOutput();
+		return menuItemOutput;
 	}
 }

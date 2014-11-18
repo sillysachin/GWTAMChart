@@ -77,12 +77,12 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 
 	public native void setMenuRight( String menuRight )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuRight;
+		this.@com.amcharts.impl.ExportConfig::jso.menuRight = menuRight;
 	}-*/;
 
 	public native void setMenuRight( int menuRight )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuRight;
+		this.@com.amcharts.impl.ExportConfig::jso.menuRight = menuRight;
 	}-*/;
 
 	public native String getMenuRight()
@@ -92,7 +92,7 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 
 	public native void setMenuBottom( String menuBottom )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
+		this.@com.amcharts.impl.ExportConfig::jso.menuBottom = menuBottom;
 	}-*/;
 
 	public native String getMenuBottom()
@@ -102,16 +102,33 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 
 	public native void setMenuBottom( int menuBottom )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
+		this.@com.amcharts.impl.ExportConfig::jso.menuBottom = menuBottom;
 	}-*/;
 
 	public native void setMenuLeft( String menuLeft )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuLeft;
+		this.@com.amcharts.impl.ExportConfig::jso.menuLeft = menuLeft;
 	}-*/;
 
 	public native void setMenuLeft( int menuLeft )
 	/*-{
-		return this.@com.amcharts.impl.ExportConfig::jso.menuLeft;
+		this.@com.amcharts.impl.ExportConfig::jso.menuLeft = menuLeft;
+	}-*/;
+
+	public native void setMenuItemStyle( MenuItemStyle menuItemStyle )
+	/*-{
+		var varMenuItemStyle = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(menuItemStyle)
+		this.@com.amcharts.impl.ExportConfig::jso.menuItemStyle = varMenuItemStyle;
+	}-*/;
+
+	public native void setRemoveImagery( boolean removeImagery )
+	/*-{
+		this.@com.amcharts.impl.ExportConfig::jso.removeImagery = removeImagery;
+	}-*/;
+
+	public native void setMenuItemOutput( MenuItemOutput menuItemOutput )
+	/*-{
+		var varMenuItemOutput = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(menuItemOutput)
+		this.@com.amcharts.impl.ExportConfig::jso.menuItemOutput = varMenuItemOutput;
 	}-*/;
 }

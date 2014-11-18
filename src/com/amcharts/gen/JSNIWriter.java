@@ -21,7 +21,7 @@ public class JSNIWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "AmExport", "AmBalloon", "GaugeArrow", "GaugeAxis", "GaugeBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart", "AmLegend", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
+			{ "MenuItemOutput", "MenuItemStyle", "AmExport", "AmBalloon", "GaugeArrow", "GaugeAxis", "GaugeBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "AmRectangularChart", "AmLegend", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
 
 	public static void main( String args[] ) throws IOException
 	{

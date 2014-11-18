@@ -9,7 +9,10 @@ import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItemOutput;
+import com.amcharts.impl.MenuItemStyle;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -84,10 +87,10 @@ public class ExportingChartToImage
 		amExport.setExportSVG( true );
 
 		ExportConfig exportConfig = AmCharts.ExportConfig();
-		exportConfig.setMenuTop( "auto" );
-		exportConfig.setMenuLeft( "auto" );
-		exportConfig.setMenuRight( "0px" );
-		exportConfig.setMenuBottom( "0px" );
+		//exportConfig.setMenuTop( "auto" );
+		//exportConfig.setMenuLeft( "auto" );
+		//exportConfig.setMenuRight( "0px" );
+		//exportConfig.setMenuBottom( "0px" );
 		MenuItem menuItem1 = new MenuItem();
 		menuItem1.setTitle( "JPG" );
 		menuItem1.setFormat( "jpg" );
@@ -105,9 +108,49 @@ public class ExportingChartToImage
 		menuItem4.setFormat( "pdf" );
 		exportConfig.addMenuItem( menuItem4 );
 
+		MenuItemStyle menuItemStyle = AmCharts.MenuItemStyle();
+		menuItemStyle.setBackgroundColor( "transparent" );
+		menuItemStyle.setOpacity( 1 );
+		menuItemStyle.setRollOverBackgroundColor( "#EFEFEF" );
+		menuItemStyle.setColor( "#000000" );
+		menuItemStyle.setRollOverColor( "#CC0000" );
+		menuItemStyle.setPaddingTop( "6px" );
+		menuItemStyle.setPaddingRight( "6px" );
+		menuItemStyle.setPaddingBottom( "6px" );
+		menuItemStyle.setPaddingLeft( "6px" );
+		menuItemStyle.setMarginTop( "0px" );
+		menuItemStyle.setMarginRight( "0px" );
+		menuItemStyle.setMarginBottom( "0px" );
+		menuItemStyle.setMarginLeft( "0px" );
+		menuItemStyle.setTextAlign( "left" );
+		menuItemStyle.setTextDecoration( "none" );
+		menuItemStyle.setFontFamily( "Arial" ); // Default: charts default
+		menuItemStyle.setFontSize( "12px" ); // Default: charts default		
+		exportConfig.setMenuItemStyle( menuItemStyle );
+		//MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
+		//menuItemOutput.setBackgroundColor( "#FFFFFF" );
+		//menuItemOutput.setFileName( "amCharts" );
+		//menuItemOutput.setFormat( "png" );
+		//menuItemOutput.setOutput( "dataurlnewwindow" );
+		//menuItemOutput.setRender( "browser" );
+		//menuItemOutput.setDpi( 90 );
+		//menuItemOutput.setOnclick( new MenuItemOutputCallback()
+		//{
+		//	public void execute(JavaScriptObject instance,JavaScriptObject config,JavaScriptObject event)
+		//	{
+		//		function(instance, config, event) {
+		//			event.preventDefault();
+		//			instance.output(config);
+		//		}
+		//	}
+		//} );
+
+		//exportConfig.setMenuItemOutput( menuItemOutput );
+		exportConfig.setRemoveImagery( true );
 		amExport.setUserCFG( exportConfig );
 		amSerialChart.setAmExport( amExport );
 		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );
+		LogUtils.log( amExport.getJso() );
 	}
 }
