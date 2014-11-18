@@ -57,4 +57,21 @@ public class MenuItem implements IJavaScriptWrapper, IsMenuItem
 	public native void setFormat( String format ) /*-{
 		this.@com.amcharts.impl.MenuItem::jso.format = format;
 	}-*/;
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.impl.IsMenuItem#getFormat()
+	 */
+
+	@Override
+	public native String getTitle() /*-{
+		return this.@com.amcharts.impl.MenuItem::jso.title;
+	}-*/;
+
+	/* (non-Javadoc)
+	 * @see com.amcharts.impl.IsMenuItem#setFormat(java.lang.String)
+	 */
+	@Override
+	public native void setTitle( String title ) /*-{
+		this.@com.amcharts.impl.MenuItem::jso.title = title;
+	}-*/;
 }

@@ -2,21 +2,15 @@ package com.amcharts.api;
 
 public interface IsMenuItem
 {
+	String getIcon();
 
-	public abstract String getIcon() /*-{
-										return this.@com.amcharts.impl.MenuItem::jso.icon;
-										}-*/;
+	void setIcon( String icon );
 
-	public abstract void setIcon( String icon ) /*-{
-												this.@com.amcharts.impl.MenuItem::jso.icon = icon;
-												}-*/;
+	String getFormat();
 
-	public abstract String getFormat() /*-{
-										return this.@com.amcharts.impl.MenuItem::jso.format;
-										}-*/;
+	void setFormat( String format );
 
-	public abstract void setFormat( String format ) /*-{
-													this.@com.amcharts.impl.MenuItem::jso.format = format;
-													}-*/;
+	String getTitle();
 
+	void setTitle( String title );
 }

@@ -32,4 +32,16 @@ public class MenuItemJSO extends JavaScriptObject implements IsMenuItem
 	/*-{
 		this.format = format;
 	}-*/;
+
+	@Override
+	public final native String getTitle()
+	/*-{
+		this.title = title;
+	}-*/;
+
+	@Override
+	public final native void setTitle( String title )
+	/*-{
+		this.title = title;
+	}-*/;
 }

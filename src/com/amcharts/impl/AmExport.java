@@ -4,7 +4,6 @@ import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.jso.AmExportJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExport
 {
@@ -257,12 +256,13 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	 * setup for the ouput; callback - function to handle the output converts the chart to the given format
 	 * Example: chart.AmExport.output({ format: 'png', output: 'datastring' }, function(blob) {};
 	 */
-	public final native void output( JavaScriptObject config, ExportCallback callback ) /*-{
+	public final native void output( ExportConfig exportConfig, ExportCallback callback ) /*-{
 		var amExport = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var varExportConfig = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(exportConfig)
 		var functionCallback = function(blob) {
 			@com.amcharts.impl.ExportCallback::execute(Lcom/amcharts/impl/ExportCallback;)(callback);
 		};
-		return amExport.output(config, functionCallback);
+		return amExport.output(varExportConfig, functionCallback);
 	}-*/;
 
 }

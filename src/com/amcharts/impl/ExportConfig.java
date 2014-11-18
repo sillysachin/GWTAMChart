@@ -104,4 +104,14 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 	/*-{
 		return this.@com.amcharts.impl.ExportConfig::jso.menuBottom;
 	}-*/;
+
+	public native void setMenuLeft( String menuLeft )
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuLeft;
+	}-*/;
+
+	public native void setMenuLeft( int menuLeft )
+	/*-{
+		return this.@com.amcharts.impl.ExportConfig::jso.menuLeft;
+	}-*/;
 }

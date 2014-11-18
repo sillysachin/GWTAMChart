@@ -1,0 +1,234 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+	var chart;
+
+	var chartData = [ {
+		"country" : "USA",
+		"visits" : 4025,
+		"color" : "#FF0F00"
+	}, {
+		"country" : "China",
+		"visits" : 1882,
+		"color" : "#FF6600"
+	}, {
+		"country" : "Japan",
+		"visits" : 1809,
+		"color" : "#FF9E01"
+	}, {
+		"country" : "Germany",
+		"visits" : 1322,
+		"color" : "#FCD202"
+	}, {
+		"country" : "UK",
+		"visits" : 1122,
+		"color" : "#F8FF01"
+	}, {
+		"country" : "France",
+		"visits" : 1114,
+		"color" : "#B0DE09"
+	}, {
+		"country" : "India",
+		"visits" : 984,
+		"color" : "#04D215"
+	}, {
+		"country" : "Spain",
+		"visits" : 711,
+		"color" : "#0D8ECF"
+	}, {
+		"country" : "Netherlands",
+		"visits" : 665,
+		"color" : "#0D52D1"
+	}, {
+		"country" : "Russia",
+		"visits" : 580,
+		"color" : "#2A0CD0"
+	}, {
+		"country" : "South Korea",
+		"visits" : 443,
+		"color" : "#8A0CCF"
+	}, {
+		"country" : "Canada",
+		"visits" : 441,
+		"color" : "#CD0D74"
+	}, {
+		"country" : "Brazil",
+		"visits" : 395,
+		"color" : "#754DEB"
+	}, {
+		"country" : "Italy",
+		"visits" : 386,
+		"color" : "#DDDDDD"
+	}, {
+		"country" : "Australia",
+		"visits" : 384,
+		"color" : "#999999"
+	}, {
+		"country" : "Taiwan",
+		"visits" : 338,
+		"color" : "#333333"
+	}, {
+		"country" : "Poland",
+		"visits" : 328,
+		"color" : "#000000"
+	} ];
+
+	var chart = AmCharts.makeChart("chartdiv", {
+		"theme" : "none",
+		type : "serial",
+		dataProvider : chartData,
+		categoryField : "country",
+		depth3D : 20,
+		angle : 30,
+
+		categoryAxis : {
+			labelRotation : 90,
+			gridPosition : "start"
+		},
+
+		valueAxes : [ {
+			title : "Visitors"
+		} ],
+
+		graphs : [ {
+
+			valueField : "visits",
+			colorField : "color",
+			type : "column",
+			lineAlpha : 0.1,
+			fillAlphas : 1
+		} ],
+
+		chartCursor : {
+			cursorAlpha : 0,
+			zoomable : false,
+			categoryBalloonEnabled : false
+		},
+		pathToImages : "/js/amcharts/images/",
+		amExport : {
+			top : 21,
+			right : 20,
+			exportJPG : true,
+			exportPNG : true,
+			exportSVG : true
+		}
+	});
+
+	// Advanced configuration
+	chart.amExport.userCFG = {
+		//menuTop		: 'auto',
+		//menuLeft	: 'auto',
+		//menuRight	: '0px',
+		//menuBottom	: '0px',
+		menuItems	: [{
+			textAlign : 'center',
+			icon      : '/js/amcharts/images/export.png',
+			iconTitle : 'Save chart as an image',
+			onclick   : function () {},
+			items     : [{
+				title: 'JPG',
+				format: 'jpg'
+			}, {
+				title: 'PNG',
+				format: 'png'
+			}, {
+				title: 'SVG',
+				format: 'svg'
+			},{
+				title: 'PDF',
+				format: 'pdf'
+			}]
+		}],
+		menuItemStyle: {
+			backgroundColor		: 'transparent',
+			opacity			: 1,
+			rollOverBackgroundColor	: '#EFEFEF',
+			color			: '#000000',
+			rollOverColor		: '#CC0000',
+			paddingTop		: '6px',
+			paddingRight		: '6px',
+			paddingBottom		: '6px',
+			paddingLeft		: '6px',
+			marginTop		: '0px',
+			marginRight		: '0px',
+			marginBottom		: '0px',
+			marginLeft		: '0px',
+			textAlign		: 'left',
+			textDecoration		: 'none',
+			fontFamily		: 'Arial', // Default: charts default
+			fontSize		: '12px', // Default: charts default
+		},
+		menuItemOutput: {
+			backgroundColor		: '#FFFFFF',
+			fileName		: 'amCharts',
+			format			: 'png',
+			output			: 'dataurlnewwindow',
+			render			: 'browser',
+			dpi			: 90,
+			onclick			: function(instance, config, event) {
+				event.preventDefault();
+				instance.output(config);
+			}
+		},
+		removeImagery: true
+	}
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 100%; height: 500px"></div>
+</body>
+</html>

@@ -127,7 +127,7 @@ public class ColumnChartWithEvents
 			@Override
 			public void function( AmChartEventJSO event )
 			{
-				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
+				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO.
 				//event.getTarget().setAttr( "cursor", "default" );
 				//event.getTarget().setAttr( "fill", "#000000" );
 				GWT.log( "handleOver - > " + event.getValue() );
@@ -138,7 +138,7 @@ public class ColumnChartWithEvents
 			@Override
 			public void function( AmChartEventJSO event )
 			{
-				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO. 
+				//TODO: target needs allow jsni to invoke setAttr. Target is currently a JSO.
 				//event.getTarget().setAttr( "cursor", "pointer" );
 				//event.getTarget().setAttr( "fill", "#CC0000" );
 				GWT.log( "handleOut - > " );
