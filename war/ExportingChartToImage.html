@@ -147,7 +147,8 @@
 			right : 20,
 			exportJPG : true,
 			exportPNG : true,
-			exportSVG : true
+			exportSVG : true,
+			exportPDF : true
 		}
 	});
 
@@ -157,58 +158,62 @@
 		//menuLeft	: 'auto',
 		//menuRight	: '0px',
 		//menuBottom	: '0px',
-		menuItems	: [{
+		menuItems : [ {
 			textAlign : 'center',
-			icon      : '/js/amcharts/images/export.png',
+			icon : '/js/amcharts/images/export.png',
 			iconTitle : 'Save chart as an image',
-			onclick   : function () {},
-			items     : [{
-				title: 'JPG',
-				format: 'jpg'
+			onclick : function() {
+			},
+			items : [ {
+				title : 'JPG',
+				format : 'jpg'
 			}, {
-				title: 'PNG',
-				format: 'png'
+				title : 'PNG',
+				format : 'png'
 			}, {
-				title: 'SVG',
-				format: 'svg'
-			},{
-				title: 'PDF',
-				format: 'pdf'
-			}]
-		}],
-		menuItemStyle: {
-			backgroundColor		: 'transparent',
-			opacity			: 1,
-			rollOverBackgroundColor	: '#EFEFEF',
-			color			: '#000000',
-			rollOverColor		: '#CC0000',
-			paddingTop		: '6px',
-			paddingRight		: '6px',
-			paddingBottom		: '6px',
-			paddingLeft		: '6px',
-			marginTop		: '0px',
-			marginRight		: '0px',
-			marginBottom		: '0px',
-			marginLeft		: '0px',
-			textAlign		: 'left',
-			textDecoration		: 'none',
-			fontFamily		: 'Arial', // Default: charts default
-			fontSize		: '12px', // Default: charts default
+				title : 'SVG',
+				format : 'svg'
+			}, {
+				title : 'PDF',
+				format : 'pdf'
+			} ]
+		} ],
+		menuItemStyle : {
+			backgroundColor : 'transparent',
+			opacity : 1,
+			rollOverBackgroundColor : '#EFEFEF',
+			color : '#000000',
+			rollOverColor : '#CC0000',
+			paddingTop : '6px',
+			paddingRight : '6px',
+			paddingBottom : '6px',
+			paddingLeft : '6px',
+			marginTop : '0px',
+			marginRight : '0px',
+			marginBottom : '0px',
+			marginLeft : '0px',
+			textAlign : 'left',
+			textDecoration : 'none',
+			fontFamily : 'Arial', // Default: charts default
+			fontSize : '12px', // Default: charts default
 		},
-		menuItemOutput: {
-			backgroundColor		: '#FFFFFF',
-			fileName		: 'amCharts',
-			format			: 'png',
-			output			: 'dataurlnewwindow',
-			render			: 'browser',
-			dpi			: 90,
-			onclick			: function(instance, config, event) {
+		/* menuItemOutput : {
+			backgroundColor : '#FFFFFF',
+			fileName : 'amCharts',
+			format : 'png',
+			output : 'dataurlnewwindow',
+			render : 'browser',
+			dpi : 90,
+			onclick : function(instance, config, event) {
 				event.preventDefault();
+				console.log(instance);
+				console.log(config);
 				instance.output(config);
 			}
-		},
-		removeImagery: true
+		}, */
+		removeImagery : true
 	}
+	console.log(chart.amExport);
 </script>
 
 <!--                                           -->

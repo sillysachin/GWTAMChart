@@ -8,8 +8,10 @@ import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.Item;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItemOutput;
+import com.amcharts.impl.MenuItemOutputCallback;
 import com.amcharts.impl.MenuItemStyle;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.util.LogUtils;
@@ -85,28 +87,30 @@ public class ExportingChartToImage
 		amExport.setExportJPG( true );
 		amExport.setExportPNG( true );
 		amExport.setExportSVG( true );
+		amExport.setExportPDF( true );
 
 		ExportConfig exportConfig = AmCharts.ExportConfig();
-		//exportConfig.setMenuTop( "auto" );
-		//exportConfig.setMenuLeft( "auto" );
-		//exportConfig.setMenuRight( "0px" );
-		//exportConfig.setMenuBottom( "0px" );
 		MenuItem menuItem1 = new MenuItem();
-		menuItem1.setTitle( "JPG" );
-		menuItem1.setFormat( "jpg" );
+		menuItem1.setIcon( "/js/amcharts/images/export.png" );
+		menuItem1.setIconTitle( "Save chart as an image" );
+		menuItem1.setTextAlign( "center" );
+		Item item1 = AmCharts.Item();
+		item1.setTitle( "JPG" );
+		item1.setFormat( "jpg" );
+		menuItem1.addItem( item1 );
+		Item item2 = AmCharts.Item();
+		item2.setTitle( "PNG" );
+		item2.setFormat( "png" );
+		menuItem1.addItem( item2 );
+		Item item3 = AmCharts.Item();
+		item3.setTitle( "SVG" );
+		item3.setFormat( "svg" );
+		menuItem1.addItem( item3 );
+		Item item4 = AmCharts.Item();
+		item4.setTitle( "PDF" );
+		item4.setFormat( "pdf" );
+		menuItem1.addItem( item4 );
 		exportConfig.addMenuItem( menuItem1 );
-		MenuItem menuItem2 = new MenuItem();
-		menuItem2.setTitle( "PNG" );
-		menuItem2.setFormat( "png" );
-		exportConfig.addMenuItem( menuItem2 );
-		MenuItem menuItem3 = new MenuItem();
-		menuItem3.setTitle( "SVG" );
-		menuItem3.setFormat( "svg" );
-		exportConfig.addMenuItem( menuItem3 );
-		MenuItem menuItem4 = new MenuItem();
-		menuItem4.setTitle( "PDF" );
-		menuItem4.setFormat( "pdf" );
-		exportConfig.addMenuItem( menuItem4 );
 
 		MenuItemStyle menuItemStyle = AmCharts.MenuItemStyle();
 		menuItemStyle.setBackgroundColor( "transparent" );
@@ -127,24 +131,23 @@ public class ExportingChartToImage
 		menuItemStyle.setFontFamily( "Arial" ); // Default: charts default
 		menuItemStyle.setFontSize( "12px" ); // Default: charts default		
 		exportConfig.setMenuItemStyle( menuItemStyle );
-		//MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
-		//menuItemOutput.setBackgroundColor( "#FFFFFF" );
-		//menuItemOutput.setFileName( "amCharts" );
-		//menuItemOutput.setFormat( "png" );
-		//menuItemOutput.setOutput( "dataurlnewwindow" );
-		//menuItemOutput.setRender( "browser" );
-		//menuItemOutput.setDpi( 90 );
-		//menuItemOutput.setOnclick( new MenuItemOutputCallback()
-		//{
-		//	public void execute(JavaScriptObject instance,JavaScriptObject config,JavaScriptObject event)
-		//	{
-		//		function(instance, config, event) {
-		//			event.preventDefault();
-		//			instance.output(config);
-		//		}
-		//	}
-		//} );
 
+		MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
+		menuItemOutput.setBackgroundColor( "#FFFFFF" );
+		menuItemOutput.setFileName( "amCharts" );
+		menuItemOutput.setFormat( "png" );
+		menuItemOutput.setOutput( "dataurlnewwindow" );
+		menuItemOutput.setRender( "browser" );
+		menuItemOutput.setDpi( 90 );
+		menuItemOutput.setOnClick( new MenuItemOutputCallback()
+		{
+			@Override
+			public void execute( AmExport instance, MenuItemOutput config )
+			{
+				instance.output( config );
+			}
+		} );
+		//TODO: Why do we need this?
 		//exportConfig.setMenuItemOutput( menuItemOutput );
 		exportConfig.setRemoveImagery( true );
 		amExport.setUserCFG( exportConfig );

@@ -10,7 +10,7 @@ public final class MenuItemStyle implements IJavaScriptWrapper<MenuItemStyleJSO>
 
 	protected MenuItemStyle()
 	{
-		jso = createJso();
+		jso = MenuItemStyleJSO.createObject().cast();
 	}
 
 	public MenuItemStyleJSO getJso()

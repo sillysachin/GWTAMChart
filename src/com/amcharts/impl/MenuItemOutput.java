@@ -1,9 +1,9 @@
 package com.amcharts.impl;
 
-import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsMenuItemOutput;
 import com.amcharts.jso.MenuItemOutputJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
+import com.google.gwt.core.client.JavaScriptObject;
 
 public final class MenuItemOutput implements IJavaScriptWrapper<MenuItemOutputJSO>, IsMenuItemOutput
 {
@@ -25,7 +25,9 @@ public final class MenuItemOutput implements IJavaScriptWrapper<MenuItemOutputJS
 	}
 
 	public native MenuItemOutputJSO createJso() /*-{
-		return {};
+		var jso = {}
+		jso.className = 'MenuItemOutput';
+		return jso;
 	}-*/;
 
 	public final native String getBackgroundColor() /*-{
@@ -76,11 +78,23 @@ public final class MenuItemOutput implements IJavaScriptWrapper<MenuItemOutputJS
 		this.@com.amcharts.impl.MenuItemOutput::jso.dpi = dpi;
 	}-*/;
 
-	public final native IsFunction getOnclick() /*-{
+	public final native JavaScriptObject getOnClick() /*-{
 		return this.@com.amcharts.impl.MenuItemOutput::jso.onclick;
 	}-*/;
 
-	public final native void setOnclick( IsFunction onclick ) /*-{
-		this.@com.amcharts.impl.MenuItemOutput::jso.onclick = onclick;
+	public final native void setOnClick( MenuItemOutputCallback menuItemOutputCallback ) /*-{
+		varMenuItemOutputThis = this;
+		this.@com.amcharts.impl.MenuItemOutput::jso.onclick = function(
+				instance, config, event) {
+			event.preventDefault();
+			var amExport = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(instance);
+			var menuItemOutput = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(config);
+			varMenuItemOutputThis.@com.amcharts.impl.MenuItemOutput::execute(Lcom/amcharts/impl/MenuItemOutputCallback;Lcom/amcharts/impl/AmExport;Lcom/amcharts/impl/MenuItemOutput;)(menuItemOutputCallback,amExport, menuItemOutput)
+		};
 	}-*/;
+
+	public final void execute( MenuItemOutputCallback menuItemOutputCallback, AmExport instance, MenuItemOutput config )
+	{
+		menuItemOutputCallback.execute( instance, config );
+	}
 }

@@ -2,7 +2,9 @@ package com.amcharts.impl;
 
 import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsExportConfig;
+import com.amcharts.jso.AmChartJSO;
 import com.amcharts.jso.AmExportJSO;
+import com.amcharts.jso.MenuItemOutputJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 
 public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExport
@@ -13,6 +15,18 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	{
 		jso = createJso();
 	}
+
+	protected AmExport( AmChart chart )
+	{
+		jso = createJso( chart.getJso() );
+	}
+
+	private native AmExportJSO createJso( AmChartJSO chart )
+	/*-{
+		var amExport = new $wnd.AmCharts.AmExport(chart);
+		amExport.init();
+		return amExport;
+	}-*/;
 
 	public AmExportJSO getJso()
 	{
@@ -25,7 +39,9 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	}
 
 	public native AmExportJSO createJso() /*-{
-		return {};
+		var jso = {};
+		jso.className = 'AmExport';
+		return jso;
 	}-*/;
 
 	/**
@@ -255,16 +271,37 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	}-*/;
 
 	/**
-	 * setup for the ouput; callback - function to handle the output converts the chart to the given format
+	 * setup for the output; callback - function to handle the output converts the chart to the given format
 	 * Example: chart.AmExport.output({ format: 'png', output: 'datastring' }, function(blob) {};
 	 */
-	public final native void output( ExportConfig exportConfig, ExportCallback callback ) /*-{
+	public final native void output( MenuItemOutput menuItemOutput, ExportCallback callback ) /*-{
 		var amExport = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var varExportConfig = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(exportConfig)
 		var functionCallback = function(blob) {
-			@com.amcharts.impl.ExportCallback::execute(Lcom/amcharts/impl/ExportCallback;)(callback);
+			// TODO: Demo this fun stuff....
+			//var image = new Image();
+			//image.src = blob;
+			@com.amcharts.impl.ExportCallback::execute(Lcom/amcharts/impl/ExportCallback;Lcom/google/gwt/core/client/JavaScriptObject;)(callback,blob);
 		};
 		return amExport.output(varExportConfig, functionCallback);
 	}-*/;
 
+	/**
+	 * setup for the output; callback - function to handle the output converts the chart to the given format
+	 * Example: chart.AmExport.output({ format: 'png', output: 'datastring' }, function(blob) {};
+	 */
+	public final void output( MenuItemOutput menuItemOutput )
+	{
+		output( menuItemOutput.getJso() );
+	}
+
+	/**
+	 * setup for the output; callback - function to handle the output converts the chart to the given format
+	 * Example: chart.AmExport.output({ format: 'png', output: 'datastring' }, function(blob) {};
+	 */
+	private final native void output( MenuItemOutputJSO menuItemOutput ) /*-{
+		var amExport = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		console.log(menuItemOutput);
+		amExport.output(menuItemOutput);
+	}-*/;
 }

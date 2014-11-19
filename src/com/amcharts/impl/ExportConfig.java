@@ -6,6 +6,9 @@ import java.util.List;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsMenuItem;
 import com.amcharts.impl.util.WrapperUtils;
+import com.amcharts.impl.MenuItemOutput;
+import com.amcharts.impl.MenuItemStyle;
+import com.amcharts.jso.MenuItemsJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -45,7 +48,7 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 		return menuItems;
 	}
 
-	private native JavaScriptObject getMenuItemsJSO() /*-{
+	public native MenuItemsJSO getMenuItemsJSO() /*-{
 		return @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this).menuItems;
 	}-*/;
 

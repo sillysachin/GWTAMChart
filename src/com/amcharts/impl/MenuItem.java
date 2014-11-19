@@ -1,6 +1,7 @@
 package com.amcharts.impl;
 
 import com.amcharts.api.IsMenuItem;
+import com.amcharts.jso.ItemJSO;
 import com.amcharts.jso.MenuItemJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -11,7 +12,7 @@ public class MenuItem implements IJavaScriptWrapper, IsMenuItem
 
 	public MenuItem()
 	{
-		setJso( JavaScriptObject.createObject() );
+		setJso( MenuItemJSO.createObject().cast() );
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class MenuItem implements IJavaScriptWrapper, IsMenuItem
 	}-*/;
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.impl.IsMenuItem#getFormat()
+	 * @see com.amcharts.impl.IsMenuItem#getTitle()
 	 */
 
 	@Override
@@ -68,10 +69,39 @@ public class MenuItem implements IJavaScriptWrapper, IsMenuItem
 	}-*/;
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.impl.IsMenuItem#setFormat(java.lang.String)
+	 * @see com.amcharts.impl.IsMenuItem#setTitle(java.lang.String)
 	 */
 	@Override
 	public native void setTitle( String title ) /*-{
 		this.@com.amcharts.impl.MenuItem::jso.title = title;
+	}-*/;
+
+	public native String getIconTitle() /*-{
+		return this.@com.amcharts.impl.MenuItem::jso.iconTitle;
+	}-*/;
+
+	public native void setIconTitle( String iconTitle ) /*-{
+		this.@com.amcharts.impl.MenuItem::jso.iconTitle = iconTitle;
+	}-*/;
+
+	public native String getTextAlign() /*-{
+		return this.@com.amcharts.impl.MenuItem::jso.textAlign;
+	}-*/;
+
+	public native void setTextAlign( String textAlign ) /*-{
+		this.@com.amcharts.impl.MenuItem::jso.textAlign = textAlign;
+	}-*/;
+
+	public void addItem( Item item )
+	{
+		ItemJSO itemJso = item.getJso();
+		addItem( itemJso );
+	}
+
+	private native void addItem( ItemJSO itemJso )/*-{
+		if (this.@com.amcharts.impl.MenuItem::jso.items == undefined) {
+			this.@com.amcharts.impl.MenuItem::jso.items = [];
+		}
+		this.@com.amcharts.impl.MenuItem::jso.items.push(itemJso)
 	}-*/;
 }

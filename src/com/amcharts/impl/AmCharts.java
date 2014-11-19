@@ -141,7 +141,13 @@ public class AmCharts
 
 	public static MenuItemOutput MenuItemOutput()
 	{
-		MenuItemOutput menuItemOutput = MenuItemOutput();
+		MenuItemOutput menuItemOutput = new MenuItemOutput();
 		return menuItemOutput;
+	}
+
+	public static Item Item()
+	{
+		Item item = new Item();
+		return item;
 	}
 }

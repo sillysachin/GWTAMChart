@@ -26,6 +26,7 @@ import com.amcharts.impl.GaugeAxis;
 import com.amcharts.impl.GaugeBand;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItemOutput;
 import com.amcharts.impl.MenuItems;
 import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
@@ -82,7 +83,14 @@ public class WrapperUtils
 		IJavaScriptWrapper wrapper = null;
 		GWT.log( className );
 		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
-
+		if ( className.equals( getSimpleName( MenuItemOutput.class ) ) )
+		{
+			wrapper = GWT.create( MenuItemOutput.class );
+		}
+		else if ( className.equals( getSimpleName( AmExport.class ) ) )
+		{
+			wrapper = GWT.create( AmExport.class );
+		}
 		return wrapper;
 	}
 
