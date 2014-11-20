@@ -200,4 +200,135 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	{
 		getJso().setValueAxes( valueAxes );
 	}
+
+	/**
+	 * Adds a graph to the chart.
+	 */
+	public native void addGraph( AmGraph amGraph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph);
+		chart.addGraph(graph);
+	}-*/;
+
+	/**
+	 * Adds value axis to the chart. One value axis is created automatically, so if you don't want to change anything or add more value axes, you don't need to add it.
+	 */
+	public native void addValueAxis( ValueAxis valueAxis )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var axis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(valueAxis);
+		chart.addValueAxis(axis);
+	}-*/;
+
+	/**
+	 * You can trigger the animation of the chart.
+	 */
+	public native void animateAgain()
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		chart.animateAgain();
+	}-*/;
+
+	/**
+	 * Returns graph by id.
+	 */
+	public native AmGraph getGraphById( String id )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var graph = chart.getGraphById(id);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(graph);
+		return amGraph;
+	}-*/;
+
+	/**
+	 * Returns value axis by id.
+	 */
+	public native ValueAxis getValueAxisById( String id )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var axis = chart.getValueAxisById(id);
+		var valueAxis = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(axis);
+		return valueAxis;
+	}-*/;
+
+	/**
+	 * Hide the graph (if it is visible). Usually this method is called from the Legend, when you click on the legend marker.
+	 */
+	public native void hideGraph( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.hideGraph(amGraph);
+	}-*/;
+
+	/**
+	 * Hide value balloon of a graph. Usually this method is called from the Legend, when you click on the legend text.
+	 */
+	public native void hideGraphsBalloon( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.hideGraphsBalloon(amGraph);
+	}-*/;
+
+	/**
+	 * Highlight the graph. Usually this method is called from the Legend, when you roll-over the legend entry.
+	 */
+	public native void highlightGraph( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.highlightGraph(amGraph);
+	}-*/;
+
+	/**
+	 * Removes graph from the chart.
+	 */
+	public native void removeGraph( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.removeGraph(amGraph);
+	}-*/;
+
+	/**
+	 * Removes value axis from the chart. When you remove value axis, all graphs assigned to this axis are also removed.
+	 */
+	public native void removeValueAxis( ValueAxis valueAxis )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var axis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(valueAxis);
+		chart.removeValueAxis(axis);
+	}-*/;
+
+	/**
+	 * Show the graph (if it is hidden). Usually this method is called from the Legend, when you click on the legend marker.
+	 */
+	public native void showGraph( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.showGraph(amGraph);
+	}-*/;
+
+	/**
+	 * Show value balloon of a graph. Usually this method is called from the Legend, when you click on the legend text.
+	 */
+	public native void showGraphsBalloon( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.showGraphsBalloon(amGraph);
+	}-*/;
+
+	/**
+	 * UnhighlightGraph the graph. Usually this method is called from the Legend, when you roll-out the legend entry.
+	 */
+	public native void unhighlightGraph( AmGraph graph )
+	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(graph);
+		chart.unhighlightGraph(amGraph);
+	}-*/;
 }
