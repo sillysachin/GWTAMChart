@@ -17,7 +17,7 @@ public class APIWriter
 {
 	static List<String> inputs = Arrays
 			.asList( new String[]
-			{ "AmCoordinateChart", "MenuItemOutput", "MenuItemStyle", "AmExport", "AmBalloon", "AmRadarChart", "AmXYChart", "AmAngularGauge", "GaugeArrow", "GaugeAxis", "GaugeBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
+			{ "AmCharts", "AmCoordinateChart", "MenuItemOutput", "MenuItemStyle", "AmExport", "AmBalloon", "AmRadarChart", "AmXYChart", "AmAngularGauge", "GaugeArrow", "GaugeAxis", "GaugeBand", "GraphDataItem", "SerialDataItem", "ChartCursor", "AmGraph", "AxisBase", "ValueAxis", "CategoryAxis", "AmRectangularChart", "AmLegend", "AmSerialChart", "ChartScrollbar", "Label", "Guide", "Title", "TrendLine" } );
 
 	public static void main( String args[] ) throws IOException
 	{
