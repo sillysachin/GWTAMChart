@@ -347,4 +347,10 @@ public class AmCharts
 		Item item = new Item();
 		return item;
 	}
+
+	public static AmLegend AmLegend()
+	{
+		AmLegend amLegend = new AmLegend();
+		return amLegend;
+	}
 }

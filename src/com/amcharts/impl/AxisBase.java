@@ -256,15 +256,17 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native List<IsGuide> getGuides() /*-{
-		return this.@com.amcharts.impl.AxisBase::jso.guides;
+	public final native <T extends IsGuide> List<T> getGuides() /*-{
+		varGuides = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AxisBase::jso.guides);
+		return varGuides;
 	}-*/;
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native void setGuides( List<IsGuide> guides ) /*-{
-		this.@com.amcharts.impl.AxisBase::jso.guides = guides;
+	public final native <T extends IsGuide> void setGuides( List<T> guides ) /*-{
+		varGuides = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(guides);
+		this.@com.amcharts.impl.AxisBase::jso.guides = varGuides;
 	}-*/;
 
 	/**

@@ -39,7 +39,7 @@ public class AxisBase implements IsAxisBase
 
 	private double gridThickness;
 
-	private List<IsGuide> guides;
+	private List< ? extends IsGuide> guides;
 
 	private boolean ignoreAxisWidth;
 
@@ -338,15 +338,15 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public List<IsGuide> getGuides()
+	public <T extends IsGuide> List<T> getGuides()
 	{
-		return guides;
+		return ( List<T> ) guides;
 	}
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public void setGuides( List<IsGuide> guides )
+	public <T extends IsGuide> void setGuides( List<T> guides )
 	{
 		this.guides = guides;
 	}

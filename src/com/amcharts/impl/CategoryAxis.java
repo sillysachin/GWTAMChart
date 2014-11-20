@@ -1,6 +1,5 @@
 package com.amcharts.impl;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +9,6 @@ import com.amcharts.api.IsFunction;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.CategoryAxisJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper<CategoryAxisJSO>
 {

@@ -239,14 +239,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native List<IsGuide> getGuides() /*-{
+	public final native <T extends IsGuide> List<T> getGuides() /*-{
 		return guides;
 	}-*/;
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native void setGuides( List<IsGuide> guides ) /*-{
+	public final native <T extends IsGuide> void setGuides( List<T> guides ) /*-{
 		this.guides = guides;
 	}-*/;
 
