@@ -88,7 +88,7 @@ public class ColumnChartWithEvents
 		amGraph2.setBulletBorderAlpha( 1 );
 		amGraph2.setBulletColor( "#FFFFFF" );
 		amGraph2.setBulletBorderThickness( 3 );
-		//TODO: cannot see setUseLineColorForBulletBorder api in AMChart documentation.
+		//TODO: Cannot see setUseLineColorForBulletBorder api in AMChart documentation.
 		amGraph2.setUseLineColorForBulletBorder( true );
 		amGraph2.setFillAlphas( 0 );
 		amGraph2.setLineAlpha( 1 );
@@ -99,7 +99,6 @@ public class ColumnChartWithEvents
 
 		amSerialChart.setCategoryField( "year" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setGridPosition( "start" );
 		categoryAxis.setAxisAlpha( 0 );

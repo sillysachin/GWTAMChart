@@ -71,7 +71,6 @@ public class ColumnWithRotatedSeries
 
 		amSerialChart.setCategoryField( "country" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setGridPosition( "start" );
 		categoryAxis.setLabelRotation( 45 );

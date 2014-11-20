@@ -48,7 +48,6 @@ public class StackedColumnChart
 		AmLegend legend = new AmLegend();
 		legend.setHorizontalGap(10);
 		legend.setMaxColumns(10);
-		//TODO: Provide a enum for position values.
 		legend.setPosition("right");
 		legend.setUseGraphSettings(true);
 		legend.setMarkerSize(10);
@@ -139,13 +138,10 @@ public class StackedColumnChart
 		
 		amSerialChart.setCategoryField( "year" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
-		//TODO: Provide a enum for gridPosition values.
 		categoryAxis.setGridPosition( "start" );
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setAxisAlpha( 0 );
-		//TODO: Provide a enum for position values.
 		categoryAxis.setPosition( "left" );
 
 		ExportConfig exportConfig = new ExportConfig();

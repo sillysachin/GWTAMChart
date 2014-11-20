@@ -107,7 +107,6 @@ public class LineDifferentColorsUpsDowns
 
 		amSerialChart.setCategoryField( "date" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setParseDates( true );
 		categoryAxis.setAxisAlpha( 0 );

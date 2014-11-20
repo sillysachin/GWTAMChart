@@ -60,7 +60,6 @@ public class ExportingChartToImage
 		amSerialChart.setDepth3D( 20 );
 		amSerialChart.setAngle( 30 );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setLabelRotation( 90 );
 		categoryAxis.setGridPosition( "start" );

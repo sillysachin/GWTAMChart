@@ -140,7 +140,6 @@ public class GWTAMChartSample
 
 	private void lineWithTrendLines( String chartData )
 	{
-		//TODO: Revisit this and fix later.
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setPathToImages( "/js/amcharts/images/" );
 		JsArray<JavaScriptObject> serialDataProvider = JsonUtils

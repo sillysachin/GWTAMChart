@@ -86,7 +86,6 @@ public class LineWithChangingColor
 		amSerialChart.setDataDateFormat( "YYYY-MM-DD" );
 		amSerialChart.setCategoryField( "date" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		DateFormat dateFormat1 = new DateFormat();
 		dateFormat1.setPeriod( "DD" );

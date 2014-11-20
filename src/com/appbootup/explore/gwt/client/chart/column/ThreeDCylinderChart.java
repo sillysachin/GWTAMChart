@@ -47,7 +47,6 @@ public class ThreeDCylinderChart
 		amSerialChart.setStartDuration( 2 );
 
 		ValueAxis valueAxis = AmCharts.ValueAxis();
-		//TODO: Provide a enum for position values.
 		valueAxis.setPosition( "left" );
 		valueAxis.setAxisAlpha( 0 );
 		valueAxis.setGridAlpha( 0 );
@@ -74,7 +73,7 @@ public class ThreeDCylinderChart
 
 		amSerialChart.setCategoryField( "country" );
 
-		//TODO: categoryAxis exists already and should not be created.
+		//TODO: CategoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		//TODO: Provide a enum for gridPosition values.
 		categoryAxis.setGridPosition( "start" );

@@ -78,8 +78,6 @@ public class MicroChartsSparklines
 		chart2.setMarginTop( 0 );
 		chart2.setMarginBottom( 0 );
 
-		//TODO: instance method?
-		//AmGraph graph = new AmCharts.AmGraph();
 		AmGraph graph2 = AmCharts.AmGraph();
 		graph2.setValueField( "value" );
 		graph2.setType( "column" );

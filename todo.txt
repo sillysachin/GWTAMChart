@@ -1,0 +1,11 @@
+Clean up api package - api should not have references to gwt imports like JavaScriptObject.
+Clean up jso package - ceonversion between list & js array needs to be handled in all get and set dealing with List<T>
+Clean up json package - json should not have references to gwt imports like JavaScriptObject.
+Clean up events to go with simpler AmChartListener
+Revisit generics with AmChart<T extends AmChartDataObject>
+Support AMStockChart api's
+Enhance DataProvider support
+Provide conversion from JSON to Impl
+Split the demo code into separate project
+Address all todos
+Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );

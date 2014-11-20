@@ -28,6 +28,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
+	//FIXME: User WrapperUtils to convert between js array and list
 	public final native List<String> getDayNames() /*-{
 		return dayNames;
 	}-*/;
@@ -35,6 +36,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
+	//FIXME: User WrapperUtils to convert between js array and list
 	public final native void setDayNames( List<String> dayNames ) /*-{
 		this.dayNames = dayNames;
 	}-*/;

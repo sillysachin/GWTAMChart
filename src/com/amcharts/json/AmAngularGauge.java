@@ -27,6 +27,7 @@ public final class AmAngularGauge implements IsAmAngularChart
 
 	private String faceColor;
 
+	//FIXME: Eliminate all JSO references in json package.
 	private JavaScriptObject facePattern;
 
 	private double gaugeX;

@@ -85,7 +85,6 @@ public class DateBasedData
 
 		amSerialChart.setCategoryField( "date" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setParseDates( true );
 		categoryAxis.setDashLength( 1 );

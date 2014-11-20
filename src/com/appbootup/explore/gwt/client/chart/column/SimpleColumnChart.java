@@ -71,7 +71,6 @@ public class SimpleColumnChart
 
 		amSerialChart.setCategoryField( "country" );
 
-		//TODO: categoryAxis exists already and should not be created.
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setGridPosition( "start" );
 		categoryAxis.setGridAlpha( 45 );
