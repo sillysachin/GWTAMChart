@@ -25,6 +25,10 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class ExportingChartToImage
 {
+	// Exporting charts and maps as an image or PDF
+	// http://www.amcharts.com/tutorials/exporting-charts-and-maps-as-an-image-or-pdf/
+	// Saving exported image on a server
+	// http://www.amcharts.com/tutorials/saving-exported-image-on-a-server/
 	public ExportingChartToImage()
 	{
 		GWTAMChart.chartService
@@ -129,7 +133,7 @@ public class ExportingChartToImage
 		menuItemStyle.setTextAlign( "left" );
 		menuItemStyle.setTextDecoration( "none" );
 		menuItemStyle.setFontFamily( "Arial" ); // Default: charts default
-		menuItemStyle.setFontSize( "12px" ); // Default: charts default		
+		menuItemStyle.setFontSize( "12px" ); // Default: charts default
 		exportConfig.setMenuItemStyle( menuItemStyle );
 
 		MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
