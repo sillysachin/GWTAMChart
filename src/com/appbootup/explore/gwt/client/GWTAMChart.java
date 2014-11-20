@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.pie.ThreeDPieChart;
+import com.appbootup.explore.gwt.client.line.LineWithChangingColor;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -28,7 +28,7 @@ public class GWTAMChart implements EntryPoint
 		// chartByServerJSON();
 		// lineWithTrendLineChartByJSNI();
 		// SimplePieChart simplePieChart = new SimplePieChart();
-		 ThreeDPieChart threeDPieChart = new ThreeDPieChart();
+		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 		// DonutChart threeDPieChart = new DonutChart();
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
 		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
@@ -50,5 +50,6 @@ public class GWTAMChart implements EntryPoint
 		// AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
 		// AngularGauge angularGauge = new AngularGauge();
 		// ExportingChartToImage exportingChartToImage = new ExportingChartToImage();
+		LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
 	}
 }

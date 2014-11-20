@@ -3,8 +3,8 @@ package com.amcharts.jso;
 import java.util.List;
 
 import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsDateFormat;
 import com.amcharts.api.IsFunction;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 {
@@ -99,15 +99,18 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public final native List<JavaScriptObject> getDateFormats() /*-{
-		return dateFormats;
+	public final native List<IsDateFormat> getDateFormats() /*-{
+		var varDateFormats = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dateFormats);
+		return varDateFormats;
 	}-*/;
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public final native void setDateFormats( List<JavaScriptObject> dateFormats ) /*-{
-		this.dateFormats = dateFormats;
+	public final native void setDateFormats( List<IsDateFormat> dateFormats ) /*-{
+		var varDateFormats = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(dateFormats);
+		this.dateFormats = varDateFormats;
+		console.log(this.dateFormats)
 	}-*/;
 
 	/**

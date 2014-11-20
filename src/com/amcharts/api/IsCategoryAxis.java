@@ -2,8 +2,6 @@ package com.amcharts.api;
 
 import java.util.List;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 public interface IsCategoryAxis extends IsAxisBase
 {
 	/**
@@ -69,12 +67,12 @@ public interface IsCategoryAxis extends IsAxisBase
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public List<JavaScriptObject> getDateFormats();
+	public List<IsDateFormat> getDateFormats();
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public void setDateFormats( List<JavaScriptObject> dateFormats );
+	public void setDateFormats( List<IsDateFormat> dateFormats );
 
 	/**
 	 * "In case your category axis values are Date objects and parseDates is set to true, the chart will parse dates and will place your data points at irregular intervals. However if you want dates to be parsed (displayed on the axis, baloons, etc), but data points to be placed at equal intervals (omiting dates with no data), set equalSpacing to true."

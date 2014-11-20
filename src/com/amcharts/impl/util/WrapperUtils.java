@@ -275,6 +275,23 @@ public class WrapperUtils
 		return javaList;
 	}-*/;
 
+	public static native <C extends JavaScriptObject> List<C> getArray( List list ) /*-{
+
+		var jsList = null;
+
+		if (list != null) {
+			jsList = [];
+			var iterator = list.@java.util.List::iterator()();
+
+			for (var i = 0; i < list.@java.util.List::size()(); i++) {
+				var elem = list.@java.util.List::get(I)(i);
+				jsList[i] = elem.@com.google.gwt.core.client.IJavaScriptWrapper::getJso()();
+			}
+		}
+
+		return jsList;
+	}-*/;
+
 	/**
 	 * Converts Java list into JavaScript list and unwraps the objects contained in it by exposing the underlying JavaScriptObjectS.
 	 * 

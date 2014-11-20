@@ -1,9 +1,11 @@
 package com.amcharts.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsDateFormat;
 import com.amcharts.api.IsFunction;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.CategoryAxisJSO;
@@ -132,7 +134,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public final List<JavaScriptObject> getDateFormats()
+	public final List<IsDateFormat> getDateFormats()
 	{
 		return getJso().getDateFormats();
 	}
@@ -140,7 +142,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public final void setDateFormats( List<JavaScriptObject> dateFormats )
+	public final void setDateFormats( List<IsDateFormat> dateFormats )
 	{
 		getJso().setDateFormats( dateFormats );
 	}

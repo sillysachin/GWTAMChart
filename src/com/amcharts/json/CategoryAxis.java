@@ -3,8 +3,8 @@ package com.amcharts.json;
 import java.util.List;
 
 import com.amcharts.api.IsCategoryAxis;
+import com.amcharts.api.IsDateFormat;
 import com.amcharts.api.IsFunction;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 {
@@ -20,7 +20,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 
 	private boolean centerLabelOnFullPeriod;
 
-	private List<JavaScriptObject> dateFormats;
+	private List<IsDateFormat> dateFormats;
 
 	private boolean equalSpacing;
 
@@ -147,7 +147,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public List<JavaScriptObject> getDateFormats()
+	public List<IsDateFormat> getDateFormats()
 	{
 		return dateFormats;
 	}
@@ -155,7 +155,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public void setDateFormats( List<JavaScriptObject> dateFormats )
+	public void setDateFormats( List<IsDateFormat> dateFormats )
 	{
 		this.dateFormats = dateFormats;
 	}
