@@ -1,8 +1,8 @@
 package com.amcharts.jso;
 
+import com.amcharts.api.IsDurationUnits;
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsValueAxis;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 {
@@ -13,7 +13,8 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * Radar chart only. Specifies distance from axis to the axis title (category)
 	 */
-	public final native double getAxisTitleOffset() /*-{
+	public final native double getAxisTitleOffset()
+	/*-{
 		return axisTitleOffset;
 	}-*/;
 
@@ -69,14 +70,14 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public final native JavaScriptObject getDurationUnits() /*-{
+	public final native IsDurationUnits getDurationUnits() /*-{
 		return durationUnits;
 	}-*/;
 
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public final native void setDurationUnits( JavaScriptObject durationUnits ) /*-{
+	public final native void setDurationUnits( IsDurationUnits durationUnits ) /*-{
 		this.durationUnits = durationUnits;
 	}-*/;
 
@@ -456,5 +457,17 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 */
 	public final native void setUseScientificNotation( boolean useScientificNotation ) /*-{
 		this.useScientificNotation = useScientificNotation;
+	}-*/;
+
+	@Override
+	public final native boolean isDoublesOnly()
+	/*-{
+		return doublesOnly;
+	}-*/;
+
+	@Override
+	public final native void setDoublesOnly( boolean integersOnly )
+	/*-{
+		this.doublesOnly = integersOnly;
 	}-*/;
 }

@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.line.StackedArea;
+import com.appbootup.explore.gwt.client.chart.column.ColumnChartWithEvents;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -38,7 +38,7 @@ public class GWTAMChart implements EntryPoint
 		// FunnelChart funnelChart = new FunnelChart();
 		// ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
 		// SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
-		// ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
+		ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
 		// StackedColumnChart stackedColumnChart = new StackedColumnChart();
 		// ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
 		// LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();
@@ -51,6 +51,6 @@ public class GWTAMChart implements EntryPoint
 		// AngularGauge angularGauge = new AngularGauge();
 		// ExportingChartToImage exportingChartToImage = new ExportingChartToImage();
 		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
-		StackedArea stackedArea = new StackedArea();
+		// StackedArea stackedArea = new StackedArea();
 	}
 }

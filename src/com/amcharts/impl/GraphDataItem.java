@@ -2,6 +2,7 @@ package com.amcharts.impl;
 
 import java.util.List;
 
+import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.event.DataItem;
@@ -99,14 +100,14 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	/**
 	 * Original object from data provider.
 	 */
-	public final native Object getDataContext() /*-{
+	public final native IsDataContext getDataContext() /*-{
 		return this.dataContext;
 	}-*/;
 
 	/**
 	 * Original object from data provider.
 	 */
-	public final native void setDataContext( Object dataContext ) /*-{
+	public final native void setDataContext( IsDataContext dataContext ) /*-{
 		this.dataContext = dataContext;
 	}-*/;
 

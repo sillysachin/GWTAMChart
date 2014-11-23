@@ -2,8 +2,6 @@ package com.amcharts.api;
 
 import java.util.List;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 public interface IsAmAngularChart
 {
 
@@ -100,12 +98,12 @@ public interface IsAmAngularChart
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public abstract JavaScriptObject getFacePattern();
+	public abstract IsFacePattern getFacePattern();
 
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public abstract void setFacePattern( JavaScriptObject facePattern );
+	public abstract void setFacePattern( IsFacePattern facePattern );
 
 	/**
 	 * Gauge's horizontal position in pixel, origin is the center. Centered by default.

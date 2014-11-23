@@ -2,6 +2,7 @@ package com.amcharts.json;
 
 import java.util.List;
 
+import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.api.IsSerialDataItem;
 
@@ -19,7 +20,7 @@ public final class GraphDataItem implements IsGraphDataItem
 
 	private String customBullet;
 
-	private Object dataContext;
+	private IsDataContext dataContext;
 
 	private String description;
 
@@ -136,7 +137,7 @@ public final class GraphDataItem implements IsGraphDataItem
 	/**
 	 * Original object from data provider.
 	 */
-	public Object getDataContext()
+	public IsDataContext getDataContext()
 	{
 		return dataContext;
 	}
@@ -144,7 +145,7 @@ public final class GraphDataItem implements IsGraphDataItem
 	/**
 	 * Original object from data provider.
 	 */
-	public void setDataContext( Object dataContext )
+	public void setDataContext( IsDataContext dataContext )
 	{
 		this.dataContext = dataContext;
 	}

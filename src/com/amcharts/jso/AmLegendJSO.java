@@ -3,6 +3,7 @@ package com.amcharts.jso;
 import java.util.List;
 
 import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsAmLegendData;
 import com.amcharts.api.IsFunction;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -127,14 +128,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native List<JavaScriptObject> getData() /*-{
+	public final native List<IsAmLegendData> getData() /*-{
 		return data;
 	}-*/;
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native void setData( List<JavaScriptObject> data ) /*-{
+	public final native <T extends IsAmLegendData> void setData( List<T> data ) /*-{
 		this.data = data;
 	}-*/;
 
@@ -711,7 +712,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	public final native void setWidth( double width ) /*-{
 		this.width = width;
 	}-*/;
-	
+
 	public final native int getId()
 	/*-{
 		return this.id;

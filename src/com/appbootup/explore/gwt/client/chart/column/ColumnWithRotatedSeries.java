@@ -2,7 +2,6 @@ package com.appbootup.explore.gwt.client.chart.column;
 
 import com.amcharts.api.IsChartCursor;
 import com.amcharts.impl.AmCharts;
-import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;

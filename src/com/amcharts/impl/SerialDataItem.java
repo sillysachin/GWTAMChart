@@ -1,7 +1,7 @@
 package com.amcharts.impl;
 
+import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsSerialDataItem;
-import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.event.DataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -14,73 +14,40 @@ public final class SerialDataItem extends DataItem implements IsSerialDataItem
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
-	public final native JavaScriptObject getAxes()
-	/*-{
+	public final native JavaScriptObject getAxes() /*-{
+		console.log(this.axes);
 		return this.axes;
 	}-*/;
 
 	/**
-	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
-	 * @param axes
+	 * category value. String if parseDates is false, Date if true.
 	 */
-	public final native void setAxes( JavaScriptObject axes )
-	/*-{
-		this.axes = axes;
-	}-*/;
-
 	public final native String getCategory()
 	/*-{
 		return this.category;
 	}-*/;
 
 	/**
-	 * category value. String if parseDates is false, Date if true.
-	 * @param category
+	 * Reference to original data object, from dataProvider.
 	 */
-	public final native void setCategory( String category )
-	/*-{
-		this.category = category;
-	}-*/;
-
-	public final native DataContext getDataContext()
+	public final native IsDataContext getDataContext()
 	/*-{
 		return this.dataContext;
 	}-*/;
 
 	/**
-	 * Reference to original data object, from dataProvider.
-	 * @param dataContext
+	 * Time stamp of a series date. Available only if parseDates property of CategoryAxis is set to true.
 	 */
-	public final native void setDataContext( JavaScriptObject dataContext )
-	/*-{
-		this.dataContext = dataContext;
-	}-*/;
-
 	public final native double getTime()
 	/*-{
 		return this.time;
 	}-*/;
 
 	/**
-	 * Time stamp of a series date. Avalable only if parseDates property of CategoryAxis is set to true.
-	 * @param time
+	 * Coordinate (horizontal or vertical, depends on chart's rotate property) of the series.
 	 */
-	public final native void setTime( double time )
-	/*-{
-		this.time = time;
-	}-*/;
-
 	public final native double getX()
 	/*-{
 		return this.x;
-	}-*/;
-
-	/**
-	 * Coordinate (horizontal or vertical, depends on chart's rotate property) of the series.
-	 * @param x
-	 */
-	public final native void setX( double x )
-	/*-{
-		this.x = x;
 	}-*/;
 }

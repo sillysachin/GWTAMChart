@@ -4,7 +4,6 @@ import com.amcharts.impl.AmAngularGauge;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.GaugeArrow;
 import com.amcharts.impl.GaugeAxis;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

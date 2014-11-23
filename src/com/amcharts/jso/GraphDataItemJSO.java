@@ -2,7 +2,6 @@ package com.amcharts.jso;
 
 import java.util.List;
 
-import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.api.IsSerialDataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 

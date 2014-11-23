@@ -1,7 +1,5 @@
 package com.amcharts.api;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 public interface IsValueAxis extends IsAxisBase
 {
 	/**
@@ -47,12 +45,12 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public JavaScriptObject getDurationUnits();
+	public IsDurationUnits getDurationUnits();
 
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public void setDurationUnits( JavaScriptObject durationUnits );
+	public void setDurationUnits( IsDurationUnits durationUnits );
 
 	/**
 	 * Radar chart only. Possible values are: 'polygons' and 'circles'. Set 'circles' for polar charts.
@@ -97,12 +95,12 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public boolean isdoublesOnly();
+	public boolean isDoublesOnly();
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public void setdoublesOnly( boolean integersOnly );
+	public void setDoublesOnly( boolean integersOnly );
 
 	/**
 	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."

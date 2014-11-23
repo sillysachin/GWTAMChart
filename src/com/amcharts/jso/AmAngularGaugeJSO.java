@@ -3,9 +3,9 @@ package com.amcharts.jso;
 import java.util.List;
 
 import com.amcharts.api.IsAmAngularChart;
+import com.amcharts.api.IsFacePattern;
 import com.amcharts.api.IsGaugeArrow;
 import com.amcharts.api.IsGaugeAxis;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularChart
 {
@@ -142,14 +142,14 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public final native JavaScriptObject getFacePattern() /*-{
+	public final native IsFacePattern getFacePattern() /*-{
 		return facePattern;
 	}-*/;
 
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public final native void setFacePattern( JavaScriptObject facePattern ) /*-{
+	public final native void setFacePattern( IsFacePattern facePattern ) /*-{
 		this.facePattern = facePattern;
 	}-*/;
 

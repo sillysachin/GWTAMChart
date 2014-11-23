@@ -3,6 +3,7 @@ package com.amcharts.impl.event;
 import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.Target;
 import com.amcharts.jso.AmChartJSO;
+import com.amcharts.jso.AmGraphJSO;
 import com.amcharts.jso.AxisBaseJSO;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Event;
@@ -44,6 +45,39 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.event = event;
 	}-*/;
 
+	public final native AmGraphJSO getGraph()
+	/*-{
+		return this.graph;
+	}-*/;
+
+	public final native void setGraph( AmGraphJSO graph )
+	/*-{
+		this.graph = graph;
+	}-*/;
+
+	public final native String getIndex()
+	/*-{
+		return this.index;
+	}-*/;
+
+	public final native void setIndex( String index )
+	/*-{
+		this.index = index;
+	}-*/;
+
+	public final native ClickItem getClickItem()
+	/*-{
+		if (this.item != null) {
+			this.item.className = 'ClickItem';
+		}
+		return this.item;
+	}-*/;
+
+	public final native void setClickItem( ClickItem item )
+	/*-{
+		this.item = item;
+	}-*/;
+
 	public final native DataItem getDataItem()
 	/*-{
 		if (this.dataItem != null) {
@@ -70,6 +104,7 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.serialDataItem = serialDataItem;
 	}-*/;
 
+	//TODO: Is this always a instance of AmGraph
 	public final native Target getTarget()
 	/*-{
 		return this.target;

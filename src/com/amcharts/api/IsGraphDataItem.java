@@ -67,12 +67,12 @@ public interface IsGraphDataItem
 	/**
 	 * Original object from data provider.
 	 */
-	public Object getDataContext();
+	public IsDataContext getDataContext();
 
 	/**
 	 * Original object from data provider.
 	 */
-	public void setDataContext( Object dataContext );
+	public void setDataContext( IsDataContext dataContext );
 
 	/**
 	 * Description.

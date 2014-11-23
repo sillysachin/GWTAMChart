@@ -1,6 +1,5 @@
 package com.amcharts.jso;
 
-import com.amcharts.api.IsSerialDataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
 //TODO: implements IsSerialDataItem

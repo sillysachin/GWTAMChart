@@ -223,12 +223,20 @@ public interface IsAmGraph
 	public void setConnect( boolean connect );
 
 	/**
-	 * "Corner radius of column. It can be set both in pixels or in percents. The chart's depth and angle styles must be set to 0. The default value is 0. Note, cornerRadiusTop will be applied for all corners of the column, JavaScript charts do not have a possibility to set separate corner radius for top and bottom. As we want all the property names to be the same both on JS and Flex, we didn't change this too."
+	 * "Corner radius of column. It can be set both in pixels or in percents. 
+	 * The chart's depth and angle styles must be set to 0. The default value is 0. 
+	 * Note, cornerRadiusTop will be applied for all corners of the column, 
+	 * JavaScript charts do not have a possibility to set separate corner radius for top and bottom. 
+	 * As we want all the property names to be the same both on JS and Flex, we didn't change this too."
 	 */
 	public double getCornerRadiusTop();
 
 	/**
-	 * "Corner radius of column. It can be set both in pixels or in percents. The chart's depth and angle styles must be set to 0. The default value is 0. Note, cornerRadiusTop will be applied for all corners of the column, JavaScript charts do not have a possibility to set separate corner radius for top and bottom. As we want all the property names to be the same both on JS and Flex, we didn't change this too."
+	 * "Corner radius of column. It can be set both in pixels or in percents. 
+	 * The chart's depth and angle styles must be set to 0. The default value is 0. 
+	 * Note, cornerRadiusTop will be applied for all corners of the column, 
+	 * JavaScript charts do not have a possibility to set separate corner radius for top and bottom. 
+	 * As we want all the property names to be the same both on JS and Flex, we didn't change this too."
 	 */
 	public void setCornerRadiusTop( double cornerRadiusTop );
 

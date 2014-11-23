@@ -1,8 +1,8 @@
 package com.amcharts.json;
 
+import com.amcharts.api.IsDurationUnits;
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsValueAxis;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class ValueAxis extends AxisBase implements IsValueAxis
 {
@@ -14,7 +14,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 
 	private String duration;
 
-	private JavaScriptObject durationUnits;
+	private IsDurationUnits durationUnits;
 
 	private String gridType;
 
@@ -71,6 +71,8 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	private boolean usePrefixes;
 
 	private boolean useScientificNotation;
+
+	private boolean doublesOnly;
 
 	/**
 	 * Radar chart only. Specifies distance from axis to the axis title (category)
@@ -139,7 +141,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public JavaScriptObject getDurationUnits()
+	public IsDurationUnits getDurationUnits()
 	{
 		return durationUnits;
 	}
@@ -147,7 +149,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public void setDurationUnits( JavaScriptObject durationUnits )
+	public void setDurationUnits( IsDurationUnits durationUnits )
 	{
 		this.durationUnits = durationUnits;
 	}
@@ -598,5 +600,17 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	public void setUseScientificNotation( boolean useScientificNotation )
 	{
 		this.useScientificNotation = useScientificNotation;
+	}
+
+	@Override
+	public boolean isDoublesOnly()
+	{
+		return this.doublesOnly;
+	}
+
+	@Override
+	public void setDoublesOnly( boolean integersOnly )
+	{
+		this.doublesOnly = integersOnly;
 	}
 }

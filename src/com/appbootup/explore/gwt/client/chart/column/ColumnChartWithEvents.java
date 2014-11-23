@@ -203,6 +203,20 @@ public class ColumnChartWithEvents
 			}
 		} );
 
+		amSerialChart.addListener( "clickGraphItem", new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEventJSO event )
+			{
+				JavaScriptObject axes = event.getClickItem()
+						.getSerialDataItem().getAxes();
+				//IsSerialDataItemAxis isSerialDataItemAxis = axes.get( 0 );
+				//IsGraphDataItem isGraphDataItem = isSerialDataItemAxis.getGraphs().get( 0 );
+				//LogUtils.log( isGraphDataItem );
+				LogUtils.log( event );
+			}
+		} );
+
 		RootLayoutPanel.get().add( amSerialChart );
 	}
 }

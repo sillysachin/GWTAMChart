@@ -3,11 +3,11 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmAngularChart;
+import com.amcharts.api.IsFacePattern;
 import com.amcharts.api.IsGaugeArrow;
 import com.amcharts.api.IsGaugeAxis;
 import com.amcharts.jso.AmAngularGaugeJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
-import com.google.gwt.core.client.JavaScriptObject;
 
 public final class AmAngularGauge extends AmChart implements IsAmAngularChart, IJavaScriptWrapper
 {
@@ -28,7 +28,8 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	}
 
 	//Learn: new $wnd.AmCharts.AmAngularGauge(); use of $wnd
-	public native AmAngularGaugeJSO createJso() /*-{
+	public native AmAngularGaugeJSO createJso()
+	/*-{
 		var chart = new $wnd.AmCharts.AmAngularGauge();
 		return chart;
 	}-*/;
@@ -180,18 +181,20 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public final JavaScriptObject getFacePattern()
-	{
-		return getJso().getFacePattern();
-	}
+	@Override
+	public final native IsFacePattern getFacePattern()/*-{
+		var facePattern = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmChart::jso.facePattern)
+		return facePattern;
+	}-*/;
 
 	/**
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
-	public final void setFacePattern( JavaScriptObject facePattern )
-	{
-		getJso().setFacePattern( facePattern );
-	}
+	@Override
+	public final native void setFacePattern( IsFacePattern facePattern )/*-{
+		var varFacePattern = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(facePattern)
+		this.@com.amcharts.impl.AmChart::jso.facePattern = varFacePattern;
+	}-*/;
 
 	/**
 	 * Gauge's horizontal position in pixel, origin is the center. Centered by default.
@@ -356,7 +359,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 		var gaugeAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axis);
 		angularGauge.addAxis(gaugeAxis);
 	}-*/;
-	
+
 	/**
 	 * Adds axis to angular gauge.
 	 */

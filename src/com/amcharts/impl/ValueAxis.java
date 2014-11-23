@@ -1,5 +1,6 @@
 package com.amcharts.impl;
 
+import com.amcharts.api.IsDurationUnits;
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
@@ -19,7 +20,7 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<ValueAxisJSO>, HasAxisChangedHandlers, HasAxisZoomedHandlers, HasLogarithmicAxisFailedHandlers
+public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper<ValueAxisJSO>, HasAxisChangedHandlers, HasAxisZoomedHandlers, HasLogarithmicAxisFailedHandlers
 {
 	protected ValueAxis()
 	{
@@ -109,18 +110,20 @@ public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<Valu
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public final JavaScriptObject getDurationUnits()
-	{
-		return getJso().getDurationUnits();
-	}
+	@Override
+	public native final IsDurationUnits getDurationUnits()/*-{
+		var durationUnits = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AxisBase::jso.durationUnits)
+		return durationUnits;
+	}-*/;
 
 	/**
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
-	public final void setDurationUnits( JavaScriptObject durationUnits )
-	{
-		getJso().setDurationUnits( durationUnits );
-	}
+	@Override
+	public native final void setDurationUnits( IsDurationUnits durationUnits )/*-{
+		var varDurationUnits = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(durationUnits)
+		this.@com.amcharts.impl.AxisBase::jso.durationUnits = varDurationUnits;
+	}-*/;
 
 	/**
 	 * Radar chart only. Possible values are: 'polygons' and 'circles'. Set 'circles' for polar charts.
@@ -189,17 +192,17 @@ public final class ValueAxis extends AxisBase implements IJavaScriptWrapper<Valu
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final boolean isdoublesOnly()
+	public final boolean isDoublesOnly()
 	{
-		return getJso().isdoublesOnly();
+		return getJso().isDoublesOnly();
 	}
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final void setdoublesOnly( boolean integersOnly )
+	public final void setDoublesOnly( boolean integersOnly )
 	{
-		getJso().setdoublesOnly( integersOnly );
+		getJso().setDoublesOnly( integersOnly );
 	}
 
 	/**

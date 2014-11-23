@@ -11,6 +11,7 @@ import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmLegend;
+import com.amcharts.impl.AmLegendData;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.AmRadarChart;
 import com.amcharts.impl.AmRectangularChart;
@@ -20,7 +21,9 @@ import com.amcharts.impl.AmXYChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
+import com.amcharts.impl.DurationUnits;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.FacePattern;
 import com.amcharts.impl.GaugeArrow;
 import com.amcharts.impl.GaugeAxis;
 import com.amcharts.impl.GaugeBand;
@@ -90,6 +93,18 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( AmExport.class ) ) )
 		{
 			wrapper = GWT.create( AmExport.class );
+		}
+		else if ( className.equals( getSimpleName( FacePattern.class ) ) )
+		{
+			wrapper = GWT.create( FacePattern.class );
+		}
+		else if ( className.equals( getSimpleName( AmLegendData.class ) ) )
+		{
+			wrapper = GWT.create( AmLegendData.class );
+		}
+		else if ( className.equals( getSimpleName( DurationUnits.class ) ) )
+		{
+			wrapper = GWT.create( DurationUnits.class );
 		}
 		return wrapper;
 	}
@@ -286,6 +301,23 @@ public class WrapperUtils
 			for (var i = 0; i < list.@java.util.List::size()(); i++) {
 				var elem = list.@java.util.List::get(I)(i);
 				jsList[i] = elem.@com.google.gwt.core.client.IJavaScriptWrapper::getJso()();
+			}
+		}
+
+		return jsList;
+	}-*/;
+
+	public static native <C extends JavaScriptObject> List<C> getJSOArray( List list ) /*-{
+
+		var jsList = null;
+
+		if (list != null) {
+			jsList = [];
+			var iterator = list.@java.util.List::iterator()();
+
+			for (var i = 0; i < list.@java.util.List::size()(); i++) {
+				var elem = list.@java.util.List::get(I)(i);
+				jsList[i] = elem;
 			}
 		}
 

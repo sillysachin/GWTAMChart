@@ -11,6 +11,7 @@ import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.DateFormat;
+import com.amcharts.impl.DurationUnits;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
@@ -57,8 +58,10 @@ public class LineWithChangingColor
 
 		ValueAxis valueAxis = AmCharts.ValueAxis();
 		valueAxis.setDuration( "mm" );
-		valueAxis.setDurationUnits( JsonUtils
-				.unsafeEval( "{'hh':'h ', 'mm':'min'}" ) );
+		DurationUnits durationUnits = new DurationUnits();
+		durationUnits.setHh( "h" );
+		durationUnits.setMm( "min" );
+		valueAxis.setDurationUnits( durationUnits );
 		valueAxis.setAxisAlpha( 0 );
 		amSerialChart.addValueAxis( valueAxis );
 

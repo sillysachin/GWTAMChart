@@ -2,8 +2,6 @@ package com.appbootup.explore.gwt.client.line;
 
 import java.util.ArrayList;
 
-import com.amcharts.api.IsDateFormat;
-import com.amcharts.impl.AmBalloon;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmLegend;
@@ -11,12 +9,10 @@ import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartScrollbar;
-import com.amcharts.impl.DateFormat;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

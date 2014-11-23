@@ -3,6 +3,7 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmLegend;
+import com.amcharts.api.IsAmLegendData;
 import com.amcharts.api.IsFunction;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
@@ -149,15 +150,17 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native List<JavaScriptObject> getData() /*-{
-		return this.@com.amcharts.impl.AmLegend::jso.data;
+	public final native <T extends IsAmLegendData> List<T> getData() /*-{
+		varData = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmLegend::jso.data);
+		return varData;
 	}-*/;
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native void setData( List<JavaScriptObject> data ) /*-{
-		this.@com.amcharts.impl.AmLegend::jso.data = data;
+	public final native <T extends IsAmLegendData> void setData( List<T> data ) /*-{
+		varData = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(data);
+		this.@com.amcharts.impl.AmLegend::jso.data = varData;
 	}-*/;
 
 	/**
