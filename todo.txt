@@ -1,6 +1,6 @@
 Clean up api package - api should not have references to gwt imports like JavaScriptObject.
-Clean up jso package - ceonversion between list & js array needs to be handled in all get and set dealing with List<T>
 Clean up json package - json should not have references to gwt imports like JavaScriptObject.
+Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>
 Clean up events to go with simpler AmChartListener
 Revisit generics with AmChart<T extends AmChartDataObject>
 Support AMStockChart api's

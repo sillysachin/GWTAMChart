@@ -24,7 +24,7 @@ public final class AmLegend implements IsAmLegend
 
 	private String color;
 
-	private List<IsAmLegendData> data;
+	private List< ? extends IsAmLegendData> data;
 
 	private String divId;
 
@@ -239,21 +239,19 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native <T extends IsAmLegendData> List<T> getData() /*-{
-		varData = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmLegend::jso.data);
-		return varData;
-	}-*/;
+	public <T extends IsAmLegendData> List<T> getData()
+	{
+		return ( List<T> ) data;
+	}
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native <T extends IsAmLegendData> void setData( List<T> data ) /*-{
-		varData = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(data);
-		this.@com.amcharts.impl.AmLegend::jso.data = varData;
-	}-*/;
-	
-	
-	
+	public <T extends IsAmLegendData> void setData( List<T> data )
+	{
+		this.data = data;
+	}
+
 	/**
 	 * You can set id of a div or a reference to div object in case you want the legend to be placed in a separate container.
 	 */
