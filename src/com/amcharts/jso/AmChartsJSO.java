@@ -28,31 +28,29 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	//FIXME: User WrapperUtils to convert between js array and list
 	public final native List<String> getDayNames() /*-{
-		return dayNames;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dayNames);
 	}-*/;
 
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	//FIXME: User WrapperUtils to convert between js array and list
 	public final native void setDayNames( List<String> dayNames ) /*-{
-		this.dayNames = dayNames;
+		this.dayNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(dayNames);
 	}-*/;
 
 	/**
 	 * "Array of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native List<String> getMonthNames() /*-{
-		return monthNames;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.monthNames);
 	}-*/;
 
 	/**
 	 * "Array of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setMonthNames( List<String> monthNames ) /*-{
-		this.monthNames = monthNames;
+		this.monthNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(monthNames);
 	}-*/;
 
 	/**
@@ -73,28 +71,28 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "Array of short versions of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native List<String> getShortDayNames() /*-{
-		return shortDayNames;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.shortDayNames);
 	}-*/;
 
 	/**
 	 * "Array of short versions of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setShortDayNames( List<String> shortDayNames ) /*-{
-		this.shortDayNames = shortDayNames;
+		this.shortDayNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(shortDayNames);
 	}-*/;
 
 	/**
 	 * "Array of short versions of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native List<String> getShortMonthNames() /*-{
-		return shortMonthNames;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.shortMonthNames);
 	}-*/;
 
 	/**
 	 * "Array of short versions of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setShortMonthNames( List<String> shortMonthNames ) /*-{
-		this.shortMonthNames = shortMonthNames;
+		this.shortMonthNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(shortMonthNames);
 	}-*/;
 
 	/**

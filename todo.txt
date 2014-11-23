@@ -9,3 +9,5 @@ Provide conversion from JSON to Impl
 Split the demo code into separate project
 Address all todos
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
+Clean up IsFunction placeholder 
+Improve Codegeneration in "gen"

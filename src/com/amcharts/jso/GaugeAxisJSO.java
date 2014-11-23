@@ -115,14 +115,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
 	public final native List<IsGaugeBand> getBands() /*-{
-		return bands;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.bands);
 	}-*/;
 
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
 	public final native void setBands( List<IsGaugeBand> bands ) /*-{
-		this.bands = bands;
+		this.bands = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(bands);
 	}-*/;
 
 	/**

@@ -98,13 +98,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native List<Object> getChartData()
 	/*-{
-		return this.chartData;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chartData);
 	}-*/;
 
 	@Override
 	public final native void setChartData( List<Object> chartData )
 	/*-{
-		this.chartData = chartData;
+		this.chartData = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(chartData);
 	}-*/;
 
 	@Override
@@ -122,13 +122,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native List<String> getColors()
 	/*-{
-		return this.colors;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.colors);
 	}-*/;
 
 	@Override
 	public final native void setColors( List<String> colors )
 	/*-{
-		this.colors = colors;
+		this.colors = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(colors);
 	}-*/;
 
 	@Override
@@ -146,13 +146,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native List<Float> getGradientRatio()
 	/*-{
-		return this.gradientRatio;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.gradientRatio);
 	}-*/;
 
 	@Override
 	public final native void setGradientRatio( List<Float> gradientRatio )
 	/*-{
-		this.gradientRatio = gradientRatio;
+		this.gradientRatio = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(gradientRatio);
 	}-*/;
 
 	@Override

@@ -14,7 +14,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 {
 	protected CategoryAxis()
 	{
-		jso = createJso();
+		setJso( createJso() );
 	}
 
 	public CategoryAxisJSO getJso()

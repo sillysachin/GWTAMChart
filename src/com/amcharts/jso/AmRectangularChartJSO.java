@@ -241,14 +241,14 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Array of trend lines added to a chart. You can add trend lines to a chart using this array or access already existing trend lines
 	 */
 	public final native List<IsTrendLine> getTrendLines() /*-{
-		return trendLines;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.trendLines);
 	}-*/;
 
 	/**
 	 * Array of trend lines added to a chart. You can add trend lines to a chart using this array or access already existing trend lines
 	 */
 	public final native void setTrendLines( List<IsTrendLine> trendLines ) /*-{
-		this.trendLines = trendLines;
+		this.trendLines = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(trendLines);
 	}-*/;
 
 	/**

@@ -21,13 +21,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	@Override
 	public final native List<IsLabel> getAllLabels()
 	/*-{
-		return this.allLabels;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.allLabels);
 	}-*/;
 
 	@Override
 	public final native void setAllLabels( List<IsLabel> allLabels )
 	/*-{
-		this.allLabels = allLabels;
+		this.allLabels = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(allLabels);
 	}-*/;
 
 	@Override
@@ -321,25 +321,25 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	@Override
 	public final native List<Object> getPrefixesOfBigNumbers()
 	/*-{
-		return this.prefixesOfBigNumbers;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.prefixesOfBigNumbers);
 	}-*/;
 
 	@Override
 	public final native void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers )
 	/*-{
-		this.prefixesOfBigNumbers = prefixesOfBigNumbers;
+		this.prefixesOfBigNumbers = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(prefixesOfBigNumbers);
 	}-*/;
 
 	@Override
 	public final native List<Object> getPrefixesOfSmallNumbers()
 	/*-{
-		return this.prefixesOfSmallNumbers;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.prefixesOfSmallNumbers);
 	}-*/;
 
 	@Override
 	public final native void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers )
 	/*-{
-		this.prefixesOfSmallNumbers = prefixesOfSmallNumbers;
+		this.prefixesOfSmallNumbers = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(prefixesOfSmallNumbers);
 	}-*/;
 
 	@Override
@@ -369,16 +369,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	@Override
 	public final native List<IsTitle> getTitles()
 	/*-{
-		if (this.titles == null) {
-			this.titles = [];
-		}
-		return this.titles;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.titles);
 	}-*/;
 
 	@Override
 	public final native void setTitles( List<IsTitle> titles )
 	/*-{
-		this.titles = titles;
+		this.titles = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(titles);
 	}-*/;
 
 	@Override

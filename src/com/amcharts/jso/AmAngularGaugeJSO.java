@@ -31,28 +31,28 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Array of arrows.
 	 */
 	public final native List<IsGaugeArrow> getArrows() /*-{
-		return this.arrows;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.arrows);
 	}-*/;
 
 	/**
 	 * Array of arrows.
 	 */
 	public final native void setArrows( List<IsGaugeArrow> arrows ) /*-{
-		this.arrows = arrows;
+		this.arrows = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(arrows);
 	}-*/;
 
 	/**
 	 * Array of axes.
 	 */
 	public final native List<IsGaugeAxis> getAxes() /*-{
-		return this.axes;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.axes);
 	}-*/;
 
 	/**
 	 * Array of axes.
 	 */
 	public final native void setAxes( List<IsGaugeAxis> axes ) /*-{
-		this.axes = axes;
+		this.axes = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(axes);
 	}-*/;
 
 	/**

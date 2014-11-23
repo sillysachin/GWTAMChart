@@ -24,7 +24,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 {
 	protected ValueAxis()
 	{
-		jso = createJso();
+		setJso( createJso() );
 	}
 
 	public ValueAxisJSO getJso()

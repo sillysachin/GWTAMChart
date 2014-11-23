@@ -3,11 +3,12 @@ package com.amcharts.impl;
 import java.util.Date;
 import java.util.List;
 
+import com.amcharts.api.IsAmCharts;
 import com.amcharts.jso.AmChartsJSO;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
-public class AmCharts
+public class AmCharts implements IsAmCharts
 {
 	static final SimpleEventBus EVENT_BUS = new SimpleEventBus();
 
@@ -51,30 +52,34 @@ public class AmCharts
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native List<String> getDayNames() /*-{
-		return this.@com.amcharts.impl.AmCharts::jso.dayNames;
-	}-*/;
+	public final List<String> getDayNames()
+	{
+		return getJso().getDayNames();
+	}
 
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native void setDayNames( List<String> dayNames ) /*-{
-		this.@com.amcharts.impl.AmCharts::jso.dayNames = dayNames;
-	}-*/;
+	public final void setDayNames( List<String> dayNames )
+	{
+		getJso().setDayNames( dayNames );
+	}
 
 	/**
 	 * "Array of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native List<String> getMonthNames() /*-{
-		return this.@com.amcharts.impl.AmCharts::jso.monthNames;
-	}-*/;
+	public final List<String> getMonthNames()
+	{
+		return getJso().getMonthNames();
+	}
 
 	/**
 	 * "Array of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native void setMonthNames( List<String> monthNames ) /*-{
-		this.@com.amcharts.impl.AmCharts::jso.monthNames = monthNames;
-	}-*/;
+	public final void setMonthNames( List<String> monthNames )
+	{
+		getJso().setMonthNames( monthNames );
+	}
 
 	/**
 	 * Delay in ms at which each chart on the page should be rendered. This is very handy if you have a lot of charts on the page and do not want to overload the device CPU.
@@ -93,30 +98,34 @@ public class AmCharts
 	/**
 	 * "Array of short versions of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native List<String> getShortDayNames() /*-{
-		return this.@com.amcharts.impl.AmCharts::jso.shortDayNames;
-	}-*/;
+	public final List<String> getShortDayNames()
+	{
+		return getJso().getShortDayNames();
+	}
 
 	/**
 	 * "Array of short versions of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native void setShortDayNames( List<String> shortDayNames ) /*-{
-		this.@com.amcharts.impl.AmCharts::jso.shortDayNames = shortDayNames;
-	}-*/;
+	public final void setShortDayNames( List<String> shortDayNames )
+	{
+		getJso().setShortDayNames( shortDayNames );
+	}
 
 	/**
 	 * "Array of short versions of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native List<String> getShortMonthNames() /*-{
-		return this.@com.amcharts.impl.AmCharts::jso.shortMonthNames;
-	}-*/;
+	public final List<String> getShortMonthNames()
+	{
+		return getJso().getShortMonthNames();
+	}
 
 	/**
 	 * "Array of short versions of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
-	public final native void setShortMonthNames( List<String> shortMonthNames ) /*-{
-		this.@com.amcharts.impl.AmCharts::jso.shortMonthNames = shortMonthNames;
-	}-*/;
+	public final void setShortMonthNames( List<String> shortMonthNames )
+	{
+		getJso().setShortMonthNames( shortMonthNames );
+	}
 
 	/**
 	 * "You can set theme for all the charts on your page by setting: AmCharts.theme =AmCharts.themes.light; // or some other theme. If you are creating charts using JavaScript API, not JSON, then this is quite a comfortable way, as you won't need to pass theme to each object you create. Note, you should set theme before write method is called. There is no way to change theme of already created chart, you have to create chart's instance once more if you want to change theme."

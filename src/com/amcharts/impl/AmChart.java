@@ -161,14 +161,16 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native List<IsLabel> getAllLabels() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.allLabels;
-	}-*/;
+	public List<IsLabel> getAllLabels()
+	{
+		return getJso().getAllLabels();
+	}
 
 	@Override
-	public native void setAllLabels( List<IsLabel> allLabels ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.allLabels = allLabels;
-	}-*/;
+	public void setAllLabels( List<IsLabel> allLabels )
+	{
+		getJso().setAllLabels( allLabels );
+	}
 
 	@Override
 	public native IsAmExport getAmExport() /*-{
@@ -409,24 +411,28 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native List<Object> getPrefixesOfBigNumbers() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.prefixesOfBigNumbers;
-	}-*/;
+	public List<Object> getPrefixesOfBigNumbers()
+	{
+		return getJso().getPrefixesOfBigNumbers();
+	}
 
 	@Override
-	public native void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.prefixesOfBigNumbers = prefixesOfBigNumbers;
-	}-*/;
+	public void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers )
+	{
+		getJso().setPrefixesOfBigNumbers( prefixesOfBigNumbers );
+	}
 
 	@Override
-	public native List<Object> getPrefixesOfSmallNumbers() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.prefixesOfSmallNumbers;
-	}-*/;
+	public List<Object> getPrefixesOfSmallNumbers()
+	{
+		return getJso().getPrefixesOfSmallNumbers();
+	}
 
 	@Override
-	public native void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.prefixesOfSmallNumbers = prefixesOfSmallNumbers;
-	}-*/;
+	public void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers )
+	{
+		getJso().setPrefixesOfSmallNumbers( prefixesOfSmallNumbers );
+	}
 
 	@Override
 	public native String getTheme() /*-{
@@ -450,14 +456,16 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native List<IsTitle> getTitles() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.titles;
-	}-*/;
+	public List<IsTitle> getTitles()
+	{
+		return getJso().getTitles();
+	}
 
 	@Override
-	public native void setTitles( List<IsTitle> titles ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.titles = titles;
-	}-*/;
+	public void setTitles( List<IsTitle> titles )
+	{
+		getJso().setTitles( titles );
+	}
 
 	@Override
 	public native Boolean getUsePrefixes() /*-{

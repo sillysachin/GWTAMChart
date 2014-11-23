@@ -29,6 +29,16 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 
 	private HandlerManager handlerManager;
 
+	public AxisBaseJSO getJso()
+	{
+		return jso;
+	}
+
+	public void setJso( AxisBaseJSO jso )
+	{
+		this.jso = jso;
+	}
+
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, according to the axis size.'
 	 */
@@ -256,18 +266,16 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native <T extends IsGuide> List<T> getGuides() /*-{
-		varGuides = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AxisBase::jso.guides);
-		return varGuides;
-	}-*/;
+	public final  <T extends IsGuide> List<T> getGuides() {
+		return getJso().getGuides();
+	}
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public final native <T extends IsGuide> void setGuides( List<T> guides ) /*-{
-		varGuides = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(guides);
-		this.@com.amcharts.impl.AxisBase::jso.guides = varGuides;
-	}-*/;
+	public final  <T extends IsGuide> void setGuides( List<T> guides ) {
+		getJso().setGuides( guides );
+	}
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'

@@ -128,15 +128,15 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final native List<IsAmLegendData> getData() /*-{
-		return data;
+	public final native <T extends IsAmLegendData> List<T> getData() /*-{
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.data);
 	}-*/;
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
 	public final native <T extends IsAmLegendData> void setData( List<T> data ) /*-{
-		this.data = data;
+		this.data = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(data);
 	}-*/;
 
 	/**

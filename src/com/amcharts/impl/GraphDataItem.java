@@ -129,14 +129,14 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	 * "Array of colors of the data item, used by column and candlestick chart only."
 	 */
 	public final native List<String> getFillColors() /*-{
-		return this.fillColors;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.fillColors);
 	}-*/;
 
 	/**
 	 * "Array of colors of the data item, used by column and candlestick chart only."
 	 */
 	public final native void setFillColors( List<String> fillColors ) /*-{
-		this.fillColors = fillColors;
+		this.fillColors = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(fillColors);
 	}-*/;
 
 	/**

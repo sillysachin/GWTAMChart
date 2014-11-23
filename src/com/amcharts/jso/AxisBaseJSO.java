@@ -240,14 +240,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * The array of guides belonging to this axis.
 	 */
 	public final native <T extends IsGuide> List<T> getGuides() /*-{
-		return guides;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.guides);
 	}-*/;
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
 	public final native <T extends IsGuide> void setGuides( List<T> guides ) /*-{
-		this.guides = guides;
+		this.guides = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(guides);
 	}-*/;
 
 	/**

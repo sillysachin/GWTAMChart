@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.column.ColumnChartWithEvents;
+import com.appbootup.explore.gwt.client.chart.pie.PieChartBrokenSlices;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -32,13 +32,13 @@ public class GWTAMChart implements EntryPoint
 		// DonutChart threeDPieChart = new DonutChart();
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
 		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
-		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
+		PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
 		// PyramidChart pyramidChart = new PyramidChart();
 		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
 		// FunnelChart funnelChart = new FunnelChart();
 		// ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
 		// SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
-		ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
+		// ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
 		// StackedColumnChart stackedColumnChart = new StackedColumnChart();
 		// ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
 		// LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();

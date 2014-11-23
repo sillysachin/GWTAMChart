@@ -100,17 +100,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
 	public final native List<IsDateFormat> getDateFormats() /*-{
-		var varDateFormats = @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dateFormats);
-		return varDateFormats;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dateFormats);
 	}-*/;
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
 	public final native void setDateFormats( List<IsDateFormat> dateFormats ) /*-{
-		var varDateFormats = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(dateFormats);
-		this.dateFormats = varDateFormats;
-		console.log(this.dateFormats)
+		this.dateFormats = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(dateFormats);
 	}-*/;
 
 	/**

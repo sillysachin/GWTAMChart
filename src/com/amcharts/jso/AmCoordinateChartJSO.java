@@ -17,42 +17,42 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "Read-only. Array, holding processed chart's data."
 	 */
 	public final native List<Object> getChartData() /*-{
-		return chartData;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chartData);
 	}-*/;
 
 	/**
 	 * "Read-only. Array, holding processed chart's data."
 	 */
 	public final native void setChartData( List<Object> chartData ) /*-{
-		this.chartData = chartData;
+		this.chartData = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(chartData);
 	}-*/;
 
 	/**
 	 * "Specifies the colors of the graphs if the lineColor of a graph is not set. It there are more graphs then colors in this array, the chart picks random color."
 	 */
 	public final native List<String> getColors() /*-{
-		return colors;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.colors);
 	}-*/;
 
 	/**
 	 * "Specifies the colors of the graphs if the lineColor of a graph is not set. It there are more graphs then colors in this array, the chart picks random color."
 	 */
 	public final native void setColors( List<String> colors ) /*-{
-		this.colors = colors;
+		this.colors = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(colors);
 	}-*/;
 
 	/**
 	 * The array of graphs belonging to this chart.
 	 */
 	public final native List<IsAmGraph> getGraphs() /*-{
-		return graphs;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.graphs);
 	}-*/;
 
 	/**
 	 * The array of graphs belonging to this chart.
 	 */
 	public final native void setGraphs( List<IsAmGraph> graphs ) /*-{
-		this.graphs = graphs;
+		this.graphs = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(graphs);
 	}-*/;
 
 	/**
@@ -73,14 +73,14 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "Instead of adding guides to the axes, you can push all of them to this array. In case guide has category or date defined, it will automatically will be assigned to the category axis. Otherwise to first value axis, unless you specify a different valueAxis for the guide."
 	 */
 	public final native List<IsGuide> getGuides() /*-{
-		return guides;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.guides);
 	}-*/;
 
 	/**
 	 * "Instead of adding guides to the axes, you can push all of them to this array. In case guide has category or date defined, it will automatically will be assigned to the category axis. Otherwise to first value axis, unless you specify a different valueAxis for the guide."
 	 */
 	public final native void setGuides( List<IsGuide> guides ) /*-{
-		this.guides = guides;
+		this.guides = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(guides);
 	}-*/;
 
 	/**
@@ -157,13 +157,13 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "The array of value axes. Chart creates one value axis automatically, so if you need only one value axis, you don't need to create it."
 	 */
 	public final native List<IsValueAxis> getValueAxes() /*-{
-		return valueAxes;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.valueAxes);
 	}-*/;
 
 	/**
 	 * "The array of value axes. Chart creates one value axis automatically, so if you need only one value axis, you don't need to create it."
 	 */
 	public final native void setValueAxes( List<IsValueAxis> valueAxes ) /*-{
-		this.valueAxes = valueAxes;
+		this.valueAxes = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(valueAxes);
 	}-*/;
 }
