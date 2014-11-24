@@ -2,7 +2,6 @@ package com.appbootup.explore.gwt.client.line;
 
 import java.util.ArrayList;
 
-import com.amcharts.api.IsFunction;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmLegend;

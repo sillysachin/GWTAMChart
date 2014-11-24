@@ -16,21 +16,23 @@ public class SimplePieChart
 {
 	public SimplePieChart()
 	{
-		GWTAMChart.chartService.getData( "/data/drawChart.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( dataProvider );
-			}
+		GWTAMChart.chartService
+				.getData( "/data/simplePieChart.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
+								.unsafeEval( chartData );
+						drawChart( dataProvider );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
@@ -57,6 +59,26 @@ public class SimplePieChart
 		GWT.log( "groupPercent - >" + amPieChart.getGroupPercent() );
 		GWT.log( "valueField - >" + jso.getValueField() );
 		GWT.log( "valueField - >" + amPieChart.getValueField() );
+		//amPieChart.setLabelFunction( getLabelFunction() );
+		String functionString = getFunctionString();
+		JavaScriptObject labelFunction = JsonUtils.unsafeEval( functionString );
+		amPieChart.setLabelFunction( labelFunction );
 		RootLayoutPanel.get().add( amPieChart );
+	}
+
+	private native JavaScriptObject getLabelFunction()
+	/*-{
+		return function(slice, text) {
+			console.log("------------Start----------------");
+			console.log(slice);
+			console.log(text);
+			console.log("-------------End-----------------");
+			return text;
+		};
+	}-*/;
+
+	private String getFunctionString()
+	{
+		return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
 	}
 }

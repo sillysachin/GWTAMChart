@@ -3,6 +3,7 @@ package com.amcharts.json;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.fasterxml.jackson.annotation.JsonRawValue;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
@@ -46,6 +47,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private double hoverAlpha;
 
+	@JsonRawValue
 	private Object labelFunction;
 
 	private Boolean labelsEnabled;

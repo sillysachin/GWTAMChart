@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.line.DurationOnValueAxis;
+import com.appbootup.explore.gwt.client.chart.pie.SimplePieChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -52,6 +52,7 @@ public class GWTAMChart implements EntryPoint
 		// ExportingChartToImage exportingChartToImage = new ExportingChartToImage();
 		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
 		// StackedArea stackedArea = new StackedArea();
-		DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
+		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
+		GWTAMChartSample.chartByServerJSON();
 	}
 }

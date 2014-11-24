@@ -12,7 +12,8 @@ import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
-import com.amcharts.jso.AmChartJSO;
+import com.amcharts.impl.util.LogUtils;
+import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -30,7 +31,7 @@ public class GWTAMChartSample
 {
 	private static final String SERVER_ERROR = "An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
 
-	private void pieChartByJSNI()
+	public static void pieChartByJSNI()
 	{
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
@@ -43,7 +44,7 @@ public class GWTAMChartSample
 		RootLayoutPanel.get().add( amPieChart );
 	}
 
-	private void serialChartByJSNI()
+	public static void serialChartByJSNI()
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setSize( "1240px", "500px" );
@@ -77,7 +78,7 @@ public class GWTAMChartSample
 		RootLayoutPanel.get().add( amSerialChart );
 	}
 
-	private void chartByServerJSON()
+	public static void chartByServerJSON()
 	{
 		String url = GWTAMChart.JSON_URL;
 		url = URL.encode( url );
@@ -98,9 +99,8 @@ public class GWTAMChartSample
 					if ( 200 == response.getStatusCode() )
 					{
 						String text = response.getText();
-						AmChartJSO amChartJSO = JsonUtils
-								.<AmChartJSO> safeEval( text );
-						GWT.log( "amChartJSO -> " + amChartJSO.getType() );
+						AmPieChartJSO amChartJSO = JsonUtils.<AmPieChartJSO> unsafeEval( text );
+						LogUtils.log( amChartJSO );
 						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text );
 						RootLayoutPanel.get().add( amChartPanel );
 					}
@@ -118,7 +118,7 @@ public class GWTAMChartSample
 		}
 	}
 
-	private void lineWithTrendLineChartByJSNI()
+	public static void lineWithTrendLineChartByJSNI()
 	{
 
 		GWTAMChart.chartService
@@ -138,7 +138,7 @@ public class GWTAMChartSample
 				} );
 	}
 
-	private void lineWithTrendLines( String chartData )
+	public static void lineWithTrendLines( String chartData )
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setPathToImages( "/js/amcharts/images/" );

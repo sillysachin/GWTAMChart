@@ -96,7 +96,6 @@ public class GWTAMChartPanel extends ResizeComposite
 				public void execute()
 				{
 					chartJSO = drawChart( getId(), chartJSONObject.isObject().getJavaScriptObject() );
-					GWT.log( "amChartJSO -> " + chartJSO.getType() );
 				}
 			} );
 		}

@@ -37,7 +37,6 @@ public class JSONAMChartServlet extends HttpServlet
 		BufferedReader reader = null;
 		ServletContext cntxt = this.getServletContext();
 		String fName = "/data/amchart.json";
-		// String fName = "/data/person.json";
 		AmPieChart pieChart = new AmPieChart();
 		pieChart.setType( "pie" );
 		pieChart.setValueField( "value" );
@@ -53,8 +52,10 @@ public class JSONAMChartServlet extends HttpServlet
 		slice2.setValue( "165.8" );
 		dataProvider.add( slice2 );
 		pieChart.setDataProvider( dataProvider );
+		pieChart.setLabelFunction( getFunctionString() );
 
-		JsonRenderer renderer = JsonBuilderFactory.getInstance().getJacksonRenderer();
+		JsonRenderer renderer = JsonBuilderFactory.getInstance()
+				.getJacksonRenderer();
 		String jsonStringJackson = renderer.toJson( pieChart );
 		System.out.println( jsonStringJackson );
 
@@ -92,7 +93,12 @@ public class JSONAMChartServlet extends HttpServlet
 		String filejson = sb.toString();
 		System.out.println( filejson );
 
-		// return jsonStringJackson;
-		return filejson;
+		return jsonStringJackson;
+		//	return filejson;
+	}
+
+	private String getFunctionString()
+	{
+		return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
 	}
 }
