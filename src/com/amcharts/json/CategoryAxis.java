@@ -20,7 +20,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 
 	private boolean centerLabelOnFullPeriod;
 
-	private List<IsDateFormat> dateFormats;
+	private List< ? extends IsDateFormat> dateFormats;
 
 	private boolean equalSpacing;
 
@@ -147,15 +147,15 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public List<IsDateFormat> getDateFormats()
+	public <T extends IsDateFormat> List<T> getDateFormats()
 	{
-		return dateFormats;
+		return ( List<T> ) dateFormats;
 	}
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public void setDateFormats( List<IsDateFormat> dateFormats )
+	public <T extends IsDateFormat> void setDateFormats( List<T> dateFormats )
 	{
 		this.dateFormats = dateFormats;
 	}

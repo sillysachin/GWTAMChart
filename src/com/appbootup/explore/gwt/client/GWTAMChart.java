@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.pie.PieChartBrokenSlices;
+import com.appbootup.explore.gwt.client.line.DurationOnValueAxis;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -32,7 +32,7 @@ public class GWTAMChart implements EntryPoint
 		// DonutChart threeDPieChart = new DonutChart();
 		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
 		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
-		PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
+		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
 		// PyramidChart pyramidChart = new PyramidChart();
 		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
 		// FunnelChart funnelChart = new FunnelChart();
@@ -52,5 +52,6 @@ public class GWTAMChart implements EntryPoint
 		// ExportingChartToImage exportingChartToImage = new ExportingChartToImage();
 		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
 		// StackedArea stackedArea = new StackedArea();
+		DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
 	}
 }

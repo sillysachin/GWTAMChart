@@ -131,16 +131,18 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
+	 * @param <T>
 	 */
-	public final List<IsDateFormat> getDateFormats()
+	public final <T extends IsDateFormat> List<T> getDateFormats()
 	{
 		return getJso().getDateFormats();
 	}
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
+	 * @param <T>
 	 */
-	public final void setDateFormats( List<IsDateFormat> dateFormats )
+	public final <T extends IsDateFormat> void setDateFormats( List<T> dateFormats )
 	{
 		getJso().setDateFormats( dateFormats );
 	}
