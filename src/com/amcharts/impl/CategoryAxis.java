@@ -384,7 +384,6 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	/*-{
 		var categoryAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var categoryAxisThis = this;
-		console.log('addListener - > ' + eventName);
 		categoryAxis
 				.addListener(
 						eventName,

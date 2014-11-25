@@ -41,12 +41,12 @@ public class ThreeDDonutChart
 		amPieChart.setValueField( "visits" );
 		amPieChart.setTitleField( "country" );
 		amPieChart.setStartEffect( "elastic" );
-		amPieChart.setStartDuration( 2 );
-		amPieChart.setLabelRadius( 5 );
+		amPieChart.setStartDuration( 2.0 );
+		amPieChart.setLabelRadius( 5.0 );
 		amPieChart.setInnerRadius( "50%" );
-		amPieChart.setDepth3D( 10 );
+		amPieChart.setDepth3D( 10.0 );
 		amPieChart.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
-		amPieChart.setAngle( 15 );
+		amPieChart.setAngle( 15.0 );
 		amPieChart.setSize( "1024px", "500px" );
 
 		ExportConfig exportConfig = new ExportConfig();

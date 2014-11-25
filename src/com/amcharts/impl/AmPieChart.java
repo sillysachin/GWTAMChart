@@ -35,13 +35,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getLabelRadius()
+	public Double getLabelRadius()
 	{
 		return getJso().getLabelRadius();
 	}
 
 	@Override
-	public void setLabelRadius( double labelRadius )
+	public void setLabelRadius( Double labelRadius )
 	{
 		getJso().setLabelRadius( labelRadius );
 	}
@@ -71,25 +71,25 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getMinRadius()
+	public Double getMinRadius()
 	{
 		return getJso().getMinRadius();
 	}
 
 	@Override
-	public void setMinRadius( double minRadius )
+	public void setMinRadius( Double minRadius )
 	{
 		getJso().setMinRadius( minRadius );
 	}
 
 	@Override
-	public double getPieAlpha()
+	public Double getPieAlpha()
 	{
 		return getJso().getPieAlpha();
 	}
 
 	@Override
-	public void setPieAlpha( double pieAlpha )
+	public void setPieAlpha( Double pieAlpha )
 	{
 		getJso().setPieAlpha( pieAlpha );
 	}
@@ -143,13 +143,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getStartAngle()
+	public Double getStartAngle()
 	{
 		return getJso().getStartAngle();
 	}
 
 	@Override
-	public void setStartAngle( double startAngle )
+	public void setStartAngle( Double startAngle )
 	{
 		getJso().setStartAngle( startAngle );
 	}

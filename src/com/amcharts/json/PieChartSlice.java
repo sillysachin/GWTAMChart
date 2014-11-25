@@ -6,27 +6,27 @@ public class PieChartSlice implements AmChartDataObject
 {
 	private static final long serialVersionUID = -6197470312910551481L;
 
-	private String key;
+	private String country;
 
-	private String value;
+	private String litres;
 
-	public String getKey()
+	public String getCountry()
 	{
-		return key;
+		return country;
 	}
 
-	public void setKey( String key )
+	public void setCountry( String country )
 	{
-		this.key = key;
+		this.country = country;
 	}
 
-	public String getValue()
+	public String getLitres()
 	{
-		return value;
+		return litres;
 	}
 
-	public void setValue( String value )
+	public void setLitres( String litres )
 	{
-		this.value = value;
+		this.litres = litres;
 	}
 }

@@ -634,7 +634,6 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 		var valueAxis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var valueAxisThis = this;
 		if (chart[eventName + 'Fl'] == undefined) {
-			console.log(chart[eventName + 'Fl']);
 			chart[eventName + 'Fl'] = true;
 			chart
 					.addListener(
@@ -642,8 +641,6 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 							function(event) {
 								valueAxisThis.@com.amcharts.impl.ValueAxis::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
 							});
-		} else {
-			console.log(chart[eventName + 'Fl']);
 		}
 	}-*/;
 

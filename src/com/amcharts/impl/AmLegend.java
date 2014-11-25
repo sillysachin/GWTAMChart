@@ -746,7 +746,6 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	/*-{
 		var legend = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var legendThis = this;
-		console.log('addListener - > ' + eventName);
 		legend
 				.addListener(
 						eventName,

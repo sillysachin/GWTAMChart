@@ -180,11 +180,6 @@ public class ColumnChartWithEvents
 			@Override
 			public void onRollOverItem( RollOverItemEvent event )
 			{
-				GWT.log( "rollOverItemHandler - > " + event.getValue() );
-				GWT.log( "rollOverItemHandler - > " + event.getTarget() );
-				GWT.log( "rollOverItemHandler - > " + event.getSerialDataItem() );
-				GWT.log( "rollOverItemHandler - > " + event.getEvent() );
-				GWT.log( "rollOverItemHandler - > " + event.getAxis() );
 				GWT.log( "rollOverItemHandler - > " + event.getType() );
 				LogUtils.log( event );
 			}

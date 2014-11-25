@@ -157,6 +157,5 @@ public class ExportingChartToImage
 		amSerialChart.setAmExport( amExport );
 		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );
-		LogUtils.log( amExport.getJso() );
 	}
 }

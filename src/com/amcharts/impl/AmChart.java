@@ -185,12 +185,12 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native double getBackgroundAlpha() /*-{
+	public native Double getBackgroundAlpha() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.backgroundAlpha;
 	}-*/;
 
 	@Override
-	public native void setBackgroundAlpha( double backgroundAlpha ) /*-{
+	public native void setBackgroundAlpha( Double backgroundAlpha ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.backgroundAlpha = backgroundAlpha;
 	}-*/;
 
@@ -217,12 +217,12 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native double getBorderAlpha() /*-{
+	public native Double getBorderAlpha() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.borderAlpha;
 	}-*/;
 
 	@Override
-	public native void setBorderAlpha( double borderAlpha ) /*-{
+	public native void setBorderAlpha( Double borderAlpha ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.borderAlpha = borderAlpha;
 	}-*/;
 
@@ -299,12 +299,12 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native double getFontSize() /*-{
+	public native Double getFontSize() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.fontSize;
 	}-*/;
 
 	@Override
-	public native void setFontSize( double fontSize ) /*-{
+	public native void setFontSize( Double fontSize ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.fontSize = fontSize;
 	}-*/;
 
@@ -319,32 +319,32 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native double getHandDrawScatter() /*-{
+	public native Double getHandDrawScatter() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.handDrawScatter;
 	}-*/;
 
 	@Override
-	public native void setHandDrawScatter( double handDrawScatter ) /*-{
+	public native void setHandDrawScatter( Double handDrawScatter ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.handDrawScatter = handDrawScatter;
 	}-*/;
 
 	@Override
-	public native double getHandDrawThickness() /*-{
+	public native Double getHandDrawThickness() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.handDrawThickness;
 	}-*/;
 
 	@Override
-	public native void setHandDrawThickness( double handDrawThickness ) /*-{
+	public native void setHandDrawThickness( Double handDrawThickness ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.handDrawThickness = handDrawThickness;
 	}-*/;
 
 	@Override
-	public native double getHideBalloonTime() /*-{
+	public native Double getHideBalloonTime() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public native void setHideBalloonTime( double hideBalloonTime ) /*-{
+	public native void setHideBalloonTime( Double hideBalloonTime ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.hideBalloonTime = hideBalloonTime;
 	}-*/;
 
@@ -391,22 +391,22 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public native double getPercentPrecision() /*-{
+	public native Double getPercentPrecision() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.percentPrecision;
 	}-*/;
 
 	@Override
-	public native void setPercentPrecision( double percentPrecision ) /*-{
+	public native void setPercentPrecision( Double percentPrecision ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.percentPrecision = percentPrecision;
 	}-*/;
 
 	@Override
-	public native double getPrecision() /*-{
+	public native Double getPrecision() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.precision;
 	}-*/;
 
 	@Override
-	public native void setPrecision( double precision ) /*-{
+	public native void setPrecision( Double precision ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.precision = precision;
 	}-*/;
 
@@ -487,7 +487,7 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 		return this.@com.amcharts.impl.AmChart::jso.version;
 	}-*/;
 
-	public native void addLabel( String x, String y, String text, String align, double size, String color, double rotation, double alpha, boolean bold, String url )
+	public native void addLabel( String x, String y, String text, String align, Double size, String color, Double rotation, Double alpha, boolean bold, String url )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.addLabel(x, y, text, align, size, color, rotation, alpha, bold,
@@ -525,7 +525,7 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 		chart.invalidateSize();
 	}-*/;
 
-	public native void makeChart( String container, JavaScriptObject config, double delay )
+	public native void makeChart( String container, JavaScriptObject config, Double delay )
 	/*-{
 		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(container);
 		return $wnd.AmCharts.makeChart(container, configJSO, delay);
@@ -636,11 +636,6 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 							function(event) {
 								amChartThis.@com.amcharts.impl.AmChart::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
 							});
-			console.log('initialized -> ' + eventName + ' : '
-					+ chart[eventName + 'Fl']);
-		} else {
-			console.log('skip initialized -> ' + eventName + ' : '
-					+ chart[eventName + 'Fl']);
 		}
 	}-*/;
 

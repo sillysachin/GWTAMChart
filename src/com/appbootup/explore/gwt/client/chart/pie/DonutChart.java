@@ -38,7 +38,7 @@ public class DonutChart
 		amPieChart.setTheme( "patterns" );
 		amPieChart.setValueField( "value" );
 		amPieChart.setTitleField( "title" );
-		amPieChart.setLabelRadius( 5 );
+		amPieChart.setLabelRadius( 5.0 );
 		amPieChart.setRadius( "42%" );
 		amPieChart.setSize( "1024px", "500px" );
 		amPieChart.setInnerRadius( "60%" );

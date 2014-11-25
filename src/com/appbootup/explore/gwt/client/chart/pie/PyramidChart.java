@@ -43,8 +43,8 @@ public class PyramidChart
 		amFunnelChart.setValueField( "value" );
 		amFunnelChart.setTitleField( "title" );
 		amFunnelChart.setSize( "1240px", "500px" );
-		amFunnelChart.setMarginRight( 240 );
-		amFunnelChart.setMarginLeft( 50 );
+		amFunnelChart.setMarginRight( 240.0 );
+		amFunnelChart.setMarginLeft( 50.0 );
 		amFunnelChart.setStartX( -500 );
 		amFunnelChart.setRotate( true );
 		amFunnelChart.setLabelPosition( "right" );

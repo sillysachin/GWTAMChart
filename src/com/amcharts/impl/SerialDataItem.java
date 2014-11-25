@@ -15,7 +15,6 @@ public final class SerialDataItem extends DataItem implements IsSerialDataItem
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
 	public final native JavaScriptObject getAxes() /*-{
-		console.log(this.axes);
 		return this.axes;
 	}-*/;
 

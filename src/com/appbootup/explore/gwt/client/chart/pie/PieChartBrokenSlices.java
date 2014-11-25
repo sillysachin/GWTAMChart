@@ -51,7 +51,7 @@ public class PieChartBrokenSlices
 		amPieChart.setValueField( "percent" );
 		amPieChart.setOutlineColor( "#FFFFFF" );
 		amPieChart.setOutlineAlpha( 0.8 );
-		amPieChart.setOutlineThickness( 2 );
+		amPieChart.setOutlineThickness( 2.0 );
 		amPieChart.setColorField( "color" );
 		amPieChart.setPulledField( "pulled" );
 
@@ -69,7 +69,6 @@ public class PieChartBrokenSlices
 				selected = dataContext.getId();
 				GWT.log( "first ClickSliceHandler - > " + event.getEvent()
 						.getClientX() + "" );
-				LogUtils.log( event );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
@@ -94,7 +93,6 @@ public class PieChartBrokenSlices
 						DataContext dataContext = dataItem.getDataContext();
 						selected = dataContext.getId();
 						GWT.log( event.getEvent().getClientX() + "" );
-						LogUtils.log( event );
 						amPieChart
 								.setDataProvider( generateChartData( selected ) );
 						amPieChart.validateData();
@@ -110,7 +108,6 @@ public class PieChartBrokenSlices
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
-				LogUtils.log( event );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}

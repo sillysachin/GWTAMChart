@@ -301,7 +301,6 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	 */
 	private final native void output( MenuItemOutputJSO menuItemOutput ) /*-{
 		var amExport = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		console.log(menuItemOutput);
 		amExport.output(menuItemOutput);
 	}-*/;
 }

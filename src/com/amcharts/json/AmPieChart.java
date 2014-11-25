@@ -6,15 +6,15 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
 	private String innerRadius;
 
-	private double labelRadius;
+	private Double labelRadius;
 
 	private String labelRadiusField;
 
 	private String labelText;
 
-	private double minRadius;
+	private Double minRadius;
 
-	private double pieAlpha;
+	private Double pieAlpha;
 
 	private String pieX;
 
@@ -24,7 +24,7 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 
 	private String radius;
 
-	private double startAngle;
+	private Double startAngle;
 
 	private String startRadius;
 
@@ -42,13 +42,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getLabelRadius()
+	public Double getLabelRadius()
 	{
 		return labelRadius;
 	}
 
 	@Override
-	public void setLabelRadius( double labelRadius )
+	public void setLabelRadius( Double labelRadius )
 	{
 		this.labelRadius = labelRadius;
 	}
@@ -78,25 +78,25 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getMinRadius()
+	public Double getMinRadius()
 	{
 		return minRadius;
 	}
 
 	@Override
-	public void setMinRadius( double minRadius )
+	public void setMinRadius( Double minRadius )
 	{
 		this.minRadius = minRadius;
 	}
 
 	@Override
-	public double getPieAlpha()
+	public Double getPieAlpha()
 	{
 		return pieAlpha;
 	}
 
 	@Override
-	public void setPieAlpha( double pieAlpha )
+	public void setPieAlpha( Double pieAlpha )
 	{
 		this.pieAlpha = pieAlpha;
 	}
@@ -150,13 +150,13 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 	}
 
 	@Override
-	public double getStartAngle()
+	public Double getStartAngle()
 	{
 		return startAngle;
 	}
 
 	@Override
-	public void setStartAngle( double startAngle )
+	public void setStartAngle( Double startAngle )
 	{
 		this.startAngle = startAngle;
 	}

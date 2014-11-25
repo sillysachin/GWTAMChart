@@ -452,7 +452,7 @@ public final class ChartCursor implements IJavaScriptWrapper<ChartCursorJSO>, Is
 	public final native void setZooming( boolean zooming ) /*-{
 		this.@com.amcharts.impl.ChartCursor::jso.zooming = zooming;
 	}-*/;
-	
+
 	/**
 	 * Adds event listener to the object.
 	 * type - string like 'clickLabel' (should be listed in 'events' section of this class or classes which extend this class). 
@@ -462,7 +462,6 @@ public final class ChartCursor implements IJavaScriptWrapper<ChartCursorJSO>, Is
 	/*-{
 		var chartCursor = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var chartCursorThis = this;
-		console.log('addListener - > ' + eventName);
 		chartCursor
 				.addListener(
 						eventName,

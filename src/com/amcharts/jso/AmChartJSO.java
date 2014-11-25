@@ -43,13 +43,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native double getBackgroundAlpha()
+	public final native Double getBackgroundAlpha()
 	/*-{
 		return this.backgroundAlpha;
 	}-*/;
 
 	@Override
-	public final native void setBackgroundAlpha( double backgroundAlpha )
+	public final native void setBackgroundAlpha( Double backgroundAlpha )
 	/*-{
 		this.backgroundAlpha = backgroundAlpha;
 	}-*/;
@@ -79,13 +79,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native double getBorderAlpha()
+	public final native Double getBorderAlpha()
 	/*-{
 		return this.borderAlpha;
 	}-*/;
 
 	@Override
-	public final native void setBorderAlpha( double borderAlpha )
+	public final native void setBorderAlpha( Double borderAlpha )
 	/*-{
 		this.borderAlpha = borderAlpha;
 	}-*/;
@@ -175,13 +175,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native double getFontSize()
+	public final native Double getFontSize()
 	/*-{
 		return this.fontSize;
 	}-*/;
 
 	@Override
-	public final native void setFontSize( double fontSize )
+	public final native void setFontSize( Double fontSize )
 	/*-{
 		this.fontSize = fontSize;
 	}-*/;
@@ -199,37 +199,37 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native double getHandDrawScatter()
+	public final native Double getHandDrawScatter()
 	/*-{
 		return this.handDrawScatter;
 	}-*/;
 
 	@Override
-	public final native void setHandDrawScatter( double handDrawScatter )
+	public final native void setHandDrawScatter( Double handDrawScatter )
 	/*-{
 		this.handDrawScatter = handDrawScatter;
 	}-*/;
 
 	@Override
-	public final native double getHandDrawThickness()
+	public final native Double getHandDrawThickness()
 	/*-{
 		return this.handDrawThickness;
 	}-*/;
 
 	@Override
-	public final native void setHandDrawThickness( double handDrawThickness )
+	public final native void setHandDrawThickness( Double handDrawThickness )
 	/*-{
 		this.handDrawThickness = handDrawThickness;
 	}-*/;
 
 	@Override
-	public final native double getHideBalloonTime()
+	public final native Double getHideBalloonTime()
 	/*-{
 		return this.hideBalloonTime;
 	}-*/;
 
 	@Override
-	public final native void setHideBalloonTime( double hideBalloonTime )
+	public final native void setHideBalloonTime( Double hideBalloonTime )
 	/*-{
 		this.hideBalloonTime = hideBalloonTime;
 	}-*/;
@@ -295,25 +295,25 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native double getPercentPrecision()
+	public final native Double getPercentPrecision()
 	/*-{
 		return this.percentPrecision;
 	}-*/;
 
 	@Override
-	public final native void setPercentPrecision( double percentPrecision )
+	public final native void setPercentPrecision( Double percentPrecision )
 	/*-{
 		this.percentPrecision = percentPrecision;
 	}-*/;
 
 	@Override
-	public final native double getPrecision()
+	public final native Double getPrecision()
 	/*-{
 		return this.precision;
 	}-*/;
 
 	@Override
-	public final native void setPrecision( double precision )
+	public final native void setPrecision( Double precision )
 	/*-{
 		this.precision = precision;
 	}-*/;

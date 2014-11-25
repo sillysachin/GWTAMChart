@@ -13,9 +13,9 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setAmExport( IsAmExport amExport );
 
-	double getBackgroundAlpha();
+	Double getBackgroundAlpha();
 
-	void setBackgroundAlpha( double backgroundAlpha );
+	void setBackgroundAlpha( Double backgroundAlpha );
 
 	String getBackgroundColor();
 
@@ -25,9 +25,9 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setBalloon( IsAmBalloon balloon );
 
-	double getBorderAlpha();
+	Double getBorderAlpha();
 
-	void setBorderAlpha( double borderAlpha );
+	void setBorderAlpha( Double borderAlpha );
 
 	String getBorderColor();
 
@@ -57,25 +57,25 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setFontFamily( String fontFamily );
 
-	double getFontSize();
+	Double getFontSize();
 
-	void setFontSize( double fontSize );
+	void setFontSize( Double fontSize );
 
 	Boolean getHandDrawn();
 
 	void setHandDrawn( Boolean handDrawn );
 
-	double getHandDrawScatter();
+	Double getHandDrawScatter();
 
-	void setHandDrawScatter( double handDrawScatter );
+	void setHandDrawScatter( Double handDrawScatter );
 
-	double getHandDrawThickness();
+	Double getHandDrawThickness();
 
-	void setHandDrawThickness( double handDrawThickness );
+	void setHandDrawThickness( Double handDrawThickness );
 
-	double getHideBalloonTime();
+	Double getHideBalloonTime();
 
-	void setHideBalloonTime( double hideBalloonTime );
+	void setHideBalloonTime( Double hideBalloonTime );
 
 	String getLanguage();
 
@@ -97,13 +97,13 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setPathToImages( String pathToImages );
 
-	double getPercentPrecision();
+	Double getPercentPrecision();
 
-	void setPercentPrecision( double percentPrecision );
+	void setPercentPrecision( Double percentPrecision );
 
-	double getPrecision();
+	Double getPrecision();
 
-	void setPrecision( double precision );
+	void setPrecision( Double precision );
 
 	List<Object> getPrefixesOfBigNumbers();
 

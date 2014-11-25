@@ -6,9 +6,9 @@ public interface IsAmPieChart extends IsAmSlicedChart
 
 	void setInnerRadius( String innerRadius );
 
-	double getLabelRadius();
+	Double getLabelRadius();
 
-	void setLabelRadius( double labelRadius );
+	void setLabelRadius( Double labelRadius );
 
 	String getLabelRadiusField();
 
@@ -18,13 +18,13 @@ public interface IsAmPieChart extends IsAmSlicedChart
 
 	void setLabelText( String labelText );
 
-	double getMinRadius();
+	Double getMinRadius();
 
-	void setMinRadius( double minRadius );
+	void setMinRadius( Double minRadius );
 
-	double getPieAlpha();
+	Double getPieAlpha();
 
-	void setPieAlpha( double pieAlpha );
+	void setPieAlpha( Double pieAlpha );
 
 	String getPieX();
 
@@ -42,9 +42,9 @@ public interface IsAmPieChart extends IsAmSlicedChart
 
 	void setRadius( String radius );
 
-	double getStartAngle();
+	Double getStartAngle();
 
-	void setStartAngle( double startAngle );
+	void setStartAngle( Double startAngle );
 
 	String getStartRadius();
 

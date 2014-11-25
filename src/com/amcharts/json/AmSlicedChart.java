@@ -7,19 +7,19 @@ import com.fasterxml.jackson.annotation.JsonRawValue;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
-	private double angle;
+	private Double angle;
 
 	private String balloonText;
 
-	private double depth3D;
+	private Double depth3D;
 
-	private double alpha;
+	private Double alpha;
 
 	private String alphaField;
 
 	private String baseColor;
 
-	private double brightnessStep;
+	private Double brightnessStep;
 
 	private List<Object> chartData;
 
@@ -31,7 +31,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private List<Float> gradientRatio;
 
-	private double groupedAlpha;
+	private Double groupedAlpha;
 
 	private String groupedColor;
 
@@ -41,42 +41,42 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private String groupedTitle;
 
-	private double groupPercent;
+	private Double groupPercent;
 
-	private double hideLabelsPercent;
+	private Double hideLabelsPercent;
 
-	private double hoverAlpha;
+	private Double hoverAlpha;
 
 	@JsonRawValue
 	private Object labelFunction;
 
 	private Boolean labelsEnabled;
 
-	private double labelTickAlpha;
+	private Double labelTickAlpha;
 
 	private String labelTickColor;
 
-	private double marginBottom;
+	private Double marginBottom;
 
-	private double marginLeft;
+	private Double marginLeft;
 
-	private double marginRight;
+	private Double marginRight;
 
-	private double marginTop;
+	private Double marginTop;
 
-	private double maxLabelWidth;
+	private Double maxLabelWidth;
 
-	private double outlineAlpha;
+	private Double outlineAlpha;
 
 	private String outlineColor;
 
-	private double outlineThickness;
+	private Double outlineThickness;
 
 	private String patternField;
 
 	private String pulledField;
 
-	private double pullOutDuration;
+	private Double pullOutDuration;
 
 	private String pullOutEffect;
 
@@ -84,9 +84,9 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Boolean sequencedAnimation;
 
-	private double startAlpha;
+	private Double startAlpha;
 
-	private double startDuration;
+	private Double startDuration;
 
 	private String startEffect;
 
@@ -101,13 +101,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	private String visibleInLegendField;
 
 	@Override
-	public double getAngle()
+	public Double getAngle()
 	{
 		return angle;
 	}
 
 	@Override
-	public void setAngle( double angle )
+	public void setAngle( Double angle )
 	{
 		this.angle = angle;
 	}
@@ -125,25 +125,25 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getDepth3D()
+	public Double getDepth3D()
 	{
 		return depth3D;
 	}
 
 	@Override
-	public void setDepth3D( double depth3D )
+	public void setDepth3D( Double depth3D )
 	{
 		this.depth3D = depth3D;
 	}
 
 	@Override
-	public double getAlpha()
+	public Double getAlpha()
 	{
 		return alpha;
 	}
 
 	@Override
-	public void setAlpha( double alpha )
+	public void setAlpha( Double alpha )
 	{
 		this.alpha = alpha;
 	}
@@ -173,13 +173,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getBrightnessStep()
+	public Double getBrightnessStep()
 	{
 		return brightnessStep;
 	}
 
 	@Override
-	public void setBrightnessStep( double brightnessStep )
+	public void setBrightnessStep( Double brightnessStep )
 	{
 		this.brightnessStep = brightnessStep;
 	}
@@ -245,13 +245,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getGroupedAlpha()
+	public Double getGroupedAlpha()
 	{
 		return groupedAlpha;
 	}
 
 	@Override
-	public void setGroupedAlpha( double groupedAlpha )
+	public void setGroupedAlpha( Double groupedAlpha )
 	{
 		this.groupedAlpha = groupedAlpha;
 	}
@@ -305,37 +305,37 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getGroupPercent()
+	public Double getGroupPercent()
 	{
 		return groupPercent;
 	}
 
 	@Override
-	public void setGroupPercent( double groupPercent )
+	public void setGroupPercent( Double groupPercent )
 	{
 		this.groupPercent = groupPercent;
 	}
 
 	@Override
-	public double getHideLabelsPercent()
+	public Double getHideLabelsPercent()
 	{
 		return hideLabelsPercent;
 	}
 
 	@Override
-	public void setHideLabelsPercent( double hideLabelsPercent )
+	public void setHideLabelsPercent( Double hideLabelsPercent )
 	{
 		this.hideLabelsPercent = hideLabelsPercent;
 	}
 
 	@Override
-	public double getHoverAlpha()
+	public Double getHoverAlpha()
 	{
 		return hoverAlpha;
 	}
 
 	@Override
-	public void setHoverAlpha( double hoverAlpha )
+	public void setHoverAlpha( Double hoverAlpha )
 	{
 		this.hoverAlpha = hoverAlpha;
 	}
@@ -365,13 +365,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getLabelTickAlpha()
+	public Double getLabelTickAlpha()
 	{
 		return labelTickAlpha;
 	}
 
 	@Override
-	public void setLabelTickAlpha( double labelTickAlpha )
+	public void setLabelTickAlpha( Double labelTickAlpha )
 	{
 		this.labelTickAlpha = labelTickAlpha;
 	}
@@ -389,73 +389,73 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getMarginBottom()
+	public Double getMarginBottom()
 	{
 		return marginBottom;
 	}
 
 	@Override
-	public void setMarginBottom( double marginBottom )
+	public void setMarginBottom( Double marginBottom )
 	{
 		this.marginBottom = marginBottom;
 	}
 
 	@Override
-	public double getMarginLeft()
+	public Double getMarginLeft()
 	{
 		return marginLeft;
 	}
 
 	@Override
-	public void setMarginLeft( double marginLeft )
+	public void setMarginLeft( Double marginLeft )
 	{
 		this.marginLeft = marginLeft;
 	}
 
 	@Override
-	public double getMarginRight()
+	public Double getMarginRight()
 	{
 		return marginRight;
 	}
 
 	@Override
-	public void setMarginRight( double marginRight )
+	public void setMarginRight( Double marginRight )
 	{
 		this.marginRight = marginRight;
 	}
 
 	@Override
-	public double getMarginTop()
+	public Double getMarginTop()
 	{
 		return marginTop;
 	}
 
 	@Override
-	public void setMarginTop( double marginTop )
+	public void setMarginTop( Double marginTop )
 	{
 		this.marginTop = marginTop;
 	}
 
 	@Override
-	public double getMaxLabelWidth()
+	public Double getMaxLabelWidth()
 	{
 		return maxLabelWidth;
 	}
 
 	@Override
-	public void setMaxLabelWidth( double maxLabelWidth )
+	public void setMaxLabelWidth( Double maxLabelWidth )
 	{
 		this.maxLabelWidth = maxLabelWidth;
 	}
 
 	@Override
-	public double getOutlineAlpha()
+	public Double getOutlineAlpha()
 	{
 		return outlineAlpha;
 	}
 
 	@Override
-	public void setOutlineAlpha( double outlineAlpha )
+	public void setOutlineAlpha( Double outlineAlpha )
 	{
 		this.outlineAlpha = outlineAlpha;
 	}
@@ -473,13 +473,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getOutlineThickness()
+	public Double getOutlineThickness()
 	{
 		return outlineThickness;
 	}
 
 	@Override
-	public void setOutlineThickness( double outlineThickness )
+	public void setOutlineThickness( Double outlineThickness )
 	{
 		this.outlineThickness = outlineThickness;
 	}
@@ -509,13 +509,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getPullOutDuration()
+	public Double getPullOutDuration()
 	{
 		return pullOutDuration;
 	}
 
 	@Override
-	public void setPullOutDuration( double pullOutDuration )
+	public void setPullOutDuration( Double pullOutDuration )
 	{
 		this.pullOutDuration = pullOutDuration;
 	}
@@ -557,25 +557,25 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public double getStartAlpha()
+	public Double getStartAlpha()
 	{
 		return startAlpha;
 	}
 
 	@Override
-	public void setStartAlpha( double startAlpha )
+	public void setStartAlpha( Double startAlpha )
 	{
 		this.startAlpha = startAlpha;
 	}
 
 	@Override
-	public double getStartDuration()
+	public Double getStartDuration()
 	{
 		return startDuration;
 	}
 
 	@Override
-	public void setStartDuration( double startDuration )
+	public void setStartDuration( Double startDuration )
 	{
 		this.startDuration = startDuration;
 	}

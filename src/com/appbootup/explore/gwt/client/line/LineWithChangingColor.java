@@ -115,7 +115,5 @@ public class LineWithChangingColor
 		categoryAxis.setGridCount( 50 );
 		amSerialChart.setSize( "1240px", "500px" );
 		RootLayoutPanel.get().add( amSerialChart );
-		LogUtils.log( amSerialChart );
-
 	}
 }

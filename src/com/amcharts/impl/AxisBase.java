@@ -564,7 +564,6 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 	/*-{
 		var axisBase = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		var axisBaseThis = this;
-		console.log('addListener - > ' + eventName);
 		axisBase
 				.addListener(
 						eventName,
@@ -593,15 +592,8 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 					.addListener(
 							eventName,
 							function(event) {
-								console.log('AxisBaseEvents fireEvent -> ');
-								console.log(event);
 								amChartThis.@com.amcharts.impl.AxisBase::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
 							});
-			console.log('initialized -> ' + eventName + ' : '
-					+ chart[eventName + 'Fl']);
-		} else {
-			console.log('skip initialized -> ' + eventName + ' : '
-					+ chart[eventName + 'Fl']);
 		}
 	}-*/;
 

@@ -4,21 +4,21 @@ import java.util.List;
 
 public interface IsAmSlicedChart extends IsAmChart
 {
-	double getAngle();
+	Double getAngle();
 
-	void setAngle( double angle );
+	void setAngle( Double angle );
 
 	String getBalloonText();
 
 	void setBalloonText( String balloonText );
 
-	double getDepth3D();
+	Double getDepth3D();
 
-	void setDepth3D( double depth3d );
+	void setDepth3D( Double depth3d );
 	
-	double getAlpha();
+	Double getAlpha();
 
-	void setAlpha( double alpha );
+	void setAlpha( Double alpha );
 
 	String getAlphaField();
 
@@ -28,9 +28,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setBaseColor( String baseColor );
 
-	double getBrightnessStep();
+	Double getBrightnessStep();
 
-	void setBrightnessStep( double brightnessStep );
+	void setBrightnessStep( Double brightnessStep );
 
 	List<Object> getChartData();
 
@@ -52,9 +52,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setGradientRatio( List<Float> gradientRatio );
 
-	double getGroupedAlpha();
+	Double getGroupedAlpha();
 
-	void setGroupedAlpha( double groupedAlpha );
+	void setGroupedAlpha( Double groupedAlpha );
 
 	String getGroupedColor();
 
@@ -72,17 +72,17 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setGroupedTitle( String groupedTitle );
 
-	double getGroupPercent();
+	Double getGroupPercent();
 
-	void setGroupPercent( double groupPercent );
+	void setGroupPercent( Double groupPercent );
 
-	double getHideLabelsPercent();
+	Double getHideLabelsPercent();
 
-	void setHideLabelsPercent( double hideLabelsPercent );
+	void setHideLabelsPercent( Double hideLabelsPercent );
 
-	double getHoverAlpha();
+	Double getHoverAlpha();
 
-	void setHoverAlpha( double hoverAlpha );
+	void setHoverAlpha( Double hoverAlpha );
 
 	Object getLabelFunction();
 
@@ -92,45 +92,45 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setLabelsEnabled( Boolean labelsEnabled );
 
-	double getLabelTickAlpha();
+	Double getLabelTickAlpha();
 
-	void setLabelTickAlpha( double labelTickAlpha );
+	void setLabelTickAlpha( Double labelTickAlpha );
 
 	String getLabelTickColor();
 
 	void setLabelTickColor( String labelTickColor );
 
-	double getMarginBottom();
+	Double getMarginBottom();
 
-	void setMarginBottom( double marginBottom );
+	void setMarginBottom( Double marginBottom );
 
-	double getMarginLeft();
+	Double getMarginLeft();
 
-	void setMarginLeft( double marginLeft );
+	void setMarginLeft( Double marginLeft );
 
-	double getMarginRight();
+	Double getMarginRight();
 
-	void setMarginRight( double marginRight );
+	void setMarginRight( Double marginRight );
 
-	double getMarginTop();
+	Double getMarginTop();
 
-	void setMarginTop( double marginTop );
+	void setMarginTop( Double marginTop );
 
-	double getMaxLabelWidth();
+	Double getMaxLabelWidth();
 
-	void setMaxLabelWidth( double maxLabelWidth );
+	void setMaxLabelWidth( Double maxLabelWidth );
 
-	double getOutlineAlpha();
+	Double getOutlineAlpha();
 
-	void setOutlineAlpha( double outlineAlpha );
+	void setOutlineAlpha( Double outlineAlpha );
 
 	String getOutlineColor();
 
 	void setOutlineColor( String outlineColor );
 
-	double getOutlineThickness();
+	Double getOutlineThickness();
 
-	void setOutlineThickness( double outlineThickness );
+	void setOutlineThickness( Double outlineThickness );
 
 	String getPatternField();
 
@@ -140,9 +140,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setPulledField( String pulledField );
 
-	double getPullOutDuration();
+	Double getPullOutDuration();
 
-	void setPullOutDuration( double pullOutDuration );
+	void setPullOutDuration( Double pullOutDuration );
 
 	String getPullOutEffect();
 
@@ -156,13 +156,13 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setSequencedAnimation( Boolean sequencedAnimation );
 
-	double getStartAlpha();
+	Double getStartAlpha();
 
-	void setStartAlpha( double startAlpha );
+	void setStartAlpha( Double startAlpha );
 
-	double getStartDuration();
+	Double getStartDuration();
 
-	void setStartDuration( double startDuration );
+	void setStartDuration( Double startDuration );
 
 	String getStartEffect();
 

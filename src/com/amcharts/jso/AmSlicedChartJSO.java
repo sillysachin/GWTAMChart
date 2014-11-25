@@ -12,13 +12,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}
 
 	@Override
-	public final native double getAngle()
+	public final native Double getAngle()
 	/*-{
 		return this.angle;
 	}-*/;
 
 	@Override
-	public final native void setAngle( double angle )
+	public final native void setAngle( Double angle )
 	/*-{
 		this.angle = angle;
 	}-*/;
@@ -36,25 +36,25 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getDepth3D()
+	public final native Double getDepth3D()
 	/*-{
 		return this.depth3D;
 	}-*/;
 
 	@Override
-	public final native void setDepth3D( double depth3D )
+	public final native void setDepth3D( Double depth3D )
 	/*-{
 		this.depth3D = depth3D;
 	}-*/;
 	
 	@Override
-	public final native double getAlpha()
+	public final native Double getAlpha()
 	/*-{
 		return this.alpha;
 	}-*/;
 
 	@Override
-	public final native void setAlpha( double alpha )
+	public final native void setAlpha( Double alpha )
 	/*-{
 		this.alpha = alpha;
 	}-*/;
@@ -84,13 +84,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getBrightnessStep()
+	public final native Double getBrightnessStep()
 	/*-{
 		return this.brightnessStep;
 	}-*/;
 
 	@Override
-	public final native void setBrightnessStep( double brightnessStep )
+	public final native void setBrightnessStep( Double brightnessStep )
 	/*-{
 		this.brightnessStep = brightnessStep;
 	}-*/;
@@ -156,13 +156,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getGroupedAlpha()
+	public final native Double getGroupedAlpha()
 	/*-{
 		return this.groupedAlpha;
 	}-*/;
 
 	@Override
-	public final native void setGroupedAlpha( double groupedAlpha )
+	public final native void setGroupedAlpha( Double groupedAlpha )
 	/*-{
 		this.groupedAlpha = groupedAlpha;
 	}-*/;
@@ -216,37 +216,37 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getGroupPercent()
+	public final native Double getGroupPercent()
 	/*-{
 		return this.groupPercent;
 	}-*/;
 
 	@Override
-	public final native void setGroupPercent( double groupPercent )
+	public final native void setGroupPercent( Double groupPercent )
 	/*-{
 		this.groupPercent = groupPercent;
 	}-*/;
 
 	@Override
-	public final native double getHideLabelsPercent()
+	public final native Double getHideLabelsPercent()
 	/*-{
 		return this.hideLabelsPercent;
 	}-*/;
 
 	@Override
-	public final native void setHideLabelsPercent( double hideLabelsPercent )
+	public final native void setHideLabelsPercent( Double hideLabelsPercent )
 	/*-{
 		this.hideLabelsPercent = hideLabelsPercent;
 	}-*/;
 
 	@Override
-	public final native double getHoverAlpha()
+	public final native Double getHoverAlpha()
 	/*-{
 		return this.hoverAlpha;
 	}-*/;
 
 	@Override
-	public final native void setHoverAlpha( double hoverAlpha )
+	public final native void setHoverAlpha( Double hoverAlpha )
 	/*-{
 		this.hoverAlpha = hoverAlpha;
 	}-*/;
@@ -276,13 +276,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getLabelTickAlpha()
+	public final native Double getLabelTickAlpha()
 	/*-{
 		return this.labelTickAlpha;
 	}-*/;
 
 	@Override
-	public final native void setLabelTickAlpha( double labelTickAlpha )
+	public final native void setLabelTickAlpha( Double labelTickAlpha )
 	/*-{
 		this.labelTickAlpha = labelTickAlpha;
 	}-*/;
@@ -300,73 +300,73 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getMarginBottom()
+	public final native Double getMarginBottom()
 	/*-{
 		return this.marginBottom;
 	}-*/;
 
 	@Override
-	public final native void setMarginBottom( double marginBottom )
+	public final native void setMarginBottom( Double marginBottom )
 	/*-{
 		this.marginBottom = marginBottom;
 	}-*/;
 
 	@Override
-	public final native double getMarginLeft()
+	public final native Double getMarginLeft()
 	/*-{
 		return this.marginLeft;
 	}-*/;
 
 	@Override
-	public final native void setMarginLeft( double marginLeft )
+	public final native void setMarginLeft( Double marginLeft )
 	/*-{
 		this.marginLeft = marginLeft;
 	}-*/;
 
 	@Override
-	public final native double getMarginRight()
+	public final native Double getMarginRight()
 	/*-{
 		return this.marginRight;
 	}-*/;
 
 	@Override
-	public final native void setMarginRight( double marginRight )
+	public final native void setMarginRight( Double marginRight )
 	/*-{
 		this.marginRight = marginRight;
 	}-*/;
 
 	@Override
-	public final native double getMarginTop()
+	public final native Double getMarginTop()
 	/*-{
 		return this.marginTop;
 	}-*/;
 
 	@Override
-	public final native void setMarginTop( double marginTop )
+	public final native void setMarginTop( Double marginTop )
 	/*-{
 		this.marginTop = marginTop;
 	}-*/;
 
 	@Override
-	public final native double getMaxLabelWidth()
+	public final native Double getMaxLabelWidth()
 	/*-{
 		return this.maxLabelWidth;
 	}-*/;
 
 	@Override
-	public final native void setMaxLabelWidth( double maxLabelWidth )
+	public final native void setMaxLabelWidth( Double maxLabelWidth )
 	/*-{
 		this.maxLabelWidth = maxLabelWidth;
 	}-*/;
 
 	@Override
-	public final native double getOutlineAlpha()
+	public final native Double getOutlineAlpha()
 	/*-{
 		return this.outlineAlpha;
 	}-*/;
 
 	@Override
-	public final native void setOutlineAlpha( double outlineAlpha )
+	public final native void setOutlineAlpha( Double outlineAlpha )
 	/*-{
 		this.outlineAlpha = 0.4;
 	}-*/;
@@ -384,13 +384,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getOutlineThickness()
+	public final native Double getOutlineThickness()
 	/*-{
 		return this.outlineThickness;
 	}-*/;
 
 	@Override
-	public final native void setOutlineThickness( double outlineThickness )
+	public final native void setOutlineThickness( Double outlineThickness )
 	/*-{
 		this.outlineThickness = outlineThickness;
 	}-*/;
@@ -420,13 +420,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getPullOutDuration()
+	public final native Double getPullOutDuration()
 	/*-{
 		return this.pullOutDuration;
 	}-*/;
 
 	@Override
-	public final native void setPullOutDuration( double pullOutDuration )
+	public final native void setPullOutDuration( Double pullOutDuration )
 	/*-{
 		this.pullOutDuration = pullOutDuration;
 	}-*/;
@@ -468,25 +468,25 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native double getStartAlpha()
+	public final native Double getStartAlpha()
 	/*-{
 		return this.startAlpha;
 	}-*/;
 
 	@Override
-	public final native void setStartAlpha( double startAlpha )
+	public final native void setStartAlpha( Double startAlpha )
 	/*-{
 		this.startAlpha = startAlpha;
 	}-*/;
 
 	@Override
-	public final native double getStartDuration()
+	public final native Double getStartDuration()
 	/*-{
 		return this.startDuration;
 	}-*/;
 
 	@Override
-	public final native void setStartDuration( double startDuration )
+	public final native void setStartDuration( Double startDuration )
 	/*-{
 		this.startDuration = startDuration;
 	}-*/;

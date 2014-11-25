@@ -36,12 +36,12 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 		return jso;
 	}
 
-	public void setAngle( double angle )
+	public void setAngle( Double angle )
 	{
 		getJso().setAngle( angle );
 	}
 
-	public double getAngle()
+	public Double getAngle()
 	{
 		return getJso().getAngle();
 	}
@@ -58,24 +58,24 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 		getJso().setBalloonText( balloonText );
 	}
 
-	public void setDepth3D( double depth3D )
+	public void setDepth3D( Double depth3D )
 	{
 		getJso().setDepth3D( depth3D );
 	}
 
-	public double getDepth3D()
+	public Double getDepth3D()
 	{
 		return getJso().getDepth3D();
 	}
 
 	@Override
-	public double getAlpha()
+	public Double getAlpha()
 	{
 		return getJso().getAlpha();
 	}
 
 	@Override
-	public void setAlpha( double alpha )
+	public void setAlpha( Double alpha )
 	{
 		getJso().setAlpha( alpha );
 	}
@@ -105,13 +105,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getBrightnessStep()
+	public Double getBrightnessStep()
 	{
 		return getJso().getBrightnessStep();
 	}
 
 	@Override
-	public void setBrightnessStep( double brightnessStep )
+	public void setBrightnessStep( Double brightnessStep )
 	{
 		getJso().setBrightnessStep( brightnessStep );
 	}
@@ -179,13 +179,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getGroupedAlpha()
+	public Double getGroupedAlpha()
 	{
 		return getJso().getGroupedAlpha();
 	}
 
 	@Override
-	public void setGroupedAlpha( double groupedAlpha )
+	public void setGroupedAlpha( Double groupedAlpha )
 	{
 		getJso().setGroupedAlpha( groupedAlpha );
 	}
@@ -239,37 +239,37 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getGroupPercent()
+	public Double getGroupPercent()
 	{
 		return getJso().getGroupPercent();
 	}
 
 	@Override
-	public void setGroupPercent( double groupPercent )
+	public void setGroupPercent( Double groupPercent )
 	{
 		getJso().setGroupPercent( groupPercent );
 	}
 
 	@Override
-	public double getHideLabelsPercent()
+	public Double getHideLabelsPercent()
 	{
 		return getJso().getHideLabelsPercent();
 	}
 
 	@Override
-	public void setHideLabelsPercent( double hideLabelsPercent )
+	public void setHideLabelsPercent( Double hideLabelsPercent )
 	{
 		getJso().setHideLabelsPercent( hideLabelsPercent );
 	}
 
 	@Override
-	public double getHoverAlpha()
+	public Double getHoverAlpha()
 	{
 		return getJso().getHoverAlpha();
 	}
 
 	@Override
-	public void setHoverAlpha( double hoverAlpha )
+	public void setHoverAlpha( Double hoverAlpha )
 	{
 		getJso().setHoverAlpha( hoverAlpha );
 	}
@@ -299,13 +299,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getLabelTickAlpha()
+	public Double getLabelTickAlpha()
 	{
 		return getJso().getLabelTickAlpha();
 	}
 
 	@Override
-	public void setLabelTickAlpha( double labelTickAlpha )
+	public void setLabelTickAlpha( Double labelTickAlpha )
 	{
 		getJso().setLabelTickAlpha( labelTickAlpha );
 	}
@@ -323,73 +323,73 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getMarginBottom()
+	public Double getMarginBottom()
 	{
 		return getJso().getMarginBottom();
 	}
 
 	@Override
-	public void setMarginBottom( double marginBottom )
+	public void setMarginBottom( Double marginBottom )
 	{
 		getJso().setMarginBottom( marginBottom );
 	}
 
 	@Override
-	public double getMarginLeft()
+	public Double getMarginLeft()
 	{
 		return getJso().getMarginLeft();
 	}
 
 	@Override
-	public void setMarginLeft( double marginLeft )
+	public void setMarginLeft( Double marginLeft )
 	{
 		getJso().setMarginLeft( marginLeft );
 	}
 
 	@Override
-	public double getMarginRight()
+	public Double getMarginRight()
 	{
 		return getJso().getMarginRight();
 	}
 
 	@Override
-	public void setMarginRight( double marginRight )
+	public void setMarginRight( Double marginRight )
 	{
 		getJso().setMarginRight( marginRight );
 	}
 
 	@Override
-	public double getMarginTop()
+	public Double getMarginTop()
 	{
 		return getJso().getMarginTop();
 	}
 
 	@Override
-	public void setMarginTop( double marginTop )
+	public void setMarginTop( Double marginTop )
 	{
 		getJso().setMarginTop( marginTop );
 	}
 
 	@Override
-	public double getMaxLabelWidth()
+	public Double getMaxLabelWidth()
 	{
 		return getJso().getMaxLabelWidth();
 	}
 
 	@Override
-	public void setMaxLabelWidth( double maxLabelWidth )
+	public void setMaxLabelWidth( Double maxLabelWidth )
 	{
 		getJso().setMaxLabelWidth( maxLabelWidth );
 	}
 
 	@Override
-	public double getOutlineAlpha()
+	public Double getOutlineAlpha()
 	{
 		return getJso().getOutlineAlpha();
 	}
 
 	@Override
-	public void setOutlineAlpha( double outlineAlpha )
+	public void setOutlineAlpha( Double outlineAlpha )
 	{
 		getJso().setOutlineAlpha( outlineAlpha );
 	}
@@ -407,13 +407,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getOutlineThickness()
+	public Double getOutlineThickness()
 	{
 		return getJso().getOutlineThickness();
 	}
 
 	@Override
-	public void setOutlineThickness( double outlineThickness )
+	public void setOutlineThickness( Double outlineThickness )
 	{
 		getJso().setOutlineThickness( outlineThickness );
 	}
@@ -443,13 +443,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getPullOutDuration()
+	public Double getPullOutDuration()
 	{
 		return getJso().getPullOutDuration();
 	}
 
 	@Override
-	public void setPullOutDuration( double pullOutDuration )
+	public void setPullOutDuration( Double pullOutDuration )
 	{
 		getJso().setPullOutDuration( pullOutDuration );
 	}
@@ -492,25 +492,25 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public double getStartAlpha()
+	public Double getStartAlpha()
 	{
 		return getJso().getStartAlpha();
 	}
 
 	@Override
-	public void setStartAlpha( double startAlpha )
+	public void setStartAlpha( Double startAlpha )
 	{
 		getJso().setStartAlpha( startAlpha );
 	}
 
 	@Override
-	public double getStartDuration()
+	public Double getStartDuration()
 	{
 		return getJso().getStartDuration();
 	}
 
 	@Override
-	public void setStartDuration( double startDuration )
+	public void setStartDuration( Double startDuration )
 	{
 		getJso().setStartDuration( startDuration );
 	}

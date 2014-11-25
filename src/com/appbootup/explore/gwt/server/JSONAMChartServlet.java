@@ -37,26 +37,65 @@ public class JSONAMChartServlet extends HttpServlet
 		BufferedReader reader = null;
 		ServletContext cntxt = this.getServletContext();
 		String fName = "/data/amchart.json";
-		AmPieChart pieChart = new AmPieChart();
-		pieChart.setType( "pie" );
-		pieChart.setValueField( "value" );
-		pieChart.setTitleField( "key" );
 
 		List<PieChartSlice> dataProvider = new ArrayList<PieChartSlice>();
 		PieChartSlice slice1 = new PieChartSlice();
-		slice1.setKey( "Beer" );
-		slice1.setValue( "201.1" );
+		slice1.setCountry( "Lithuania" );
+		slice1.setLitres( "501.9" );
 		dataProvider.add( slice1 );
 		PieChartSlice slice2 = new PieChartSlice();
-		slice2.setKey( "Whiskey" );
-		slice2.setValue( "165.8" );
+		slice2.setCountry( "Czech Republic" );
+		slice2.setLitres( "301.9" );
 		dataProvider.add( slice2 );
-		pieChart.setDataProvider( dataProvider );
-		pieChart.setLabelFunction( getFunctionString() );
+		PieChartSlice slice3 = new PieChartSlice();
+		slice3.setCountry( "Ireland" );
+		slice3.setLitres( "201.1" );
+		dataProvider.add( slice3 );
+		PieChartSlice slice4 = new PieChartSlice();
+		slice4.setCountry( "Germany" );
+		slice4.setLitres( "165.8" );
+		dataProvider.add( slice4 );
+		PieChartSlice slice5 = new PieChartSlice();
+		slice5.setCountry( "Australia" );
+		slice5.setLitres( "139.9" );
+		dataProvider.add( slice5 );
+		PieChartSlice slice6 = new PieChartSlice();
+		slice6.setCountry( "Austria" );
+		slice6.setLitres( "128.3" );
+		dataProvider.add( slice6 );
+		PieChartSlice slice7 = new PieChartSlice();
+		slice7.setCountry( "UK" );
+		slice7.setLitres( "99" );
+		dataProvider.add( slice7 );
+		PieChartSlice slice8 = new PieChartSlice();
+		slice8.setCountry( "Belgium" );
+		slice8.setLitres( "60" );
+		dataProvider.add( slice8 );
+		PieChartSlice slice9 = new PieChartSlice();
+		slice9.setCountry( "The Netherlands" );
+		slice9.setLitres( "50" );
+		dataProvider.add( slice9 );
+
+		AmPieChart amPieChart = new AmPieChart();
+		amPieChart.setType( "pie" );
+		amPieChart.setDataProvider( dataProvider );
+		amPieChart.setTheme( "none" );
+		amPieChart.setValueField( "litres" );
+		amPieChart.setTitleField( "country" );
+		amPieChart.setGroupedPulled( true );
+		//ExportConfig exportConfig = new ExportConfig();
+		//MenuItem menuItem = new MenuItem();
+		//menuItem.setIcon( "/js/amcharts/images/export.png" );
+		//menuItem.setFormat( "png" );
+		//exportConfig.addMenuItem( menuItem );
+		//amPieChart.setExportConfig( exportConfig );
+		amPieChart.setGroupPercent( 5.0 );
+
+		amPieChart.setLabelFunction( getFunctionString() );
 
 		JsonRenderer renderer = JsonBuilderFactory.getInstance()
 				.getJacksonRenderer();
-		String jsonStringJackson = renderer.toJson( pieChart );
+		String jsonStringJackson = renderer.toJson( amPieChart );
 		System.out.println( jsonStringJackson );
 
 		InputStream ins = cntxt.getResourceAsStream( fName );
@@ -99,6 +138,7 @@ public class JSONAMChartServlet extends HttpServlet
 
 	private String getFunctionString()
 	{
-		return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
+		//return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
+		return "function(slice, text) {" + "return text;" + "}";
 	}
 }

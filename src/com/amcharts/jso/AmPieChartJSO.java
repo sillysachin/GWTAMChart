@@ -21,13 +21,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native double getLabelRadius()
+	public final native Double getLabelRadius()
 	/*-{
 		return this.labelRadius;
 	}-*/;
 
 	@Override
-	public final native void setLabelRadius( double labelRadius )
+	public final native void setLabelRadius( Double labelRadius )
 	/*-{
 		this.labelRadius = labelRadius;
 	}-*/;
@@ -57,25 +57,25 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native double getMinRadius()
+	public final native Double getMinRadius()
 	/*-{
 		return this.minRadius;
 	}-*/;
 
 	@Override
-	public final native void setMinRadius( double minRadius )
+	public final native void setMinRadius( Double minRadius )
 	/*-{
 		this.minRadius = minRadius;
 	}-*/;
 
 	@Override
-	public final native double getPieAlpha()
+	public final native Double getPieAlpha()
 	/*-{
 		return this.pieAlpha;
 	}-*/;
 
 	@Override
-	public final native void setPieAlpha( double pieAlpha )
+	public final native void setPieAlpha( Double pieAlpha )
 	/*-{
 		this.pieAlpha = pieAlpha;
 	}-*/;
@@ -129,13 +129,13 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	}-*/;
 
 	@Override
-	public final native double getStartAngle()
+	public final native Double getStartAngle()
 	/*-{
 		return this.startAngle;
 	}-*/;
 
 	@Override
-	public final native void setStartAngle( double startAngle )
+	public final native void setStartAngle( Double startAngle )
 	/*-{
 		this.startAngle = startAngle;
 	}-*/;

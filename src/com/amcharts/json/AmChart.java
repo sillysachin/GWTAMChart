@@ -20,13 +20,13 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 
 	private IsAmExport amExport;
 
-	private double backgroundAlpha;
+	private Double backgroundAlpha;
 
 	private String backgroundColor;
 
 	private IsAmBalloon balloon;
 
-	private double borderAlpha;
+	private Double borderAlpha;
 
 	private String borderColor;
 
@@ -42,15 +42,15 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 
 	private String fontFamily;
 
-	private double fontSize;
+	private Double fontSize;
 
 	private Boolean handDrawn;
 
-	private double handDrawScatter;
+	private Double handDrawScatter;
 
-	private double handDrawThickness;
+	private Double handDrawThickness;
 
-	private double hideBalloonTime;
+	private Double hideBalloonTime;
 
 	private String language;
 
@@ -62,9 +62,9 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 
 	private String pathToImages;
 
-	private double percentPrecision;
+	private Double percentPrecision;
 
-	private double precision;
+	private Double precision;
 
 	private List<Object> prefixesOfBigNumbers;
 
@@ -110,13 +110,13 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public double getBackgroundAlpha()
+	public Double getBackgroundAlpha()
 	{
 		return backgroundAlpha;
 	}
 
 	@Override
-	public void setBackgroundAlpha( double backgroundAlpha )
+	public void setBackgroundAlpha( Double backgroundAlpha )
 	{
 		this.backgroundAlpha = backgroundAlpha;
 	}
@@ -146,13 +146,13 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public double getBorderAlpha()
+	public Double getBorderAlpha()
 	{
 		return borderAlpha;
 	}
 
 	@Override
-	public void setBorderAlpha( double borderAlpha )
+	public void setBorderAlpha( Double borderAlpha )
 	{
 		this.borderAlpha = borderAlpha;
 	}
@@ -242,13 +242,13 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public double getFontSize()
+	public Double getFontSize()
 	{
 		return fontSize;
 	}
 
 	@Override
-	public void setFontSize( double fontSize )
+	public void setFontSize( Double fontSize )
 	{
 		this.fontSize = fontSize;
 	}
@@ -266,37 +266,37 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public double getHandDrawScatter()
+	public Double getHandDrawScatter()
 	{
 		return handDrawScatter;
 	}
 
 	@Override
-	public void setHandDrawScatter( double handDrawScatter )
+	public void setHandDrawScatter( Double handDrawScatter )
 	{
 		this.handDrawScatter = handDrawScatter;
 	}
 
 	@Override
-	public double getHandDrawThickness()
+	public Double getHandDrawThickness()
 	{
 		return handDrawThickness;
 	}
 
 	@Override
-	public void setHandDrawThickness( double handDrawThickness )
+	public void setHandDrawThickness( Double handDrawThickness )
 	{
 		this.handDrawThickness = handDrawThickness;
 	}
 
 	@Override
-	public double getHideBalloonTime()
+	public Double getHideBalloonTime()
 	{
 		return hideBalloonTime;
 	}
 
 	@Override
-	public void setHideBalloonTime( double hideBalloonTime )
+	public void setHideBalloonTime( Double hideBalloonTime )
 	{
 		this.hideBalloonTime = hideBalloonTime;
 	}
@@ -362,25 +362,25 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public double getPercentPrecision()
+	public Double getPercentPrecision()
 	{
 		return percentPrecision;
 	}
 
 	@Override
-	public void setPercentPrecision( double percentPrecision )
+	public void setPercentPrecision( Double percentPrecision )
 	{
 		this.percentPrecision = percentPrecision;
 	}
 
 	@Override
-	public double getPrecision()
+	public Double getPrecision()
 	{
 		return precision;
 	}
 
 	@Override
-	public void setPrecision( double precision )
+	public void setPrecision( Double precision )
 	{
 		this.precision = precision;
 	}
