@@ -58,14 +58,14 @@ public final class Label implements IJavaScriptWrapper<LabelJSO>, IsLabel
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public final native boolean isBold() /*-{
+	public final native Boolean isBold() /*-{
 		return this.@com.amcharts.impl.Label::jso.bold;
 	}-*/;
 
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public final native void setBold( boolean bold ) /*-{
+	public final native void setBold( Boolean bold ) /*-{
 		this.@com.amcharts.impl.Label::jso.bold = bold;
 	}-*/;
 

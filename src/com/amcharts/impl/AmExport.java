@@ -117,56 +117,56 @@ public final class AmExport implements IJavaScriptWrapper<AmExportJSO>, IsAmExpo
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public final native boolean isExportJPG() /*-{
+	public final native Boolean isExportJPG() /*-{
 		return this.@com.amcharts.impl.AmExport::jso.exportJPG;
 	}-*/;
 
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public final native void setExportJPG( boolean exportJPG ) /*-{
+	public final native void setExportJPG( Boolean exportJPG ) /*-{
 		this.@com.amcharts.impl.AmExport::jso.exportJPG = exportJPG;
 	}-*/;
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public final native boolean isExportPDF() /*-{
+	public final native Boolean isExportPDF() /*-{
 		return this.@com.amcharts.impl.AmExport::jso.exportPDF;
 	}-*/;
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public final native void setExportPDF( boolean exportPDF ) /*-{
+	public final native void setExportPDF( Boolean exportPDF ) /*-{
 		this.@com.amcharts.impl.AmExport::jso.exportPDF = exportPDF;
 	}-*/;
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public final native boolean isExportPNG() /*-{
+	public final native Boolean isExportPNG() /*-{
 		return this.@com.amcharts.impl.AmExport::jso.exportPNG;
 	}-*/;
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public final native void setExportPNG( boolean exportPNG ) /*-{
+	public final native void setExportPNG( Boolean exportPNG ) /*-{
 		this.@com.amcharts.impl.AmExport::jso.exportPNG = exportPNG;
 	}-*/;
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public final native boolean isExportSVG() /*-{
+	public final native Boolean isExportSVG() /*-{
 		return this.@com.amcharts.impl.AmExport::jso.exportSVG;
 	}-*/;
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public final native void setExportSVG( boolean exportSVG ) /*-{
+	public final native void setExportSVG( Boolean exportSVG ) /*-{
 		this.@com.amcharts.impl.AmExport::jso.exportSVG = exportSVG;
 	}-*/;
 

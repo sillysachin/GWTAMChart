@@ -60,12 +60,12 @@ public class ClickItem extends JavaScriptObject
 		this.index = index;
 	}-*/;
 
-	public final native boolean isNegative()
+	public final native Boolean isNegative()
 	/*-{
 		return this.isNegative;
 	}-*/;
 
-	public final native void setNegative( boolean isNegative )
+	public final native void setNegative( Boolean isNegative )
 	/*-{
 		this.isNegative = isNegative;
 	}-*/;

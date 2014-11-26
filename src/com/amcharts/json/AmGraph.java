@@ -14,7 +14,7 @@ public final class AmGraph implements IsAmGraph
 
 	private String balloonText;
 
-	private boolean behindColumns;
+	private Boolean behindColumns;
 
 	private String bullet;
 
@@ -40,7 +40,7 @@ public final class AmGraph implements IsAmGraph
 
 	private String closeField;
 
-	private boolean clustered;
+	private Boolean clustered;
 
 	private String color;
 
@@ -48,7 +48,7 @@ public final class AmGraph implements IsAmGraph
 
 	private double columnWidth;
 
-	private boolean connect;
+	private Boolean connect;
 
 	private double cornerRadiusTop;
 
@@ -84,7 +84,7 @@ public final class AmGraph implements IsAmGraph
 
 	private String gradientOrientation;
 
-	private boolean hidden;
+	private Boolean hidden;
 
 	private double hideBulletsCount;
 
@@ -92,7 +92,7 @@ public final class AmGraph implements IsAmGraph
 
 	private String id;
 
-	private boolean includeInMinMax;
+	private Boolean includeInMinMax;
 
 	private String labelAnchor;
 
@@ -144,9 +144,9 @@ public final class AmGraph implements IsAmGraph
 
 	private String negativeLineColor;
 
-	private boolean newStack;
+	private Boolean newStack;
 
-	private boolean noStepRisers;
+	private Boolean noStepRisers;
 
 	private String openField;
 
@@ -160,25 +160,25 @@ public final class AmGraph implements IsAmGraph
 
 	private double precision;
 
-	private boolean proCandlesticks;
+	private Boolean proCandlesticks;
 
-	private boolean showAllValueLabels;
+	private Boolean showAllValueLabels;
 
-	private boolean showBalloon;
+	private Boolean showBalloon;
 
 	private String showBalloonAt;
 
 	private String showBulletsAt;
 
-	private boolean showHandOnHover;
+	private Boolean showHandOnHover;
 
-	private boolean showOnAxis;
+	private Boolean showOnAxis;
 
-	private boolean stackable;
+	private Boolean stackable;
 
 	private String stepDirection;
 
-	private boolean switchable;
+	private Boolean switchable;
 
 	private String title;
 
@@ -190,13 +190,13 @@ public final class AmGraph implements IsAmGraph
 
 	private String urlTarget;
 
-	private boolean useNegativeColorIfDown;
+	private Boolean useNegativeColorIfDown;
 
 	private IsValueAxis valueAxis;
 
 	private String valueField;
 
-	private boolean visibleInLegend;
+	private Boolean visibleInLegend;
 
 	private IsValueAxis xAxis;
 
@@ -273,7 +273,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public boolean isBehindColumns()
+	public Boolean isBehindColumns()
 	{
 		return behindColumns;
 	}
@@ -281,7 +281,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public void setBehindColumns( boolean behindColumns )
+	public void setBehindColumns( Boolean behindColumns )
 	{
 		this.behindColumns = behindColumns;
 	}
@@ -481,7 +481,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public boolean isClustered()
+	public Boolean isClustered()
 	{
 		return clustered;
 	}
@@ -489,7 +489,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public void setClustered( boolean clustered )
+	public void setClustered( Boolean clustered )
 	{
 		this.clustered = clustered;
 	}
@@ -545,7 +545,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public boolean isConnect()
+	public Boolean isConnect()
 	{
 		return connect;
 	}
@@ -553,7 +553,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public void setConnect( boolean connect )
+	public void setConnect( Boolean connect )
 	{
 		this.connect = connect;
 	}
@@ -833,7 +833,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public boolean isHidden()
+	public Boolean isHidden()
 	{
 		return hidden;
 	}
@@ -841,7 +841,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public void setHidden( boolean hidden )
+	public void setHidden( Boolean hidden )
 	{
 		this.hidden = hidden;
 	}
@@ -897,7 +897,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public boolean isIncludeInMinMax()
+	public Boolean isIncludeInMinMax()
 	{
 		return includeInMinMax;
 	}
@@ -905,7 +905,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public void setIncludeInMinMax( boolean includeInMinMax )
+	public void setIncludeInMinMax( Boolean includeInMinMax )
 	{
 		this.includeInMinMax = includeInMinMax;
 	}
@@ -1313,7 +1313,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public boolean isNewStack()
+	public Boolean isNewStack()
 	{
 		return newStack;
 	}
@@ -1321,7 +1321,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public void setNewStack( boolean newStack )
+	public void setNewStack( Boolean newStack )
 	{
 		this.newStack = newStack;
 	}
@@ -1329,7 +1329,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public boolean isNoStepRisers()
+	public Boolean isNoStepRisers()
 	{
 		return noStepRisers;
 	}
@@ -1337,7 +1337,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public void setNoStepRisers( boolean noStepRisers )
+	public void setNoStepRisers( Boolean noStepRisers )
 	{
 		this.noStepRisers = noStepRisers;
 	}
@@ -1441,7 +1441,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public boolean isProCandlesticks()
+	public Boolean isProCandlesticks()
 	{
 		return proCandlesticks;
 	}
@@ -1449,7 +1449,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public void setProCandlesticks( boolean proCandlesticks )
+	public void setProCandlesticks( Boolean proCandlesticks )
 	{
 		this.proCandlesticks = proCandlesticks;
 	}
@@ -1457,7 +1457,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public boolean isShowAllValueLabels()
+	public Boolean isShowAllValueLabels()
 	{
 		return showAllValueLabels;
 	}
@@ -1465,7 +1465,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public void setShowAllValueLabels( boolean showAllValueLabels )
+	public void setShowAllValueLabels( Boolean showAllValueLabels )
 	{
 		this.showAllValueLabels = showAllValueLabels;
 	}
@@ -1473,7 +1473,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public boolean isShowBalloon()
+	public Boolean isShowBalloon()
 	{
 		return showBalloon;
 	}
@@ -1481,7 +1481,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public void setShowBalloon( boolean showBalloon )
+	public void setShowBalloon( Boolean showBalloon )
 	{
 		this.showBalloon = showBalloon;
 	}
@@ -1521,7 +1521,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public boolean isShowHandOnHover()
+	public Boolean isShowHandOnHover()
 	{
 		return showHandOnHover;
 	}
@@ -1529,7 +1529,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public void setShowHandOnHover( boolean showHandOnHover )
+	public void setShowHandOnHover( Boolean showHandOnHover )
 	{
 		this.showHandOnHover = showHandOnHover;
 	}
@@ -1537,7 +1537,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public boolean isShowOnAxis()
+	public Boolean isShowOnAxis()
 	{
 		return showOnAxis;
 	}
@@ -1545,7 +1545,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public void setShowOnAxis( boolean showOnAxis )
+	public void setShowOnAxis( Boolean showOnAxis )
 	{
 		this.showOnAxis = showOnAxis;
 	}
@@ -1553,7 +1553,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100 You can exclude this graph from stacking."
 	 */
-	public boolean isStackable()
+	public Boolean isStackable()
 	{
 		return stackable;
 	}
@@ -1561,7 +1561,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100 You can exclude this graph from stacking."
 	 */
-	public void setStackable( boolean stackable )
+	public void setStackable( Boolean stackable )
 	{
 		this.stackable = stackable;
 	}
@@ -1585,7 +1585,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public boolean isSwitchable()
+	public Boolean isSwitchable()
 	{
 		return switchable;
 	}
@@ -1593,7 +1593,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public void setSwitchable( boolean switchable )
+	public void setSwitchable( Boolean switchable )
 	{
 		this.switchable = switchable;
 	}
@@ -1681,7 +1681,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public boolean isUseNegativeColorIfDown()
+	public Boolean isUseNegativeColorIfDown()
 	{
 		return useNegativeColorIfDown;
 	}
@@ -1689,7 +1689,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public void setUseNegativeColorIfDown( boolean useNegativeColorIfDown )
+	public void setUseNegativeColorIfDown( Boolean useNegativeColorIfDown )
 	{
 		this.useNegativeColorIfDown = useNegativeColorIfDown;
 	}
@@ -1729,7 +1729,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public boolean isVisibleInLegend()
+	public Boolean isVisibleInLegend()
 	{
 		return visibleInLegend;
 	}
@@ -1737,7 +1737,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public void setVisibleInLegend( boolean visibleInLegend )
+	public void setVisibleInLegend( Boolean visibleInLegend )
 	{
 		this.visibleInLegend = visibleInLegend;
 	}

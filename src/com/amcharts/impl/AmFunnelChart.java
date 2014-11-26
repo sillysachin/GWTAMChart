@@ -134,16 +134,16 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	 * @see com.amcharts.json.IsAmFunnelChart#isRotate()
 	 */
 	@Override
-	public boolean isRotate()
+	public Boolean isRotate()
 	{
 		return getJso().isRotate();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setRotate(boolean)
+	 * @see com.amcharts.json.IsAmFunnelChart#setRotate(Boolean)
 	 */
 	@Override
-	public void setRotate( boolean rotate )
+	public void setRotate( Boolean rotate )
 	{
 		this.getJso().setRotate( rotate );
 	}

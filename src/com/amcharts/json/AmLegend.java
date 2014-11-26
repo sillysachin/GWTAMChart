@@ -10,7 +10,7 @@ public final class AmLegend implements IsAmLegend
 {
 	private String align;
 
-	private boolean autoMargins;
+	private Boolean autoMargins;
 
 	private double backgroundAlpha;
 
@@ -28,7 +28,7 @@ public final class AmLegend implements IsAmLegend
 
 	private String divId;
 
-	private boolean equalWidths;
+	private Boolean equalWidths;
 
 	private double fontSize;
 
@@ -68,7 +68,7 @@ public final class AmLegend implements IsAmLegend
 
 	private String position;
 
-	private boolean reversedOrder;
+	private Boolean reversedOrder;
 
 	private double right;
 
@@ -76,25 +76,25 @@ public final class AmLegend implements IsAmLegend
 
 	private double rollOverGraphAlpha;
 
-	private boolean showEntries;
+	private Boolean showEntries;
 
 	private double spacing;
 
-	private boolean switchable;
+	private Boolean switchable;
 
 	private String switchColor;
 
 	private String switchType;
 
-	private boolean textClickEnabled;
+	private Boolean textClickEnabled;
 
 	private double top;
 
-	private boolean useGraphSettings;
+	private Boolean useGraphSettings;
 
-	private boolean useMarkerColorForLabels;
+	private Boolean useMarkerColorForLabels;
 
-	private boolean useMarkerColorForValues;
+	private Boolean useMarkerColorForValues;
 
 	private String valueAlign;
 
@@ -127,7 +127,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Used if chart is Serial or XY. In case true, margins of the legend are adjusted and made equal to chart's margins."
 	 */
-	public boolean isAutoMargins()
+	public Boolean isAutoMargins()
 	{
 		return autoMargins;
 	}
@@ -135,7 +135,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Used if chart is Serial or XY. In case true, margins of the legend are adjusted and made equal to chart's margins."
 	 */
-	public void setAutoMargins( boolean autoMargins )
+	public void setAutoMargins( Boolean autoMargins )
 	{
 		this.autoMargins = autoMargins;
 	}
@@ -271,7 +271,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies if each of legend entry should be equal to the most wide entry. Won't look good if legend has more than one line.
 	 */
-	public boolean isEqualWidths()
+	public Boolean isEqualWidths()
 	{
 		return equalWidths;
 	}
@@ -279,7 +279,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies if each of legend entry should be equal to the most wide entry. Won't look good if legend has more than one line.
 	 */
-	public void setEqualWidths( boolean equalWidths )
+	public void setEqualWidths( Boolean equalWidths )
 	{
 		this.equalWidths = equalWidths;
 	}
@@ -591,7 +591,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies whether legend entries should be placed in reversed order.
 	 */
-	public boolean isReversedOrder()
+	public Boolean isReversedOrder()
 	{
 		return reversedOrder;
 	}
@@ -599,7 +599,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies whether legend entries should be placed in reversed order.
 	 */
-	public void setReversedOrder( boolean reversedOrder )
+	public void setReversedOrder( Boolean reversedOrder )
 	{
 		this.reversedOrder = reversedOrder;
 	}
@@ -655,7 +655,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * You can use this property to turn all the legend entries off.
 	 */
-	public boolean isShowEntries()
+	public Boolean isShowEntries()
 	{
 		return showEntries;
 	}
@@ -663,7 +663,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * You can use this property to turn all the legend entries off.
 	 */
-	public void setShowEntries( boolean showEntries )
+	public void setShowEntries( Boolean showEntries )
 	{
 		this.showEntries = showEntries;
 	}
@@ -687,7 +687,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Whether showing/hiding of graphs by clicking on the legend marker is enabled or not. In case legend is used with AmMap, this is set to false automatically."
 	 */
-	public boolean isSwitchable()
+	public Boolean isSwitchable()
 	{
 		return switchable;
 	}
@@ -695,7 +695,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Whether showing/hiding of graphs by clicking on the legend marker is enabled or not. In case legend is used with AmMap, this is set to false automatically."
 	 */
-	public void setSwitchable( boolean switchable )
+	public void setSwitchable( Boolean switchable )
 	{
 		this.switchable = switchable;
 	}
@@ -735,7 +735,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "If true, clicking on the text will show/hide balloon of the graph. Otherwise it will show/hide graph/slice, if switchable is set to true."
 	 */
-	public boolean isTextClickEnabled()
+	public Boolean isTextClickEnabled()
 	{
 		return textClickEnabled;
 	}
@@ -743,7 +743,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "If true, clicking on the text will show/hide balloon of the graph. Otherwise it will show/hide graph/slice, if switchable is set to true."
 	 */
-	public void setTextClickEnabled( boolean textClickEnabled )
+	public void setTextClickEnabled( Boolean textClickEnabled )
 	{
 		this.textClickEnabled = textClickEnabled;
 	}
@@ -767,7 +767,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Legend markers can mirror graph�s settings, displaying a line and a real bullet as in the graph itself. Set this property to true if you want to enable this feature."
 	 */
-	public boolean isUseGraphSettings()
+	public Boolean isUseGraphSettings()
 	{
 		return useGraphSettings;
 	}
@@ -775,7 +775,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "Legend markers can mirror graph�s settings, displaying a line and a real bullet as in the graph itself. Set this property to true if you want to enable this feature."
 	 */
-	public void setUseGraphSettings( boolean useGraphSettings )
+	public void setUseGraphSettings( Boolean useGraphSettings )
 	{
 		this.useGraphSettings = useGraphSettings;
 	}
@@ -783,7 +783,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Labels will use marker color if you set this to true.
 	 */
-	public boolean isUseMarkerColorForLabels()
+	public Boolean isUseMarkerColorForLabels()
 	{
 		return useMarkerColorForLabels;
 	}
@@ -791,7 +791,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Labels will use marker color if you set this to true.
 	 */
-	public void setUseMarkerColorForLabels( boolean useMarkerColorForLabels )
+	public void setUseMarkerColorForLabels( Boolean useMarkerColorForLabels )
 	{
 		this.useMarkerColorForLabels = useMarkerColorForLabels;
 	}
@@ -799,7 +799,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies if legend values should be use same color as corresponding markers.
 	 */
-	public boolean isUseMarkerColorForValues()
+	public Boolean isUseMarkerColorForValues()
 	{
 		return useMarkerColorForValues;
 	}
@@ -807,7 +807,7 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * Specifies if legend values should be use same color as corresponding markers.
 	 */
-	public void setUseMarkerColorForValues( boolean useMarkerColorForValues )
+	public void setUseMarkerColorForValues( Boolean useMarkerColorForValues )
 	{
 		this.useMarkerColorForValues = useMarkerColorForValues;
 	}

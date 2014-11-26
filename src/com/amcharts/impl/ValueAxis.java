@@ -160,7 +160,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public final boolean isIncludeGuidesInMinMax()
+	public final Boolean isIncludeGuidesInMinMax()
 	{
 		return getJso().isIncludeGuidesInMinMax();
 	}
@@ -168,7 +168,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public final void setIncludeGuidesInMinMax( boolean includeGuidesInMinMax )
+	public final void setIncludeGuidesInMinMax( Boolean includeGuidesInMinMax )
 	{
 		getJso().setIncludeGuidesInMinMax( includeGuidesInMinMax );
 	}
@@ -176,7 +176,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public final boolean isIncludeHidden()
+	public final Boolean isIncludeHidden()
 	{
 		return getJso().isIncludeHidden();
 	}
@@ -184,7 +184,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public final void setIncludeHidden( boolean includeHidden )
+	public final void setIncludeHidden( Boolean includeHidden )
 	{
 		getJso().setIncludeHidden( includeHidden );
 	}
@@ -192,7 +192,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final boolean isDoublesOnly()
+	public final Boolean isDoublesOnly()
 	{
 		return getJso().isDoublesOnly();
 	}
@@ -200,7 +200,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final void setDoublesOnly( boolean integersOnly )
+	public final void setDoublesOnly( Boolean integersOnly )
 	{
 		getJso().setDoublesOnly( integersOnly );
 	}
@@ -224,7 +224,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public final boolean isLogarithmic()
+	public final Boolean isLogarithmic()
 	{
 		return getJso().isLogarithmic();
 	}
@@ -232,7 +232,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public final void setLogarithmic( boolean logarithmic )
+	public final void setLogarithmic( Boolean logarithmic )
 	{
 		getJso().setLogarithmic( logarithmic );
 	}
@@ -336,7 +336,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public final boolean isRadarCategoriesEnabled()
+	public final Boolean isRadarCategoriesEnabled()
 	{
 		return getJso().isRadarCategoriesEnabled();
 	}
@@ -344,7 +344,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public final void setRadarCategoriesEnabled( boolean radarCategoriesEnabled )
+	public final void setRadarCategoriesEnabled( Boolean radarCategoriesEnabled )
 	{
 		getJso().setRadarCategoriesEnabled( radarCategoriesEnabled );
 	}
@@ -352,7 +352,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public final boolean isRecalculateToPercents()
+	public final Boolean isRecalculateToPercents()
 	{
 		return getJso().isRecalculateToPercents();
 	}
@@ -360,7 +360,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public final void setRecalculateToPercents( boolean recalculateToPercents )
+	public final void setRecalculateToPercents( Boolean recalculateToPercents )
 	{
 		getJso().setRecalculateToPercents( recalculateToPercents );
 	}
@@ -368,7 +368,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public final boolean isReversed()
+	public final Boolean isReversed()
 	{
 		return getJso().isReversed();
 	}
@@ -376,7 +376,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public final void setReversed( boolean reversed )
+	public final void setReversed( Boolean reversed )
 	{
 		getJso().setReversed( reversed );
 	}
@@ -528,7 +528,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public final boolean isUsePrefixes()
+	public final Boolean isUsePrefixes()
 	{
 		return getJso().isUsePrefixes();
 	}
@@ -536,7 +536,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public final void setUsePrefixes( boolean usePrefixes )
+	public final void setUsePrefixes( Boolean usePrefixes )
 	{
 		getJso().setUsePrefixes( usePrefixes );
 	}
@@ -544,7 +544,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public final boolean isUseScientificNotation()
+	public final Boolean isUseScientificNotation()
 	{
 		return getJso().isUseScientificNotation();
 	}
@@ -552,7 +552,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public final void setUseScientificNotation( boolean useScientificNotation )
+	public final void setUseScientificNotation( Boolean useScientificNotation )
 	{
 		getJso().setUseScientificNotation( useScientificNotation );
 	}

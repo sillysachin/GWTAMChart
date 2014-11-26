@@ -16,7 +16,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 
 	private String pullDistance;
 
-	private boolean rotate;
+	private Boolean rotate;
 
 	private double startX;
 
@@ -136,16 +136,16 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	 * @see com.amcharts.json.IsAmFunnelChart#isRotate()
 	 */
 	@Override
-	public boolean isRotate()
+	public Boolean isRotate()
 	{
 		return rotate;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setRotate(boolean)
+	 * @see com.amcharts.json.IsAmFunnelChart#setRotate(Boolean)
 	 */
 	@Override
-	public void setRotate( boolean rotate )
+	public void setRotate( Boolean rotate )
 	{
 		this.rotate = rotate;
 	}

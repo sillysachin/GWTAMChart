@@ -112,42 +112,42 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public final native boolean isIncludeGuidesInMinMax() /*-{
+	public final native Boolean isIncludeGuidesInMinMax() /*-{
 		return includeGuidesInMinMax;
 	}-*/;
 
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public final native void setIncludeGuidesInMinMax( boolean includeGuidesInMinMax ) /*-{
+	public final native void setIncludeGuidesInMinMax( Boolean includeGuidesInMinMax ) /*-{
 		this.includeGuidesInMinMax = includeGuidesInMinMax;
 	}-*/;
 
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public final native boolean isIncludeHidden() /*-{
+	public final native Boolean isIncludeHidden() /*-{
 		return includeHidden;
 	}-*/;
 
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public final native void setIncludeHidden( boolean includeHidden ) /*-{
+	public final native void setIncludeHidden( Boolean includeHidden ) /*-{
 		this.includeHidden = includeHidden;
 	}-*/;
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final native boolean isdoublesOnly() /*-{
+	public final native Boolean isdoublesOnly() /*-{
 		return integersOnly;
 	}-*/;
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final native void setdoublesOnly( boolean integersOnly ) /*-{
+	public final native void setdoublesOnly( Boolean integersOnly ) /*-{
 		this.integersOnly = integersOnly;
 	}-*/;
 
@@ -168,14 +168,14 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public final native boolean isLogarithmic() /*-{
+	public final native Boolean isLogarithmic() /*-{
 		return logarithmic;
 	}-*/;
 
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public final native void setLogarithmic( boolean logarithmic ) /*-{
+	public final native void setLogarithmic( Boolean logarithmic ) /*-{
 		this.logarithmic = logarithmic;
 	}-*/;
 
@@ -266,42 +266,42 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public final native boolean isRadarCategoriesEnabled() /*-{
+	public final native Boolean isRadarCategoriesEnabled() /*-{
 		return radarCategoriesEnabled;
 	}-*/;
 
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public final native void setRadarCategoriesEnabled( boolean radarCategoriesEnabled ) /*-{
+	public final native void setRadarCategoriesEnabled( Boolean radarCategoriesEnabled ) /*-{
 		this.radarCategoriesEnabled = radarCategoriesEnabled;
 	}-*/;
 
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public final native boolean isRecalculateToPercents() /*-{
+	public final native Boolean isRecalculateToPercents() /*-{
 		return recalculateToPercents;
 	}-*/;
 
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public final native void setRecalculateToPercents( boolean recalculateToPercents ) /*-{
+	public final native void setRecalculateToPercents( Boolean recalculateToPercents ) /*-{
 		this.recalculateToPercents = recalculateToPercents;
 	}-*/;
 
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public final native boolean isReversed() /*-{
+	public final native Boolean isReversed() /*-{
 		return reversed;
 	}-*/;
 
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public final native void setReversed( boolean reversed ) /*-{
+	public final native void setReversed( Boolean reversed ) /*-{
 		this.reversed = reversed;
 	}-*/;
 
@@ -434,39 +434,39 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public final native boolean isUsePrefixes() /*-{
+	public final native Boolean isUsePrefixes() /*-{
 		return usePrefixes;
 	}-*/;
 
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public final native void setUsePrefixes( boolean usePrefixes ) /*-{
+	public final native void setUsePrefixes( Boolean usePrefixes ) /*-{
 		this.usePrefixes = usePrefixes;
 	}-*/;
 
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public final native boolean isUseScientificNotation() /*-{
+	public final native Boolean isUseScientificNotation() /*-{
 		return useScientificNotation;
 	}-*/;
 
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public final native void setUseScientificNotation( boolean useScientificNotation ) /*-{
+	public final native void setUseScientificNotation( Boolean useScientificNotation ) /*-{
 		this.useScientificNotation = useScientificNotation;
 	}-*/;
 
 	@Override
-	public final native boolean isDoublesOnly()
+	public final native Boolean isDoublesOnly()
 	/*-{
 		return doublesOnly;
 	}-*/;
 
 	@Override
-	public final native void setDoublesOnly( boolean integersOnly )
+	public final native void setDoublesOnly( Boolean integersOnly )
 	/*-{
 		this.doublesOnly = integersOnly;
 	}-*/;

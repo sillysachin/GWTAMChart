@@ -31,14 +31,14 @@ public final class AmBalloon implements IJavaScriptWrapper<AmBalloonJSO>, IsAmBa
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public final native boolean isAdjustBorderColor() /*-{
+	public final native Boolean isAdjustBorderColor() /*-{
 		return this.@com.amcharts.impl.AmBalloon::jso.adjustBorderColor;
 	}-*/;
 
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public final native void setAdjustBorderColor( boolean adjustBorderColor ) /*-{
+	public final native void setAdjustBorderColor( Boolean adjustBorderColor ) /*-{
 		this.@com.amcharts.impl.AmBalloon::jso.adjustBorderColor = adjustBorderColor;
 	}-*/;
 
@@ -171,14 +171,14 @@ public final class AmBalloon implements IJavaScriptWrapper<AmBalloonJSO>, IsAmBa
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public final native boolean isFixedPosition() /*-{
+	public final native Boolean isFixedPosition() /*-{
 		return this.@com.amcharts.impl.AmBalloon::jso.fixedPosition;
 	}-*/;
 
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public final native void setFixedPosition( boolean fixedPosition ) /*-{
+	public final native void setFixedPosition( Boolean fixedPosition ) /*-{
 		this.@com.amcharts.impl.AmBalloon::jso.fixedPosition = fixedPosition;
 	}-*/;
 
@@ -297,14 +297,14 @@ public final class AmBalloon implements IJavaScriptWrapper<AmBalloonJSO>, IsAmBa
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public final native boolean isShowBullet() /*-{
+	public final native Boolean isShowBullet() /*-{
 		return this.@com.amcharts.impl.AmBalloon::jso.showBullet;
 	}-*/;
 
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public final native void setShowBullet( boolean showBullet ) /*-{
+	public final native void setShowBullet( Boolean showBullet ) /*-{
 		this.@com.amcharts.impl.AmBalloon::jso.showBullet = showBullet;
 	}-*/;
 

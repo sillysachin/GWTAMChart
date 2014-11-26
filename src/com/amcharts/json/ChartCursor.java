@@ -10,9 +10,9 @@ public class ChartCursor implements IsChartCursor
 
 	private double animationDuration;
 
-	private boolean avoidBalloonOverlapping;
+	private Boolean avoidBalloonOverlapping;
 
-	private boolean bulletsEnabled;
+	private Boolean bulletsEnabled;
 
 	private double bulletSize;
 
@@ -22,7 +22,7 @@ public class ChartCursor implements IsChartCursor
 
 	private String categoryBalloonDateFormat;
 
-	private boolean categoryBalloonEnabled;
+	private Boolean categoryBalloonEnabled;
 
 	private IsFunction categoryBalloonFunction;
 
@@ -34,37 +34,37 @@ public class ChartCursor implements IsChartCursor
 
 	private String cursorPosition;
 
-	private boolean enabled;
+	private Boolean enabled;
 
-	private boolean fullWidth;
+	private Boolean fullWidth;
 
 	private double graphBulletAlpha;
 
 	private double graphBulletSize;
 
-	private boolean oneBalloonOnly;
+	private Boolean oneBalloonOnly;
 
-	private boolean pan;
+	private Boolean pan;
 
 	private double selectionAlpha;
 
-	private boolean selectWithoutZooming;
+	private Boolean selectWithoutZooming;
 
-	private boolean showNextAvailable;
+	private Boolean showNextAvailable;
 
-	private boolean valueBalloonsEnabled;
+	private Boolean valueBalloonsEnabled;
 
 	private double valueLineAlpha;
 
 	private IsValueAxis valueLineAxis;
 
-	private boolean valueLineBalloonEnabled;
+	private Boolean valueLineBalloonEnabled;
 
-	private boolean valueLineEnabled;
+	private Boolean valueLineEnabled;
 
-	private boolean zoomable;
+	private Boolean zoomable;
 
-	private boolean zooming;
+	private Boolean zooming;
 
 	/* (non-Javadoc)
 	 * @see com.amcharts.json.IsChartCursor#getAdjustment()
@@ -106,16 +106,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isAvoidBalloonOverlapping()
 	 */
 	@Override
-	public boolean isAvoidBalloonOverlapping()
+	public Boolean isAvoidBalloonOverlapping()
 	{
 		return avoidBalloonOverlapping;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setAvoidBalloonOverlapping(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setAvoidBalloonOverlapping(Boolean)
 	 */
 	@Override
-	public void setAvoidBalloonOverlapping( boolean avoidBalloonOverlapping )
+	public void setAvoidBalloonOverlapping( Boolean avoidBalloonOverlapping )
 	{
 		this.avoidBalloonOverlapping = avoidBalloonOverlapping;
 	}
@@ -124,16 +124,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isBulletsEnabled()
 	 */
 	@Override
-	public boolean isBulletsEnabled()
+	public Boolean isBulletsEnabled()
 	{
 		return bulletsEnabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setBulletsEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setBulletsEnabled(Boolean)
 	 */
 	@Override
-	public void setBulletsEnabled( boolean bulletsEnabled )
+	public void setBulletsEnabled( Boolean bulletsEnabled )
 	{
 		this.bulletsEnabled = bulletsEnabled;
 	}
@@ -214,16 +214,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isCategoryBalloonEnabled()
 	 */
 	@Override
-	public boolean isCategoryBalloonEnabled()
+	public Boolean isCategoryBalloonEnabled()
 	{
 		return categoryBalloonEnabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setCategoryBalloonEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setCategoryBalloonEnabled(Boolean)
 	 */
 	@Override
-	public void setCategoryBalloonEnabled( boolean categoryBalloonEnabled )
+	public void setCategoryBalloonEnabled( Boolean categoryBalloonEnabled )
 	{
 		this.categoryBalloonEnabled = categoryBalloonEnabled;
 	}
@@ -322,16 +322,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isEnabled()
 	 */
 	@Override
-	public boolean isEnabled()
+	public Boolean isEnabled()
 	{
 		return enabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setEnabled(Boolean)
 	 */
 	@Override
-	public void setEnabled( boolean enabled )
+	public void setEnabled( Boolean enabled )
 	{
 		this.enabled = enabled;
 	}
@@ -340,16 +340,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isFullWidth()
 	 */
 	@Override
-	public boolean isFullWidth()
+	public Boolean isFullWidth()
 	{
 		return fullWidth;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setFullWidth(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setFullWidth(Boolean)
 	 */
 	@Override
-	public void setFullWidth( boolean fullWidth )
+	public void setFullWidth( Boolean fullWidth )
 	{
 		this.fullWidth = fullWidth;
 	}
@@ -394,16 +394,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isOneBalloonOnly()
 	 */
 	@Override
-	public boolean isOneBalloonOnly()
+	public Boolean isOneBalloonOnly()
 	{
 		return oneBalloonOnly;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setOneBalloonOnly(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setOneBalloonOnly(Boolean)
 	 */
 	@Override
-	public void setOneBalloonOnly( boolean oneBalloonOnly )
+	public void setOneBalloonOnly( Boolean oneBalloonOnly )
 	{
 		this.oneBalloonOnly = oneBalloonOnly;
 	}
@@ -412,16 +412,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isPan()
 	 */
 	@Override
-	public boolean isPan()
+	public Boolean isPan()
 	{
 		return pan;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setPan(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setPan(Boolean)
 	 */
 	@Override
-	public void setPan( boolean pan )
+	public void setPan( Boolean pan )
 	{
 		this.pan = pan;
 	}
@@ -448,16 +448,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isSelectWithoutZooming()
 	 */
 	@Override
-	public boolean isSelectWithoutZooming()
+	public Boolean isSelectWithoutZooming()
 	{
 		return selectWithoutZooming;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setSelectWithoutZooming(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setSelectWithoutZooming(Boolean)
 	 */
 	@Override
-	public void setSelectWithoutZooming( boolean selectWithoutZooming )
+	public void setSelectWithoutZooming( Boolean selectWithoutZooming )
 	{
 		this.selectWithoutZooming = selectWithoutZooming;
 	}
@@ -466,16 +466,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isShowNextAvailable()
 	 */
 	@Override
-	public boolean isShowNextAvailable()
+	public Boolean isShowNextAvailable()
 	{
 		return showNextAvailable;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setShowNextAvailable(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setShowNextAvailable(Boolean)
 	 */
 	@Override
-	public void setShowNextAvailable( boolean showNextAvailable )
+	public void setShowNextAvailable( Boolean showNextAvailable )
 	{
 		this.showNextAvailable = showNextAvailable;
 	}
@@ -484,16 +484,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isValueBalloonsEnabled()
 	 */
 	@Override
-	public boolean isValueBalloonsEnabled()
+	public Boolean isValueBalloonsEnabled()
 	{
 		return valueBalloonsEnabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setValueBalloonsEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setValueBalloonsEnabled(Boolean)
 	 */
 	@Override
-	public void setValueBalloonsEnabled( boolean valueBalloonsEnabled )
+	public void setValueBalloonsEnabled( Boolean valueBalloonsEnabled )
 	{
 		this.valueBalloonsEnabled = valueBalloonsEnabled;
 	}
@@ -538,16 +538,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isValueLineBalloonEnabled()
 	 */
 	@Override
-	public boolean isValueLineBalloonEnabled()
+	public Boolean isValueLineBalloonEnabled()
 	{
 		return valueLineBalloonEnabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setValueLineBalloonEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setValueLineBalloonEnabled(Boolean)
 	 */
 	@Override
-	public void setValueLineBalloonEnabled( boolean valueLineBalloonEnabled )
+	public void setValueLineBalloonEnabled( Boolean valueLineBalloonEnabled )
 	{
 		this.valueLineBalloonEnabled = valueLineBalloonEnabled;
 	}
@@ -556,16 +556,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isValueLineEnabled()
 	 */
 	@Override
-	public boolean isValueLineEnabled()
+	public Boolean isValueLineEnabled()
 	{
 		return valueLineEnabled;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setValueLineEnabled(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setValueLineEnabled(Boolean)
 	 */
 	@Override
-	public void setValueLineEnabled( boolean valueLineEnabled )
+	public void setValueLineEnabled( Boolean valueLineEnabled )
 	{
 		this.valueLineEnabled = valueLineEnabled;
 	}
@@ -574,16 +574,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isZoomable()
 	 */
 	@Override
-	public boolean isZoomable()
+	public Boolean isZoomable()
 	{
 		return zoomable;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setZoomable(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setZoomable(Boolean)
 	 */
 	@Override
-	public void setZoomable( boolean zoomable )
+	public void setZoomable( Boolean zoomable )
 	{
 		this.zoomable = zoomable;
 	}
@@ -592,16 +592,16 @@ public class ChartCursor implements IsChartCursor
 	 * @see com.amcharts.json.IsChartCursor#isZooming()
 	 */
 	@Override
-	public boolean isZooming()
+	public Boolean isZooming()
 	{
 		return zooming;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsChartCursor#setZooming(boolean)
+	 * @see com.amcharts.json.IsChartCursor#setZooming(Boolean)
 	 */
 	@Override
-	public void setZooming( boolean zooming )
+	public void setZooming( Boolean zooming )
 	{
 		this.zooming = zooming;
 	}

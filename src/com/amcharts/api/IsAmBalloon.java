@@ -5,12 +5,12 @@ public interface IsAmBalloon
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public boolean isAdjustBorderColor();
+	public Boolean isAdjustBorderColor();
 
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public void setAdjustBorderColor( boolean adjustBorderColor );
+	public void setAdjustBorderColor( Boolean adjustBorderColor );
 
 	/**
 	 * "Duration of balloon movement from previous point to current point, in seconds."
@@ -105,12 +105,12 @@ public interface IsAmBalloon
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public boolean isFixedPosition();
+	public Boolean isFixedPosition();
 
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public void setFixedPosition( boolean fixedPosition );
+	public void setFixedPosition( Boolean fixedPosition );
 
 	/**
 	 * Size of text in the balloon. Chart's fontSize is used by default.
@@ -195,12 +195,12 @@ public interface IsAmBalloon
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public boolean isShowBullet();
+	public Boolean isShowBullet();
 
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public void setShowBullet( boolean showBullet );
+	public void setShowBullet( Boolean showBullet );
 
 	/**
 	 * "Text alignment, possible values 'left', 'middle' and 'right'"

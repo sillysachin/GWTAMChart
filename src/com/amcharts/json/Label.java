@@ -8,7 +8,7 @@ public final class Label implements IsLabel
 
 	private double alpha;
 
-	private boolean bold;
+	private Boolean bold;
 
 	private String color;
 
@@ -61,7 +61,7 @@ public final class Label implements IsLabel
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public boolean isBold()
+	public Boolean isBold()
 	{
 		return bold;
 	}
@@ -69,7 +69,7 @@ public final class Label implements IsLabel
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public void setBold( boolean bold )
+	public void setBold( Boolean bold )
 	{
 		this.bold = bold;
 	}

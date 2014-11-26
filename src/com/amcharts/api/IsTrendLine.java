@@ -107,12 +107,12 @@ public interface IsTrendLine
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public boolean isIsProtected();
+	public Boolean isIsProtected();
 
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public void setIsProtected( boolean isProtected );
+	public void setIsProtected( Boolean isProtected );
 
 	/**
 	 * Line opacity.

@@ -8,12 +8,12 @@ public interface IsAmAngularChart
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public abstract boolean isAdjustSize();
+	public abstract Boolean isAdjustSize();
 
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public abstract void setAdjustSize( boolean adjustSize );
+	public abstract void setAdjustSize( Boolean adjustSize );
 
 	/**
 	 * Array of arrows.
@@ -38,12 +38,12 @@ public interface IsAmAngularChart
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public abstract boolean isClockWiseOnly();
+	public abstract Boolean isClockWiseOnly();
 
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public abstract void setClockWiseOnly( boolean clockWiseOnly );
+	public abstract void setClockWiseOnly( Boolean clockWiseOnly );
 
 	/**
 	 * Gauge face opacity.

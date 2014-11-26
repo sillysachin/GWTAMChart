@@ -44,14 +44,14 @@ public final class Title implements IJavaScriptWrapper<TitleJSO>, IsTitle
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native boolean isBold() /*-{
+	public final native Boolean isBold() /*-{
 		return this.@com.amcharts.impl.Title::jso.bold;
 	}-*/;
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native void setBold( boolean bold ) /*-{
+	public final native void setBold( Boolean bold ) /*-{
 		this.@com.amcharts.impl.Title::jso.bold = bold;
 	}-*/;
 

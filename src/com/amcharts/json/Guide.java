@@ -7,7 +7,7 @@ import com.amcharts.api.IsValueAxis;
 
 public final class Guide implements IsGuide
 {
-	private boolean above;
+	private Boolean above;
 
 	private double angle;
 
@@ -15,7 +15,7 @@ public final class Guide implements IsGuide
 
 	private String balloonText;
 
-	private boolean boldLabel;
+	private Boolean boldLabel;
 
 	private String category;
 
@@ -25,7 +25,7 @@ public final class Guide implements IsGuide
 
 	private Date date;
 
-	private boolean expand;
+	private Boolean expand;
 
 	private double fillAlpha;
 
@@ -35,7 +35,7 @@ public final class Guide implements IsGuide
 
 	private String id;
 
-	private boolean inside;
+	private Boolean inside;
 
 	private String label;
 
@@ -66,7 +66,7 @@ public final class Guide implements IsGuide
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public boolean isAbove()
+	public Boolean isAbove()
 	{
 		return above;
 	}
@@ -74,7 +74,7 @@ public final class Guide implements IsGuide
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public void setAbove( boolean above )
+	public void setAbove( Boolean above )
 	{
 		this.above = above;
 	}
@@ -130,7 +130,7 @@ public final class Guide implements IsGuide
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public boolean isBoldLabel()
+	public Boolean isBoldLabel()
 	{
 		return boldLabel;
 	}
@@ -138,7 +138,7 @@ public final class Guide implements IsGuide
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public void setBoldLabel( boolean boldLabel )
+	public void setBoldLabel( Boolean boldLabel )
 	{
 		this.boldLabel = boldLabel;
 	}
@@ -210,7 +210,7 @@ public final class Guide implements IsGuide
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public boolean isExpand()
+	public Boolean isExpand()
 	{
 		return expand;
 	}
@@ -218,7 +218,7 @@ public final class Guide implements IsGuide
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public void setExpand( boolean expand )
+	public void setExpand( Boolean expand )
 	{
 		this.expand = expand;
 	}
@@ -290,7 +290,7 @@ public final class Guide implements IsGuide
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public boolean isInside()
+	public Boolean isInside()
 	{
 		return inside;
 	}
@@ -298,7 +298,7 @@ public final class Guide implements IsGuide
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public void setInside( boolean inside )
+	public void setInside( Boolean inside )
 	{
 		this.inside = inside;
 	}

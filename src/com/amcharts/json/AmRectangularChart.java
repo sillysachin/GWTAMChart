@@ -13,7 +13,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 
 	private double autoMarginOffset;
 
-	private boolean autoMargins;
+	private Boolean autoMargins;
 
 	private IsChartCursor chartCursor;
 
@@ -27,7 +27,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 
 	private double marginRight;
 
-	private boolean marginsUpdated;
+	private Boolean marginsUpdated;
 
 	private double marginTop;
 
@@ -92,7 +92,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public boolean isAutoMargins()
+	public Boolean isAutoMargins()
 	{
 		return autoMargins;
 	}
@@ -100,7 +100,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public void setAutoMargins( boolean autoMargins )
+	public void setAutoMargins( Boolean autoMargins )
 	{
 		this.autoMargins = autoMargins;
 	}
@@ -204,7 +204,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public boolean isMarginsUpdated()
+	public Boolean isMarginsUpdated()
 	{
 		return marginsUpdated;
 	}
@@ -212,7 +212,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public void setMarginsUpdated( boolean marginsUpdated )
+	public void setMarginsUpdated( Boolean marginsUpdated )
 	{
 		this.marginsUpdated = marginsUpdated;
 	}

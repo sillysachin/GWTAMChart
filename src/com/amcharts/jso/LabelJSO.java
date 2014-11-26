@@ -40,14 +40,14 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public final native boolean isBold() /*-{
+	public final native Boolean isBold() /*-{
 		return bold;
 	}-*/;
 
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public final native void setBold( boolean bold ) /*-{
+	public final native void setBold( Boolean bold ) /*-{
 		this.bold = bold;
 	}-*/;
 

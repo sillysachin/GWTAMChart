@@ -58,14 +58,14 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public final native boolean isGridAboveGraphs() /*-{
+	public final native Boolean isGridAboveGraphs() /*-{
 		return gridAboveGraphs;
 	}-*/;
 
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public final native void setGridAboveGraphs( boolean gridAboveGraphs ) /*-{
+	public final native void setGridAboveGraphs( Boolean gridAboveGraphs ) /*-{
 		this.gridAboveGraphs = gridAboveGraphs;
 	}-*/;
 
@@ -86,14 +86,14 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public final native boolean isSequencedAnimation() /*-{
+	public final native Boolean isSequencedAnimation() /*-{
 		return sequencedAnimation;
 	}-*/;
 
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public final native void setSequencedAnimation( boolean sequencedAnimation ) /*-{
+	public final native void setSequencedAnimation( Boolean sequencedAnimation ) /*-{
 		this.sequencedAnimation = sequencedAnimation;
 	}-*/;
 

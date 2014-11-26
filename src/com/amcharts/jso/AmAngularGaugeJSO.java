@@ -16,14 +16,14 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public final native boolean isAdjustSize() /*-{
+	public final native Boolean isAdjustSize() /*-{
 		return adjustSize;
 	}-*/;
 
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public final native void setAdjustSize( boolean adjustSize ) /*-{
+	public final native void setAdjustSize( Boolean adjustSize ) /*-{
 		this.adjustSize = adjustSize;
 	}-*/;
 
@@ -58,14 +58,14 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public final native boolean isClockWiseOnly() /*-{
+	public final native Boolean isClockWiseOnly() /*-{
 		return clockWiseOnly;
 	}-*/;
 
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public final native void setClockWiseOnly( boolean clockWiseOnly ) /*-{
+	public final native void setClockWiseOnly( Boolean clockWiseOnly ) /*-{
 		this.clockWiseOnly = clockWiseOnly;
 	}-*/;
 

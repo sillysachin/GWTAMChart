@@ -64,7 +64,7 @@ public class JSNIWriter
 			for ( JavaClassAttribute jca : jcaItems )
 			{
 				fieldName = jca.getFieldName();
-				if ( jca.getJavaType().equals( "boolean" ) )
+				if ( jca.getJavaType().equals( "Boolean" ) )
 				{
 					jsoWriter
 							.emitJavadoc( jca.getJavadocComment() )

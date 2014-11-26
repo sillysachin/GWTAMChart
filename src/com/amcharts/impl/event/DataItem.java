@@ -158,22 +158,22 @@ public class DataItem extends JavaScriptObject
 		this.startY = startY;
 	}-*/;
 
-	public final native boolean isStarted()
+	public final native Boolean isStarted()
 	/*-{
 		return started;
 	}-*/;
 
-	public final native void setStarted( boolean started )
+	public final native void setStarted( Boolean started )
 	/*-{
 		this.started = started;
 	}-*/;
 
-	public final native boolean isSwitchable()
+	public final native Boolean isSwitchable()
 	/*-{
 		return switchable;
 	}-*/;
 
-	public final native void setSwitchable( boolean switchable )
+	public final native void setSwitchable( Boolean switchable )
 	/*-{
 		this.switchable = switchable;
 	}-*/;

@@ -13,14 +13,14 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public final native boolean isAutoGridCount() /*-{
+	public final native Boolean isAutoGridCount() /*-{
 		return autoGridCount;
 	}-*/;
 
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public final native void setAutoGridCount( boolean autoGridCount ) /*-{
+	public final native void setAutoGridCount( Boolean autoGridCount ) /*-{
 		this.autoGridCount = autoGridCount;
 	}-*/;
 
@@ -237,14 +237,14 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public final native boolean isHideResizeGrips() /*-{
+	public final native Boolean isHideResizeGrips() /*-{
 		return hideResizeGrips;
 	}-*/;
 
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public final native void setHideResizeGrips( boolean hideResizeGrips ) /*-{
+	public final native void setHideResizeGrips( Boolean hideResizeGrips ) /*-{
 		this.hideResizeGrips = hideResizeGrips;
 	}-*/;
 
@@ -293,14 +293,14 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public final native boolean isResizeEnabled() /*-{
+	public final native Boolean isResizeEnabled() /*-{
 		return resizeEnabled;
 	}-*/;
 
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public final native void setResizeEnabled( boolean resizeEnabled ) /*-{
+	public final native void setResizeEnabled( Boolean resizeEnabled ) /*-{
 		this.resizeEnabled = resizeEnabled;
 	}-*/;
 
@@ -419,14 +419,14 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public final native boolean isUpdateOnReleaseOnly() /*-{
+	public final native Boolean isUpdateOnReleaseOnly() /*-{
 		return updateOnReleaseOnly;
 	}-*/;
 
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public final native void setUpdateOnReleaseOnly( boolean updateOnReleaseOnly ) /*-{
+	public final native void setUpdateOnReleaseOnly( Boolean updateOnReleaseOnly ) /*-{
 		this.updateOnReleaseOnly = updateOnReleaseOnly;
 	}-*/;
 }

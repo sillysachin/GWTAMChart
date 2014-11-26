@@ -30,14 +30,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "Used if chart is Serial or XY. In case true, margins of the legend are adjusted and made equal to chart's margins."
 	 */
-	public final native boolean isAutoMargins() /*-{
+	public final native Boolean isAutoMargins() /*-{
 		return autoMargins;
 	}-*/;
 
 	/**
 	 * "Used if chart is Serial or XY. In case true, margins of the legend are adjusted and made equal to chart's margins."
 	 */
-	public final native void setAutoMargins( boolean autoMargins ) /*-{
+	public final native void setAutoMargins( Boolean autoMargins ) /*-{
 		this.autoMargins = autoMargins;
 	}-*/;
 
@@ -156,14 +156,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * Specifies if each of legend entry should be equal to the most wide entry. Won't look good if legend has more than one line.
 	 */
-	public final native boolean isEqualWidths() /*-{
+	public final native Boolean isEqualWidths() /*-{
 		return equalWidths;
 	}-*/;
 
 	/**
 	 * Specifies if each of legend entry should be equal to the most wide entry. Won't look good if legend has more than one line.
 	 */
-	public final native void setEqualWidths( boolean equalWidths ) /*-{
+	public final native void setEqualWidths( Boolean equalWidths ) /*-{
 		this.equalWidths = equalWidths;
 	}-*/;
 
@@ -436,14 +436,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * Specifies whether legend entries should be placed in reversed order.
 	 */
-	public final native boolean isReversedOrder() /*-{
+	public final native Boolean isReversedOrder() /*-{
 		return reversedOrder;
 	}-*/;
 
 	/**
 	 * Specifies whether legend entries should be placed in reversed order.
 	 */
-	public final native void setReversedOrder( boolean reversedOrder ) /*-{
+	public final native void setReversedOrder( Boolean reversedOrder ) /*-{
 		this.reversedOrder = reversedOrder;
 	}-*/;
 
@@ -492,14 +492,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * You can use this property to turn all the legend entries off.
 	 */
-	public final native boolean isShowEntries() /*-{
+	public final native Boolean isShowEntries() /*-{
 		return showEntries;
 	}-*/;
 
 	/**
 	 * You can use this property to turn all the legend entries off.
 	 */
-	public final native void setShowEntries( boolean showEntries ) /*-{
+	public final native void setShowEntries( Boolean showEntries ) /*-{
 		this.showEntries = showEntries;
 	}-*/;
 
@@ -520,14 +520,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "Whether showing/hiding of graphs by clicking on the legend marker is enabled or not. In case legend is used with AmMap, this is set to false automatically."
 	 */
-	public final native boolean isSwitchable() /*-{
+	public final native Boolean isSwitchable() /*-{
 		return switchable;
 	}-*/;
 
 	/**
 	 * "Whether showing/hiding of graphs by clicking on the legend marker is enabled or not. In case legend is used with AmMap, this is set to false automatically."
 	 */
-	public final native void setSwitchable( boolean switchable ) /*-{
+	public final native void setSwitchable( Boolean switchable ) /*-{
 		this.switchable = switchable;
 	}-*/;
 
@@ -562,14 +562,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "If true, clicking on the text will show/hide balloon of the graph. Otherwise it will show/hide graph/slice, if switchable is set to true."
 	 */
-	public final native boolean isTextClickEnabled() /*-{
+	public final native Boolean isTextClickEnabled() /*-{
 		return textClickEnabled;
 	}-*/;
 
 	/**
 	 * "If true, clicking on the text will show/hide balloon of the graph. Otherwise it will show/hide graph/slice, if switchable is set to true."
 	 */
-	public final native void setTextClickEnabled( boolean textClickEnabled ) /*-{
+	public final native void setTextClickEnabled( Boolean textClickEnabled ) /*-{
 		this.textClickEnabled = textClickEnabled;
 	}-*/;
 
@@ -590,42 +590,42 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	/**
 	 * "Legend markers can mirror graph�s settings, displaying a line and a real bullet as in the graph itself. Set this property to true if you want to enable this feature."
 	 */
-	public final native boolean isUseGraphSettings() /*-{
+	public final native Boolean isUseGraphSettings() /*-{
 		return useGraphSettings;
 	}-*/;
 
 	/**
 	 * "Legend markers can mirror graph�s settings, displaying a line and a real bullet as in the graph itself. Set this property to true if you want to enable this feature."
 	 */
-	public final native void setUseGraphSettings( boolean useGraphSettings ) /*-{
+	public final native void setUseGraphSettings( Boolean useGraphSettings ) /*-{
 		this.useGraphSettings = useGraphSettings;
 	}-*/;
 
 	/**
 	 * Labels will use marker color if you set this to true.
 	 */
-	public final native boolean isUseMarkerColorForLabels() /*-{
+	public final native Boolean isUseMarkerColorForLabels() /*-{
 		return useMarkerColorForLabels;
 	}-*/;
 
 	/**
 	 * Labels will use marker color if you set this to true.
 	 */
-	public final native void setUseMarkerColorForLabels( boolean useMarkerColorForLabels ) /*-{
+	public final native void setUseMarkerColorForLabels( Boolean useMarkerColorForLabels ) /*-{
 		this.useMarkerColorForLabels = useMarkerColorForLabels;
 	}-*/;
 
 	/**
 	 * Specifies if legend values should be use same color as corresponding markers.
 	 */
-	public final native boolean isUseMarkerColorForValues() /*-{
+	public final native Boolean isUseMarkerColorForValues() /*-{
 		return useMarkerColorForValues;
 	}-*/;
 
 	/**
 	 * Specifies if legend values should be use same color as corresponding markers.
 	 */
-	public final native void setUseMarkerColorForValues( boolean useMarkerColorForValues ) /*-{
+	public final native void setUseMarkerColorForValues( Boolean useMarkerColorForValues ) /*-{
 		this.useMarkerColorForValues = useMarkerColorForValues;
 	}-*/;
 

@@ -33,14 +33,14 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 	/**
 	 * Specifies whether number of gridCount is specified automatically, according to the axis size.
 	 */
-	public final native boolean isAutoGridCount() /*-{
+	public final native Boolean isAutoGridCount() /*-{
 		return this.@com.amcharts.impl.ChartScrollbar::jso.autoGridCount;
 	}-*/;
 
 	/**
 	 * Specifies whether number of gridCount is specified automatically, according to the axis size.
 	 */
-	public final native void setAutoGridCount( boolean autoGridCount ) /*-{
+	public final native void setAutoGridCount( Boolean autoGridCount ) /*-{
 		this.@com.amcharts.impl.ChartScrollbar::jso.autoGridCount = autoGridCount;
 	}-*/;
 
@@ -257,14 +257,14 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public final native boolean isHideResizeGrips() /*-{
+	public final native Boolean isHideResizeGrips() /*-{
 		return this.@com.amcharts.impl.ChartScrollbar::jso.hideResizeGrips;
 	}-*/;
 
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public final native void setHideResizeGrips( boolean hideResizeGrips ) /*-{
+	public final native void setHideResizeGrips( Boolean hideResizeGrips ) /*-{
 		this.@com.amcharts.impl.ChartScrollbar::jso.hideResizeGrips = hideResizeGrips;
 	}-*/;
 
@@ -313,14 +313,14 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public final native boolean isResizeEnabled() /*-{
+	public final native Boolean isResizeEnabled() /*-{
 		return this.@com.amcharts.impl.ChartScrollbar::jso.resizeEnabled;
 	}-*/;
 
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public final native void setResizeEnabled( boolean resizeEnabled ) /*-{
+	public final native void setResizeEnabled( Boolean resizeEnabled ) /*-{
 		this.@com.amcharts.impl.ChartScrollbar::jso.resizeEnabled = resizeEnabled;
 	}-*/;
 
@@ -439,14 +439,14 @@ public final class ChartScrollbar implements IJavaScriptWrapper<ChartScrollbarJS
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public final native boolean isUpdateOnReleaseOnly() /*-{
+	public final native Boolean isUpdateOnReleaseOnly() /*-{
 		return this.@com.amcharts.impl.ChartScrollbar::jso.updateOnReleaseOnly;
 	}-*/;
 
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public final native void setUpdateOnReleaseOnly( boolean updateOnReleaseOnly ) /*-{
+	public final native void setUpdateOnReleaseOnly( Boolean updateOnReleaseOnly ) /*-{
 		this.@com.amcharts.impl.ChartScrollbar::jso.updateOnReleaseOnly = updateOnReleaseOnly;
 	}-*/;
 }

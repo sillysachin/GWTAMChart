@@ -41,28 +41,28 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * "Specifies if cursor should arrange balloons so they won't overlap. If chart is rotated, it might be good idea to turn this off."
 	 */
-	public final native boolean isAvoidBalloonOverlapping() /*-{
+	public final native Boolean isAvoidBalloonOverlapping() /*-{
 		return avoidBalloonOverlapping;
 	}-*/;
 
 	/**
 	 * "Specifies if cursor should arrange balloons so they won't overlap. If chart is rotated, it might be good idea to turn this off."
 	 */
-	public final native void setAvoidBalloonOverlapping( boolean avoidBalloonOverlapping ) /*-{
+	public final native void setAvoidBalloonOverlapping( Boolean avoidBalloonOverlapping ) /*-{
 		this.avoidBalloonOverlapping = avoidBalloonOverlapping;
 	}-*/;
 
 	/**
 	 * Specifies if bullet for each graph will follow the cursor.
 	 */
-	public final native boolean isBulletsEnabled() /*-{
+	public final native Boolean isBulletsEnabled() /*-{
 		return bulletsEnabled;
 	}-*/;
 
 	/**
 	 * Specifies if bullet for each graph will follow the cursor.
 	 */
-	public final native void setBulletsEnabled( boolean bulletsEnabled ) /*-{
+	public final native void setBulletsEnabled( Boolean bulletsEnabled ) /*-{
 		this.bulletsEnabled = bulletsEnabled;
 	}-*/;
 
@@ -125,14 +125,14 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * Specifies whether category balloon is enabled.
 	 */
-	public final native boolean isCategoryBalloonEnabled() /*-{
+	public final native Boolean isCategoryBalloonEnabled() /*-{
 		return categoryBalloonEnabled;
 	}-*/;
 
 	/**
 	 * Specifies whether category balloon is enabled.
 	 */
-	public final native void setCategoryBalloonEnabled( boolean categoryBalloonEnabled ) /*-{
+	public final native void setCategoryBalloonEnabled( Boolean categoryBalloonEnabled ) /*-{
 		this.categoryBalloonEnabled = categoryBalloonEnabled;
 	}-*/;
 
@@ -209,28 +209,28 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * Specifies whether cursor is enabled.
 	 */
-	public final native boolean isEnabled() /*-{
+	public final native Boolean isEnabled() /*-{
 		return enabled;
 	}-*/;
 
 	/**
 	 * Specifies whether cursor is enabled.
 	 */
-	public final native void setEnabled( boolean enabled ) /*-{
+	public final native void setEnabled( Boolean enabled ) /*-{
 		this.enabled = enabled;
 	}-*/;
 
 	/**
 	 * "If set to true, instead of a cursor line user will see a fill which width will always be equal to the width of one data item. We'd recommend setting cusrsorAlpha to 0.1 or some other small number if using this feature."
 	 */
-	public final native boolean isFullWidth() /*-{
+	public final native Boolean isFullWidth() /*-{
 		return fullWidth;
 	}-*/;
 
 	/**
 	 * "If set to true, instead of a cursor line user will see a fill which width will always be equal to the width of one data item. We'd recommend setting cusrsorAlpha to 0.1 or some other small number if using this feature."
 	 */
-	public final native void setFullWidth( boolean fullWidth ) /*-{
+	public final native void setFullWidth( Boolean fullWidth ) /*-{
 		this.fullWidth = fullWidth;
 	}-*/;
 
@@ -265,28 +265,28 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * "If this is set to true, only one balloon at a time will be displayed. Note, this is quite CPU consuming."
 	 */
-	public final native boolean isOneBalloonOnly() /*-{
+	public final native Boolean isOneBalloonOnly() /*-{
 		return oneBalloonOnly;
 	}-*/;
 
 	/**
 	 * "If this is set to true, only one balloon at a time will be displayed. Note, this is quite CPU consuming."
 	 */
-	public final native void setOneBalloonOnly( boolean oneBalloonOnly ) /*-{
+	public final native void setOneBalloonOnly( Boolean oneBalloonOnly ) /*-{
 		this.oneBalloonOnly = oneBalloonOnly;
 	}-*/;
 
 	/**
 	 * "If this is set to true, the user will be able to pan the chart (Serial only) instead of zooming."
 	 */
-	public final native boolean isPan() /*-{
+	public final native Boolean isPan() /*-{
 		return pan;
 	}-*/;
 
 	/**
 	 * "If this is set to true, the user will be able to pan the chart (Serial only) instead of zooming."
 	 */
-	public final native void setPan( boolean pan ) /*-{
+	public final native void setPan( Boolean pan ) /*-{
 		this.pan = pan;
 	}-*/;
 
@@ -307,42 +307,42 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * Specifies if cursor should only mark selected area but not zoom-in after user releases mouse button.
 	 */
-	public final native boolean isSelectWithoutZooming() /*-{
+	public final native Boolean isSelectWithoutZooming() /*-{
 		return selectWithoutZooming;
 	}-*/;
 
 	/**
 	 * Specifies if cursor should only mark selected area but not zoom-in after user releases mouse button.
 	 */
-	public final native void setSelectWithoutZooming( boolean selectWithoutZooming ) /*-{
+	public final native void setSelectWithoutZooming( Boolean selectWithoutZooming ) /*-{
 		this.selectWithoutZooming = selectWithoutZooming;
 	}-*/;
 
 	/**
 	 * "If true, the graph will display balloon on next available data point if currently hovered item doesn't have value for this graph."
 	 */
-	public final native boolean isShowNextAvailable() /*-{
+	public final native Boolean isShowNextAvailable() /*-{
 		return showNextAvailable;
 	}-*/;
 
 	/**
 	 * "If true, the graph will display balloon on next available data point if currently hovered item doesn't have value for this graph."
 	 */
-	public final native void setShowNextAvailable( boolean showNextAvailable ) /*-{
+	public final native void setShowNextAvailable( Boolean showNextAvailable ) /*-{
 		this.showNextAvailable = showNextAvailable;
 	}-*/;
 
 	/**
 	 * "Specifies whether value balloons are enabled. In case they are not, the balloons might be displayed anyway, when the user rolls-over the column or bullet."
 	 */
-	public final native boolean isValueBalloonsEnabled() /*-{
+	public final native Boolean isValueBalloonsEnabled() /*-{
 		return valueBalloonsEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies whether value balloons are enabled. In case they are not, the balloons might be displayed anyway, when the user rolls-over the column or bullet."
 	 */
-	public final native void setValueBalloonsEnabled( boolean valueBalloonsEnabled ) /*-{
+	public final native void setValueBalloonsEnabled( Boolean valueBalloonsEnabled ) /*-{
 		this.valueBalloonsEnabled = valueBalloonsEnabled;
 	}-*/;
 
@@ -377,56 +377,56 @@ public final class ChartCursorJSO extends JavaScriptObject
 	/**
 	 * "Specifies if value balloon next to value axis labels should be displayed. If you have more than one axis, set valueLineAxis property to indicate which axis should display the balloon."
 	 */
-	public final native boolean isValueLineBalloonEnabled() /*-{
+	public final native Boolean isValueLineBalloonEnabled() /*-{
 		return valueLineBalloonEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies if value balloon next to value axis labels should be displayed. If you have more than one axis, set valueLineAxis property to indicate which axis should display the balloon."
 	 */
-	public final native void setValueLineBalloonEnabled( boolean valueLineBalloonEnabled ) /*-{
+	public final native void setValueLineBalloonEnabled( Boolean valueLineBalloonEnabled ) /*-{
 		this.valueLineBalloonEnabled = valueLineBalloonEnabled;
 	}-*/;
 
 	/**
 	 * Specifies if cursor of Serial chart should display horizontal (or vertical if chart is rotated) line. This line might help users to compare distant values of a chart. You can also enable value balloon on this line by setting valueLineAxis property of ChartCursor.
 	 */
-	public final native boolean isValueLineEnabled() /*-{
+	public final native Boolean isValueLineEnabled() /*-{
 		return valueLineEnabled;
 	}-*/;
 
 	/**
 	 * Specifies if cursor of Serial chart should display horizontal (or vertical if chart is rotated) line. This line might help users to compare distant values of a chart. You can also enable value balloon on this line by setting valueLineAxis property of ChartCursor.
 	 */
-	public final native void setValueLineEnabled( boolean valueLineEnabled ) /*-{
+	public final native void setValueLineEnabled( Boolean valueLineEnabled ) /*-{
 		this.valueLineEnabled = valueLineEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies if the user can zoom-in the chart. If pan is set to true, zoomable is switched to false automatically."
 	 */
-	public final native boolean isZoomable() /*-{
+	public final native Boolean isZoomable() /*-{
 		return zoomable;
 	}-*/;
 
 	/**
 	 * "Specifies if the user can zoom-in the chart. If pan is set to true, zoomable is switched to false automatically."
 	 */
-	public final native void setZoomable( boolean zoomable ) /*-{
+	public final native void setZoomable( Boolean zoomable ) /*-{
 		this.zoomable = zoomable;
 	}-*/;
 
 	/**
 	 * Read-only. Indicates if currently user is selecting some chart area to zoom-in.
 	 */
-	public final native boolean isZooming() /*-{
+	public final native Boolean isZooming() /*-{
 		return zooming;
 	}-*/;
 
 	/**
 	 * Read-only. Indicates if currently user is selecting some chart area to zoom-in.
 	 */
-	public final native void setZooming( boolean zooming ) /*-{
+	public final native void setZooming( Boolean zooming ) /*-{
 		this.zooming = zooming;
 	}-*/;
 }

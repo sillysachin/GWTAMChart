@@ -20,15 +20,15 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 
 	private String id;
 
-	private boolean includeGuidesInMinMax;
+	private Boolean includeGuidesInMinMax;
 
-	private boolean includeHidden;
+	private Boolean includeHidden;
 
-	private boolean integersOnly;
+	private Boolean integersOnly;
 
 	private IsFunction labelFunction;
 
-	private boolean logarithmic;
+	private Boolean logarithmic;
 
 	private double max;
 
@@ -44,11 +44,11 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 
 	private double precision;
 
-	private boolean radarCategoriesEnabled;
+	private Boolean radarCategoriesEnabled;
 
-	private boolean recalculateToPercents;
+	private Boolean recalculateToPercents;
 
-	private boolean reversed;
+	private Boolean reversed;
 
 	private String stackType;
 
@@ -68,11 +68,11 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 
 	private String unitPosition;
 
-	private boolean usePrefixes;
+	private Boolean usePrefixes;
 
-	private boolean useScientificNotation;
+	private Boolean useScientificNotation;
 
-	private boolean doublesOnly;
+	private Boolean doublesOnly;
 
 	/**
 	 * Radar chart only. Specifies distance from axis to the axis title (category)
@@ -189,7 +189,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public boolean isIncludeGuidesInMinMax()
+	public Boolean isIncludeGuidesInMinMax()
 	{
 		return includeGuidesInMinMax;
 	}
@@ -197,7 +197,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public void setIncludeGuidesInMinMax( boolean includeGuidesInMinMax )
+	public void setIncludeGuidesInMinMax( Boolean includeGuidesInMinMax )
 	{
 		this.includeGuidesInMinMax = includeGuidesInMinMax;
 	}
@@ -205,7 +205,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public boolean isIncludeHidden()
+	public Boolean isIncludeHidden()
 	{
 		return includeHidden;
 	}
@@ -213,7 +213,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public void setIncludeHidden( boolean includeHidden )
+	public void setIncludeHidden( Boolean includeHidden )
 	{
 		this.includeHidden = includeHidden;
 	}
@@ -221,7 +221,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public boolean isdoublesOnly()
+	public Boolean isdoublesOnly()
 	{
 		return integersOnly;
 	}
@@ -229,7 +229,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public void setdoublesOnly( boolean integersOnly )
+	public void setdoublesOnly( Boolean integersOnly )
 	{
 		this.integersOnly = integersOnly;
 	}
@@ -253,7 +253,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public boolean isLogarithmic()
+	public Boolean isLogarithmic()
 	{
 		return logarithmic;
 	}
@@ -261,7 +261,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public void setLogarithmic( boolean logarithmic )
+	public void setLogarithmic( Boolean logarithmic )
 	{
 		this.logarithmic = logarithmic;
 	}
@@ -381,7 +381,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public boolean isRadarCategoriesEnabled()
+	public Boolean isRadarCategoriesEnabled()
 	{
 		return radarCategoriesEnabled;
 	}
@@ -389,7 +389,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public void setRadarCategoriesEnabled( boolean radarCategoriesEnabled )
+	public void setRadarCategoriesEnabled( Boolean radarCategoriesEnabled )
 	{
 		this.radarCategoriesEnabled = radarCategoriesEnabled;
 	}
@@ -397,7 +397,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public boolean isRecalculateToPercents()
+	public Boolean isRecalculateToPercents()
 	{
 		return recalculateToPercents;
 	}
@@ -405,7 +405,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public void setRecalculateToPercents( boolean recalculateToPercents )
+	public void setRecalculateToPercents( Boolean recalculateToPercents )
 	{
 		this.recalculateToPercents = recalculateToPercents;
 	}
@@ -413,7 +413,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public boolean isReversed()
+	public Boolean isReversed()
 	{
 		return reversed;
 	}
@@ -421,7 +421,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public void setReversed( boolean reversed )
+	public void setReversed( Boolean reversed )
 	{
 		this.reversed = reversed;
 	}
@@ -573,7 +573,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public boolean isUsePrefixes()
+	public Boolean isUsePrefixes()
 	{
 		return usePrefixes;
 	}
@@ -581,7 +581,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public void setUsePrefixes( boolean usePrefixes )
+	public void setUsePrefixes( Boolean usePrefixes )
 	{
 		this.usePrefixes = usePrefixes;
 	}
@@ -589,7 +589,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public boolean isUseScientificNotation()
+	public Boolean isUseScientificNotation()
 	{
 		return useScientificNotation;
 	}
@@ -597,19 +597,19 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public void setUseScientificNotation( boolean useScientificNotation )
+	public void setUseScientificNotation( Boolean useScientificNotation )
 	{
 		this.useScientificNotation = useScientificNotation;
 	}
 
 	@Override
-	public boolean isDoublesOnly()
+	public Boolean isDoublesOnly()
 	{
 		return this.doublesOnly;
 	}
 
 	@Override
-	public void setDoublesOnly( boolean integersOnly )
+	public void setDoublesOnly( Boolean integersOnly )
 	{
 		this.doublesOnly = integersOnly;
 	}

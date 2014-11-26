@@ -44,14 +44,14 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public final native boolean isAutoMargins() /*-{
+	public final native Boolean isAutoMargins() /*-{
 		return autoMargins;
 	}-*/;
 
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public final native void setAutoMargins( boolean autoMargins ) /*-{
+	public final native void setAutoMargins( Boolean autoMargins ) /*-{
 		this.autoMargins = autoMargins;
 	}-*/;
 
@@ -142,14 +142,14 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public final native boolean isMarginsUpdated() /*-{
+	public final native Boolean isMarginsUpdated() /*-{
 		return marginsUpdated;
 	}-*/;
 
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public final native void setMarginsUpdated( boolean marginsUpdated ) /*-{
+	public final native void setMarginsUpdated( Boolean marginsUpdated ) /*-{
 		this.marginsUpdated = marginsUpdated;
 	}-*/;
 

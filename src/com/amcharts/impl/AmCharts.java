@@ -38,14 +38,14 @@ public class AmCharts implements IsAmCharts
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public final native boolean isBaseHref() /*-{
+	public final native Boolean isBaseHref() /*-{
 		return this.@com.amcharts.impl.AmCharts::jso.baseHref;
 	}-*/;
 
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public final native void setBaseHref( boolean baseHref ) /*-{
+	public final native void setBaseHref( Boolean baseHref ) /*-{
 		this.@com.amcharts.impl.AmCharts::jso.baseHref = baseHref;
 	}-*/;
 
@@ -144,14 +144,14 @@ public class AmCharts implements IsAmCharts
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public final native boolean isUseUTC() /*-{
+	public final native Boolean isUseUTC() /*-{
 		return this.@com.amcharts.impl.AmCharts::jso.useUTC;
 	}-*/;
 
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public final native void setUseUTC( boolean useUTC ) /*-{
+	public final native void setUseUTC( Boolean useUTC ) /*-{
 		this.@com.amcharts.impl.AmCharts::jso.useUTC = useUTC;
 	}-*/;
 

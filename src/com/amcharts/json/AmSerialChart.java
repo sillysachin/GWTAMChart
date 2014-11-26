@@ -31,17 +31,17 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 
 	private double minSelectedTime;
 
-	private boolean mouseWheelScrollEnabled;
+	private Boolean mouseWheelScrollEnabled;
 
-	private boolean mouseWheelZoomEnabled;
+	private Boolean mouseWheelZoomEnabled;
 
-	private boolean rotate;
+	private Boolean rotate;
 
 	private Date startDate;
 
 	private double startIndex;
 
-	private boolean zoomOutOnDataUpdate;
+	private Boolean zoomOutOnDataUpdate;
 
 	/**
 	 * Date format of the graph balloon (if chart parses dates and you don't use chartCursor).
@@ -238,7 +238,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public boolean isMouseWheelScrollEnabled()
+	public Boolean isMouseWheelScrollEnabled()
 	{
 		return mouseWheelScrollEnabled;
 	}
@@ -246,7 +246,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public void setMouseWheelScrollEnabled( boolean mouseWheelScrollEnabled )
+	public void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
 	{
 		this.mouseWheelScrollEnabled = mouseWheelScrollEnabled;
 	}
@@ -254,7 +254,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public boolean isMouseWheelZoomEnabled()
+	public Boolean isMouseWheelZoomEnabled()
 	{
 		return mouseWheelZoomEnabled;
 	}
@@ -262,7 +262,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public void setMouseWheelZoomEnabled( boolean mouseWheelZoomEnabled )
+	public void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
 	{
 		this.mouseWheelZoomEnabled = mouseWheelZoomEnabled;
 	}
@@ -270,7 +270,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public boolean isRotate()
+	public Boolean isRotate()
 	{
 		return rotate;
 	}
@@ -278,7 +278,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public void setRotate( boolean rotate )
+	public void setRotate( Boolean rotate )
 	{
 		this.rotate = rotate;
 	}
@@ -318,7 +318,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public boolean isZoomOutOnDataUpdate()
+	public Boolean isZoomOutOnDataUpdate()
 	{
 		return zoomOutOnDataUpdate;
 	}
@@ -326,7 +326,7 @@ public final class AmSerialChart extends AmRectangularChart implements IsAmSeria
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public void setZoomOutOnDataUpdate( boolean zoomOutOnDataUpdate )
+	public void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
 	{
 		this.zoomOutOnDataUpdate = zoomOutOnDataUpdate;
 	}

@@ -26,7 +26,7 @@ public final class GaugeAxis implements IsGaugeAxis
 
 	private String bottomText;
 
-	private boolean bottomTextBold;
+	private Boolean bottomTextBold;
 
 	private String bottomTextColor;
 
@@ -46,11 +46,11 @@ public final class GaugeAxis implements IsGaugeAxis
 
 	private double gridCount;
 
-	private boolean gridInside;
+	private Boolean gridInside;
 
 	private String id;
 
-	private boolean inside;
+	private Boolean inside;
 
 	private double labelFrequency;
 
@@ -64,9 +64,9 @@ public final class GaugeAxis implements IsGaugeAxis
 
 	private String radius;
 
-	private boolean showFirstLabel;
+	private Boolean showFirstLabel;
 
-	private boolean showLastLabel;
+	private Boolean showLastLabel;
 
 	private double startAngle;
 
@@ -82,7 +82,7 @@ public final class GaugeAxis implements IsGaugeAxis
 
 	private String topText;
 
-	private boolean topTextBold;
+	private Boolean topTextBold;
 
 	private String topTextColor;
 
@@ -94,7 +94,7 @@ public final class GaugeAxis implements IsGaugeAxis
 
 	private String unitPosition;
 
-	private boolean usePrefixes;
+	private Boolean usePrefixes;
 
 	private double valueInterval;
 
@@ -245,7 +245,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isBottomTextBold()
+	public Boolean isBottomTextBold()
 	{
 		return bottomTextBold;
 	}
@@ -253,7 +253,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setBottomTextBold( boolean bottomTextBold )
+	public void setBottomTextBold( Boolean bottomTextBold )
 	{
 		this.bottomTextBold = bottomTextBold;
 	}
@@ -405,7 +405,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public boolean isGridInside()
+	public Boolean isGridInside()
 	{
 		return gridInside;
 	}
@@ -413,7 +413,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public void setGridInside( boolean gridInside )
+	public void setGridInside( Boolean gridInside )
 	{
 		this.gridInside = gridInside;
 	}
@@ -437,7 +437,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public boolean isInside()
+	public Boolean isInside()
 	{
 		return inside;
 	}
@@ -445,7 +445,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public void setInside( boolean inside )
+	public void setInside( Boolean inside )
 	{
 		this.inside = inside;
 	}
@@ -549,7 +549,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public boolean isShowFirstLabel()
+	public Boolean isShowFirstLabel()
 	{
 		return showFirstLabel;
 	}
@@ -557,7 +557,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel )
+	public void setShowFirstLabel( Boolean showFirstLabel )
 	{
 		this.showFirstLabel = showFirstLabel;
 	}
@@ -565,7 +565,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public boolean isShowLastLabel()
+	public Boolean isShowLastLabel()
 	{
 		return showLastLabel;
 	}
@@ -573,7 +573,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public void setShowLastLabel( boolean showLastLabel )
+	public void setShowLastLabel( Boolean showLastLabel )
 	{
 		this.showLastLabel = showLastLabel;
 	}
@@ -693,7 +693,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isTopTextBold()
+	public Boolean isTopTextBold()
 	{
 		return topTextBold;
 	}
@@ -701,7 +701,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setTopTextBold( boolean topTextBold )
+	public void setTopTextBold( Boolean topTextBold )
 	{
 		this.topTextBold = topTextBold;
 	}
@@ -789,7 +789,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public boolean isUsePrefixes()
+	public Boolean isUsePrefixes()
 	{
 		return usePrefixes;
 	}
@@ -797,7 +797,7 @@ public final class GaugeAxis implements IsGaugeAxis
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public void setUsePrefixes( boolean usePrefixes )
+	public void setUsePrefixes( Boolean usePrefixes )
 	{
 		this.usePrefixes = usePrefixes;
 	}

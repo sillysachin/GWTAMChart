@@ -7,12 +7,12 @@ public interface IsGuide
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public boolean isAbove();
+	public Boolean isAbove();
 
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public void setAbove( boolean above );
+	public void setAbove( Boolean above );
 
 	/**
 	 * "Radar chart only. Specifies angle at which guide should start. Affects only fills, not lines."
@@ -47,12 +47,12 @@ public interface IsGuide
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public boolean isBoldLabel();
+	public Boolean isBoldLabel();
 
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public void setBoldLabel( boolean boldLabel );
+	public void setBoldLabel( Boolean boldLabel );
 
 	/**
 	 * Category of the guide (in case the guide is for category axis).
@@ -97,12 +97,12 @@ public interface IsGuide
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public boolean isExpand();
+	public Boolean isExpand();
 
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public void setExpand( boolean expand );
+	public void setExpand( Boolean expand );
 
 	/**
 	 * Fill opacity. Value range is 0 - 1.
@@ -147,12 +147,12 @@ public interface IsGuide
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public boolean isInside();
+	public Boolean isInside();
 
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public void setInside( boolean inside );
+	public void setInside( Boolean inside );
 
 	/**
 	 * The label which will be displayed near the guide.

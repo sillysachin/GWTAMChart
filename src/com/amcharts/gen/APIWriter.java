@@ -43,7 +43,7 @@ public class APIWriter
 			for ( JavaClassAttribute jca : jcaItems )
 			{
 				fieldName = jca.getFieldName();
-				if ( jca.getJavaType().equals( "boolean" ) )
+				if ( jca.getJavaType().equals( "Boolean" ) )
 				{
 					apiWriter
 							.emitJavadoc( jca.getJavadocComment() )

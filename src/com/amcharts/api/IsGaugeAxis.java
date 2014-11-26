@@ -97,12 +97,12 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isBottomTextBold();
+	public Boolean isBottomTextBold();
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setBottomTextBold( boolean bottomTextBold );
+	public void setBottomTextBold( Boolean bottomTextBold );
 
 	/**
 	 * Bottom text color.
@@ -197,12 +197,12 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public boolean isGridInside();
+	public Boolean isGridInside();
 
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public void setGridInside( boolean gridInside );
+	public void setGridInside( Boolean gridInside );
 
 	/**
 	 * Unique id of an axis.
@@ -217,12 +217,12 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public boolean isInside();
+	public Boolean isInside();
 
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public void setInside( boolean inside );
+	public void setInside( Boolean inside );
 
 	/**
 	 * Frequency of labels.
@@ -287,22 +287,22 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public boolean isShowFirstLabel();
+	public Boolean isShowFirstLabel();
 
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel );
+	public void setShowFirstLabel( Boolean showFirstLabel );
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public boolean isShowLastLabel();
+	public Boolean isShowLastLabel();
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public void setShowLastLabel( boolean showLastLabel );
+	public void setShowLastLabel( Boolean showLastLabel );
 
 	/**
 	 * Axis start angle. Valid values are from - 180 to 180.
@@ -377,12 +377,12 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public boolean isTopTextBold();
+	public Boolean isTopTextBold();
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public void setTopTextBold( boolean topTextBold );
+	public void setTopTextBold( Boolean topTextBold );
 
 	/**
 	 * Color of top text.
@@ -437,12 +437,12 @@ public interface IsGaugeAxis
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public boolean isUsePrefixes();
+	public Boolean isUsePrefixes();
 
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public void setUsePrefixes( boolean usePrefixes );
+	public void setUsePrefixes( Boolean usePrefixes );
 
 	/**
 	 * "Interval, at which ticks with values should be placed."

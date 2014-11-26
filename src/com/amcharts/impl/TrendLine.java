@@ -175,14 +175,14 @@ public final class TrendLine implements IJavaScriptWrapper<TrendLineJSO>, IsTren
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public final native boolean isIsProtected() /*-{
+	public final native Boolean isIsProtected() /*-{
 		return this.@com.amcharts.impl.TrendLine::jso.isProtected;
 	}-*/;
 
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public final native void setIsProtected( boolean isProtected ) /*-{
+	public final native void setIsProtected( Boolean isProtected ) /*-{
 		this.@com.amcharts.impl.TrendLine::jso.isProtected = isProtected;
 	}-*/;
 

@@ -35,12 +35,12 @@ public interface IsGaugeArrow
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public boolean isClockWiseOnly();
+	public Boolean isClockWiseOnly();
 
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public void setClockWiseOnly( boolean clockWiseOnly );
+	public void setClockWiseOnly( Boolean clockWiseOnly );
 
 	/**
 	 * Color of an arrow.

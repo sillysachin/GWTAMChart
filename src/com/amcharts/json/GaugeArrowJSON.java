@@ -11,7 +11,7 @@ public final class GaugeArrowJSON implements IsGaugeArrow
 
 	private double borderAlpha;
 
-	private boolean clockWiseOnly;
+	private Boolean clockWiseOnly;
 
 	private String color;
 
@@ -84,7 +84,7 @@ public final class GaugeArrowJSON implements IsGaugeArrow
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public boolean isClockWiseOnly()
+	public Boolean isClockWiseOnly()
 	{
 		return clockWiseOnly;
 	}
@@ -92,7 +92,7 @@ public final class GaugeArrowJSON implements IsGaugeArrow
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public void setClockWiseOnly( boolean clockWiseOnly )
+	public void setClockWiseOnly( Boolean clockWiseOnly )
 	{
 		this.clockWiseOnly = clockWiseOnly;
 	}

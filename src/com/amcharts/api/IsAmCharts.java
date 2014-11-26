@@ -7,12 +7,12 @@ public interface IsAmCharts
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public boolean isBaseHref();
+	public Boolean isBaseHref();
 
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public void setBaseHref( boolean baseHref );
+	public void setBaseHref( Boolean baseHref );
 
 	/**
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
@@ -77,10 +77,10 @@ public interface IsAmCharts
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public boolean isUseUTC();
+	public Boolean isUseUTC();
 
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public void setUseUTC( boolean useUTC );
+	public void setUseUTC( Boolean useUTC );
 }

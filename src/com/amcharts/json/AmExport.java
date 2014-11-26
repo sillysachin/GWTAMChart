@@ -15,13 +15,13 @@ public final class AmExport implements IsAmExport
 
 	private String buttonTitle;
 
-	private boolean exportJPG;
+	private Boolean exportJPG;
 
-	private boolean exportPDF;
+	private Boolean exportPDF;
 
-	private boolean exportPNG;
+	private Boolean exportPNG;
 
-	private boolean exportSVG;
+	private Boolean exportSVG;
 
 	private String imageBackgroundColor;
 
@@ -120,7 +120,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public boolean isExportJPG()
+	public Boolean isExportJPG()
 	{
 		return exportJPG;
 	}
@@ -128,7 +128,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public void setExportJPG( boolean exportJPG )
+	public void setExportJPG( Boolean exportJPG )
 	{
 		this.exportJPG = exportJPG;
 	}
@@ -136,7 +136,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public boolean isExportPDF()
+	public Boolean isExportPDF()
 	{
 		return exportPDF;
 	}
@@ -144,7 +144,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public void setExportPDF( boolean exportPDF )
+	public void setExportPDF( Boolean exportPDF )
 	{
 		this.exportPDF = exportPDF;
 	}
@@ -152,7 +152,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public boolean isExportPNG()
+	public Boolean isExportPNG()
 	{
 		return exportPNG;
 	}
@@ -160,7 +160,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public void setExportPNG( boolean exportPNG )
+	public void setExportPNG( Boolean exportPNG )
 	{
 		this.exportPNG = exportPNG;
 	}
@@ -168,7 +168,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public boolean isExportSVG()
+	public Boolean isExportSVG()
 	{
 		return exportSVG;
 	}
@@ -176,7 +176,7 @@ public final class AmExport implements IsAmExport
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public void setExportSVG( boolean exportSVG )
+	public void setExportSVG( Boolean exportSVG )
 	{
 		this.exportSVG = exportSVG;
 	}

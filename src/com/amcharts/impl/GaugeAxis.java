@@ -163,14 +163,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native boolean isBottomTextBold() /*-{
+	public final native Boolean isBottomTextBold() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.bottomTextBold;
 	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native void setBottomTextBold( boolean bottomTextBold ) /*-{
+	public final native void setBottomTextBold( Boolean bottomTextBold ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.bottomTextBold = bottomTextBold;
 	}-*/;
 
@@ -303,14 +303,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public final native boolean isGridInside() /*-{
+	public final native Boolean isGridInside() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.gridInside;
 	}-*/;
 
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public final native void setGridInside( boolean gridInside ) /*-{
+	public final native void setGridInside( Boolean gridInside ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.gridInside = gridInside;
 	}-*/;
 
@@ -331,14 +331,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public final native boolean isInside() /*-{
+	public final native Boolean isInside() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.inside;
 	}-*/;
 
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public final native void setInside( boolean inside ) /*-{
+	public final native void setInside( Boolean inside ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.inside = inside;
 	}-*/;
 
@@ -429,28 +429,28 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public final native boolean isShowFirstLabel() /*-{
+	public final native Boolean isShowFirstLabel() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.showFirstLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public final native void setShowFirstLabel( boolean showFirstLabel ) /*-{
+	public final native void setShowFirstLabel( Boolean showFirstLabel ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.showFirstLabel = showFirstLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public final native boolean isShowLastLabel() /*-{
+	public final native Boolean isShowLastLabel() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.showLastLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public final native void setShowLastLabel( boolean showLastLabel ) /*-{
+	public final native void setShowLastLabel( Boolean showLastLabel ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.showLastLabel = showLastLabel;
 	}-*/;
 
@@ -555,14 +555,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native boolean isTopTextBold() /*-{
+	public final native Boolean isTopTextBold() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.topTextBold;
 	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native void setTopTextBold( boolean topTextBold ) /*-{
+	public final native void setTopTextBold( Boolean topTextBold ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.topTextBold = topTextBold;
 	}-*/;
 
@@ -639,14 +639,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public final native boolean isUsePrefixes() /*-{
+	public final native Boolean isUsePrefixes() /*-{
 		return this.@com.amcharts.impl.GaugeAxis::jso.usePrefixes;
 	}-*/;
 
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public final native void setUsePrefixes( boolean usePrefixes ) /*-{
+	public final native void setUsePrefixes( Boolean usePrefixes ) /*-{
 		this.@com.amcharts.impl.GaugeAxis::jso.usePrefixes = usePrefixes;
 	}-*/;
 

@@ -25,12 +25,12 @@ public interface IsLabel
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public boolean isBold();
+	public Boolean isBold();
 
 	/**
 	 * Specifies if label is bold or not.
 	 */
-	public void setBold( boolean bold );
+	public void setBold( Boolean bold );
 
 	/**
 	 * Color of a label.

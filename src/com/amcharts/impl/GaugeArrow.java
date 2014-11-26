@@ -75,14 +75,14 @@ public final class GaugeArrow implements IJavaScriptWrapper<GaugeArrowJSO>, IsGa
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public final native boolean isClockWiseOnly() /*-{
+	public final native Boolean isClockWiseOnly() /*-{
 		return this.@com.amcharts.impl.GaugeArrow::jso.clockWiseOnly;
 	}-*/;
 
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public final native void setClockWiseOnly( boolean clockWiseOnly ) /*-{
+	public final native void setClockWiseOnly( Boolean clockWiseOnly ) /*-{
 		this.@com.amcharts.impl.GaugeArrow::jso.clockWiseOnly = clockWiseOnly;
 	}-*/;
 

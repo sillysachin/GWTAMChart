@@ -142,14 +142,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native boolean isBottomTextBold() /*-{
+	public final native Boolean isBottomTextBold() /*-{
 		return bottomTextBold;
 	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native void setBottomTextBold( boolean bottomTextBold ) /*-{
+	public final native void setBottomTextBold( Boolean bottomTextBold ) /*-{
 		this.bottomTextBold = bottomTextBold;
 	}-*/;
 
@@ -282,14 +282,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public final native boolean isGridInside() /*-{
+	public final native Boolean isGridInside() /*-{
 		return gridInside;
 	}-*/;
 
 	/**
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
-	public final native void setGridInside( boolean gridInside ) /*-{
+	public final native void setGridInside( Boolean gridInside ) /*-{
 		this.gridInside = gridInside;
 	}-*/;
 
@@ -310,14 +310,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public final native boolean isInside() /*-{
+	public final native Boolean isInside() /*-{
 		return inside;
 	}-*/;
 
 	/**
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
-	public final native void setInside( boolean inside ) /*-{
+	public final native void setInside( Boolean inside ) /*-{
 		this.inside = inside;
 	}-*/;
 
@@ -408,28 +408,28 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public final native boolean isShowFirstLabel() /*-{
+	public final native Boolean isShowFirstLabel() /*-{
 		return showFirstLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the first label should be shown.
 	 */
-	public final native void setShowFirstLabel( boolean showFirstLabel ) /*-{
+	public final native void setShowFirstLabel( Boolean showFirstLabel ) /*-{
 		this.showFirstLabel = showFirstLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public final native boolean isShowLastLabel() /*-{
+	public final native Boolean isShowLastLabel() /*-{
 		return showLastLabel;
 	}-*/;
 
 	/**
 	 * Specifies if the last label should be shown.
 	 */
-	public final native void setShowLastLabel( boolean showLastLabel ) /*-{
+	public final native void setShowLastLabel( Boolean showLastLabel ) /*-{
 		this.showLastLabel = showLastLabel;
 	}-*/;
 
@@ -534,14 +534,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native boolean isTopTextBold() /*-{
+	public final native Boolean isTopTextBold() /*-{
 		return topTextBold;
 	}-*/;
 
 	/**
 	 * Specifies if text should be bold.
 	 */
-	public final native void setTopTextBold( boolean topTextBold ) /*-{
+	public final native void setTopTextBold( Boolean topTextBold ) /*-{
 		this.topTextBold = topTextBold;
 	}-*/;
 
@@ -618,14 +618,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public final native boolean isUsePrefixes() /*-{
+	public final native Boolean isUsePrefixes() /*-{
 		return usePrefixes;
 	}-*/;
 
 	/**
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
-	public final native void setUsePrefixes( boolean usePrefixes ) /*-{
+	public final native void setUsePrefixes( Boolean usePrefixes ) /*-{
 		this.usePrefixes = usePrefixes;
 	}-*/;
 

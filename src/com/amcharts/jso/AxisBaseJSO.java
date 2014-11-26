@@ -15,14 +15,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public final native boolean isAutoGridCount() /*-{
+	public final native Boolean isAutoGridCount() /*-{
 		return autoGridCount;
 	}-*/;
 
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public final native void setAutoGridCount( boolean autoGridCount ) /*-{
+	public final native void setAutoGridCount( Boolean autoGridCount ) /*-{
 		this.autoGridCount = autoGridCount;
 	}-*/;
 
@@ -99,14 +99,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public final native boolean isBoldLabels() /*-{
+	public final native Boolean isBoldLabels() /*-{
 		return boldLabels;
 	}-*/;
 
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public final native void setBoldLabels( boolean boldLabels ) /*-{
+	public final native void setBoldLabels( Boolean boldLabels ) /*-{
 		this.boldLabels = boldLabels;
 	}-*/;
 
@@ -253,28 +253,28 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public final native boolean isIgnoreAxisWidth() /*-{
+	public final native Boolean isIgnoreAxisWidth() /*-{
 		return ignoreAxisWidth;
 	}-*/;
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public final native void setIgnoreAxisWidth( boolean ignoreAxisWidth ) /*-{
+	public final native void setIgnoreAxisWidth( Boolean ignoreAxisWidth ) /*-{
 		this.ignoreAxisWidth = ignoreAxisWidth;
 	}-*/;
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public final native boolean isInside() /*-{
+	public final native Boolean isInside() /*-{
 		return inside;
 	}-*/;
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public final native void setInside( boolean inside ) /*-{
+	public final native void setInside( Boolean inside ) /*-{
 		this.inside = inside;
 	}-*/;
 
@@ -323,14 +323,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public final native boolean isLabelsEnabled() /*-{
+	public final native Boolean isLabelsEnabled() /*-{
 		return labelsEnabled;
 	}-*/;
 
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public final native void setLabelsEnabled( boolean labelsEnabled ) /*-{
+	public final native void setLabelsEnabled( Boolean labelsEnabled ) /*-{
 		this.labelsEnabled = labelsEnabled;
 	}-*/;
 
@@ -365,14 +365,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public final native boolean isMinorGridEnabled() /*-{
+	public final native Boolean isMinorGridEnabled() /*-{
 		return minorGridEnabled;
 	}-*/;
 
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public final native void setMinorGridEnabled( boolean minorGridEnabled ) /*-{
+	public final native void setMinorGridEnabled( Boolean minorGridEnabled ) /*-{
 		this.minorGridEnabled = minorGridEnabled;
 	}-*/;
 
@@ -421,28 +421,28 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public final native boolean isShowFirstLabel() /*-{
+	public final native Boolean isShowFirstLabel() /*-{
 		return showFirstLabel;
 	}-*/;
 
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public final native void setShowFirstLabel( boolean showFirstLabel ) /*-{
+	public final native void setShowFirstLabel( Boolean showFirstLabel ) /*-{
 		this.showFirstLabel = showFirstLabel;
 	}-*/;
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public final native boolean isShowLastLabel() /*-{
+	public final native Boolean isShowLastLabel() /*-{
 		return showLastLabel;
 	}-*/;
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public final native void setShowLastLabel( boolean showLastLabel ) /*-{
+	public final native void setShowLastLabel( Boolean showLastLabel ) /*-{
 		this.showLastLabel = showLastLabel;
 	}-*/;
 
@@ -477,14 +477,14 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native boolean isTitleBold() /*-{
+	public final native Boolean isTitleBold() /*-{
 		return titleBold;
 	}-*/;
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native void setTitleBold( boolean titleBold ) /*-{
+	public final native void setTitleBold( Boolean titleBold ) /*-{
 		this.titleBold = titleBold;
 	}-*/;
 

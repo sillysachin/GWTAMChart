@@ -49,12 +49,12 @@ public class Slice extends DataItem
 		this.description = description;
 	}-*/;
 
-	public final native boolean isHidden()
+	public final native Boolean isHidden()
 	/*-{
 		return this.hidden;
 	}-*/;
 
-	public final native void setHidden( boolean hidden )
+	public final native void setHidden( Boolean hidden )
 	/*-{
 		this.hidden = hidden;
 	}-*/;
@@ -69,12 +69,12 @@ public class Slice extends DataItem
 		this.percents = percents;
 	}-*/;
 
-	public final native boolean isPulled()
+	public final native Boolean isPulled()
 	/*-{
 		return this.pulled;
 	}-*/;
 
-	public final native void setPulled( boolean pulled )
+	public final native void setPulled( Boolean pulled )
 	/*-{
 		this.pulled = pulled;
 	}-*/;
@@ -109,12 +109,12 @@ public class Slice extends DataItem
 		this.value = value;
 	}-*/;
 
-	public final native boolean isVisibleInLegend()
+	public final native Boolean isVisibleInLegend()
 	/*-{
 		return this.visibleInLegend;
 	}-*/;
 
-	public final native void setVisibleInLegend( boolean visibleInLegend )
+	public final native void setVisibleInLegend( Boolean visibleInLegend )
 	/*-{
 		this.visibleInLegend = visibleInLegend;
 	}-*/;

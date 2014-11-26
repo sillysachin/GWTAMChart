@@ -5,7 +5,7 @@ import com.amcharts.api.IsChartScrollbar;
 
 public final class ChartScrollbar implements IsChartScrollbar
 {
-	private boolean autoGridCount;
+	private Boolean autoGridCount;
 
 	private double backgroundAlpha;
 
@@ -37,7 +37,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 
 	private double gridCount;
 
-	private boolean hideResizeGrips;
+	private Boolean hideResizeGrips;
 
 	private double maximum;
 
@@ -45,7 +45,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 
 	private double offset;
 
-	private boolean resizeEnabled;
+	private Boolean resizeEnabled;
 
 	private double scrollbarHeight;
 
@@ -63,12 +63,12 @@ public final class ChartScrollbar implements IsChartScrollbar
 
 	private String selectedGraphLineColor;
 
-	private boolean updateOnReleaseOnly;
+	private Boolean updateOnReleaseOnly;
 
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public boolean isAutoGridCount()
+	public Boolean isAutoGridCount()
 	{
 		return autoGridCount;
 	}
@@ -76,7 +76,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public void setAutoGridCount( boolean autoGridCount )
+	public void setAutoGridCount( Boolean autoGridCount )
 	{
 		this.autoGridCount = autoGridCount;
 	}
@@ -324,7 +324,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public boolean isHideResizeGrips()
+	public Boolean isHideResizeGrips()
 	{
 		return hideResizeGrips;
 	}
@@ -332,7 +332,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public void setHideResizeGrips( boolean hideResizeGrips )
+	public void setHideResizeGrips( Boolean hideResizeGrips )
 	{
 		this.hideResizeGrips = hideResizeGrips;
 	}
@@ -388,7 +388,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public boolean isResizeEnabled()
+	public Boolean isResizeEnabled()
 	{
 		return resizeEnabled;
 	}
@@ -396,7 +396,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public void setResizeEnabled( boolean resizeEnabled )
+	public void setResizeEnabled( Boolean resizeEnabled )
 	{
 		this.resizeEnabled = resizeEnabled;
 	}
@@ -532,7 +532,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public boolean isUpdateOnReleaseOnly()
+	public Boolean isUpdateOnReleaseOnly()
 	{
 		return updateOnReleaseOnly;
 	}
@@ -540,7 +540,7 @@ public final class ChartScrollbar implements IsChartScrollbar
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public void setUpdateOnReleaseOnly( boolean updateOnReleaseOnly )
+	public void setUpdateOnReleaseOnly( Boolean updateOnReleaseOnly )
 	{
 		this.updateOnReleaseOnly = updateOnReleaseOnly;
 	}

@@ -230,7 +230,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public final boolean isMouseWheelScrollEnabled()
+	public final Boolean isMouseWheelScrollEnabled()
 	{
 		return getJso().isMouseWheelScrollEnabled();
 	}
@@ -238,7 +238,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public final void setMouseWheelScrollEnabled( boolean mouseWheelScrollEnabled )
+	public final void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled )
 	{
 		getJso().setMouseWheelScrollEnabled( mouseWheelScrollEnabled );
 	}
@@ -246,7 +246,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public final boolean isMouseWheelZoomEnabled()
+	public final Boolean isMouseWheelZoomEnabled()
 	{
 		return getJso().isMouseWheelZoomEnabled();
 	}
@@ -254,7 +254,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public final void setMouseWheelZoomEnabled( boolean mouseWheelZoomEnabled )
+	public final void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled )
 	{
 		getJso().setMouseWheelZoomEnabled( mouseWheelZoomEnabled );
 	}
@@ -262,7 +262,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public final boolean isRotate()
+	public final Boolean isRotate()
 	{
 		return getJso().isRotate();
 	}
@@ -270,7 +270,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public final void setRotate( boolean rotate )
+	public final void setRotate( Boolean rotate )
 	{
 		getJso().setRotate( rotate );
 	}
@@ -310,7 +310,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public final boolean isZoomOutOnDataUpdate()
+	public final Boolean isZoomOutOnDataUpdate()
 	{
 		return getJso().isZoomOutOnDataUpdate();
 	}
@@ -318,7 +318,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public final void setZoomOutOnDataUpdate( boolean zoomOutOnDataUpdate )
+	public final void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate )
 	{
 		getJso().setZoomOutOnDataUpdate( zoomOutOnDataUpdate );
 	}

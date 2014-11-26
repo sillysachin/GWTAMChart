@@ -45,12 +45,12 @@ public interface IsAmGraph
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public boolean isBehindColumns();
+	public Boolean isBehindColumns();
 
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public void setBehindColumns( boolean behindColumns );
+	public void setBehindColumns( Boolean behindColumns );
 
 	/**
 	 * "Type of the bullets. Possible values are: 'none', 'round', 'square', 'triangleUp', 'triangleDown', 'triangleLeft', 'triangleRight', 'bubble', 'diamond', 'xError', 'yError' and 'custom'."
@@ -175,12 +175,12 @@ public interface IsAmGraph
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public boolean isClustered();
+	public Boolean isClustered();
 
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public void setClustered( boolean clustered );
+	public void setClustered( Boolean clustered );
 
 	/**
 	 * Color of value labels. Will use chart's color if not set.
@@ -215,12 +215,12 @@ public interface IsAmGraph
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public boolean isConnect();
+	public Boolean isConnect();
 
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public void setConnect( boolean connect );
+	public void setConnect( Boolean connect );
 
 	/**
 	 * "Corner radius of column. It can be set both in pixels or in percents. 
@@ -403,12 +403,12 @@ public interface IsAmGraph
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public boolean isHidden();
+	public Boolean isHidden();
 
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public void setHidden( boolean hidden );
+	public void setHidden( Boolean hidden );
 
 	/**
 	 * "If there are more data points than hideBulletsCount, the bullets will not be shown. 0 means the bullets will always be visible."
@@ -443,12 +443,12 @@ public interface IsAmGraph
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public boolean isIncludeInMinMax();
+	public Boolean isIncludeInMinMax();
 
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public void setIncludeInMinMax( boolean includeInMinMax );
+	public void setIncludeInMinMax( Boolean includeInMinMax );
 
 	/**
 	 * Data label text anchor.
@@ -703,22 +703,22 @@ public interface IsAmGraph
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public boolean isNewStack();
+	public Boolean isNewStack();
 
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public void setNewStack( boolean newStack );
+	public void setNewStack( Boolean newStack );
 
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public boolean isNoStepRisers();
+	public Boolean isNoStepRisers();
 
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public void setNoStepRisers( boolean noStepRisers );
+	public void setNoStepRisers( Boolean noStepRisers );
 
 	/**
 	 * "Name of the open field (used by floating columns, candlesticks and ohlc) in your dataProvider."
@@ -783,32 +783,32 @@ public interface IsAmGraph
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public boolean isProCandlesticks();
+	public Boolean isProCandlesticks();
 
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public void setProCandlesticks( boolean proCandlesticks );
+	public void setProCandlesticks( Boolean proCandlesticks );
 
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public boolean isShowAllValueLabels();
+	public Boolean isShowAllValueLabels();
 
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public void setShowAllValueLabels( boolean showAllValueLabels );
+	public void setShowAllValueLabels( Boolean showAllValueLabels );
 
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public boolean isShowBalloon();
+	public Boolean isShowBalloon();
 
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public void setShowBalloon( boolean showBalloon );
+	public void setShowBalloon( Boolean showBalloon );
 
 	/**
 	 * "Specifies graphs value at which cursor is showed. This is only important for candlestick and ohlc charts, also if column chart has 'open' value. Possible values are: 'open', 'close', 'high', 'low'."
@@ -833,32 +833,32 @@ public interface IsAmGraph
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public boolean isShowHandOnHover();
+	public Boolean isShowHandOnHover();
 
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public void setShowHandOnHover( boolean showHandOnHover );
+	public void setShowHandOnHover( Boolean showHandOnHover );
 
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public boolean isShowOnAxis();
+	public Boolean isShowOnAxis();
 
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public void setShowOnAxis( boolean showOnAxis );
+	public void setShowOnAxis( Boolean showOnAxis );
 
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100% You can exclude this graph from stacking."
 	 */
-	public boolean isStackable();
+	public Boolean isStackable();
 
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100% You can exclude this graph from stacking."
 	 */
-	public void setStackable( boolean stackable );
+	public void setStackable( Boolean stackable );
 
 	/**
 	 * Step graph only. Specifies to which direction step should be drawn.
@@ -873,12 +873,12 @@ public interface IsAmGraph
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public boolean isSwitchable();
+	public Boolean isSwitchable();
 
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public void setSwitchable( boolean switchable );
+	public void setSwitchable( Boolean switchable );
 
 	/**
 	 * Graph title.
@@ -933,12 +933,12 @@ public interface IsAmGraph
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public boolean isUseNegativeColorIfDown();
+	public Boolean isUseNegativeColorIfDown();
 
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public void setUseNegativeColorIfDown( boolean useNegativeColorIfDown );
+	public void setUseNegativeColorIfDown( Boolean useNegativeColorIfDown );
 
 	/**
 	 * Specifies which value axis the graph will use. Will use the first value axis if not set. You can use reference to the real ValueAxis object or set value axis id.
@@ -963,12 +963,12 @@ public interface IsAmGraph
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public boolean isVisibleInLegend();
+	public Boolean isVisibleInLegend();
 
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public void setVisibleInLegend( boolean visibleInLegend );
+	public void setVisibleInLegend( Boolean visibleInLegend );
 
 	/**
 	 * XY chart only. A horizontal value axis object to attach graph to.

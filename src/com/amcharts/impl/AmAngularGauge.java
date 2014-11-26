@@ -37,7 +37,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public final boolean isAdjustSize()
+	public final Boolean isAdjustSize()
 	{
 		return getJso().isAdjustSize();
 	}
@@ -45,7 +45,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
-	public final void setAdjustSize( boolean adjustSize )
+	public final void setAdjustSize( Boolean adjustSize )
 	{
 		getJso().setAdjustSize( adjustSize );
 	}
@@ -85,7 +85,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public final boolean isClockWiseOnly()
+	public final Boolean isClockWiseOnly()
 	{
 		return getJso().isClockWiseOnly();
 	}
@@ -93,7 +93,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	/**
 	 * In case you use gauge to create a clock, set this to true.
 	 */
-	public final void setClockWiseOnly( boolean clockWiseOnly )
+	public final void setClockWiseOnly( Boolean clockWiseOnly )
 	{
 		getJso().setClockWiseOnly( clockWiseOnly );
 	}

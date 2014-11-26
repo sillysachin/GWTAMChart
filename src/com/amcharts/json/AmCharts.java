@@ -6,7 +6,7 @@ import com.amcharts.api.IsAmCharts;
 
 public final class AmCharts implements IsAmCharts
 {
-	private boolean baseHref;
+	private Boolean baseHref;
 
 	private List<String> dayNames;
 
@@ -20,12 +20,12 @@ public final class AmCharts implements IsAmCharts
 
 	private String theme;
 
-	private boolean useUTC;
+	private Boolean useUTC;
 
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public boolean isBaseHref()
+	public Boolean isBaseHref()
 	{
 		return baseHref;
 	}
@@ -33,7 +33,7 @@ public final class AmCharts implements IsAmCharts
 	/**
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
-	public void setBaseHref( boolean baseHref )
+	public void setBaseHref( Boolean baseHref )
 	{
 		this.baseHref = baseHref;
 	}
@@ -137,7 +137,7 @@ public final class AmCharts implements IsAmCharts
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public boolean isUseUTC()
+	public Boolean isUseUTC()
 	{
 		return useUTC;
 	}
@@ -145,7 +145,7 @@ public final class AmCharts implements IsAmCharts
 	/**
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
-	public void setUseUTC( boolean useUTC )
+	public void setUseUTC( Boolean useUTC )
 	{
 		this.useUTC = useUTC;
 	}

@@ -127,32 +127,32 @@ public interface IsAmSerialChart extends IsAmRectangularChart
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public boolean isMouseWheelScrollEnabled();
+	public Boolean isMouseWheelScrollEnabled();
 
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public void setMouseWheelScrollEnabled( boolean mouseWheelScrollEnabled );
+	public void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled );
 
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public boolean isMouseWheelZoomEnabled();
+	public Boolean isMouseWheelZoomEnabled();
 
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public void setMouseWheelZoomEnabled( boolean mouseWheelZoomEnabled );
+	public void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled );
 
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public boolean isRotate();
+	public Boolean isRotate();
 
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public void setRotate( boolean rotate );
+	public void setRotate( Boolean rotate );
 
 	/**
 	 * Read-only. If category axis parses dates startDate indicates date from which the chart is currently displayed.
@@ -177,10 +177,10 @@ public interface IsAmSerialChart extends IsAmRectangularChart
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public boolean isZoomOutOnDataUpdate();
+	public Boolean isZoomOutOnDataUpdate();
 
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public void setZoomOutOnDataUpdate( boolean zoomOutOnDataUpdate );
+	public void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate );
 }

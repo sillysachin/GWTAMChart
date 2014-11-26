@@ -182,42 +182,42 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public final native boolean isMouseWheelScrollEnabled() /*-{
+	public final native Boolean isMouseWheelScrollEnabled() /*-{
 		return mouseWheelScrollEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
-	public final native void setMouseWheelScrollEnabled( boolean mouseWheelScrollEnabled ) /*-{
+	public final native void setMouseWheelScrollEnabled( Boolean mouseWheelScrollEnabled ) /*-{
 		this.mouseWheelScrollEnabled = mouseWheelScrollEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public final native boolean isMouseWheelZoomEnabled() /*-{
+	public final native Boolean isMouseWheelZoomEnabled() /*-{
 		return mouseWheelZoomEnabled;
 	}-*/;
 
 	/**
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
-	public final native void setMouseWheelZoomEnabled( boolean mouseWheelZoomEnabled ) /*-{
+	public final native void setMouseWheelZoomEnabled( Boolean mouseWheelZoomEnabled ) /*-{
 		this.mouseWheelZoomEnabled = mouseWheelZoomEnabled;
 	}-*/;
 
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public final native boolean isRotate() /*-{
+	public final native Boolean isRotate() /*-{
 		return rotate;
 	}-*/;
 
 	/**
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
-	public final native void setRotate( boolean rotate ) /*-{
+	public final native void setRotate( Boolean rotate ) /*-{
 		this.rotate = rotate;
 	}-*/;
 
@@ -252,14 +252,14 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public final native boolean isZoomOutOnDataUpdate() /*-{
+	public final native Boolean isZoomOutOnDataUpdate() /*-{
 		return zoomOutOnDataUpdate;
 	}-*/;
 
 	/**
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
-	public final native void setZoomOutOnDataUpdate( boolean zoomOutOnDataUpdate ) /*-{
+	public final native void setZoomOutOnDataUpdate( Boolean zoomOutOnDataUpdate ) /*-{
 		this.zoomOutOnDataUpdate = zoomOutOnDataUpdate;
 	}-*/;
 }

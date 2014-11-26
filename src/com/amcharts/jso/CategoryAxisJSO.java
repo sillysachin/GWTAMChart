@@ -43,28 +43,28 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * Specifies if axis labels (only when it is horizontal) should be wrapped if they don't fit in the allocated space. Wrapping won't work for rotated axis labels.
 	 */
-	public final native boolean isAutoWrap() /*-{
+	public final native Boolean isAutoWrap() /*-{
 		return autoWrap;
 	}-*/;
 
 	/**
 	 * Specifies if axis labels (only when it is horizontal) should be wrapped if they don't fit in the allocated space. Wrapping won't work for rotated axis labels.
 	 */
-	public final native void setAutoWrap( boolean autoWrap ) /*-{
+	public final native void setAutoWrap( Boolean autoWrap ) /*-{
 		this.autoWrap = autoWrap;
 	}-*/;
 
 	/**
 	 * "When parse dates is on for the category axis, the chart will try to highlight the beginning of the periods, like month, in bold. Set this to false to disable the functionality."
 	 */
-	public final native boolean isBoldPeriodBeginning() /*-{
+	public final native Boolean isBoldPeriodBeginning() /*-{
 		return boldPeriodBeginning;
 	}-*/;
 
 	/**
 	 * "When parse dates is on for the category axis, the chart will try to highlight the beginning of the periods, like month, in bold. Set this to false to disable the functionality."
 	 */
-	public final native void setBoldPeriodBeginning( boolean boldPeriodBeginning ) /*-{
+	public final native void setBoldPeriodBeginning( Boolean boldPeriodBeginning ) /*-{
 		this.boldPeriodBeginning = boldPeriodBeginning;
 	}-*/;
 
@@ -85,14 +85,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "This setting works only when parseDates is set to true and equalSpacing is set to false. In case you set it to false, labels will never be centered between grid lines."
 	 */
-	public final native boolean isCenterLabelOnFullPeriod() /*-{
+	public final native Boolean isCenterLabelOnFullPeriod() /*-{
 		return centerLabelOnFullPeriod;
 	}-*/;
 
 	/**
 	 * "This setting works only when parseDates is set to true and equalSpacing is set to false. In case you set it to false, labels will never be centered between grid lines."
 	 */
-	public final native void setCenterLabelOnFullPeriod( boolean centerLabelOnFullPeriod ) /*-{
+	public final native void setCenterLabelOnFullPeriod( Boolean centerLabelOnFullPeriod ) /*-{
 		this.centerLabelOnFullPeriod = centerLabelOnFullPeriod;
 	}-*/;
 
@@ -113,14 +113,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects and parseDates is set to true, the chart will parse dates and will place your data points at irregular intervals. However if you want dates to be parsed (displayed on the axis, baloons, etc), but data points to be placed at equal intervals (omiting dates with no data), set equalSpacing to true."
 	 */
-	public final native boolean isEqualSpacing() /*-{
+	public final native Boolean isEqualSpacing() /*-{
 		return equalSpacing;
 	}-*/;
 
 	/**
 	 * "In case your category axis values are Date objects and parseDates is set to true, the chart will parse dates and will place your data points at irregular intervals. However if you want dates to be parsed (displayed on the axis, baloons, etc), but data points to be placed at equal intervals (omiting dates with no data), set equalSpacing to true."
 	 */
-	public final native void setEqualSpacing( boolean equalSpacing ) /*-{
+	public final native void setEqualSpacing( Boolean equalSpacing ) /*-{
 		this.equalSpacing = equalSpacing;
 	}-*/;
 
@@ -197,14 +197,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "If you set it to false, the start of longer periods won't use a different date format and won't be bold."
 	 */
-	public final native boolean isMarkPeriodChange() /*-{
+	public final native Boolean isMarkPeriodChange() /*-{
 		return markPeriodChange;
 	}-*/;
 
 	/**
 	 * "If you set it to false, the start of longer periods won't use a different date format and won't be bold."
 	 */
-	public final native void setMarkPeriodChange( boolean markPeriodChange ) /*-{
+	public final native void setMarkPeriodChange( Boolean markPeriodChange ) /*-{
 		this.markPeriodChange = markPeriodChange;
 	}-*/;
 
@@ -225,28 +225,28 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects, set this to true. In this case the chart will parse dates and will place your data points at irregular intervals. If you want dates to be parsed, but data points to be placed at equal intervals, set both parseDates and equalSpacing to true."
 	 */
-	public final native boolean isParseDates() /*-{
+	public final native Boolean isParseDates() /*-{
 		return parseDates;
 	}-*/;
 
 	/**
 	 * "In case your category axis values are Date objects, set this to true. In this case the chart will parse dates and will place your data points at irregular intervals. If you want dates to be parsed, but data points to be placed at equal intervals, set both parseDates and equalSpacing to true."
 	 */
-	public final native void setParseDates( boolean parseDates ) /*-{
+	public final native void setParseDates( Boolean parseDates ) /*-{
 		this.parseDates = parseDates;
 	}-*/;
 
 	/**
 	 * "Specifies whether the graph should start on axis or not. In case you display columns, it is recommended to set this to false. If parseDates is set to true, startOnAxis will allways be false, unless equalSpacing is set to true."
 	 */
-	public final native boolean isStartOnAxis() /*-{
+	public final native Boolean isStartOnAxis() /*-{
 		return startOnAxis;
 	}-*/;
 
 	/**
 	 * "Specifies whether the graph should start on axis or not. In case you display columns, it is recommended to set this to false. If parseDates is set to true, startOnAxis will allways be false, unless equalSpacing is set to true."
 	 */
-	public final native void setStartOnAxis( boolean startOnAxis ) /*-{
+	public final native void setStartOnAxis( Boolean startOnAxis ) /*-{
 		this.startOnAxis = startOnAxis;
 	}-*/;
 
@@ -267,14 +267,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	/**
 	 * "Works only when parseDates is set to true and equalSpacing is false. If you set it to true, at the position where bigger period changes, category axis will display date strings of bot small and big period, in two rows."
 	 */
-	public final native boolean isTwoLineMode() /*-{
+	public final native Boolean isTwoLineMode() /*-{
 		return twoLineMode;
 	}-*/;
 
 	/**
 	 * "Works only when parseDates is set to true and equalSpacing is false. If you set it to true, at the position where bigger period changes, category axis will display date strings of bot small and big period, in two rows."
 	 */
-	public final native void setTwoLineMode( boolean twoLineMode ) /*-{
+	public final native void setTwoLineMode( Boolean twoLineMode ) /*-{
 		this.twoLineMode = twoLineMode;
 	}-*/;
 }

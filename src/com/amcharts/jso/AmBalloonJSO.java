@@ -12,14 +12,14 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public final native boolean isAdjustBorderColor() /*-{
+	public final native Boolean isAdjustBorderColor() /*-{
 		return adjustBorderColor;
 	}-*/;
 
 	/**
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
-	public final native void setAdjustBorderColor( boolean adjustBorderColor ) /*-{
+	public final native void setAdjustBorderColor( Boolean adjustBorderColor ) /*-{
 		this.adjustBorderColor = adjustBorderColor;
 	}-*/;
 
@@ -152,14 +152,14 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public final native boolean isFixedPosition() /*-{
+	public final native Boolean isFixedPosition() /*-{
 		return fixedPosition;
 	}-*/;
 
 	/**
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
-	public final native void setFixedPosition( boolean fixedPosition ) /*-{
+	public final native void setFixedPosition( Boolean fixedPosition ) /*-{
 		this.fixedPosition = fixedPosition;
 	}-*/;
 
@@ -278,14 +278,14 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public final native boolean isShowBullet() /*-{
+	public final native Boolean isShowBullet() /*-{
 		return showBullet;
 	}-*/;
 
 	/**
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
-	public final native void setShowBullet( boolean showBullet ) /*-{
+	public final native void setShowBullet( Boolean showBullet ) /*-{
 		this.showBullet = showBullet;
 	}-*/;
 

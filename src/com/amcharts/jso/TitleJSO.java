@@ -26,14 +26,14 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native boolean isBold() /*-{
+	public final native Boolean isBold() /*-{
 		return bold;
 	}-*/;
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public final native void setBold( boolean bold ) /*-{
+	public final native void setBold( Boolean bold ) /*-{
 		this.bold = bold;
 	}-*/;
 

@@ -26,9 +26,9 @@ public interface IsAmFunnelChart extends IsAmSlicedChart
 
 	void setPullDistance( String pullDistance );
 
-	boolean isRotate();
+	Boolean isRotate();
 
-	void setRotate( boolean rotate );
+	void setRotate( Boolean rotate );
 
 	double getStartX();
 

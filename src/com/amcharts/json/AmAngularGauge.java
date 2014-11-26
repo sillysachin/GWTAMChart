@@ -9,13 +9,13 @@ import com.amcharts.api.IsGaugeAxis;
 
 public final class AmAngularGauge implements IsAmAngularChart
 {
-	private boolean adjustSize;
+	private Boolean adjustSize;
 
 	private List<IsGaugeArrow> arrows;
 
 	private List<IsGaugeAxis> axes;
 
-	private boolean clockWiseOnly;
+	private Boolean clockWiseOnly;
 
 	private double faceAlpha;
 
@@ -52,7 +52,7 @@ public final class AmAngularGauge implements IsAmAngularChart
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
 	@Override
-	public boolean isAdjustSize()
+	public Boolean isAdjustSize()
 	{
 		return adjustSize;
 	}
@@ -61,7 +61,7 @@ public final class AmAngularGauge implements IsAmAngularChart
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
 	@Override
-	public void setAdjustSize( boolean adjustSize )
+	public void setAdjustSize( Boolean adjustSize )
 	{
 		this.adjustSize = adjustSize;
 	}
@@ -106,7 +106,7 @@ public final class AmAngularGauge implements IsAmAngularChart
 	 * In case you use gauge to create a clock, set this to true.
 	 */
 	@Override
-	public boolean isClockWiseOnly()
+	public Boolean isClockWiseOnly()
 	{
 		return clockWiseOnly;
 	}
@@ -115,7 +115,7 @@ public final class AmAngularGauge implements IsAmAngularChart
 	 * In case you use gauge to create a clock, set this to true.
 	 */
 	@Override
-	public void setClockWiseOnly( boolean clockWiseOnly )
+	public void setClockWiseOnly( Boolean clockWiseOnly )
 	{
 		this.clockWiseOnly = clockWiseOnly;
 	}

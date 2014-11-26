@@ -59,7 +59,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public final boolean isAutoMargins()
+	public final Boolean isAutoMargins()
 	{
 		return getJso().isAutoMargins();
 	}
@@ -67,7 +67,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
-	public final void setAutoMargins( boolean autoMargins )
+	public final void setAutoMargins( Boolean autoMargins )
 	{
 		getJso().setAutoMargins( autoMargins );
 	}
@@ -171,7 +171,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public final boolean isMarginsUpdated()
+	public final Boolean isMarginsUpdated()
 	{
 		return getJso().isMarginsUpdated();
 	}
@@ -179,7 +179,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	/**
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
-	public final void setMarginsUpdated( boolean marginsUpdated )
+	public final void setMarginsUpdated( Boolean marginsUpdated )
 	{
 		getJso().setMarginsUpdated( marginsUpdated );
 	}

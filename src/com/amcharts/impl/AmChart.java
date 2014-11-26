@@ -487,7 +487,7 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 		return this.@com.amcharts.impl.AmChart::jso.version;
 	}-*/;
 
-	public native void addLabel( String x, String y, String text, String align, Double size, String color, Double rotation, Double alpha, boolean bold, String url )
+	public native void addLabel( String x, String y, String text, String align, Double size, String color, Double rotation, Double alpha, Boolean bold, String url )
 	/*-{
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.addLabel(x, y, text, align, size, color, rotation, alpha, bold,

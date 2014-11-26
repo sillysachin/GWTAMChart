@@ -7,12 +7,12 @@ public interface IsAxisBase
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public boolean isAutoGridCount();
+	public Boolean isAutoGridCount();
 
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public void setAutoGridCount( boolean autoGridCount );
+	public void setAutoGridCount( Boolean autoGridCount );
 
 	/**
 	 * Axis opacity. Value range is 0 - 1.
@@ -67,12 +67,12 @@ public interface IsAxisBase
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public boolean isBoldLabels();
+	public Boolean isBoldLabels();
 
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public void setBoldLabels( boolean boldLabels );
+	public void setBoldLabels( Boolean boldLabels );
 
 	/**
 	 * Color of axis value labels. Will use chart's color if not set.
@@ -178,22 +178,22 @@ public interface IsAxisBase
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public boolean isIgnoreAxisWidth();
+	public Boolean isIgnoreAxisWidth();
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public void setIgnoreAxisWidth( boolean ignoreAxisWidth );
+	public void setIgnoreAxisWidth( Boolean ignoreAxisWidth );
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public boolean isInside();
+	public Boolean isInside();
 
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public void setInside( boolean inside );
+	public void setInside( Boolean inside );
 
 	/**
 	 * Frequency at which labels should be placed. Doesn't work for CategoryAxis if parseDates is set to true.
@@ -228,12 +228,12 @@ public interface IsAxisBase
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public boolean isLabelsEnabled();
+	public Boolean isLabelsEnabled();
 
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public void setLabelsEnabled( boolean labelsEnabled );
+	public void setLabelsEnabled( Boolean labelsEnabled );
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell width required for one span between grid lines.
@@ -258,12 +258,12 @@ public interface IsAxisBase
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public boolean isMinorGridEnabled();
+	public Boolean isMinorGridEnabled();
 
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public void setMinorGridEnabled( boolean minorGridEnabled );
+	public void setMinorGridEnabled( Boolean minorGridEnabled );
 
 	/**
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell height required for one span between grid lines.
@@ -298,22 +298,22 @@ public interface IsAxisBase
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public boolean isShowFirstLabel();
+	public Boolean isShowFirstLabel();
 
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel );
+	public void setShowFirstLabel( Boolean showFirstLabel );
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public boolean isShowLastLabel();
+	public Boolean isShowLastLabel();
 
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public void setShowLastLabel( boolean showLastLabel );
+	public void setShowLastLabel( Boolean showLastLabel );
 
 	/**
 	 * Length of the tick marks.
@@ -338,12 +338,12 @@ public interface IsAxisBase
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public boolean isTitleBold();
+	public Boolean isTitleBold();
 
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public void setTitleBold( boolean titleBold );
+	public void setTitleBold( Boolean titleBold );
 
 	/**
 	 * Color of axis title. Will use text color of chart if not set any.

@@ -76,7 +76,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public final boolean isGridAboveGraphs()
+	public final Boolean isGridAboveGraphs()
 	{
 		return getJso().isGridAboveGraphs();
 	}
@@ -84,7 +84,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public final void setGridAboveGraphs( boolean gridAboveGraphs )
+	public final void setGridAboveGraphs( Boolean gridAboveGraphs )
 	{
 		getJso().setGridAboveGraphs( gridAboveGraphs );
 	}
@@ -108,7 +108,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public final boolean isSequencedAnimation()
+	public final Boolean isSequencedAnimation()
 	{
 		return getJso().isSequencedAnimation();
 	}
@@ -116,7 +116,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public final void setSequencedAnimation( boolean sequencedAnimation )
+	public final void setSequencedAnimation( Boolean sequencedAnimation )
 	{
 		getJso().setSequencedAnimation( sequencedAnimation );
 	}

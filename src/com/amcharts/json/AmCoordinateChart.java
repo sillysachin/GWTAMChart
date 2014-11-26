@@ -15,11 +15,11 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 
 	private List<IsAmGraph> graphs;
 
-	private boolean gridAboveGraphs;
+	private Boolean gridAboveGraphs;
 
 	private List<IsGuide> guides;
 
-	private boolean sequencedAnimation;
+	private Boolean sequencedAnimation;
 
 	private double startAlpha;
 
@@ -82,7 +82,7 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public boolean isGridAboveGraphs()
+	public Boolean isGridAboveGraphs()
 	{
 		return gridAboveGraphs;
 	}
@@ -90,7 +90,7 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	/**
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
-	public void setGridAboveGraphs( boolean gridAboveGraphs )
+	public void setGridAboveGraphs( Boolean gridAboveGraphs )
 	{
 		this.gridAboveGraphs = gridAboveGraphs;
 	}
@@ -114,7 +114,7 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public boolean isSequencedAnimation()
+	public Boolean isSequencedAnimation()
 	{
 		return sequencedAnimation;
 	}
@@ -122,7 +122,7 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	/**
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
-	public void setSequencedAnimation( boolean sequencedAnimation )
+	public void setSequencedAnimation( Boolean sequencedAnimation )
 	{
 		this.sequencedAnimation = sequencedAnimation;
 	}

@@ -6,7 +6,7 @@ public final class Title implements IsTitle
 {
 	private double alpha;
 
-	private boolean bold;
+	private Boolean bold;
 
 	private String color;
 
@@ -35,7 +35,7 @@ public final class Title implements IsTitle
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public boolean isBold()
+	public Boolean isBold()
 	{
 		return bold;
 	}
@@ -43,7 +43,7 @@ public final class Title implements IsTitle
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public void setBold( boolean bold )
+	public void setBold( Boolean bold )
 	{
 		this.bold = bold;
 	}

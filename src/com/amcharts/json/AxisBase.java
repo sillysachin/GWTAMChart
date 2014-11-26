@@ -7,7 +7,7 @@ import com.amcharts.api.IsGuide;
 
 public class AxisBase implements IsAxisBase
 {
-	private boolean autoGridCount;
+	private Boolean autoGridCount;
 
 	private double axisAlpha;
 
@@ -19,7 +19,7 @@ public class AxisBase implements IsAxisBase
 
 	private double axisY;
 
-	private boolean boldLabels;
+	private Boolean boldLabels;
 
 	private String color;
 
@@ -41,9 +41,9 @@ public class AxisBase implements IsAxisBase
 
 	private List< ? extends IsGuide> guides;
 
-	private boolean ignoreAxisWidth;
+	private Boolean ignoreAxisWidth;
 
-	private boolean inside;
+	private Boolean inside;
 
 	private double labelFrequency;
 
@@ -51,13 +51,13 @@ public class AxisBase implements IsAxisBase
 
 	private double labelRotation;
 
-	private boolean labelsEnabled;
+	private Boolean labelsEnabled;
 
 	private double minHorizontalGap;
 
 	private double minorGridAlpha;
 
-	private boolean minorGridEnabled;
+	private Boolean minorGridEnabled;
 
 	private double minVerticalGap;
 
@@ -65,15 +65,15 @@ public class AxisBase implements IsAxisBase
 
 	private String position;
 
-	private boolean showFirstLabel;
+	private Boolean showFirstLabel;
 
-	private boolean showLastLabel;
+	private Boolean showLastLabel;
 
 	private double tickLength;
 
 	private String title;
 
-	private boolean titleBold;
+	private Boolean titleBold;
 
 	private String titleColor;
 
@@ -82,7 +82,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public boolean isAutoGridCount()
+	public Boolean isAutoGridCount()
 	{
 		return autoGridCount;
 	}
@@ -90,7 +90,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
-	public void setAutoGridCount( boolean autoGridCount )
+	public void setAutoGridCount( Boolean autoGridCount )
 	{
 		this.autoGridCount = autoGridCount;
 	}
@@ -178,7 +178,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public boolean isBoldLabels()
+	public Boolean isBoldLabels()
 	{
 		return boldLabels;
 	}
@@ -186,7 +186,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if axis labels should be bold or not.
 	 */
-	public void setBoldLabels( boolean boldLabels )
+	public void setBoldLabels( Boolean boldLabels )
 	{
 		this.boldLabels = boldLabels;
 	}
@@ -354,7 +354,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public boolean isIgnoreAxisWidth()
+	public Boolean isIgnoreAxisWidth()
 	{
 		return ignoreAxisWidth;
 	}
@@ -362,7 +362,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
-	public void setIgnoreAxisWidth( boolean ignoreAxisWidth )
+	public void setIgnoreAxisWidth( Boolean ignoreAxisWidth )
 	{
 		this.ignoreAxisWidth = ignoreAxisWidth;
 	}
@@ -370,7 +370,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public boolean isInside()
+	public Boolean isInside()
 	{
 		return inside;
 	}
@@ -378,7 +378,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
-	public void setInside( boolean inside )
+	public void setInside( Boolean inside )
 	{
 		this.inside = inside;
 	}
@@ -434,7 +434,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public boolean isLabelsEnabled()
+	public Boolean isLabelsEnabled()
 	{
 		return labelsEnabled;
 	}
@@ -442,7 +442,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
-	public void setLabelsEnabled( boolean labelsEnabled )
+	public void setLabelsEnabled( Boolean labelsEnabled )
 	{
 		this.labelsEnabled = labelsEnabled;
 	}
@@ -482,7 +482,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public boolean isMinorGridEnabled()
+	public Boolean isMinorGridEnabled()
 	{
 		return minorGridEnabled;
 	}
@@ -490,7 +490,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if minor grid should be displayed.
 	 */
-	public void setMinorGridEnabled( boolean minorGridEnabled )
+	public void setMinorGridEnabled( Boolean minorGridEnabled )
 	{
 		this.minorGridEnabled = minorGridEnabled;
 	}
@@ -546,7 +546,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public boolean isShowFirstLabel()
+	public Boolean isShowFirstLabel()
 	{
 		return showFirstLabel;
 	}
@@ -554,7 +554,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
-	public void setShowFirstLabel( boolean showFirstLabel )
+	public void setShowFirstLabel( Boolean showFirstLabel )
 	{
 		this.showFirstLabel = showFirstLabel;
 	}
@@ -562,7 +562,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public boolean isShowLastLabel()
+	public Boolean isShowLastLabel()
 	{
 		return showLastLabel;
 	}
@@ -570,7 +570,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
-	public void setShowLastLabel( boolean showLastLabel )
+	public void setShowLastLabel( Boolean showLastLabel )
 	{
 		this.showLastLabel = showLastLabel;
 	}
@@ -610,7 +610,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public boolean isTitleBold()
+	public Boolean isTitleBold()
 	{
 		return titleBold;
 	}
@@ -618,7 +618,7 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * Specifies if title should be bold or not.
 	 */
-	public void setTitleBold( boolean titleBold )
+	public void setTitleBold( Boolean titleBold )
 	{
 		this.titleBold = titleBold;
 	}

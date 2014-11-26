@@ -5,12 +5,12 @@ public interface IsChartScrollbar
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public boolean isAutoGridCount();
+	public Boolean isAutoGridCount();
 
 	/**
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
-	public void setAutoGridCount( boolean autoGridCount );
+	public void setAutoGridCount( Boolean autoGridCount );
 
 	/**
 	 * Background opacity.
@@ -165,12 +165,12 @@ public interface IsChartScrollbar
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public boolean isHideResizeGrips();
+	public Boolean isHideResizeGrips();
 
 	/**
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
-	public void setHideResizeGrips( boolean hideResizeGrips );
+	public void setHideResizeGrips( Boolean hideResizeGrips );
 
 	/**
 	 * "Maximum value of ValueAxis of ChartScrollbar. Calculated automatically, if not set."
@@ -205,12 +205,12 @@ public interface IsChartScrollbar
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public boolean isResizeEnabled();
+	public Boolean isResizeEnabled();
 
 	/**
 	 * Specifies whether scrollbar has a resize feature.
 	 */
-	public void setResizeEnabled( boolean resizeEnabled );
+	public void setResizeEnabled( Boolean resizeEnabled );
 
 	/**
 	 * "Height (width, if chart is rotated) of a scrollbar."
@@ -295,10 +295,10 @@ public interface IsChartScrollbar
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public boolean isUpdateOnReleaseOnly();
+	public Boolean isUpdateOnReleaseOnly();
 
 	/**
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
-	public void setUpdateOnReleaseOnly( boolean updateOnReleaseOnly );
+	public void setUpdateOnReleaseOnly( Boolean updateOnReleaseOnly );
 }

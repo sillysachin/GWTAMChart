@@ -34,14 +34,14 @@ public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public final native boolean isAbove() /*-{
+	public final native Boolean isAbove() /*-{
 		return this.@com.amcharts.impl.Guide::jso.above;
 	}-*/;
 
 	/**
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
-	public final native void setAbove( boolean above ) /*-{
+	public final native void setAbove( Boolean above ) /*-{
 		this.@com.amcharts.impl.Guide::jso.above = above;
 	}-*/;
 
@@ -90,14 +90,14 @@ public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public final native boolean isBoldLabel() /*-{
+	public final native Boolean isBoldLabel() /*-{
 		return this.@com.amcharts.impl.Guide::jso.boldLabel;
 	}-*/;
 
 	/**
 	 * Specifies if label should be bold or not.
 	 */
-	public final native void setBoldLabel( boolean boldLabel ) /*-{
+	public final native void setBoldLabel( Boolean boldLabel ) /*-{
 		this.@com.amcharts.impl.Guide::jso.boldLabel = boldLabel;
 	}-*/;
 
@@ -160,14 +160,14 @@ public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public final native boolean isExpand() /*-{
+	public final native Boolean isExpand() /*-{
 		return this.@com.amcharts.impl.Guide::jso.expand;
 	}-*/;
 
 	/**
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
-	public final native void setExpand( boolean expand ) /*-{
+	public final native void setExpand( Boolean expand ) /*-{
 		this.@com.amcharts.impl.Guide::jso.expand = expand;
 	}-*/;
 
@@ -230,14 +230,14 @@ public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public final native boolean isInside() /*-{
+	public final native Boolean isInside() /*-{
 		return this.@com.amcharts.impl.Guide::jso.inside;
 	}-*/;
 
 	/**
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
-	public final native void setInside( boolean inside ) /*-{
+	public final native void setInside( Boolean inside ) /*-{
 		this.@com.amcharts.impl.Guide::jso.inside = inside;
 	}-*/;
 

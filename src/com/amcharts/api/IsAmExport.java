@@ -55,42 +55,42 @@ public interface IsAmExport
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public boolean isExportJPG();
+	public Boolean isExportJPG();
 
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public void setExportJPG( boolean exportJPG );
+	public void setExportJPG( Boolean exportJPG );
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public boolean isExportPDF();
+	public Boolean isExportPDF();
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public void setExportPDF( boolean exportPDF );
+	public void setExportPDF( Boolean exportPDF );
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public boolean isExportPNG();
+	public Boolean isExportPNG();
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public void setExportPNG( boolean exportPNG );
+	public void setExportPNG( Boolean exportPNG );
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public boolean isExportSVG();
+	public Boolean isExportSVG();
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public void setExportSVG( boolean exportSVG );
+	public void setExportSVG( Boolean exportSVG );
 
 	/**
 	 * Background color of a saved image

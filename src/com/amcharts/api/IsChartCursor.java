@@ -11,13 +11,13 @@ public interface IsChartCursor
 
 	void setAnimationDuration( double animationDuration );
 
-	boolean isAvoidBalloonOverlapping();
+	Boolean isAvoidBalloonOverlapping();
 
-	void setAvoidBalloonOverlapping( boolean avoidBalloonOverlapping );
+	void setAvoidBalloonOverlapping( Boolean avoidBalloonOverlapping );
 
-	boolean isBulletsEnabled();
+	Boolean isBulletsEnabled();
 
-	void setBulletsEnabled( boolean bulletsEnabled );
+	void setBulletsEnabled( Boolean bulletsEnabled );
 
 	double getBulletSize();
 
@@ -35,9 +35,9 @@ public interface IsChartCursor
 
 	void setCategoryBalloonDateFormat( String categoryBalloonDateFormat );
 
-	boolean isCategoryBalloonEnabled();
+	Boolean isCategoryBalloonEnabled();
 
-	void setCategoryBalloonEnabled( boolean categoryBalloonEnabled );
+	void setCategoryBalloonEnabled( Boolean categoryBalloonEnabled );
 
 	IsFunction getCategoryBalloonFunction();
 
@@ -59,13 +59,13 @@ public interface IsChartCursor
 
 	void setCursorPosition( String cursorPosition );
 
-	boolean isEnabled();
+	Boolean isEnabled();
 
-	void setEnabled( boolean enabled );
+	void setEnabled( Boolean enabled );
 
-	boolean isFullWidth();
+	Boolean isFullWidth();
 
-	void setFullWidth( boolean fullWidth );
+	void setFullWidth( Boolean fullWidth );
 
 	double getGraphBulletAlpha();
 
@@ -75,29 +75,29 @@ public interface IsChartCursor
 
 	void setGraphBulletSize( double graphBulletSize );
 
-	boolean isOneBalloonOnly();
+	Boolean isOneBalloonOnly();
 
-	void setOneBalloonOnly( boolean oneBalloonOnly );
+	void setOneBalloonOnly( Boolean oneBalloonOnly );
 
-	boolean isPan();
+	Boolean isPan();
 
-	void setPan( boolean pan );
+	void setPan( Boolean pan );
 
 	double getSelectionAlpha();
 
 	void setSelectionAlpha( double selectionAlpha );
 
-	boolean isSelectWithoutZooming();
+	Boolean isSelectWithoutZooming();
 
-	void setSelectWithoutZooming( boolean selectWithoutZooming );
+	void setSelectWithoutZooming( Boolean selectWithoutZooming );
 
-	boolean isShowNextAvailable();
+	Boolean isShowNextAvailable();
 
-	void setShowNextAvailable( boolean showNextAvailable );
+	void setShowNextAvailable( Boolean showNextAvailable );
 
-	boolean isValueBalloonsEnabled();
+	Boolean isValueBalloonsEnabled();
 
-	void setValueBalloonsEnabled( boolean valueBalloonsEnabled );
+	void setValueBalloonsEnabled( Boolean valueBalloonsEnabled );
 
 	double getValueLineAlpha();
 
@@ -107,20 +107,20 @@ public interface IsChartCursor
 
 	void setValueLineAxis( IsValueAxis valueLineAxis );
 
-	boolean isValueLineBalloonEnabled();
+	Boolean isValueLineBalloonEnabled();
 
-	void setValueLineBalloonEnabled( boolean valueLineBalloonEnabled );
+	void setValueLineBalloonEnabled( Boolean valueLineBalloonEnabled );
 
-	boolean isValueLineEnabled();
+	Boolean isValueLineEnabled();
 
-	void setValueLineEnabled( boolean valueLineEnabled );
+	void setValueLineEnabled( Boolean valueLineEnabled );
 
-	boolean isZoomable();
+	Boolean isZoomable();
 
-	void setZoomable( boolean zoomable );
+	void setZoomable( Boolean zoomable );
 
-	boolean isZooming();
+	Boolean isZooming();
 
-	void setZooming( boolean zooming );
+	void setZooming( Boolean zooming );
 
 }

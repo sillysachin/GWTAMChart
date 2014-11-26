@@ -5,16 +5,16 @@ import com.amcharts.jso.AmRectangularChartJSO;
 
 public final class AmXYChartJSON extends AmRectangularChartJSO implements IsAmXYChart
 {
-	private boolean hideXScrollbar;
+	private Boolean hideXScrollbar;
 
-	private boolean hideYScrollbar;
+	private Boolean hideYScrollbar;
 
 	private double maxZoomFactor;
 
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public boolean isHideXScrollbar()
+	public Boolean isHideXScrollbar()
 	{
 		return hideXScrollbar;
 	}
@@ -22,7 +22,7 @@ public final class AmXYChartJSON extends AmRectangularChartJSO implements IsAmXY
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public void setHideXScrollbar( boolean hideXScrollbar )
+	public void setHideXScrollbar( Boolean hideXScrollbar )
 	{
 		this.hideXScrollbar = hideXScrollbar;
 	}
@@ -30,7 +30,7 @@ public final class AmXYChartJSON extends AmRectangularChartJSO implements IsAmXY
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public boolean isHideYScrollbar()
+	public Boolean isHideYScrollbar()
 	{
 		return hideYScrollbar;
 	}
@@ -38,7 +38,7 @@ public final class AmXYChartJSON extends AmRectangularChartJSO implements IsAmXY
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public void setHideYScrollbar( boolean hideYScrollbar )
+	public void setHideYScrollbar( Boolean hideYScrollbar )
 	{
 		this.hideYScrollbar = hideYScrollbar;
 	}

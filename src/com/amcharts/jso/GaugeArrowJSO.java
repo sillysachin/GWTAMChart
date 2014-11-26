@@ -55,14 +55,14 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public final native boolean isClockWiseOnly() /*-{
+	public final native Boolean isClockWiseOnly() /*-{
 		return clockWiseOnly;
 	}-*/;
 
 	/**
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
-	public final native void setClockWiseOnly( boolean clockWiseOnly ) /*-{
+	public final native void setClockWiseOnly( Boolean clockWiseOnly ) /*-{
 		this.clockWiseOnly = clockWiseOnly;
 	}-*/;
 

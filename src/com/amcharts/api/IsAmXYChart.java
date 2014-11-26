@@ -6,22 +6,22 @@ public interface IsAmXYChart extends IsAmRectangularChart
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public boolean isHideXScrollbar();
+	public Boolean isHideXScrollbar();
 
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public void setHideXScrollbar( boolean hideXScrollbar );
+	public void setHideXScrollbar( Boolean hideXScrollbar );
 
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public boolean isHideYScrollbar();
+	public Boolean isHideYScrollbar();
 
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public void setHideYScrollbar( boolean hideYScrollbar );
+	public void setHideYScrollbar( Boolean hideYScrollbar );
 
 	/**
 	 * Maximum zoom factor of the chart.

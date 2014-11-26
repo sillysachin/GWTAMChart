@@ -12,17 +12,17 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 
 	private double autoRotateCount;
 
-	private boolean autoWrap;
+	private Boolean autoWrap;
 
-	private boolean boldPeriodBeginning;
+	private Boolean boldPeriodBeginning;
 
 	private IsFunction categoryFunction;
 
-	private boolean centerLabelOnFullPeriod;
+	private Boolean centerLabelOnFullPeriod;
 
 	private List< ? extends IsDateFormat> dateFormats;
 
-	private boolean equalSpacing;
+	private Boolean equalSpacing;
 
 	private double firstDayOfWeek;
 
@@ -34,19 +34,19 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 
 	private IsFunction labelFunction;
 
-	private boolean markPeriodChange;
+	private Boolean markPeriodChange;
 
 	private String minPeriod;
 
-	private boolean parseDates;
+	private Boolean parseDates;
 
 	private String position;
 
-	private boolean startOnAxis;
+	private Boolean startOnAxis;
 
 	private String tickPosition;
 
-	private boolean twoLineMode;
+	private Boolean twoLineMode;
 
 	/**
 	 * "Angle of label rotation, if the number of series exceeds autoRotateCount and parseDates is set to false."
@@ -83,7 +83,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * Specifies if axis labels (only when it is horizontal) should be wrapped if they don't fit in the allocated space. Wrapping won't work for rotated axis labels.
 	 */
-	public boolean isAutoWrap()
+	public Boolean isAutoWrap()
 	{
 		return autoWrap;
 	}
@@ -91,7 +91,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * Specifies if axis labels (only when it is horizontal) should be wrapped if they don't fit in the allocated space. Wrapping won't work for rotated axis labels.
 	 */
-	public void setAutoWrap( boolean autoWrap )
+	public void setAutoWrap( Boolean autoWrap )
 	{
 		this.autoWrap = autoWrap;
 	}
@@ -99,7 +99,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "When parse dates is on for the category axis, the chart will try to highlight the beginning of the periods, like month, in bold. Set this to false to disable the functionality."
 	 */
-	public boolean isBoldPeriodBeginning()
+	public Boolean isBoldPeriodBeginning()
 	{
 		return boldPeriodBeginning;
 	}
@@ -107,7 +107,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "When parse dates is on for the category axis, the chart will try to highlight the beginning of the periods, like month, in bold. Set this to false to disable the functionality."
 	 */
-	public void setBoldPeriodBeginning( boolean boldPeriodBeginning )
+	public void setBoldPeriodBeginning( Boolean boldPeriodBeginning )
 	{
 		this.boldPeriodBeginning = boldPeriodBeginning;
 	}
@@ -131,7 +131,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "This setting works only when parseDates is set to true and equalSpacing is set to false. In case you set it to false, labels will never be centered between grid lines."
 	 */
-	public boolean isCenterLabelOnFullPeriod()
+	public Boolean isCenterLabelOnFullPeriod()
 	{
 		return centerLabelOnFullPeriod;
 	}
@@ -139,7 +139,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "This setting works only when parseDates is set to true and equalSpacing is set to false. In case you set it to false, labels will never be centered between grid lines."
 	 */
-	public void setCenterLabelOnFullPeriod( boolean centerLabelOnFullPeriod )
+	public void setCenterLabelOnFullPeriod( Boolean centerLabelOnFullPeriod )
 	{
 		this.centerLabelOnFullPeriod = centerLabelOnFullPeriod;
 	}
@@ -163,7 +163,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects and parseDates is set to true, the chart will parse dates and will place your data points at irregular intervals. However if you want dates to be parsed (displayed on the axis, baloons, etc), but data points to be placed at equal intervals (omiting dates with no data), set equalSpacing to true."
 	 */
-	public boolean isEqualSpacing()
+	public Boolean isEqualSpacing()
 	{
 		return equalSpacing;
 	}
@@ -171,7 +171,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects and parseDates is set to true, the chart will parse dates and will place your data points at irregular intervals. However if you want dates to be parsed (displayed on the axis, baloons, etc), but data points to be placed at equal intervals (omiting dates with no data), set equalSpacing to true."
 	 */
-	public void setEqualSpacing( boolean equalSpacing )
+	public void setEqualSpacing( Boolean equalSpacing )
 	{
 		this.equalSpacing = equalSpacing;
 	}
@@ -259,7 +259,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "If you set it to false, the start of longer periods won't use a different date format and won't be bold."
 	 */
-	public boolean isMarkPeriodChange()
+	public Boolean isMarkPeriodChange()
 	{
 		return markPeriodChange;
 	}
@@ -267,7 +267,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "If you set it to false, the start of longer periods won't use a different date format and won't be bold."
 	 */
-	public void setMarkPeriodChange( boolean markPeriodChange )
+	public void setMarkPeriodChange( Boolean markPeriodChange )
 	{
 		this.markPeriodChange = markPeriodChange;
 	}
@@ -291,7 +291,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects, set this to true. In this case the chart will parse dates and will place your data points at irregular intervals. If you want dates to be parsed, but data points to be placed at equal intervals, set both parseDates and equalSpacing to true."
 	 */
-	public boolean isParseDates()
+	public Boolean isParseDates()
 	{
 		return parseDates;
 	}
@@ -299,7 +299,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "In case your category axis values are Date objects, set this to true. In this case the chart will parse dates and will place your data points at irregular intervals. If you want dates to be parsed, but data points to be placed at equal intervals, set both parseDates and equalSpacing to true."
 	 */
-	public void setParseDates( boolean parseDates )
+	public void setParseDates( Boolean parseDates )
 	{
 		this.parseDates = parseDates;
 	}
@@ -323,7 +323,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Specifies whether the graph should start on axis or not. In case you display columns, it is recommended to set this to false. If parseDates is set to true, startOnAxis will allways be false, unless equalSpacing is set to true."
 	 */
-	public boolean isStartOnAxis()
+	public Boolean isStartOnAxis()
 	{
 		return startOnAxis;
 	}
@@ -331,7 +331,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Specifies whether the graph should start on axis or not. In case you display columns, it is recommended to set this to false. If parseDates is set to true, startOnAxis will allways be false, unless equalSpacing is set to true."
 	 */
-	public void setStartOnAxis( boolean startOnAxis )
+	public void setStartOnAxis( Boolean startOnAxis )
 	{
 		this.startOnAxis = startOnAxis;
 	}
@@ -355,7 +355,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Works only when parseDates is set to true and equalSpacing is false. If you set it to true, at the position where bigger period changes, category axis will display date strings of bot small and big period, in two rows."
 	 */
-	public boolean isTwoLineMode()
+	public Boolean isTwoLineMode()
 	{
 		return twoLineMode;
 	}
@@ -363,7 +363,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Works only when parseDates is set to true and equalSpacing is false. If you set it to true, at the position where bigger period changes, category axis will display date strings of bot small and big period, in two rows."
 	 */
-	public void setTwoLineMode( boolean twoLineMode )
+	public void setTwoLineMode( Boolean twoLineMode )
 	{
 		this.twoLineMode = twoLineMode;
 	}

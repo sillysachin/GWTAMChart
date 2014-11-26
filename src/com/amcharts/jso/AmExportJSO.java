@@ -83,56 +83,56 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public final native boolean isExportJPG() /*-{
+	public final native Boolean isExportJPG() /*-{
 		return exportJPG;
 	}-*/;
 
 	/**
 	 * Specifies if export of JPG should be enabled.
 	 */
-	public final native void setExportJPG( boolean exportJPG ) /*-{
+	public final native void setExportJPG( Boolean exportJPG ) /*-{
 		this.exportJPG = exportJPG;
 	}-*/;
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public final native boolean isExportPDF() /*-{
+	public final native Boolean isExportPDF() /*-{
 		return exportPDF;
 	}-*/;
 
 	/**
 	 * Specifies if export of PDF should be enabled.
 	 */
-	public final native void setExportPDF( boolean exportPDF ) /*-{
+	public final native void setExportPDF( Boolean exportPDF ) /*-{
 		this.exportPDF = exportPDF;
 	}-*/;
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public final native boolean isExportPNG() /*-{
+	public final native Boolean isExportPNG() /*-{
 		return exportPNG;
 	}-*/;
 
 	/**
 	 * Specifies if export of PNG should be enabled.
 	 */
-	public final native void setExportPNG( boolean exportPNG ) /*-{
+	public final native void setExportPNG( Boolean exportPNG ) /*-{
 		this.exportPNG = exportPNG;
 	}-*/;
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public final native boolean isExportSVG() /*-{
+	public final native Boolean isExportSVG() /*-{
 		return exportSVG;
 	}-*/;
 
 	/**
 	 * Specifies if export of SVG should be enabled.
 	 */
-	public final native void setExportSVG( boolean exportSVG ) /*-{
+	public final native void setExportSVG( Boolean exportSVG ) /*-{
 		this.exportSVG = exportSVG;
 	}-*/;
 

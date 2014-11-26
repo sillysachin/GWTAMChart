@@ -27,7 +27,7 @@ public final class TrendLine implements IsTrendLine
 
 	private double initialXValue;
 
-	private boolean isProtected;
+	private Boolean isProtected;
 
 	private double lineAlpha;
 
@@ -202,7 +202,7 @@ public final class TrendLine implements IsTrendLine
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public boolean isIsProtected()
+	public Boolean isIsProtected()
 	{
 		return isProtected;
 	}
@@ -210,7 +210,7 @@ public final class TrendLine implements IsTrendLine
 	/**
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
-	public void setIsProtected( boolean isProtected )
+	public void setIsProtected( Boolean isProtected )
 	{
 		this.isProtected = isProtected;
 	}

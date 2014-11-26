@@ -75,32 +75,32 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public boolean isIncludeGuidesInMinMax();
+	public Boolean isIncludeGuidesInMinMax();
 
 	/**
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
-	public void setIncludeGuidesInMinMax( boolean includeGuidesInMinMax );
+	public void setIncludeGuidesInMinMax( Boolean includeGuidesInMinMax );
 
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public boolean isIncludeHidden();
+	public Boolean isIncludeHidden();
 
 	/**
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
-	public void setIncludeHidden( boolean includeHidden );
+	public void setIncludeHidden( Boolean includeHidden );
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public boolean isDoublesOnly();
+	public Boolean isDoublesOnly();
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public void setDoublesOnly( boolean integersOnly );
+	public void setDoublesOnly( Boolean integersOnly );
 
 	/**
 	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."
@@ -115,12 +115,12 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public boolean isLogarithmic();
+	public Boolean isLogarithmic();
 
 	/**
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
-	public void setLogarithmic( boolean logarithmic );
+	public void setLogarithmic( Boolean logarithmic );
 
 	/**
 	 * Read-only. Maximum value of the axis.
@@ -195,32 +195,32 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public boolean isRadarCategoriesEnabled();
+	public Boolean isRadarCategoriesEnabled();
 
 	/**
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
-	public void setRadarCategoriesEnabled( boolean radarCategoriesEnabled );
+	public void setRadarCategoriesEnabled( Boolean radarCategoriesEnabled );
 
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public boolean isRecalculateToPercents();
+	public Boolean isRecalculateToPercents();
 
 	/**
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
-	public void setRecalculateToPercents( boolean recalculateToPercents );
+	public void setRecalculateToPercents( Boolean recalculateToPercents );
 
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public boolean isReversed();
+	public Boolean isReversed();
 
 	/**
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
-	public void setReversed( boolean reversed );
+	public void setReversed( Boolean reversed );
 
 	/**
 	 * "Stacking mode of the axis. Possible values are: 'none', 'regular', '100 percent', '3d'. Note, only graphs of one type will be stacked."
@@ -315,20 +315,20 @@ public interface IsValueAxis extends IsAxisBase
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public boolean isUsePrefixes();
+	public Boolean isUsePrefixes();
 
 	/**
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
-	public void setUsePrefixes( boolean usePrefixes );
+	public void setUsePrefixes( Boolean usePrefixes );
 
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public boolean isUseScientificNotation();
+	public Boolean isUseScientificNotation();
 
 	/**
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
-	public void setUseScientificNotation( boolean useScientificNotation );
+	public void setUseScientificNotation( Boolean useScientificNotation );
 }

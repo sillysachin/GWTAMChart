@@ -30,7 +30,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public final boolean isHideXScrollbar()
+	public final Boolean isHideXScrollbar()
 	{
 		return getJso().isHideXScrollbar();
 	}
@@ -38,7 +38,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public final void setHideXScrollbar( boolean hideXScrollbar )
+	public final void setHideXScrollbar( Boolean hideXScrollbar )
 	{
 		getJso().setHideXScrollbar( hideXScrollbar );
 	}
@@ -46,7 +46,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public final boolean isHideYScrollbar()
+	public final Boolean isHideYScrollbar()
 	{
 		return getJso().isHideYScrollbar();
 	}
@@ -54,7 +54,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public final void setHideYScrollbar( boolean hideYScrollbar )
+	public final void setHideYScrollbar( Boolean hideYScrollbar )
 	{
 		getJso().setHideYScrollbar( hideYScrollbar );
 	}

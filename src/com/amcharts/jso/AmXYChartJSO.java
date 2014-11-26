@@ -11,28 +11,28 @@ public final class AmXYChartJSO extends AmRectangularChartJSO implements IsAmXYC
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public final native boolean isHideXScrollbar() /*-{
+	public final native Boolean isHideXScrollbar() /*-{
 		return hideXScrollbar;
 	}-*/;
 
 	/**
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
-	public final native void setHideXScrollbar( boolean hideXScrollbar ) /*-{
+	public final native void setHideXScrollbar( Boolean hideXScrollbar ) /*-{
 		this.hideXScrollbar = hideXScrollbar;
 	}-*/;
 
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public final native boolean isHideYScrollbar() /*-{
+	public final native Boolean isHideYScrollbar() /*-{
 		return hideYScrollbar;
 	}-*/;
 
 	/**
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
-	public final native void setHideYScrollbar( boolean hideYScrollbar ) /*-{
+	public final native void setHideYScrollbar( Boolean hideYScrollbar ) /*-{
 		this.hideYScrollbar = hideYScrollbar;
 	}-*/;
 

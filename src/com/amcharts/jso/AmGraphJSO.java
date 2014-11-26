@@ -70,14 +70,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public final native boolean isBehindColumns() /*-{
+	public final native Boolean isBehindColumns() /*-{
 		return behindColumns;
 	}-*/;
 
 	/**
 	 * Specifies if the line graph should be placed behind column graphs
 	 */
-	public final native void setBehindColumns( boolean behindColumns ) /*-{
+	public final native void setBehindColumns( Boolean behindColumns ) /*-{
 		this.behindColumns = behindColumns;
 	}-*/;
 
@@ -252,14 +252,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public final native boolean isClustered() /*-{
+	public final native Boolean isClustered() /*-{
 		return clustered;
 	}-*/;
 
 	/**
 	 * "In case you want to place this graph's columns in front of other columns, set this to false. In case 'true', the columns will be clustered next to each other."
 	 */
-	public final native void setClustered( boolean clustered ) /*-{
+	public final native void setClustered( Boolean clustered ) /*-{
 		this.clustered = clustered;
 	}-*/;
 
@@ -308,14 +308,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public final native boolean isConnect() /*-{
+	public final native Boolean isConnect() /*-{
 		return connect;
 	}-*/;
 
 	/**
 	 * Specifies whether to connect data points if data is missing. The default value is true.
 	 */
-	public final native void setConnect( boolean connect ) /*-{
+	public final native void setConnect( Boolean connect ) /*-{
 		this.connect = connect;
 	}-*/;
 
@@ -560,14 +560,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public final native boolean isHidden() /*-{
+	public final native Boolean isHidden() /*-{
 		return hidden;
 	}-*/;
 
 	/**
 	 * "Specifies whether the graph is hidden. Do not use this to show/hide the graph, use hideGraph(graph) and showGraph(graph) methods instead."
 	 */
-	public final native void setHidden( boolean hidden ) /*-{
+	public final native void setHidden( Boolean hidden ) /*-{
 		this.hidden = hidden;
 	}-*/;
 
@@ -616,14 +616,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public final native boolean isIncludeInMinMax() /*-{
+	public final native Boolean isIncludeInMinMax() /*-{
 		return includeInMinMax;
 	}-*/;
 
 	/**
 	 * Whether to include this graph when calculating min and max value of the axis.
 	 */
-	public final native void setIncludeInMinMax( boolean includeInMinMax ) /*-{
+	public final native void setIncludeInMinMax( Boolean includeInMinMax ) /*-{
 		this.includeInMinMax = includeInMinMax;
 	}-*/;
 
@@ -980,28 +980,28 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public final native boolean isNewStack() /*-{
+	public final native Boolean isNewStack() /*-{
 		return newStack;
 	}-*/;
 
 	/**
 	 * "If you set it to true, column chart will begin new stack. This allows having Clustered and Stacked column/bar chart."
 	 */
-	public final native void setNewStack( boolean newStack ) /*-{
+	public final native void setNewStack( Boolean newStack ) /*-{
 		this.newStack = newStack;
 	}-*/;
 
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public final native boolean isNoStepRisers() /*-{
+	public final native Boolean isNoStepRisers() /*-{
 		return noStepRisers;
 	}-*/;
 
 	/**
 	 * "In case you want to have a step line graph without risers, you should set this to true."
 	 */
-	public final native void setNoStepRisers( boolean noStepRisers ) /*-{
+	public final native void setNoStepRisers( Boolean noStepRisers ) /*-{
 		this.noStepRisers = noStepRisers;
 	}-*/;
 
@@ -1092,42 +1092,42 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public final native boolean isProCandlesticks() /*-{
+	public final native Boolean isProCandlesticks() /*-{
 		return proCandlesticks;
 	}-*/;
 
 	/**
 	 * "If this is set to true, candlesticks will be colored in a different manner - if current close is less than current open, the candlestick will be empty, otherwise - filled with color. If previous close is less than current close, the candlestick will use positive color, otherwise - negative color."
 	 */
-	public final native void setProCandlesticks( boolean proCandlesticks ) /*-{
+	public final native void setProCandlesticks( Boolean proCandlesticks ) /*-{
 		this.proCandlesticks = proCandlesticks;
 	}-*/;
 
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public final native boolean isShowAllValueLabels() /*-{
+	public final native Boolean isShowAllValueLabels() /*-{
 		return showAllValueLabels;
 	}-*/;
 
 	/**
 	 * "If graph's type is column and labelText is set, graph hides labels which do not fit into the column's space. If you don't want these labels to be hidden, set this to true."
 	 */
-	public final native void setShowAllValueLabels( boolean showAllValueLabels ) /*-{
+	public final native void setShowAllValueLabels( Boolean showAllValueLabels ) /*-{
 		this.showAllValueLabels = showAllValueLabels;
 	}-*/;
 
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public final native boolean isShowBalloon() /*-{
+	public final native Boolean isShowBalloon() /*-{
 		return showBalloon;
 	}-*/;
 
 	/**
 	 * Specifies whether the value balloon of this graph is shown when mouse is over data item or chart's indicator is over some series.
 	 */
-	public final native void setShowBalloon( boolean showBalloon ) /*-{
+	public final native void setShowBalloon( Boolean showBalloon ) /*-{
 		this.showBalloon = showBalloon;
 	}-*/;
 
@@ -1162,42 +1162,42 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public final native boolean isShowHandOnHover() /*-{
+	public final native Boolean isShowHandOnHover() /*-{
 		return showHandOnHover;
 	}-*/;
 
 	/**
 	 * "If you want mouse pointer to change to hand when hovering the graph, set this property to true."
 	 */
-	public final native void setShowHandOnHover( boolean showHandOnHover ) /*-{
+	public final native void setShowHandOnHover( Boolean showHandOnHover ) /*-{
 		this.showHandOnHover = showHandOnHover;
 	}-*/;
 
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public final native boolean isShowOnAxis() /*-{
+	public final native Boolean isShowOnAxis() /*-{
 		return showOnAxis;
 	}-*/;
 
 	/**
 	 * "It can only be used together with topRadius (when columns look like cylinders). If you set it to true, the cylinder will be lowered down so that the center of it's bottom circle would be right on category axis."
 	 */
-	public final native void setShowOnAxis( boolean showOnAxis ) /*-{
+	public final native void setShowOnAxis( Boolean showOnAxis ) /*-{
 		this.showOnAxis = showOnAxis;
 	}-*/;
 
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100 You can exclude this graph from stacking."
 	 */
-	public final native boolean isStackable() /*-{
+	public final native Boolean isStackable() /*-{
 		return stackable;
 	}-*/;
 
 	/**
 	 * "If the value axis of this graph has stack types like 'regular' or 100 You can exclude this graph from stacking."
 	 */
-	public final native void setStackable( boolean stackable ) /*-{
+	public final native void setStackable( Boolean stackable ) /*-{
 		this.stackable = stackable;
 	}-*/;
 
@@ -1218,14 +1218,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public final native boolean isSwitchable() /*-{
+	public final native Boolean isSwitchable() /*-{
 		return switchable;
 	}-*/;
 
 	/**
 	 * "If you set it to false, the graph will not be hidden when user clicks on legend entry."
 	 */
-	public final native void setSwitchable( boolean switchable ) /*-{
+	public final native void setSwitchable( Boolean switchable ) /*-{
 		this.switchable = switchable;
 	}-*/;
 
@@ -1302,14 +1302,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public final native boolean isUseNegativeColorIfDown() /*-{
+	public final native Boolean isUseNegativeColorIfDown() /*-{
 		return useNegativeColorIfDown;
 	}-*/;
 
 	/**
 	 * "If negativeLineColor and/or negativeFillColors are set and useNegativeColorIfDown is set to true (default is false), the line, step and column graphs will use these colors for lines, bullets or columns if previous value is bigger than current value. In case you set openField for the graph, the graph will compare current value with openField value instead of comparing to previous value. Here is a demo."
 	 */
-	public final native void setUseNegativeColorIfDown( boolean useNegativeColorIfDown ) /*-{
+	public final native void setUseNegativeColorIfDown( Boolean useNegativeColorIfDown ) /*-{
 		this.useNegativeColorIfDown = useNegativeColorIfDown;
 	}-*/;
 
@@ -1344,14 +1344,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public final native boolean isVisibleInLegend() /*-{
+	public final native Boolean isVisibleInLegend() /*-{
 		return visibleInLegend;
 	}-*/;
 
 	/**
 	 * Specifies whether this graph should be shown in the Legend.
 	 */
-	public final native void setVisibleInLegend( boolean visibleInLegend ) /*-{
+	public final native void setVisibleInLegend( Boolean visibleInLegend ) /*-{
 		this.visibleInLegend = visibleInLegend;
 	}-*/;
 
@@ -1411,7 +1411,7 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 		this.yField = yField;
 	}-*/;
 
-	public final native void setUseLineColorForBulletBorder( boolean useLineColorForBulletBorder )
+	public final native void setUseLineColorForBulletBorder( Boolean useLineColorForBulletBorder )
 	/*-{
 		this.useLineColorForBulletBorder = useLineColorForBulletBorder;
 	}-*/;

@@ -122,7 +122,7 @@ public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
 		this.@com.amcharts.impl.ExportConfig::jso.menuItemStyle = varMenuItemStyle;
 	}-*/;
 
-	public native void setRemoveImagery( boolean removeImagery )
+	public native void setRemoveImagery( Boolean removeImagery )
 	/*-{
 		this.@com.amcharts.impl.ExportConfig::jso.removeImagery = removeImagery;
 	}-*/;
