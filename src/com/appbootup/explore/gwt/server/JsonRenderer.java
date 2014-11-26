@@ -2,6 +2,8 @@ package com.appbootup.explore.gwt.server;
 
 import java.util.Locale;
 
+import com.amcharts.api.IsFunction;
+import com.amcharts.json.serializer.JsFunctionSerializer;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,11 +23,14 @@ public class JsonRenderer
 	public JsonRenderer()
 	{
 		this.jacksonModule = new ChartsJacksonModule();
+		jacksonModule
+				.addSerializer( IsFunction.class, new JsFunctionSerializer() );
 		this.jacksonMapper = createJacksonMapper();
 	}
 
 	/**
-	 * This method gives the opportunity to add a custom serializer to serializer one of the highchart option classes. It may be neccessary to serialize certain option classes differently for different web frameworks.
+	 * This method gives the opportunity to add a custom serializer to serialize one of the amchart classes. 
+	 * It may be necessary to serialize certain classes differently for different web frameworks.
 	 *
 	 * @param clazz
 	 *            the option class
@@ -37,8 +42,6 @@ public class JsonRenderer
 		this.jacksonModule.addSerializer( clazz, serializer );
 	}
 
-	@SuppressWarnings(
-	{ "rawtypes", "unchecked" } )
 	private ObjectMapper createJacksonMapper()
 	{
 		ObjectMapper mapper = createDefaultObjectMapper();
@@ -65,7 +68,8 @@ public class JsonRenderer
 		}
 		catch ( Exception e )
 		{
-			throw new RuntimeException( "Error trying to serialize object of type " + object.getClass().getName() + " into JSON!", e );
+			throw new RuntimeException( "Error trying to serialize object of type " + object
+					.getClass().getName() + " into JSON!", e );
 		}
 	}
 

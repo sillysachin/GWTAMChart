@@ -48,9 +48,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setDescriptionField( String descriptionField );
 
-	List<Float> getGradientRatio();
+	List<Double> getGradientRatio();
 
-	void setGradientRatio( List<Float> gradientRatio );
+	void setGradientRatio( List<Double> gradientRatio );
 
 	Double getGroupedAlpha();
 
@@ -84,9 +84,9 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setHoverAlpha( Double hoverAlpha );
 
-	Object getLabelFunction();
+	IsFunction getLabelFunction();
 
-	void setLabelFunction( Object labelFunction );
+	void setLabelFunction( IsFunction labelFunction );
 
 	Boolean getLabelsEnabled();
 

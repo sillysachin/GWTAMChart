@@ -3,6 +3,7 @@ package com.amcharts.json;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.api.IsFunction;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
@@ -29,7 +30,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private String descriptionField;
 
-	private List<Float> gradientRatio;
+	private List<Double> gradientRatio;
 
 	private Double groupedAlpha;
 
@@ -47,8 +48,8 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Double hoverAlpha;
 
-	@JsonRawValue
-	private Object labelFunction;
+	//@JsonRawValue
+	private IsFunction labelFunction;
 
 	private Boolean labelsEnabled;
 
@@ -233,13 +234,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public List<Float> getGradientRatio()
+	public List<Double> getGradientRatio()
 	{
 		return gradientRatio;
 	}
 
 	@Override
-	public void setGradientRatio( List<Float> gradientRatio )
+	public void setGradientRatio( List<Double> gradientRatio )
 	{
 		this.gradientRatio = gradientRatio;
 	}
@@ -341,13 +342,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public Object getLabelFunction()
+	public IsFunction getLabelFunction()
 	{
 		return labelFunction;
 	}
 
 	@Override
-	public void setLabelFunction( Object labelFunction )
+	public void setLabelFunction( IsFunction labelFunction )
 	{
 		this.labelFunction = labelFunction;
 	}

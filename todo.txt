@@ -6,8 +6,10 @@ Revisit generics with AmChart<T extends AmChartDataObject>
 Support AMStockChart api's
 Enhance DataProvider support
 Provide conversion from JSON to Impl
+Convert All Demos to JSON charts.
+Setup "Export" form JSON charts.
 Split the demo code into separate project
 Address all todos
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
-Clean up IsFunction placeholder 
-Improve Codegeneration in "gen"
+Clean up IsFunction placeholder and other function related methods.
+Improve Code generation in "gen"
