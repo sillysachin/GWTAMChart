@@ -3,6 +3,7 @@ package com.amcharts.jso;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.api.IsFunction;
 
 public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 {
@@ -46,7 +47,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	/*-{
 		this.depth3D = depth3D;
 	}-*/;
-	
+
 	@Override
 	public final native Double getAlpha()
 	/*-{
@@ -144,13 +145,13 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native List<Float> getGradientRatio()
+	public final native List<Double> getGradientRatio()
 	/*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.gradientRatio);
 	}-*/;
 
 	@Override
-	public final native void setGradientRatio( List<Float> gradientRatio )
+	public final native void setGradientRatio( List<Double> gradientRatio )
 	/*-{
 		this.gradientRatio = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(gradientRatio);
 	}-*/;
@@ -252,15 +253,15 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native Object getLabelFunction()
+	public final native IsFunction getLabelFunction()
 	/*-{
-		return this.labelFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.labelFunction);
 	}-*/;
 
 	@Override
-	public final native void setLabelFunction( Object labelFunction )
+	public final native void setLabelFunction( IsFunction labelFunction )
 	/*-{
-		this.labelFunction = labelFunction;
+		this.labelFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(labelFunction);
 	}-*/;
 
 	@Override

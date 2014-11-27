@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.amcharts.impl.JsFunction;
 import com.amcharts.json.AmPieChart;
 import com.amcharts.json.PieChartSlice;
 
@@ -90,9 +91,10 @@ public class JSONAMChartServlet extends HttpServlet
 		//exportConfig.addMenuItem( menuItem );
 		//amPieChart.setExportConfig( exportConfig );
 		amPieChart.setGroupPercent( 5.0 );
-
-		amPieChart.setLabelFunction( getFunctionString() );
-
+		String functionString = getFunctionString();
+		JsFunction jsFunction = new JsFunction();
+		jsFunction.setFunctionString( functionString );
+		amPieChart.setLabelFunction( jsFunction );
 		JsonRenderer renderer = JsonBuilderFactory.getInstance()
 				.getJacksonRenderer();
 		String jsonStringJackson = renderer.toJson( amPieChart );

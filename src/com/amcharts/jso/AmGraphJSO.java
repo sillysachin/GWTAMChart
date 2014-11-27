@@ -43,14 +43,14 @@ public final class AmGraphJSO extends JavaScriptObject implements IsAmGraph
 	 * "If you set some function, the graph will call it and pass GraphDataItem and AmGraph object to it. This function should return a string which will be displayed in a balloon."
 	 */
 	public final native IsFunction getBalloonFunction() /*-{
-		return balloonFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.balloonFunction);
 	}-*/;
 
 	/**
 	 * "If you set some function, the graph will call it and pass GraphDataItem and AmGraph object to it. This function should return a string which will be displayed in a balloon."
 	 */
 	public final native void setBalloonFunction( IsFunction balloonFunction ) /*-{
-		this.balloonFunction = balloonFunction;
+		this.balloonFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(balloonFunction);
 	}-*/;
 
 	/**

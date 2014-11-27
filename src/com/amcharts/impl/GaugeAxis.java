@@ -366,9 +366,10 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
-	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
-		this.@com.amcharts.impl.GaugeAxis::jso.labelFunction = labelFunction;
-	}-*/;
+	public final void setLabelFunction( IsFunction labelFunction )
+	{
+		getJso().setLabelFunction( labelFunction );
+	}
 
 	/**
 	 * Distance from axis to the labels.

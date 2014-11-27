@@ -3,6 +3,7 @@ package com.amcharts.impl;
 import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
+import com.amcharts.api.IsFunction;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.mouse.slicedchart.AmSlicedChartEventUtils;
 import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
@@ -166,13 +167,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public List<Float> getGradientRatio()
+	public List<Double> getGradientRatio()
 	{
 		return getJso().getGradientRatio();
 	}
 
 	@Override
-	public void setGradientRatio( List<Float> gradientRatio )
+	public void setGradientRatio( List<Double> gradientRatio )
 	{
 		getJso().setGradientRatio( gradientRatio );
 
@@ -275,13 +276,13 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	}
 
 	@Override
-	public Object getLabelFunction()
+	public IsFunction getLabelFunction()
 	{
 		return getJso().getLabelFunction();
 	}
 
 	@Override
-	public void setLabelFunction( Object labelFunction )
+	public void setLabelFunction( IsFunction labelFunction )
 	{
 		getJso().setLabelFunction( labelFunction );
 	}

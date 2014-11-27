@@ -169,9 +169,10 @@ public final class ChartCursor implements IJavaScriptWrapper<ChartCursorJSO>, Is
 	/**
 	 * "Allows formatting any category balloon text you want. categoryBalloonFunction should return a string which will be displayed in a balloon. When categoryBalloonFunction is called, category value (or date) is passed as an argument."
 	 */
-	public final native void setCategoryBalloonFunction( IsFunction categoryBalloonFunction ) /*-{
-		this.@com.amcharts.impl.ChartCursor::jso.categoryBalloonFunction = categoryBalloonFunction;
-	}-*/;
+	public final void setCategoryBalloonFunction( IsFunction categoryBalloonFunction )
+	{
+		getJso().setCategoryBalloonFunction( categoryBalloonFunction );
+	}
 
 	/**
 	 * Text color.
