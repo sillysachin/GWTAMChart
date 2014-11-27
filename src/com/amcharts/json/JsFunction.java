@@ -6,10 +6,7 @@ import com.google.gwt.core.client.JsonUtils;
 
 public class JsFunction implements IsFunction
 {
-
 	private String functionString;
-
-	private String functionKey;
 
 	@Override
 	public String getFunctionString()
@@ -21,18 +18,6 @@ public class JsFunction implements IsFunction
 	public void setFunctionString( String functionString )
 	{
 		this.functionString = functionString;
-	}
-
-	@Override
-	public String getFunctionKey()
-	{
-		return functionKey;
-	}
-
-	@Override
-	public void setFunctionKey( String functionKey )
-	{
-		this.functionKey = functionKey;
 	}
 
 	public static JavaScriptObject getJSInstance( JsFunction jsFunction )
@@ -47,5 +32,11 @@ public class JsFunction implements IsFunction
 		JsFunction jsFunction = new JsFunction();
 		jsFunction.setFunctionString( jsFunctionJSO.toString() );
 		return jsFunction;
+	}
+
+	@Override
+	public String toString()
+	{
+		return functionString;
 	}
 }

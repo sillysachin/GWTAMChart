@@ -94,7 +94,7 @@ public class JSONAMChartServlet extends HttpServlet
 		String functionString = getFunctionString();
 		JsFunction jsFunction = new JsFunction();
 		jsFunction.setFunctionString( functionString );
-		//amPieChart.setLabelFunction( jsFunction );
+		amPieChart.setLabelFunction( jsFunction );
 		JsonRenderer renderer = JsonBuilderFactory.getInstance()
 				.getJacksonRenderer();
 		String jsonStringJackson = renderer.toJson( amPieChart );

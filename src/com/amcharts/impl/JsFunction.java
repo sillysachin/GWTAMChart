@@ -9,8 +9,6 @@ public class JsFunction implements IsFunction
 
 	private String functionString;
 
-	private String functionKey;
-
 	@Override
 	public String getFunctionString()
 	{
@@ -21,18 +19,6 @@ public class JsFunction implements IsFunction
 	public void setFunctionString( String functionString )
 	{
 		this.functionString = functionString;
-	}
-
-	@Override
-	public String getFunctionKey()
-	{
-		return functionKey;
-	}
-
-	@Override
-	public void setFunctionKey( String functionKey )
-	{
-		this.functionKey = functionKey;
 	}
 
 	public static JavaScriptObject getJSInstance( JsFunction jsFunction )
