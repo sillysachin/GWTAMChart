@@ -647,14 +647,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
 	public final native IsFunction getValueFunction() /*-{
-		return valueFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.valueFunction);
 	}-*/;
 
 	/**
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
 	public final native void setValueFunction( IsFunction valueFunction ) /*-{
-		this.valueFunction = valueFunction;
+		this.valueFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(valueFunction);
 	}-*/;
 
 	/**

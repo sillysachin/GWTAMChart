@@ -155,14 +155,14 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."
 	 */
 	public final native IsFunction getLabelFunction() /*-{
-		return labelFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.labelFunction);
 	}-*/;
 
 	/**
 	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."
 	 */
 	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
-		this.labelFunction = labelFunction;
+		this.labelFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(labelFunction);
 	}-*/;
 
 	/**

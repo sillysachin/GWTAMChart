@@ -48,7 +48,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Double hoverAlpha;
 
-	//@JsonRawValue
 	private IsFunction labelFunction;
 
 	private Boolean labelsEnabled;

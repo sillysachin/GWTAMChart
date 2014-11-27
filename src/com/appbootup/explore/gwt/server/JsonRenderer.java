@@ -23,8 +23,7 @@ public class JsonRenderer
 	public JsonRenderer()
 	{
 		this.jacksonModule = new ChartsJacksonModule();
-		jacksonModule
-				.addSerializer( IsFunction.class, new JsFunctionSerializer() );
+		jacksonModule.addSerializer( IsFunction.class, new JsFunctionSerializer() );
 		this.jacksonMapper = createJacksonMapper();
 	}
 

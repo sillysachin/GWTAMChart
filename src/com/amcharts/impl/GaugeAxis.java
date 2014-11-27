@@ -26,13 +26,12 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	{
 		this.jso = jso;
 	}
-	
+
 	//Learn: Very important to invoke $wnd.AmCharts.GaugeAxis() instead of just {} or GaugeAxisJSO.createObject()
 	public native GaugeAxisJSO createJso() /*-{
 		var gaugeAxis = new $wnd.AmCharts.GaugeAxis();
 		return gaugeAxis;
 	}-*/;
-
 
 	/**
 	 * Axis opacity.
@@ -135,14 +134,16 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
-	public final List<IsGaugeBand> getBands(){
+	public final List<IsGaugeBand> getBands()
+	{
 		return getJso().getBands();
 	}
 
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
-	public final  void setBands( List<IsGaugeBand> bands ){
+	public final void setBands( List<IsGaugeBand> bands )
+	{
 		getJso().setBands( bands );
 	}
 
@@ -359,16 +360,18 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
-	public final native IsFunction getLabelFunction() /*-{
-		return this.@com.amcharts.impl.GaugeAxis::jso.labelFunction;
-	}-*/;
+	public final IsFunction getLabelFunction()
+	{
+		return getJso().getLabelFunction();
+	}
 
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
-	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
-		this.@com.amcharts.impl.GaugeAxis::jso.labelFunction = labelFunction;
-	}-*/;
+	public final void setLabelFunction( IsFunction labelFunction )
+	{
+		getJso().setLabelFunction( labelFunction );
+	}
 
 	/**
 	 * Distance from axis to the labels.

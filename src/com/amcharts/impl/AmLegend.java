@@ -670,16 +670,16 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	/**
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
-	public final native IsFunction getValueFunction() /*-{
-		return this.@com.amcharts.impl.AmLegend::jso.valueFunction;
-	}-*/;
+	public final IsFunction getValueFunction(){
+		return getJso().getValueFunction();
+	}
 
 	/**
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
-	public final native void setValueFunction( IsFunction valueFunction ) /*-{
-		this.@com.amcharts.impl.AmLegend::jso.valueFunction = valueFunction;
-	}-*/;
+	public final void setValueFunction( IsFunction valueFunction ) {
+		getJso().setValueFunction( valueFunction );
+	}
 
 	/**
 	 * "The text which will be displayed in the value portion of the legend. You can use tags like [[value]], [[open]], [[high]], [[low]], [[close]], [[percents]], [[description]]."

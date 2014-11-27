@@ -62,16 +62,18 @@ public final class AmGraph implements IsAmGraph, IJavaScriptWrapper<AmGraphJSO>
 	/**
 	 * "If you set some function, the graph will call it and pass GraphDataItem and AmGraph object to it. This function should return a string which will be displayed in a balloon."
 	 */
-	public final native IsFunction getBalloonFunction() /*-{
-		return this.@com.amcharts.impl.AmGraph::jso.balloonFunction;
-	}-*/;
+	public final IsFunction getBalloonFunction()
+	{
+		return getJso().getBalloonFunction();
+	}
 
 	/**
 	 * "If you set some function, the graph will call it and pass GraphDataItem and AmGraph object to it. This function should return a string which will be displayed in a balloon."
 	 */
-	public final native void setBalloonFunction( IsFunction balloonFunction ) /*-{
-		this.@com.amcharts.impl.AmGraph::jso.balloonFunction = balloonFunction;
-	}-*/;
+	public final void setBalloonFunction( IsFunction balloonFunction )
+	{
+		getJso().setBalloonFunction( balloonFunction );
+	}
 
 	/**
 	 * "Balloon text. You can use tags like [[value]], [[description]], [[percents]], [[open]], [[category]] or any other field name from your data provider. HTML tags can also be used."

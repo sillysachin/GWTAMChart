@@ -339,14 +339,14 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
 	public final native IsFunction getLabelFunction() /*-{
-		return labelFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.labelFunction);
 	}-*/;
 
 	/**
 	 * You can use this function to format axis labels. This function is called and value is passed as a attribute: labelFunction(value);
 	 */
 	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
-		this.labelFunction = labelFunction;
+		this.labelFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(labelFunction);
 	}-*/;
 
 	/**

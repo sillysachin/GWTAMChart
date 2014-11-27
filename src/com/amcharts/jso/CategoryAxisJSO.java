@@ -72,14 +72,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	 * "specifies a method that returns the value that should be used as categoryValue for current item. If this property is set, the return value of the custom data function takes precedence over categoryField. When a chart calls this method, it passes category value, data item from chart's data provider and reference to categoryAxis: categoryFunction(category, dataItem, categoryAxis); This method can be used both when category axis parses dates and when it doesn't. If axis parses dates, your categoryFunction should return Date object. For example, if you have date strings in your data, you can use this method to convert these strings into Date objects."""
 	 */
 	public final native IsFunction getCategoryFunction() /*-{
-		return categoryFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.categoryFunction);
 	}-*/;
 
 	/**
 	 * "specifies a method that returns the value that should be used as categoryValue for current item. If this property is set, the return value of the custom data function takes precedence over categoryField. When a chart calls this method, it passes category value, data item from chart's data provider and reference to categoryAxis: categoryFunction(category, dataItem, categoryAxis); This method can be used both when category axis parses dates and when it doesn't. If axis parses dates, your categoryFunction should return Date object. For example, if you have date strings in your data, you can use this method to convert these strings into Date objects."""
 	 */
 	public final native void setCategoryFunction( IsFunction categoryFunction ) /*-{
-		this.categoryFunction = categoryFunction;
+		this.categoryFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(categoryFunction);
 	}-*/;
 
 	/**
@@ -184,14 +184,14 @@ public final class CategoryAxisJSO extends AxisBaseJSO implements IsCategoryAxis
 	 * "You can use this function to format Category axis labels. If this function is set, then it is called with the following parameters passed: if dates are not parsed: labelFunction(valueText, serialDataItem, categoryAxis) if dates are parsed: labelFunction(valueText, date, categoryAxis) Your function should return string which will be displayed on the axis."
 	 */
 	public final native IsFunction getLabelFunction() /*-{
-		return labelFunction;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.labelFunction);
 	}-*/;
 
 	/**
 	 * "You can use this function to format Category axis labels. If this function is set, then it is called with the following parameters passed: if dates are not parsed: labelFunction(valueText, serialDataItem, categoryAxis) if dates are parsed: labelFunction(valueText, date, categoryAxis) Your function should return string which will be displayed on the axis."
 	 */
 	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
-		this.labelFunction = labelFunction;
+		this.labelFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(labelFunction);
 	}-*/;
 
 	/**

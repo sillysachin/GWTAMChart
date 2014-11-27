@@ -59,10 +59,10 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native IsFunction getOnclick() /*-{
-		return onclick;
+		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.onclick);
 	}-*/;
 
 	public final native void setOnclick( IsFunction onclick ) /*-{
-		this.onclick = onclick;
+		this.onclick = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(onclick);
 	}-*/;
 }
