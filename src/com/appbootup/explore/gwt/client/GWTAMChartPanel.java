@@ -1,5 +1,11 @@
 package com.appbootup.explore.gwt.client;
 
+import com.amcharts.impl.AmChart;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
+import com.amcharts.impl.util.LogUtils;
+import com.amcharts.impl.util.WrapperUtils;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptException;
@@ -25,6 +31,8 @@ public class GWTAMChartPanel extends ResizeComposite
 
 	AmChartJSO chartJSO = null;
 
+	AmChart amChart = null;
+
 	public GWTAMChartPanel( String id, JSONValue chartJSONObject )
 	{
 		setId( id );
@@ -42,7 +50,8 @@ public class GWTAMChartPanel extends ResizeComposite
 		if ( "NoData".equals( chartJSONString ) )
 		{
 			FlowPanel noDataPanel = new FlowPanel();
-			noDataPanel.setSize( 100 + Unit.PCT.getType(), 100 + Unit.PCT.getType() );
+			noDataPanel.setSize( 100 + Unit.PCT.getType(), 100 + Unit.PCT
+					.getType() );
 
 			Label noDataLbl = new Label();
 			noDataLbl.setText( "No Data" );
@@ -50,10 +59,13 @@ public class GWTAMChartPanel extends ResizeComposite
 			noDataPanel.add( noDataLbl );
 			divWrapper.add( noDataPanel );
 		}
-		else if ( chartJSONString != null && !"".equals( chartJSONString.trim() ) && !"NoData".equals( chartJSONString ) )
+		else if ( chartJSONString != null && !""
+				.equals( chartJSONString.trim() ) && !"NoData"
+				.equals( chartJSONString ) )
 		{
 			this.chartJSONString = chartJSONString;
-			setChartJSONObect( ( JSONObject ) ( JSONParser.parseLenient( chartJSONString ) ) );
+			setChartJSONObect( ( JSONObject ) ( JSONParser
+					.parseLenient( chartJSONString ) ) );
 		}
 		initWidget( divWrapper );
 		addStyleName( "roc-chart" );
@@ -80,12 +92,6 @@ public class GWTAMChartPanel extends ResizeComposite
 		return JSON.parseLenient(jsonString);
 	}-*/;
 
-	protected static native AmChartJSO drawChart( String id, JavaScriptObject jso )
-	/*-{
-		var chart = $wnd.AmCharts.makeChart(id, jso);
-		return chart;
-	}-*/;
-
 	@Override
 	protected void onLoad()
 	{
@@ -95,7 +101,10 @@ public class GWTAMChartPanel extends ResizeComposite
 			{
 				public void execute()
 				{
-					chartJSO = drawChart( getId(), chartJSONObject.isObject().getJavaScriptObject() );
+					chartJSO = drawChart( getId(), chartJSONObject.isObject()
+							.getJavaScriptObject() );
+					amChart = ( AmChart ) WrapperUtils.wrap( chartJSO );
+					onDrawChart();
 				}
 			} );
 		}
@@ -103,5 +112,25 @@ public class GWTAMChartPanel extends ResizeComposite
 		{
 			GWT.log( "Exception while rendering the chart", caught );
 		}
+	}
+
+	public void onDrawChart()
+	{
+	}
+
+	protected static native AmChartJSO drawChart( String id, JavaScriptObject jso )
+	/*-{
+		var chart = $wnd.AmCharts.makeChart(id, jso);
+		return chart;
+	}-*/;
+
+	public AmChart getAmChart()
+	{
+		return amChart;
+	}
+
+	public void addListener( String eventName, AmChartListener amChartListener )
+	{
+		getAmChart().addListener( eventName, amChartListener );
 	}
 }

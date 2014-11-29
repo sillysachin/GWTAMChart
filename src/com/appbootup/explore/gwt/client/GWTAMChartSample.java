@@ -12,6 +12,9 @@ import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
 import com.amcharts.impl.util.LogUtils;
 import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
@@ -99,9 +102,25 @@ public class GWTAMChartSample
 					if ( 200 == response.getStatusCode() )
 					{
 						String text = response.getText();
-						AmPieChartJSO amChartJSO = JsonUtils.<AmPieChartJSO> unsafeEval( text );
+						AmPieChartJSO amChartJSO = JsonUtils
+								.<AmPieChartJSO> unsafeEval( text );
 						LogUtils.log( amChartJSO );
-						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text );
+						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text )
+						{
+							public void onDrawChart()
+							{
+								this.addListener( RightClickSliceEvent
+										.getName(), new AmChartListener()
+								{
+									@Override
+									public void function( AmChartEventJSO event )
+									{
+										GWT.log( "Processed Event on JSON to Impl Chart" );
+										LogUtils.log( event );
+									}
+								} );
+							};
+						};
 						RootLayoutPanel.get().add( amChartPanel );
 					}
 					else

@@ -60,6 +60,7 @@ public class WrapperUtils
 		}
 
 		String className = getJavaScriptClassName( jso );
+		String cName = getAmChartCName( jso );
 		String jsoClassName = getJSOClassName( jso );
 		IJavaScriptWrapper wrapper = null;
 		if ( "Object".equals( className ) )
@@ -68,7 +69,14 @@ public class WrapperUtils
 		}
 		else
 		{
-			wrapper = createWrapper( className );
+			if ( "".equals( className ) )
+			{
+				wrapper = createWrapper( cName );
+			}
+			else
+			{
+				wrapper = createWrapper( className );
+			}
 		}
 
 		if ( wrapper == null )
@@ -229,6 +237,10 @@ public class WrapperUtils
 	private static native String getJavaScriptClassName( JavaScriptObject jso ) /*-{
 		return jso.constructor.name ? jso.constructor.name : jso.constructor
 				.toString().match(/function ([a-zA-z0-9]*)/)[1];
+	}-*/;
+
+	private static native String getAmChartCName( JavaScriptObject jso ) /*-{
+		return jso.cname ? jso.cname : "";
 	}-*/;
 
 	/**
