@@ -31,4 +31,11 @@
 		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>amcharts_with_sources_3.11.3</name>
+			<type>2</type>
+			<location>/Tools/javascript/amcharts_with_sources_3.11.3</location>
+		</link>
+	</linkedResources>
 </projectDescription>
