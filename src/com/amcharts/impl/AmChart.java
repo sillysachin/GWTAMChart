@@ -10,6 +10,7 @@ import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsNumberPrefix;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartEventUtils;
@@ -411,25 +412,25 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	}-*/;
 
 	@Override
-	public List<Object> getPrefixesOfBigNumbers()
+	public List<IsNumberPrefix> getPrefixesOfBigNumbers()
 	{
 		return getJso().getPrefixesOfBigNumbers();
 	}
 
 	@Override
-	public void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers )
+	public void setPrefixesOfBigNumbers( List<IsNumberPrefix> prefixesOfBigNumbers )
 	{
 		getJso().setPrefixesOfBigNumbers( prefixesOfBigNumbers );
 	}
 
 	@Override
-	public List<Object> getPrefixesOfSmallNumbers()
+	public List<IsNumberPrefix> getPrefixesOfSmallNumbers()
 	{
 		return getJso().getPrefixesOfSmallNumbers();
 	}
 
 	@Override
-	public void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers )
+	public void setPrefixesOfSmallNumbers( List<IsNumberPrefix> prefixesOfSmallNumbers )
 	{
 		getJso().setPrefixesOfSmallNumbers( prefixesOfSmallNumbers );
 	}

@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsGraphDataItem;
+import com.amcharts.api.IsPercents;
 import com.amcharts.api.IsSerialDataItem;
+import com.amcharts.api.IsValues;
 import com.amcharts.impl.event.DataItem;
 
 public final class GraphDataItem extends DataItem implements IsGraphDataItem
@@ -142,14 +144,14 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public final native Object getPercents() /*-{
+	public final native IsPercents getPercents() /*-{
 		return this.percents;
 	}-*/;
 
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public final native void setPercents( Object percents ) /*-{
+	public final native void setPercents( IsPercents percents ) /*-{
 		this.percents = percents;
 	}-*/;
 
@@ -184,14 +186,14 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public final native Object getValues() /*-{
+	public final native IsValues getValues() /*-{
 		return this.values;
 	}-*/;
 
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public final native void setValues( Object values ) /*-{
+	public final native void setValues( IsValues values ) /*-{
 		this.values = values;
 	}-*/;
 

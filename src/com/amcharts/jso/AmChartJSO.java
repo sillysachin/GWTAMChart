@@ -9,6 +9,7 @@ import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsAmLegend;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
+import com.amcharts.api.IsNumberPrefix;
 import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -319,25 +320,25 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native List<Object> getPrefixesOfBigNumbers()
+	public final native List<IsNumberPrefix> getPrefixesOfBigNumbers()
 	/*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.prefixesOfBigNumbers);
 	}-*/;
 
 	@Override
-	public final native void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers )
+	public final native void setPrefixesOfBigNumbers( List<IsNumberPrefix> prefixesOfBigNumbers )
 	/*-{
 		this.prefixesOfBigNumbers = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(prefixesOfBigNumbers);
 	}-*/;
 
 	@Override
-	public final native List<Object> getPrefixesOfSmallNumbers()
+	public final native List<IsNumberPrefix> getPrefixesOfSmallNumbers()
 	/*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.prefixesOfSmallNumbers);
 	}-*/;
 
 	@Override
-	public final native void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers )
+	public final native void setPrefixesOfSmallNumbers( List<IsNumberPrefix> prefixesOfSmallNumbers )
 	/*-{
 		this.prefixesOfSmallNumbers = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(prefixesOfSmallNumbers);
 	}-*/;

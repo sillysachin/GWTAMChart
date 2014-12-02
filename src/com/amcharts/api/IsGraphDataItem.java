@@ -97,12 +97,12 @@ public interface IsGraphDataItem
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public Object getPercents();
+	public IsPercents getPercents();
 
 	/**
 	 * Object which holds percents when recalculateToPercents is set to true.
 	 */
-	public void setPercents( Object percents );
+	public void setPercents( IsPercents percents );
 
 	/**
 	 * SerialDataItem of this graphDataItem
@@ -127,12 +127,12 @@ public interface IsGraphDataItem
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public Object getValues();
+	public IsValues getValues();
 
 	/**
 	 * "Object which holds values of the data item (value, open, close, low, high)."
 	 */
-	public void setValues( Object values );
+	public void setValues( IsValues values );
 
 	/**
 	 * x coordinate of the data item.

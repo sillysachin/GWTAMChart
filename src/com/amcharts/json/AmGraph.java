@@ -2,6 +2,7 @@ package com.amcharts.json;
 
 import com.amcharts.api.IsAmGraph;
 import com.amcharts.api.IsFunction;
+import com.amcharts.api.IsPattern;
 import com.amcharts.api.IsValueAxis;
 
 public final class AmGraph implements IsAmGraph
@@ -150,7 +151,7 @@ public final class AmGraph implements IsAmGraph
 
 	private String openField;
 
-	private Object pattern;
+	private IsPattern pattern;
 
 	private String patternField;
 
@@ -1361,7 +1362,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "Value of pattern should be object with url, width, height of an image, optionally it might have x, y, randomX and randomY values. For example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}. If you want to have individual patterns for each column, define patterns in data provider and set graph.patternField property. Check amcharts/patterns folder for some patterns. You can create your own patterns and use them. Note, x, y, randomX and randomY properties won't work with IE8 and older. 3D bar/Pie charts won't work properly with patterns."
 	 */
-	public Object getPattern()
+	public IsPattern getPattern()
 	{
 		return pattern;
 	}
@@ -1369,7 +1370,7 @@ public final class AmGraph implements IsAmGraph
 	/**
 	 * "Value of pattern should be object with url, width, height of an image, optionally it might have x, y, randomX and randomY values. For example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}. If you want to have individual patterns for each column, define patterns in data provider and set graph.patternField property. Check amcharts/patterns folder for some patterns. You can create your own patterns and use them. Note, x, y, randomX and randomY properties won't work with IE8 and older. 3D bar/Pie charts won't work properly with patterns."
 	 */
-	public void setPattern( Object pattern )
+	public void setPattern( IsPattern pattern )
 	{
 		this.pattern = pattern;
 	}

@@ -105,13 +105,13 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setPrecision( Double precision );
 
-	List<Object> getPrefixesOfBigNumbers();
+	List<IsNumberPrefix> getPrefixesOfBigNumbers();
 
-	void setPrefixesOfBigNumbers( List<Object> prefixesOfBigNumbers );
+	void setPrefixesOfBigNumbers( List<IsNumberPrefix> prefixesOfBigNumbers );
 
-	List<Object> getPrefixesOfSmallNumbers();
+	List<IsNumberPrefix> getPrefixesOfSmallNumbers();
 
-	void setPrefixesOfSmallNumbers( List<Object> prefixesOfSmallNumbers );
+	void setPrefixesOfSmallNumbers( List<IsNumberPrefix> prefixesOfSmallNumbers );
 
 	String getTheme();
 
