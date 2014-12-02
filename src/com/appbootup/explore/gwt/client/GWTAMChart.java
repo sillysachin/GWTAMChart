@@ -1,6 +1,5 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.pie.SimplePieChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 

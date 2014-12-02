@@ -6,24 +6,10 @@ import com.amcharts.api.IsAxisBase;
 import com.amcharts.api.IsGuide;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.mouse.columnchart.AxisBaseChartEventUtils;
-import com.amcharts.impl.event.mouse.columnchart.ClickItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.ClickItemHandler;
-import com.amcharts.impl.event.mouse.columnchart.HasClickItemHandlers;
-import com.amcharts.impl.event.mouse.columnchart.HasRollOutItemHandlers;
-import com.amcharts.impl.event.mouse.columnchart.HasRollOverItemHandlers;
-import com.amcharts.impl.event.mouse.columnchart.RollOutItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.RollOutItemHandler;
-import com.amcharts.impl.event.mouse.columnchart.RollOverItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.RollOverItemHandler;
 import com.amcharts.jso.AxisBaseJSO;
-import com.google.gwt.core.shared.GWT;
-import com.google.gwt.event.shared.EventHandler;
-import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerManager;
-import com.google.gwt.event.shared.HandlerRegistration;
 
-public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutItemHandlers, HasRollOverItemHandlers
+public class AxisBase implements IsAxisBase
 {
 	protected AxisBaseJSO jso;
 
@@ -580,82 +566,5 @@ public class AxisBase implements IsAxisBase, HasClickItemHandlers, HasRollOutIte
 	public void handleListener( AmChartListener amChartListener, AmChartEventJSO event )
 	{
 		amChartListener.function( event );
-	}
-
-	protected native void initListener( String eventName )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		var amChartThis = this;
-		if (chart[eventName + 'Fl'] == undefined) {
-			chart[eventName + 'Fl'] = true;
-			chart
-					.addListener(
-							eventName,
-							function(event) {
-								amChartThis.@com.amcharts.impl.AxisBase::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
-							});
-		}
-	}-*/;
-
-	public final <H extends EventHandler> HandlerRegistration addHandler( final H handler, GwtEvent.Type<H> type )
-	{
-		return ensureHandlers().addHandler( type, handler );
-	}
-
-	HandlerManager ensureHandlers()
-	{
-		return handlerManager == null ? handlerManager = createHandlerManager() : handlerManager;
-	}
-
-	protected HandlerManager createHandlerManager()
-	{
-		return new HandlerManager( this );
-	}
-
-	protected void fireEvent( AmChartEventJSO event )
-	{
-		GwtEvent< ? > createEvent = AxisBaseChartEventUtils.createEvent( event );
-		if ( createEvent == null )
-		{
-			//TODO: When the event is not in AxisBaseChartEventUtils list then look where?
-			GWT.log( "AxisBase cannot process -> " + event.getEvent().getType() );
-		}
-		else
-		{
-			if ( handlerManager != null )
-			{
-				handlerManager.fireEvent( createEvent );
-			}
-		}
-	}
-
-	@Override
-	public void fireEvent( GwtEvent< ? > event )
-	{
-		if ( handlerManager != null )
-		{
-			handlerManager.fireEvent( event );
-		}
-	}
-
-	@Override
-	public HandlerRegistration addRollOverItemHandler( RollOverItemHandler handler )
-	{
-		initListener( RollOverItemEvent.getName() );
-		return addHandler( handler, RollOverItemEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addRollOutItemHandler( RollOutItemHandler handler )
-	{
-		initListener( RollOutItemEvent.getName() );
-		return addHandler( handler, RollOutItemEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addClickItemHandler( ClickItemHandler handler )
-	{
-		initListener( ClickItemEvent.getName() );
-		return addHandler( handler, ClickItemEvent.TYPE );
 	}
 }

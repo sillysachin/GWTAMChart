@@ -6,21 +6,11 @@ import com.amcharts.api.IsValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartEventUtils;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.columnchart.valueaxis.AxisChangedEvent;
-import com.amcharts.impl.event.columnchart.valueaxis.AxisChangedHandler;
-import com.amcharts.impl.event.columnchart.valueaxis.AxisZoomedEvent;
-import com.amcharts.impl.event.columnchart.valueaxis.AxisZoomedHandler;
-import com.amcharts.impl.event.columnchart.valueaxis.HasAxisChangedHandlers;
-import com.amcharts.impl.event.columnchart.valueaxis.HasAxisZoomedHandlers;
-import com.amcharts.impl.event.columnchart.valueaxis.HasLogarithmicAxisFailedHandlers;
-import com.amcharts.impl.event.columnchart.valueaxis.LogarithmicAxisFailedEvent;
-import com.amcharts.impl.event.columnchart.valueaxis.LogarithmicAxisFailedHandler;
 import com.amcharts.jso.ValueAxisJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper<ValueAxisJSO>, HasAxisChangedHandlers, HasAxisZoomedHandlers, HasLogarithmicAxisFailedHandlers
+public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScriptWrapper<ValueAxisJSO>
 {
 	protected ValueAxis()
 	{
@@ -647,27 +637,5 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	protected void fireEvent( AmChartEventJSO event )
 	{
 		AmCharts.EVENT_BUS.fireEvent( AmChartEventUtils.createEvent( event ) );
-	}
-
-	@Override
-	public HandlerRegistration addAxisZoomedHandler( AxisZoomedHandler handler )
-	{
-		initListener( AxisZoomedEvent.getName() );
-		return AxisZoomedEvent.addHandler( AmCharts.EVENT_BUS, handler );
-	}
-
-	@Override
-	public HandlerRegistration addAxisChangedHandler( AxisChangedHandler handler )
-	{
-		initListener( AxisChangedEvent.getName() );
-		return AxisChangedEvent.addHandler( AmCharts.EVENT_BUS, handler );
-	}
-
-	@Override
-	public HandlerRegistration addLogarithmicAxisFailedHandler( LogarithmicAxisFailedHandler handler )
-	{
-		initListener( LogarithmicAxisFailedEvent.getName() );
-		return LogarithmicAxisFailedEvent
-				.addHandler( AmCharts.EVENT_BUS, handler );
 	}
 }

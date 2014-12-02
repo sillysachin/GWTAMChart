@@ -6,11 +6,6 @@ import com.amcharts.impl.Slice;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -58,53 +53,13 @@ public class PieChartBrokenSlices
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
 		amPieChart.setSize( "1240px", "500px" );
-		amPieChart.addClickSliceHandler( new ClickSliceHandler()
+		amPieChart.addListener( "rightClickSlice", new AmChartListener()
 		{
 			@Override
-			public void onClickSlice( ClickSliceEvent event )
+			public void function( AmChartEventJSO event )
 			{
 				Integer selected = null;
-				Slice dataItem = event.getDataItem();
-				DataContext dataContext = dataItem.getDataContext();
-				selected = dataContext.getId();
-				GWT.log( "first ClickSliceHandler - > " + event.getEvent()
-						.getClientX() + "" );
-				amPieChart.setDataProvider( generateChartData( selected ) );
-				amPieChart.validateData();
-			}
-		} );
-		amPieChart.addClickSliceHandler( new ClickSliceHandler()
-		{
-			@Override
-			public void onClickSlice( ClickSliceEvent event )
-			{
-				GWT.log( "second ClickSliceHandler - > " + event.getEvent()
-						.getClientX() + "" );
-			}
-		} );
-		amPieChart
-				.addListener( RightClickSliceEvent.getName(), new AmChartListener()
-				{
-					@Override
-					public void function( AmChartEventJSO event )
-					{
-						Integer selected = null;
-						Slice dataItem = ( Slice ) event.getDataItem();
-						DataContext dataContext = dataItem.getDataContext();
-						selected = dataContext.getId();
-						GWT.log( event.getEvent().getClientX() + "" );
-						amPieChart
-								.setDataProvider( generateChartData( selected ) );
-						amPieChart.validateData();
-					}
-				} );
-		amPieChart.addRightClickSliceHandler( new RightClickSliceHandler()
-		{
-			@Override
-			public void onRightClickSlice( RightClickSliceEvent event )
-			{
-				Integer selected = null;
-				Slice dataItem = event.getDataItem();
+				Slice dataItem = ( Slice ) event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );

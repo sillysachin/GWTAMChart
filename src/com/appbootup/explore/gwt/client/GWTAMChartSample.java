@@ -14,7 +14,6 @@ import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
 import com.amcharts.impl.util.LogUtils;
 import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
@@ -109,8 +108,7 @@ public class GWTAMChartSample
 						{
 							public void onDrawChart()
 							{
-								this.addListener( RightClickSliceEvent
-										.getName(), new AmChartListener()
+								this.addListener( "rightClickSlice", new AmChartListener()
 								{
 									@Override
 									public void function( AmChartEventJSO event )

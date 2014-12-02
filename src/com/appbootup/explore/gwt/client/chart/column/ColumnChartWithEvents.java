@@ -11,12 +11,6 @@ import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
-import com.amcharts.impl.event.mouse.columnchart.ClickItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.ClickItemHandler;
-import com.amcharts.impl.event.mouse.columnchart.RollOutItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.RollOutItemHandler;
-import com.amcharts.impl.event.mouse.columnchart.RollOverItemEvent;
-import com.amcharts.impl.event.mouse.columnchart.RollOverItemHandler;
 import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
@@ -156,34 +150,6 @@ public class ColumnChartWithEvents
 			}
 		} );
 
-		final ClickItemHandler clickItemHandler = new ClickItemHandler()
-		{
-			@Override
-			public void onClickItem( ClickItemEvent event )
-			{
-				GWT.log( "clickItemHandler - > " + event.getValue() );
-				LogUtils.log( event );
-			}
-		};
-
-		final RollOutItemHandler rollOutItemHandler = new RollOutItemHandler()
-		{
-			@Override
-			public void onRollOutItem( RollOutItemEvent event )
-			{
-				GWT.log( "rollOutItemHandler - > " + event.getValue() );
-				LogUtils.log( event );
-			}
-		};
-		final RollOverItemHandler rollOverItemHandler = new RollOverItemHandler()
-		{
-			@Override
-			public void onRollOverItem( RollOverItemEvent event )
-			{
-				GWT.log( "rollOverItemHandler - > " + event.getType() );
-				LogUtils.log( event );
-			}
-		};
 		amSerialChart.addRenderedHandler( new RenderedHandler()
 		{
 			@Override
@@ -192,9 +158,6 @@ public class ColumnChartWithEvents
 				GWT.log( "renderedHandler -> " + event.getType() );
 				LogUtils.log( event );
 				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
-				categoryAxis.addClickItemHandler( clickItemHandler );
-				categoryAxis.addRollOutItemHandler( rollOutItemHandler );
-				categoryAxis.addRollOverItemHandler( rollOverItemHandler );
 			}
 		} );
 

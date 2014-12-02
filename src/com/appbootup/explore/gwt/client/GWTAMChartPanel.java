@@ -1,10 +1,7 @@
 package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.AmChart;
-import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
-import com.amcharts.impl.util.LogUtils;
 import com.amcharts.impl.util.WrapperUtils;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.GWT;

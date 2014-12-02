@@ -14,7 +14,6 @@ import com.amcharts.impl.MenuItemOutput;
 import com.amcharts.impl.MenuItemOutputCallback;
 import com.amcharts.impl.MenuItemStyle;
 import com.amcharts.impl.ValueAxis;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

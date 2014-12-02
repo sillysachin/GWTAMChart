@@ -4,31 +4,9 @@ import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
 import com.amcharts.api.IsFunction;
-import com.amcharts.impl.event.AmChartEventJSO;
-import com.amcharts.impl.event.mouse.slicedchart.AmSlicedChartEventUtils;
-import com.amcharts.impl.event.mouse.slicedchart.ClickSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.ClickSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.HasClickSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.HasPullInSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.HasPullOutSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.HasRightClickSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.HasRollOutSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.HasRollOverSliceHandlers;
-import com.amcharts.impl.event.mouse.slicedchart.PullInSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.PullInSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.PullOutSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.PullOutSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.RightClickSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.RollOutSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.RollOutSliceHandler;
-import com.amcharts.impl.event.mouse.slicedchart.RollOverSliceEvent;
-import com.amcharts.impl.event.mouse.slicedchart.RollOverSliceHandler;
 import com.amcharts.jso.AmSlicedChartJSO;
-import com.google.gwt.event.shared.GwtEvent;
-import com.google.gwt.event.shared.HandlerRegistration;
 
-public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickSliceHandlers, HasRightClickSliceHandlers, HasRollOutSliceHandlers, HasRollOverSliceHandlers, HasPullInSliceHandlers, HasPullOutSliceHandlers
+public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
 	@Override
 	public AmSlicedChartJSO getJso()
@@ -563,63 +541,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart, HasClickS
 	public void setVisibleInLegendField( String visibleInLegendField )
 	{
 		getJso().setVisibleInLegendField( visibleInLegendField );
-	}
-
-	@Override
-	public HandlerRegistration addClickSliceHandler( ClickSliceHandler handler )
-	{
-		initListener( ClickSliceEvent.getName() );
-		return addHandler( handler, ClickSliceEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addRightClickSliceHandler( RightClickSliceHandler handler )
-	{
-		initListener( RightClickSliceEvent.getName() );
-		return addHandler( handler, RightClickSliceEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addPullOutSliceHandler( PullOutSliceHandler handler )
-	{
-		initListener( PullOutSliceEvent.getName() );
-		return addHandler( handler, PullOutSliceEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addPullInSliceHandler( PullInSliceHandler handler )
-	{
-		initListener( PullInSliceEvent.getName() );
-		return addHandler( handler, PullInSliceEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addRollOverSliceHandler( RollOverSliceHandler handler )
-	{
-		initListener( RollOverSliceEvent.getName() );
-		return addHandler( handler, RollOverSliceEvent.TYPE );
-	}
-
-	@Override
-	public HandlerRegistration addRollOutSliceHandler( RollOutSliceHandler handler )
-	{
-		initListener( RollOutSliceEvent.getName() );
-		return addHandler( handler, RollOutSliceEvent.TYPE );
-	}
-	
-	@Override
-	protected void fireEvent( AmChartEventJSO event )
-	{
-		GwtEvent< ? > createEvent = AmSlicedChartEventUtils.createEvent( event );
-		if ( createEvent == null )
-		{
-			//When the event is not in SlicedChartEventUtils list then look in AMChartEventUtils
-			super.fireEvent( event );
-		}
-		else
-		{
-			super.fireEvent( createEvent );
-		}
 	}
 
 	public native void animateAgain()
