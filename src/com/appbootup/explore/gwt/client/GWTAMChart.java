@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
+import com.appbootup.explore.gwt.client.tutorials.UpdatingBalloonTooltip;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -52,6 +53,7 @@ public class GWTAMChart implements EntryPoint
 		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
 		// StackedArea stackedArea = new StackedArea();
 		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
-		GWTAMChartSample.chartByServerJSON();
+		UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
+		// GWTAMChartSample.chartByServerJSON();
 	}
 }

@@ -1,13 +1,13 @@
 Complete - Clean up api package - api should not have references to gwt imports like JavaScriptObject.
 Complete - Clean up json package - json should not have references to gwt imports like JavaScriptObject.
-Clean up json package - json should not have references to Object in method signature.
+Partial - Clean up json package - json should not have references to Object in method signature.
 Complete - Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>
-Complete - Clean up IsFunction placeholder and other function related methods.
-Clean up events to go with simpler AmChartListener
+Partial - Clean up IsFunction placeholder and other function related methods.
+Complete - Clean up events to go with simpler AmChartListener
 Revisit generics with AmChart<T extends AmChartDataObject>
 Support AMStockChart api's
 Enhance DataProvider support
-Provide conversion from JSON to Impl
+Partial - Provide conversion from JSON to Impl
 Convert All Demos to JSON charts.
 Setup "Export" form JSON charts.
 Split the demo code into separate project
