@@ -1,0 +1,321 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+var chart;
+var chartTitle       = "Base";
+var chartDataIndexes = [];
+var chartData        = [{
+    "date": "2009-01-01",
+    "value": 3,
+    "fromValue": 2,
+    "toValue": 5
+},{
+    "date": "2009-02-01",
+    "value": 5,
+    "fromValue": 4,
+    "toValue": 6
+}, {
+    "date": "2009-03-01",
+    "value": 15,
+    "fromValue": 12,
+    "toValue": 18,
+    "bullet": "round",
+    "subSetTitle": "Second level",
+    "subSet" : [{
+        "date": "2009-03-01",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    },{
+        "date": "2009-03-02",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    },{
+        "date": "2009-03-03",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    },{
+        "date": "2009-03-04",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5,
+        "bullet": "round",
+        "subSetTitle": "Third level",
+        "subSet": [{
+            "date": "2009-03-04 01:00",
+            "value": 3,
+            "fromValue": 2,
+            "toValue": 5
+        },{
+            "date": "2009-03-04 02:00",
+            "value": 4,
+            "fromValue": 3,
+            "toValue": 6
+        },{
+            "date": "2009-03-04 03:00",
+            "value": 5,
+            "fromValue": 4,
+            "toValue": 6,
+            "bullet": "round",
+            "subSetTitle": "Fourth level",
+            "subSet": [{
+                "date": "2009-03-04 03:10",
+                "value": 3,
+                "fromValue": 2,
+                "toValue": 5
+            },{
+                "date": "2009-03-04 03:20",
+                "value": 2,
+                "fromValue": 1,
+                "toValue": 3
+            },{
+                "date": "2009-03-04 03:30",
+                "value": 3,
+                "fromValue": 2,
+                "toValue": 5
+            },{
+                "date": "2009-03-04 03:40",
+                "value": 4,
+                "fromValue": 3,
+                "toValue": 5
+            },{
+                "date": "2009-03-04 03:50",
+                "value": 3,
+                "fromValue": 2,
+                "toValue": 5,
+                // "bullet": "round",
+                "subSet": [
+                    // And so on...
+                ]
+            }]
+        },{
+            "date": "2009-03-04 04:00",
+            "value": 3,
+            "fromValue": 2,
+            "toValue": 5
+        },{
+            "date": "2009-03-04 05:00",
+            "value": 1,
+            "fromValue": 0,
+            "toValue": 2
+        }]
+    },{
+        "date": "2009-03-05",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    },{
+        "date": "2009-03-06",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    },{
+        "date": "2009-03-07",
+        "value": 3,
+        "fromValue": 2,
+        "toValue": 5
+    }]
+}, {
+    "date": "2009-04-01",
+    "value": 13,
+    "fromValue": 10.4,
+    "toValue": 15.6
+}, {
+    "date": "2009-05-01",
+    "value": 17,
+    "fromValue": 13.6,
+    "toValue": 20.4
+}, {
+    "date": "2009-06-01",
+    "value": 15,
+    "fromValue": 12,
+    "toValue": 18
+}, {
+    "date": "2009-07-01",
+    "value": 19,
+    "fromValue": 15.2,
+    "toValue": 22.8
+}, {
+    "date": "2009-08-01",
+    "value": 21,
+    "fromValue": 16.8,
+    "toValue": 25.2
+}, {
+    "date": "2009-09-01",
+    "value": 20,
+    "fromValue": 16,
+    "toValue": 24
+}, {
+    "date": "2009-10-01",
+    "value": 20,
+    "fromValue": 16,
+    "toValue": 24
+}, {
+    "date": "2009-11-01",
+    "value": 19,
+    "fromValue": 15.2,
+    "toValue": 22.8
+}, {
+    "date": "2009-12-01",
+    "value": 25,
+    "fromValue": 20,
+    "toValue": 30
+}];
+
+chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "titles": [{
+        "text": chartTitle
+    }],
+    "allLabels": [{
+        "text": "",
+        "x": 10,
+        "y": 15,
+        "url": "javascript: goBack();void(0);"
+    }],
+    "dataProvider": chartData,
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "dashLength": 4,
+        "position": "left"
+    }],
+    "graphs": [{
+        "id": "fromGraph",
+        "lineAlpha": 0,
+        "showBalloon": false,
+        "valueField": "fromValue",
+        "fillAlphas": 0
+    }, {
+        "fillAlphas": 0.2,
+        "fillToGraph": "fromGraph",
+        "lineAlpha": 0,
+        "showBalloon": false,
+        "valueField": "toValue"
+    }, {
+        "valueField": "value",
+        "fillAlphas": 0,
+        "bulletField": "bullet"
+    }],
+     "chartCursor": {
+        "zoomable":false,
+         "fullWidth":true,
+         "cursorAlpha":0.1,
+         "categoryBalloonEnabled":false
+     },
+    "dataDateFormat": "YYYY-MM-DD HH:NN:SS",
+    "categoryField": "date",
+    "categoryAxis": {
+        "parseDates": true,
+        "minPeriod": "mm",
+        "axisAlpha": 0,
+         "minHorizontalGap":50,
+        "gridAlpha": 0,
+        "tickLength": 0
+    },
+    "exportConfig": {
+        "menuTop": "20px",
+        "menuRight": "20px",
+        "menuItems": [{
+            "icon": 'http://www.amcharts.com/lib/3/images/export.png',
+            "format": 'png'
+        }]
+    }
+});
+chart.addListener('clickGraphItem',function(evt) {
+    if ( evt.item.dataContext.subSet ) {
+        chartDataIndexes.push({
+            index: evt.index,
+            title: evt.item.dataContext.subSetTitle,
+            prev: evt.chart.titles[0].text
+        });
+        evt.chart.dataProvider      = evt.item.dataContext.subSet;
+        evt.chart.allLabels[0].text = "Go Back " + evt.chart.titles[0].text;
+        evt.chart.titles[0].text    = evt.item.dataContext.subSetTitle;
+        evt.chart.validateData();
+
+    }
+});
+
+function goBack() {
+    var previousData  = chartData;
+    var tmp           = {
+        prev: ""
+    }
+
+    // Remove latest
+    chartDataIndexes.pop();
+
+    // Get previous cached object
+    for ( var i = 0; i < chartDataIndexes.length; i++ ) {
+        tmp          = chartDataIndexes[i];
+        previousData = previousData[tmp.index].subSet;
+    }
+
+    // Apply titles and stuff
+    chart.allLabels[0].text = tmp.prev?"Go Back " + tmp.prev:"";
+    chart.titles[0].text    = tmp.title || chartTitle;
+    chart.dataProvider      = previousData;
+    chart.validateData();
+}
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv" style="width: 1240px; height: 500px"></div>
+</body>
+</html>

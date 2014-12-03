@@ -8,7 +8,7 @@ public final class Title implements IJavaScriptWrapper<TitleJSO>, IsTitle
 {
 	private TitleJSO jso;
 
-	protected Title()
+	public Title()
 	{
 		jso = createJso();
 	}
@@ -24,7 +24,7 @@ public final class Title implements IJavaScriptWrapper<TitleJSO>, IsTitle
 	}
 
 	public native TitleJSO createJso() /*-{
-		return this.jso;
+		return {};
 	}-*/;
 
 	/**

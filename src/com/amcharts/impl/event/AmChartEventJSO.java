@@ -166,4 +166,9 @@ public class AmChartEventJSO extends JavaScriptObject
 		}
 		this.endValue = endValue;
 	}-*/;
+
+	public final ClickItem getItem()
+	{
+		return getClickItem();
+	}
 }

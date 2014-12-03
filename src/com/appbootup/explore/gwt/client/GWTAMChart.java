@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.tutorials.UpdatingBalloonTooltip;
+import com.appbootup.explore.gwt.client.tutorials.MultiDimensionalDrilldownBackButton;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -23,10 +23,11 @@ public class GWTAMChart implements EntryPoint
 	 */
 	public void onModuleLoad()
 	{
-		// pieChartByJSNI();
-		// serialChartByJSNI();
-		// chartByServerJSON();
-		// lineWithTrendLineChartByJSNI();
+		// GWTAMChartSample.pieChartByJSNI();
+		// GWTAMChartSample.serialChartByJSNI();
+		// GWTAMChartSample.chartByServerJSON();
+		// GWTAMChartSample.lineWithTrendLineChartByJSNI();
+		// GWTAMChartSample.chartByServerJSON();
 		// SimplePieChart simplePieChart = new SimplePieChart();
 		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 		// DonutChart threeDPieChart = new DonutChart();
@@ -53,7 +54,7 @@ public class GWTAMChart implements EntryPoint
 		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
 		// StackedArea stackedArea = new StackedArea();
 		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
-		UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
-		// GWTAMChartSample.chartByServerJSON();
+		// UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
+		MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
 	}
 }

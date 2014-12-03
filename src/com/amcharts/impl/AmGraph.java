@@ -527,13 +527,22 @@ public final class AmGraph implements IsAmGraph, IJavaScriptWrapper<AmGraphJSO>
 	 * "You can set another graph here and if fillAlpha is >0, the area from this graph to fillToGraph will be filled (instead of filling the area to the X axis)."
 	 */
 	public final native IsAmGraph getFillToGraph() /*-{
-		return this.@com.amcharts.impl.AmGraph::jso.fillToGraph;
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.@com.amcharts.impl.AmChart::jso.fillToGraph)
+		return amGraph;
 	}-*/;
 
 	/**
 	 * "You can set another graph here and if fillAlpha is >0, the area from this graph to fillToGraph will be filled (instead of filling the area to the X axis)."
 	 */
 	public final native void setFillToGraph( IsAmGraph fillToGraph ) /*-{
+		var varAmGraph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(fillToGraph)
+		this.@com.amcharts.impl.AmChart::jso.fillToGraph = varAmGraph;
+	}-*/;
+
+	/**
+	 * "You can set another graph here and if fillAlpha is >0, the area from this graph to fillToGraph will be filled (instead of filling the area to the X axis)."
+	 */
+	public final native void setFillToGraph( String fillToGraph ) /*-{
 		this.@com.amcharts.impl.AmGraph::jso.fillToGraph = fillToGraph;
 	}-*/;
 
