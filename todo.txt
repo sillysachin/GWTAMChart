@@ -14,3 +14,4 @@ Split the demo code into separate project
 Address all todos
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
 Improve Code generation in "gen"
+Hunt Down all use cases across impl/jso for WrapperUtil nested object and nested list.

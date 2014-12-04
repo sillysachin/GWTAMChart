@@ -100,9 +100,10 @@ public final class Title implements IJavaScriptWrapper<TitleJSO>, IsTitle
 	/**
 	 * Text of a title.
 	 */
-	public final native String getText() /*-{
-		return this.@com.amcharts.impl.Title::jso.text;
-	}-*/;
+	public final String getText()
+	{
+		return getJso().getText();
+	}
 
 	/**
 	 * Text of a title.

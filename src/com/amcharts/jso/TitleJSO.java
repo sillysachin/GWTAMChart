@@ -83,7 +83,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * Text of a title.
 	 */
 	public final native String getText() /*-{
-		return text;
+		return this.text;
 	}-*/;
 
 	/**

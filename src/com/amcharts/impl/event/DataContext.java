@@ -1,6 +1,7 @@
 package com.amcharts.impl.event;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 
 public class DataContext extends JavaScriptObject
 {
@@ -56,5 +57,15 @@ public class DataContext extends JavaScriptObject
 	public final native void setType( String type )
 	/*-{
 		this.type = type;
+	}-*/;
+
+	public final native JsArray<JavaScriptObject> getSubSet()
+	/*-{
+		return this.subSet;
+	}-*/;
+
+	public final native String getSubSetTitle()
+	/*-{
+		return this.subSetTitle;
 	}-*/;
 }

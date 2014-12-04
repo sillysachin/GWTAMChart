@@ -135,9 +135,10 @@ public final class Label implements IJavaScriptWrapper<LabelJSO>, IsLabel
 	/**
 	 * Text of a label.
 	 */
-	public final native void setText( String text ) /*-{
-		this.@com.amcharts.impl.Label::jso.text = text;
-	}-*/;
+	public final void setText( String text )
+	{
+		getJso().setText( text );
+	}
 
 	/**
 	 * URL which will be access if user clicks on a label.
