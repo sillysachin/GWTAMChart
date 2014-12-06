@@ -1,5 +1,6 @@
 package com.amcharts.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.amcharts.api.AmChartDataObject;
@@ -28,6 +29,8 @@ import com.amcharts.impl.event.chart.InitHandler;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
 import com.amcharts.jso.AmChartJSO;
+import com.amcharts.jso.LabelJSO;
+import com.amcharts.jso.TitleJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -164,7 +167,14 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	@Override
 	public List<IsLabel> getAllLabels()
 	{
-		return getJso().getAllLabels();
+		List<IsLabel> allJSOLabels = new ArrayList<IsLabel>();
+		for ( IsLabel labelJSO : getJso().getAllLabels() )
+		{
+			Label label = new Label();
+			label.setJso( ( LabelJSO ) labelJSO );
+			allJSOLabels.add( label );
+		}
+		return allJSOLabels;
 	}
 
 	@Override
@@ -459,7 +469,14 @@ public class AmChart<T extends AmChartDataObject> extends Composite implements I
 	@Override
 	public List<IsTitle> getTitles()
 	{
-		return getJso().getTitles();
+		List<IsTitle> titles = new ArrayList<IsTitle>();
+		for ( IsTitle titleJSO : getJso().getTitles() )
+		{
+			Title title = new Title();
+			title.setJso( ( TitleJSO ) titleJSO );
+			titles.add( title );
+		}
+		return titles;
 	}
 
 	@Override
