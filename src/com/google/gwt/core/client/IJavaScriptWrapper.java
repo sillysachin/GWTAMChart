@@ -4,9 +4,7 @@ package com.google.gwt.core.client;
 /**
  * All classes that intend to expose the JavaScriptObject via wrapping should implement this interface.
  * 
- * @author JGraph
- * @param <J>
- *
+ * @author Sachin Shekhar R
  */
 public interface IJavaScriptWrapper<J extends JavaScriptObject>
 {

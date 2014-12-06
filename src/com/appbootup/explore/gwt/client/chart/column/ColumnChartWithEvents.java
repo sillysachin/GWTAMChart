@@ -11,7 +11,6 @@ import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -156,7 +155,6 @@ public class ColumnChartWithEvents
 			public void onRendered( RenderedEvent event )
 			{
 				GWT.log( "renderedHandler -> " + event.getType() );
-				LogUtils.log( event );
 				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 			}
 		} );
@@ -168,10 +166,8 @@ public class ColumnChartWithEvents
 			{
 				JavaScriptObject axes = event.getClickItem()
 						.getSerialDataItem().getAxes();
-				//IsSerialDataItemAxis isSerialDataItemAxis = axes.get( 0 );
-				//IsGraphDataItem isGraphDataItem = isSerialDataItemAxis.getGraphs().get( 0 );
-				//LogUtils.log( isGraphDataItem );
-				LogUtils.log( event );
+				//TODO: IsSerialDataItemAxis isSerialDataItemAxis = axes.get( 0 );
+				//TODO: IsGraphDataItem isGraphDataItem = isSerialDataItemAxis.getGraphs().get( 0 );
 			}
 		} );
 

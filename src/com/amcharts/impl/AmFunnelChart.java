@@ -23,7 +23,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getBaseWidth()
+	 * @see com.amcharts.api.IsAmFunnelChart#getBaseWidth()
 	 */
 	@Override
 	public String getBaseWidth()
@@ -32,7 +32,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setBaseWidth(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setBaseWidth(java.lang.String)
 	 */
 	@Override
 	public void setBaseWidth( String baseWidth )
@@ -41,7 +41,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setFunnelAlpha(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setFunnelAlpha(java.lang.String)
 	 */
 	@Override
 	public void setFunnelAlpha( double funnelAlpha )
@@ -50,7 +50,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getFunnelAlpha()
+	 * @see com.amcharts.api.IsAmFunnelChart#getFunnelAlpha()
 	 */
 	@Override
 	public double getFunnelAlpha()
@@ -59,7 +59,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getLabelPosition()
+	 * @see com.amcharts.api.IsAmFunnelChart#getLabelPosition()
 	 */
 	@Override
 	public String getLabelPosition()
@@ -68,7 +68,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setLabelPosition(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setLabelPosition(java.lang.String)
 	 */
 	@Override
 	public void setLabelPosition( String labelPosition )
@@ -77,7 +77,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getNeckHeight()
+	 * @see com.amcharts.api.IsAmFunnelChart#getNeckHeight()
 	 */
 	@Override
 	public String getNeckHeight()
@@ -86,7 +86,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setNeckHeight(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setNeckHeight(java.lang.String)
 	 */
 	@Override
 	public void setNeckHeight( String neckHeight )
@@ -95,7 +95,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getNeckWidth()
+	 * @see com.amcharts.api.IsAmFunnelChart#getNeckWidth()
 	 */
 	@Override
 	public String getNeckWidth()
@@ -104,7 +104,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setNeckWidth(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setNeckWidth(java.lang.String)
 	 */
 	@Override
 	public void setNeckWidth( String neckWidth )
@@ -113,7 +113,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getPullDistance()
+	 * @see com.amcharts.api.IsAmFunnelChart#getPullDistance()
 	 */
 	@Override
 	public String getPullDistance()
@@ -122,7 +122,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setPullDistance(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setPullDistance(java.lang.String)
 	 */
 	@Override
 	public void setPullDistance( String pullDistance )
@@ -131,7 +131,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#isRotate()
+	 * @see com.amcharts.api.IsAmFunnelChart#isRotate()
 	 */
 	@Override
 	public Boolean isRotate()
@@ -140,7 +140,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setRotate(Boolean)
+	 * @see com.amcharts.api.IsAmFunnelChart#setRotate(Boolean)
 	 */
 	@Override
 	public void setRotate( Boolean rotate )
@@ -149,7 +149,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getStartX()
+	 * @see com.amcharts.api.IsAmFunnelChart#getStartX()
 	 */
 	@Override
 	public double getStartX()
@@ -158,7 +158,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setStartX(double)
+	 * @see com.amcharts.api.IsAmFunnelChart#setStartX(double)
 	 */
 	@Override
 	public void setStartX( double startX )
@@ -167,7 +167,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getStartY()
+	 * @see com.amcharts.api.IsAmFunnelChart#getStartY()
 	 */
 	@Override
 	public double getStartY()
@@ -176,7 +176,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setStartY(double)
+	 * @see com.amcharts.api.IsAmFunnelChart#setStartY(double)
 	 */
 	@Override
 	public void setStartY( double startY )
@@ -185,7 +185,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#getValueRepresents()
+	 * @see com.amcharts.api.IsAmFunnelChart#getValueRepresents()
 	 */
 	@Override
 	public String getValueRepresents()
@@ -194,7 +194,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amcharts.json.IsAmFunnelChart#setValueRepresents(java.lang.String)
+	 * @see com.amcharts.api.IsAmFunnelChart#setValueRepresents(java.lang.String)
 	 */
 	@Override
 	public void setValueRepresents( String valueRepresents )
@@ -225,5 +225,4 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		chart.show(value);
 	}-*/;
-
 }

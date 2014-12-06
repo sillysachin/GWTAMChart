@@ -4,7 +4,6 @@ import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.JsFunction;
 import com.amcharts.impl.MenuItem;
-import com.amcharts.impl.util.LogUtils;
 import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
@@ -63,21 +62,17 @@ public class SimplePieChart
 		GWT.log( "valueField - >" + amPieChart.getValueField() );
 		//amPieChart.setLabelFunction( getLabelFunction() );
 		String functionString = getFunctionString();
-		//JavaScriptObject labelFunction = JsonUtils.unsafeEval( functionString );
 		JsFunction jsFunction = new JsFunction();
 		jsFunction.setFunctionString( functionString );
 		amPieChart.setLabelFunction( jsFunction );
-		LogUtils.log( amPieChart.getLabelFunction() );
 		RootLayoutPanel.get().add( amPieChart );
 	}
 
 	private native JavaScriptObject getLabelFunction()
 	/*-{
 		return function(slice, text) {
-			console.log("------------Start----------------");
 			console.log(slice);
 			console.log(text);
-			console.log("-------------End-----------------");
 			return text;
 		};
 	}-*/;
@@ -85,6 +80,5 @@ public class SimplePieChart
 	private String getFunctionString()
 	{
 		return "function(slice, text) {" + "return text;" + "}";
-		//return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
 	}
 }

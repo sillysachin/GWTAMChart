@@ -97,12 +97,12 @@ public class AngularGauge
 		LogUtils.log( gaugeArrow );
 		LogUtils.log( gaugeAxis );
 		GWT.log( "----unwrap----" );
-		LogUtils.log(WrapperUtils.unwrap( amAngularGauge ));
-		LogUtils.log(WrapperUtils.unwrap( gaugeArrow ));
-		LogUtils.log(WrapperUtils.unwrap( gaugeAxis ));
+		LogUtils.log( WrapperUtils.unwrap( amAngularGauge ) );
+		LogUtils.log( WrapperUtils.unwrap( gaugeArrow ) );
+		LogUtils.log( WrapperUtils.unwrap( gaugeAxis ) );
 
-		//List<IsGaugeAxis> axes = amAngularGauge.getAxes();
-		//List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
+		//TODO: List<IsGaugeAxis> axes = amAngularGauge.getAxes();
+		//TODO: List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
 	}
 
 	private void randomValue( final GaugeArrow gaugeArrow, final GaugeAxis gaugeAxis )
@@ -117,7 +117,7 @@ public class AngularGauge
 		var gaugeChart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amAngularGauge);
 
 		// setInterval(randomValue, 2000);
-		
+
 		function randomValue() {
 			var value = Math.round(Math.random() * 200);
 			if (gaugeChart) {

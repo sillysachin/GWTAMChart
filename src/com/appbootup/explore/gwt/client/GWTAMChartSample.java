@@ -14,7 +14,6 @@ import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.util.LogUtils;
 import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -103,7 +102,6 @@ public class GWTAMChartSample
 						String text = response.getText();
 						AmPieChartJSO amChartJSO = JsonUtils
 								.<AmPieChartJSO> unsafeEval( text );
-						LogUtils.log( amChartJSO );
 						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text )
 						{
 							public void onDrawChart()
@@ -114,7 +112,6 @@ public class GWTAMChartSample
 									public void function( AmChartEventJSO event )
 									{
 										GWT.log( "Processed Event on JSON to Impl Chart" );
-										LogUtils.log( event );
 									}
 								} );
 							};

@@ -140,7 +140,6 @@ public class JSONAMChartServlet extends HttpServlet
 
 	private String getFunctionString()
 	{
-		//return "function(slice, text) {" + "console.log('------------Start----------------');" + "console.log(slice);" + "console.log(text);" + "console.log('-------------End-----------------');" + "return text;" + "}";
 		return "function(slice, text) {" + "return text;" + "}";
 	}
 }
