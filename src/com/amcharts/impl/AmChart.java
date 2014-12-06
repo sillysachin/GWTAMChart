@@ -35,11 +35,11 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public class AmChart<T extends AmChartDataObject> extends Composite implements IsAmChart<T>, IJavaScriptWrapper<AmChartJSO<T>>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
+public class AmChart<T extends AmChartDataObject> extends ResizeComposite implements IsAmChart<T>, IJavaScriptWrapper<AmChartJSO<T>>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
 {
 	protected AmChartJSO<T> jso;
 
