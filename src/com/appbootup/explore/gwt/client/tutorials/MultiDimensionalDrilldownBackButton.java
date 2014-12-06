@@ -21,15 +21,20 @@ import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
+import com.amcharts.impl.event.chart.RenderedEvent;
+import com.amcharts.impl.event.chart.RenderedHandler;
 import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ContextMenuEvent;
 import com.google.gwt.event.dom.client.ContextMenuHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class MultiDimensionalDrilldownBackButton
@@ -151,6 +156,25 @@ public class MultiDimensionalDrilldownBackButton
 		exportConfig.addMenuItem( menuItem1 );
 		amSerialChart.setExportConfig( exportConfig );
 
+		amSerialChart.addRenderedHandler( new RenderedHandler()
+		{
+			@Override
+			public void onRendered( RenderedEvent event )
+			{
+				Anchor amChartMenu = new Anchor( "<b>Go Back</b>", true );
+				amChartMenu.addStyleName( "gwtAmChartMenu" );
+				amChartMenu.addClickHandler( new ClickHandler()
+				{
+					@Override
+					public void onClick( ClickEvent event )
+					{
+						GWT.log("This is funny.");
+					}
+				} );
+				amSerialChart.addContent( amChartMenu );
+			}
+		} );
+		
 		amSerialChart.addHandler( new ContextMenuHandler()
 		{
 			@Override

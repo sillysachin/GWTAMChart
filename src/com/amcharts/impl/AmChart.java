@@ -35,6 +35,7 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.web.bindery.event.shared.HandlerRegistration;
@@ -94,6 +95,11 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	{
 		String id = getId();
 		write( id );
+	}
+
+	public void addContent( IsWidget widget )
+	{
+		divWrapper.add( widget );
 	}
 
 	// TODO: Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
