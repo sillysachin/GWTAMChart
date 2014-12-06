@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface IsAmChart<T extends AmChartDataObject>
 {
-
 	List<IsLabel> getAllLabels();
 
 	void setAllLabels( List<IsLabel> allLabels );

@@ -1,10 +1,10 @@
 package com.amcharts.impl.event;
 
 import com.amcharts.api.IsSerialDataItem;
+import com.amcharts.impl.AmChart;
+import com.amcharts.impl.AmGraph;
+import com.amcharts.impl.AxisBase;
 import com.amcharts.impl.Target;
-import com.amcharts.jso.AmChartJSO;
-import com.amcharts.jso.AmGraphJSO;
-import com.amcharts.jso.AxisBaseJSO;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Event;
 
@@ -15,23 +15,27 @@ public class AmChartEventJSO extends JavaScriptObject
 	{
 	}
 
-	public final native AxisBaseJSO getAxis()
+	public final native AxisBase getAxis()
 	/*-{
-		return this.axis;
+		var axisBase = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.axis)
+		return axisBase;
 	}-*/;
 
-	public final native void setAxis( AxisBaseJSO axis )
+	public final native void setAxis( AxisBase axisBase )
 	/*-{
+		var axis = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(axisBase)
 		this.axis = axis;
 	}-*/;
 
-	public final native AmChartJSO getChart()
+	public final native AmChart getChart()
 	/*-{
-		return this.chart;
+		var amChart = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chart)
+		return amChart;
 	}-*/;
 
-	public final native void setChart( AmChartJSO chart )
+	public final native void setChart( AmChart amChart )
 	/*-{
+		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amChart)
 		this.chart = chart;
 	}-*/;
 
@@ -45,13 +49,15 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.event = event;
 	}-*/;
 
-	public final native AmGraphJSO getGraph()
+	public final native AmGraph getGraph()
 	/*-{
-		return this.graph;
+		var amGraph = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(this.graph)
+		return amGraph;
 	}-*/;
 
-	public final native void setGraph( AmGraphJSO graph )
+	public final native void setGraph( AmGraph amGraph )
 	/*-{
+		var graph = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(amGraph)
 		this.graph = graph;
 	}-*/;
 

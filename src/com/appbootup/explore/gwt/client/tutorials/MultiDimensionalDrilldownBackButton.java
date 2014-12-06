@@ -13,6 +13,7 @@ import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartDataIndex;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.Item;
 import com.amcharts.impl.Label;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.Title;
@@ -20,12 +21,14 @@ import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.util.WrapperUtils;
+import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
+import com.google.gwt.event.dom.client.ContextMenuEvent;
+import com.google.gwt.event.dom.client.ContextMenuHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
@@ -126,11 +129,45 @@ public class MultiDimensionalDrilldownBackButton
 		ExportConfig exportConfig = new ExportConfig();
 		exportConfig.setMenuTop( "20px" );
 		exportConfig.setMenuRight( "20px" );
-		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
-		menuItem.setFormat( "png" );
-		exportConfig.addMenuItem( menuItem );
+		MenuItem menuItem1 = new MenuItem();
+		menuItem1.setIcon( "/js/amcharts/images/export.png" );
+		menuItem1.setFormat( "png" );
+		Item item1 = AmCharts.Item();
+		item1.setTitle( "JPG" );
+		item1.setFormat( "jpg" );
+		menuItem1.addItem( item1 );
+		Item item2 = AmCharts.Item();
+		item2.setTitle( "PNG" );
+		item2.setFormat( "png" );
+		menuItem1.addItem( item2 );
+		Item item3 = AmCharts.Item();
+		item3.setTitle( "SVG" );
+		item3.setFormat( "svg" );
+		menuItem1.addItem( item3 );
+		Item item4 = AmCharts.Item();
+		item4.setTitle( "PDF" );
+		item4.setFormat( "pdf" );
+		menuItem1.addItem( item4 );
+		exportConfig.addMenuItem( menuItem1 );
 		amSerialChart.setExportConfig( exportConfig );
+
+		amSerialChart.addHandler( new ContextMenuHandler()
+		{
+			@Override
+			public void onContextMenu( ContextMenuEvent event )
+			{
+				LogUtils.log( "context" );
+			}
+		}, ContextMenuEvent.getType() );
+
+		amSerialChart.addListener( "clickGraph", new AmChartListener()
+		{
+			@Override
+			public void function( AmChartEventJSO evt )
+			{
+				LogUtils.log( "ola" );
+			}
+		} );
 
 		amSerialChart.addListener( "clickGraphItem", new AmChartListener()
 		{
@@ -138,24 +175,23 @@ public class MultiDimensionalDrilldownBackButton
 			public void function( AmChartEventJSO evt )
 			{
 				DataContext dataContext = evt.getItem().getDataContext();
-				JsArray<JavaScriptObject> subSet = dataContext.getSubSet();//FIXME: Massive Thabadthob code.
+				JsArray<JavaScriptObject> subSet = dataContext.getSubSet();
 				if ( subSet != null && subSet.length() > 0 )
 				{
-					AmChart< ? > amChart = ( AmChart< ? > ) WrapperUtils
-							.wrap( evt.getChart() );
+					AmChart amChart = evt.getChart();
 					ChartDataIndex chartDataIndex = new ChartDataIndex();
 					chartDataIndex.setIndex( evt.getIndex() );
 					String subSetTitle = dataContext.getSubSetTitle();
 					chartDataIndex.setTitle( subSetTitle );
 					List<IsTitle> chartTitles = evt.getChart().getTitles();
-					IsTitle title = chartTitles.get( 0 );
+					Title title = ( Title ) chartTitles.get( 0 );//FIXME: Why the casting?.
 					String titleText = title.getText();
 					chartDataIndex.setPrev( titleText );
 					chartDataIndexes.add( chartDataIndex );
 					amChart.setDataProvider( subSet );
 					List<IsLabel> allChartLabels = evt.getChart()
 							.getAllLabels();
-					IsLabel label = allChartLabels.get( 0 );
+					Label label = ( Label ) allChartLabels.get( 0 );//FIXME: Why the casting?
 					label.setText( "Go Back " + titleText );
 					title.setText( subSetTitle );
 					amChart.validateData();
