@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
 import com.amcharts.api.IsFunction;
+import com.amcharts.api.IsSlice;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
@@ -21,7 +22,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 
 	private Double brightnessStep;
 
-	private List<Object> chartData;
+	private List<IsSlice> chartData;
 
 	private String colorField;
 
@@ -184,15 +185,9 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public List<Object> getChartData()
+	public List<IsSlice> getChartData()
 	{
 		return chartData;
-	}
-
-	@Override
-	public void setChartData( List<Object> chartData )
-	{
-		this.chartData = chartData;
 	}
 
 	@Override

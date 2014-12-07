@@ -32,9 +32,7 @@ public interface IsAmSlicedChart extends IsAmChart
 
 	void setBrightnessStep( Double brightnessStep );
 
-	List<Object> getChartData();
-
-	void setChartData( List<Object> chartData );
+	List<IsSlice> getChartData();
 
 	String getColorField();
 

@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
 import com.amcharts.api.IsFunction;
+import com.amcharts.api.IsSlice;
+import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.AmSlicedChartJSO;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
@@ -96,15 +98,9 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	}
 
 	@Override
-	public List<Object> getChartData()
+	public List<IsSlice> getChartData()
 	{
 		return getJso().getChartData();
-	}
-
-	@Override
-	public void setChartData( List<Object> chartData )
-	{
-		getJso().setChartData( chartData );
 	}
 
 	@Override

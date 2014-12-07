@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.amcharts.api.IsAmSlicedChart;
 import com.amcharts.api.IsFunction;
+import com.amcharts.api.IsSlice;
 
 public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 {
@@ -97,15 +98,10 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	}-*/;
 
 	@Override
-	public final native List<Object> getChartData()
+	public final native List<IsSlice> getChartData()
 	/*-{
+		console.log(this.chartData);
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chartData);
-	}-*/;
-
-	@Override
-	public final native void setChartData( List<Object> chartData )
-	/*-{
-		this.chartData = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(chartData);
 	}-*/;
 
 	@Override

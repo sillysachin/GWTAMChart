@@ -1,8 +1,8 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
+import com.amcharts.api.IsSlice;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
-import com.amcharts.impl.Slice;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
@@ -59,7 +59,7 @@ public class PieChartBrokenSlices
 			public void function( AmChartEventJSO event )
 			{
 				Integer selected = null;
-				Slice dataItem = ( Slice ) event.getDataItem();
+				IsSlice dataItem = ( IsSlice ) event.getDataItem();
 				DataContext dataContext = dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
