@@ -2,11 +2,13 @@ package com.amcharts.impl;
 
 public class ChartDataIndex
 {
-	private String index;
+	private int index;
+
 	private String title;
+
 	private String prev;
 
-	public void setIndex( String index )
+	public void setIndex( int index )
 	{
 		this.index = index;
 	}
@@ -18,6 +20,21 @@ public class ChartDataIndex
 
 	public void setPrev( String prev )
 	{
-		this.prev= prev;
+		this.prev = prev;
+	}
+
+	public String getPrev()
+	{
+		return prev;
+	}
+
+	public int getIndex()
+	{
+		return index;
+	}
+
+	public String getTitle()
+	{
+		return title;
 	}
 }

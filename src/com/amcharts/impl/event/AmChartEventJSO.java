@@ -61,12 +61,12 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.graph = graph;
 	}-*/;
 
-	public final native String getIndex()
+	public final native int getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public final native void setIndex( String index )
+	public final native void setIndex( int index )
 	/*-{
 		this.index = index;
 	}-*/;

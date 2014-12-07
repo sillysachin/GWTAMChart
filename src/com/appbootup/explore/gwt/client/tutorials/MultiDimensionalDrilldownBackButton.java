@@ -2,8 +2,8 @@ package com.appbootup.explore.gwt.client.tutorials;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
-import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCharts;
@@ -14,7 +14,6 @@ import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ChartDataIndex;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Item;
-import com.amcharts.impl.Label;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.Title;
 import com.amcharts.impl.ValueAxis;
@@ -23,7 +22,6 @@ import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
-import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -31,14 +29,18 @@ import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.ContextMenuEvent;
-import com.google.gwt.event.dom.client.ContextMenuHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class MultiDimensionalDrilldownBackButton
 {
+	final Stack<ChartDataIndex> chartDataIndexes = new Stack<ChartDataIndex>();
+
+	private String chartTitle = "Base";
+
 	public MultiDimensionalDrilldownBackButton()
 	{
 		GWTAMChart.chartService
@@ -62,27 +64,18 @@ public class MultiDimensionalDrilldownBackButton
 
 	protected void drawChart( final JsArray<JavaScriptObject> chartData )
 	{
+		final HorizontalPanel amToolbar = new HorizontalPanel();
+		final Anchor anchorAmChartMenuGoBack = new Anchor( "<b>Go Back</b>", true );
 
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
 		amSerialChart.setPathToImages( "/js/amcharts/images/" );
-		String chartTitle = "Base";
-		final List<ChartDataIndex> chartDataIndexes = new ArrayList<ChartDataIndex>();
 
 		ArrayList<Title> titles = new ArrayList<Title>();
 		Title title = new Title();
 		titles.add( title );
 		title.setText( chartTitle );
 		amSerialChart.setTitles( titles );
-
-		ArrayList<Label> allLabels = new ArrayList<Label>();
-		Label label = new Label();
-		label.setText( "" );
-		label.setX( "150" );
-		label.setY( "10" );
-		label.setUrl( "javascript: goBack();void(0);" );
-		allLabels.add( label );
-		amSerialChart.setAllLabels( allLabels );
 		amSerialChart.setDataProvider( chartData );
 
 		ValueAxis valueAxis = AmCharts.ValueAxis();
@@ -161,35 +154,16 @@ public class MultiDimensionalDrilldownBackButton
 			@Override
 			public void onRendered( RenderedEvent event )
 			{
-				Anchor amChartMenu = new Anchor( "<b>Go Back</b>", true );
-				amChartMenu.addStyleName( "gwtAmChartMenu" );
-				amChartMenu.addClickHandler( new ClickHandler()
+				anchorAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
+				anchorAmChartMenuGoBack.addClickHandler( new ClickHandler()
 				{
 					@Override
 					public void onClick( ClickEvent event )
 					{
-						GWT.log("This is funny.");
+						goBack( chartData, amSerialChart, anchorAmChartMenuGoBack );
 					}
 				} );
-				amSerialChart.addContent( amChartMenu );
-			}
-		} );
-		
-		amSerialChart.addHandler( new ContextMenuHandler()
-		{
-			@Override
-			public void onContextMenu( ContextMenuEvent event )
-			{
-				LogUtils.log( "context" );
-			}
-		}, ContextMenuEvent.getType() );
-
-		amSerialChart.addListener( "clickGraph", new AmChartListener()
-		{
-			@Override
-			public void function( AmChartEventJSO evt )
-			{
-				LogUtils.log( "ola" );
+				amToolbar.add( anchorAmChartMenuGoBack );
 			}
 		} );
 
@@ -211,44 +185,58 @@ public class MultiDimensionalDrilldownBackButton
 					Title title = ( Title ) chartTitles.get( 0 );//FIXME: Why the casting?.
 					String titleText = title.getText();
 					chartDataIndex.setPrev( titleText );
-					chartDataIndexes.add( chartDataIndex );
+					chartDataIndexes.push( chartDataIndex );
 					amChart.setDataProvider( subSet );
-					List<IsLabel> allChartLabels = evt.getChart()
-							.getAllLabels();
-					Label label = ( Label ) allChartLabels.get( 0 );//FIXME: Why the casting?
-					label.setText( "Go Back " + titleText );
+					anchorAmChartMenuGoBack.setText( "Go Back " + titleText );
 					title.setText( subSetTitle );
 					amChart.validateData();
 				}
-				onClickGraphItem( evt );//FIXME: Massive Thabadthob code.
 			}
 		} );
 		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		VerticalPanel content = new VerticalPanel();
+		content.add( amToolbar );
+		content.add( amSerialChart );
+		RootLayoutPanel.get().add( content );
 	}
 
-	protected native void onClickGraphItem( AmChartEventJSO evt )
-	/*-{
-		function goBack() {
-			var previousData = chartData;
-			var tmp = {
-				prev : ""
-			}
+	private void goBack( final JsArray<JavaScriptObject> chartData, AmSerialChart amSerialChart, Anchor anchorAmChartMenuGoBack )
+	{
+		JsArray<JavaScriptObject> previousData = chartData;
+		ChartDataIndex tmp = new ChartDataIndex();
+		tmp.setPrev( "" );
 
-			// Remove latest
-			chartDataIndexes.pop();
-
-			// Get previous cached object
-			for (var i = 0; i < chartDataIndexes.length; i++) {
-				tmp = chartDataIndexes[i];
-				previousData = previousData[tmp.index].subSet;
-			}
-
-			// Apply titles and stuff
-			chart.allLabels[0].text = tmp.prev ? "Go Back " + tmp.prev : "";
-			chart.titles[0].text = tmp.title || chartTitle;
-			chart.dataProvider = previousData;
-			chart.validateData();
+		// Remove latest
+		chartDataIndexes.pop();
+		// Get previous cached object
+		for ( ChartDataIndex chartDataIndex : chartDataIndexes )
+		{
+			tmp = chartDataIndex;
+			JavaScriptObject javaScriptObject = previousData.get( tmp
+					.getIndex() );
+			previousData = getSubSet( javaScriptObject );
 		}
+
+		// Apply titles and stuff
+		anchorAmChartMenuGoBack
+				.setText( tmp.getPrev() != null ? "Go Back " + tmp.getPrev() : "" );
+
+		List<IsTitle> titles = amSerialChart.getTitles();
+		Title title = ( Title ) titles.get( 0 );
+		if ( tmp.getTitle() != null )
+		{
+			title.setText( tmp.getTitle() );
+		}
+		else
+		{
+			title.setText( chartTitle );
+		}
+		amSerialChart.setDataProvider( previousData );
+		amSerialChart.validateData();
+	}
+
+	private native JsArray<JavaScriptObject> getSubSet( JavaScriptObject data )
+	/*-{
+		return data.subSet;
 	}-*/;
 }
