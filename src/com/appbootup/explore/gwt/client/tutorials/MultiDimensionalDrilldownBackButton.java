@@ -7,6 +7,7 @@ import java.util.Stack;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.AmChart;
 import com.amcharts.impl.AmCharts;
+import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
@@ -15,6 +16,8 @@ import com.amcharts.impl.ChartDataIndex;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Item;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItemOutput;
+import com.amcharts.impl.MenuItemOutputCallback;
 import com.amcharts.impl.Title;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
@@ -147,6 +150,19 @@ public class MultiDimensionalDrilldownBackButton
 		item4.setFormat( "pdf" );
 		menuItem1.addItem( item4 );
 		exportConfig.addMenuItem( menuItem1 );
+
+		MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
+		menuItemOutput.setOnClick( new MenuItemOutputCallback()
+		{
+			@Override
+			public void execute( AmExport instance, MenuItemOutput config )
+			{
+				GWT.log( "Cool" );
+			}
+		} );
+		//FIXME: Incomplete.
+		//exportConfig.setMenuItemOutput( menuItemOutput );
+
 		amSerialChart.setExportConfig( exportConfig );
 
 		amSerialChart.addRenderedHandler( new RenderedHandler()
@@ -193,7 +209,7 @@ public class MultiDimensionalDrilldownBackButton
 				}
 			}
 		} );
-		amSerialChart.setSize( "1240px", "500px" );
+		amSerialChart.setSize( "620px", "250px" );
 		VerticalPanel content = new VerticalPanel();
 		content.add( amToolbar );
 		content.add( amSerialChart );
