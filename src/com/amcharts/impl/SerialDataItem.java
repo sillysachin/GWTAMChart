@@ -5,7 +5,7 @@ import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.event.DataItem;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public final class SerialDataItem extends DataItem implements IsSerialDataItem
+public class SerialDataItem extends DataItem implements IsSerialDataItem
 {
 	protected SerialDataItem()
 	{

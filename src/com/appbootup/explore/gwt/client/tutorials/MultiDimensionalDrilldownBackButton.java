@@ -188,7 +188,7 @@ public class MultiDimensionalDrilldownBackButton
 			@Override
 			public void function( AmChartEventJSO evt )
 			{
-				DataContext dataContext = evt.getItem().getDataContext();
+				DataContext dataContext = ( DataContext ) evt.getItem().getDataContext();
 				JsArray<JavaScriptObject> subSet = dataContext.getSubSet();
 				if ( subSet != null && subSet.length() > 0 )
 				{

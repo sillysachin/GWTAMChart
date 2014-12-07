@@ -5,7 +5,6 @@ import java.util.List;
 import com.amcharts.api.IsAmSlicedChart;
 import com.amcharts.api.IsFunction;
 import com.amcharts.api.IsSlice;
-import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.jso.AmSlicedChartJSO;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart

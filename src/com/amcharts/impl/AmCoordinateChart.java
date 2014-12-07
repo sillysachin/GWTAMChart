@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.amcharts.api.IsAmCoordinateChart;
 import com.amcharts.api.IsAmGraph;
+import com.amcharts.api.IsCoordinateDataItem;
 import com.amcharts.api.IsGuide;
 import com.amcharts.api.IsValueAxis;
 import com.amcharts.jso.AmCoordinateChartJSO;
@@ -28,17 +29,9 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	/**
 	 * "Read-only. Array, holding processed chart's data."
 	 */
-	public final List<Object> getChartData()
+	public final List<IsCoordinateDataItem> getChartData()
 	{
 		return getJso().getChartData();
-	}
-
-	/**
-	 * "Read-only. Array, holding processed chart's data."
-	 */
-	public final void setChartData( List<Object> chartData )
-	{
-		getJso().setChartData( chartData );
 	}
 
 	/**

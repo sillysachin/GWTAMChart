@@ -1,5 +1,6 @@
 package com.amcharts.impl.event;
 
+import com.amcharts.api.IsDataContext;
 import com.amcharts.impl.SerialDataItem;
 import com.amcharts.jso.AmGraphJSO;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -30,12 +31,12 @@ public class ClickItem extends JavaScriptObject
 		this.category = category;
 	}-*/;
 
-	public final native DataContext getDataContext()
+	public final native IsDataContext getDataContext()
 	/*-{
 		return this.dataContext;
 	}-*/;
 
-	public final native void setDataContext( DataContext dataContext )
+	public final native void setDataContext( IsDataContext dataContext )
 	/*-{
 		this.dataContext = dataContext;
 	}-*/;

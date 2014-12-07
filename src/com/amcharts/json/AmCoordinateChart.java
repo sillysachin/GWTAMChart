@@ -4,12 +4,13 @@ import java.util.List;
 
 import com.amcharts.api.IsAmCoordinateChart;
 import com.amcharts.api.IsAmGraph;
+import com.amcharts.api.IsCoordinateDataItem;
 import com.amcharts.api.IsGuide;
 import com.amcharts.api.IsValueAxis;
 
 public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 {
-	private List<Object> chartData;
+	private List<IsCoordinateDataItem> chartData;
 
 	private List<String> colors;
 
@@ -34,17 +35,9 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	/**
 	 * "Read-only. Array, holding processed chart's data."
 	 */
-	public List<Object> getChartData()
+	public List<IsCoordinateDataItem> getChartData()
 	{
 		return chartData;
-	}
-
-	/**
-	 * "Read-only. Array, holding processed chart's data."
-	 */
-	public void setChartData( List<Object> chartData )
-	{
-		this.chartData = chartData;
 	}
 
 	/**

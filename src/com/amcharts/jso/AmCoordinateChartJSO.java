@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.amcharts.api.IsAmCoordinateChart;
 import com.amcharts.api.IsAmGraph;
+import com.amcharts.api.IsCoordinateDataItem;
 import com.amcharts.api.IsGuide;
 import com.amcharts.api.IsValueAxis;
 
@@ -16,7 +17,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	/**
 	 * "Read-only. Array, holding processed chart's data."
 	 */
-	public final native List<Object> getChartData() /*-{
+	public final native List<IsCoordinateDataItem> getChartData() /*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chartData);
 	}-*/;
 

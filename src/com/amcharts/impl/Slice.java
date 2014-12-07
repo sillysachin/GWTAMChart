@@ -1,7 +1,7 @@
 package com.amcharts.impl;
 
+import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsSlice;
-import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.event.DataItem;
 
 public class Slice extends DataItem implements IsSlice
@@ -50,16 +50,12 @@ public class Slice extends DataItem implements IsSlice
 	 * @see com.amcharts.api.IsSlice#getDataContext()
 	 */
 	@Override
-	public final native DataContext getDataContext()
+	public final native IsDataContext getDataContext()
 	/*-{
 		return this.dataContext;
 	}-*/;
 
-	/* (non-Javadoc)
-	 * @see com.amcharts.api.IsSlice#setDataContext(com.amcharts.impl.event.DataContext)
-	 */
-	@Override
-	public final native void setDataContext( DataContext dataContext )
+	public final native void setDataContext( IsDataContext dataContext )
 	/*-{
 		this.dataContext = dataContext;
 	}-*/;

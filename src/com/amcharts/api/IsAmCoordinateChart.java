@@ -7,12 +7,7 @@ public interface IsAmCoordinateChart extends IsAmChart
 	/**
 	 * "Read-only. Array, holding processed chart's data."
 	 */
-	public List<Object> getChartData();
-
-	/**
-	 * "Read-only. Array, holding processed chart's data."
-	 */
-	public void setChartData( List<Object> chartData );
+	public List<IsCoordinateDataItem> getChartData();
 
 	/**
 	 * "Specifies the colors of the graphs if the lineColor of a graph is not set. It there are more graphs then colors in this array, the chart picks random color."

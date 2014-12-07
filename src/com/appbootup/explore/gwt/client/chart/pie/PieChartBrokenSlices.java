@@ -60,7 +60,7 @@ public class PieChartBrokenSlices
 			{
 				Integer selected = null;
 				IsSlice dataItem = ( IsSlice ) event.getDataItem();
-				DataContext dataContext = dataItem.getDataContext();
+				DataContext dataContext = ( DataContext ) dataItem.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
 				amPieChart.setDataProvider( generateChartData( selected ) );

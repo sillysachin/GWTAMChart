@@ -1,7 +1,5 @@
 package com.amcharts.api;
 
-import com.amcharts.impl.event.DataContext;
-
 public interface IsSlice
 {
 
@@ -25,12 +23,12 @@ public interface IsSlice
 		this.color = color;
 	}-*/;
 
-	public abstract DataContext getDataContext()
+	public abstract IsDataContext getDataContext()
 	/*-{
 		return this.dataContext;
 	}-*/;
 
-	public abstract void setDataContext( DataContext dataContext )
+	public abstract void setDataContext( IsDataContext dataContext )
 	/*-{
 		this.dataContext = dataContext;
 	}-*/;
