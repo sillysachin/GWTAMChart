@@ -26,7 +26,7 @@ public final class Guide implements IJavaScriptWrapper<GuideJSO>, IsGuide
 		this.jso = jso;
 	}
 
-	public native GuideJSO createJso() /*-{
+	private native GuideJSO createJso() /*-{
 		var guide = new $wnd.AmCharts.Guide();
 		return guide;
 	}-*/;

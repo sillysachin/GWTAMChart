@@ -22,7 +22,7 @@ public final class AmRadarChart extends AmCoordinateChart implements IJavaScript
 		this.jso = jso;
 	}
 
-	public native AmRadarChartJSO createJso() /*-{
+	private native AmRadarChartJSO createJso() /*-{
 		var chart = new $wnd.AmCharts.AmRadarChart();
 		return chart;
 	}-*/;

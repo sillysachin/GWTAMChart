@@ -27,7 +27,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 		this.jso = jso;
 	}
 
-	public native ValueAxisJSO createJso()
+	private native ValueAxisJSO createJso()
 	/*-{
 		var valueAxis = new $wnd.AmCharts.ValueAxis();
 		return valueAxis;

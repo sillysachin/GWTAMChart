@@ -23,8 +23,10 @@ public final class Label implements IJavaScriptWrapper<LabelJSO>, IsLabel
 		this.jso = jso;
 	}
 
-	public native LabelJSO createJso() /*-{
-		return {};
+	private native LabelJSO createJso() /*-{
+		var jso = {};
+		jso.className = 'Label';
+		return jso;
 	}-*/;
 
 	/**

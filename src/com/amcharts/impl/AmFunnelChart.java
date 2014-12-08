@@ -11,7 +11,7 @@ public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 		setType( "funnel" );
 	}
 
-	public native AmFunnelChartJSO createJso()
+	private native AmFunnelChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmFunnelChart();
 		return chart;

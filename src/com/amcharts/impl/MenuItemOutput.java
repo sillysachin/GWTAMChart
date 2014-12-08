@@ -24,8 +24,8 @@ public final class MenuItemOutput implements IJavaScriptWrapper<MenuItemOutputJS
 		this.jso = jso;
 	}
 
-	public native MenuItemOutputJSO createJso() /*-{
-		var jso = {}
+	private native MenuItemOutputJSO createJso() /*-{
+		var jso = {};
 		jso.className = 'MenuItemOutput';
 		return jso;
 	}-*/;

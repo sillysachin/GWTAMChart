@@ -23,9 +23,9 @@ public class AmLegendData implements IsAmLegendData, IJavaScriptWrapper<AmLegend
 		this.jso = jso;
 	}
 
-	public native AmLegendDataJSO createJso()
+	private native AmLegendDataJSO createJso()
 	/*-{
-		var jso = {}
+		var jso = {};
 		jso.className = 'AmLegendData';
 		return jso;
 	}-*/;

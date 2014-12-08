@@ -26,7 +26,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 		return ( AmSerialChartJSO ) super.getJso();
 	}
 
-	public native AmSerialChartJSO createJso()
+	private native AmSerialChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmSerialChart();
 		return chart;

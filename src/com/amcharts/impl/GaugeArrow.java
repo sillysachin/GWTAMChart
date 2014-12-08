@@ -25,7 +25,7 @@ public final class GaugeArrow implements IJavaScriptWrapper<GaugeArrowJSO>, IsGa
 	}
 
 	//Learn: Very important to invoke $wnd.AmCharts.GaugeArrow() instead of just {} or GaugeArrowJSO.createObject()
-	public native GaugeArrowJSO createJso() /*-{
+	private native GaugeArrowJSO createJso() /*-{
 		var gaugeArrow = new $wnd.AmCharts.GaugeArrow();
 		return gaugeArrow;
 	}-*/;

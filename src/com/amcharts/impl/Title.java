@@ -23,8 +23,10 @@ public final class Title implements IJavaScriptWrapper<TitleJSO>, IsTitle
 		this.jso = jso;
 	}
 
-	public native TitleJSO createJso() /*-{
-		return {};
+	private native TitleJSO createJso() /*-{
+		var jso = {};
+		jso.className = 'Title';
+		return jso;
 	}-*/;
 
 	/**

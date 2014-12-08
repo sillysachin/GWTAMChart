@@ -26,7 +26,7 @@ public final class AmGraph implements IsAmGraph, IJavaScriptWrapper<AmGraphJSO>
 		this.jso = jso;
 	}
 
-	public native AmGraphJSO createJso()
+	private native AmGraphJSO createJso()
 	/*-{
 		var graph = new $wnd.AmCharts.AmGraph();
 		return graph;

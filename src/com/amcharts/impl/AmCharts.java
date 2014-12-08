@@ -34,7 +34,7 @@ public class AmCharts implements IsAmCharts
 		this.jso = jso;
 	}
 
-	public native AmChartsJSO createJso() /*-{
+	private native AmChartsJSO createJso() /*-{
 		return $wnd.AmCharts;
 	}-*/;
 

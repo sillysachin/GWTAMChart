@@ -11,7 +11,7 @@ public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 		setType( "pie" );
 	}
 
-	public native AmPieChartJSO createJso()
+	private native AmPieChartJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmPieChart();
 		return chart;

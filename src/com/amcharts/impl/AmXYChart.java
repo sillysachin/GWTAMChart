@@ -12,7 +12,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 		setType( "xy" );
 	}
 
-	public native AmXYChartJSO createJso() /*-{
+	private native AmXYChartJSO createJso() /*-{
 		var chart = new $wnd.AmCharts.AmXYChart();
 		return chart;
 	}-*/;

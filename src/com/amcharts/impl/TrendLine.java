@@ -26,7 +26,7 @@ public final class TrendLine implements IJavaScriptWrapper<TrendLineJSO>, IsTren
 		this.jso = jso;
 	}
 
-	public native TrendLineJSO createJso() 
+	private native TrendLineJSO createJso() 
 	/*-{
 		var trendLine = new $wnd.AmCharts.TrendLine();
 		return trendLine;

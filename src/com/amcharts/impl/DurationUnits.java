@@ -13,8 +13,8 @@ public class DurationUnits implements IsDurationUnits, IJavaScriptWrapper<Durati
 		jso = createJso();
 	}
 
-	public native DurationUnitsJSO createJso() /*-{
-		var jso = {}
+	private native DurationUnitsJSO createJso() /*-{
+		var jso = {};
 		jso.className = 'DurationUnits';
 		return jso;
 	}-*/;

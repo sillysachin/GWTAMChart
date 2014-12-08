@@ -27,7 +27,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 		this.jso = jso;
 	}
 
-	public native CategoryAxisJSO createJso()
+	private native CategoryAxisJSO createJso()
 	/*-{
 		var categoryAxis = new $wnd.AmCharts.CategoryAxis();
 		return categoryAxis;

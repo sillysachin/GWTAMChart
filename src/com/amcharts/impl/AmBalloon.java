@@ -25,7 +25,7 @@ public final class AmBalloon implements IJavaScriptWrapper<AmBalloonJSO>, IsAmBa
 	}
 
 	public native AmBalloonJSO createJso() /*-{
-		return this.jso;
+		return new $wnd.AmCharts.AmBalloon();
 	}-*/;
 
 	/**

@@ -30,7 +30,7 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 		this.jso = jso;
 	}
 
-	public native AmLegendJSO createJso() /*-{
+	private native AmLegendJSO createJso() /*-{
 		return {};
 	}-*/;
 

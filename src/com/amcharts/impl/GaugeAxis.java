@@ -28,7 +28,7 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	}
 	
 	//Learn: Very important to invoke $wnd.AmCharts.GaugeAxis() instead of just {} or GaugeAxisJSO.createObject()
-	public native GaugeAxisJSO createJso() /*-{
+	private native GaugeAxisJSO createJso() /*-{
 		var gaugeAxis = new $wnd.AmCharts.GaugeAxis();
 		return gaugeAxis;
 	}-*/;

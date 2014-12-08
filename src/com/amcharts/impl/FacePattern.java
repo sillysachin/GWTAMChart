@@ -13,8 +13,8 @@ public class FacePattern implements IsFacePattern, IJavaScriptWrapper<FacePatter
 		jso = createJso();
 	}
 
-	public native FacePatternJSO createJso() /*-{
-		var jso = {}
+	private native FacePatternJSO createJso() /*-{
+		var jso = {};
 		jso.className = 'FacePattern';
 		return jso;
 	}-*/;

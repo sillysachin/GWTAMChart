@@ -5,5 +5,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public class Values extends JavaScriptObject implements IsValues
 {
-	protected Values(){}
+	protected Values()
+	{
+	}
 }

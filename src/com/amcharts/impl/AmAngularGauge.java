@@ -28,7 +28,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	}
 
 	//Learn: new $wnd.AmCharts.AmAngularGauge(); use of $wnd
-	public native AmAngularGaugeJSO createJso()
+	private native AmAngularGaugeJSO createJso()
 	/*-{
 		var chart = new $wnd.AmCharts.AmAngularGauge();
 		return chart;

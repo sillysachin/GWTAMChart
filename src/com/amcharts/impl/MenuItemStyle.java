@@ -23,8 +23,10 @@ public final class MenuItemStyle implements IJavaScriptWrapper<MenuItemStyleJSO>
 		this.jso = jso;
 	}
 
-	public native MenuItemStyleJSO createJso() /*-{
-		return {};
+	private native MenuItemStyleJSO createJso() /*-{
+		var jso = {};
+		jso.className = 'MenuItemStyle';
+		return jso;
 	}-*/;
 
 	public final native String getBackgroundColor() /*-{

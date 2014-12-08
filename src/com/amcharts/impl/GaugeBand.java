@@ -23,8 +23,8 @@ public final class GaugeBand implements IJavaScriptWrapper<GaugeBandJSO>, IsGaug
 		this.jso = jso;
 	}
 
-	public native GaugeBandJSO createJso() /*-{
-		return {};
+	private native GaugeBandJSO createJso() /*-{
+		return new $wnd.AmCharts.GaugeBand();
 	}-*/;
 
 	/**
