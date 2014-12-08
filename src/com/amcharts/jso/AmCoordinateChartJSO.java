@@ -60,7 +60,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * Specifies if grid should be drawn above the graphs or below. Will not work properly with 3D charts.
 	 */
 	public final native Boolean isGridAboveGraphs() /*-{
-		return gridAboveGraphs;
+		return this.gridAboveGraphs;
 	}-*/;
 
 	/**
@@ -88,7 +88,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * Specifies whether the animation should be sequenced or all objects should appear at once.
 	 */
 	public final native Boolean isSequencedAnimation() /*-{
-		return sequencedAnimation;
+		return this.sequencedAnimation;
 	}-*/;
 
 	/**
@@ -102,7 +102,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "The initial opacity of the column/line. If you set startDuration to a value higher than 0, the columns/lines will fade in from startAlpha. Value range is 0 - 1."
 	 */
 	public final native double getStartAlpha() /*-{
-		return startAlpha;
+		return this.startAlpha;
 	}-*/;
 
 	/**
@@ -116,7 +116,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "Duration of the animation, in seconds."
 	 */
 	public final native double getStartDuration() /*-{
-		return startDuration;
+		return this.startDuration;
 	}-*/;
 
 	/**
@@ -130,7 +130,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "Animation effect. Possible values are: easeOutSine, easeInSine, elastic, bounce"
 	 */
 	public final native String getStartEffect() /*-{
-		return startEffect;
+		return this.startEffect;
 	}-*/;
 
 	/**
@@ -144,7 +144,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * Target of url.
 	 */
 	public final native String getUrlTarget() /*-{
-		return urlTarget;
+		return this.urlTarget;
 	}-*/;
 
 	/**

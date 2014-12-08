@@ -12,7 +12,7 @@ public final class AmXYChartJSO extends AmRectangularChartJSO implements IsAmXYC
 	 * Specifies if Scrollbar of X axis (horizontal) should be hidden.
 	 */
 	public final native Boolean isHideXScrollbar() /*-{
-		return hideXScrollbar;
+		return this.hideXScrollbar;
 	}-*/;
 
 	/**
@@ -26,7 +26,7 @@ public final class AmXYChartJSO extends AmRectangularChartJSO implements IsAmXYC
 	 * Specifies if Scrollbar of Y axis (vertical) should be hidden.
 	 */
 	public final native Boolean isHideYScrollbar() /*-{
-		return hideYScrollbar;
+		return this.hideYScrollbar;
 	}-*/;
 
 	/**
@@ -40,7 +40,7 @@ public final class AmXYChartJSO extends AmRectangularChartJSO implements IsAmXYC
 	 * Maximum zoom factor of the chart.
 	 */
 	public final native double getMaxZoomFactor() /*-{
-		return maxZoomFactor;
+		return this.maxZoomFactor;
 	}-*/;
 
 	/**

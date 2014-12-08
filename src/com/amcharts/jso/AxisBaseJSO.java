@@ -16,7 +16,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Specifies whether number of gridCount is specified automatically, acoarding to the axis size.'
 	 */
 	public final native Boolean isAutoGridCount() /*-{
-		return autoGridCount;
+		return this.autoGridCount;
 	}-*/;
 
 	/**
@@ -30,7 +30,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Axis opacity. Value range is 0 - 1.
 	 */
 	public final native double getAxisAlpha() /*-{
-		return axisAlpha;
+		return this.axisAlpha;
 	}-*/;
 
 	/**
@@ -44,7 +44,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Axis color.
 	 */
 	public final native String getAxisColor() /*-{
-		return axisColor;
+		return this.axisColor;
 	}-*/;
 
 	/**
@@ -58,7 +58,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Thickness of the axis.
 	 */
 	public final native double getAxisThickness() /*-{
-		return axisThickness;
+		return this.axisThickness;
 	}-*/;
 
 	/**
@@ -72,7 +72,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Read-only. Returns x coordinate of the axis.
 	 */
 	public final native double getAxisX() /*-{
-		return axisX;
+		return this.axisX;
 	}-*/;
 
 	/**
@@ -86,7 +86,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Read-only. Returns y coordinate of the axis.
 	 */
 	public final native double getAxisY() /*-{
-		return axisY;
+		return this.axisY;
 	}-*/;
 
 	/**
@@ -100,7 +100,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Specifies if axis labels should be bold or not.
 	 */
 	public final native Boolean isBoldLabels() /*-{
-		return boldLabels;
+		return this.boldLabels;
 	}-*/;
 
 	/**
@@ -114,7 +114,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Color of axis value labels. Will use chart's color if not set.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -128,7 +128,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Length of a dash. 0 means line is not dashed.
 	 */
 	public final native double getDashLength() /*-{
-		return dashLength;
+		return this.dashLength;
 	}-*/;
 
 	/**
@@ -142,7 +142,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Fill opacity. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
 	public final native double getFillAlpha() /*-{
-		return fillAlpha;
+		return this.fillAlpha;
 	}-*/;
 
 	/**
@@ -156,7 +156,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Fill color. Every second space between grid lines can be filled with color. Set fillAlpha to a value greater than 0 to see the fills.
 	 */
 	public final native String getFillColor() /*-{
-		return fillColor;
+		return this.fillColor;
 	}-*/;
 
 	/**
@@ -170,7 +170,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Size of value labels text. Will use chart's fontSize if not set.
 	 */
 	public final native double getFontSize() /*-{
-		return fontSize;
+		return this.fontSize;
 	}-*/;
 
 	/**
@@ -184,7 +184,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Opacity of grid lines.
 	 */
 	public final native double getGridAlpha() /*-{
-		return gridAlpha;
+		return this.gridAlpha;
 	}-*/;
 
 	/**
@@ -198,7 +198,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Color of grid lines.
 	 */
 	public final native String getGridColor() /*-{
-		return gridColor;
+		return this.gridColor;
 	}-*/;
 
 	/**
@@ -212,7 +212,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Number of grid lines. In case this is value axis, or your categoryAxis parses dates, the number is approximate. The default value is 5. If you set autoGridCount to true, this property is ignored.'
 	 */
 	public final native double getGridCount() /*-{
-		return gridCount;
+		return this.gridCount;
 	}-*/;
 
 	/**
@@ -226,7 +226,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Thickness of grid lines.
 	 */
 	public final native double getGridThickness() /*-{
-		return gridThickness;
+		return this.gridThickness;
 	}-*/;
 
 	/**
@@ -254,7 +254,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'
 	 */
 	public final native Boolean isIgnoreAxisWidth() /*-{
-		return ignoreAxisWidth;
+		return this.ignoreAxisWidth;
 	}-*/;
 
 	/**
@@ -268,7 +268,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Specifies whether values should be placed inside or outside plot area.
 	 */
 	public final native Boolean isInside() /*-{
-		return inside;
+		return this.inside;
 	}-*/;
 
 	/**
@@ -282,7 +282,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Frequency at which labels should be placed. Doesn't work for CategoryAxis if parseDates is set to true.
 	 */
 	public final native double getLabelFrequency() /*-{
-		return labelFrequency;
+		return this.labelFrequency;
 	}-*/;
 
 	/**
@@ -296,7 +296,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * You can use it to adjust position of axes labels. Works both with CategoryAxis and ValueAxis.
 	 */
 	public final native double getLabelOffset() /*-{
-		return labelOffset;
+		return this.labelOffset;
 	}-*/;
 
 	/**
@@ -310,7 +310,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Rotation angle of a label. Only horizontal axis' values can be rotated. If you set this for vertical axis, the setting will be ignored. Possible values from -90 to 90.'
 	 */
 	public final native double getLabelRotation() /*-{
-		return labelRotation;
+		return this.labelRotation;
 	}-*/;
 
 	/**
@@ -324,7 +324,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Specifies whether axis displays category axis' labels and value axis' values.
 	 */
 	public final native Boolean isLabelsEnabled() /*-{
-		return labelsEnabled;
+		return this.labelsEnabled;
 	}-*/;
 
 	/**
@@ -338,7 +338,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell width required for one span between grid lines.
 	 */
 	public final native double getMinHorizontalGap() /*-{
-		return minHorizontalGap;
+		return this.minHorizontalGap;
 	}-*/;
 
 	/**
@@ -352,7 +352,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Opacity of minor grid. In order minor to be visible, you should set minorGridEnabled to true.'
 	 */
 	public final native double getMinorGridAlpha() /*-{
-		return minorGridAlpha;
+		return this.minorGridAlpha;
 	}-*/;
 
 	/**
@@ -366,7 +366,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Specifies if minor grid should be displayed.
 	 */
 	public final native Boolean isMinorGridEnabled() /*-{
-		return minorGridEnabled;
+		return this.minorGridEnabled;
 	}-*/;
 
 	/**
@@ -380,7 +380,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * This property is used when calculating grid count (when autoGridCount is true). It specifies minimum cell height required for one span between grid lines.
 	 */
 	public final native double getMinVerticalGap() /*-{
-		return minVerticalGap;
+		return this.minVerticalGap;
 	}-*/;
 
 	/**
@@ -394,7 +394,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'The distance of the axis to the plot area, in pixels. Negative values can also be used.'
 	 */
 	public final native double getOffset() /*-{
-		return offset;
+		return this.offset;
 	}-*/;
 
 	/**
@@ -408,7 +408,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Possible values are: ''top'', ''bottom'', ''left'', ''right''. If axis is vertical, default position is ''left''. If axis is horizontal, default position is ''bottom''.'
 	 */
 	public final native String getPosition() /*-{
-		return position;
+		return this.position;
 	}-*/;
 
 	/**
@@ -422,7 +422,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Whether to show first axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide first label.'
 	 */
 	public final native Boolean isShowFirstLabel() /*-{
-		return showFirstLabel;
+		return this.showFirstLabel;
 	}-*/;
 
 	/**
@@ -436,7 +436,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * 'Whether to show last axis label or not. This works properly only on ValueAxis. With CategoryAxis it wont work 100 percent, it depends on the period, zooming, etc. There is no guaranteed way to force category axis to show or hide last label.'
 	 */
 	public final native Boolean isShowLastLabel() /*-{
-		return showLastLabel;
+		return this.showLastLabel;
 	}-*/;
 
 	/**
@@ -450,7 +450,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Length of the tick marks.
 	 */
 	public final native double getTickLength() /*-{
-		return tickLength;
+		return this.tickLength;
 	}-*/;
 
 	/**
@@ -464,7 +464,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Title of the axis.
 	 */
 	public final native String getTitle() /*-{
-		return title;
+		return this.title;
 	}-*/;
 
 	/**
@@ -478,7 +478,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Specifies if title should be bold or not.
 	 */
 	public final native Boolean isTitleBold() /*-{
-		return titleBold;
+		return this.titleBold;
 	}-*/;
 
 	/**
@@ -492,7 +492,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Color of axis title. Will use text color of chart if not set any.
 	 */
 	public final native String getTitleColor() /*-{
-		return titleColor;
+		return this.titleColor;
 	}-*/;
 
 	/**
@@ -506,7 +506,7 @@ public class AxisBaseJSO extends JavaScriptObject implements IsAxisBase
 	 * Font size of axis title. Will use font size of chart plus two pixels if not set any.
 	 */
 	public final native double getTitleFontSize() /*-{
-		return titleFontSize;
+		return this.titleFontSize;
 	}-*/;
 
 	/**

@@ -10,7 +10,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}
 
 	public final native String getBackgroundColor() /*-{
-		return backgroundColor;
+		return this.backgroundColor;
 	}-*/;
 
 	public final native void setBackgroundColor( String backgroundColor ) /*-{
@@ -18,7 +18,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native double getOpacity() /*-{
-		return opacity;
+		return this.opacity;
 	}-*/;
 
 	public final native void setOpacity( double opacity ) /*-{
@@ -26,7 +26,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getRollOverBackgroundColor() /*-{
-		return rollOverBackgroundColor;
+		return this.rollOverBackgroundColor;
 	}-*/;
 
 	public final native void setRollOverBackgroundColor( String rollOverBackgroundColor ) /*-{
@@ -34,7 +34,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	public final native void setColor( String color ) /*-{
@@ -42,7 +42,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getRollOverColor() /*-{
-		return rollOverColor;
+		return this.rollOverColor;
 	}-*/;
 
 	public final native void setRollOverColor( String rollOverColor ) /*-{
@@ -50,7 +50,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getPaddingTop() /*-{
-		return paddingTop;
+		return this.paddingTop;
 	}-*/;
 
 	public final native void setPaddingTop( String paddingTop ) /*-{
@@ -58,7 +58,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getPaddingRight() /*-{
-		return paddingRight;
+		return this.paddingRight;
 	}-*/;
 
 	public final native void setPaddingRight( String paddingRight ) /*-{
@@ -66,7 +66,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getPaddingBottom() /*-{
-		return paddingBottom;
+		return this.paddingBottom;
 	}-*/;
 
 	public final native void setPaddingBottom( String paddingBottom ) /*-{
@@ -74,7 +74,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getPaddingLeft() /*-{
-		return paddingLeft;
+		return this.paddingLeft;
 	}-*/;
 
 	public final native void setPaddingLeft( String paddingLeft ) /*-{
@@ -82,7 +82,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getMarginTop() /*-{
-		return marginTop;
+		return this.marginTop;
 	}-*/;
 
 	public final native void setMarginTop( String marginTop ) /*-{
@@ -90,7 +90,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getMarginRight() /*-{
-		return marginRight;
+		return this.marginRight;
 	}-*/;
 
 	public final native void setMarginRight( String marginRight ) /*-{
@@ -98,7 +98,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getMarginBottom() /*-{
-		return marginBottom;
+		return this.marginBottom;
 	}-*/;
 
 	public final native void setMarginBottom( String marginBottom ) /*-{
@@ -106,7 +106,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getMarginLeft() /*-{
-		return marginLeft;
+		return this.marginLeft;
 	}-*/;
 
 	public final native void setMarginLeft( String marginLeft ) /*-{
@@ -114,7 +114,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getTextAlign() /*-{
-		return textAlign;
+		return this.textAlign;
 	}-*/;
 
 	public final native void setTextAlign( String textAlign ) /*-{
@@ -122,7 +122,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getTextDecoration() /*-{
-		return textDecoration;
+		return this.textDecoration;
 	}-*/;
 
 	public final native void setTextDecoration( String textDecoration ) /*-{
@@ -130,7 +130,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getFontFamily() /*-{
-		return fontFamily;
+		return this.fontFamily;
 	}-*/;
 
 	public final native void setFontFamily( String fontFamily ) /*-{
@@ -138,7 +138,7 @@ public final class MenuItemStyleJSO extends JavaScriptObject implements IsMenuIt
 	}-*/;
 
 	public final native String getFontSize() /*-{
-		return fontSize;
+		return this.fontSize;
 	}-*/;
 
 	public final native void setFontSize( String fontSize ) /*-{

@@ -12,19 +12,19 @@ public class AmLegendDataJSO extends JavaScriptObject implements IsAmLegendData
 	@Override
 	public final native String getTitle()
 	/*-{
-		return title;
+		return this.title;
 	}-*/;
 
 	@Override
 	public final native String getColor()
 	/*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	@Override
 	public final native String getMarkerType()
 	/*-{
-		return markerType;
+		return this.markerType;
 	}-*/;
 
 	@Override

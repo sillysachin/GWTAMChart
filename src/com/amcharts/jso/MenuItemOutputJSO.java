@@ -11,7 +11,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}
 
 	public final native String getBackgroundColor() /*-{
-		return backgroundColor;
+		return this.backgroundColor;
 	}-*/;
 
 	public final native void setBackgroundColor( String backgroundColor ) /*-{
@@ -19,7 +19,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native String getFileName() /*-{
-		return fileName;
+		return this.fileName;
 	}-*/;
 
 	public final native void setFileName( String fileName ) /*-{
@@ -27,7 +27,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native String getFormat() /*-{
-		return format;
+		return this.format;
 	}-*/;
 
 	public final native void setFormat( String format ) /*-{
@@ -35,7 +35,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native String getOutput() /*-{
-		return output;
+		return this.output;
 	}-*/;
 
 	public final native void setOutput( String output ) /*-{
@@ -43,7 +43,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native String getRender() /*-{
-		return render;
+		return this.render;
 	}-*/;
 
 	public final native void setRender( String render ) /*-{
@@ -51,7 +51,7 @@ public final class MenuItemOutputJSO extends JavaScriptObject implements IsMenuI
 	}-*/;
 
 	public final native double getDpi() /*-{
-		return dpi;
+		return this.dpi;
 	}-*/;
 
 	public final native void setDpi( double dpi ) /*-{

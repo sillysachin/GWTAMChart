@@ -17,7 +17,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis opacity.
 	 */
 	public final native double getAxisAlpha() /*-{
-		return axisAlpha;
+		return this.axisAlpha;
 	}-*/;
 
 	/**
@@ -31,7 +31,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis color.
 	 */
 	public final native String getAxisColor() /*-{
-		return axisColor;
+		return this.axisColor;
 	}-*/;
 
 	/**
@@ -45,7 +45,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Thickness of the axis outline.
 	 */
 	public final native double getAxisThickness() /*-{
-		return axisThickness;
+		return this.axisThickness;
 	}-*/;
 
 	/**
@@ -59,7 +59,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Opacity of band fills.
 	 */
 	public final native double getBandAlpha() /*-{
-		return bandAlpha;
+		return this.bandAlpha;
 	}-*/;
 
 	/**
@@ -73,7 +73,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Opacity of band outlines.
 	 */
 	public final native double getBandOutlineAlpha() /*-{
-		return bandOutlineAlpha;
+		return this.bandOutlineAlpha;
 	}-*/;
 
 	/**
@@ -87,7 +87,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Color of band outlines.
 	 */
 	public final native String getBandOutlineColor() /*-{
-		return bandOutlineColor;
+		return this.bandOutlineColor;
 	}-*/;
 
 	/**
@@ -101,7 +101,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Thickness of band outlines.
 	 */
 	public final native double getBandOutlineThickness() /*-{
-		return bandOutlineThickness;
+		return this.bandOutlineThickness;
 	}-*/;
 
 	/**
@@ -129,7 +129,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Text displayed below the axis center.
 	 */
 	public final native String getBottomText() /*-{
-		return bottomText;
+		return this.bottomText;
 	}-*/;
 
 	/**
@@ -143,7 +143,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if text should be bold.
 	 */
 	public final native Boolean isBottomTextBold() /*-{
-		return bottomTextBold;
+		return this.bottomTextBold;
 	}-*/;
 
 	/**
@@ -157,7 +157,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Bottom text color.
 	 */
 	public final native String getBottomTextColor() /*-{
-		return bottomTextColor;
+		return this.bottomTextColor;
 	}-*/;
 
 	/**
@@ -171,7 +171,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Font size of bottom text.
 	 */
 	public final native double getBottomTextFontSize() /*-{
-		return bottomTextFontSize;
+		return this.bottomTextFontSize;
 	}-*/;
 
 	/**
@@ -185,7 +185,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Y offset of bottom text.
 	 */
 	public final native double getBottomTextYOffset() /*-{
-		return bottomTextYOffset;
+		return this.bottomTextYOffset;
 	}-*/;
 
 	/**
@@ -199,7 +199,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Y offset of bottom text.
 	 */
 	public final native double getBottomTextXOffset() /*-{
-		return bottomTextXOffset;
+		return this.bottomTextXOffset;
 	}-*/;
 
 	/**
@@ -213,7 +213,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * "X position of the axis, relative to the center of the gauge."
 	 */
 	public final native String getCenterX() /*-{
-		return centerX;
+		return this.centerX;
 	}-*/;
 
 	/**
@@ -227,7 +227,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * "Y position of the axis, relative to the center of the gauge."
 	 */
 	public final native String getCenterY() /*-{
-		return centerY;
+		return this.centerY;
 	}-*/;
 
 	/**
@@ -241,7 +241,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis end angle. Valid values are from - 180 to 180.
 	 */
 	public final native double getEndAngle() /*-{
-		return endAngle;
+		return this.endAngle;
 	}-*/;
 
 	/**
@@ -255,7 +255,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis end (max) value
 	 */
 	public final native double getEndValue() /*-{
-		return endValue;
+		return this.endValue;
 	}-*/;
 
 	/**
@@ -269,7 +269,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * "Number of grid lines. Note, GaugeAxis doesn't adjust gridCount, so you should check your values and choose a proper gridCount which would result grids at round numbers."
 	 */
 	public final native double getGridCount() /*-{
-		return gridCount;
+		return this.gridCount;
 	}-*/;
 
 	/**
@@ -283,7 +283,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if grid should be drawn inside or outside the axis.
 	 */
 	public final native Boolean isGridInside() /*-{
-		return gridInside;
+		return this.gridInside;
 	}-*/;
 
 	/**
@@ -297,7 +297,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Unique id of an axis.
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -311,7 +311,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if labels should be placed inside or outside the axis.
 	 */
 	public final native Boolean isInside() /*-{
-		return inside;
+		return this.inside;
 	}-*/;
 
 	/**
@@ -325,7 +325,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Frequency of labels.
 	 */
 	public final native double getLabelFrequency() /*-{
-		return labelFrequency;
+		return this.labelFrequency;
 	}-*/;
 
 	/**
@@ -353,7 +353,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Distance from axis to the labels.
 	 */
 	public final native double getLabelOffset() /*-{
-		return labelOffset;
+		return this.labelOffset;
 	}-*/;
 
 	/**
@@ -367,7 +367,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * "Interval, at which minor ticks should be placed."
 	 */
 	public final native double getMinorTickInterval() /*-{
-		return minorTickInterval;
+		return this.minorTickInterval;
 	}-*/;
 
 	/**
@@ -381,7 +381,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Length of a minor tick.
 	 */
 	public final native double getMinorTickLength() /*-{
-		return minorTickLength;
+		return this.minorTickLength;
 	}-*/;
 
 	/**
@@ -395,7 +395,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis radius.
 	 */
 	public final native String getRadius() /*-{
-		return radius;
+		return this.radius;
 	}-*/;
 
 	/**
@@ -409,7 +409,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if the first label should be shown.
 	 */
 	public final native Boolean isShowFirstLabel() /*-{
-		return showFirstLabel;
+		return this.showFirstLabel;
 	}-*/;
 
 	/**
@@ -423,7 +423,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if the last label should be shown.
 	 */
 	public final native Boolean isShowLastLabel() /*-{
-		return showLastLabel;
+		return this.showLastLabel;
 	}-*/;
 
 	/**
@@ -437,7 +437,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis start angle. Valid values are from - 180 to 180.
 	 */
 	public final native double getStartAngle() /*-{
-		return startAngle;
+		return this.startAngle;
 	}-*/;
 
 	/**
@@ -451,7 +451,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Axis start (min) value.
 	 */
 	public final native double getStartValue() /*-{
-		return startValue;
+		return this.startValue;
 	}-*/;
 
 	/**
@@ -465,7 +465,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Opacity of axis ticks.
 	 */
 	public final native double getTickAlpha() /*-{
-		return tickAlpha;
+		return this.tickAlpha;
 	}-*/;
 
 	/**
@@ -479,7 +479,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Color of axis ticks.
 	 */
 	public final native String getTickColor() /*-{
-		return tickColor;
+		return this.tickColor;
 	}-*/;
 
 	/**
@@ -493,7 +493,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Length of a major tick.
 	 */
 	public final native double getTickLength() /*-{
-		return tickLength;
+		return this.tickLength;
 	}-*/;
 
 	/**
@@ -507,7 +507,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Tick thickness.
 	 */
 	public final native double getTickThickness() /*-{
-		return tickThickness;
+		return this.tickThickness;
 	}-*/;
 
 	/**
@@ -521,7 +521,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Text displayed above the axis center.
 	 */
 	public final native String getTopText() /*-{
-		return topText;
+		return this.topText;
 	}-*/;
 
 	/**
@@ -535,7 +535,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if text should be bold.
 	 */
 	public final native Boolean isTopTextBold() /*-{
-		return topTextBold;
+		return this.topTextBold;
 	}-*/;
 
 	/**
@@ -549,7 +549,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Color of top text.
 	 */
 	public final native String getTopTextColor() /*-{
-		return topTextColor;
+		return this.topTextColor;
 	}-*/;
 
 	/**
@@ -563,7 +563,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Font size of top text.
 	 */
 	public final native double getTopTextFontSize() /*-{
-		return topTextFontSize;
+		return this.topTextFontSize;
 	}-*/;
 
 	/**
@@ -577,7 +577,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Y offset of top text.
 	 */
 	public final native double getTopTextYOffset() /*-{
-		return topTextYOffset;
+		return this.topTextYOffset;
 	}-*/;
 
 	/**
@@ -591,7 +591,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * A string which can be placed next to axis labels.
 	 */
 	public final native String getUnit() /*-{
-		return unit;
+		return this.unit;
 	}-*/;
 
 	/**
@@ -605,7 +605,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Position of the unit.
 	 */
 	public final native String getUnitPosition() /*-{
-		return unitPosition;
+		return this.unitPosition;
 	}-*/;
 
 	/**
@@ -619,7 +619,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * Specifies if small and big numbers should use prefixes to make them more readable.
 	 */
 	public final native Boolean isUsePrefixes() /*-{
-		return usePrefixes;
+		return this.usePrefixes;
 	}-*/;
 
 	/**
@@ -633,7 +633,7 @@ public final class GaugeAxisJSO extends JavaScriptObject implements IsGaugeAxis
 	 * "Interval, at which ticks with values should be placed."
 	 */
 	public final native double getValueInterval() /*-{
-		return valueInterval;
+		return this.valueInterval;
 	}-*/;
 
 	/**

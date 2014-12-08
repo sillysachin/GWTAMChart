@@ -16,7 +16,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "If you set it to true, the guide will be displayed above the graphs."
 	 */
 	public final native Boolean isAbove() /*-{
-		return above;
+		return this.above;
 	}-*/;
 
 	/**
@@ -30,7 +30,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "Radar chart only. Specifies angle at which guide should start. Affects only fills, not lines."
 	 */
 	public final native double getAngle() /*-{
-		return angle;
+		return this.angle;
 	}-*/;
 
 	/**
@@ -44,7 +44,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Baloon fill color.
 	 */
 	public final native String getBalloonColor() /*-{
-		return balloonColor;
+		return this.balloonColor;
 	}-*/;
 
 	/**
@@ -58,7 +58,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * The text which will be displayed if the user rolls-over the guide.
 	 */
 	public final native String getBalloonText() /*-{
-		return balloonText;
+		return this.balloonText;
 	}-*/;
 
 	/**
@@ -72,7 +72,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Specifies if label should be bold or not.
 	 */
 	public final native Boolean isBoldLabel() /*-{
-		return boldLabel;
+		return this.boldLabel;
 	}-*/;
 
 	/**
@@ -86,7 +86,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Category of the guide (in case the guide is for category axis).
 	 */
 	public final native String getCategory() /*-{
-		return category;
+		return this.category;
 	}-*/;
 
 	/**
@@ -100,7 +100,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Color of a guide label.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -114,7 +114,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Dash length.
 	 */
 	public final native double getDashLength() /*-{
-		return dashLength;
+		return this.dashLength;
 	}-*/;
 
 	/**
@@ -128,7 +128,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Date of the guide (in case the guide is for category axis and parseDates is set to true).
 	 */
 	public final native Date getDate() /*-{
-		return date;
+		return this.date;
 	}-*/;
 
 	/**
@@ -142,7 +142,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "Works if a guide is added to CategoryAxis and this axis is non-date-based. If you set it to true, the guide will start (or be placed, if it's not a fill) on the beginning of the category cell and will end at the end of toCategory cell."
 	 */
 	public final native Boolean isExpand() /*-{
-		return expand;
+		return this.expand;
 	}-*/;
 
 	/**
@@ -156,7 +156,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Fill opacity. Value range is 0 - 1.
 	 */
 	public final native double getFillAlpha() /*-{
-		return fillAlpha;
+		return this.fillAlpha;
 	}-*/;
 
 	/**
@@ -170,7 +170,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Fill color.
 	 */
 	public final native String getFillColor() /*-{
-		return fillColor;
+		return this.fillColor;
 	}-*/;
 
 	/**
@@ -184,7 +184,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Font size of guide label.
 	 */
 	public final native double getFontSize() /*-{
-		return fontSize;
+		return this.fontSize;
 	}-*/;
 
 	/**
@@ -198,7 +198,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "Unique id of a Guide. You don't need to set it, unless you want to."
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -212,7 +212,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Specifies whether label should be placed inside or outside plot area.
 	 */
 	public final native Boolean isInside() /*-{
-		return inside;
+		return this.inside;
 	}-*/;
 
 	/**
@@ -226,7 +226,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * The label which will be displayed near the guide.
 	 */
 	public final native String getLabel() /*-{
-		return label;
+		return this.label;
 	}-*/;
 
 	/**
@@ -240,7 +240,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Rotation angle of a guide label.
 	 */
 	public final native double getLabelRotation() /*-{
-		return labelRotation;
+		return this.labelRotation;
 	}-*/;
 
 	/**
@@ -254,7 +254,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Line opacity.
 	 */
 	public final native double getLineAlpha() /*-{
-		return lineAlpha;
+		return this.lineAlpha;
 	}-*/;
 
 	/**
@@ -268,7 +268,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Line color.
 	 */
 	public final native String getLineColor() /*-{
-		return lineColor;
+		return this.lineColor;
 	}-*/;
 
 	/**
@@ -282,7 +282,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Line thickness.
 	 */
 	public final native double getLineThickness() /*-{
-		return lineThickness;
+		return this.lineThickness;
 	}-*/;
 
 	/**
@@ -296,7 +296,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Position of guide label. Possible values are 'left' or 'right' for horizontal axis and 'top' or 'bottom' for vertical axis.
 	 */
 	public final native String getPosition() /*-{
-		return position;
+		return this.position;
 	}-*/;
 
 	/**
@@ -310,7 +310,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Tick length.
 	 */
 	public final native double getTickLength() /*-{
-		return tickLength;
+		return this.tickLength;
 	}-*/;
 
 	/**
@@ -324,7 +324,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "Radar chart only. Specifies angle at which guide should end. Affects only fills, not lines."
 	 */
 	public final native double getToAngle() /*-{
-		return toAngle;
+		return this.toAngle;
 	}-*/;
 
 	/**
@@ -338,7 +338,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * To' category of the guide (in case the guide is for category axis).
 	 */
 	public final native String getToCategory() /*-{
-		return toCategory;
+		return this.toCategory;
 	}-*/;
 
 	/**
@@ -352,7 +352,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "To' date of the guide (in case the guide is for category axis and parseDates is set to true) If you have both date and toDate, the space between these two dates can be filled with color."
 	 */
 	public final native Date getToDate() /*-{
-		return toDate;
+		return this.toDate;
 	}-*/;
 
 	/**
@@ -366,7 +366,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * To' value of the guide (in case the guide is for value axis).
 	 */
 	public final native double getToValue() /*-{
-		return toValue;
+		return this.toValue;
 	}-*/;
 
 	/**
@@ -380,7 +380,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * Value of the guide (in case the guide is for value axis).
 	 */
 	public final native double getValue() /*-{
-		return value;
+		return this.value;
 	}-*/;
 
 	/**
@@ -394,7 +394,7 @@ public final class GuideJSO extends JavaScriptObject implements IsGuide
 	 * "Value axis of a guide. As you can add guides directly to the chart, you might need to specify which which value axis should be used."
 	 */
 	public final native IsValueAxis getValueAxis() /*-{
-		return valueAxis;
+		return this.valueAxis;
 	}-*/;
 
 	/**

@@ -12,7 +12,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Field in your data provider containing categories.
 	 */
 	public final native String getCategoryField() /*-{
-		return categoryField;
+		return this.categoryField;
 	}-*/;
 
 	/**
@@ -26,7 +26,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Bottom margin of the chart.
 	 */
 	public final native double getMarginBottom() /*-{
-		return marginBottom;
+		return this.marginBottom;
 	}-*/;
 
 	/**
@@ -40,7 +40,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Left margin of the chart.
 	 */
 	public final native double getMarginLeft() /*-{
-		return marginLeft;
+		return this.marginLeft;
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Right margin of the chart.
 	 */
 	public final native double getMarginRight() /*-{
-		return marginRight;
+		return this.marginRight;
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Top margin of the chart.
 	 */
 	public final native double getMarginTop() /*-{
-		return marginTop;
+		return this.marginTop;
 	}-*/;
 
 	/**
@@ -82,7 +82,7 @@ public final class AmRadarChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Radius of a radar.
 	 */
 	public final native String getRadius() /*-{
-		return radius;
+		return this.radius;
 	}-*/;
 
 	/**

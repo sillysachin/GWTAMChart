@@ -13,7 +13,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * Opacity of band fill. Will use axis.bandAlpha if not set any.
 	 */
 	public final native double getAlpha() /*-{
-		return alpha;
+		return this.alpha;
 	}-*/;
 
 	/**
@@ -27,7 +27,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * "When rolled-over, band will display balloon if you set some text for this property."
 	 */
 	public final native String getBalloonText() /*-{
-		return balloonText;
+		return this.balloonText;
 	}-*/;
 
 	/**
@@ -41,7 +41,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * Color of a band.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -55,7 +55,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * End value of a fill.
 	 */
 	public final native double getEndValue() /*-{
-		return endValue;
+		return this.endValue;
 	}-*/;
 
 	/**
@@ -69,7 +69,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * Unique id of a band.
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -83,7 +83,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * "Inner radius of a band. If not set any, the band will end with the end of minor ticks. Set 0 if you want the band to be drawn to the axis center."
 	 */
 	public final native String getInnerRadius() /*-{
-		return innerRadius;
+		return this.innerRadius;
 	}-*/;
 
 	/**
@@ -97,7 +97,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * "Band radius. If not set any, the band will start with the axis outline."
 	 */
 	public final native String getRadius() /*-{
-		return radius;
+		return this.radius;
 	}-*/;
 
 	/**
@@ -111,7 +111,7 @@ public final class GaugeBandJSO extends JavaScriptObject implements IsGaugeBand
 	 * Start value of a fill.
 	 */
 	public final native double getStartValue() /*-{
-		return startValue;
+		return this.startValue;
 	}-*/;
 
 	/**

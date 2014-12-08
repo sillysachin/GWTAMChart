@@ -13,7 +13,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 *
 	 */
 	public final native String getAlign() /*-{
-		return align;
+		return this.align;
 	}-*/;
 
 	/**
@@ -27,7 +27,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 *
 	 */
 	public final native double getAlpha() /*-{
-		return alpha;
+		return this.alpha;
 	}-*/;
 
 	/**
@@ -41,7 +41,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * Specifies if label is bold or not.
 	 */
 	public final native Boolean isBold() /*-{
-		return bold;
+		return this.bold;
 	}-*/;
 
 	/**
@@ -55,7 +55,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * Color of a label.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -69,7 +69,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * "Unique id of a Label. You don't need to set it, unless you want to."
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -83,7 +83,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * Rotation angle.
 	 */
 	public final native double getRotation() /*-{
-		return rotation;
+		return this.rotation;
 	}-*/;
 
 	/**
@@ -97,7 +97,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * Text size.
 	 */
 	public final native double getSize() /*-{
-		return size;
+		return this.size;
 	}-*/;
 
 	/**
@@ -111,7 +111,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * Text of a label.
 	 */
 	public final native String getText() /*-{
-		return text;
+		return this.text;
 	}-*/;
 
 	/**
@@ -125,7 +125,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * URL which will be access if user clicks on a label.
 	 */
 	public final native String getUrl() /*-{
-		return url;
+		return this.url;
 	}-*/;
 
 	/**
@@ -139,7 +139,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * X position of a label.
 	 */
 	public final native String getX() /*-{
-		return x;
+		return this.x;
 	}-*/;
 
 	/**
@@ -153,7 +153,7 @@ public final class LabelJSO extends JavaScriptObject implements IsLabel
 	 * y position of a label.
 	 */
 	public final native String getY() /*-{
-		return y;
+		return this.y;
 	}-*/;
 
 	/**

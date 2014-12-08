@@ -13,7 +13,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "If this is set to true, border color instead of background color will be changed when user rolls-over the slice, graph, etc."
 	 */
 	public final native Boolean isAdjustBorderColor() /*-{
-		return adjustBorderColor;
+		return this.adjustBorderColor;
 	}-*/;
 
 	/**
@@ -27,7 +27,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "Duration of balloon movement from previous point to current point, in seconds."
 	 */
 	public final native double getAnimationDuration() /*-{
-		return animationDuration;
+		return this.animationDuration;
 	}-*/;
 
 	/**
@@ -41,7 +41,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon border opacity. Value range is 0 - 1.
 	 */
 	public final native double getBorderAlpha() /*-{
-		return borderAlpha;
+		return this.borderAlpha;
 	}-*/;
 
 	/**
@@ -55,7 +55,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon border color. Will only be used of adjustBorderColor is false.
 	 */
 	public final native String getBorderColor() /*-{
-		return borderColor;
+		return this.borderColor;
 	}-*/;
 
 	/**
@@ -69,7 +69,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon border thickness.
 	 */
 	public final native double getBorderThickness() /*-{
-		return borderThickness;
+		return this.borderThickness;
 	}-*/;
 
 	/**
@@ -83,7 +83,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Color of text in the balloon.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -97,7 +97,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon corner radius.
 	 */
 	public final native double getCornerRadius() /*-{
-		return cornerRadius;
+		return this.cornerRadius;
 	}-*/;
 
 	/**
@@ -111,7 +111,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "Duration of a fade out animation, in seconds."
 	 */
 	public final native double getFadeOutDuration() /*-{
-		return fadeOutDuration;
+		return this.fadeOutDuration;
 	}-*/;
 
 	/**
@@ -125,7 +125,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon background opacity.
 	 */
 	public final native double getFillAlpha() /*-{
-		return fillAlpha;
+		return this.fillAlpha;
 	}-*/;
 
 	/**
@@ -139,7 +139,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Balloon background color. Usually balloon background color is set by the chart. Only if 'adjustBorderColor' is 'true' this color will be used.
 	 */
 	public final native String getFillColor() /*-{
-		return fillColor;
+		return this.fillColor;
 	}-*/;
 
 	/**
@@ -153,7 +153,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Specifies if balloon should follow mouse when hovering the slice/column/bullet or stay in fixed position (this does not affect balloon behavior if ChartCursor is used).
 	 */
 	public final native Boolean isFixedPosition() /*-{
-		return fixedPosition;
+		return this.fixedPosition;
 	}-*/;
 
 	/**
@@ -167,7 +167,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Size of text in the balloon. Chart's fontSize is used by default.
 	 */
 	public final native double getFontSize() /*-{
-		return fontSize;
+		return this.fontSize;
 	}-*/;
 
 	/**
@@ -181,7 +181,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Horizontal padding of the balloon.
 	 */
 	public final native double getHorizontalPadding() /*-{
-		return horizontalPadding;
+		return this.horizontalPadding;
 	}-*/;
 
 	/**
@@ -195,7 +195,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Maximum width of a balloon.
 	 */
 	public final native double getMaxWidth() /*-{
-		return maxWidth;
+		return this.maxWidth;
 	}-*/;
 
 	/**
@@ -209,7 +209,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "Defines horizontal distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
 	public final native double getOffsetX() /*-{
-		return offsetX;
+		return this.offsetX;
 	}-*/;
 
 	/**
@@ -223,7 +223,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "Defines vertical distance from mouse pointer to balloon pointer. If you set it to a small value, the balloon might flicker, as mouse might lose focus on hovered object."
 	 */
 	public final native double getOffsetY() /*-{
-		return offsetY;
+		return this.offsetY;
 	}-*/;
 
 	/**
@@ -237,7 +237,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * The width of the pointer (arrow) 'root'. Only used if cornerRadius is 0.
 	 */
 	public final native double getPointerWidth() /*-{
-		return pointerWidth;
+		return this.pointerWidth;
 	}-*/;
 
 	/**
@@ -251,7 +251,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Opacity of a shadow.
 	 */
 	public final native double getShadowAlpha() /*-{
-		return shadowAlpha;
+		return this.shadowAlpha;
 	}-*/;
 
 	/**
@@ -265,7 +265,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Color of a shadow.
 	 */
 	public final native String getShadowColor() /*-{
-		return shadowColor;
+		return this.shadowColor;
 	}-*/;
 
 	/**
@@ -279,7 +279,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "If cornerRadius of a balloon is >0, showBullet is set to true for value balloons when ChartCursor is used. If you don't want the bullet near the balloon, set it to false: chart.balloon.showBullet = false"
 	 */
 	public final native Boolean isShowBullet() /*-{
-		return showBullet;
+		return this.showBullet;
 	}-*/;
 
 	/**
@@ -293,7 +293,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * "Text alignment, possible values 'left', 'middle' and 'right'"
 	 */
 	public final native String getTextAlign() /*-{
-		return textAlign;
+		return this.textAlign;
 	}-*/;
 
 	/**
@@ -307,7 +307,7 @@ public final class AmBalloonJSO extends JavaScriptObject implements IsAmBalloon
 	 * Vertical padding of the balloon.
 	 */
 	public final native double getVerticalPadding() /*-{
-		return verticalPadding;
+		return this.verticalPadding;
 	}-*/;
 
 	/**

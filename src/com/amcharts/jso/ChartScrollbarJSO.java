@@ -14,7 +14,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Specifies whether number of gridCount is specified automatically, according to the axis size."
 	 */
 	public final native Boolean isAutoGridCount() /*-{
-		return autoGridCount;
+		return this.autoGridCount;
 	}-*/;
 
 	/**
@@ -28,7 +28,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Background opacity.
 	 */
 	public final native double getBackgroundAlpha() /*-{
-		return backgroundAlpha;
+		return this.backgroundAlpha;
 	}-*/;
 
 	/**
@@ -42,7 +42,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Background color of the scrollbar.
 	 */
 	public final native String getBackgroundColor() /*-{
-		return backgroundColor;
+		return this.backgroundColor;
 	}-*/;
 
 	/**
@@ -56,7 +56,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Read-only. Category axis of the scrollbar.
 	 */
 	public final native IsCategoryAxis getCategoryAxis() /*-{
-		return categoryAxis;
+		return this.categoryAxis;
 	}-*/;
 
 	/**
@@ -70,7 +70,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Text color.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -84,7 +84,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Height of resize grip image. Note, you should also update the image in amcharts/images folder if you don't want it to be distorted because of resizing."
 	 */
 	public final native double getDragIconHeight() /*-{
-		return dragIconHeight;
+		return this.dragIconHeight;
 	}-*/;
 
 	/**
@@ -98,7 +98,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Width of resize grip image. Note, you should also update the image in amcharts/images folder if you don't want it to be distorted because of resizing."
 	 */
 	public final native double getDragIconWidth() /*-{
-		return dragIconWidth;
+		return this.dragIconWidth;
 	}-*/;
 
 	/**
@@ -112,7 +112,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Specifies which graph will be displayed in the scrollbar. Only Serial chart's scrollbar can display a graph.
 	 */
 	public final native String getGraph() /*-{
-		return graph;
+		return this.graph;
 	}-*/;
 
 	/**
@@ -126,7 +126,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Graph fill opacity. Value range is 0 - 1.
 	 */
 	public final native double getGraphFillAlpha() /*-{
-		return graphFillAlpha;
+		return this.graphFillAlpha;
 	}-*/;
 
 	/**
@@ -140,7 +140,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Graph fill color.
 	 */
 	public final native String getGraphFillColor() /*-{
-		return graphFillColor;
+		return this.graphFillColor;
 	}-*/;
 
 	/**
@@ -154,7 +154,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Graph line opacity. Value range is 0 - 1.
 	 */
 	public final native double getGraphLineAlpha() /*-{
-		return graphLineAlpha;
+		return this.graphLineAlpha;
 	}-*/;
 
 	/**
@@ -168,7 +168,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Graph line color.
 	 */
 	public final native String getGraphLineColor() /*-{
-		return graphLineColor;
+		return this.graphLineColor;
 	}-*/;
 
 	/**
@@ -182,7 +182,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "by default the graph type is the same as the original graph's type, however in case of candlestick or ohlc you might want to show line graph in the scrollbar. Possible values are: line, column, step, smoothedLine, candlestick, ohlc"
 	 */
 	public final native String getGraphType() /*-{
-		return graphType;
+		return this.graphType;
 	}-*/;
 
 	/**
@@ -196,7 +196,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Grid opacity. Value range is 0 - 1.
 	 */
 	public final native double getGridAlpha() /*-{
-		return gridAlpha;
+		return this.gridAlpha;
 	}-*/;
 
 	/**
@@ -210,7 +210,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Grid color.
 	 */
 	public final native String getGridColor() /*-{
-		return gridColor;
+		return this.gridColor;
 	}-*/;
 
 	/**
@@ -224,7 +224,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * The number of grid lines.
 	 */
 	public final native double getGridCount() /*-{
-		return gridCount;
+		return this.gridCount;
 	}-*/;
 
 	/**
@@ -238,7 +238,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Specifies whether resize grips are hidden when mouse is away from the scrollbar.
 	 */
 	public final native Boolean isHideResizeGrips() /*-{
-		return hideResizeGrips;
+		return this.hideResizeGrips;
 	}-*/;
 
 	/**
@@ -252,7 +252,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Maximum value of ValueAxis of ChartScrollbar. Calculated automatically, if not set."
 	 */
 	public final native double getMaximum() /*-{
-		return maximum;
+		return this.maximum;
 	}-*/;
 
 	/**
@@ -266,7 +266,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Minimum value of ValueAxis of ChartScrollbar. Calculated automatically, if not set."
 	 */
 	public final native double getMinimum() /*-{
-		return minimum;
+		return this.minimum;
 	}-*/;
 
 	/**
@@ -280,7 +280,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Distance from plot area to scrollbar, in pixels."
 	 */
 	public final native double getOffset() /*-{
-		return offset;
+		return this.offset;
 	}-*/;
 
 	/**
@@ -294,7 +294,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Specifies whether scrollbar has a resize feature.
 	 */
 	public final native Boolean isResizeEnabled() /*-{
-		return resizeEnabled;
+		return this.resizeEnabled;
 	}-*/;
 
 	/**
@@ -308,7 +308,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Height (width, if chart is rotated) of a scrollbar."
 	 */
 	public final native double getScrollbarHeight() /*-{
-		return scrollbarHeight;
+		return this.scrollbarHeight;
 	}-*/;
 
 	/**
@@ -322,7 +322,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * "Duration of scrolling, when the user clicks on scrollbar's background, in seconds. Note, updateOnReleaseOnly should be set to false in order animation to happen."
 	 */
 	public final native double getScrollDuration() /*-{
-		return scrollDuration;
+		return this.scrollDuration;
 	}-*/;
 
 	/**
@@ -336,7 +336,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected backround opacity.
 	 */
 	public final native double getSelectedBackgroundAlpha() /*-{
-		return selectedBackgroundAlpha;
+		return this.selectedBackgroundAlpha;
 	}-*/;
 
 	/**
@@ -350,7 +350,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected background color.
 	 */
 	public final native String getSelectedBackgroundColor() /*-{
-		return selectedBackgroundColor;
+		return this.selectedBackgroundColor;
 	}-*/;
 
 	/**
@@ -364,7 +364,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected graph's fill opacity. Value range is 0 - 1.
 	 */
 	public final native double getSelectedGraphFillAlpha() /*-{
-		return selectedGraphFillAlpha;
+		return this.selectedGraphFillAlpha;
 	}-*/;
 
 	/**
@@ -378,7 +378,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected graph's fill color.
 	 */
 	public final native String getSelectedGraphFillColor() /*-{
-		return selectedGraphFillColor;
+		return this.selectedGraphFillColor;
 	}-*/;
 
 	/**
@@ -392,7 +392,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected graph's line opacity. Value range is 0 - 1.
 	 */
 	public final native double getSelectedGraphLineAlpha() /*-{
-		return selectedGraphLineAlpha;
+		return this.selectedGraphLineAlpha;
 	}-*/;
 
 	/**
@@ -406,7 +406,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Selected graph's line color.
 	 */
 	public final native String getSelectedGraphLineColor() /*-{
-		return selectedGraphLineColor;
+		return this.selectedGraphLineColor;
 	}-*/;
 
 	/**
@@ -420,7 +420,7 @@ public final class ChartScrollbarJSO extends JavaScriptObject implements IsChart
 	 * Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
 	 */
 	public final native Boolean isUpdateOnReleaseOnly() /*-{
-		return updateOnReleaseOnly;
+		return this.updateOnReleaseOnly;
 	}-*/;
 
 	/**

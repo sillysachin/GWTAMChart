@@ -15,7 +15,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * Set it to true if you have base href set for your page. This will fix rendering problems in Firefox caused by base href.
 	 */
 	public final native Boolean isBaseHref() /*-{
-		return baseHref;
+		return this.baseHref;
 	}-*/;
 
 	/**
@@ -57,7 +57,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * Delay in ms at which each chart on the page should be rendered. This is very handy if you have a lot of charts on the page and do not want to overload the device CPU.
 	 */
 	public final native double getProcessDelay() /*-{
-		return processDelay;
+		return this.processDelay;
 	}-*/;
 
 	/**
@@ -99,7 +99,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "You can set theme for all the charts on your page by setting: AmCharts.theme =AmCharts.themes.light; // or some other theme. If you are creating charts using JavaScript API, not JSON, then this is quite a comfortable way, as you won't need to pass theme to each object you create. Note, you should set theme before write method is called. There is no way to change theme of already created chart, you have to create chart's instance once more if you want to change theme."
 	 */
 	public final native String getTheme() /*-{
-		return theme;
+		return this.theme;
 	}-*/;
 
 	/**
@@ -113,7 +113,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * Set it to true if you want UTC time to be used instead of local time.
 	 */
 	public final native Boolean isUseUTC() /*-{
-		return useUTC;
+		return this.useUTC;
 	}-*/;
 
 	/**

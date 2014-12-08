@@ -13,7 +13,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * Opacity of a title.
 	 */
 	public final native double getAlpha() /*-{
-		return alpha;
+		return this.alpha;
 	}-*/;
 
 	/**
@@ -27,7 +27,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * Specifies if title should be bold or not.
 	 */
 	public final native Boolean isBold() /*-{
-		return bold;
+		return this.bold;
 	}-*/;
 
 	/**
@@ -41,7 +41,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * Text color of a title.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -55,7 +55,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * "Unique id of a Title. You don't need to set it, unless you want to."
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -69,7 +69,7 @@ public final class TitleJSO extends JavaScriptObject implements IsTitle
 	 * Text size of a title.
 	 */
 	public final native double getSize() /*-{
-		return size;
+		return this.size;
 	}-*/;
 
 	/**

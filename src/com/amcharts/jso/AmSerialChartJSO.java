@@ -15,7 +15,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Date format of the graph balloon (if chart parses dates and you don't use chartCursor).
 	 */
 	public final native String getBalloonDateFormat() /*-{
-		return balloonDateFormat;
+		return this.balloonDateFormat;
 	}-*/;
 
 	/**
@@ -29,7 +29,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "Read-only. Chart creates category axis itself. If you want to change some properties, you should get this axis from the chart and set properties to this object."
 	 */
 	public final native IsCategoryAxis getCategoryAxis() /*-{
-		return categoryAxis;
+		return this.categoryAxis;
 	}-*/;
 
 	/**
@@ -43,7 +43,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Category field name tells the chart the name of the field in your dataProvider object which will be used for category axis values.
 	 */
 	public final native String getCategoryField() /*-{
-		return categoryField;
+		return this.categoryField;
 	}-*/;
 
 	/**
@@ -57,7 +57,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * The gap in pixels between two columns of the same category.
 	 */
 	public final native double getColumnSpacing() /*-{
-		return columnSpacing;
+		return this.columnSpacing;
 	}-*/;
 
 	/**
@@ -71,7 +71,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Space between 3D stacked columns.
 	 */
 	public final native double getColumnSpacing3D() /*-{
-		return columnSpacing3D;
+		return this.columnSpacing3D;
 	}-*/;
 
 	/**
@@ -85,7 +85,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Relative width of columns. Value range is 0 - 1.
 	 */
 	public final native double getColumnWidth() /*-{
-		return columnWidth;
+		return this.columnWidth;
 	}-*/;
 
 	/**
@@ -99,7 +99,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "Even if your chart parses dates, you can pass them as strings in your data � all you need to do is to set data date format and the chart will parse dates to date objects. Check this page for available formats.Please note that two-digit years (YY) is NOT supported in this setting."
 	 */
 	public final native String getDataDateFormat() /*-{
-		return dataDateFormat;
+		return this.dataDateFormat;
 	}-*/;
 
 	/**
@@ -113,7 +113,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Read-only. If category axis parses dates endDate indicates date to which the chart is currently displayed.
 	 */
 	public final native Date getEndDate() /*-{
-		return endDate;
+		return this.endDate;
 	}-*/;
 
 	/**
@@ -127,7 +127,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Read-only. Category index to which the chart is currently displayed.
 	 */
 	public final native double getEndIndex() /*-{
-		return endIndex;
+		return this.endIndex;
 	}-*/;
 
 	/**
@@ -141,7 +141,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Maximum number of series allowed to select.
 	 */
 	public final native double getMaxSelectedSeries() /*-{
-		return maxSelectedSeries;
+		return this.maxSelectedSeries;
 	}-*/;
 
 	/**
@@ -155,7 +155,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "The longest time span allowed to select (in milliseconds) for example, 259200000 will limit selection to 3 days. Works if equalSpacing is set to false (default)."
 	 */
 	public final native double getMaxSelectedTime() /*-{
-		return maxSelectedTime;
+		return this.maxSelectedTime;
 	}-*/;
 
 	/**
@@ -169,7 +169,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "The shortest time span allowed to select (in milliseconds) for example, 1000 will limit selection to 1 second. Works if equalSpacing is set to false (default)."
 	 */
 	public final native double getMinSelectedTime() /*-{
-		return minSelectedTime;
+		return this.minSelectedTime;
 	}-*/;
 
 	/**
@@ -183,7 +183,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "Specifies if scrolling of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will zoom-in/out."
 	 */
 	public final native Boolean isMouseWheelScrollEnabled() /*-{
-		return mouseWheelScrollEnabled;
+		return this.mouseWheelScrollEnabled;
 	}-*/;
 
 	/**
@@ -197,7 +197,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "Specifies if zooming of a chart with mouse wheel is enabled. If you press shift while rotating mouse wheel, the chart will scroll."
 	 */
 	public final native Boolean isMouseWheelZoomEnabled() /*-{
-		return mouseWheelZoomEnabled;
+		return this.mouseWheelZoomEnabled;
 	}-*/;
 
 	/**
@@ -211,7 +211,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * "If you set this to true, the chart will be rotated by 90 degrees (the columns will become bars)."
 	 */
 	public final native Boolean isRotate() /*-{
-		return rotate;
+		return this.rotate;
 	}-*/;
 
 	/**
@@ -225,7 +225,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Read-only. If category axis parses dates startDate indicates date from which the chart is currently displayed.
 	 */
 	public final native Date getStartDate() /*-{
-		return startDate;
+		return this.startDate;
 	}-*/;
 
 	/**
@@ -239,7 +239,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Read-only. Category index from which the chart is currently displayed.
 	 */
 	public final native double getStartIndex() /*-{
-		return startIndex;
+		return this.startIndex;
 	}-*/;
 
 	/**
@@ -253,7 +253,7 @@ public final class AmSerialChartJSO extends AmRectangularChartJSO implements IsA
 	 * Specifies if chart should zoom-out when data is updated.
 	 */
 	public final native Boolean isZoomOutOnDataUpdate() /*-{
-		return zoomOutOnDataUpdate;
+		return this.zoomOutOnDataUpdate;
 	}-*/;
 
 	/**

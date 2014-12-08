@@ -14,7 +14,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Opacity of an arrow.
 	 */
 	public final native double getAlpha() /*-{
-		return alpha;
+		return this.alpha;
 	}-*/;
 
 	/**
@@ -28,7 +28,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * "Axis of the arrow. You can use reference to the axis or id of the axis. If you don't set any axis, the first axis of a chart will be used."
 	 */
 	public final native IsGaugeAxis getAxis() /*-{
-		return axis;
+		return this.axis;
 	}-*/;
 
 	/**
@@ -42,7 +42,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Opacity of arrow border.
 	 */
 	public final native double getBorderAlpha() /*-{
-		return borderAlpha;
+		return this.borderAlpha;
 	}-*/;
 
 	/**
@@ -56,7 +56,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * "In case you need the arrow to rotate only clock-wise, set this property to true."
 	 */
 	public final native Boolean isClockWiseOnly() /*-{
-		return clockWiseOnly;
+		return this.clockWiseOnly;
 	}-*/;
 
 	/**
@@ -70,7 +70,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Color of an arrow.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -84,7 +84,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Unique id of an arrow.
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -98,7 +98,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Inner radius of an arrow.
 	 */
 	public final native String getInnerRadius() /*-{
-		return innerRadius;
+		return this.innerRadius;
 	}-*/;
 
 	/**
@@ -112,7 +112,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * "Opacity of a nail, holding the arrow."
 	 */
 	public final native double getNailAlpha() /*-{
-		return nailAlpha;
+		return this.nailAlpha;
 	}-*/;
 
 	/**
@@ -126,7 +126,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Opacity of nail border.
 	 */
 	public final native double getNailBorderAlpha() /*-{
-		return nailBorderAlpha;
+		return this.nailBorderAlpha;
 	}-*/;
 
 	/**
@@ -140,7 +140,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Thickness of nail border.
 	 */
 	public final native double getNailBorderThickness() /*-{
-		return nailBorderThickness;
+		return this.nailBorderThickness;
 	}-*/;
 
 	/**
@@ -154,7 +154,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * "Radius of a nail, holding the arrow."
 	 */
 	public final native double getNailRadius() /*-{
-		return nailRadius;
+		return this.nailRadius;
 	}-*/;
 
 	/**
@@ -168,7 +168,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Radius of an arrow.
 	 */
 	public final native String getRadius() /*-{
-		return radius;
+		return this.radius;
 	}-*/;
 
 	/**
@@ -182,7 +182,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Width of arrow root.
 	 */
 	public final native double getStartWidth() /*-{
-		return startWidth;
+		return this.startWidth;
 	}-*/;
 
 	/**
@@ -196,7 +196,7 @@ public final class GaugeArrowJSO extends JavaScriptObject implements IsGaugeArro
 	 * Value to which the arrow should point at.
 	 */
 	public final native double getValue() /*-{
-		return value;
+		return this.value;
 	}-*/;
 
 	/**

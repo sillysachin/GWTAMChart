@@ -14,7 +14,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Bottom position of export button. You might need to set top to undefined for this to work.
 	 */
 	public final native String getBottom() /*-{
-		return bottom;
+		return this.bottom;
 	}-*/;
 
 	/**
@@ -28,7 +28,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Opacity of a button.
 	 */
 	public final native double getButtonAlpha() /*-{
-		return buttonAlpha;
+		return this.buttonAlpha;
 	}-*/;
 
 	/**
@@ -42,7 +42,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Name of export button image.
 	 */
 	public final native String getButtonIcon() /*-{
-		return buttonIcon;
+		return this.buttonIcon;
 	}-*/;
 
 	/**
@@ -56,7 +56,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Roll-over color of button background.
 	 */
 	public final native String getButtonRollOverColor() /*-{
-		return buttonRollOverColor;
+		return this.buttonRollOverColor;
 	}-*/;
 
 	/**
@@ -70,7 +70,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * "Text, displayed in a tool-tip."
 	 */
 	public final native String getButtonTitle() /*-{
-		return buttonTitle;
+		return this.buttonTitle;
 	}-*/;
 
 	/**
@@ -84,7 +84,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Specifies if export of JPG should be enabled.
 	 */
 	public final native Boolean isExportJPG() /*-{
-		return exportJPG;
+		return this.exportJPG;
 	}-*/;
 
 	/**
@@ -98,7 +98,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Specifies if export of PDF should be enabled.
 	 */
 	public final native Boolean isExportPDF() /*-{
-		return exportPDF;
+		return this.exportPDF;
 	}-*/;
 
 	/**
@@ -112,7 +112,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Specifies if export of PNG should be enabled.
 	 */
 	public final native Boolean isExportPNG() /*-{
-		return exportPNG;
+		return this.exportPNG;
 	}-*/;
 
 	/**
@@ -126,7 +126,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Specifies if export of SVG should be enabled.
 	 */
 	public final native Boolean isExportSVG() /*-{
-		return exportSVG;
+		return this.exportSVG;
 	}-*/;
 
 	/**
@@ -140,7 +140,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Background color of a saved image
 	 */
 	public final native String getImageBackgroundColor() /*-{
-		return imageBackgroundColor;
+		return this.imageBackgroundColor;
 	}-*/;
 
 	/**
@@ -154,7 +154,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * File name of a saved image.
 	 */
 	public final native String getImageFileName() /*-{
-		return imageFileName;
+		return this.imageFileName;
 	}-*/;
 
 	/**
@@ -168,7 +168,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Left position of export button. You might need to set right to undefined for this to work.
 	 */
 	public final native String getLeft() /*-{
-		return left;
+		return this.left;
 	}-*/;
 
 	/**
@@ -182,7 +182,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Right position of export button. You might need to set left to undefined for this to work.
 	 */
 	public final native String getRight() /*-{
-		return right;
+		return this.right;
 	}-*/;
 
 	/**
@@ -196,7 +196,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Text roll-over color.
 	 */
 	public final native String getTextRollOverColor() /*-{
-		return textRollOverColor;
+		return this.textRollOverColor;
 	}-*/;
 
 	/**
@@ -210,7 +210,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * Top position of export button. You might need to set bottom to undefined for this to work.
 	 */
 	public final native String getTop() /*-{
-		return top;
+		return this.top;
 	}-*/;
 
 	/**
@@ -224,7 +224,7 @@ public final class AmExportJSO extends JavaScriptObject implements IsAmExport
 	 * advanced configration object AmChart.exportConfig
 	 */
 	public final native IsExportConfig getUserCFG() /*-{
-		return userCFG;
+		return this.userCFG;
 	}-*/;
 
 	/**

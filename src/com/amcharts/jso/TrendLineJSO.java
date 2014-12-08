@@ -16,7 +16,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Dash length.
 	 */
 	public final native double getDashLength() /*-{
-		return dashLength;
+		return this.dashLength;
 	}-*/;
 
 	/**
@@ -30,7 +30,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * "String, equal to category value to which trend line should be drawn. It should be used if chart doesn't parse dates."
 	 */
 	public final native String getFinalCategory() /*-{
-		return finalCategory;
+		return this.finalCategory;
 	}-*/;
 
 	/**
@@ -44,7 +44,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Date to which trend line should be drawn. It can be date string (using the same date format as chart.dataDateFormat) or date object.
 	 */
 	public final native Date getFinalDate() /*-{
-		return finalDate;
+		return this.finalDate;
 	}-*/;
 
 	/**
@@ -58,7 +58,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Value at which trend line should end.
 	 */
 	public final native double getFinalValue() /*-{
-		return finalValue;
+		return this.finalValue;
 	}-*/;
 
 	/**
@@ -72,7 +72,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Used by XY chart only. X value at which trend line should end.
 	 */
 	public final native double getFinalXValue() /*-{
-		return finalXValue;
+		return this.finalXValue;
 	}-*/;
 
 	/**
@@ -86,7 +86,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * "Unique id of a Trend line. You don't need to set it, unless you want to."
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**
@@ -100,7 +100,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * "String, equal to category value from which trend line should start. It should be used if chart doesn't parse dates."
 	 */
 	public final native String getInitialCategory() /*-{
-		return initialCategory;
+		return this.initialCategory;
 	}-*/;
 
 	/**
@@ -114,7 +114,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Date from which trend line should start. It can be date string (using the same date format as chart.dataDateFormat) or date object.
 	 */
 	public final native Date getInitialDate() /*-{
-		return initialDate;
+		return this.initialDate;
 	}-*/;
 
 	/**
@@ -128,7 +128,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Value from which trend line should start.
 	 */
 	public final native double getInitialValue() /*-{
-		return initialValue;
+		return this.initialValue;
 	}-*/;
 
 	/**
@@ -142,7 +142,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Used by XY chart only. X value from which trend line should start.
 	 */
 	public final native double getInitialXValue() /*-{
-		return initialXValue;
+		return this.initialXValue;
 	}-*/;
 
 	/**
@@ -156,7 +156,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * "Used by Stock chart. If this property is set to true, this trend line won't be removed when clicked on eraser tool."
 	 */
 	public final native Boolean isIsProtected() /*-{
-		return isProtected;
+		return this.isProtected;
 	}-*/;
 
 	/**
@@ -170,7 +170,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Line opacity.
 	 */
 	public final native double getLineAlpha() /*-{
-		return lineAlpha;
+		return this.lineAlpha;
 	}-*/;
 
 	/**
@@ -184,7 +184,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Line color.
 	 */
 	public final native String getLineColor() /*-{
-		return lineColor;
+		return this.lineColor;
 	}-*/;
 
 	/**
@@ -198,7 +198,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Line thickness.
 	 */
 	public final native double getLineThickness() /*-{
-		return lineThickness;
+		return this.lineThickness;
 	}-*/;
 
 	/**
@@ -212,7 +212,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Value axis of the trend line. Will use first value axis of the chart if not set any. You can use a reference to the value axis object or id of value axis.
 	 */
 	public final native IsValueAxis getValueAxis() /*-{
-		return valueAxis;
+		return this.valueAxis;
 	}-*/;
 
 	/**
@@ -226,7 +226,7 @@ public final class TrendLineJSO extends JavaScriptObject implements IsTrendLine
 	 * Used by XY chart only. X axis of trend line. Will use first X axis of the chart if not set any. You can use a reference to the value axis object or id of value axis.
 	 */
 	public final native IsValueAxis getValueAxisX() /*-{
-		return valueAxisX;
+		return this.valueAxisX;
 	}-*/;
 
 	/**

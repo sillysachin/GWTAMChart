@@ -17,7 +17,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Alignment of legend entries. Possible values are: 'left', 'center', 'right'."
 	 */
 	public final native String getAlign() /*-{
-		return align;
+		return this.align;
 	}-*/;
 
 	/**
@@ -31,7 +31,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Used if chart is Serial or XY. In case true, margins of the legend are adjusted and made equal to chart's margins."
 	 */
 	public final native Boolean isAutoMargins() /*-{
-		return autoMargins;
+		return this.autoMargins;
 	}-*/;
 
 	/**
@@ -45,7 +45,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Opacity of legend's background. Value range is 0 - 1
 	 */
 	public final native double getBackgroundAlpha() /*-{
-		return backgroundAlpha;
+		return this.backgroundAlpha;
 	}-*/;
 
 	/**
@@ -59,7 +59,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Background color. You should set backgroundAlpha to >0 vallue in order background to be visible.
 	 */
 	public final native String getBackgroundColor() /*-{
-		return backgroundColor;
+		return this.backgroundColor;
 	}-*/;
 
 	/**
@@ -73,7 +73,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Opacity of chart's border. Value range is 0 - 1.
 	 */
 	public final native double getBorderAlpha() /*-{
-		return borderAlpha;
+		return this.borderAlpha;
 	}-*/;
 
 	/**
@@ -87,7 +87,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Color of legend's border. You should set borderAlpha >0 in order border to be visible.
 	 */
 	public final native String getBorderColor() /*-{
-		return borderColor;
+		return this.borderColor;
 	}-*/;
 
 	/**
@@ -101,7 +101,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "In case legend position is set to 'absolute', you can set distance from bottom of the chart, in pixels."
 	 */
 	public final native double getBottom() /*-{
-		return bottom;
+		return this.bottom;
 	}-*/;
 
 	/**
@@ -115,7 +115,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Text color.
 	 */
 	public final native String getColor() /*-{
-		return color;
+		return this.color;
 	}-*/;
 
 	/**
@@ -143,7 +143,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * You can set id of a div or a reference to div object in case you want the legend to be placed in a separate container.
 	 */
 	public final native String getDivId() /*-{
-		return divId;
+		return this.divId;
 	}-*/;
 
 	/**
@@ -157,7 +157,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Specifies if each of legend entry should be equal to the most wide entry. Won't look good if legend has more than one line.
 	 */
 	public final native Boolean isEqualWidths() /*-{
-		return equalWidths;
+		return this.equalWidths;
 	}-*/;
 
 	/**
@@ -171,7 +171,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Font size.
 	 */
 	public final native double getFontSize() /*-{
-		return fontSize;
+		return this.fontSize;
 	}-*/;
 
 	/**
@@ -185,7 +185,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Horizontal space between legend item and left/right border.
 	 */
 	public final native double getHorizontalGap() /*-{
-		return horizontalGap;
+		return this.horizontalGap;
 	}-*/;
 
 	/**
@@ -199,7 +199,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * The text which will be displayed in the legend. Tag [[title]] will be replaced with the title of the graph.
 	 */
 	public final native String getLabelText() /*-{
-		return labelText;
+		return this.labelText;
 	}-*/;
 
 	/**
@@ -213,7 +213,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "If width of the label is bigger than labelWidth, it will be wrapped."
 	 */
 	public final native double getLabelWidth() /*-{
-		return labelWidth;
+		return this.labelWidth;
 	}-*/;
 
 	/**
@@ -227,7 +227,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "In case legend position is set to 'absolute', you can set distance from left side of the chart, in pixels."
 	 */
 	public final native double getLeft() /*-{
-		return left;
+		return this.left;
 	}-*/;
 
 	/**
@@ -241,7 +241,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Bottom margin.
 	 */
 	public final native double getMarginBottom() /*-{
-		return marginBottom;
+		return this.marginBottom;
 	}-*/;
 
 	/**
@@ -255,7 +255,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Left margin. This property will be ignored if chart is Serial or XY and autoMargins property of the legend is true (default).
 	 */
 	public final native double getMarginLeft() /*-{
-		return marginLeft;
+		return this.marginLeft;
 	}-*/;
 
 	/**
@@ -269,7 +269,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Right margin. This property will be ignored if chart is Serial or XY and autoMargins property of the legend is true (default).
 	 */
 	public final native double getMarginRight() /*-{
-		return marginRight;
+		return this.marginRight;
 	}-*/;
 
 	/**
@@ -283,7 +283,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Top margin.
 	 */
 	public final native double getMarginTop() /*-{
-		return marginTop;
+		return this.marginTop;
 	}-*/;
 
 	/**
@@ -297,7 +297,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Marker border opacity.
 	 */
 	public final native double getMarkerBorderAlpha() /*-{
-		return markerBorderAlpha;
+		return this.markerBorderAlpha;
 	}-*/;
 
 	/**
@@ -311,7 +311,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Marker border color. If not set, will use the same color as marker."
 	 */
 	public final native String getMarkerBorderColor() /*-{
-		return markerBorderColor;
+		return this.markerBorderColor;
 	}-*/;
 
 	/**
@@ -325,7 +325,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Thickness of the legend border. The default value (0) means the line will be a 'hairline' (1 px). In case marker type is line, this style will be used for line thickness."
 	 */
 	public final native double getMarkerBorderThickness() /*-{
-		return markerBorderThickness;
+		return this.markerBorderThickness;
 	}-*/;
 
 	/**
@@ -339,7 +339,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * The color of the disabled marker (when the graph is hidden).
 	 */
 	public final native String getMarkerDisabledColor() /*-{
-		return markerDisabledColor;
+		return this.markerDisabledColor;
 	}-*/;
 
 	/**
@@ -353,7 +353,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Space between legend marker and legend text, in pixels."
 	 */
 	public final native double getMarkerLabelGap() /*-{
-		return markerLabelGap;
+		return this.markerLabelGap;
 	}-*/;
 
 	/**
@@ -367,7 +367,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Size of the legend marker (key).
 	 */
 	public final native double getMarkerSize() /*-{
-		return markerSize;
+		return this.markerSize;
 	}-*/;
 
 	/**
@@ -381,7 +381,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Shape of the legend marker (key). Possible values are: square, circle, diamond, triangleUp, triangleDown, triangleLeft, triangleDown, bubble, line, none."
 	 */
 	public final native String getMarkerType() /*-{
-		return markerType;
+		return this.markerType;
 	}-*/;
 
 	/**
@@ -395,7 +395,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Maximum number of columns in the legend. If Legend's position is set to 'right' or 'left', maxColumns is automatically set to 1."
 	 */
 	public final native double getMaxColumns() /*-{
-		return maxColumns;
+		return this.maxColumns;
 	}-*/;
 
 	/**
@@ -409,7 +409,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * The text which will be displayed in the value portion of the legend when user is not hovering above any data point. The tags should be made out of two parts - the name of a field (value / open / close / high / low) and the value of the period you want to be show - open / close / high / low / sum / average / count. For example: [[value.sum]] means that sum of all data points of value field in the selected period will be displayed.
 	 */
 	public final native String getPeriodValueText() /*-{
-		return periodValueText;
+		return this.periodValueText;
 	}-*/;
 
 	/**
@@ -423,7 +423,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Position of a legend. Possible values are: 'bottom', 'top', 'left', 'right' and 'absolute'. In case 'absolute', you should set left and top properties too. (this setting is ignored in Stock charts). In case legend is used with AmMap, position is set to 'absolute' automatically."
 	 */
 	public final native String getPosition() /*-{
-		return position;
+		return this.position;
 	}-*/;
 
 	/**
@@ -437,7 +437,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Specifies whether legend entries should be placed in reversed order.
 	 */
 	public final native Boolean isReversedOrder() /*-{
-		return reversedOrder;
+		return this.reversedOrder;
 	}-*/;
 
 	/**
@@ -451,7 +451,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "In case legend position is set to 'absolute', you can set distance from right side of the chart, in pixels."
 	 */
 	public final native double getRight() /*-{
-		return right;
+		return this.right;
 	}-*/;
 
 	/**
@@ -465,7 +465,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Legend item text color on roll-over.
 	 */
 	public final native String getRollOverColor() /*-{
-		return rollOverColor;
+		return this.rollOverColor;
 	}-*/;
 
 	/**
@@ -479,7 +479,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "When you roll-over the legend entry, all other graphs can reduce their opacity, so that the graph you rolled-over would be distinguished. This style specifies the opacity of the graphs."
 	 */
 	public final native double getRollOverGraphAlpha() /*-{
-		return rollOverGraphAlpha;
+		return this.rollOverGraphAlpha;
 	}-*/;
 
 	/**
@@ -493,7 +493,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * You can use this property to turn all the legend entries off.
 	 */
 	public final native Boolean isShowEntries() /*-{
-		return showEntries;
+		return this.showEntries;
 	}-*/;
 
 	/**
@@ -507,7 +507,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Horizontal space between legend items, in pixels."
 	 */
 	public final native double getSpacing() /*-{
-		return spacing;
+		return this.spacing;
 	}-*/;
 
 	/**
@@ -521,7 +521,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Whether showing/hiding of graphs by clicking on the legend marker is enabled or not. In case legend is used with AmMap, this is set to false automatically."
 	 */
 	public final native Boolean isSwitchable() /*-{
-		return switchable;
+		return this.switchable;
 	}-*/;
 
 	/**
@@ -535,7 +535,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Legend switch color.
 	 */
 	public final native String getSwitchColor() /*-{
-		return switchColor;
+		return this.switchColor;
 	}-*/;
 
 	/**
@@ -549,7 +549,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Legend switch type (in case the legend is switchable). Possible values are 'x' and 'v'.
 	 */
 	public final native String getSwitchType() /*-{
-		return switchType;
+		return this.switchType;
 	}-*/;
 
 	/**
@@ -563,7 +563,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "If true, clicking on the text will show/hide balloon of the graph. Otherwise it will show/hide graph/slice, if switchable is set to true."
 	 */
 	public final native Boolean isTextClickEnabled() /*-{
-		return textClickEnabled;
+		return this.textClickEnabled;
 	}-*/;
 
 	/**
@@ -577,7 +577,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "In case legend position is set to 'absolute', you can set distance from top of the chart, in pixels."
 	 */
 	public final native double getTop() /*-{
-		return top;
+		return this.top;
 	}-*/;
 
 	/**
@@ -591,7 +591,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Legend markers can mirror graph�s settings, displaying a line and a real bullet as in the graph itself. Set this property to true if you want to enable this feature."
 	 */
 	public final native Boolean isUseGraphSettings() /*-{
-		return useGraphSettings;
+		return this.useGraphSettings;
 	}-*/;
 
 	/**
@@ -605,7 +605,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Labels will use marker color if you set this to true.
 	 */
 	public final native Boolean isUseMarkerColorForLabels() /*-{
-		return useMarkerColorForLabels;
+		return this.useMarkerColorForLabels;
 	}-*/;
 
 	/**
@@ -619,7 +619,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Specifies if legend values should be use same color as corresponding markers.
 	 */
 	public final native Boolean isUseMarkerColorForValues() /*-{
-		return useMarkerColorForValues;
+		return this.useMarkerColorForValues;
 	}-*/;
 
 	/**
@@ -633,7 +633,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Alignment of the value text. Possible values are 'left' and 'right'.
 	 */
 	public final native String getValueAlign() /*-{
-		return valueAlign;
+		return this.valueAlign;
 	}-*/;
 
 	/**
@@ -644,14 +644,14 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	}-*/;
 
 	/**
-	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
+	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return this.string which will be displayed as value in the legend.
 	 */
 	public final native IsFunction getValueFunction() /*-{
 		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.valueFunction);
 	}-*/;
 
 	/**
-	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
+	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return this.string which will be displayed as value in the legend.
 	 */
 	public final native void setValueFunction( IsFunction valueFunction ) /*-{
 		this.valueFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(valueFunction);
@@ -661,7 +661,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "The text which will be displayed in the value portion of the legend. You can use tags like [[value]], [[open]], [[high]], [[low]], [[close]], [[percents]], [[description]]."
 	 */
 	public final native String getValueText() /*-{
-		return valueText;
+		return this.valueText;
 	}-*/;
 
 	/**
@@ -675,7 +675,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Width of the value text.
 	 */
 	public final native double getValueWidth() /*-{
-		return valueWidth;
+		return this.valueWidth;
 	}-*/;
 
 	/**
@@ -689,7 +689,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * Vertical space between legend items also between legend border and first and last legend row.
 	 */
 	public final native double getVerticalGap() /*-{
-		return verticalGap;
+		return this.verticalGap;
 	}-*/;
 
 	/**
@@ -703,7 +703,7 @@ public final class AmLegendJSO extends JavaScriptObject implements IsAmLegend
 	 * "Width of a legend, when position is set to absolute."
 	 */
 	public final native double getWidth() /*-{
-		return width;
+		return this.width;
 	}-*/;
 
 	/**

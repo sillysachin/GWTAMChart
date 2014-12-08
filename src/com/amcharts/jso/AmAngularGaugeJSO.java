@@ -17,7 +17,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Uses the whole space of the canvas to draw the gauge.
 	 */
 	public final native Boolean isAdjustSize() /*-{
-		return adjustSize;
+		return this.adjustSize;
 	}-*/;
 
 	/**
@@ -59,7 +59,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * In case you use gauge to create a clock, set this to true.
 	 */
 	public final native Boolean isClockWiseOnly() /*-{
-		return clockWiseOnly;
+		return this.clockWiseOnly;
 	}-*/;
 
 	/**
@@ -73,7 +73,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge face opacity.
 	 */
 	public final native double getFaceAlpha() /*-{
-		return faceAlpha;
+		return this.faceAlpha;
 	}-*/;
 
 	/**
@@ -87,7 +87,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge face border opacity.
 	 */
 	public final native double getFaceBorderAlpha() /*-{
-		return faceBorderAlpha;
+		return this.faceBorderAlpha;
 	}-*/;
 
 	/**
@@ -101,7 +101,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge face border color.
 	 */
 	public final native String getFaceBorderColor() /*-{
-		return faceBorderColor;
+		return this.faceBorderColor;
 	}-*/;
 
 	/**
@@ -115,7 +115,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge face border width.
 	 */
 	public final native double getFaceBorderWidth() /*-{
-		return faceBorderWidth;
+		return this.faceBorderWidth;
 	}-*/;
 
 	/**
@@ -129,7 +129,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge face color, requires faceAlpha > 0
 	 */
 	public final native String getFaceColor() /*-{
-		return faceColor;
+		return this.faceColor;
 	}-*/;
 
 	/**
@@ -143,7 +143,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * "Gauge face image-pattern.Example: {'url':'../amcharts/patterns/black/pattern1.png', 'width':4, 'height':4}"
 	 */
 	public final native IsFacePattern getFacePattern() /*-{
-		return facePattern;
+		return this.facePattern;
 	}-*/;
 
 	/**
@@ -157,7 +157,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge's horizontal position in pixel, origin is the center. Centered by default.
 	 */
 	public final native double getGaugeX() /*-{
-		return gaugeX;
+		return this.gaugeX;
 	}-*/;
 
 	/**
@@ -171,7 +171,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Gauge's vertical position in pixel, origin is the center. Centered by default.
 	 */
 	public final native double getGaugeY() /*-{
-		return gaugeY;
+		return this.gaugeY;
 	}-*/;
 
 	/**
@@ -185,7 +185,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Bottom spacing between chart and container.
 	 */
 	public final native double getMarginBottom() /*-{
-		return marginBottom;
+		return this.marginBottom;
 	}-*/;
 
 	/**
@@ -199,7 +199,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Left-hand spacing between chart and container.
 	 */
 	public final native double getMarginLeft() /*-{
-		return marginLeft;
+		return this.marginLeft;
 	}-*/;
 
 	/**
@@ -213,7 +213,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Right-hand spacing between chart and container.
 	 */
 	public final native double getMarginRight() /*-{
-		return marginRight;
+		return this.marginRight;
 	}-*/;
 
 	/**
@@ -227,7 +227,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Top spacing between chart and container.
 	 */
 	public final native double getMarginTop() /*-{
-		return marginTop;
+		return this.marginTop;
 	}-*/;
 
 	/**
@@ -241,7 +241,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Minimum radius of a gauge.
 	 */
 	public final native double getMinRadius() /*-{
-		return minRadius;
+		return this.minRadius;
 	}-*/;
 
 	/**
@@ -255,7 +255,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Duration of arrow animation.
 	 */
 	public final native double getStartDuration() /*-{
-		return startDuration;
+		return this.startDuration;
 	}-*/;
 
 	/**
@@ -269,7 +269,7 @@ public final class AmAngularGaugeJSO extends AmChartJSO implements IsAmAngularCh
 	 * Transition effect of the arrows, possible effects: easeOutSine, easeInSine, elastic, bounce.
 	 */
 	public final native String getStartEffect() /*-{
-		return startEffect;
+		return this.startEffect;
 	}-*/;
 
 	/**

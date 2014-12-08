@@ -12,13 +12,13 @@ public class DurationUnitsJSO extends JavaScriptObject implements IsDurationUnit
 	@Override
 	public final native String getHh()
 	/*-{
-		return hh;
+		return this.hh;
 	}-*/;
 
 	@Override
 	public final native String getMm()
 	/*-{
-		return mm;
+		return this.mm;
 	}-*/;
 
 	@Override

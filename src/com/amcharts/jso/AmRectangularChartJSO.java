@@ -17,7 +17,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * The angle of the 3D part of plot area. This creates a 3D effect (if the 'depth3D' is > 0).
 	 */
 	public native final double getAngle() /*-{
-		return angle;
+		return this.angle;
 	}-*/;
 
 	/**
@@ -31,7 +31,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Space left from axis labels/title to the chart's outside border, if autoMargins set to true."
 	 */
 	public final native double getAutoMarginOffset() /*-{
-		return autoMarginOffset;
+		return this.autoMarginOffset;
 	}-*/;
 
 	/**
@@ -45,7 +45,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Specifies if margins of a chart should be calculated automatically so that labels of axes would fit. The chart will adjust only margins with axes. Other margins will use values set with marginRight, marginTop, marginLeft and marginBottom properties."
 	 */
 	public final native Boolean isAutoMargins() /*-{
-		return autoMargins;
+		return this.autoMargins;
 	}-*/;
 
 	/**
@@ -59,7 +59,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Cursor of a chart.
 	 */
 	public final native IsChartCursor getChartCursor() /*-{
-		return chartCursor;
+		return this.chartCursor;
 	}-*/;
 
 	/**
@@ -73,7 +73,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Chart's scrollbar.
 	 */
 	public final native IsChartScrollbar getChartScrollbar() /*-{
-		return chartScrollbar;
+		return this.chartScrollbar;
 	}-*/;
 
 	/**
@@ -87,7 +87,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * The depth of the 3D part of plot area. This creates a 3D effect (if the 'angle' is > 0).
 	 */
 	public final native double getDepth3D() /*-{
-		return depth3D;
+		return this.depth3D;
 	}-*/;
 
 	/**
@@ -101,7 +101,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Number of pixels between the container's bottom border and plot area. This space can be used for bottom axis' values. If autoMargin is true and bottom side has axis, this property is ignored."
 	 */
 	public final native double getMarginBottom() /*-{
-		return marginBottom;
+		return this.marginBottom;
 	}-*/;
 
 	/**
@@ -115,7 +115,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Number of pixels between the container's left border and plot area. This space can be used for left axis' values. If autoMargin is true and left side has axis, this property is ignored."
 	 */
 	public final native double getMarginLeft() /*-{
-		return marginLeft;
+		return this.marginLeft;
 	}-*/;
 
 	/**
@@ -129,7 +129,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Number of pixels between the container's right border and plot area. This space can be used for Right axis' values. If autoMargin is true and right side has axis, this property is ignored."
 	 */
 	public final native double getMarginRight() /*-{
-		return marginRight;
+		return this.marginRight;
 	}-*/;
 
 	/**
@@ -143,7 +143,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
 	 */
 	public final native Boolean isMarginsUpdated() /*-{
-		return marginsUpdated;
+		return this.marginsUpdated;
 	}-*/;
 
 	/**
@@ -157,7 +157,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Number of pixels between the container's top border and plot area. This space can be used for top axis' values. If autoMargin is true and top side has axis, this property is ignored."
 	 */
 	public final native double getMarginTop() /*-{
-		return marginTop;
+		return this.marginTop;
 	}-*/;
 
 	/**
@@ -171,7 +171,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * The opacity of plot area's border. Value range is 0 - 1.
 	 */
 	public final native double getPlotAreaBorderAlpha() /*-{
-		return plotAreaBorderAlpha;
+		return this.plotAreaBorderAlpha;
 	}-*/;
 
 	/**
@@ -185,7 +185,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "The color of the plot area's border. Note, the it is invisible by default, as plotAreaBorderAlpha default value is 0. Set it to a value higher than 0 to make it visible."
 	 */
 	public final native String getPlotAreaBorderColor() /*-{
-		return plotAreaBorderColor;
+		return this.plotAreaBorderColor;
 	}-*/;
 
 	/**
@@ -199,7 +199,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Opacity of plot area. Plural form is used to keep the same property names as our Flex charts'. Flex charts can accept array of numbers to generate gradients. Although you can set array here, only first value of this array will be used."
 	 */
 	public final native double getPlotAreaFillAlphas() /*-{
-		return plotAreaFillAlphas;
+		return this.plotAreaFillAlphas;
 	}-*/;
 
 	/**
@@ -213,7 +213,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "You can set both one color if you need a solid color or array of colors to generate gradients, for example: ['#000000', '#0000CC']"
 	 */
 	public final native String getPlotAreaFillColors() /*-{
-		return plotAreaFillColors;
+		return this.plotAreaFillColors;
 	}-*/;
 
 	/**
@@ -227,7 +227,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "If you are using gradients to fill the plot area, you can use this property to set gradient angle. The only allowed values are horizontal and vertical: 0, 90, 180, 270."
 	 */
 	public final native double getPlotAreaGradientAngle() /*-{
-		return plotAreaGradientAngle;
+		return this.plotAreaGradientAngle;
 	}-*/;
 
 	/**
@@ -255,7 +255,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Opacity of zoom-out button background.
 	 */
 	public final native double getZoomOutButtonAlpha() /*-{
-		return zoomOutButtonAlpha;
+		return this.zoomOutButtonAlpha;
 	}-*/;
 
 	/**
@@ -269,7 +269,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Zoom-out button background color.
 	 */
 	public final native String getZoomOutButtonColor() /*-{
-		return zoomOutButtonColor;
+		return this.zoomOutButtonColor;
 	}-*/;
 
 	/**
@@ -283,7 +283,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * "Name of zoom-out button image. In the images folder there is another lens image, called lensWhite.png. You might want to have white lens when background is dark. Or you can simply use your own image."
 	 */
 	public final native String getZoomOutButtonImage() /*-{
-		return zoomOutButtonImage;
+		return this.zoomOutButtonImage;
 	}-*/;
 
 	/**
@@ -297,7 +297,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Size of zoom-out button image
 	 */
 	public final native double getZoomOutButtonImageSize() /*-{
-		return zoomOutButtonImageSize;
+		return this.zoomOutButtonImageSize;
 	}-*/;
 
 	/**
@@ -311,7 +311,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Padding around the text and image.
 	 */
 	public final native double getZoomOutButtonPadding() /*-{
-		return zoomOutButtonPadding;
+		return this.zoomOutButtonPadding;
 	}-*/;
 
 	/**
@@ -325,7 +325,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Opacity of zoom-out button background when mouse is over it.
 	 */
 	public final native double getZoomOutButtonRollOverAlpha() /*-{
-		return zoomOutButtonRollOverAlpha;
+		return this.zoomOutButtonRollOverAlpha;
 	}-*/;
 
 	/**
@@ -339,7 +339,7 @@ public class AmRectangularChartJSO extends AmCoordinateChartJSO implements IsAmR
 	 * Text in the zoom-out button.
 	 */
 	public final native String getZoomOutText() /*-{
-		return zoomOutText;
+		return this.zoomOutText;
 	}-*/;
 
 	/**

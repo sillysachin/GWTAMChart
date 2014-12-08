@@ -17,4 +17,4 @@ Improve Code generation in "gen"
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
 Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
 Ensure 1:1 match between json and api classes.
-Ensure this. accessor prefix in all getters in jso package.
+Complete - Ensure "this" accessor prefix in all getters in jso package.

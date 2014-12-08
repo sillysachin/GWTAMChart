@@ -15,7 +15,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 */
 	public final native double getAxisTitleOffset()
 	/*-{
-		return axisTitleOffset;
+		return this.axisTitleOffset;
 	}-*/;
 
 	/**
@@ -29,7 +29,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Read-only. Coordinate of the base value.
 	 */
 	public final native double getBaseCoord() /*-{
-		return baseCoord;
+		return this.baseCoord;
 	}-*/;
 
 	/**
@@ -43,7 +43,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies base value of the axis.
 	 */
 	public final native double getBaseValue() /*-{
-		return baseValue;
+		return this.baseValue;
 	}-*/;
 
 	/**
@@ -57,7 +57,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If your values represents time units, and you want value axis labels to be formatted as duration, you have to set the duration unit. Possible values are: 'ss', 'mm', 'hh' and 'DD'."
 	 */
 	public final native String getDuration() /*-{
-		return duration;
+		return this.duration;
 	}-*/;
 
 	/**
@@ -71,7 +71,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If duration property is set, you can specify what string should be displayed next to day, hour, minute and second."
 	 */
 	public final native IsDurationUnits getDurationUnits() /*-{
-		return durationUnits;
+		return this.durationUnits;
 	}-*/;
 
 	/**
@@ -85,7 +85,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Radar chart only. Possible values are: 'polygons' and 'circles'. Set 'circles' for polar charts.
 	 */
 	public final native String getGridType() /*-{
-		return gridType;
+		return this.gridType;
 	}-*/;
 
 	/**
@@ -113,7 +113,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies whether guide values should be included when calculating min and max of the axis.
 	 */
 	public final native Boolean isIncludeGuidesInMinMax() /*-{
-		return includeGuidesInMinMax;
+		return this.includeGuidesInMinMax;
 	}-*/;
 
 	/**
@@ -127,7 +127,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If true, the axis will include hidden graphs when calculating min and max values."
 	 */
 	public final native Boolean isIncludeHidden() /*-{
-		return includeHidden;
+		return this.includeHidden;
 	}-*/;
 
 	/**
@@ -141,7 +141,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
 	public final native Boolean isdoublesOnly() /*-{
-		return integersOnly;
+		return this.integersOnly;
 	}-*/;
 
 	/**
@@ -152,14 +152,14 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	}-*/;
 
 	/**
-	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."
+	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return this.string."
 	 */
 	public final native IsFunction getLabelFunction() /*-{
 		return @com.amcharts.impl.JsFunction::getInstance(Lcom/google/gwt/core/client/JavaScriptObject;)(this.labelFunction);
 	}-*/;
 
 	/**
-	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return string."
+	 * "You can use this function to format Value axis labels. This function is called and these parameters are passed: labelFunction(value, valueText, valueAxis); Where value is numeric value, valueText is formatted string and valueAxis is a reference to valueAxis object. Your function should return this.string."
 	 */
 	public final native void setLabelFunction( IsFunction labelFunction ) /*-{
 		this.labelFunction = @com.amcharts.impl.JsFunction::getJSInstance(Lcom/amcharts/impl/JsFunction;)(labelFunction);
@@ -169,7 +169,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies if this value axis' scale should be logarithmic.
 	 */
 	public final native Boolean isLogarithmic() /*-{
-		return logarithmic;
+		return this.logarithmic;
 	}-*/;
 
 	/**
@@ -183,7 +183,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Read-only. Maximum value of the axis.
 	 */
 	public final native double getMax() /*-{
-		return max;
+		return this.max;
 	}-*/;
 
 	/**
@@ -197,7 +197,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If you don't want max value to be calculated by the chart, set it using this property. This value might still be adjusted so that it would be possible to draw grid at rounded intervals."
 	 */
 	public final native double getMaximum() /*-{
-		return maximum;
+		return this.maximum;
 	}-*/;
 
 	/**
@@ -211,7 +211,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Read-only. Minimum value of the axis.
 	 */
 	public final native double getMin() /*-{
-		return min;
+		return this.min;
 	}-*/;
 
 	/**
@@ -225,7 +225,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If you don't want min value to be calculated by the chart, set it using this property. This value might still be adjusted so that it would be possible to draw grid at rounded intervals."
 	 */
 	public final native double getMinimum() /*-{
-		return minimum;
+		return this.minimum;
 	}-*/;
 
 	/**
@@ -239,7 +239,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If set value axis scale (min and max numbers) will be multiplied by it. I.e. if set to 1.2 the scope of values will increase by 20 percent.
 	 */
 	public final native double getMinMaxMultiplier() /*-{
-		return minMaxMultiplier;
+		return this.minMaxMultiplier;
 	}-*/;
 
 	/**
@@ -253,7 +253,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Precision (number of decimals) of values.
 	 */
 	public final native double getPrecision() /*-{
-		return precision;
+		return this.precision;
 	}-*/;
 
 	/**
@@ -267,7 +267,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Radar chart only. Specifies if categories (axes' titles) should be displayed near axes)
 	 */
 	public final native Boolean isRadarCategoriesEnabled() /*-{
-		return radarCategoriesEnabled;
+		return this.radarCategoriesEnabled;
 	}-*/;
 
 	/**
@@ -281,7 +281,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies if graphs's values should be recalculated to percents.
 	 */
 	public final native Boolean isRecalculateToPercents() /*-{
-		return recalculateToPercents;
+		return this.recalculateToPercents;
 	}-*/;
 
 	/**
@@ -295,7 +295,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Specifies if value axis should be reversed (smaller values on top).
 	 */
 	public final native Boolean isReversed() /*-{
-		return reversed;
+		return this.reversed;
 	}-*/;
 
 	/**
@@ -309,7 +309,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "Stacking mode of the axis. Possible values are: 'none', 'regular', '100 percent', '3d'. Note, only graphs of one type will be stacked."
 	 */
 	public final native String getStackType() /*-{
-		return stackType;
+		return this.stackType;
 	}-*/;
 
 	/**
@@ -323,7 +323,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Read-only. Value difference between two grid lines.
 	 */
 	public final native double getStep() /*-{
-		return step;
+		return this.step;
 	}-*/;
 
 	/**
@@ -337,7 +337,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "In case you synchronize one value axis with another, you need to set the synchronization multiplier. Use synchronizeWithAxis method to set with which axis it should be synced."
 	 */
 	public final native double getSynchronizationMultiplier() /*-{
-		return synchronizationMultiplier;
+		return this.synchronizationMultiplier;
 	}-*/;
 
 	/**
@@ -351,7 +351,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * One value axis can be synchronized with another value axis. You can use both reference to your axis or id of the axis here. You should set synchronizationMultiplyer in order for this to work.
 	 */
 	public final native IsValueAxis getSynchronizeWith() /*-{
-		return synchronizeWith;
+		return this.synchronizeWith;
 	}-*/;
 
 	/**
@@ -365,7 +365,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If this value axis is stacked and has columns, setting valueAxis.totalText = '[[total]]' will make it to display total value above the most-top column."
 	 */
 	public final native String getTotalText() /*-{
-		return totalText;
+		return this.totalText;
 	}-*/;
 
 	/**
@@ -379,7 +379,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Color of total text.
 	 */
 	public final native String getTotalTextColor() /*-{
-		return totalTextColor;
+		return this.totalTextColor;
 	}-*/;
 
 	/**
@@ -393,7 +393,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * This allows you to have logarithmic value axis and have zero values in the data. You must set it to >0 value in order to work.
 	 */
 	public final native double getTreatZeroAs() /*-{
-		return treatZeroAs;
+		return this.treatZeroAs;
 	}-*/;
 
 	/**
@@ -407,7 +407,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Unit which will be added to the value label.
 	 */
 	public final native String getUnit() /*-{
-		return unit;
+		return this.unit;
 	}-*/;
 
 	/**
@@ -421,7 +421,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * Position of the unit. Possible values are 'left' and 'right'.
 	 */
 	public final native String getUnitPosition() /*-{
-		return unitPosition;
+		return this.unitPosition;
 	}-*/;
 
 	/**
@@ -435,7 +435,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If true, prefixes will be used for big and small numbers. You can set arrays of prefixes directly to the chart object via prefixesOfSmallNumbers and prefixesOfBigNumbers."
 	 */
 	public final native Boolean isUsePrefixes() /*-{
-		return usePrefixes;
+		return this.usePrefixes;
 	}-*/;
 
 	/**
@@ -449,7 +449,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "If true, values will always be formatted using scientific notation (5e+8, 5e-8...) Otherwise only values bigger then 1e+21 and smaller then 1e-7 will be displayed in scientific notation."
 	 */
 	public final native Boolean isUseScientificNotation() /*-{
-		return useScientificNotation;
+		return this.useScientificNotation;
 	}-*/;
 
 	/**
@@ -462,7 +462,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	@Override
 	public final native Boolean isDoublesOnly()
 	/*-{
-		return doublesOnly;
+		return this.doublesOnly;
 	}-*/;
 
 	@Override
