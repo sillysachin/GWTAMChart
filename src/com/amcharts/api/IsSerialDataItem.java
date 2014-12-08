@@ -6,7 +6,7 @@ public interface IsSerialDataItem
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
-	public Object getAxes();
+	public IsAxisAuto getAxis( String axisId );
 
 	/**
 	 * "category value. String if parseDates is false, Date if true."

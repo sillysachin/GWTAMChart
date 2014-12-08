@@ -7,12 +7,12 @@ public interface IsGraphDataItem
 	/**
 	 * Opacity of the data item.
 	 */
-	public double getAlpha();
+	public Double getAlpha();
 
 	/**
 	 * Opacity of the data item.
 	 */
-	public void setAlpha( double alpha );
+	public void setAlpha( Double alpha );
 
 	/**
 	 * Bullet type.
@@ -27,12 +27,12 @@ public interface IsGraphDataItem
 	/**
 	 * Bullet size.
 	 */
-	public double getBulletSize();
+	public Double getBulletSize();
 
 	/**
 	 * Bullet size.
 	 */
-	public void setBulletSize( double bulletSize );
+	public void setBulletSize( Double bulletSize );
 
 	/**
 	 * Category value.
@@ -137,20 +137,20 @@ public interface IsGraphDataItem
 	/**
 	 * x coordinate of the data item.
 	 */
-	public double getX();
+	public Double getX();
 
 	/**
 	 * x coordinate of the data item.
 	 */
-	public void setX( double x );
+	public void setX( Double x );
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public double getY();
+	public Double getY();
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public void setY( double y );
+	public void setY( Double y );
 }

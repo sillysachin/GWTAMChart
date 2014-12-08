@@ -10,7 +10,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getBalloonX()
 	/*-{
-		return balloonX;
+		return this.balloonX;
 	}-*/;
 
 	public final native void setBalloonX( double balloonX )
@@ -20,7 +20,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getBalloonY()
 	/*-{
-		return balloonY;
+		return this.balloonY;
 	}-*/;
 
 	public final native void setBalloonY( double balloonY )
@@ -30,7 +30,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native String getClassName()
 	/*-{
-		return className;
+		return this.className;
 	}-*/;
 
 	public final native void setClassName( String className )
@@ -38,19 +38,19 @@ public class DataItem extends JavaScriptObject
 		this.className = className;
 	}-*/;
 
-	public final native int getIndex()
+	public final native Integer getIndex()
 	/*-{
-		return index;
+		return this.index;
 	}-*/;
 
-	public final native void setIndex( int index )
+	public final native void setIndex( Integer index )
 	/*-{
 		this.index = index;
 	}-*/;
 
 	public final native double getIx()
 	/*-{
-		return ix;
+		return this.ix;
 	}-*/;
 
 	public final native void setIx( double ix )
@@ -60,7 +60,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getIy()
 	/*-{
-		return iy;
+		return this.iy;
 	}-*/;
 
 	public final native void setIy( double iy )
@@ -70,7 +70,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native String getLabelColor()
 	/*-{
-		return labelColor;
+		return this.labelColor;
 	}-*/;
 
 	public final native void setLabelColor( String labelColor )
@@ -80,7 +80,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native int getLabelQuarter()
 	/*-{
-		return labelQuarter;
+		return this.labelQuarter;
 	}-*/;
 
 	public final native void setLabelQuarter( int labelQuarter )
@@ -90,7 +90,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getLabelRadius()
 	/*-{
-		return labelRadius;
+		return this.labelRadius;
 	}-*/;
 
 	public final native void setLabelRadius( double labelRadius )
@@ -100,7 +100,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native String getPattern()
 	/*-{
-		return pattern;
+		return this.pattern;
 	}-*/;
 
 	public final native void setPattern( String pattern )
@@ -110,7 +110,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getPullX()
 	/*-{
-		return pullX;
+		return this.pullX;
 	}-*/;
 
 	public final native void setPullX( double pullX )
@@ -120,7 +120,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getPullY()
 	/*-{
-		return pullY;
+		return this.pullY;
 	}-*/;
 
 	public final native void setPullY( double pullY )
@@ -130,7 +130,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native double getStartAngle()
 	/*-{
-		return startAngle;
+		return this.startAngle;
 	}-*/;
 
 	public final native void setStartAngle( double startAngle )
@@ -160,7 +160,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native Boolean isStarted()
 	/*-{
-		return started;
+		return this.started;
 	}-*/;
 
 	public final native void setStarted( Boolean started )
@@ -170,7 +170,7 @@ public class DataItem extends JavaScriptObject
 
 	public final native Boolean isSwitchable()
 	/*-{
-		return switchable;
+		return this.switchable;
 	}-*/;
 
 	public final native void setSwitchable( Boolean switchable )

@@ -99,7 +99,7 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	 * "Unique id of value axis. It is not required to set it, unless you need to tell the graph which exact value axis it should use."
 	 */
 	public final native String getId() /*-{
-		return id;
+		return this.id;
 	}-*/;
 
 	/**

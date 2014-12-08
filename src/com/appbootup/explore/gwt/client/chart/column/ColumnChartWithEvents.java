@@ -1,8 +1,10 @@
 package com.appbootup.explore.gwt.client.chart.column;
 
+import com.amcharts.api.IsGraphDataItem;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmSerialChart;
+import com.amcharts.impl.AxisAuto;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
@@ -55,14 +57,14 @@ public class ColumnChartWithEvents
 		amSerialChart.setMarginTop( 10 );
 		amSerialChart.setMarginBottom( 26 );
 
-		ValueAxis valueAxis = AmCharts.ValueAxis();
+		final ValueAxis valueAxis = AmCharts.ValueAxis();
 		valueAxis.setPosition( "left" );
 		valueAxis.setAxisAlpha( 0.2 );
 		amSerialChart.addValueAxis( valueAxis );
 
 		amSerialChart.setStartDuration( 1 );
 
-		AmGraph amGraph1 = AmCharts.AmGraph();
+		final AmGraph amGraph1 = AmCharts.AmGraph();
 		amGraph1.setBalloonText( "<span style='font-size:13px;'>[[title]] in [[category]]:<b>[[value]]</b> [[additional]]</span>" );
 		amGraph1.setAlphaField( "alpha" );
 		amGraph1.setDashLengthField( "dashLengthColumn" );
@@ -99,7 +101,7 @@ public class ColumnChartWithEvents
 
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( 0 );
@@ -155,7 +157,6 @@ public class ColumnChartWithEvents
 			public void onRendered( RenderedEvent event )
 			{
 				GWT.log( "renderedHandler -> " + event.getType() );
-				CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 			}
 		} );
 
@@ -164,10 +165,11 @@ public class ColumnChartWithEvents
 			@Override
 			public void function( AmChartEventJSO event )
 			{
-				JavaScriptObject axes = event.getClickItem()
-						.getSerialDataItem().getAxes();
-				//TODO: IsSerialDataItemAxis isSerialDataItemAxis = axes.get( 0 );
-				//TODO: IsGraphDataItem isGraphDataItem = isSerialDataItemAxis.getGraphs().get( 0 );
+				String axisId = valueAxis.getId();
+				AxisAuto axis = ( AxisAuto ) event.getClickItem()
+						.getSerialDataItem().getAxis( axisId );
+				String graphId = amGraph1.getId();
+				IsGraphDataItem graph = axis.getGraph( graphId );
 			}
 		} );
 

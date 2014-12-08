@@ -1,9 +1,10 @@
 package com.amcharts.impl;
 
+import com.amcharts.api.IsAxisAuto;
 import com.amcharts.api.IsDataContext;
 import com.amcharts.api.IsSerialDataItem;
 import com.amcharts.impl.event.DataItem;
-import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 
 public class SerialDataItem extends DataItem implements IsSerialDataItem
 {
@@ -14,7 +15,11 @@ public class SerialDataItem extends DataItem implements IsSerialDataItem
 	/**
 	 * You can access each GraphDataItem using this object. The data structure is: graphDataItem = serialDataItem.axes[axisId].graphs[graphId].
 	 */
-	public final native JavaScriptObject getAxes() /*-{
+	public final native IsAxisAuto getAxis( String axisId ) /*-{
+		return this.axes[axisId];
+	}-*/;
+
+	public final native JsArray<AxisAuto> getAxes() /*-{
 		return this.axes;
 	}-*/;
 

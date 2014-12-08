@@ -15,17 +15,47 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	{
 	}
 
+	public final native Double getColumnHeight()
+	/*-{
+		return this.columnHeight;
+	}-*/;
+
+	public final native void setColumnHeight( Double columnHeight )
+	/*-{
+		this.columnHeight = columnHeight;
+	}-*/;
+
+	public final native Double getColumnWidth()
+	/*-{
+		return this.columnWidth;
+	}-*/;
+
+	public final native void setColumnWidth( Double columnWidth )
+	/*-{
+		this.columnWidth = columnWidth;
+	}-*/;
+
+	public final native Boolean getIsNegative()
+	/*-{
+		return this.isNegative;
+	}-*/;
+
+	public final native void setIsNegative( Boolean isNegative )
+	/*-{
+		this.isNegative = isNegative;
+	}-*/;
+
 	/**
 	 * Opacity of the data item.
 	 */
-	public final native double getAlpha() /*-{
+	public final native Double getAlpha() /*-{
 		return this.alpha;
 	}-*/;
 
 	/**
 	 * Opacity of the data item.
 	 */
-	public final native void setAlpha( double alpha ) /*-{
+	public final native void setAlpha( Double alpha ) /*-{
 		this.alpha = alpha;
 	}-*/;
 
@@ -46,14 +76,14 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	/**
 	 * Bullet size.
 	 */
-	public final native double getBulletSize() /*-{
+	public final native Double getBulletSize() /*-{
 		return this.bulletSize;
 	}-*/;
 
 	/**
 	 * Bullet size.
 	 */
-	public final native void setBulletSize( double bulletSize ) /*-{
+	public final native void setBulletSize( Double bulletSize ) /*-{
 		this.bulletSize = bulletSize;
 	}-*/;
 
@@ -200,28 +230,28 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	/**
 	 * x coordinate of the data item.
 	 */
-	public final native double getX() /*-{
+	public final native Double getX() /*-{
 		return this.x;
 	}-*/;
 
 	/**
 	 * x coordinate of the data item.
 	 */
-	public final native void setX( double x ) /*-{
+	public final native void setX( Double x ) /*-{
 		this.x = x;
 	}-*/;
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public final native double getY() /*-{
+	public final native Double getY() /*-{
 		return this.y;
 	}-*/;
 
 	/**
 	 * y coordinate of the data item.
 	 */
-	public final native void setY( double y ) /*-{
+	public final native void setY( Double y ) /*-{
 		this.y = y;
 	}-*/;
 }
