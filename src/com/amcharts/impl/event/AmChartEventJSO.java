@@ -110,7 +110,7 @@ public class AmChartEventJSO extends JavaScriptObject
 		this.serialDataItem = serialDataItem;
 	}-*/;
 
-	//TODO: Is this always a instance of AmGraph
+	//TODO: Is this always an instance of AmGraph
 	public final native Target getTarget()
 	/*-{
 		return this.target;

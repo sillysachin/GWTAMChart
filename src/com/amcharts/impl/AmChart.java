@@ -70,7 +70,6 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	{
 		this.id = id;
 		divWrapper.getElement().setId( id );
-		// TODO: need to verify how this impacts the chart which uses the id for finding the parent container.
 	}
 
 	public String getId()

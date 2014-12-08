@@ -1,8 +1,8 @@
 Complete - Clean up api package - api should not have references to gwt imports like JavaScriptObject.
 Complete - Clean up json package - json should not have references to gwt imports like JavaScriptObject.
-Partial - Clean up json package - json should not have references to Object in method signature.
+Complete - Clean up json package - json should not have references to Object in method signature.
 Complete - Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>
-Partial - Clean up IsFunction placeholder and other function related methods.
+Complete - Clean up IsFunction placeholder and other function related methods.
 Complete - Clean up events to go with simpler AmChartListener
 Revisit generics with AmChart<T extends AmChartDataObject>
 Support AMStockChart api's
@@ -17,3 +17,4 @@ Improve Code generation in "gen"
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
 Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
 Ensure 1:1 match between json and api classes.
+Ensure this. accessor prefix in all getters in jso package.

@@ -23,7 +23,6 @@ public class AmLegendData implements IsAmLegendData, IJavaScriptWrapper<AmLegend
 		this.jso = jso;
 	}
 
-	//TODO: createJso with {} instead of JavaScriptObject.createObject();
 	public native AmLegendDataJSO createJso()
 	/*-{
 		var jso = {}
