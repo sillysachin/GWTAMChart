@@ -67,9 +67,6 @@ public class ThreeDFunnelChart
 		exportConfig.addMenuItem( menuItem );
 		amFunnelChart.setExportConfig( exportConfig );
 		amFunnelChart.setGroupPercent( 5.0 );
-		AmFunnelChartJSO jso = amFunnelChart.getJso();
-		GWT.log( "valueField - >" + jso.getValueField() );
-		GWT.log( "valueField - >" + amFunnelChart.getValueField() );
 		RootLayoutPanel.get().add( amFunnelChart );
 	}
 }

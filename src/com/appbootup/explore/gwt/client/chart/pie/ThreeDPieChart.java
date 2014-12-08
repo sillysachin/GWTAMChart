@@ -4,7 +4,6 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
-import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -17,21 +16,23 @@ public class ThreeDPieChart
 {
 	public ThreeDPieChart()
 	{
-		GWTAMChart.chartService.getData( "/data/threeDPieChart.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( dataProvider );
-			}
+		GWTAMChart.chartService
+				.getData( "/data/threeDPieChart.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
+								.unsafeEval( chartData );
+						drawChart( dataProvider );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
@@ -44,21 +45,15 @@ public class ThreeDPieChart
 		amPieChart.setOutlineAlpha( 0.4 );
 		amPieChart.setDepth3D( 15.0 );
 		amPieChart.setSize( "1024px", "500px" );
-		amPieChart.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
+		amPieChart
+				.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
 		amPieChart.setAngle( 30.0 );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );
-		AmPieChartJSO jso = amPieChart.getJso();
-		GWT.log( "angle - >" + jso.getAngle() );
-		GWT.log( "angle - >" + amPieChart.getAngle() );
-		GWT.log( "depth3D - >" + jso.getDepth3D() );
-		GWT.log( "depth3D - >" + amPieChart.getDepth3D() );
-		GWT.log( "outlineAlpha - >" + jso.getOutlineAlpha() );
-		GWT.log( "outlineAlpha - >" + amPieChart.getOutlineAlpha() );
 		RootLayoutPanel.get().add( amPieChart );
 	}
 }

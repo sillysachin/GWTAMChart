@@ -54,13 +54,6 @@ public class SimplePieChart
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );
 		amPieChart.setGroupPercent( 5.0 );
-		AmPieChartJSO jso = amPieChart.getJso();
-		GWT.log( "groupedPulled - >" + jso.getGroupedPulled() );
-		GWT.log( "groupedPulled - >" + amPieChart.getGroupedPulled() );
-		GWT.log( "groupPercent - >" + jso.getGroupPercent() );
-		GWT.log( "groupPercent - >" + amPieChart.getGroupPercent() );
-		GWT.log( "valueField - >" + jso.getValueField() );
-		GWT.log( "valueField - >" + amPieChart.getValueField() );
 		//amPieChart.setLabelFunction( getLabelFunction() );
 		String functionString = getFunctionString();
 		JsFunction jsFunction = new JsFunction();

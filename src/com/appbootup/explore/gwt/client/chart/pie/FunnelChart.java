@@ -57,9 +57,6 @@ public class FunnelChart
 		balloon.setFillColor( "#0F0F0F" );
 		amFunnelChart.setBalloon( balloon );
 		amFunnelChart.setBalloonText( "[[title]]:<b>[[value]]</b>"  );
-		AmFunnelChartJSO jso = amFunnelChart.getJso();
-		GWT.log( "valueField - >" + jso.getValueField() );
-		GWT.log( "valueField - >" + amFunnelChart.getValueField() );
 		RootLayoutPanel.get().add( amFunnelChart );
 	}
 }

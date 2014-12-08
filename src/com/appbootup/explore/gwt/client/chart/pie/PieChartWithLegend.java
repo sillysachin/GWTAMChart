@@ -57,14 +57,6 @@ public class PieChartWithLegend
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( "0px" );
 		amPieChart.setExportConfig( exportConfig );
-		AmPieChartJSO jso = amPieChart.getJso();
-		log( jso );
 		RootLayoutPanel.get().add( amPieChart );
 	}
-
-	private native void log( JavaScriptObject jso )
-	/*-{
-		//console.log(jso);
-		//JSON.stringify(jso, null, 4)
-	}-*/;
 }
