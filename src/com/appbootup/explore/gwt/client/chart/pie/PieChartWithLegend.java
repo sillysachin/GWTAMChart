@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
+import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
@@ -51,7 +52,7 @@ public class PieChartWithLegend
 		amPieChart.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( "0px" );

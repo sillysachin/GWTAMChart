@@ -543,7 +543,7 @@ public class AxisBase implements IsAxisBase
 
 	/**
 	 * Adds event listener to the object.
-	 * type - string like 'axisChanged' (should be listed in 'events' section of this class or classes which extend this class). 
+	 * type - string like 'axisChanged' (should be listed in 'events' section of this class or classes which extend this class).
 	 * handler - function which is called when event happens.
 	 */
 	public native void addListener( String eventName, AmChartListener amChartListener )
@@ -555,11 +555,6 @@ public class AxisBase implements IsAxisBase
 						eventName,
 						function(event) {
 							axisBaseThis.@com.amcharts.impl.AxisBase::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
-							if (event.event == undefined) {
-								console.log('Non Dom Event - > ' + event.type);
-							} else {
-								console.log('Dom Event - > ' + event.type);
-							}
 						});
 	}-*/;
 

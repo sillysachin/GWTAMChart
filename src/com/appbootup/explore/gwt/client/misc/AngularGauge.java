@@ -5,8 +5,6 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.GaugeArrow;
 import com.amcharts.impl.GaugeAxis;
 import com.amcharts.impl.GaugeBand;
-import com.amcharts.impl.util.LogUtils;
-import com.amcharts.impl.util.WrapperUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -88,18 +86,6 @@ public class AngularGauge
 		RootLayoutPanel.get().add( amAngularGauge );
 
 		randomValue( amAngularGauge );
-		GWT.log( "----jso----" );
-		LogUtils.log( amAngularGauge.getJso() );
-		LogUtils.log( gaugeArrow.getJso() );
-		LogUtils.log( gaugeAxis.getJso() );
-		GWT.log( "----impl----" );
-		LogUtils.log( amAngularGauge );
-		LogUtils.log( gaugeArrow );
-		LogUtils.log( gaugeAxis );
-		GWT.log( "----unwrap----" );
-		LogUtils.log( WrapperUtils.unwrap( amAngularGauge ) );
-		LogUtils.log( WrapperUtils.unwrap( gaugeArrow ) );
-		LogUtils.log( WrapperUtils.unwrap( gaugeAxis ) );
 
 		//TODO: List<IsGaugeAxis> axes = amAngularGauge.getAxes();
 		//TODO: List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
@@ -124,10 +110,6 @@ public class AngularGauge
 				if (gaugeChart.arrows) {
 					if (gaugeChart.arrows[0]) {
 						if (gaugeChart.arrows[0].setValue) {
-							console.log("-----Direct Access----");
-							console.log(gaugeChart);
-							console.log(gaugeChart.arrows[0]);
-							console.log(gaugeChart.axes[0]);
 							gaugeChart.arrows[0].setValue(value);
 							gaugeChart.axes[0].setBottomText(value + " km/h");
 						}

@@ -48,7 +48,7 @@ public class DateBasedData
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
+		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setDataProvider( chartData );
 		amSerialChart.setDataDateFormat( "YYYY-MM-DD" );
 
@@ -95,7 +95,7 @@ public class DateBasedData
 		exportConfig.setMenuRight( 20 );
 		exportConfig.setMenuBottom( 50 );
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );

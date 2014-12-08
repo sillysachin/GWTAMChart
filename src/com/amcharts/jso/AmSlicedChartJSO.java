@@ -100,7 +100,6 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native List<IsSlice> getChartData()
 	/*-{
-		console.log(this.chartData);
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.chartData);
 	}-*/;
 

@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
+import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
@@ -47,7 +48,7 @@ public class ThreeDPieChart
 		amPieChart.setAngle( 30.0 );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );

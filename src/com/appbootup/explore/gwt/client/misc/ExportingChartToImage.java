@@ -53,7 +53,7 @@ public class ExportingChartToImage
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
+		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setDataProvider( chartData );
 
 		amSerialChart.setDepth3D( 20 );
@@ -93,7 +93,7 @@ public class ExportingChartToImage
 
 		ExportConfig exportConfig = AmCharts.ExportConfig();
 		MenuItem menuItem1 = new MenuItem();
-		menuItem1.setIcon( "/js/amcharts/images/export.png" );
+		menuItem1.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem1.setIconTitle( "Save chart as an image" );
 		menuItem1.setTextAlign( "center" );
 		Item item1 = AmCharts.Item();

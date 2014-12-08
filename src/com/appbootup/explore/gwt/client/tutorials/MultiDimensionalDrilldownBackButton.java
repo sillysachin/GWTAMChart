@@ -72,7 +72,8 @@ public class MultiDimensionalDrilldownBackButton
 
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
+		GWT.log( AmCharts.JS_AMCHARTS_IMAGES );
+		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 
 		ArrayList<Title> titles = new ArrayList<Title>();
 		Title title = new Title();
@@ -121,7 +122,7 @@ public class MultiDimensionalDrilldownBackButton
 		// category axis
 		CategoryAxis categoryAxis = amSerialChart.getCategoryAxis();
 		categoryAxis.setParseDates( true );// as our data is date-based, we set parseDates to true
-		categoryAxis.setMinPeriod( "mm" );// our data is daily, so we set minPeriod to DD   
+		categoryAxis.setMinPeriod( "mm" );// our data is daily, so we set minPeriod to DD
 		categoryAxis.setAxisAlpha( 0 );
 		categoryAxis.setMinHorizontalGap( 50 );
 		categoryAxis.setGridAlpha( 0 );
@@ -131,7 +132,7 @@ public class MultiDimensionalDrilldownBackButton
 		exportConfig.setMenuTop( "20px" );
 		exportConfig.setMenuRight( "20px" );
 		MenuItem menuItem1 = new MenuItem();
-		menuItem1.setIcon( "/js/amcharts/images/export.png" );
+		menuItem1.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem1.setFormat( "png" );
 		Item item1 = AmCharts.Item();
 		item1.setTitle( "JPG" );
@@ -188,7 +189,8 @@ public class MultiDimensionalDrilldownBackButton
 			@Override
 			public void function( AmChartEventJSO evt )
 			{
-				DataContext dataContext = ( DataContext ) evt.getItem().getDataContext();
+				DataContext dataContext = ( DataContext ) evt.getItem()
+						.getDataContext();
 				JsArray<JavaScriptObject> subSet = dataContext.getSubSet();
 				if ( subSet != null && subSet.length() > 0 )
 				{

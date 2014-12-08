@@ -5,11 +5,14 @@ import java.util.List;
 
 import com.amcharts.api.IsAmCharts;
 import com.amcharts.jso.AmChartsJSO;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
 public class AmCharts implements IsAmCharts
 {
+	public static final String JS_AMCHARTS_IMAGES = GWT.getHostPageBaseURL() + "js/amcharts/images/";
+
 	static final SimpleEventBus EVENT_BUS = new SimpleEventBus();
 
 	public static final AmChartTheme[] themes = AmChartTheme.values();
@@ -156,9 +159,9 @@ public class AmCharts implements IsAmCharts
 	}-*/;
 
 	/**
-	 * handler is a method which will be called before initializing the chart. types is array of strings, 
-	 * specifying which chart types should call this method. If you don't set any type, all the charts will call this method. 
-	 * When handler method is called, chart instance is passed as an attribute. 
+	 * handler is a method which will be called before initializing the chart. types is array of strings,
+	 * specifying which chart types should call this method. If you don't set any type, all the charts will call this method.
+	 * When handler method is called, chart instance is passed as an attribute.
 	 * You can use this feature to preprocess chart data or do some other things you need before initializing the chart.
 	 */
 	//TODO: InitHandler ?
@@ -189,7 +192,7 @@ public class AmCharts implements IsAmCharts
 
 	/**
 	 * Returns string formatter with the provided settings. Formatter is an object with precision, decimalSeparator and thousandsSeparator defined.
-	 * Example: {precision: 2, decimalSeparator: '.', thousandsSeparator: ','}; If you don't need to adjust precision set it to -1. 
+	 * Example: {precision: 2, decimalSeparator: '.', thousandsSeparator: ','}; If you don't need to adjust precision set it to -1.
 	 * zeroCount defines how many zeros should be added after comma (useful when formatting currencies).
 	 */
 	//TODO: Class for formatter
@@ -209,7 +212,7 @@ public class AmCharts implements IsAmCharts
 	}-*/;
 
 	/**
-	 * You can use this method to convert date string to date object. 
+	 * You can use this method to convert date string to date object.
 	 * Please note, that literal name codes such as MMM or MMMM are not supported.
 	 */
 	public native void makeChart( String string, String format )

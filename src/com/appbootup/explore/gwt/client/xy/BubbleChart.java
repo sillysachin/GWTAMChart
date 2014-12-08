@@ -40,7 +40,7 @@ public class BubbleChart
 	{
 		final AmXYChart amXYChart = AmCharts.AmXYChart();
 		amXYChart.setTheme( "none" );
-		amXYChart.setPathToImages( "/js/amcharts/images/" );
+		amXYChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 		amXYChart.setDataProvider( chartData );
 
 		AmLegend legend = new AmLegend();

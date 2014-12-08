@@ -74,7 +74,7 @@ public class MultipleValueAxes
 	{
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
+		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setDataProvider( chartData );
 
 		AmLegend legend = new AmLegend();

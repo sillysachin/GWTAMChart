@@ -155,7 +155,7 @@ public class GWTAMChartSample
 	public static void lineWithTrendLines( String chartData )
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
-		amSerialChart.setPathToImages( "/js/amcharts/images/" );
+		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 		JsArray<JavaScriptObject> serialDataProvider = JsonUtils
 				.unsafeEval( chartData );
 		amSerialChart.setDataProvider( serialDataProvider );

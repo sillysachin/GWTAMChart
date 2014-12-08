@@ -177,7 +177,7 @@ public class DurationOnValueAxis
 		exportConfig.setMenuBottom( "20px" );
 		exportConfig.setMenuRight( "22px" );
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );

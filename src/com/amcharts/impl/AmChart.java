@@ -635,11 +635,6 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 						eventName,
 						function(event) {
 							amChartThis.@com.amcharts.impl.AmChart::handleListener(Lcom/amcharts/impl/event/AmChartListener;Lcom/amcharts/impl/event/AmChartEventJSO;)(amChartListener,event);
-							if (event.event == undefined) {
-								console.log('Non Dom Event - > ' + event.type);
-							} else {
-								console.log('Dom Event - > ' + event.type);
-							}
 						});
 	}-*/;
 

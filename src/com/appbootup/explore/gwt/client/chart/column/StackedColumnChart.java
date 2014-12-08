@@ -146,7 +146,7 @@ public class StackedColumnChart
 
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( "/js/amcharts/images/export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( 20 );
