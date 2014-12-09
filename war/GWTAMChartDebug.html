@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script src="js/amstock/utils/Class.js" type="text/javascript"></script>
+<script src="js/amstock/utils/Utils.js" type="text/javascript"></script>
+<script src="js/amstock/utils/DateUtils.js" type="text/javascript"></script>
+
+<script src="js/amstock/drawingEngine/AmDraw.js" type="text/javascript"></script>
+<script src="js/amstock/drawingEngine/AmDObject.js" type="text/javascript"></script>
+<script src="js/amstock/drawingEngine/SVGRenderer.js" type="text/javascript"></script>
+<script src="js/amstock/drawingEngine/VMLRenderer.js" type="text/javascript"></script>
+
+<script src="js/amstock/chartClasses/AmChart.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/AmBalloon.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/TrendLine.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/AmCoordinateChart.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/AmRectangularChart.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/AmSlicedChart.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/AmGraph.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/ChartCursor.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/SimpleChartScrollbar.js" type="text/javascript"></script>
+<script src="js/amstock/chartClasses/ChartScrollbar.js" type="text/javascript"></script>
+
+<script src="js/amstock/geom/Bezier.js" type="text/javascript"></script>
+<script src="js/amstock/geom/Cuboid.js" type="text/javascript"></script>
+<script src="js/amstock/geom/Geom.js" type="text/javascript"></script>
+
+<script src="js/amstock/AmLegend.js" type="text/javascript"></script>
+<script src="js/amstock/AmPieChart.js" type="text/javascript"></script>
+<script src="js/amstock/AmXYChart.js" type="text/javascript"></script>
+<script src="js/amstock/AmSerialChart.js" type="text/javascript"></script>
+<script src="js/amstock/AmRadarChart.js" type="text/javascript"></script>
+<script src="js/amstock/AmAngularGauge.js" type="text/javascript"></script>
+<script src="js/amstock/AmFunnelChart.js" type="text/javascript"></script>
+
+<script src="js/amstock/axes/AxisBase.js" type="text/javascript"></script>
+<script src="js/amstock/axes/ValueAxis.js" type="text/javascript"></script>
+<script src="js/amstock/axes/CategoryAxis.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RecAxis.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RecItem.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RecFill.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RadAxis.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RadItem.js" type="text/javascript"></script>
+<script src="js/amstock/axes/RadFill.js" type="text/javascript"></script>
+<script src="js/amstock/axes/GaugeAxis.js" type="text/javascript"></script>
+<script src="js/amstock/axes/GaugeArrow.js" type="text/javascript"></script>
+
+<script src="js/amstock/stock/AmStockChart.js" type="text/javascript"></script>
+<script src="js/amstock/stock/DataSet.js" type="text/javascript"></script>
+<script src="js/amstock/stock/PeriodSelector.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StockGraph.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StockPanel.js" type="text/javascript"></script>
+<script src="js/amstock/stock/CategoryAxesSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/ChartCursorSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/ChartScrollbarSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/LegendSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/PanelsSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StockEventsSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/ValueAxesSettings.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StockUtils.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StockLegend.js" type="text/javascript"></script>
+<script src="js/amstock/stock/DataSetSelector.js" type="text/javascript"></script>
+<script src="js/amstock/stock/StackedBullet.js" type="text/javascript"></script>
+
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript" language="javascript"
+	src="gwtamchart/gwtamchart.nocache.js"></script>
+</head>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body oncontextmenu="return false">
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+</body>
+</html>

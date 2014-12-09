@@ -39,14 +39,14 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Class with various methods that involve wrapping and unwrapping of JavaScript objects
- * 
+ *
  */
 public class WrapperUtils
 {
 
 	/**
 	 * Performs wrapping on given JavaScriptObject. Wrapper is chosen and instantiated based on the constructor of the passed object. For passed null returns null. For unknown objects it will raise a runtime exception.
-	 * 
+	 *
 	 * @param jso
 	 *            object that will be wrapped
 	 * @return initialized wrapper
@@ -235,8 +235,7 @@ public class WrapperUtils
 	}-*/;
 
 	private static native String getJavaScriptClassName( JavaScriptObject jso ) /*-{
-		return jso.constructor.name ? jso.constructor.name : jso.constructor
-				.toString().match(/function ([a-zA-z0-9]*)/)[1];
+		return jso.constructor.name ? jso.constructor.name : "";
 	}-*/;
 
 	private static native String getAmChartCName( JavaScriptObject jso ) /*-{
@@ -245,7 +244,7 @@ public class WrapperUtils
 
 	/**
 	 * Does the same thing as {@link Class#getSimpleName()} which isn't currently supported by GWT.
-	 * 
+	 *
 	 * @param klass
 	 *            class for which to return the name
 	 * @return name of the class stripped of it's package name
@@ -261,7 +260,7 @@ public class WrapperUtils
 
 	/**
 	 * Wraps JavaScript list into Java list. Also wraps the objects inside the list.
-	 * 
+	 *
 	 * @param list
 	 *            JavaScript list for conversion
 	 * @return new instance of Java list
@@ -338,7 +337,7 @@ public class WrapperUtils
 
 	/**
 	 * Converts Java list into JavaScript list and unwraps the objects contained in it by exposing the underlying JavaScriptObjectS.
-	 * 
+	 *
 	 * @param list
 	 *            list for conversion
 	 * @return JavaScript list
@@ -361,7 +360,7 @@ public class WrapperUtils
 
 	/**
 	 * Converts a Java map into a JavaScript map. Also unwraps the objects inside.
-	 * 
+	 *
 	 * @param map
 	 * @return
 	 */
@@ -399,7 +398,7 @@ public class WrapperUtils
 
 	/**
 	 * Converts a JavaScript map into a Java map. Also wraps the objects inside.
-	 * 
+	 *
 	 * @param map
 	 *            JavaScript map for conversion
 	 * @return Java map containing wrapper objects or null if passed object is not a JavaScript map
