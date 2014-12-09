@@ -11,6 +11,7 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaugeAxis
 {
 	private GaugeAxisJSO jso;
+	private List<IsGaugeBand> bands;
 
 	protected GaugeAxis()
 	{
@@ -136,13 +137,14 @@ public final class GaugeAxis implements IJavaScriptWrapper<GaugeAxisJSO>, IsGaug
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
 	public final List<IsGaugeBand> getBands(){
-		return getJso().getBands();
+		return this.bands;
 	}
 
 	/**
 	 * Array of bands - GaugeBand objects. Bands are used to draw color fills between specified values.
 	 */
 	public final  void setBands( List<IsGaugeBand> bands ){
+		this.bands = bands;
 		getJso().setBands( bands );
 	}
 

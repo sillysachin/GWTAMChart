@@ -12,6 +12,10 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 
 public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, IsAmCoordinateChart
 {
+	private List<IsValueAxis> valueAxes;
+
+	private List<IsGuide> guides;
+
 	protected AmCoordinateChart()
 	{
 	}
@@ -87,7 +91,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	 */
 	public final List<IsGuide> getGuides()
 	{
-		return getJso().getGuides();
+		return this.guides;
 	}
 
 	/**
@@ -95,6 +99,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	 */
 	public final void setGuides( List<IsGuide> guides )
 	{
+		this.guides = guides;
 		getJso().setGuides( guides );
 	}
 
@@ -183,7 +188,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	 */
 	public final List<IsValueAxis> getValueAxes()
 	{
-		return getJso().getValueAxes();
+		return this.valueAxes;
 	}
 
 	/**
@@ -191,6 +196,7 @@ public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, Is
 	 */
 	public final void setValueAxes( List<IsValueAxis> valueAxes )
 	{
+		this.valueAxes = valueAxes;
 		getJso().setValueAxes( valueAxes );
 	}
 

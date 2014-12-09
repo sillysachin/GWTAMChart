@@ -11,6 +11,10 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 
 public final class AmAngularGauge extends AmChart implements IsAmAngularChart, IJavaScriptWrapper
 {
+	private List<IsGaugeArrow> arrows;
+
+	private List<IsGaugeAxis> axes;
+
 	protected AmAngularGauge()
 	{
 		jso = createJso();
@@ -55,7 +59,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	 */
 	public final List<IsGaugeArrow> getArrows()
 	{
-		return getJso().getArrows();
+		return this.arrows;
 	}
 
 	/**
@@ -63,6 +67,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	 */
 	public final void setArrows( List<IsGaugeArrow> arrows )
 	{
+		this.arrows = arrows;
 		getJso().setArrows( arrows );
 	}
 
@@ -71,7 +76,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	 */
 	public final List<IsGaugeAxis> getAxes()
 	{
-		return getJso().getAxes();
+		return this.axes;
 	}
 
 	/**
@@ -79,6 +84,7 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart, I
 	 */
 	public final void setAxes( List<IsGaugeAxis> axes )
 	{
+		this.axes = axes;
 		getJso().setAxes( axes );
 	}
 

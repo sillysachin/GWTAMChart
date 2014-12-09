@@ -124,7 +124,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setColors( List<String> colors )
 	/*-{
-		this.colors = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(colors);
+		this.colors = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(colors);
 	}-*/;
 
 	@Override
@@ -148,7 +148,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setGradientRatio( List<Double> gradientRatio )
 	/*-{
-		this.gradientRatio = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(gradientRatio);
+		this.gradientRatio = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(gradientRatio);
 	}-*/;
 
 	@Override

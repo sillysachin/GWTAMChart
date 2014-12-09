@@ -1,0 +1,6 @@
+api package to maintain interfaces to be implemented across jso, json, impl packages.
+jso package to have only JavaScriptObject corresponding to AmCharts objects.
+json package --> gwt rpc serializable objects.
+json package --> objects serializale to json strings using jackson or gson .
+
+Function - JSFunctionSerializer, JSFunction, IsFunction

@@ -36,7 +36,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "Array of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setDayNames( List<String> dayNames ) /*-{
-		this.dayNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(dayNames);
+		this.dayNames = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(dayNames);
 	}-*/;
 
 	/**
@@ -50,7 +50,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "Array of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setMonthNames( List<String> monthNames ) /*-{
-		this.monthNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(monthNames);
+		this.monthNames = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(monthNames);
 	}-*/;
 
 	/**
@@ -78,7 +78,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "Array of short versions of day names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setShortDayNames( List<String> shortDayNames ) /*-{
-		this.shortDayNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(shortDayNames);
+		this.shortDayNames = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(shortDayNames);
 	}-*/;
 
 	/**
@@ -92,7 +92,7 @@ public final class AmChartsJSO extends JavaScriptObject implements IsAmCharts
 	 * "Array of short versions of month names, used when formatting dates (if categoryAxis.parseDates is set to true)"
 	 */
 	public final native void setShortMonthNames( List<String> shortMonthNames ) /*-{
-		this.shortMonthNames = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(shortMonthNames);
+		this.shortMonthNames = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(shortMonthNames);
 	}-*/;
 
 	/**

@@ -10,6 +10,8 @@ import com.amcharts.jso.AmRectangularChartJSO;
 
 public class AmRectangularChart extends AmCoordinateChart implements IsAmRectangularChart
 {
+	private List<IsTrendLine> trendLines;
+
 	protected AmRectangularChart()
 	{
 	}
@@ -285,7 +287,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	 */
 	public final List<IsTrendLine> getTrendLines()
 	{
-		return getJso().getTrendLines();
+		return this.trendLines;
 	}
 
 	/**
@@ -293,6 +295,7 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	 */
 	public final void setTrendLines( List<IsTrendLine> trendLines )
 	{
+		this.trendLines = trendLines;
 		getJso().setTrendLines( trendLines );
 	}
 

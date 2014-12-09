@@ -39,7 +39,7 @@ public class AmCoordinateChartJSO extends AmChartJSO implements IsAmCoordinateCh
 	 * "Specifies the colors of the graphs if the lineColor of a graph is not set. It there are more graphs then colors in this array, the chart picks random color."
 	 */
 	public final native void setColors( List<String> colors ) /*-{
-		this.colors = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(colors);
+		this.colors = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(colors);
 	}-*/;
 
 	/**

@@ -48,6 +48,14 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 
 	private LayoutPanel divWrapper = new LayoutPanel();
 
+	private List<IsTitle> titles;
+
+	private List<IsNumberPrefix> prefixesOfSmallNumbers;
+
+	private List<IsNumberPrefix> prefixesOfBigNumbers;
+
+	private List<IsLabel> allLabels;
+
 	protected AmChart()
 	{
 		init();
@@ -172,19 +180,13 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	@Override
 	public List<IsLabel> getAllLabels()
 	{
-		List<IsLabel> allJSOLabels = new ArrayList<IsLabel>();
-		for ( IsLabel labelJSO : getJso().getAllLabels() )
-		{
-			Label label = new Label();
-			label.setJso( ( LabelJSO ) labelJSO );
-			allJSOLabels.add( label );
-		}
-		return allJSOLabels;
+		return this.allLabels;
 	}
 
 	@Override
 	public void setAllLabels( List<IsLabel> allLabels )
 	{
+		this.allLabels = allLabels;
 		getJso().setAllLabels( allLabels );
 	}
 
@@ -429,24 +431,26 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	@Override
 	public List<IsNumberPrefix> getPrefixesOfBigNumbers()
 	{
-		return getJso().getPrefixesOfBigNumbers();
+		return this.prefixesOfBigNumbers;
 	}
 
 	@Override
 	public void setPrefixesOfBigNumbers( List<IsNumberPrefix> prefixesOfBigNumbers )
 	{
+		this.prefixesOfBigNumbers = prefixesOfBigNumbers;
 		getJso().setPrefixesOfBigNumbers( prefixesOfBigNumbers );
 	}
 
 	@Override
 	public List<IsNumberPrefix> getPrefixesOfSmallNumbers()
 	{
-		return getJso().getPrefixesOfSmallNumbers();
+		return this.prefixesOfSmallNumbers;
 	}
 
 	@Override
 	public void setPrefixesOfSmallNumbers( List<IsNumberPrefix> prefixesOfSmallNumbers )
 	{
+		this.prefixesOfSmallNumbers = prefixesOfSmallNumbers;
 		getJso().setPrefixesOfSmallNumbers( prefixesOfSmallNumbers );
 	}
 
@@ -474,19 +478,13 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	@Override
 	public List<IsTitle> getTitles()
 	{
-		List<IsTitle> titles = new ArrayList<IsTitle>();
-		for ( IsTitle titleJSO : getJso().getTitles() )
-		{
-			Title title = new Title();
-			title.setJso( ( TitleJSO ) titleJSO );
-			titles.add( title );
-		}
-		return titles;
+		return this.titles;
 	}
 
 	@Override
 	public void setTitles( List<IsTitle> titles )
 	{
+		this.titles = titles;
 		getJso().setTitles( titles );
 	}
 

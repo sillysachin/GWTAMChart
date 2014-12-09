@@ -96,6 +96,7 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 		getJso().setBrightnessStep( brightnessStep );
 	}
 
+	//TODO: JSO to Impl
 	@Override
 	public List<IsSlice> getChartData()
 	{
@@ -136,7 +137,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	public void setDescriptionField( String descriptionField )
 	{
 		getJso().setDescriptionField( descriptionField );
-
 	}
 
 	@Override
@@ -149,7 +149,6 @@ public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 	public void setGradientRatio( List<Double> gradientRatio )
 	{
 		getJso().setGradientRatio( gradientRatio );
-
 	}
 
 	@Override

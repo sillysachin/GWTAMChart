@@ -4,17 +4,16 @@ Complete - Clean up json package - json should not have references to Object in 
 Complete - Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>
 Complete - Clean up IsFunction placeholder and other function related methods.
 Complete - Clean up events to go with simpler AmChartListener
-Revisit generics with AmChart<T extends AmChartDataObject>
+Complete - Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
+Complete - Ensure "this" accessor prefix in all getters in jso package.
 Support AMStockChart api's
 Enhance DataProvider support
 Partial - Provide conversion from JSON to Impl
 Convert All Demos to JSON charts.
-Setup "Export" form JSON charts.
 Split the demo code into separate project
 Address all todos
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
 Improve Code generation in "gen"
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
-Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
 Ensure 1:1 match between json and api classes.
-Complete - Ensure "this" accessor prefix in all getters in jso package.
+Fix generics across packages.

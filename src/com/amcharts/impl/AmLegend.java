@@ -15,6 +15,8 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 {
 	private AmLegendJSO jso;
 
+	private List<IsAmLegendData> data;
+
 	public AmLegend()
 	{
 		jso = createJso();
@@ -151,7 +153,7 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	 */
 	public final <T extends IsAmLegendData> List<T> getData()
 	{
-		return getJso().getData();
+		return ( List<T> ) this.data;
 	}
 
 	/**
@@ -159,6 +161,7 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	 */
 	public final <T extends IsAmLegendData> void setData( List<T> data )
 	{
+		this.data = ( List<IsAmLegendData> ) data;
 		getJso().setData( data );
 	}
 
@@ -669,14 +672,16 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	/**
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
-	public final IsFunction getValueFunction(){
+	public final IsFunction getValueFunction()
+	{
 		return getJso().getValueFunction();
 	}
 
 	/**
 	 * You can use it to format value labels in any way you want. Legend will call this method and will pass GraphDataItem and formatted text of currently hovered item (works only withChartCursor added to the chart). This method should return string which will be displayed as value in the legend.
 	 */
-	public final void setValueFunction( IsFunction valueFunction ) {
+	public final void setValueFunction( IsFunction valueFunction )
+	{
 		getJso().setValueFunction( valueFunction );
 	}
 

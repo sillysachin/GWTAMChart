@@ -15,6 +15,8 @@ public class AxisBase implements IsAxisBase
 
 	private HandlerManager handlerManager;
 
+	private List<IsGuide> guides;
+
 	public AxisBaseJSO getJso()
 	{
 		return jso;
@@ -253,13 +255,14 @@ public class AxisBase implements IsAxisBase
 	 * The array of guides belonging to this axis.
 	 */
 	public final  <T extends IsGuide> List<T> getGuides() {
-		return getJso().getGuides();
+		return ( List<T> ) this.guides;
 	}
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
 	public final  <T extends IsGuide> void setGuides( List<T> guides ) {
+		this.guides = ( List<IsGuide> ) guides;
 		getJso().setGuides( guides );
 	}
 

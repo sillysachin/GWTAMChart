@@ -12,6 +12,8 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 
 public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper<CategoryAxisJSO>
 {
+	private List<IsDateFormat> dateFormats;
+
 	protected CategoryAxis()
 	{
 		setJso( createJso() );
@@ -135,7 +137,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	 */
 	public final <T extends IsDateFormat> List<T> getDateFormats()
 	{
-		return getJso().getDateFormats();
+		return ( List<T> ) this.dateFormats;
 	}
 
 	/**
@@ -144,6 +146,7 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	 */
 	public final <T extends IsDateFormat> void setDateFormats( List<T> dateFormats )
 	{
+		this.dateFormats = ( List<IsDateFormat> ) dateFormats;
 		getJso().setDateFormats( dateFormats );
 	}
 
