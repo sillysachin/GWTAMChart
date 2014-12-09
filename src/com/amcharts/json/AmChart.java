@@ -3,7 +3,7 @@ package com.amcharts.json;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.amcharts.api.AmChartDataObject;
+import com.amcharts.api.AmChartData;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
@@ -33,7 +33,7 @@ public class AmChart implements IsAmChart
 
 	private String creditsPosition;
 
-	private List<? extends AmChartDataObject> dataProvider;
+	private List<? extends AmChartData> dataProvider;
 
 	private String decimalSeparator;
 
@@ -189,13 +189,13 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public List<? extends AmChartDataObject> getDataProvider()
+	public List<? extends AmChartData> getDataProvider()
 	{
 		return dataProvider;
 	}
 
 	@Override
-	public void setDataProvider( List<? extends AmChartDataObject> dataProvider )
+	public void setDataProvider( List<? extends AmChartData> dataProvider )
 	{
 		this.dataProvider = dataProvider;
 	}

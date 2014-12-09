@@ -2,7 +2,7 @@ package com.amcharts.jso;
 
 import java.util.List;
 
-import com.amcharts.api.AmChartDataObject;
+import com.amcharts.api.AmChartData;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
@@ -128,15 +128,15 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native List<? extends AmChartDataObject> getDataProvider()
+	public final native List<AmChartDataJSO> getDataProvider()
 	/*-{
-		return this.dataProvider;
+		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.dataProvider);
 	}-*/;
 
 	@Override
-	public final native void setDataProvider( List<? extends AmChartDataObject> dataProvider )
+	public final native void setDataProvider( List< ? extends AmChartData> dataProvider )
 	/*-{
-		this.dataProvider = dataProvider;
+		this.dataProvider = @com.amcharts.impl.util.WrapperUtils::getJSOArray(Ljava/util/List;)(dataProvider);
 	}-*/;
 
 	@Override

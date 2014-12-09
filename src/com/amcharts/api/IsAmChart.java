@@ -40,9 +40,9 @@ public interface IsAmChart
 
 	void setCreditsPosition( String creditsPosition );
 
-	List<? extends AmChartDataObject> getDataProvider();
+	List<? extends AmChartData> getDataProvider();
 
-	void setDataProvider( List<? extends AmChartDataObject> dataProvider );
+	void setDataProvider( List<? extends AmChartData> dataProvider );
 
 	String getDecimalSeparator();
 

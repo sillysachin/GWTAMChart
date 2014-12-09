@@ -25,9 +25,8 @@ public class GWTAMChart implements EntryPoint
 	{
 		// GWTAMChartSample.pieChartByJSNI();
 		// GWTAMChartSample.serialChartByJSNI();
-		// GWTAMChartSample.chartByServerJSON();
+		GWTAMChartSample.chartByServerJSON();
 		// GWTAMChartSample.lineWithTrendLineChartByJSNI();
-		// GWTAMChartSample.chartByServerJSON();
 		// SimplePieChart simplePieChart = new SimplePieChart();
 		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
 		// DonutChart threeDPieChart = new DonutChart();
@@ -55,6 +54,6 @@ public class GWTAMChart implements EntryPoint
 		// StackedArea stackedArea = new StackedArea();
 		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
 		// UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
-		MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
+		// MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
 	}
 }

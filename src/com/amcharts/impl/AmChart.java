@@ -2,7 +2,7 @@ package com.amcharts.impl;
 
 import java.util.List;
 
-import com.amcharts.api.AmChartDataObject;
+import com.amcharts.api.AmChartData;
 import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
@@ -27,7 +27,7 @@ import com.amcharts.impl.event.chart.InitEvent;
 import com.amcharts.impl.event.chart.InitHandler;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
-import com.amcharts.impl.util.WrapperUtils;
+import com.amcharts.jso.AmChartDataJSO;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -273,14 +273,16 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 	}-*/;
 
 	@Override
-	public native List<? extends AmChartDataObject> getDataProvider() /*-{
-		return this.@com.amcharts.impl.AmChart::jso.dataProvider;
-	}-*/;
+	public List< ? extends AmChartDataJSO> getDataProvider()
+	{
+		return getJso().getDataProvider();
+	}
 
 	@Override
-	public native void setDataProvider( List<? extends AmChartDataObject> dataProvider ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.dataProvider = dataProvider;
-	}-*/;
+	public void setDataProvider( List< ? extends AmChartData> dataProvider )
+	{
+		getJso().setDataProvider( dataProvider );
+	}
 
 	@Override
 	public native String getDecimalSeparator() /*-{

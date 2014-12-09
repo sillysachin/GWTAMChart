@@ -1,8 +1,8 @@
 package com.amcharts.json;
 
-import com.amcharts.api.AmChartDataObject;
+import com.amcharts.api.AmChartData;
 
-public class PieChartSlice implements AmChartDataObject
+public class PieChartSlice implements AmChartData
 {
 	private static final long serialVersionUID = -6197470312910551481L;
 

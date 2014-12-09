@@ -1,6 +1,7 @@
 package com.appbootup.explore.gwt.client;
 
 import java.util.Date;
+import java.util.List;
 
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
@@ -14,6 +15,8 @@ import com.amcharts.impl.TrendLine;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.util.LogUtils;
+import com.amcharts.jso.AmChartDataJSO;
 import com.amcharts.jso.AmPieChartJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -25,6 +28,8 @@ import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.http.client.URL;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
@@ -102,7 +107,21 @@ public class GWTAMChartSample
 						String text = response.getText();
 						AmPieChartJSO amChartJSO = JsonUtils
 								.<AmPieChartJSO> unsafeEval( text );
-						GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text )
+						LogUtils.log( amChartJSO );
+						final List<AmChartDataJSO> dataProvider = amChartJSO
+								.getDataProvider();
+						for ( AmChartDataJSO amChartDataJSO : dataProvider )
+						{
+							LogUtils.log( amChartDataJSO );
+						}
+						AmChartDataJSO jsoObject = AmChartDataJSO
+								.createObject().cast();
+						JSONObject jsonObject = new JSONObject( jsoObject );
+						jsonObject.put( "country", new JSONString( "Utopia" ) );
+						jsonObject.put( "litres", new JSONString( "99" ) );
+						dataProvider.add( jsoObject );
+						LogUtils.log( jsoObject );
+						final GWTAMChartPanel amChartPanel = new GWTAMChartPanel( "chart-dashboard", text )
 						{
 							public void onDrawChart()
 							{
@@ -112,6 +131,8 @@ public class GWTAMChartSample
 									public void function( AmChartEventJSO event )
 									{
 										GWT.log( "Processed Event on JSON to Impl Chart" );
+										event.getChart().setDataProvider( dataProvider );
+										event.getChart().validateData();
 									}
 								} );
 							};
