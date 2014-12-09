@@ -6,7 +6,7 @@ import com.amcharts.jso.MenuItemJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class MenuItem implements IJavaScriptWrapper, IsMenuItem
+public class MenuItem implements IJavaScriptWrapper<JavaScriptObject>, IsMenuItem
 {
 	private MenuItemJSO jso;
 

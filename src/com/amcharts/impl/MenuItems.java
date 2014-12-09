@@ -3,9 +3,8 @@ package com.amcharts.impl;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class MenuItems implements IJavaScriptWrapper
+public class MenuItems implements IJavaScriptWrapper<JavaScriptObject>
 {
-
 	private JavaScriptObject jso;
 
 	public MenuItems()

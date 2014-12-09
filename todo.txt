@@ -1,19 +1,20 @@
 Complete - Clean up api package - api should not have references to gwt imports like JavaScriptObject.
 Complete - Clean up json package - json should not have references to gwt imports like JavaScriptObject.
 Complete - Clean up json package - json should not have references to Object in method signature.
-Complete - Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>
+Complete - Clean up jso package - conversion between list & js array needs to be handled in all get and set dealing with List<T>.
 Complete - Clean up IsFunction placeholder and other function related methods.
-Complete - Clean up events to go with simpler AmChartListener
+Complete - Clean up events to go with simpler AmChartListener.
 Complete - Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
 Complete - Ensure "this" accessor prefix in all getters in jso package.
-Support AMStockChart api's
-Enhance DataProvider support
 Partial - Provide conversion from JSON to Impl
-Convert All Demos to JSON charts.
-Split the demo code into separate project
-Address all todos
+Enhance DataProvider support
+Fix impl class getters returning list.
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
-Improve Code generation in "gen"
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
+Support AMStockChart api's.
+Convert All Demos to JSON charts.
+RequestFactory support.
+Split the demo code into separate project.
+Address all todos.
+Improve Code generation in "gen".
 Ensure 1:1 match between json and api classes.
-Fix generics across packages.

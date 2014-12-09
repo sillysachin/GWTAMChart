@@ -338,15 +338,15 @@ public class AxisBase implements IsAxisBase
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public <T extends IsGuide> List<T> getGuides()
+	public List< ? extends IsGuide> getGuides()
 	{
-		return ( List<T> ) guides;
+		return guides;
 	}
 
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public <T extends IsGuide> void setGuides( List<T> guides )
+	public void setGuides( List< ? extends IsGuide> guides )
 	{
 		this.guides = guides;
 	}

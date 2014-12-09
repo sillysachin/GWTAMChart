@@ -1,6 +1,5 @@
 package com.amcharts.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.amcharts.api.AmChartDataObject;
@@ -28,9 +27,8 @@ import com.amcharts.impl.event.chart.InitEvent;
 import com.amcharts.impl.event.chart.InitHandler;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
+import com.amcharts.impl.util.WrapperUtils;
 import com.amcharts.jso.AmChartJSO;
-import com.amcharts.jso.LabelJSO;
-import com.amcharts.jso.TitleJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -40,9 +38,9 @@ import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public class AmChart<T extends AmChartDataObject> extends ResizeComposite implements IsAmChart<T>, IJavaScriptWrapper<AmChartJSO<T>>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
+public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
 {
-	protected AmChartJSO<T> jso;
+	protected AmChartJSO jso;
 
 	String id;
 
@@ -86,13 +84,13 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	}
 
 	@Override
-	public AmChartJSO<T> getJso()
+	public AmChartJSO getJso()
 	{
 		return jso;
 	}
 
 	@Override
-	public void setJso( AmChartJSO<T> jso )
+	public void setJso( AmChartJSO jso )
 	{
 		this.jso = jso;
 	}
@@ -275,12 +273,12 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 	}-*/;
 
 	@Override
-	public native List<T> getDataProvider() /*-{
+	public native List<? extends AmChartDataObject> getDataProvider() /*-{
 		return this.@com.amcharts.impl.AmChart::jso.dataProvider;
 	}-*/;
 
 	@Override
-	public native void setDataProvider( List<T> dataProvider ) /*-{
+	public native void setDataProvider( List<? extends AmChartDataObject> dataProvider ) /*-{
 		this.@com.amcharts.impl.AmChart::jso.dataProvider = dataProvider;
 	}-*/;
 
@@ -552,7 +550,7 @@ public class AmChart<T extends AmChartDataObject> extends ResizeComposite implem
 		return $wnd.AmCharts.makeChart(container, configJSO, delay);
 	}-*/;
 
-	public native AmChartJSO<T> makeChart( String container, JavaScriptObject configJSO )
+	public native AmChartJSO makeChart( String container, JavaScriptObject configJSO )
 	/*-{
 		this.@com.amcharts.impl.AmChart::setId(Ljava/lang/String;)(container);
 		return $wnd.AmCharts.makeChart(container, configJSO);

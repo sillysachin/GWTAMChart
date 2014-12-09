@@ -2,7 +2,7 @@ package com.amcharts.api;
 
 import java.util.List;
 
-public interface IsAmChart<T extends AmChartDataObject>
+public interface IsAmChart
 {
 	List<IsLabel> getAllLabels();
 
@@ -40,9 +40,9 @@ public interface IsAmChart<T extends AmChartDataObject>
 
 	void setCreditsPosition( String creditsPosition );
 
-	List<T> getDataProvider();
+	List<? extends AmChartDataObject> getDataProvider();
 
-	void setDataProvider( List<T> dataProvider );
+	void setDataProvider( List<? extends AmChartDataObject> dataProvider );
 
 	String getDecimalSeparator();
 

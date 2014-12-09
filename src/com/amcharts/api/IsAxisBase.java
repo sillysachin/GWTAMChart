@@ -167,13 +167,12 @@ public interface IsAxisBase
 	/**
 	 * The array of guides belonging to this axis.
 	 */
-	public <T extends IsGuide> List<T> getGuides();
+	public List< ? extends IsGuide> getGuides();
 
 	/**
 	 * The array of guides belonging to this axis.
-	 * @param <T>
 	 */
-	public <T extends IsGuide> void setGuides( List<T> guides );
+	public void setGuides( List< ? extends IsGuide> guides );
 
 	/**
 	 * 'If autoMargins of a chart is set to true, but you want this axis not to be measured when calculating margin, set ignoreAxisWidth to true.'

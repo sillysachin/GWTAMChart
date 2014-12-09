@@ -5,7 +5,6 @@ import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.JsFunction;
 import com.amcharts.impl.MenuItem;
-import com.amcharts.jso.AmPieChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

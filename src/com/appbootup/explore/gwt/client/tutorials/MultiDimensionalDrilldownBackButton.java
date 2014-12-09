@@ -75,8 +75,8 @@ public class MultiDimensionalDrilldownBackButton
 		GWT.log( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
 
-		ArrayList<Title> titles = new ArrayList<Title>();
-		Title title = new Title();
+		ArrayList<IsTitle> titles = new ArrayList<IsTitle>();
+		final Title title = new Title();
 		titles.add( title );
 		title.setText( chartTitle );
 		amSerialChart.setTitles( titles );
@@ -199,8 +199,6 @@ public class MultiDimensionalDrilldownBackButton
 					chartDataIndex.setIndex( evt.getIndex() );
 					String subSetTitle = dataContext.getSubSetTitle();
 					chartDataIndex.setTitle( subSetTitle );
-					List<IsTitle> chartTitles = evt.getChart().getTitles();
-					Title title = ( Title ) chartTitles.get( 0 );//FIXME: Why the casting?.
 					String titleText = title.getText();
 					chartDataIndex.setPrev( titleText );
 					chartDataIndexes.push( chartDataIndex );

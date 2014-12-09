@@ -170,6 +170,7 @@ public class ColumnChartWithEvents
 						.getSerialDataItem().getAxis( axisId );
 				String graphId = amGraph1.getId();
 				IsGraphDataItem graph = axis.getGraph( graphId );
+				GWT.log( graph.getSerialDataItem().getCategory() );
 			}
 		} );
 

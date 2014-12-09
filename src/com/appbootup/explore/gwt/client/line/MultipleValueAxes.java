@@ -16,7 +16,6 @@ import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
@@ -30,8 +29,6 @@ public class MultipleValueAxes
 					@Override
 					public void onSuccess( String chartData )
 					{
-						JsArray<JavaScriptObject> dataProvider = JsonUtils
-								.unsafeEval( chartData );
 						drawChart( generatechartData() );
 					}
 

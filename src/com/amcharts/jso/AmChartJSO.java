@@ -13,7 +13,7 @@ import com.amcharts.api.IsNumberPrefix;
 import com.amcharts.api.IsTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject implements IsAmChart<T>
+public class AmChartJSO extends JavaScriptObject implements IsAmChart
 {
 	protected AmChartJSO()
 	{
@@ -128,13 +128,13 @@ public class AmChartJSO<T extends AmChartDataObject> extends JavaScriptObject im
 	}-*/;
 
 	@Override
-	public final native List<T> getDataProvider()
+	public final native List<? extends AmChartDataObject> getDataProvider()
 	/*-{
 		return this.dataProvider;
 	}-*/;
 
 	@Override
-	public final native void setDataProvider( List<T> dataProvider )
+	public final native void setDataProvider( List<? extends AmChartDataObject> dataProvider )
 	/*-{
 		this.dataProvider = dataProvider;
 	}-*/;

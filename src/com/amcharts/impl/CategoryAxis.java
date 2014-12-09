@@ -12,7 +12,7 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 
 public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJavaScriptWrapper<CategoryAxisJSO>
 {
-	private List<IsDateFormat> dateFormats;
+	private List< ? extends IsDateFormat> dateFormats;
 
 	protected CategoryAxis()
 	{
@@ -135,18 +135,18 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis, IJav
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 * @param <T>
 	 */
-	public final <T extends IsDateFormat> List<T> getDateFormats()
+	public final List< ? extends IsDateFormat> getDateFormats()
 	{
-		return ( List<T> ) this.dateFormats;
+		return this.dateFormats;
 	}
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 * @param <T>
 	 */
-	public final <T extends IsDateFormat> void setDateFormats( List<T> dateFormats )
+	public final void setDateFormats( List< ? extends IsDateFormat> dateFormats )
 	{
-		this.dateFormats = ( List<IsDateFormat> ) dateFormats;
+		this.dateFormats = dateFormats;
 		getJso().setDateFormats( dateFormats );
 	}
 

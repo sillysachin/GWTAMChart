@@ -8,14 +8,12 @@ import com.amcharts.api.IsAmBalloon;
 import com.amcharts.api.IsAmChart;
 import com.amcharts.api.IsAmExport;
 import com.amcharts.api.IsAmLegend;
-import com.amcharts.api.IsCategoryAxis;
 import com.amcharts.api.IsExportConfig;
 import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsNumberPrefix;
 import com.amcharts.api.IsTitle;
-import com.amcharts.api.IsValueAxis;
 
-public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
+public class AmChart implements IsAmChart
 {
 	private List<IsLabel> allLabels;
 
@@ -35,7 +33,7 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 
 	private String creditsPosition;
 
-	private List<T> dataProvider;
+	private List<? extends AmChartDataObject> dataProvider;
 
 	private String decimalSeparator;
 
@@ -82,10 +80,6 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	private Boolean usePrefixes;
 
 	private String version;
-
-	private List<IsValueAxis> valueAxes;
-
-	private IsCategoryAxis categoryAxis;
 
 	@Override
 	public List<IsLabel> getAllLabels()
@@ -195,13 +189,13 @@ public class AmChart<T extends AmChartDataObject> implements IsAmChart<T>
 	}
 
 	@Override
-	public List<T> getDataProvider()
+	public List<? extends AmChartDataObject> getDataProvider()
 	{
 		return dataProvider;
 	}
 
 	@Override
-	public void setDataProvider( List<T> dataProvider )
+	public void setDataProvider( List<? extends AmChartDataObject> dataProvider )
 	{
 		this.dataProvider = dataProvider;
 	}

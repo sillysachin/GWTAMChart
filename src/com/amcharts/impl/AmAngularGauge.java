@@ -7,9 +7,8 @@ import com.amcharts.api.IsFacePattern;
 import com.amcharts.api.IsGaugeArrow;
 import com.amcharts.api.IsGaugeAxis;
 import com.amcharts.jso.AmAngularGaugeJSO;
-import com.google.gwt.core.client.IJavaScriptWrapper;
 
-public final class AmAngularGauge extends AmChart implements IsAmAngularChart, IJavaScriptWrapper
+public final class AmAngularGauge extends AmChart implements IsAmAngularChart
 {
 	private List<IsGaugeArrow> arrows;
 

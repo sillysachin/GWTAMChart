@@ -239,15 +239,15 @@ public final class AmLegend implements IsAmLegend
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public <T extends IsAmLegendData> List<T> getData()
+	public List< ? extends IsAmLegendData> getData()
 	{
-		return ( List<T> ) data;
+		return data;
 	}
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public <T extends IsAmLegendData> void setData( List<T> data )
+	public void setData( List< ? extends IsAmLegendData> data )
 	{
 		this.data = data;
 	}

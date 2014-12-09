@@ -2,9 +2,8 @@ package com.amcharts.impl;
 
 import com.amcharts.api.IsAmRadarChart;
 import com.amcharts.jso.AmRadarChartJSO;
-import com.google.gwt.core.client.IJavaScriptWrapper;
 
-public final class AmRadarChart extends AmCoordinateChart implements IJavaScriptWrapper, IsAmRadarChart
+public final class AmRadarChart extends AmCoordinateChart implements IsAmRadarChart
 {
 	protected AmRadarChart()
 	{

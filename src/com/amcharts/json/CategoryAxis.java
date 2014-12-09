@@ -147,15 +147,15 @@ public final class CategoryAxis extends AxisBase implements IsCategoryAxis
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public <T extends IsDateFormat> List<T> getDateFormats()
+	public List<? extends IsDateFormat> getDateFormats()
 	{
-		return ( List<T> ) dateFormats;
+		return dateFormats;
 	}
 
 	/**
 	 * "Date formats of different periods. Possible period values: fff - milliseconds, ss - seconds, mm - minutes, hh - hours, DD - days, MM - months, WW - weeks, YYYY - years. Check this page for date formatting strings."
 	 */
-	public <T extends IsDateFormat> void setDateFormats( List<T> dateFormats )
+	public void setDateFormats( List<? extends IsDateFormat> dateFormats )
 	{
 		this.dateFormats = dateFormats;
 	}

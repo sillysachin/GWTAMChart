@@ -5,7 +5,6 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
-import com.amcharts.jso.AmFunnelChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;

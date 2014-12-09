@@ -88,13 +88,13 @@ public interface IsAmLegend
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 * @param <T>
 	 */
-	public <T extends IsAmLegendData> List<T> getData();
+	public List< ? extends IsAmLegendData> getData();
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 * @param <T>
 	 */
-	public <T extends IsAmLegendData> void setData( List<T> data );
+	public void setData( List< ? extends IsAmLegendData> data );
 
 	/**
 	 * You can set id of a div or a reference to div object in case you want the legend to be placed in a separate container.

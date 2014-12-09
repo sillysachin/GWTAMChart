@@ -10,7 +10,7 @@ import com.amcharts.jso.MenuItemsJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class ExportConfig implements IsExportConfig, IJavaScriptWrapper
+public class ExportConfig implements IsExportConfig, IJavaScriptWrapper<JavaScriptObject>
 {
 	private JavaScriptObject jso;
 

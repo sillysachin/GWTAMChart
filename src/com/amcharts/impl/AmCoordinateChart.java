@@ -8,9 +8,8 @@ import com.amcharts.api.IsCoordinateDataItem;
 import com.amcharts.api.IsGuide;
 import com.amcharts.api.IsValueAxis;
 import com.amcharts.jso.AmCoordinateChartJSO;
-import com.google.gwt.core.client.IJavaScriptWrapper;
 
-public class AmCoordinateChart extends AmChart implements IJavaScriptWrapper, IsAmCoordinateChart
+public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 {
 	private List<IsValueAxis> valueAxes;
 

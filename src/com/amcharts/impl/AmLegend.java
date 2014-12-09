@@ -15,7 +15,7 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 {
 	private AmLegendJSO jso;
 
-	private List<IsAmLegendData> data;
+	private List<? extends IsAmLegendData> data;
 
 	public AmLegend()
 	{
@@ -151,17 +151,17 @@ public final class AmLegend implements IJavaScriptWrapper<AmLegendJSO>, IsAmLege
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final <T extends IsAmLegendData> List<T> getData()
+	public final List<? extends IsAmLegendData> getData()
 	{
-		return ( List<T> ) this.data;
+		return this.data;
 	}
 
 	/**
 	 * "You can pass array of objects with title, color, markerType values, for example: [{title: 'One', color: '#3366CC'},{title: 'Two', color: '#FFCC33'}]"
 	 */
-	public final <T extends IsAmLegendData> void setData( List<T> data )
+	public final void setData( List<? extends IsAmLegendData> data )
 	{
-		this.data = ( List<IsAmLegendData> ) data;
+		this.data = data;
 		getJso().setData( data );
 	}
 

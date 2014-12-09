@@ -3,7 +3,6 @@ package com.appbootup.explore.gwt.client.chart.pie;
 import com.amcharts.impl.AmBalloon;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
-import com.amcharts.jso.AmFunnelChartJSO;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
