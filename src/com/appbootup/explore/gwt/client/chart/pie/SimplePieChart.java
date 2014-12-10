@@ -56,7 +56,7 @@ public class SimplePieChart
 		menuItem1.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem1 );
 		MenuItem menuItem2 = new MenuItem();
-		menuItem2.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "menu-24.png" );
+		menuItem2.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "circular6-24.png" );
 		Item item = new Item();
 		menuItem2.addItem( item );
 		exportConfig.addMenuItem( menuItem2 );

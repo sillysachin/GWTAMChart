@@ -7,15 +7,16 @@ Complete - Clean up events to go with simpler AmChartListener.
 Complete - Ensure all jso objects are inaccessible and all chart manipulation is done only via impl objects.
 Complete - Ensure "this" accessor prefix in all getters in jso package.
 Partial - Provide conversion from JSON to Impl
-Enhance DataProvider support
+Enhance DataProvider support with magic get/set
 Fix impl class getters returning list.
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
-Add method for list references across impl objects.
+Add/Remove method for list references across impl objects.
 Support AMStockChart api's.
 Convert All Demos to JSON charts.
 RequestFactory support.
 Split the demo code into separate project.
+Remove all jsni code in demo's related to DataProvider.
 Address all todos.
 Improve Code generation in "gen".
 Ensure 1:1 match between json and api classes.
