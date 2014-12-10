@@ -9,14 +9,20 @@ import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
+import com.amcharts.impl.Slice;
 import com.amcharts.impl.Title;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.event.AmChartEventJSO;
+import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.event.DataContext;
+import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class LinkingPieChartColumnChartDrillDataDisplay
@@ -44,11 +50,12 @@ public class LinkingPieChartColumnChartDrillDataDisplay
 
 	protected void drawChart( final JsArray<JavaScriptObject> chartData )
 	{
-		JsArray<JavaScriptObject> collectiveData = getCollectiveData( chartData );
+		final JsArray<JavaScriptObject> collectiveData = getCollectiveData( chartData );
 
+		LogUtils.log( chartData );
 		AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setDataProvider( chartData );
-		amPieChart.setValueField( "project" );
+		amPieChart.setValueField( "projects" );
 		amPieChart.setTitleField( "department" );
 		amPieChart.setLabelText( "[[title]]: [[value]]" );
 		amPieChart.setPullOutOnlyOne( true );
@@ -92,25 +99,45 @@ public class LinkingPieChartColumnChartDrillDataDisplay
 		valueAxes.add( valueAxis );
 		amSerialChart.setValueAxes( valueAxes );
 
-		amPieChart.setSize( "620px", "500px" );
-		amSerialChart.setSize( "620px", "500px" );
+		amPieChart.setSize( "620px", "400px" );
+		amSerialChart.setSize( "620px", "400px" );
 
-//		chart.addListener("pullOutSlice", function (event) {
-//		    chart2.dataProvider = event.dataItem.dataContext.months;
-//		    chart2.titles[0].text = event.dataItem.dataContext.department;
-//		    chart2.validateData();
-//		    chart2.animateAgain();
-//		});
-//
-//		chart.addListener("pullInSlice", function (event) {
-//		    chart2.dataProvider = collectiveData;
-//		    chart2.titles[0].text = "All departments";
-//		    chart2.validateData();
-//		    chart2.animateAgain();
-//		});
+		amPieChart.addListener( "pullOutSlice", new AmChartListener()
+		{
+			public void function( AmChartEventJSO event )
+			{
+				Slice dataItem = ( Slice ) event.getDataItem();
+				DataContext dataContext = ( DataContext ) dataItem
+						.getDataContext();
+				amSerialChart
+						.setDataProvider( ( JsArray<JavaScriptObject> ) dataContext
+								.get( "months" ) );
+				Title amSerialChartTitle = ( Title ) amSerialChart.getTitles()
+						.get( 0 );
+				amSerialChartTitle.setText( ( String ) dataContext
+						.get( "department" ) );
 
-		RootLayoutPanel.get().add( amPieChart );
-		//RootLayoutPanel.get().add( amSerialChart );
+				amSerialChart.validateData();
+				amSerialChart.animateAgain();
+			}
+		} );
+		amPieChart.addListener( "pullInSlice", new AmChartListener()
+		{
+			public void function( AmChartEventJSO event )
+			{
+				amSerialChart.setDataProvider( collectiveData );
+				Title amSerialChartTitle = ( Title ) amSerialChart.getTitles()
+						.get( 0 );
+				amSerialChartTitle.setText( "All departments" );
+				amSerialChart.validateData();
+				amSerialChart.animateAgain();
+			}
+		} );
+
+		HorizontalPanel contentWrapper = new HorizontalPanel();
+		contentWrapper.add( amPieChart );
+		contentWrapper.add( amSerialChart );
+		RootLayoutPanel.get().add( contentWrapper );
 	}
 
 	private native JsArray<JavaScriptObject> getCollectiveData( JsArray<JavaScriptObject> chartData )

@@ -1,7 +1,6 @@
 package com.appbootup.explore.gwt.client.tutorials;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 import com.amcharts.api.IsTitle;
@@ -34,6 +33,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -68,7 +68,8 @@ public class MultiDimensionalDrilldownBackButton
 	protected void drawChart( final JsArray<JavaScriptObject> chartData )
 	{
 		final HorizontalPanel amToolbar = new HorizontalPanel();
-		final Anchor anchorAmChartMenuGoBack = new Anchor( "<b>Go Back</b>", true );
+		final HTML htmlAmChartMenuGoBack = new HTML( "<b>Go Back</b> : ", true );
+		final Anchor anchorAmChartMenuGoBack = new Anchor( "", true );
 
 		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
@@ -171,6 +172,7 @@ public class MultiDimensionalDrilldownBackButton
 			@Override
 			public void onRendered( RenderedEvent event )
 			{
+				htmlAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
 				anchorAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
 				anchorAmChartMenuGoBack.addClickHandler( new ClickHandler()
 				{
@@ -180,6 +182,7 @@ public class MultiDimensionalDrilldownBackButton
 						goBack( chartData, amSerialChart, anchorAmChartMenuGoBack );
 					}
 				} );
+				amToolbar.add( htmlAmChartMenuGoBack );
 				amToolbar.add( anchorAmChartMenuGoBack );
 			}
 		} );
@@ -203,7 +206,7 @@ public class MultiDimensionalDrilldownBackButton
 					chartDataIndex.setPrev( titleText );
 					chartDataIndexes.push( chartDataIndex );
 					amChart.setDataProvider( subSet );
-					anchorAmChartMenuGoBack.setText( "Go Back " + titleText );
+					anchorAmChartMenuGoBack.setText( titleText );
 					title.setText( subSetTitle );
 					amChart.validateData();
 				}
@@ -235,17 +238,16 @@ public class MultiDimensionalDrilldownBackButton
 
 		// Apply titles and stuff
 		anchorAmChartMenuGoBack
-				.setText( tmp.getPrev() != null ? "Go Back " + tmp.getPrev() : "" );
+				.setText( tmp.getPrev() != null ? tmp.getPrev() : "" );
 
-		List< ? extends IsTitle> titles = amSerialChart.getTitles();
-		Title title = ( Title ) titles.get( 0 );
+		Title amSerialChartTitle = ( Title ) amSerialChart.getTitles().get( 0 );
 		if ( tmp.getTitle() != null )
 		{
-			title.setText( tmp.getTitle() );
+			amSerialChartTitle.setText( tmp.getTitle() );
 		}
 		else
 		{
-			title.setText( chartTitle );
+			amSerialChartTitle.setText( chartTitle );
 		}
 		amSerialChart.setDataProvider( previousData );
 		amSerialChart.validateData();

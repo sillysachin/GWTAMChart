@@ -39,7 +39,6 @@ public class SimplePieChart
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
 		AmPieChart amPieChart = new AmPieChart();
-		amPieChart.setType( "pie" );
 		amPieChart.setDataProvider( chartData );
 		amPieChart.setTheme( "none" );
 		amPieChart.setValueField( "litres" );

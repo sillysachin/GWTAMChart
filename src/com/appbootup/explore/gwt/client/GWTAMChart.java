@@ -1,6 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.tutorials.LinkingPieChartColumnChartDrillDataDisplay;
+import com.appbootup.explore.gwt.client.tutorials.MultiDimensionalDrilldownBackButton;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -54,8 +54,7 @@ public class GWTAMChart implements EntryPoint
 		// StackedArea stackedArea = new StackedArea();
 		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
 		// UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
-		// MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
-		LinkingPieChartColumnChartDrillDataDisplay lpcccddDisplay = new LinkingPieChartColumnChartDrillDataDisplay();
-
+		MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
+		// LinkingPieChartColumnChartDrillDataDisplay lpcccddDisplay = new LinkingPieChartColumnChartDrillDataDisplay();
 	}
 }
