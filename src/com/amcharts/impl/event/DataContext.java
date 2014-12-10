@@ -100,11 +100,6 @@ public class DataContext extends JavaScriptObject implements IsDataContext
 		this.type = type;
 	}-*/;
 
-	public final native JsArray<JavaScriptObject> getSubSet()
-	/*-{
-		return this.subSet;
-	}-*/;
-
 	/* (non-Javadoc)
 	 * @see com.amcharts.api.event.IsDataContext#getSubSetTitle()
 	 */
@@ -112,5 +107,15 @@ public class DataContext extends JavaScriptObject implements IsDataContext
 	public final native String getSubSetTitle()
 	/*-{
 		return this.subSetTitle;
+	}-*/;
+
+	public final native JsArray<JavaScriptObject> getSubSet()
+	/*-{
+		return this.subSet;
+	}-*/;
+
+	public final native Object get( String key )
+	/*-{
+		return this[key];
 	}-*/;
 }
