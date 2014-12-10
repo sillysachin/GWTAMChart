@@ -63,20 +63,18 @@ public class WrapperUtils
 		String cName = getAmChartCName( jso );
 		String jsoClassName = getJSOClassName( jso );
 		IJavaScriptWrapper wrapper = null;
-		if ( "Object".equals( className ) )
+
+		if ( !"".equals( jsoClassName.trim() ) )
 		{
-			wrapper = createWrapperByJSOClassName( jsoClassName );
+			wrapper = createWrapper( jsoClassName );
 		}
-		else
+		else if ( !"".equals( className.trim() ) )
 		{
-			if ( "".equals( className ) )
-			{
-				wrapper = createWrapper( cName );
-			}
-			else
-			{
-				wrapper = createWrapper( className );
-			}
+			wrapper = createWrapper( className );
+		}
+		else if ( !"".equals( cName.trim() ) )
+		{
+			wrapper = createWrapper( cName );
 		}
 
 		if ( wrapper == null )
@@ -86,34 +84,6 @@ public class WrapperUtils
 
 		wrapper.setJso( jso );
 
-		return wrapper;
-	}
-
-	private static IJavaScriptWrapper createWrapperByJSOClassName( String className )
-	{
-		IJavaScriptWrapper wrapper = null;
-		GWT.log( className );
-		// GWT compiler cannot dynamically create the class with GWT.create(classLiteral) method. Hence the if-else.
-		if ( className.equals( getSimpleName( MenuItemOutput.class ) ) )
-		{
-			wrapper = GWT.create( MenuItemOutput.class );
-		}
-		else if ( className.equals( getSimpleName( AmExport.class ) ) )
-		{
-			wrapper = GWT.create( AmExport.class );
-		}
-		else if ( className.equals( getSimpleName( FacePattern.class ) ) )
-		{
-			wrapper = GWT.create( FacePattern.class );
-		}
-		else if ( className.equals( getSimpleName( AmLegendData.class ) ) )
-		{
-			wrapper = GWT.create( AmLegendData.class );
-		}
-		else if ( className.equals( getSimpleName( DurationUnits.class ) ) )
-		{
-			wrapper = GWT.create( DurationUnits.class );
-		}
 		return wrapper;
 	}
 
@@ -225,6 +195,22 @@ public class WrapperUtils
 		else if ( className.equals( getSimpleName( GaugeBand.class ) ) )
 		{
 			wrapper = GWT.create( GaugeBand.class );
+		}
+		else if ( className.equals( getSimpleName( MenuItemOutput.class ) ) )
+		{
+			wrapper = GWT.create( MenuItemOutput.class );
+		}
+		else if ( className.equals( getSimpleName( FacePattern.class ) ) )
+		{
+			wrapper = GWT.create( FacePattern.class );
+		}
+		else if ( className.equals( getSimpleName( AmLegendData.class ) ) )
+		{
+			wrapper = GWT.create( AmLegendData.class );
+		}
+		else if ( className.equals( getSimpleName( DurationUnits.class ) ) )
+		{
+			wrapper = GWT.create( DurationUnits.class );
 		}
 
 		return wrapper;

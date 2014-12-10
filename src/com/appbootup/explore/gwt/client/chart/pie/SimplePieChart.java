@@ -1,10 +1,15 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmCharts;
+import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
+import com.amcharts.impl.Item;
 import com.amcharts.impl.JsFunction;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.MenuItemOutput;
+import com.amcharts.impl.MenuItemOutputCallback;
+import com.amcharts.impl.util.LogUtils;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -46,11 +51,29 @@ public class SimplePieChart
 		amPieChart.setSize( "1240px", "500px" );
 		amPieChart.setGroupedPulled( true );
 		ExportConfig exportConfig = new ExportConfig();
-		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
-		menuItem.setFormat( "png" );
-		exportConfig.addMenuItem( menuItem );
+		MenuItem menuItem1 = new MenuItem();
+		menuItem1.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
+		menuItem1.setFormat( "png" );
+		exportConfig.addMenuItem( menuItem1 );
+		MenuItem menuItem2 = new MenuItem();
+		menuItem2.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "menu-24.png" );
+		Item item = new Item();
+		menuItem2.addItem( item );
+		exportConfig.addMenuItem( menuItem2 );
 		amPieChart.setExportConfig( exportConfig );
+
+		MenuItemOutput menuItemOutput = AmCharts.MenuItemOutput();
+		menuItemOutput.setOnClick( new MenuItemOutputCallback()
+		{
+			public void execute( AmExport instance, MenuItemOutput config )
+			{
+				LogUtils.log( config );
+				LogUtils.log( instance );
+				GWT.log( "We can implment Export,Refresh,Clear,Jump To etc with multiple icons." );
+			}
+		} );
+		exportConfig.setMenuItemOutput( menuItemOutput );
+
 		amPieChart.setGroupPercent( 5.0 );
 		//amPieChart.setLabelFunction( getLabelFunction() );
 		String functionString = getFunctionString();

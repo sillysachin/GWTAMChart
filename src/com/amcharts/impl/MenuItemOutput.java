@@ -87,6 +87,7 @@ public final class MenuItemOutput implements IJavaScriptWrapper<MenuItemOutputJS
 		this.@com.amcharts.impl.MenuItemOutput::jso.onclick = function(
 				instance, config, event) {
 			event.preventDefault();
+			instance.className = 'AmExport';
 			var amExport = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(instance);
 			var menuItemOutput = @com.amcharts.impl.util.WrapperUtils::wrap(Lcom/google/gwt/core/client/JavaScriptObject;)(config);
 			varMenuItemOutputThis.@com.amcharts.impl.MenuItemOutput::execute(Lcom/amcharts/impl/MenuItemOutputCallback;Lcom/amcharts/impl/AmExport;Lcom/amcharts/impl/MenuItemOutput;)(menuItemOutputCallback,amExport, menuItemOutput)
