@@ -11,6 +11,7 @@ Enhance DataProvider support
 Fix impl class getters returning list.
 Add ENUM support to known fixed value attributes like categoryAxis.setGridPosition( "start" );
 Hunt Down all use cases across impl for WrapperUtil nested object and nested list.
+Add method for list references across impl objects.
 Support AMStockChart api's.
 Convert All Demos to JSON charts.
 RequestFactory support.

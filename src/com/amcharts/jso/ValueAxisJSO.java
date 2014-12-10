@@ -140,14 +140,14 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final native Boolean isdoublesOnly() /*-{
+	public final native Boolean isIntegersOnly() /*-{
 		return this.integersOnly;
 	}-*/;
 
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final native void setdoublesOnly( Boolean integersOnly ) /*-{
+	public final native void setIntegersOnly( Boolean integersOnly ) /*-{
 		this.integersOnly = integersOnly;
 	}-*/;
 
@@ -466,8 +466,8 @@ public final class ValueAxisJSO extends AxisBaseJSO implements IsValueAxis
 	}-*/;
 
 	@Override
-	public final native void setDoublesOnly( Boolean integersOnly )
+	public final native void setDoublesOnly( Boolean doublesOnly )
 	/*-{
-		this.doublesOnly = integersOnly;
+		this.doublesOnly = doublesOnly;
 	}-*/;
 }

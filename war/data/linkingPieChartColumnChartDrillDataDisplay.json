@@ -1,0 +1,58 @@
+[{
+    "department": "Marketing",
+    "projects": 23,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 1 },
+        { "category": 2, "projects": 2 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 3 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 3 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}, {
+    "department": "Sales",
+    "projects": 26,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 4 },
+        { "category": 2, "projects": 3 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 4 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 2 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}, {
+    "department": "Logistics",
+    "projects": 30,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 2 },
+        { "category": 2, "projects": 3 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 5 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 2 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}]

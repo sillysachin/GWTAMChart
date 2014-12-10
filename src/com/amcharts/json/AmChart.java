@@ -73,7 +73,7 @@ public class AmChart implements IsAmChart
 
 	private String thousandsSeparator;
 
-	private List<IsTitle> titles;
+	private List<? extends IsTitle> titles;
 
 	private String type;
 
@@ -429,7 +429,7 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public List<IsTitle> getTitles()
+	public List<? extends IsTitle> getTitles()
 	{
 		if ( titles == null )
 		{
@@ -439,7 +439,7 @@ public class AmChart implements IsAmChart
 	}
 
 	@Override
-	public void setTitles( List<IsTitle> titles )
+	public void setTitles( List<? extends IsTitle> titles )
 	{
 		this.titles = titles;
 	}

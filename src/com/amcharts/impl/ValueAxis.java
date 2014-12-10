@@ -182,6 +182,22 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
+	public final Boolean isIntegersOnly()
+	{
+		return getJso().isIntegersOnly();
+	}
+
+	/**
+	 * Specifies whether values on axis can only be integers or both integers and doubles.
+	 */
+	public final void setIntegersOnly( Boolean integersOnly )
+	{
+		getJso().setIntegersOnly( integersOnly );
+	}
+
+	/**
+	 * Specifies whether values on axis can only be integers or both integers and doubles.
+	 */
 	public final Boolean isDoublesOnly()
 	{
 		return getJso().isDoublesOnly();
@@ -190,9 +206,9 @@ public final class ValueAxis extends AxisBase implements IsValueAxis, IJavaScrip
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public final void setDoublesOnly( Boolean integersOnly )
+	public final void setDoublesOnly( Boolean doublesOnly )
 	{
-		getJso().setDoublesOnly( integersOnly );
+		getJso().setDoublesOnly( doublesOnly );
 	}
 
 	/**

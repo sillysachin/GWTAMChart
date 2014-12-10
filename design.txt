@@ -4,3 +4,5 @@ json package --> gwt rpc serializable objects.
 json package --> objects serializale to json strings using jackson or gson .
 
 Function - JSFunctionSerializer, JSFunction, IsFunction
+
+Add/Remove from List References cannot be refreshed across JSNI JSArray.

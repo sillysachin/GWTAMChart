@@ -46,7 +46,7 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 
 	private LayoutPanel divWrapper = new LayoutPanel();
 
-	private List<IsTitle> titles;
+	private List<? extends IsTitle> titles;
 
 	private List<IsNumberPrefix> prefixesOfSmallNumbers;
 
@@ -476,13 +476,13 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 	}-*/;
 
 	@Override
-	public List<IsTitle> getTitles()
+	public List<? extends IsTitle> getTitles()
 	{
 		return this.titles;
 	}
 
 	@Override
-	public void setTitles( List<IsTitle> titles )
+	public void setTitles( List<? extends IsTitle> titles )
 	{
 		this.titles = titles;
 		getJso().setTitles( titles );

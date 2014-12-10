@@ -1,0 +1,198 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<link type="text/css" rel="stylesheet" href="GWTAMChart.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>AMCharts</title>
+<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="js/amcharts/funnel.js"></script>
+<script type="text/javascript" src="js/amcharts/gauge.js"></script>
+<script type="text/javascript" src="js/amcharts/pie.js"></script>
+<script type="text/javascript" src="js/amcharts/radar.js"></script>
+<script type="text/javascript" src="js/amcharts/serial.js"></script>
+<script type="text/javascript" src="js/amcharts/xy.js"></script>
+<script type="text/javascript" src="js/amcharts/themes/light.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/amexport.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/rgbcolor.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/canvg.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/filesaver.js"></script>
+<script type="text/javascript" src="js/amcharts/exporting/jspdf.js"></script>
+<script type="text/javascript"
+	src="js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript">
+var chartData = [{
+    "department": "Marketing",
+    "projects": 23,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 1 },
+        { "category": 2, "projects": 2 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 3 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 3 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}, {
+    "department": "Sales",
+    "projects": 26,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 4 },
+        { "category": 2, "projects": 3 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 4 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 2 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}, {
+    "department": "Logistics",
+    "projects": 30,
+    "url":"#",
+    "description":"click to drill-down",
+    "months": [
+        { "category": 1, "projects": 2 },
+        { "category": 2, "projects": 3 },
+        { "category": 3, "projects": 1 },
+        { "category": 4, "projects": 5 },
+        { "category": 5, "projects": 2 },
+        { "category": 6, "projects": 1 },
+        { "category": 7, "projects": 2 },
+        { "category": 8, "projects": 2 },
+        { "category": 9, "projects": 3 },
+        { "category": 10, "projects": 1 },
+        { "category": 11, "projects": 1 },
+        { "category": 12, "projects": 3 }
+    ]
+}];
+
+// aggregate collective data
+var collectiveData = [];
+for (var x in chartData) {
+    var dataPoint = chartData[x];
+    if ( 0 == x ) {
+        for (var y in dataPoint.months) {
+            collectiveData.push({
+                "category": dataPoint.months[y].category,
+                "projects": dataPoint.months[y].projects
+            });
+        }
+    }
+    else {
+        for (var y in dataPoint.months) {
+            collectiveData[y].projects += dataPoint.months[y].projects;
+        }
+    }
+}
+
+
+// create pie chart
+var chart = AmCharts.makeChart("chartdiv1", {
+    "type": "pie",
+    "dataProvider": chartData,
+    "valueField": "projects",
+    "titleField": "department",
+    "labelText": "[[title]]: [[value]]",
+    "pullOutOnlyOne": true
+});
+
+// create column chart
+var chart2 = AmCharts.makeChart("chartdiv2", {
+    "type": "serial",
+        "theme": "none",
+        "pathToImages": "/lib/3/images/",
+        "autoMargins": false,
+        "marginLeft": 30,
+        "marginRight": 8,
+        "marginTop": 10,
+        "marginBottom": 26,
+    "titles": [{
+        "text": "All departments"
+    }],
+        "dataProvider": collectiveData,
+        "startDuration": 1,
+        "graphs": [{
+            "title": "projects",
+            "type": "column",
+            "fillAlphas": 0.8,
+            "valueField": "projects"
+    }],
+        "categoryField": "category",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "autoGridCount": false,
+            "gridCount": 12
+    },
+    "valueAxes": [{
+        "integersOnly": true
+    }]
+});
+
+chart.addListener("pullOutSlice", function (event) {
+    chart2.dataProvider = event.dataItem.dataContext.months;
+    chart2.titles[0].text = event.dataItem.dataContext.department;
+    chart2.validateData();
+    chart2.animateAgain();
+});
+
+chart.addListener("pullInSlice", function (event) {
+    chart2.dataProvider = collectiveData;
+    chart2.titles[0].text = "All departments";
+    chart2.validateData();
+    chart2.animateAgain();
+});
+</script>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+	<!-- OPTIONAL: include this if you want history support -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+	<div id="chartdiv1" style="width: 1240px; height: 500px"></div>
+	<div id="chartdiv2" style="width: 1240px; height: 500px"></div>
+</body>
+</html>

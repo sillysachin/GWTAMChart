@@ -368,13 +368,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native List<IsTitle> getTitles()
+	public final native List<? extends IsTitle> getTitles()
 	/*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.titles);
 	}-*/;
 
 	@Override
-	public final native void setTitles( List<IsTitle> titles )
+	public final native void setTitles( List<? extends IsTitle> titles )
 	/*-{
 		this.titles = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(titles);
 	}-*/;

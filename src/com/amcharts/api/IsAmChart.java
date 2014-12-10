@@ -120,9 +120,9 @@ public interface IsAmChart
 
 	void setThousandsSeparator( String thousandsSeparator );
 
-	List<IsTitle> getTitles();
+	List<? extends IsTitle> getTitles();
 
-	void setTitles( List<IsTitle> titles );
+	void setTitles( List<? extends IsTitle> titles );
 
 	String getType();
 

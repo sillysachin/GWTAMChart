@@ -36,3 +36,17 @@ h1 {
 	left: 50px !important;
 	top: 10px !important;
 }
+
+#chartdiv1 {
+    width : 49%;
+    height : 300px;
+    font-size : 11px;
+    float: left;
+}
+
+#chartdiv2 {
+    width : 50%;
+    height : 300px;
+    font-size : 11px;
+    float: left;
+}

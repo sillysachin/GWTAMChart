@@ -221,7 +221,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public Boolean isdoublesOnly()
+	public Boolean isIntegersOnly()
 	{
 		return integersOnly;
 	}
@@ -229,7 +229,7 @@ public final class ValueAxis extends AxisBase implements IsValueAxis
 	/**
 	 * Specifies whether values on axis can only be integers or both integers and doubles.
 	 */
-	public void setdoublesOnly( Boolean integersOnly )
+	public void setIntegersOnly( Boolean integersOnly )
 	{
 		this.integersOnly = integersOnly;
 	}

@@ -237,7 +237,7 @@ public class MultiDimensionalDrilldownBackButton
 		anchorAmChartMenuGoBack
 				.setText( tmp.getPrev() != null ? "Go Back " + tmp.getPrev() : "" );
 
-		List<IsTitle> titles = amSerialChart.getTitles();
+		List< ? extends IsTitle> titles = amSerialChart.getTitles();
 		Title title = ( Title ) titles.get( 0 );
 		if ( tmp.getTitle() != null )
 		{
