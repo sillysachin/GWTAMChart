@@ -20,10 +20,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 
 public class ExportingChartToImage
 {
+	IsWidget content = null;
+
 	// Exporting charts and maps as an image or PDF
 	// http://www.amcharts.com/tutorials/exporting-charts-and-maps-as-an-image-or-pdf/
 	// Saving exported image on a server
@@ -154,7 +156,7 @@ public class ExportingChartToImage
 		exportConfig.setRemoveImagery( true );
 		amExport.setUserCFG( exportConfig );
 		amSerialChart.setAmExport( amExport );
-		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		amSerialChart.setSize( "310px", "125px" );
+		content = amSerialChart;
 	}
 }

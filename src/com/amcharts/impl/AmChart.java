@@ -33,7 +33,6 @@ import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
-import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.web.bindery.event.shared.HandlerRegistration;
@@ -46,7 +45,7 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 
 	private LayoutPanel divWrapper = new LayoutPanel();
 
-	private List<? extends IsTitle> titles;
+	private List< ? extends IsTitle> titles;
 
 	private List<IsNumberPrefix> prefixesOfSmallNumbers;
 
@@ -59,17 +58,26 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 		init();
 	}
 
-	private void init()
+	protected AmChart( String id )
 	{
-		String id = Document.get().createUniqueId();
-		setId( id );
-		initWidget( divWrapper );
+		init( id );
 	}
 
 	private void init( JavaScriptObject configJSO )
 	{
 		init();
 		jso = makeChart( getId(), configJSO );
+	}
+
+	protected void init()
+	{
+		init( Document.get().createUniqueId() );
+	}
+
+	protected void init( String id )
+	{
+		setId( id );
+		initWidget( divWrapper );
 	}
 
 	public void setId( String id )
@@ -100,11 +108,6 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 	{
 		String id = getId();
 		write( id );
-	}
-
-	public void addContent( IsWidget widget )
-	{
-		divWrapper.add( widget );
 	}
 
 	// TODO: Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
@@ -476,13 +479,13 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 	}-*/;
 
 	@Override
-	public List<? extends IsTitle> getTitles()
+	public List< ? extends IsTitle> getTitles()
 	{
 		return this.titles;
 	}
 
 	@Override
-	public void setTitles( List<? extends IsTitle> titles )
+	public void setTitles( List< ? extends IsTitle> titles )
 	{
 		this.titles = titles;
 		getJso().setTitles( titles );

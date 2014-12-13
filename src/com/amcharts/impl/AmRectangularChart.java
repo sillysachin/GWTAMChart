@@ -16,6 +16,11 @@ public class AmRectangularChart extends AmCoordinateChart implements IsAmRectang
 	{
 	}
 
+	public AmRectangularChart( String id )
+	{
+		super( id );
+	}
+
 	public AmRectangularChartJSO getJso()
 	{
 		return ( AmRectangularChartJSO ) this.jso;

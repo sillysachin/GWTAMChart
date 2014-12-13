@@ -88,7 +88,7 @@ public class BubbleChart
 
 		amXYChart.setMarginLeft( 46 );
 		amXYChart.setMarginBottom( 35 );
-		amXYChart.setSize( "1240px", "500px" );
+		amXYChart.setSize( "310px", "125px" );
 		RootLayoutPanel.get().add( amXYChart );
 	}
 }

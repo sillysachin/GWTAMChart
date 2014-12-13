@@ -52,7 +52,7 @@ public class PieChartBrokenSlices
 
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
-		amPieChart.setSize( "1240px", "500px" );
+		amPieChart.setSize( "310px", "125px" );
 		amPieChart.addListener( "rightClickSlice", new AmChartListener()
 		{
 			@Override

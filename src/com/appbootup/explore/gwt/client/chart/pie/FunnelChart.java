@@ -43,7 +43,7 @@ public class FunnelChart
 		amFunnelChart.setLabelPosition( "right" );
 		amFunnelChart.setFunnelAlpha(0.9);
 		amFunnelChart.setValueField( "value" );
-		amFunnelChart.setSize( "1240px", "500px" );
+		amFunnelChart.setSize( "310px", "125px" );
 		amFunnelChart.setStartX( 0 );
 		amFunnelChart.setNeckWidth( "30%" );
 		amFunnelChart.setStartAlpha( 0.0 );

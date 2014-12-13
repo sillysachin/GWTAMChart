@@ -13,6 +13,16 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 
 	public AmSerialChart()
 	{
+	}
+
+	public AmSerialChart( String id )
+	{
+		super( id );
+	}
+
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
 		categoryAxis = new CategoryAxis();
 		CategoryAxisJSO categoryAxisJSO = ( CategoryAxisJSO ) getCategoryAxisJSO();
@@ -324,7 +334,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 	}
 
 	/**
-	 * 
+	 *
 	 * @param value - series (category value) which index you want to find.
 	 * @return Returns index of the specified category value.
 	 */
@@ -345,7 +355,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 
 	/**
 	 * Zooms the chart by the value of the category axis.
-	 * @param start - category value, String \\ end - category value, String.	
+	 * @param start - category value, String \\ end - category value, String.
 	 */
 	public native double zoomToCategoryValues( String start, String end )
 	/*-{
@@ -355,7 +365,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 
 	/**
 	 * Zooms the chart from one date to another.
-	 * @param start date, Date object \\ end - end date, Date object.	
+	 * @param start date, Date object \\ end - end date, Date object.
 	 */
 	public native double zoomToDates( Date start, Date end )
 	/*-{
@@ -365,7 +375,7 @@ public class AmSerialChart extends AmRectangularChart implements IsAmSerialChart
 
 	/**
 	 * Zooms the chart by the index of the category.
-	 * @param start index, Number \\ end - end index, Number	
+	 * @param start index, Number \\ end - end index, Number
 	 */
 	public native double zoomToIndexes( double start, double end )
 	/*-{

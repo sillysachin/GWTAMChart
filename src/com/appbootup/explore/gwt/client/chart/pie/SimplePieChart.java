@@ -48,7 +48,7 @@ public class SimplePieChart
 		amPieChart.setTheme( "none" );
 		amPieChart.setValueField( "litres" );
 		amPieChart.setTitleField( "country" );
-		amPieChart.setSize( "1240px", "500px" );
+		amPieChart.setSize( "310px", "125px" );
 		amPieChart.setGroupedPulled( true );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem1 = new MenuItem();

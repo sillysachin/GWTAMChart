@@ -160,7 +160,7 @@ public class MultipleValueAxes
 		};
 		amSerialChart.addListener( "dataUpdated", zoomChart );
 		zoomChart( chartData, amSerialChart );
-		amSerialChart.setSize( "1240px", "500px" );
+		amSerialChart.setSize( "310px", "125px" );
 		RootLayoutPanel.get().add( amSerialChart );
 	}
 

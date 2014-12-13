@@ -90,7 +90,7 @@ public class ThreeDCylinderChart
 		exportConfig.setMenuTop( 20 );
 		exportConfig.setMenuRight( 20 );
 		amSerialChart.setExportConfig( exportConfig );
-		amSerialChart.setSize( "1240px", "500px" );
+		amSerialChart.setSize( "310px", "125px" );
 		RootLayoutPanel.get().add( amSerialChart );
 	}
 }

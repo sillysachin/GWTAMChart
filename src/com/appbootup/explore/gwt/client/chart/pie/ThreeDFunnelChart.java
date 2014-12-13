@@ -43,7 +43,7 @@ public class ThreeDFunnelChart
 		amFunnelChart.setTheme( "none" );
 		amFunnelChart.setValueField( "value" );
 		amFunnelChart.setTitleField( "title" );
-		amFunnelChart.setSize( "1240px", "500px" );
+		amFunnelChart.setSize( "310px", "125px" );
 		amFunnelChart.setMarginRight( 240.0 );
 		amFunnelChart.setMarginLeft( 50.0 );
 		amFunnelChart.setStartX( -500 );

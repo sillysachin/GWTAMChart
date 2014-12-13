@@ -65,7 +65,7 @@ public class AngularGaugeWithTwoAxes
 		gaugeArrow.setNailRadius( 0 );
 		gaugeArrow.setRadius( "85%" );
 		amAngularGauge.addArrow( gaugeArrow );
-		amAngularGauge.setSize( "1240px", "500px" );
+		amAngularGauge.setSize( "310px", "125px" );
 		amAngularGauge.setFaceColor( "#000000" );
 		Timer timer = new Timer()
 		{

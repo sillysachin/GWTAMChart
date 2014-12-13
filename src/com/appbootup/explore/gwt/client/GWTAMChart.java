@@ -1,8 +1,10 @@
 package com.appbootup.explore.gwt.client;
 
-import com.appbootup.explore.gwt.client.chart.pie.SimplePieChart;
+import com.appbootup.explore.gwt.client.tutorials.LinkingPieChartColumnChartDrillDataDisplay;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.Widget;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -27,34 +29,44 @@ public class GWTAMChart implements EntryPoint
 		// GWTAMChartSample.serialChartByJSNI();
 		// GWTAMChartSample.chartByServerJSON();
 		// GWTAMChartSample.lineWithTrendLineChartByJSNI();
-		 SimplePieChart simplePieChart = new SimplePieChart();
-		// ThreeDPieChart threeDPieChart = new ThreeDPieChart();
-		// DonutChart threeDPieChart = new DonutChart();
-		// ThreeDDonutChart threeDDonutChart = new ThreeDDonutChart();
-		// PieChartWithLegend pieChartWithLegend = new PieChartWithLegend();
-		// PieChartBrokenSlices pieChartBrokenSlices = new PieChartBrokenSlices();
-		// PyramidChart pyramidChart = new PyramidChart();
-		// ThreeDFunnelChart threeDFunnelChart = new ThreeDFunnelChart();
-		// FunnelChart funnelChart = new FunnelChart();
-		// ColumnWithRotatedSeries columnWithRotatedSeries = new ColumnWithRotatedSeries();
-		// SimpleColumnChart simpleColumnChart = new SimpleColumnChart();
-		// ColumnChartWithEvents columnChartWithEvents = new ColumnChartWithEvents();
-		// StackedColumnChart stackedColumnChart = new StackedColumnChart();
-		// ThreeDCylinderChart threeDCylinderChart = new ThreeDCylinderChart();
-		// LineDifferentColorsUpsDowns lineDifferentColorsUpsDowns = new LineDifferentColorsUpsDowns();
-		// DateBasedData dateBasedData = new DateBasedData();
-		// MultipleValueAxes multipleValueAxes = new MultipleValueAxes();
-		// BubbleChart bubbleChart = new BubbleChart();
-		// PolarChart polarChart = new PolarChart();
-		// MicroChartsSparklines microChartsSparklines = new MicroChartsSparklines();
-		// AngularGaugeWithTwoAxes angularGaugeWithTwoAxes = new AngularGaugeWithTwoAxes();
-		// AngularGauge angularGauge = new AngularGauge();
-		// ExportingChartToImage exportingChartToImage = new ExportingChartToImage();
-		// LineWithChangingColor lineWithChangingColors = new LineWithChangingColor();
-		// StackedArea stackedArea = new StackedArea();
-		// DurationOnValueAxis durationOnValueAxis = new DurationOnValueAxis();
-		// UpdatingBalloonTooltip updatingBalloonTooltip = new UpdatingBalloonTooltip();
-		// MultiDimensionalDrilldownBackButton multiDimensionalDrilldownBackButton = new MultiDimensionalDrilldownBackButton();
-		// LinkingPieChartColumnChartDrillDataDisplay lpcccddDisplay = new LinkingPieChartColumnChartDrillDataDisplay();
+		// final SimplePieChart simplePieChart = new SimplePieChart();
+		// final ThreeDPieChart chart = new ThreeDPieChart();
+		// final DonutChart chart = new DonutChart();
+		// final ThreeDDonutChart chart = new ThreeDDonutChart();
+		// final PieChartWithLegend chart = new PieChartWithLegend();
+		// final PieChartBrokenSlices chart = new PieChartBrokenSlices();
+		// final PyramidChart chart = new PyramidChart();
+		// final ThreeDFunnelChart chart = new ThreeDFunnelChart();
+		// final FunnelChart chart = new FunnelChart();
+		// final ColumnWithRotatedSeries chart = new ColumnWithRotatedSeries();
+		// final SimpleColumnChart chart = new SimpleColumnChart();
+		// final ColumnChartWithEvents chart = new ColumnChartWithEvents();
+		// final StackedColumnChart chart = new StackedColumnChart();
+		// final ThreeDCylinderChart chart = new ThreeDCylinderChart();
+		// final LineDifferentColorsUpsDowns chart = new LineDifferentColorsUpsDowns();
+		// final DateBasedData chart = new DateBasedData();
+		// final MultipleValueAxes chart = new MultipleValueAxes();
+		// final BubbleChart chart = new BubbleChart();
+		// final final PolarChart chart = new PolarChart();
+		// final MicroChartsSparklines chart = new MicroChartsSparklines();
+		// final AngularGaugeWithTwoAxes chart = new AngularGaugeWithTwoAxes();
+		// final AngularGauge chart = new AngularGauge();
+		// final ExportingChartToImage chart = new ExportingChartToImage();
+		// final LineWithChangingColor chart = new LineWithChangingColor();
+		// final StackedArea chart = new StackedArea();
+		// final DurationOnValueAxis chart = new DurationOnValueAxis();
+		// final UpdatingBalloonTooltip chart = new UpdatingBalloonTooltip();
+		// final MultiDimensionalDrilldownBackButton chart = new MultiDimensionalDrilldownBackButton();
+		final LinkingPieChartColumnChartDrillDataDisplay chart = new LinkingPieChartColumnChartDrillDataDisplay();
+
+		chart.setReadyCallback( new IsReadyCallback()
+		{
+			public void onReady()
+			{
+				Widget widget = chart.getChartWidget();
+				widget.setSize( "620px", "250px" );
+				RootLayoutPanel.get().add( widget );
+			}
+		} );
 	}
 }

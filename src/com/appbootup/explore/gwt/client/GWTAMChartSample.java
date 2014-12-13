@@ -53,7 +53,7 @@ public class GWTAMChartSample
 	public static void serialChartByJSNI()
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
-		amSerialChart.setSize( "1240px", "500px" );
+		amSerialChart.setSize( "310px", "125px" );
 		JsArray<JavaScriptObject> serialDataProvider = JsonUtils
 				.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );

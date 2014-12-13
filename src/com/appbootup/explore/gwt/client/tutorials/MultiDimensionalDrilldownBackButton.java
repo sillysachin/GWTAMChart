@@ -35,7 +35,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class MultiDimensionalDrilldownBackButton
@@ -44,8 +44,13 @@ public class MultiDimensionalDrilldownBackButton
 
 	private String chartTitle = "Base";
 
-	public MultiDimensionalDrilldownBackButton()
+	IsWidget content = new VerticalPanel();
+
+	private String id;
+
+	public MultiDimensionalDrilldownBackButton( String id )
 	{
+		this.id = id;
 		GWTAMChart.chartService
 				.getData( "/data/multiDimensionalDrilldownBackButton.json", new AsyncCallback<String>()
 				{
@@ -71,7 +76,7 @@ public class MultiDimensionalDrilldownBackButton
 		final HTML htmlAmChartMenuGoBack = new HTML( "<b>Go Back</b> : ", true );
 		final Anchor anchorAmChartMenuGoBack = new Anchor( "", true );
 
-		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
+		final AmSerialChart amSerialChart = AmCharts.AmSerialChart( id );
 		amSerialChart.setTheme( "none" );
 		GWT.log( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
@@ -213,10 +218,8 @@ public class MultiDimensionalDrilldownBackButton
 			}
 		} );
 		amSerialChart.setSize( "620px", "250px" );
-		VerticalPanel content = new VerticalPanel();
-		content.add( amToolbar );
-		content.add( amSerialChart );
-		RootLayoutPanel.get().add( content );
+		( ( VerticalPanel ) content ).add( amToolbar );
+		( ( VerticalPanel ) content ).add( amSerialChart );
 	}
 
 	private void goBack( final JsArray<JavaScriptObject> chartData, AmSerialChart amSerialChart, Anchor anchorAmChartMenuGoBack )

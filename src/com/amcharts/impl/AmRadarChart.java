@@ -5,10 +5,21 @@ import com.amcharts.jso.AmRadarChartJSO;
 
 public final class AmRadarChart extends AmCoordinateChart implements IsAmRadarChart
 {
-	protected AmRadarChart()
+	public AmRadarChart( String id )
 	{
+		super( id );
+	}
+
+	public AmRadarChart()
+	{
+	}
+
+	@Override
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
-		setType("radar");
+		setType( "radar" );
 	}
 
 	public AmRadarChartJSO getJso()

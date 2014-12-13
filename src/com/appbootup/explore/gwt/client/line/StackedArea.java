@@ -19,10 +19,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 
 public class StackedArea
 {
+	IsWidget content = null;
+
 	public StackedArea()
 	{
 		GWTAMChart.chartService
@@ -93,7 +95,7 @@ public class StackedArea
 		amSerialChart.setMarginTop( 10 );
 		amSerialChart.setMarginLeft( 0 );
 		amSerialChart.setMarginBottom( 0 );
-		
+
 		ChartScrollbar chartScrollbar = AmCharts.ChartScrollbar();
 		amSerialChart.addChartScrollbar( chartScrollbar );
 
@@ -116,7 +118,7 @@ public class StackedArea
 		guide1.setFillColor( "#CC0000" );;
 		guide1.setDashLength( 2 );
 		guide1.setInside( true );
-		guide1.setLabelRotation( 90	 ); 
+		guide1.setLabelRotation( 90	 );
 		guide1.setLabel( "fines for speeding increased" );
 		Guide guide2 = AmCharts.Guide();
 		guide2.setCategory( "2007" );
@@ -124,7 +126,7 @@ public class StackedArea
 		guide2.setLineAlpha( 1 );
 		guide2.setDashLength( 2 );
 		guide2.setInside( true );
-		guide2.setLabelRotation( 90	 ); 
+		guide2.setLabelRotation( 90	 );
 		guide2.setLabel( "motorcycle fee introduced" );
 		ArrayList<Guide> guides = new ArrayList<Guide>();
 		guides.add( guide1 );
@@ -139,8 +141,8 @@ public class StackedArea
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
-		
-		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+
+		amSerialChart.setSize( "310px", "125px" );
+		content = amSerialChart;
 	}
 }

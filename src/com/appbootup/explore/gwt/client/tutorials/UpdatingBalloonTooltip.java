@@ -17,10 +17,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 
 public class UpdatingBalloonTooltip
 {
+	IsWidget content = null;
+
 	public UpdatingBalloonTooltip()
 	{
 		GWTAMChart.chartService
@@ -108,15 +110,15 @@ public class UpdatingBalloonTooltip
 		dateFormats.add( dateFormat4 );
 		categoryAxis.setDateFormats( dateFormats );
 		categoryAxis.setParseDates( true );// as our data is date-based, we set parseDates to true
-		categoryAxis.setMinPeriod( "DD" );// our data is daily, so we set minPeriod to DD   
+		categoryAxis.setMinPeriod( "DD" );// our data is daily, so we set minPeriod to DD
 		categoryAxis.setAutoGridCount( false );
 		categoryAxis.setAxisColor( "#555555" );
 		categoryAxis.setGridColor( "#000000" );
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setGridCount( 50 );
 
-		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		amSerialChart.setSize( "310px", "125px" );
+		content = amSerialChart;
 	}
 
 	private String getFunctionString()

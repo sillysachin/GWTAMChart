@@ -14,8 +14,19 @@ public final class AmAngularGauge extends AmChart implements IsAmAngularChart
 
 	private List<IsGaugeAxis> axes;
 
-	protected AmAngularGauge()
+	public AmAngularGauge()
 	{
+	}
+
+	public AmAngularGauge( String id )
+	{
+		init( id );
+	}
+
+	@Override
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
 		setType( "gauge" );
 	}

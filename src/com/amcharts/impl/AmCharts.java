@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.amcharts.api.IsAmCharts;
+import com.amcharts.jso.AmChartJSO;
 import com.amcharts.jso.AmChartsJSO;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -202,20 +203,21 @@ public class AmCharts implements IsAmCharts
 		AmCharts.formatNumber(number, formatter, zeroCount);
 	}-*/;
 
+	//TODO: need to figure out wh
 	/**
 	 * Creates chart. divId is id of a chart container, chartConfig is JSON object with chart properties defined and delay is time in ms, in which the chart should be rendered (renders instantly if not set).
 	 */
-	public native void makeChart( String divId, JavaScriptObject chartConfig, double delay )
+	public native AmChartJSO makeChart( String divId, JavaScriptObject chartConfig, double delay )
 	/*-{
 		var AmCharts = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		AmCharts.makeChart(divId, chartConfig, delay);
+		var amChart = AmCharts.makeChart(divId, chartConfig, delay);
 	}-*/;
 
 	/**
 	 * You can use this method to convert date string to date object.
 	 * Please note, that literal name codes such as MMM or MMMM are not supported.
 	 */
-	public native void makeChart( String string, String format )
+	public native void stringToDate( String string, String format )
 	/*-{
 		var AmCharts = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
 		AmCharts.stringToDate(string, format)
@@ -231,6 +233,12 @@ public class AmCharts implements IsAmCharts
 	{
 		AmSerialChart amSerialChart = AmSerialChart();
 		amSerialChart.setTheme( theme.name().toLowerCase() );
+		return amSerialChart;
+	}
+
+	public static AmSerialChart AmSerialChart( String id )
+	{
+		AmSerialChart amSerialChart = new AmSerialChart( id );
 		return amSerialChart;
 	}
 
@@ -255,6 +263,12 @@ public class AmCharts implements IsAmCharts
 	public static AmPieChart AmPieChart()
 	{
 		AmPieChart amPieChart = new AmPieChart();
+		return amPieChart;
+	}
+
+	public static AmPieChart AmPieChart( String id )
+	{
+		AmPieChart amPieChart = new AmPieChart( id );
 		return amPieChart;
 	}
 

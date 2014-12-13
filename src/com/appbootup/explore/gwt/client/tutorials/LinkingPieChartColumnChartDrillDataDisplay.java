@@ -16,6 +16,7 @@ import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.util.LogUtils;
+import com.appbootup.explore.gwt.client.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -23,9 +24,8 @@ import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class LinkingPieChartColumnChartDrillDataDisplay
+public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWrapper
 {
 	public LinkingPieChartColumnChartDrillDataDisplay()
 	{
@@ -137,7 +137,9 @@ public class LinkingPieChartColumnChartDrillDataDisplay
 		HorizontalPanel contentWrapper = new HorizontalPanel();
 		contentWrapper.add( amPieChart );
 		contentWrapper.add( amSerialChart );
-		RootLayoutPanel.get().add( contentWrapper );
+
+		setChartWidget( contentWrapper );
+		getReadyCallback().onReady();
 	}
 
 	private native JsArray<JavaScriptObject> getCollectiveData( JsArray<JavaScriptObject> chartData )

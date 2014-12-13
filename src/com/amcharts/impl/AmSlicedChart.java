@@ -9,6 +9,16 @@ import com.amcharts.jso.AmSlicedChartJSO;
 
 public class AmSlicedChart extends AmChart implements IsAmSlicedChart
 {
+
+	public AmSlicedChart()
+	{
+	}
+
+	public AmSlicedChart( String id )
+	{
+		super( id );
+	}
+
 	@Override
 	public AmSlicedChartJSO getJso()
 	{

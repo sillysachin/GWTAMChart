@@ -5,8 +5,19 @@ import com.amcharts.jso.AmFunnelChartJSO;
 
 public class AmFunnelChart extends AmSlicedChart implements IsAmFunnelChart
 {
+
 	public AmFunnelChart()
 	{
+	}
+
+	public AmFunnelChart( String id )
+	{
+		super( id );
+	}
+
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
 		setType( "funnel" );
 	}

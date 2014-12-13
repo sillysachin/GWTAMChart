@@ -19,10 +19,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 
 public class DurationOnValueAxis
 {
+	IsWidget content = null;
+
 	public DurationOnValueAxis()
 	{
 		GWTAMChart.chartService
@@ -177,12 +179,12 @@ public class DurationOnValueAxis
 		exportConfig.setMenuBottom( "20px" );
 		exportConfig.setMenuRight( "22px" );
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
 
-		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		amSerialChart.setSize( "310px", "125px" );
+		content = amSerialChart;
 	}
 }

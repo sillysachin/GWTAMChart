@@ -19,6 +19,11 @@ public class AmCoordinateChart extends AmChart implements IsAmCoordinateChart
 	{
 	}
 
+	public AmCoordinateChart( String id )
+	{
+		super( id );
+	}
+
 	public AmCoordinateChartJSO getJso()
 	{
 		return ( AmCoordinateChartJSO ) this.jso;

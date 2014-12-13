@@ -70,7 +70,7 @@ public class AngularGauge
 		final GaugeArrow gaugeArrow = AmCharts.GaugeArrow();
 		gaugeArrow.setColor( "#67b7dc" );
 		amAngularGauge.addArrow( gaugeArrow );
-		amAngularGauge.setSize( "1240px", "500px" );
+		amAngularGauge.setSize( "310px", "125px" );
 
 		Timer timer = new Timer()
 		{

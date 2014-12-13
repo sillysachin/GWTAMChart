@@ -5,8 +5,19 @@ import com.amcharts.jso.AmPieChartJSO;
 
 public class AmPieChart extends AmSlicedChart implements IsAmPieChart
 {
+
 	public AmPieChart()
 	{
+	}
+
+	public AmPieChart( String id )
+	{
+		super( id );
+	}
+
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
 		setType( "pie" );
 	}

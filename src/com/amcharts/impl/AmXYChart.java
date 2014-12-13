@@ -5,8 +5,19 @@ import com.amcharts.jso.AmXYChartJSO;
 
 public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 {
-	protected AmXYChart()
+	public AmXYChart()
 	{
+	}
+
+	public AmXYChart( String id )
+	{
+		super( id );
+	}
+
+	@Override
+	protected void init( String id )
+	{
+		super.init( id );
 		jso = createJso();
 		//TODO: ENUM for type of chart.
 		setType( "xy" );
@@ -74,7 +85,7 @@ public final class AmXYChart extends AmRectangularChart implements IsAmXYChart
 	{
 		getJso().setMaxZoomFactor( maxZoomFactor );
 	}
-	
+
 	/**
 	 * 	Zooms out, charts shows all available data.
 	 */

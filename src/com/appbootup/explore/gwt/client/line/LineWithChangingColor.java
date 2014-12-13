@@ -19,10 +19,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 
 public class LineWithChangingColor
 {
+	IsWidget content = null;
+
 	public LineWithChangingColor()
 	{
 		GWTAMChart.chartService
@@ -112,7 +114,7 @@ public class LineWithChangingColor
 		categoryAxis.setAxisColor( "#555555" );
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setGridCount( 50 );
-		amSerialChart.setSize( "1240px", "500px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		amSerialChart.setSize( "310px", "125px" );
+		content = amSerialChart;
 	}
 }
