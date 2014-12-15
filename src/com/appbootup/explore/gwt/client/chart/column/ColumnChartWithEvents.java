@@ -106,7 +106,6 @@ public class ColumnChartWithEvents
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( 0 );
 		amSerialChart.setExportConfig( exportConfig );
-		amSerialChart.setSize( "310px", "125px" );
 
 		final AmChartListener handleClick = new AmChartListener()
 		{
@@ -151,15 +150,6 @@ public class ColumnChartWithEvents
 			}
 		} );
 
-		amSerialChart.addRenderedHandler( new RenderedHandler()
-		{
-			@Override
-			public void onRendered( RenderedEvent event )
-			{
-				GWT.log( "renderedHandler -> " + event.getType() );
-			}
-		} );
-
 		amSerialChart.addListener( "clickGraphItem", new AmChartListener()
 		{
 			@Override
@@ -174,6 +164,6 @@ public class ColumnChartWithEvents
 			}
 		} );
 
-		RootLayoutPanel.get().add( amSerialChart );
+		RootLayoutPanel.get().add( amSerialChart.asWidget() );
 	}
 }

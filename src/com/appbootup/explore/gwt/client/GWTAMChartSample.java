@@ -3,6 +3,7 @@ package com.appbootup.explore.gwt.client;
 import java.util.Date;
 import java.util.List;
 
+import com.amcharts.impl.AmChartPanel;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
@@ -37,23 +38,21 @@ public class GWTAMChartSample
 {
 	private static final String SERVER_ERROR = "An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
 
-	public static void pieChartByJSNI()
+	public static AmChartPanel pieChartByJSNI()
 	{
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
-		amPieChart.setSize( "1020px", "500px" );
 		JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( pieData );
 		amPieChart.setDataProvider( dataProvider );
 		amPieChart.setValueField( "value" );
 		amPieChart.setTitleField( "title" );
 		GWT.log( "Render to -> " + amPieChart.getId() );
-		RootLayoutPanel.get().add( amPieChart );
+		return amPieChart.asWidget();
 	}
 
-	public static void serialChartByJSNI()
+	public static AmChartPanel serialChartByJSNI()
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
-		amSerialChart.setSize( "310px", "125px" );
 		JsArray<JavaScriptObject> serialDataProvider = JsonUtils
 				.unsafeEval( "[{\"country\": \"USA\",\"visits\": 4252},{\"country\": \"China\",\"visits\": 1882},{\"country\": \"Japan\",\"visits\": 1809}]" );
 		amSerialChart.setDataProvider( serialDataProvider );
@@ -81,7 +80,7 @@ public class GWTAMChartSample
 
 		amSerialChart.addGraph( amGraph );
 		GWT.log( "Render to -> " + amSerialChart.getId() );
-		RootLayoutPanel.get().add( amSerialChart );
+		return amSerialChart.asWidget();
 	}
 
 	public static void chartByServerJSON()
@@ -131,7 +130,8 @@ public class GWTAMChartSample
 									public void function( AmChartEventJSO event )
 									{
 										GWT.log( "Processed Event on JSON to Impl Chart" );
-										event.getChart().setDataProvider( dataProvider );
+										event.getChart()
+												.setDataProvider( dataProvider );
 										event.getChart().validateData();
 									}
 								} );
@@ -249,6 +249,6 @@ public class GWTAMChartSample
 		trendLine.setLineColor( "#CC0000" );
 		amSerialChart.addTrendLine( trendLine );
 
-		RootLayoutPanel.get().add( amSerialChart );
+		RootLayoutPanel.get().add( amSerialChart.asWidget() );
 	}
 }

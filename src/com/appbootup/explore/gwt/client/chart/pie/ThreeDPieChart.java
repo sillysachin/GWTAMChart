@@ -44,7 +44,6 @@ public class ThreeDPieChart
 		amPieChart.setTitleField( "country" );
 		amPieChart.setOutlineAlpha( 0.4 );
 		amPieChart.setDepth3D( 15.0 );
-		amPieChart.setSize( "1024px", "500px" );
 		amPieChart
 				.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
 		amPieChart.setAngle( 30.0 );
@@ -54,6 +53,6 @@ public class ThreeDPieChart
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amPieChart );
+		RootLayoutPanel.get().add( amPieChart.asWidget() );
 	}
 }

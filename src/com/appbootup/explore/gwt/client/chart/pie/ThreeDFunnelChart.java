@@ -43,7 +43,6 @@ public class ThreeDFunnelChart
 		amFunnelChart.setTheme( "none" );
 		amFunnelChart.setValueField( "value" );
 		amFunnelChart.setTitleField( "title" );
-		amFunnelChart.setSize( "310px", "125px" );
 		amFunnelChart.setMarginRight( 240.0 );
 		amFunnelChart.setMarginLeft( 50.0 );
 		amFunnelChart.setStartX( -500 );
@@ -66,6 +65,6 @@ public class ThreeDFunnelChart
 		exportConfig.addMenuItem( menuItem );
 		amFunnelChart.setExportConfig( exportConfig );
 		amFunnelChart.setGroupPercent( 5.0 );
-		RootLayoutPanel.get().add( amFunnelChart );
+		RootLayoutPanel.get().add( amFunnelChart.asWidget()  );
 	}
 }

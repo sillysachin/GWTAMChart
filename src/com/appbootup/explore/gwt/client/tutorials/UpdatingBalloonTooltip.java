@@ -117,8 +117,7 @@ public class UpdatingBalloonTooltip
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setGridCount( 50 );
 
-		amSerialChart.setSize( "310px", "125px" );
-		content = amSerialChart;
+		content = amSerialChart.asWidget() ;
 	}
 
 	private String getFunctionString()

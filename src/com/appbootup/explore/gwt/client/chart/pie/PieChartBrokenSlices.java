@@ -52,7 +52,6 @@ public class PieChartBrokenSlices
 
 		// ADD TITLE
 		amPieChart.addTitle( "Click a slice to see the details" );
-		amPieChart.setSize( "310px", "125px" );
 		amPieChart.addListener( "rightClickSlice", new AmChartListener()
 		{
 			@Override
@@ -67,7 +66,7 @@ public class PieChartBrokenSlices
 				amPieChart.validateData();
 			}
 		} );
-		RootLayoutPanel.get().add( amPieChart );
+		RootLayoutPanel.get().add( amPieChart.asWidget() );
 	}
 
 	private native JsArray<JavaScriptObject> generateChartData( Integer selected )

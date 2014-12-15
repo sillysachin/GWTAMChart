@@ -156,7 +156,6 @@ public class ExportingChartToImage
 		exportConfig.setRemoveImagery( true );
 		amExport.setUserCFG( exportConfig );
 		amSerialChart.setAmExport( amExport );
-		amSerialChart.setSize( "310px", "125px" );
-		content = amSerialChart;
+		content = amSerialChart.asWidget();
 	}
 }

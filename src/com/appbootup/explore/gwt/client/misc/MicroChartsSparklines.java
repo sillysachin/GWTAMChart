@@ -64,9 +64,7 @@ public class MicroChartsSparklines
 		categoryAxis1.setGridAlpha( 0 );
 		categoryAxis1.setAxisAlpha( 0 );
 		categoryAxis1.setStartOnAxis( true );
-		//chart1.write( "line1" );
-		chart1.setSize( "200px", "50px" );
-		RootLayoutPanel.get().add( chart1 );
+		RootLayoutPanel.get().add( chart1.asWidget() );
 
 		// small column chart
 		AmSerialChart chart2 = AmCharts.AmSerialChart( AmChartTheme.NONE );
@@ -94,9 +92,7 @@ public class MicroChartsSparklines
 		CategoryAxis categoryAxis2 = chart2.getCategoryAxis();
 		categoryAxis2.setGridAlpha( 0 );
 		categoryAxis2.setAxisAlpha( 0 );
-		//chart2.write( "column1" );
-		chart2.setSize( "200px", "50px" );
-		RootLayoutPanel.get().add( chart2 );
+		RootLayoutPanel.get().add( chart2.asWidget() );
 
 	}
 

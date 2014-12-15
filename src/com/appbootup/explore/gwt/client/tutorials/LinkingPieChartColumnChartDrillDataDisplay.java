@@ -99,9 +99,6 @@ public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWra
 		valueAxes.add( valueAxis );
 		amSerialChart.setValueAxes( valueAxes );
 
-		amPieChart.setSize( "620px", "400px" );
-		amSerialChart.setSize( "620px", "400px" );
-
 		amPieChart.addListener( "pullOutSlice", new AmChartListener()
 		{
 			public void function( AmChartEventJSO event )
@@ -135,8 +132,8 @@ public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWra
 		} );
 
 		HorizontalPanel contentWrapper = new HorizontalPanel();
-		contentWrapper.add( amPieChart );
-		contentWrapper.add( amSerialChart );
+		contentWrapper.add( amPieChart.asWidget() );
+		contentWrapper.add( amSerialChart.asWidget()  );
 
 		setChartWidget( contentWrapper );
 		getReadyCallback().onReady();

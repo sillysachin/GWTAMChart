@@ -13,37 +13,18 @@ import com.amcharts.api.IsLabel;
 import com.amcharts.api.IsNumberPrefix;
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.event.AmChartEventJSO;
-import com.amcharts.impl.event.AmChartEventUtils;
 import com.amcharts.impl.event.AmChartListener;
-import com.amcharts.impl.event.chart.DataUpdatedEvent;
-import com.amcharts.impl.event.chart.DataUpdatedHandler;
-import com.amcharts.impl.event.chart.DrawEvent;
-import com.amcharts.impl.event.chart.DrawHandler;
-import com.amcharts.impl.event.chart.HasDataUpdatedHandlers;
-import com.amcharts.impl.event.chart.HasDrawHandlers;
-import com.amcharts.impl.event.chart.HasInitHandlers;
-import com.amcharts.impl.event.chart.HasRenderedHandlers;
-import com.amcharts.impl.event.chart.InitEvent;
-import com.amcharts.impl.event.chart.InitHandler;
-import com.amcharts.impl.event.chart.RenderedEvent;
-import com.amcharts.impl.event.chart.RenderedHandler;
 import com.amcharts.jso.AmChartDataJSO;
 import com.amcharts.jso.AmChartJSO;
 import com.google.gwt.core.client.IJavaScriptWrapper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.google.gwt.dom.client.Document;
-import com.google.gwt.user.client.ui.LayoutPanel;
-import com.google.gwt.user.client.ui.ResizeComposite;
-import com.google.web.bindery.event.shared.HandlerRegistration;
 
-public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWrapper<AmChartJSO>, HasDataUpdatedHandlers, HasDrawHandlers, HasInitHandlers, HasRenderedHandlers
+public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 {
 	protected AmChartJSO jso;
 
-	String id;
-
-	private LayoutPanel divWrapper = new LayoutPanel();
+	private String id;
 
 	private List< ? extends IsTitle> titles;
 
@@ -55,7 +36,7 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 
 	protected AmChart()
 	{
-		init();
+		init( "" );
 	}
 
 	protected AmChart( String id )
@@ -63,27 +44,14 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 		init( id );
 	}
 
-	private void init( JavaScriptObject configJSO )
-	{
-		init();
-		jso = makeChart( getId(), configJSO );
-	}
-
-	protected void init()
-	{
-		init( Document.get().createUniqueId() );
-	}
-
 	protected void init( String id )
 	{
 		setId( id );
-		initWidget( divWrapper );
 	}
 
 	public void setId( String id )
 	{
 		this.id = id;
-		divWrapper.getElement().setId( id );
 	}
 
 	public String getId()
@@ -101,13 +69,6 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 	public void setJso( AmChartJSO jso )
 	{
 		this.jso = jso;
-	}
-
-	@Override
-	protected void onLoad()
-	{
-		String id = getId();
-		write( id );
 	}
 
 	// TODO: Need to provide a better alternative than JsArray<JavaScriptObject> dataProvider.
@@ -643,51 +604,16 @@ public class AmChart extends ResizeComposite implements IsAmChart, IJavaScriptWr
 		amChartListener.function( event );
 	}
 
-	protected native void initListener( String eventName )
-	/*-{
-		var chart = @com.amcharts.impl.util.WrapperUtils::unwrap(Lcom/google/gwt/core/client/IJavaScriptWrapper;)(this);
-		var amChartThis = this;
-		if (chart[eventName + 'Fl'] == undefined) {
-			chart[eventName + 'Fl'] = true;
-			chart
-					.addListener(
-							eventName,
-							function(event) {
-								amChartThis.@com.amcharts.impl.AmChart::fireEvent(Lcom/amcharts/impl/event/AmChartEventJSO;)(event);
-							});
-		}
-	}-*/;
-
-	protected void fireEvent( AmChartEventJSO event )
+	public AmChartPanel asWidget()
 	{
-		AmCharts.EVENT_BUS.fireEvent( AmChartEventUtils.createEvent( event ) );
-	}
-
-	@Override
-	public HandlerRegistration addRenderedHandler( RenderedHandler handler )
-	{
-		initListener( RenderedEvent.getName() );
-		return RenderedEvent.addHandler( AmCharts.EVENT_BUS, handler );
-	}
-
-	@Override
-	public HandlerRegistration addInitHandler( InitHandler handler )
-	{
-		initListener( InitEvent.getName() );
-		return InitEvent.addHandler( AmCharts.EVENT_BUS, handler );
-	}
-
-	@Override
-	public HandlerRegistration addDrawHandler( DrawHandler handler )
-	{
-		initListener( DrawEvent.getName() );
-		return DrawEvent.addHandler( AmCharts.EVENT_BUS, handler );
-	}
-
-	@Override
-	public HandlerRegistration addDataUpdatedHandler( DataUpdatedHandler handler )
-	{
-		initListener( DataUpdatedEvent.getName() );
-		return DataUpdatedEvent.addHandler( AmCharts.EVENT_BUS, handler );
+		AmChartPanel amChartPanel = new AmChartPanel()
+		{
+			@Override
+			protected void onLoad()
+			{
+				write( getId() );
+			}
+		};
+		return amChartPanel;
 	}
 }

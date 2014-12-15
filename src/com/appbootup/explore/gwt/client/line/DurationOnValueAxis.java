@@ -184,7 +184,6 @@ public class DurationOnValueAxis
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
 
-		amSerialChart.setSize( "310px", "125px" );
-		content = amSerialChart;
+		content = amSerialChart.asWidget();
 	}
 }

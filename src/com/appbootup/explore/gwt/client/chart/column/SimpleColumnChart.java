@@ -84,7 +84,6 @@ public class SimpleColumnChart
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( 0 );
 		amSerialChart.setExportConfig( exportConfig );
-		amSerialChart.setSize( "310px", "125px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		RootLayoutPanel.get().add( amSerialChart.asWidget() );
 	}
 }

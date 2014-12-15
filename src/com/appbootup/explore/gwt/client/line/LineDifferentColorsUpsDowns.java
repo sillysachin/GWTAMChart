@@ -118,7 +118,6 @@ public class LineDifferentColorsUpsDowns
 		};
 		amSerialChart.addListener( "dataUpdated", zoomChart );
 
-		amSerialChart.setSize( "310px", "125px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		RootLayoutPanel.get().add( amSerialChart.asWidget() );
 	}
 }

@@ -65,7 +65,6 @@ public class AngularGaugeWithTwoAxes
 		gaugeArrow.setNailRadius( 0 );
 		gaugeArrow.setRadius( "85%" );
 		amAngularGauge.addArrow( gaugeArrow );
-		amAngularGauge.setSize( "310px", "125px" );
 		amAngularGauge.setFaceColor( "#000000" );
 		Timer timer = new Timer()
 		{
@@ -78,7 +77,7 @@ public class AngularGaugeWithTwoAxes
 		timer.scheduleRepeating( 2000 );
 		//TODO: The clock swings mechanically with no animation.
 		timer.run();
-		RootLayoutPanel.get().add( amAngularGauge );
+		RootLayoutPanel.get().add( amAngularGauge.asWidget()  );
 
 		//List<IsGaugeAxis> axes = amAngularGauge.getAxes();
 		//List<IsGaugeArrow> arrows = amAngularGauge.getArrows();

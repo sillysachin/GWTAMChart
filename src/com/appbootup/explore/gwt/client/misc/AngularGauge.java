@@ -70,7 +70,6 @@ public class AngularGauge
 		final GaugeArrow gaugeArrow = AmCharts.GaugeArrow();
 		gaugeArrow.setColor( "#67b7dc" );
 		amAngularGauge.addArrow( gaugeArrow );
-		amAngularGauge.setSize( "310px", "125px" );
 
 		Timer timer = new Timer()
 		{
@@ -83,7 +82,7 @@ public class AngularGauge
 		timer.scheduleRepeating( 2000 );
 		//TODO: The clock swings mechanically with no animation.
 		timer.run();
-		RootLayoutPanel.get().add( amAngularGauge );
+		RootLayoutPanel.get().add( amAngularGauge.asWidget()  );
 
 		randomValue( amAngularGauge );
 

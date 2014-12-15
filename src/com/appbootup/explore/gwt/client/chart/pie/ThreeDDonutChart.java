@@ -50,7 +50,6 @@ public class ThreeDDonutChart
 		amPieChart
 				.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
 		amPieChart.setAngle( 15.0 );
-		amPieChart.setSize( "1024px", "500px" );
 
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
@@ -58,6 +57,6 @@ public class ThreeDDonutChart
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amPieChart );
+		RootLayoutPanel.get().add( amPieChart.asWidget() );
 	}
 }

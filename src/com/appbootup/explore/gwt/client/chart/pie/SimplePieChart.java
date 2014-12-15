@@ -48,7 +48,6 @@ public class SimplePieChart
 		amPieChart.setTheme( "none" );
 		amPieChart.setValueField( "litres" );
 		amPieChart.setTitleField( "country" );
-		amPieChart.setSize( "310px", "125px" );
 		amPieChart.setGroupedPulled( true );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem1 = new MenuItem();
@@ -80,7 +79,7 @@ public class SimplePieChart
 		JsFunction jsFunction = new JsFunction();
 		jsFunction.setFunctionString( functionString );
 		amPieChart.setLabelFunction( jsFunction );
-		RootLayoutPanel.get().add( amPieChart );
+		RootLayoutPanel.get().add( amPieChart.asWidget() );
 	}
 
 	private native JavaScriptObject getLabelFunction()

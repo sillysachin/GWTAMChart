@@ -22,8 +22,6 @@ import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
-import com.amcharts.impl.event.chart.RenderedEvent;
-import com.amcharts.impl.event.chart.RenderedHandler;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -172,10 +170,10 @@ public class MultiDimensionalDrilldownBackButton
 
 		amSerialChart.setExportConfig( exportConfig );
 
-		amSerialChart.addRenderedHandler( new RenderedHandler()
+		amSerialChart.addListener( "rendered", new AmChartListener()
 		{
 			@Override
-			public void onRendered( RenderedEvent event )
+			public void function( AmChartEventJSO event )
 			{
 				htmlAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
 				anchorAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
@@ -217,9 +215,8 @@ public class MultiDimensionalDrilldownBackButton
 				}
 			}
 		} );
-		amSerialChart.setSize( "620px", "250px" );
 		( ( VerticalPanel ) content ).add( amToolbar );
-		( ( VerticalPanel ) content ).add( amSerialChart );
+		( ( VerticalPanel ) content ).add( amSerialChart.asWidget() );
 	}
 
 	private void goBack( final JsArray<JavaScriptObject> chartData, AmSerialChart amSerialChart, Anchor anchorAmChartMenuGoBack )

@@ -47,7 +47,6 @@ public class PieChartWithLegend
 		amPieChart.setLegend( legend );
 		amPieChart.setValueField( "litres" );
 		amPieChart.setTitleField( "country" );
-		amPieChart.setSize( "1024px", "500px" );
 		amPieChart.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
@@ -56,6 +55,6 @@ public class PieChartWithLegend
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( "0px" );
 		amPieChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amPieChart );
+		RootLayoutPanel.get().add( amPieChart.asWidget() );
 	}
 }

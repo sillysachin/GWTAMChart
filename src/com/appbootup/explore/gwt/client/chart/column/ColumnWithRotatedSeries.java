@@ -75,7 +75,6 @@ public class ColumnWithRotatedSeries
 		categoryAxis.setLabelRotation( 45 );
 
 		amSerialChart.setAmExport( AmCharts.AmExport() );
-		amSerialChart.setSize( "310px", "125px" );
-		RootLayoutPanel.get().add( amSerialChart );
+		RootLayoutPanel.get().add( amSerialChart.asWidget() );
 	}
 }
