@@ -1,5 +1,6 @@
 package com.appbootup.explore.gwt.client;
 
+import com.amcharts.impl.wrapper.IsReadyCallback;
 import com.appbootup.explore.gwt.client.tutorials.LinkingPieChartColumnChartDrillDataDisplay;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;

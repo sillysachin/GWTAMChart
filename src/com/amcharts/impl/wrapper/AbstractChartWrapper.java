@@ -1,4 +1,4 @@
-package com.appbootup.explore.gwt.client;
+package com.amcharts.impl.wrapper;
 
 import com.amcharts.impl.AmChart;
 import com.google.gwt.user.client.ui.Widget;
@@ -14,6 +14,7 @@ public class AbstractChartWrapper implements IsChartWrapper
 	@Override
 	public Widget getChartWidget()
 	{
+		amChartWrapper = amChart.asWidget();
 		return amChartWrapper;
 	}
 

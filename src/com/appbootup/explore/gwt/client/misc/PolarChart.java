@@ -5,7 +5,7 @@ import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmRadarChart;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.ValueAxis;
-import com.appbootup.explore.gwt.client.AbstractChartWrapper;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -84,10 +84,5 @@ public class PolarChart extends AbstractChartWrapper
 		amRadarChart.setCategoryField( "direction" );
 		amChart = amRadarChart;
 		getReadyCallback().onReady();
-	}
-
-	public void render()
-	{
-		setChartWidget( amChart.asWidget() );
 	}
 }

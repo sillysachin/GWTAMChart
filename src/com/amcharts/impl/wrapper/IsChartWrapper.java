@@ -1,4 +1,4 @@
-package com.appbootup.explore.gwt.client;
+package com.amcharts.impl.wrapper;
 
 import com.google.gwt.user.client.ui.Widget;
 

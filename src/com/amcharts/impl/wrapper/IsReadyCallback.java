@@ -1,4 +1,4 @@
-package com.appbootup.explore.gwt.client;
+package com.amcharts.impl.wrapper;
 
 public interface IsReadyCallback
 {

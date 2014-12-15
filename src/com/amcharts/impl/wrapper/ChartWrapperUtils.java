@@ -1,4 +1,4 @@
-package com.appbootup.explore.gwt.client;
+package com.amcharts.impl.wrapper;
 
 import com.appbootup.explore.gwt.client.misc.PolarChart;
 import com.google.gwt.core.client.GWT;

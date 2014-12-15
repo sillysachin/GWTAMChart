@@ -16,7 +16,7 @@ import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
 import com.amcharts.impl.util.LogUtils;
-import com.appbootup.explore.gwt.client.AbstractChartWrapper;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
