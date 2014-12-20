@@ -1,15 +1,15 @@
 package com.appbootup.explore.gwt.client.chart.pie;
 
 import com.amcharts.impl.AmPieChart;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class DonutChart
+public class DonutChart extends AbstractChartWrapper
 {
 	public DonutChart()
 	{
@@ -43,6 +43,8 @@ public class DonutChart
 		amPieChart.setRadius( "42%" );
 		amPieChart.setInnerRadius( "60%" );
 		amPieChart.setLabelText( "[[title]]" );
-		RootLayoutPanel.get().add( amPieChart.asWidget()  );
+
+		setAmChart( amPieChart );
+		getReadyCallback().onReady();
 	}
 }

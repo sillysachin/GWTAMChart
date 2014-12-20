@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.amcharts.api.IsValueAxis;
+import com.amcharts.impl.AmChartLayoutPanel;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
@@ -132,8 +133,13 @@ public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWra
 		} );
 
 		HorizontalPanel contentWrapper = new HorizontalPanel();
-		contentWrapper.add( amPieChart.asWidget() );
-		contentWrapper.add( amSerialChart.asWidget()  );
+		
+		AmChartLayoutPanel amPieChartPanel = amPieChart.asWidget();
+		amPieChartPanel.setSize( "320px", "250px" );
+		contentWrapper.add( amPieChartPanel );
+		AmChartLayoutPanel amSerialChartPanel = amSerialChart.asWidget();
+		amSerialChartPanel.setSize( "320px", "250px" );
+		contentWrapper.add( amSerialChartPanel );
 
 		setChartWidget( contentWrapper );
 		getReadyCallback().onReady();

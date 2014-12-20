@@ -82,7 +82,7 @@ public class PolarChart extends AbstractChartWrapper
 		amGraph.setValueField( "value" );
 		amRadarChart.addGraph( amGraph );
 		amRadarChart.setCategoryField( "direction" );
-		amChart = amRadarChart;
+		setAmChart( amRadarChart );
 		getReadyCallback().onReady();
 	}
 }

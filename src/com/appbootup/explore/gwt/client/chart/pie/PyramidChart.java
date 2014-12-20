@@ -5,33 +5,35 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class PyramidChart
+public class PyramidChart extends AbstractChartWrapper
 {
 	public PyramidChart()
 	{
-		GWTAMChart.chartService.getData( "/data/pyramidChart.json", new AsyncCallback<String>()
-		{
-			@Override
-			public void onSuccess( String chartData )
-			{
-				JsArray<JavaScriptObject> dataProvider = JsonUtils.unsafeEval( chartData );
-				drawChart( dataProvider );
-			}
+		GWTAMChart.chartService
+				.getData( "/data/pyramidChart.json", new AsyncCallback<String>()
+				{
+					@Override
+					public void onSuccess( String chartData )
+					{
+						JsArray<JavaScriptObject> dataProvider = JsonUtils
+								.unsafeEval( chartData );
+						drawChart( dataProvider );
+					}
 
-			@Override
-			public void onFailure( Throwable caught )
-			{
-				GWT.log( "This Sucks", caught );
-			}
-		} );
+					@Override
+					public void onFailure( Throwable caught )
+					{
+						GWT.log( "This Sucks", caught );
+					}
+				} );
 	}
 
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
@@ -46,7 +48,7 @@ public class PyramidChart
 		amFunnelChart.setStartX( -500 );
 		amFunnelChart.setRotate( true );
 		amFunnelChart.setLabelPosition( "right" );
-		AmBalloon balloon =  AmCharts.AmBalloon();
+		AmBalloon balloon = AmCharts.AmBalloon();
 		balloon.setFixedPosition( true );
 		balloon.setColor( "#F0F0F0" );
 		balloon.setFillColor( "#0F0F0F" );
@@ -54,11 +56,13 @@ public class PyramidChart
 		amFunnelChart.setBalloonText( "[[title]]: [[value]]n[[description]]" );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amFunnelChart.setExportConfig( exportConfig );
 		amFunnelChart.setGroupPercent( 5.0 );
-		RootLayoutPanel.get().add( amFunnelChart.asWidget()  );
+
+		setAmChart( amFunnelChart );
+		getReadyCallback().onReady();
 	}
 }

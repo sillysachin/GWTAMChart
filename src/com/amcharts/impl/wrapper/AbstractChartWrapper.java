@@ -5,23 +5,26 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class AbstractChartWrapper implements IsChartWrapper
 {
-	private Widget amChartWrapper;
+	private Widget amChartWidget;
 
-	protected AmChart amChart;
+	private AmChart amChart;
 
 	private IsReadyCallback callback;
 
 	@Override
 	public Widget getChartWidget()
 	{
-		amChartWrapper = amChart.asWidget();
-		return amChartWrapper;
+		if ( amChartWidget == null && amChart != null )
+		{
+			amChartWidget = amChart.asWidget();
+		}
+		return amChartWidget;
 	}
 
 	@Override
-	public void setChartWidget( Widget isWidget )
+	public void setChartWidget( Widget chartWidget )
 	{
-		amChartWrapper = isWidget;
+		amChartWidget = chartWidget;
 	}
 
 	@Override

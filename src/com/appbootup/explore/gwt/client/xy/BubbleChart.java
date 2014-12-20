@@ -5,15 +5,15 @@ import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmLegend;
 import com.amcharts.impl.AmXYChart;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class BubbleChart
+public class BubbleChart extends AbstractChartWrapper
 {
 	public BubbleChart()
 	{
@@ -88,6 +88,7 @@ public class BubbleChart
 
 		amXYChart.setMarginLeft( 46 );
 		amXYChart.setMarginBottom( 35 );
-		amXYChart.asWidget();
+		setAmChart( amXYChart );
+		getReadyCallback().onReady();
 	}
 }

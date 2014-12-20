@@ -10,15 +10,15 @@ import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.MenuItemOutput;
 import com.amcharts.impl.MenuItemOutputCallback;
 import com.amcharts.impl.util.LogUtils;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class SimplePieChart
+public class SimplePieChart extends AbstractChartWrapper
 {
 	public SimplePieChart()
 	{
@@ -79,7 +79,8 @@ public class SimplePieChart
 		JsFunction jsFunction = new JsFunction();
 		jsFunction.setFunctionString( functionString );
 		amPieChart.setLabelFunction( jsFunction );
-		RootLayoutPanel.get().add( amPieChart.asWidget() );
+		setAmChart( amPieChart );
+		getReadyCallback().onReady();
 	}
 
 	private native JavaScriptObject getLabelFunction()

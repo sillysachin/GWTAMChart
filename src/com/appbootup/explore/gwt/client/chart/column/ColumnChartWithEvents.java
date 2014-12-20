@@ -13,6 +13,7 @@ import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.chart.RenderedEvent;
 import com.amcharts.impl.event.chart.RenderedHandler;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -21,7 +22,7 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class ColumnChartWithEvents
+public class ColumnChartWithEvents  extends AbstractChartWrapper
 {
 	public ColumnChartWithEvents()
 	{
@@ -164,6 +165,7 @@ public class ColumnChartWithEvents
 			}
 		} );
 
-		RootLayoutPanel.get().add( amSerialChart.asWidget() );
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

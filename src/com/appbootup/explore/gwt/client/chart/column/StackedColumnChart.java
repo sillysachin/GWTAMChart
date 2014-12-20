@@ -8,6 +8,7 @@ import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -16,7 +17,7 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class StackedColumnChart
+public class StackedColumnChart  extends AbstractChartWrapper
 {
 	public StackedColumnChart()
 	{
@@ -152,6 +153,8 @@ public class StackedColumnChart
 		exportConfig.setMenuTop( 20 );
 		exportConfig.setMenuRight( 20 );
 		amSerialChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amSerialChart.asWidget() );
+
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

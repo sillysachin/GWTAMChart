@@ -4,15 +4,15 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class ThreeDDonutChart
+public class ThreeDDonutChart extends AbstractChartWrapper
 {
 	public ThreeDDonutChart()
 	{
@@ -57,6 +57,8 @@ public class ThreeDDonutChart
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amPieChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amPieChart.asWidget() );
+
+		setAmChart( amPieChart );
+		getReadyCallback().onReady();
 	}
 }

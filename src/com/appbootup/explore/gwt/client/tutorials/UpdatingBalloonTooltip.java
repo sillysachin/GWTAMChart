@@ -11,18 +11,16 @@ import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.DateFormat;
 import com.amcharts.impl.JsFunction;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.IsWidget;
 
-public class UpdatingBalloonTooltip
+public class UpdatingBalloonTooltip extends AbstractChartWrapper
 {
-	IsWidget content = null;
-
 	public UpdatingBalloonTooltip()
 	{
 		GWTAMChart.chartService
@@ -117,7 +115,8 @@ public class UpdatingBalloonTooltip
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setGridCount( 50 );
 
-		content = amSerialChart.asWidget() ;
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 
 	private String getFunctionString()

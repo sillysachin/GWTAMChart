@@ -6,15 +6,15 @@ import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class PieChartBrokenSlices
+public class PieChartBrokenSlices extends AbstractChartWrapper
 {
 	public PieChartBrokenSlices()
 	{
@@ -59,14 +59,16 @@ public class PieChartBrokenSlices
 			{
 				Integer selected = null;
 				IsSlice dataItem = ( IsSlice ) event.getDataItem();
-				DataContext dataContext = ( DataContext ) dataItem.getDataContext();
+				DataContext dataContext = ( DataContext ) dataItem
+						.getDataContext();
 				selected = dataContext.getId();
 				GWT.log( event.getEvent().getClientX() + "" );
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
 		} );
-		RootLayoutPanel.get().add( amPieChart.asWidget() );
+		setAmChart( amPieChart );
+		getReadyCallback().onReady();
 	}
 
 	private native JsArray<JavaScriptObject> generateChartData( Integer selected )

@@ -13,6 +13,7 @@ import com.amcharts.impl.DurationUnits;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -21,10 +22,8 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class DurationOnValueAxis
+public class DurationOnValueAxis extends AbstractChartWrapper
 {
-	IsWidget content = null;
-
 	public DurationOnValueAxis()
 	{
 		GWTAMChart.chartService
@@ -184,6 +183,7 @@ public class DurationOnValueAxis
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
 
-		content = amSerialChart.asWidget();
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

@@ -13,18 +13,16 @@ import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.Guide;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.IsWidget;
 
-public class StackedArea
+public class StackedArea extends AbstractChartWrapper
 {
-	IsWidget content = null;
-
 	public StackedArea()
 	{
 		GWTAMChart.chartService
@@ -115,10 +113,11 @@ public class StackedArea
 		guide1.setLineColor( "#CC0000" );
 		guide1.setLineAlpha( 1 );
 		guide1.setFillAlpha( 0.2 );
-		guide1.setFillColor( "#CC0000" );;
+		guide1.setFillColor( "#CC0000" );
+		;
 		guide1.setDashLength( 2 );
 		guide1.setInside( true );
-		guide1.setLabelRotation( 90	 );
+		guide1.setLabelRotation( 90 );
 		guide1.setLabel( "fines for speeding increased" );
 		Guide guide2 = AmCharts.Guide();
 		guide2.setCategory( "2007" );
@@ -126,22 +125,23 @@ public class StackedArea
 		guide2.setLineAlpha( 1 );
 		guide2.setDashLength( 2 );
 		guide2.setInside( true );
-		guide2.setLabelRotation( 90	 );
+		guide2.setLabelRotation( 90 );
 		guide2.setLabel( "motorcycle fee introduced" );
 		ArrayList<Guide> guides = new ArrayList<Guide>();
 		guides.add( guide1 );
 		guides.add( guide2 );
-		categoryAxis.setGuides(guides);
+		categoryAxis.setGuides( guides );
 
 		ExportConfig exportConfig = new ExportConfig();
 		exportConfig.setMenuTop( "10px" );
 		exportConfig.setMenuRight( "10px" );
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
 
-		content = amSerialChart.asWidget();
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

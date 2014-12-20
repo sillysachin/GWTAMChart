@@ -4,6 +4,7 @@ import com.amcharts.impl.AmAngularGauge;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.GaugeArrow;
 import com.amcharts.impl.GaugeAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -11,9 +12,8 @@ import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class AngularGaugeWithTwoAxes
+public class AngularGaugeWithTwoAxes extends AbstractChartWrapper
 {
 	public AngularGaugeWithTwoAxes()
 	{
@@ -77,8 +77,8 @@ public class AngularGaugeWithTwoAxes
 		timer.scheduleRepeating( 2000 );
 		//TODO: The clock swings mechanically with no animation.
 		timer.run();
-		RootLayoutPanel.get().add( amAngularGauge.asWidget()  );
-
+		setAmChart( amAngularGauge );
+		getReadyCallback().onReady();
 		//List<IsGaugeAxis> axes = amAngularGauge.getAxes();
 		//List<IsGaugeArrow> arrows = amAngularGauge.getArrows();
 	}

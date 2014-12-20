@@ -8,6 +8,7 @@ import com.amcharts.impl.ChartCursor;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -16,7 +17,7 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class SimpleColumnChart
+public class SimpleColumnChart  extends AbstractChartWrapper
 {
 	public SimpleColumnChart()
 	{
@@ -84,6 +85,8 @@ public class SimpleColumnChart
 		exportConfig.addMenuItem( menuItem );
 		exportConfig.setMenuTop( 0 );
 		amSerialChart.setExportConfig( exportConfig );
-		RootLayoutPanel.get().add( amSerialChart.asWidget() );
+
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

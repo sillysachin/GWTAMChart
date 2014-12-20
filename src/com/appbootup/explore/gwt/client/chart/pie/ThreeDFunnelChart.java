@@ -5,15 +5,15 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmFunnelChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class ThreeDFunnelChart
+public class ThreeDFunnelChart extends AbstractChartWrapper
 {
 	public ThreeDFunnelChart()
 	{
@@ -60,11 +60,12 @@ public class ThreeDFunnelChart
 		amFunnelChart.setBalloonText( "[[title]]: [[value]]n[[description]]" );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amFunnelChart.setExportConfig( exportConfig );
 		amFunnelChart.setGroupPercent( 5.0 );
-		RootLayoutPanel.get().add( amFunnelChart.asWidget()  );
+		setAmChart( amFunnelChart );
+		getReadyCallback().onReady();
 	}
 }

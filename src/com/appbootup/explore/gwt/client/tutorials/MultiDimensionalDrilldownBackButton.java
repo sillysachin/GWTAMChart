@@ -22,6 +22,7 @@ import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
 import com.amcharts.impl.event.DataContext;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -33,16 +34,13 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class MultiDimensionalDrilldownBackButton
+public class MultiDimensionalDrilldownBackButton extends AbstractChartWrapper
 {
 	final Stack<ChartDataIndex> chartDataIndexes = new Stack<ChartDataIndex>();
 
 	private String chartTitle = "Base";
-
-	IsWidget content = new VerticalPanel();
 
 	private String id;
 
@@ -175,8 +173,8 @@ public class MultiDimensionalDrilldownBackButton
 			@Override
 			public void function( AmChartEventJSO event )
 			{
-				htmlAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
-				anchorAmChartMenuGoBack.addStyleName( "gwtAmChartMenu" );
+				htmlAmChartMenuGoBack.addStyleName( "gwt-AmChartMenu" );
+				anchorAmChartMenuGoBack.addStyleName( "gwt-AmChartMenu" );
 				anchorAmChartMenuGoBack.addClickHandler( new ClickHandler()
 				{
 					@Override
@@ -215,8 +213,12 @@ public class MultiDimensionalDrilldownBackButton
 				}
 			}
 		} );
-		( ( VerticalPanel ) content ).add( amToolbar );
-		( ( VerticalPanel ) content ).add( amSerialChart.asWidget() );
+		VerticalPanel content = new VerticalPanel();
+		content.add( amToolbar );
+		content.add( amSerialChart.asWidget() );
+
+		setChartWidget( content );
+		getReadyCallback().onReady();
 	}
 
 	private void goBack( final JsArray<JavaScriptObject> chartData, AmSerialChart amSerialChart, Anchor anchorAmChartMenuGoBack )

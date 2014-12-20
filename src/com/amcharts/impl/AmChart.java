@@ -604,9 +604,9 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 		amChartListener.function( event );
 	}
 
-	public AmChartPanel asWidget()
+	public AmChartLayoutPanel asWidget()
 	{
-		AmChartPanel amChartPanel = new AmChartPanel()
+		AmChartLayoutPanel amChartPanel = new AmChartLayoutPanel()
 		{
 			@Override
 			protected void onLoad()

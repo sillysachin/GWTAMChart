@@ -3,7 +3,7 @@ package com.appbootup.explore.gwt.client;
 import java.util.Date;
 import java.util.List;
 
-import com.amcharts.impl.AmChartPanel;
+import com.amcharts.impl.AmChartLayoutPanel;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmPieChart;
@@ -38,7 +38,7 @@ public class GWTAMChartSample
 {
 	private static final String SERVER_ERROR = "An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
 
-	public static AmChartPanel pieChartByJSNI()
+	public static AmChartLayoutPanel pieChartByJSNI()
 	{
 		String pieData = "[{title:\"Pie Dogs have eaten\",value:70},{title:\"Pie Dogs haven\'t eaten\",value:30}]";
 		AmPieChart amPieChart = AmCharts.AmPieChart();
@@ -50,7 +50,7 @@ public class GWTAMChartSample
 		return amPieChart.asWidget();
 	}
 
-	public static AmChartPanel serialChartByJSNI()
+	public static AmChartLayoutPanel serialChartByJSNI()
 	{
 		AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		JsArray<JavaScriptObject> serialDataProvider = JsonUtils

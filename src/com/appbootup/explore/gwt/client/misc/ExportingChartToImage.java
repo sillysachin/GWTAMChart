@@ -14,6 +14,7 @@ import com.amcharts.impl.MenuItemOutput;
 import com.amcharts.impl.MenuItemOutputCallback;
 import com.amcharts.impl.MenuItemStyle;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -22,7 +23,7 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class ExportingChartToImage
+public class ExportingChartToImage extends AbstractChartWrapper
 {
 	IsWidget content = null;
 
@@ -95,7 +96,7 @@ public class ExportingChartToImage
 
 		ExportConfig exportConfig = AmCharts.ExportConfig();
 		MenuItem menuItem1 = new MenuItem();
-		menuItem1.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem1.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem1.setIconTitle( "Save chart as an image" );
 		menuItem1.setTextAlign( "center" );
 		Item item1 = AmCharts.Item();
@@ -156,6 +157,8 @@ public class ExportingChartToImage
 		exportConfig.setRemoveImagery( true );
 		amExport.setUserCFG( exportConfig );
 		amSerialChart.setAmExport( amExport );
-		content = amSerialChart.asWidget();
+
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

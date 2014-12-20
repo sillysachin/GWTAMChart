@@ -1,7 +1,7 @@
 package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.wrapper.IsReadyCallback;
-import com.appbootup.explore.gwt.client.tutorials.LinkingPieChartColumnChartDrillDataDisplay;
+import com.appbootup.explore.gwt.client.chart.pie.SimplePieChart;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -30,42 +30,42 @@ public class GWTAMChart implements EntryPoint
 		// GWTAMChartSample.serialChartByJSNI();
 		// GWTAMChartSample.chartByServerJSON();
 		// GWTAMChartSample.lineWithTrendLineChartByJSNI();
-		// final SimplePieChart simplePieChart = new SimplePieChart();
-		// final ThreeDPieChart chart = new ThreeDPieChart();
-		// final DonutChart chart = new DonutChart();
-		// final ThreeDDonutChart chart = new ThreeDDonutChart();
-		// final PieChartWithLegend chart = new PieChartWithLegend();
-		// final PieChartBrokenSlices chart = new PieChartBrokenSlices();
-		// final PyramidChart chart = new PyramidChart();
-		// final ThreeDFunnelChart chart = new ThreeDFunnelChart();
-		// final FunnelChart chart = new FunnelChart();
-		// final ColumnWithRotatedSeries chart = new ColumnWithRotatedSeries();
-		// final SimpleColumnChart chart = new SimpleColumnChart();
-		// final ColumnChartWithEvents chart = new ColumnChartWithEvents();
-		// final StackedColumnChart chart = new StackedColumnChart();
-		// final ThreeDCylinderChart chart = new ThreeDCylinderChart();
-		// final LineDifferentColorsUpsDowns chart = new LineDifferentColorsUpsDowns();
-		// final DateBasedData chart = new DateBasedData();
-		// final MultipleValueAxes chart = new MultipleValueAxes();
-		// final BubbleChart chart = new BubbleChart();
-		// final final PolarChart chart = new PolarChart();
-		// final MicroChartsSparklines chart = new MicroChartsSparklines();
-		// final AngularGaugeWithTwoAxes chart = new AngularGaugeWithTwoAxes();
-		// final AngularGauge chart = new AngularGauge();
-		// final ExportingChartToImage chart = new ExportingChartToImage();
-		// final LineWithChangingColor chart = new LineWithChangingColor();
-		// final StackedArea chart = new StackedArea();
-		// final DurationOnValueAxis chart = new DurationOnValueAxis();
-		// final UpdatingBalloonTooltip chart = new UpdatingBalloonTooltip();
-		// final MultiDimensionalDrilldownBackButton chart = new MultiDimensionalDrilldownBackButton();
-		final LinkingPieChartColumnChartDrillDataDisplay chart = new LinkingPieChartColumnChartDrillDataDisplay();
+		final SimplePieChart chartWrapper = new SimplePieChart();
+		// FIXME: final ThreeDPieChart chartWrapper = new ThreeDPieChart();
+		// final DonutChart chartWrapper = new DonutChart();
+		// FIXME: final ThreeDDonutChart chartWrapper = new ThreeDDonutChart();
+		// final PieChartWithLegend chartWrapper = new PieChartWithLegend();
+		// FIXME: final PieChartBrokenSlices chartWrapper = new PieChartBrokenSlices();
+		// final PyramidChart chartWrapper = new PyramidChart();
+		// final ThreeDFunnelChart chartWrapper = new ThreeDFunnelChart();
+		// final FunnelChart chartWrapper = new FunnelChart();
+		// final ColumnWithRotatedSeries chartWrapper = new ColumnWithRotatedSeries();
+		// final SimpleColumnChart chartWrapper = new SimpleColumnChart();
+		// final ColumnChartWithEvents chartWrapper = new ColumnChartWithEvents();
+		// final StackedColumnChart chartWrapper = new StackedColumnChart();
+		// final ThreeDCylinderChart chartWrapper = new ThreeDCylinderChart();
+		// final LineDifferentColorsUpsDowns chartWrapper = new LineDifferentColorsUpsDowns();
+		// final DateBasedData chartWrapper = new DateBasedData();
+		// final MultipleValueAxes chartWrapper = new MultipleValueAxes();
+		// final BubbleChart chartWrapper = new BubbleChart();
+		// final PolarChart chartWrapper = new PolarChart();
+		// final MicroChartsSparklines chartWrapper = new MicroChartsSparklines();
+		// final AngularGaugeWithTwoAxes chartWrapper = new AngularGaugeWithTwoAxes();
+		// final AngularGauge chartWrapper = new AngularGauge();
+		// final ExportingChartToImage chartWrapper = new ExportingChartToImage();
+		// final LineWithChangingColor chartWrapper = new LineWithChangingColor();
+		// final StackedArea chartWrapper = new StackedArea();
+		// final DurationOnValueAxis chartWrapper = new DurationOnValueAxis();
+		// final UpdatingBalloonTooltip chartWrapper = new UpdatingBalloonTooltip();
+		// FIXME: final MultiDimensionalDrilldownBackButton chartWrapper = new MultiDimensionalDrilldownBackButton( "multiDimensionalDrilldown" );
+		// FIXME: final LinkingPieChartColumnChartDrillDataDisplay chartWrapper = new LinkingPieChartColumnChartDrillDataDisplay();
 
-		chart.setReadyCallback( new IsReadyCallback()
+		chartWrapper.setReadyCallback( new IsReadyCallback()
 		{
 			public void onReady()
 			{
-				Widget widget = chart.getChartWidget();
-				widget.setSize( "620px", "250px" );
+				Widget widget = chartWrapper.getChartWidget();
+				widget.setSize( "620px", "350px" );
 				RootLayoutPanel.get().add( widget );
 			}
 		} );

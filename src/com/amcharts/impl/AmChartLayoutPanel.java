@@ -4,18 +4,18 @@ import com.google.gwt.dom.client.Document;
 import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.ResizeComposite;
 
-public class AmChartPanel extends ResizeComposite
+public class AmChartLayoutPanel extends ResizeComposite
 {
 	String id;
 
 	private LayoutPanel divWrapper = new LayoutPanel();
 
-	protected AmChartPanel()
+	protected AmChartLayoutPanel()
 	{
 		init();
 	}
 
-	protected AmChartPanel( String id )
+	protected AmChartLayoutPanel( String id )
 	{
 		init( id );
 	}
@@ -28,6 +28,7 @@ public class AmChartPanel extends ResizeComposite
 	protected void init( String id )
 	{
 		setId( id );
+		divWrapper.addStyleName( "gwt-AmChartLayoutPanel" );
 		initWidget( divWrapper );
 	}
 

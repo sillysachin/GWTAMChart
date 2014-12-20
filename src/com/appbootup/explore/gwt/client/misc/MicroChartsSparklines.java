@@ -1,20 +1,22 @@
 package com.appbootup.explore.gwt.client.misc;
 
+import com.amcharts.impl.AmChartLayoutPanel;
 import com.amcharts.impl.AmChartTheme;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmGraph;
 import com.amcharts.impl.AmSerialChart;
 import com.amcharts.impl.CategoryAxis;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class MicroChartsSparklines
+public class MicroChartsSparklines extends AbstractChartWrapper
 {
 	public MicroChartsSparklines()
 	{
@@ -64,7 +66,6 @@ public class MicroChartsSparklines
 		categoryAxis1.setGridAlpha( 0 );
 		categoryAxis1.setAxisAlpha( 0 );
 		categoryAxis1.setStartOnAxis( true );
-		RootLayoutPanel.get().add( chart1.asWidget() );
 
 		// small column chart
 		AmSerialChart chart2 = AmCharts.AmSerialChart( AmChartTheme.NONE );
@@ -92,8 +93,18 @@ public class MicroChartsSparklines
 		CategoryAxis categoryAxis2 = chart2.getCategoryAxis();
 		categoryAxis2.setGridAlpha( 0 );
 		categoryAxis2.setAxisAlpha( 0 );
-		RootLayoutPanel.get().add( chart2.asWidget() );
 
+		VerticalPanel contentWrapper = new VerticalPanel();
+
+		AmChartLayoutPanel chart1Panel = chart1.asWidget();
+		chart1Panel.setSize( "150px", "100px" );
+		contentWrapper.add( chart1Panel );
+		AmChartLayoutPanel chart2Panel = chart2.asWidget();
+		chart2Panel.setSize( "150px", "100px" );
+		contentWrapper.add( chart2Panel );
+
+		setChartWidget( contentWrapper );
+		getReadyCallback().onReady();
 	}
 
 	private final native JsArray<JavaScriptObject> getSmallColumnChartData()

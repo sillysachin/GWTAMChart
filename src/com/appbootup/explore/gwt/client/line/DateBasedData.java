@@ -13,15 +13,15 @@ import com.amcharts.impl.MenuItem;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class DateBasedData
+public class DateBasedData extends AbstractChartWrapper
 {
 	public DateBasedData()
 	{
@@ -95,7 +95,7 @@ public class DateBasedData
 		exportConfig.setMenuRight( 20 );
 		exportConfig.setMenuBottom( 50 );
 		MenuItem menuItem = new MenuItem();
-		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES+"export.png" );
+		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );
 		menuItem.setFormat( "png" );
 		exportConfig.addMenuItem( menuItem );
 		amSerialChart.setExportConfig( exportConfig );
@@ -110,7 +110,8 @@ public class DateBasedData
 		};
 		amSerialChart.addListener( "rendered", zoomChart );
 		zoomChart( chartData, amSerialChart );
-		RootLayoutPanel.get().add( amSerialChart.asWidget() );
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 
 	private void zoomChart( final JsArray<JavaScriptObject> chartData, final AmSerialChart amSerialChart )

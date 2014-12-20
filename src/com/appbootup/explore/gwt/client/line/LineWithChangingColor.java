@@ -13,6 +13,7 @@ import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.DateFormat;
 import com.amcharts.impl.DurationUnits;
 import com.amcharts.impl.ValueAxis;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -21,10 +22,8 @@ import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class LineWithChangingColor
+public class LineWithChangingColor extends AbstractChartWrapper
 {
-	IsWidget content = null;
-
 	public LineWithChangingColor()
 	{
 		GWTAMChart.chartService
@@ -114,6 +113,8 @@ public class LineWithChangingColor
 		categoryAxis.setAxisColor( "#555555" );
 		categoryAxis.setGridAlpha( 0 );
 		categoryAxis.setGridCount( 50 );
-		content = amSerialChart.asWidget();
+
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }

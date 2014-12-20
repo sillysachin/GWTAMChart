@@ -11,14 +11,14 @@ import com.amcharts.impl.ChartScrollbar;
 import com.amcharts.impl.ValueAxis;
 import com.amcharts.impl.event.AmChartEventJSO;
 import com.amcharts.impl.event.AmChartListener;
+import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 
-public class LineDifferentColorsUpsDowns
+public class LineDifferentColorsUpsDowns extends AbstractChartWrapper
 {
 	public LineDifferentColorsUpsDowns()
 	{
@@ -118,6 +118,7 @@ public class LineDifferentColorsUpsDowns
 		};
 		amSerialChart.addListener( "dataUpdated", zoomChart );
 
-		RootLayoutPanel.get().add( amSerialChart.asWidget() );
+		setAmChart( amSerialChart );
+		getReadyCallback().onReady();
 	}
 }
