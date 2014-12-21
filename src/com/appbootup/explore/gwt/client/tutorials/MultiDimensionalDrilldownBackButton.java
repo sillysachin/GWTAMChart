@@ -5,6 +5,7 @@ import java.util.Stack;
 
 import com.amcharts.api.IsTitle;
 import com.amcharts.impl.AmChart;
+import com.amcharts.impl.AmChartLayoutPanel;
 import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmExport;
 import com.amcharts.impl.AmGraph;
@@ -42,11 +43,10 @@ public class MultiDimensionalDrilldownBackButton extends AbstractChartWrapper
 
 	private String chartTitle = "Base";
 
-	private String id;
+	private AmChartLayoutPanel amSerialChartPanel;
 
-	public MultiDimensionalDrilldownBackButton( String id )
+	public MultiDimensionalDrilldownBackButton()
 	{
-		this.id = id;
 		GWTAMChart.chartService
 				.getData( "/data/multiDimensionalDrilldownBackButton.json", new AsyncCallback<String>()
 				{
@@ -72,7 +72,7 @@ public class MultiDimensionalDrilldownBackButton extends AbstractChartWrapper
 		final HTML htmlAmChartMenuGoBack = new HTML( "<b>Go Back</b> : ", true );
 		final Anchor anchorAmChartMenuGoBack = new Anchor( "", true );
 
-		final AmSerialChart amSerialChart = AmCharts.AmSerialChart( id );
+		final AmSerialChart amSerialChart = AmCharts.AmSerialChart();
 		amSerialChart.setTheme( "none" );
 		GWT.log( AmCharts.JS_AMCHARTS_IMAGES );
 		amSerialChart.setPathToImages( AmCharts.JS_AMCHARTS_IMAGES );
@@ -215,7 +215,8 @@ public class MultiDimensionalDrilldownBackButton extends AbstractChartWrapper
 		} );
 		VerticalPanel content = new VerticalPanel();
 		content.add( amToolbar );
-		content.add( amSerialChart.asWidget() );
+		amSerialChartPanel = amSerialChart.asWidget();
+		content.add( amSerialChartPanel );
 
 		setChartWidget( content );
 		getReadyCallback().onReady();
@@ -259,4 +260,9 @@ public class MultiDimensionalDrilldownBackButton extends AbstractChartWrapper
 	/*-{
 		return data.subSet;
 	}-*/;
+
+	public void setSize( String width, String height )
+	{
+		amSerialChartPanel.setSize( width, height );
+	}
 }

@@ -1,7 +1,7 @@
 package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.wrapper.IsReadyCallback;
-import com.appbootup.explore.gwt.client.chart.pie.PieChartBrokenSlices;
+import com.appbootup.explore.gwt.client.tutorials.MultiDimensionalDrilldownBackButton;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -35,7 +35,7 @@ public class GWTAMChart implements EntryPoint
 		// final DonutChart chartWrapper = new DonutChart();
 		// final ThreeDDonutChart chartWrapper = new ThreeDDonutChart();
 		// final PieChartWithLegend chartWrapper = new PieChartWithLegend();
-		final PieChartBrokenSlices chartWrapper = new PieChartBrokenSlices();
+		// final PieChartBrokenSlices chartWrapper = new PieChartBrokenSlices();
 		// final PyramidChart chartWrapper = new PyramidChart();
 		// final ThreeDFunnelChart chartWrapper = new ThreeDFunnelChart();
 		// final FunnelChart chartWrapper = new FunnelChart();
@@ -57,15 +57,15 @@ public class GWTAMChart implements EntryPoint
 		// final StackedArea chartWrapper = new StackedArea();
 		// final DurationOnValueAxis chartWrapper = new DurationOnValueAxis();
 		// final UpdatingBalloonTooltip chartWrapper = new UpdatingBalloonTooltip();
-		// FIXME: final MultiDimensionalDrilldownBackButton chartWrapper = new MultiDimensionalDrilldownBackButton( "multiDimensionalDrilldown" );
-		// FIXME: final LinkingPieChartColumnChartDrillDataDisplay chartWrapper = new LinkingPieChartColumnChartDrillDataDisplay();
+		final MultiDimensionalDrilldownBackButton chartWrapper = new MultiDimensionalDrilldownBackButton();
+		// final LinkingPieChartColumnChartDrillDataDisplay chartWrapper = new LinkingPieChartColumnChartDrillDataDisplay();
 
 		chartWrapper.setReadyCallback( new IsReadyCallback()
 		{
 			public void onReady()
 			{
+				chartWrapper.setSize( "620px", "350px" );
 				Widget widget = chartWrapper.getChartWidget();
-				widget.setSize( "620px", "350px" );
 				RootLayoutPanel.get().add( widget );
 			}
 		} );

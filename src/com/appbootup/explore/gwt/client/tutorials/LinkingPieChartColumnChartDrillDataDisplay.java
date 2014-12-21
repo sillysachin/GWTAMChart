@@ -28,6 +28,10 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 
 public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWrapper
 {
+	private AmChartLayoutPanel amPieChartPanel;
+
+	private AmChartLayoutPanel amSerialChartPanel;
+
 	public LinkingPieChartColumnChartDrillDataDisplay()
 	{
 		GWTAMChart.chartService
@@ -133,12 +137,10 @@ public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWra
 		} );
 
 		HorizontalPanel contentWrapper = new HorizontalPanel();
-		
-		AmChartLayoutPanel amPieChartPanel = amPieChart.asWidget();
-		amPieChartPanel.setSize( "320px", "250px" );
+
+		amPieChartPanel = amPieChart.asWidget();
 		contentWrapper.add( amPieChartPanel );
-		AmChartLayoutPanel amSerialChartPanel = amSerialChart.asWidget();
-		amSerialChartPanel.setSize( "320px", "250px" );
+		amSerialChartPanel = amSerialChart.asWidget();
 		contentWrapper.add( amSerialChartPanel );
 
 		setChartWidget( contentWrapper );
@@ -165,4 +167,10 @@ public class LinkingPieChartColumnChartDrillDataDisplay extends AbstractChartWra
 		}
 		return collectiveData;
 	}-*/;
+
+	public void setSize( String width, String height )
+	{
+		amPieChartPanel.setSize( width, height );
+		amSerialChartPanel.setSize( width, height );
+	}
 }

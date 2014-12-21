@@ -11,4 +11,6 @@ public interface IsChartWrapper
 	void setReadyCallback( IsReadyCallback callback );
 
 	IsReadyCallback getReadyCallback();
+
+	void setSize( String width, String height );
 }
