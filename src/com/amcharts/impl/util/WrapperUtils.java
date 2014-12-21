@@ -217,7 +217,7 @@ public class WrapperUtils
 	}
 
 	private static native String getJSOClassName( JavaScriptObject jso ) /*-{
-		return jso.className;
+		return jso.className ? jso.className : "";
 	}-*/;
 
 	private static native String getJavaScriptClassName( JavaScriptObject jso ) /*-{
