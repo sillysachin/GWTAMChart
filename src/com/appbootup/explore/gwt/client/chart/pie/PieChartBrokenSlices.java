@@ -57,12 +57,10 @@ public class PieChartBrokenSlices extends AbstractChartWrapper
 			@Override
 			public void function( AmChartEventJSO event )
 			{
-				Integer selected = null;
 				IsSlice dataItem = ( IsSlice ) event.getDataItem();
 				DataContext dataContext = ( DataContext ) dataItem
 						.getDataContext();
-				selected = dataContext.getId();
-				GWT.log( event.getEvent().getClientX() + "" );
+				Integer selected = dataContext.getId();
 				amPieChart.setDataProvider( generateChartData( selected ) );
 				amPieChart.validateData();
 			}
@@ -123,6 +121,7 @@ public class PieChartBrokenSlices extends AbstractChartWrapper
 				});
 			}
 		}
+		console.log(chartData);
 		return chartData;
 	}-*/;
 }
