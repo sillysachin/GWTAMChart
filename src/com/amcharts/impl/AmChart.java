@@ -170,9 +170,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setBackgroundAlpha( Double backgroundAlpha ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.backgroundAlpha = backgroundAlpha;
-	}-*/;
+	public void setBackgroundAlpha( Double backgroundAlpha )
+	{
+		getJso().setBackgroundAlpha( backgroundAlpha );
+	}
 
 	@Override
 	public native String getBackgroundColor() /*-{
@@ -202,9 +203,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setBorderAlpha( Double borderAlpha ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.borderAlpha = borderAlpha;
-	}-*/;
+	public void setBorderAlpha( Double borderAlpha )
+	{
+		getJso().setBorderAlpha( borderAlpha );
+	}
 
 	@Override
 	public native String getBorderColor() /*-{
@@ -286,9 +288,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setFontSize( Double fontSize ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.fontSize = fontSize;
-	}-*/;
+	public void setFontSize( Double fontSize )
+	{
+		getJso().setFontSize( fontSize );
+	}
 
 	@Override
 	public native Boolean getHandDrawn() /*-{
@@ -306,9 +309,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setHandDrawScatter( Double handDrawScatter ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.handDrawScatter = handDrawScatter;
-	}-*/;
+	public void setHandDrawScatter( Double handDrawScatter )
+	{
+		getJso().setHandDrawScatter( handDrawScatter );
+	}
 
 	@Override
 	public native Double getHandDrawThickness() /*-{
@@ -316,9 +320,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setHandDrawThickness( Double handDrawThickness ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.handDrawThickness = handDrawThickness;
-	}-*/;
+	public void setHandDrawThickness( Double handDrawThickness )
+	{
+		getJso().setHandDrawThickness( handDrawThickness );
+	}
 
 	@Override
 	public native Double getHideBalloonTime() /*-{
@@ -326,9 +331,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setHideBalloonTime( Double hideBalloonTime ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.hideBalloonTime = hideBalloonTime;
-	}-*/;
+	public void setHideBalloonTime( Double hideBalloonTime )
+	{
+		getJso().setHideBalloonTime( hideBalloonTime );
+	}
 
 	@Override
 	public native String getLanguage() /*-{
@@ -378,9 +384,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setPercentPrecision( Double percentPrecision ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.percentPrecision = percentPrecision;
-	}-*/;
+	public void setPercentPrecision( Double percentPrecision )
+	{
+		getJso().setPercentPrecision( percentPrecision );
+	}
 
 	@Override
 	public native Double getPrecision() /*-{
@@ -388,9 +395,10 @@ public class AmChart implements IsAmChart, IJavaScriptWrapper<AmChartJSO>
 	}-*/;
 
 	@Override
-	public native void setPrecision( Double precision ) /*-{
-		this.@com.amcharts.impl.AmChart::jso.precision = precision;
-	}-*/;
+	public void setPrecision( Double precision )
+	{
+		getJso().setPrecision( precision );
+	}
 
 	@Override
 	public List<IsNumberPrefix> getPrefixesOfBigNumbers()

@@ -1,7 +1,7 @@
 package com.appbootup.explore.gwt.client;
 
 import com.amcharts.impl.wrapper.IsReadyCallback;
-import com.appbootup.explore.gwt.client.chart.pie.SimplePieChart;
+import com.appbootup.explore.gwt.client.chart.pie.PieChartBrokenSlices;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -30,12 +30,12 @@ public class GWTAMChart implements EntryPoint
 		// GWTAMChartSample.serialChartByJSNI();
 		// GWTAMChartSample.chartByServerJSON();
 		// GWTAMChartSample.lineWithTrendLineChartByJSNI();
-		final SimplePieChart chartWrapper = new SimplePieChart();
-		// FIXME: final ThreeDPieChart chartWrapper = new ThreeDPieChart();
+		// final SimplePieChart chartWrapper = new SimplePieChart();
+		// final ThreeDPieChart chartWrapper = new ThreeDPieChart();
 		// final DonutChart chartWrapper = new DonutChart();
-		// FIXME: final ThreeDDonutChart chartWrapper = new ThreeDDonutChart();
+		// final ThreeDDonutChart chartWrapper = new ThreeDDonutChart();
 		// final PieChartWithLegend chartWrapper = new PieChartWithLegend();
-		// FIXME: final PieChartBrokenSlices chartWrapper = new PieChartBrokenSlices();
+		final PieChartBrokenSlices chartWrapper = new PieChartBrokenSlices();
 		// final PyramidChart chartWrapper = new PyramidChart();
 		// final ThreeDFunnelChart chartWrapper = new ThreeDFunnelChart();
 		// final FunnelChart chartWrapper = new FunnelChart();

@@ -29,7 +29,7 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	@Override
 	public final native void setLabelRadius( Double labelRadius )
 	/*-{
-		this.labelRadius = labelRadius;
+		this.labelRadius = labelRadius.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -65,7 +65,7 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	@Override
 	public final native void setMinRadius( Double minRadius )
 	/*-{
-		this.minRadius = minRadius;
+		this.minRadius = minRadius.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -77,7 +77,7 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	@Override
 	public final native void setPieAlpha( Double pieAlpha )
 	/*-{
-		this.pieAlpha = pieAlpha;
+		this.pieAlpha = pieAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -137,7 +137,7 @@ public class AmPieChartJSO extends AmSlicedChartJSO implements IsAmPieChart
 	@Override
 	public final native void setStartAngle( Double startAngle )
 	/*-{
-		this.startAngle = startAngle;
+		this.startAngle = startAngle.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override

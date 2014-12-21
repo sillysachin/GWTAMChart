@@ -52,7 +52,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setBackgroundAlpha( Double backgroundAlpha )
 	/*-{
-		this.backgroundAlpha = backgroundAlpha;
+		this.backgroundAlpha = backgroundAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -88,7 +88,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setBorderAlpha( Double borderAlpha )
 	/*-{
-		this.borderAlpha = borderAlpha;
+		this.borderAlpha = borderAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -184,7 +184,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setFontSize( Double fontSize )
 	/*-{
-		this.fontSize = fontSize;
+		this.fontSize = fontSize.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -208,7 +208,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setHandDrawScatter( Double handDrawScatter )
 	/*-{
-		this.handDrawScatter = handDrawScatter;
+		this.handDrawScatter = handDrawScatter.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -220,7 +220,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setHandDrawThickness( Double handDrawThickness )
 	/*-{
-		this.handDrawThickness = handDrawThickness;
+		this.handDrawThickness = handDrawThickness.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -232,7 +232,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setHideBalloonTime( Double hideBalloonTime )
 	/*-{
-		this.hideBalloonTime = hideBalloonTime;
+		this.hideBalloonTime = hideBalloonTime.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -304,7 +304,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setPercentPrecision( Double percentPrecision )
 	/*-{
-		this.percentPrecision = percentPrecision;
+		this.percentPrecision = percentPrecision.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -316,7 +316,7 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	@Override
 	public final native void setPrecision( Double precision )
 	/*-{
-		this.precision = precision;
+		this.precision = precision.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -368,13 +368,13 @@ public class AmChartJSO extends JavaScriptObject implements IsAmChart
 	}-*/;
 
 	@Override
-	public final native List<? extends IsTitle> getTitles()
+	public final native List< ? extends IsTitle> getTitles()
 	/*-{
 		return @com.amcharts.impl.util.WrapperUtils::getList(Lcom/google/gwt/core/client/JavaScriptObject;)(this.titles);
 	}-*/;
 
 	@Override
-	public final native void setTitles( List<? extends IsTitle> titles )
+	public final native void setTitles( List< ? extends IsTitle> titles )
 	/*-{
 		this.titles = @com.amcharts.impl.util.WrapperUtils::getArray(Ljava/util/List;)(titles);
 	}-*/;

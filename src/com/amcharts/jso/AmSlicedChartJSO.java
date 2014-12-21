@@ -22,7 +22,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setAngle( Double angle )
 	/*-{
-		this.angle = angle;
+		this.angle = angle.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -46,7 +46,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setDepth3D( Double depth3D )
 	/*-{
-		this.depth3D = depth3D;
+		this.depth3D = depth3D.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -58,7 +58,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setAlpha( Double alpha )
 	/*-{
-		this.alpha = alpha;
+		this.alpha = alpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -94,7 +94,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setBrightnessStep( Double brightnessStep )
 	/*-{
-		this.brightnessStep = brightnessStep;
+		this.brightnessStep = brightnessStep.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -160,7 +160,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setGroupedAlpha( Double groupedAlpha )
 	/*-{
-		this.groupedAlpha = groupedAlpha;
+		this.groupedAlpha = groupedAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -220,7 +220,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setGroupPercent( Double groupPercent )
 	/*-{
-		this.groupPercent = groupPercent;
+		this.groupPercent = groupPercent.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -232,7 +232,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setHideLabelsPercent( Double hideLabelsPercent )
 	/*-{
-		this.hideLabelsPercent = hideLabelsPercent;
+		this.hideLabelsPercent = hideLabelsPercent.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -244,7 +244,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setHoverAlpha( Double hoverAlpha )
 	/*-{
-		this.hoverAlpha = hoverAlpha;
+		this.hoverAlpha = hoverAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -280,7 +280,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setLabelTickAlpha( Double labelTickAlpha )
 	/*-{
-		this.labelTickAlpha = labelTickAlpha;
+		this.labelTickAlpha = labelTickAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -304,7 +304,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setMarginBottom( Double marginBottom )
 	/*-{
-		this.marginBottom = marginBottom;
+		this.marginBottom = marginBottom.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -316,7 +316,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setMarginLeft( Double marginLeft )
 	/*-{
-		this.marginLeft = marginLeft;
+		this.marginLeft = marginLeft.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -328,7 +328,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setMarginRight( Double marginRight )
 	/*-{
-		this.marginRight = marginRight;
+		this.marginRight = marginRight.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -340,7 +340,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setMarginTop( Double marginTop )
 	/*-{
-		this.marginTop = marginTop;
+		this.marginTop = marginTop.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -352,7 +352,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setMaxLabelWidth( Double maxLabelWidth )
 	/*-{
-		this.maxLabelWidth = maxLabelWidth;
+		this.maxLabelWidth = maxLabelWidth.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -364,7 +364,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setOutlineAlpha( Double outlineAlpha )
 	/*-{
-		this.outlineAlpha = 0.4;
+		this.outlineAlpha = outlineAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -388,7 +388,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setOutlineThickness( Double outlineThickness )
 	/*-{
-		this.outlineThickness = outlineThickness;
+		this.outlineThickness = outlineThickness.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -424,7 +424,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setPullOutDuration( Double pullOutDuration )
 	/*-{
-		this.pullOutDuration = pullOutDuration;
+		this.pullOutDuration = pullOutDuration.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -472,7 +472,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setStartAlpha( Double startAlpha )
 	/*-{
-		this.startAlpha = startAlpha;
+		this.startAlpha = startAlpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override
@@ -484,7 +484,7 @@ public class AmSlicedChartJSO extends AmChartJSO implements IsAmSlicedChart
 	@Override
 	public final native void setStartDuration( Double startDuration )
 	/*-{
-		this.startDuration = startDuration;
+		this.startDuration = startDuration.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	@Override

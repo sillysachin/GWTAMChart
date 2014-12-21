@@ -4,6 +4,7 @@ import com.amcharts.impl.AmCharts;
 import com.amcharts.impl.AmPieChart;
 import com.amcharts.impl.ExportConfig;
 import com.amcharts.impl.MenuItem;
+import com.amcharts.impl.util.LogUtils;
 import com.amcharts.impl.wrapper.AbstractChartWrapper;
 import com.appbootup.explore.gwt.client.GWTAMChart;
 import com.google.gwt.core.client.GWT;
@@ -37,16 +38,16 @@ public class ThreeDPieChart extends AbstractChartWrapper
 
 	protected void drawChart( JsArray<JavaScriptObject> chartData )
 	{
-		AmPieChart amPieChart = new AmPieChart();
+		AmPieChart amPieChart = AmCharts.AmPieChart();
 		amPieChart.setDataProvider( chartData );
 		amPieChart.setTheme( "none" );
 		amPieChart.setValueField( "value" );
 		amPieChart.setTitleField( "country" );
 		amPieChart.setOutlineAlpha( 0.4 );
-		amPieChart.setDepth3D( 15.0 );
+		amPieChart.setDepth3D( 15.1 );
 		amPieChart
 				.setBalloonText( "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>" );
-		amPieChart.setAngle( 30.0 );
+		amPieChart.setAngle( 30.1 );
 		ExportConfig exportConfig = new ExportConfig();
 		MenuItem menuItem = new MenuItem();
 		menuItem.setIcon( AmCharts.JS_AMCHARTS_IMAGES + "export.png" );

@@ -22,7 +22,7 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 
 	public final native void setColumnHeight( Double columnHeight )
 	/*-{
-		this.columnHeight = columnHeight;
+		this.columnHeight = columnHeight.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	public final native Double getColumnWidth()
@@ -32,7 +32,7 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 
 	public final native void setColumnWidth( Double columnWidth )
 	/*-{
-		this.columnWidth = columnWidth;
+		this.columnWidth = columnWidth.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	public final native Boolean getIsNegative()
@@ -56,7 +56,7 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	 * Opacity of the data item.
 	 */
 	public final native void setAlpha( Double alpha ) /*-{
-		this.alpha = alpha;
+		this.alpha = alpha.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	/**
@@ -84,7 +84,7 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	 * Bullet size.
 	 */
 	public final native void setBulletSize( Double bulletSize ) /*-{
-		this.bulletSize = bulletSize;
+		this.bulletSize = bulletSize.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	/**
@@ -238,7 +238,7 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	 * x coordinate of the data item.
 	 */
 	public final native void setX( Double x ) /*-{
-		this.x = x;
+		this.x = x.@java.lang.Double::doubleValue()();
 	}-*/;
 
 	/**
@@ -252,6 +252,6 @@ public final class GraphDataItem extends DataItem implements IsGraphDataItem
 	 * y coordinate of the data item.
 	 */
 	public final native void setY( Double y ) /*-{
-		this.y = y;
+		this.y = y.@java.lang.Double::doubleValue()();
 	}-*/;
 }
